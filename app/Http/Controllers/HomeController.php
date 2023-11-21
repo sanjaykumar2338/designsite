@@ -51,11 +51,15 @@ class HomeController extends Controller
     }
 
     public function blog(){
-        return view('frontend.pages.media');         
+        return view('frontend.pages.blog');         
+    }
+
+    public function blog_detail(){
+        return view('frontend.pages.blog_detail');         
     }
 
     public function justice(){
-        return view('frontend.pages.media');         
+        return view('frontend.pages.justice');         
     }
 
     public function products(){

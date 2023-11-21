@@ -28,6 +28,7 @@ Route::get('/shop', [App\Http\Controllers\HomeController::class, 'shop'])->name(
 Route::get('/media', [App\Http\Controllers\HomeController::class, 'media'])->name('media');
 Route::get('/justice', [App\Http\Controllers\HomeController::class, 'justice'])->name('justice');
 Route::get('/blog', [App\Http\Controllers\HomeController::class, 'blog'])->name('blog');
+Route::get('/blog_detail', [App\Http\Controllers\HomeController::class, 'blog_detail'])->name('blog_detail');
 Route::get('/products', [App\Http\Controllers\HomeController::class, 'products'])->name('products');
 Route::get('/events', [App\Http\Controllers\HomeController::class, 'events'])->name('events');
 Route::get('/track_order', [App\Http\Controllers\HomeController::class, 'track_order'])->name('track_order');

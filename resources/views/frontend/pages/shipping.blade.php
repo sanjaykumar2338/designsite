@@ -8,24 +8,18 @@
 <section class="about-heading">
     <div class="container">
         <div class="text">
-            <h4>Wishlist</h4>
+            <h4>Shipping Details</h4>
 
         </div>
     </div>
 </section>
 <!-- ========== End about us heading ========== -->
 
-
-
-
-
-
-
-
 <!-- ========== Start about-us-section ========== -->
 <section class="about-section">
     <div class="container">
         <div class="row">
+        
 
         </div>
     </div>
