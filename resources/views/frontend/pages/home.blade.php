@@ -54,9 +54,9 @@
             <div class="vioce">
                 <h4>Display your voice</h4>
                 <ul>
-                    <li><a href="{{route('product_design')}}">poster</a></li>
-                    <li><a href="{{route('product_design')}}">sigange</a></li>
-                    <li><a href="{{route('product_design')}}">t-shirt</a></li>
+                    <li><a href="{{route('create_product')}}">poster</a></li>
+                    <li><a href="{{route('create_product')}}">sigange</a></li>
+                    <li><a href="{{route('create_product')}}">t-shirt</a></li>
                 </ul>
             </div>
         </div>

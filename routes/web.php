@@ -16,7 +16,7 @@ use App\Http\Controllers\Admin\AdminController;
 */
 
 Route::prefix('admin')->controller(AdminController::class)->group(function () {
-    Route::get('','index');
+    Route::get('', 'index');
 });
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -41,3 +41,4 @@ Route::get('/donate_now', [App\Http\Controllers\HomeController::class, 'donate_n
 Route::get('/login', [App\Http\Controllers\HomeController::class, 'login'])->name('login');
 Route::get('/register', [App\Http\Controllers\HomeController::class, 'register'])->name('register');
 Route::get('/product_design', [App\Http\Controllers\HomeController::class, 'product_design'])->name('product_design');
+Route::get('/create_product', [App\Http\Controllers\HomeController::class, 'create_product'])->name('create_product');
