@@ -226,15 +226,17 @@ function addTriangle() {
 
 function setShowModal(bool) {
     const el = getEl("modal");
+    el.style.display = bool ? "" : "none";
     el.hidden = !bool;
 }
 function setShowPaymentModal(bool) {
     const el = getEl("payment-modal");
+    el.style.display = bool ? "" : "none";
     el.hidden = !bool;
 }
 function setIsLoading(bool) {
     const el = getEl("loader");
-    el.hidden = !bool;
+    el.style.display = bool ? "" : "none";
 }
 function submitImgUrl() {
     const el = getEl("imgUrl");
@@ -249,6 +251,18 @@ function addImage(imgUrl) {
     fabric.Image.fromURL(
         imgUrl,
         function (oImg) {
+            if (oImg._element == null) {
+                alert(
+                    "Cant access the file! Please download the image and upload it from local storage"
+                );
+                // Toastify({
+                //     text: "Please download the image and upload it from local storage",
+                //     style: {
+                //         background: "red",
+                //     },
+                // }).showToast();
+                return;
+            }
             oImg.scale(0.5);
             canvas.add(oImg);
         },
@@ -544,7 +558,7 @@ function createOrder(product) {
             }, 500);
             setIsLoading(false);
             Toastify({
-                text: "Order Placed",
+                text: "Order Created",
                 className: "success",
             }).showToast();
         })
@@ -557,11 +571,11 @@ function createOrder(product) {
 function setCost() {
     getEl(
         "subtotal"
-    ).innerHTML = `Subtotal: ${order.result.retail_costs.subtotal}`;
+    ).innerHTML = `Subtotal: $${order.result.retail_costs.subtotal}`;
     getEl(
         "shipping"
-    ).innerHTML = `Shipping: ${order.result.retail_costs.shipping}`;
-    getEl("total").innerHTML = `Total: ${order.result.retail_costs.total}`;
+    ).innerHTML = `Shipping: $${order.result.retail_costs.shipping}`;
+    getEl("total").innerHTML = `Total: $${order.result.retail_costs.total}`;
 }
 
 function submitPayment() {
