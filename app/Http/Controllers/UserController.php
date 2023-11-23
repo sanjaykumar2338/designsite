@@ -42,7 +42,7 @@ class UserController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            return redirect()->intended('/my_account'); // Redirect to intended URL or your dashboard
+            return redirect()->route('my_account')->with('success', 'Login successful.');
         }
 
         return back()->withErrors([
