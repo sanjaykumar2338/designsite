@@ -270,7 +270,7 @@
         })
     </script>
     <script src="./html2canvas.min.js"></script>
-    <script src="./script.js"></script>
+    <script src="./script.js?v={{time()}}"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
