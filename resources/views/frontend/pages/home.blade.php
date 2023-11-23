@@ -78,6 +78,7 @@
                         </div>
                         <div class="text-two">
                             <h4>Shirts</h4>
+                             <button class="buy_now"> buy now</button>
                         </div>
                     </div>
                 </div>
@@ -89,6 +90,7 @@
                         </div>
                         <div class="text-two">
                             <h4>Hoodies</h4>
+                             <button class="buy_now"> buy now</button>
                         </div>
                     </div>
                 </div>
@@ -100,6 +102,7 @@
                         </div>
                         <div class="text-two">
                             <h4>Sweatshirts</h4>
+                             <button class="buy_now"> buy now</button>
                         </div>
                     </div>
                 </div>
@@ -111,6 +114,7 @@
                         </div>
                         <div class="text-two">
                             <h4>Bottom</h4>
+                             <button class="buy_now"> buy now</button>
                         </div>
                     </div>
                 </div>
@@ -138,6 +142,7 @@
                         </div>
                         <div class="text-two">
                             <h4>Caps</h4>
+                            <button class="buy_now"> buy now</button>
                         </div>
                     </div>
                 </div>
@@ -150,6 +155,7 @@
                         </div>
                         <div class="text-two">
                             <h4>Scarfs</h4>
+                            <button class="buy_now"> buy now</button>
                         </div>
                     </div>
                 </div>
@@ -162,6 +168,7 @@
                         </div>
                         <div class="text-two">
                             <h4>Flyers</h4>
+                            <button class="buy_now"> buy now</button>
                         </div>
                     </div>
                 </div>
@@ -174,6 +181,7 @@
                         </div>
                         <div class="text-two">
                             <h4>Pins</h4>
+                            <button class="buy_now"> buy now</button>
                         </div>
                     </div>
                 </div>

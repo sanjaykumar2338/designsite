@@ -273,7 +273,9 @@ function addImage(imgUrl) {
 function addObjectImage(imgUrl) {
     // const imgUrl =
     //   "https://cloudfour.com/examples/img-currentsrc/images/kitten-small.png";
-    imgUrl = "http://127.0.0.1:8000/objects/" + imgUrl;
+
+    let url = $('#site_url').val();
+    imgUrl = url +'/objects/'+ imgUrl;
     fabric.loadSVGFromURL(
         imgUrl,
         function (objects, options) {

@@ -1,54 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('frontend.layout.product_creation')
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js"
-        integrity="sha512-CeIsOAsgJnmevfCi2C7Zsyy6bQKi43utIjdA87Q0ZY84oDqnI0uwfM9+bKiIkI75lUeI00WG/+uJzOmuHlesMA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-
-    <style>
-        .loader {
-            border-top-color: #3498db;
-            -webkit-animation: spinner 1.5s linear infinite;
-            animation: spinner 1.5s linear infinite;
-        }
-
-        @-webkit-keyframes spinner {
-            0% {
-                -webkit-transform: rotate(0deg);
-            }
-
-            100% {
-                -webkit-transform: rotate(360deg);
-            }
-        }
-
-        @keyframes spinner {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-    </style>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.js"
-        integrity="sha512-hOJ0mwaJavqi11j0XoBN1PtOJ3ykPdP6lp9n29WVVVVZxgx9LO7kMwyyhaznGJ+kbZrDN1jFZMt2G9bxkOHWFQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
-</head>
-
-<body>
+@section('content')
     <div class="flex gap-2">
         <div class="flex flex-col">
             <button class="hover:bg-slate-200 h-[50px] w-[50px]" onclick="setSelected(1)">
-                <img src="./blank-t-shirt.jpg" class="h-full" alt="" />
+                <img src="/blank-t-shirt.jpg" class="h-full" alt="" />
             </button>
             <button class="hover:bg-slate-200 h-[50px] w-[50px]" onclick="setSelected(2)">
                 <img src="./poster.jpg" class="h-full" alt="" />
@@ -335,22 +291,4 @@
         <h2 class="text-center text-white text-xl font-semibold">Loading...</h2>
         <p class="w-1/3 text-center text-white">This may take a few seconds, please don't close this page.</p>
     </div>
-    <!-- SPINNER END -->
-</body>
-<script src="./html2canvas.min.js"></script>
-<script src="./script.js"></script>
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-    tailwind.config = {
-        theme: {
-            extend: {
-                colors: {
-                    clifford: "#da373d",
-                },
-            },
-        },
-    };
-</script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-
-</html>
+@endsection

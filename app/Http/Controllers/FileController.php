@@ -29,8 +29,27 @@ class FileController extends Controller
      */
     public function store(Request $request)
     {
-        $uploadedFileUrl = Cloudinary::upload($request->file('file')->getRealPath())->getSecurePath();
-        return $uploadedFileUrl;
+        //$uploadedFileUrl = Cloudinary::upload($request->file('file')->getRealPath())->getSecurePath();
+        //return $uploadedFileUrl;
+
+        $uploadedFile = $request->file('file');
+
+        if ($uploadedFile) {
+            // Store the file in a storage disk (e.g., public, s3, etc.)
+            $path = $uploadedFile->store('uploads', 'public');
+
+            // Get the URL for the stored file
+            $url = asset('storage/' . $path); // Assuming the file is stored in the 'public' disk
+
+            // You can return this URL or do something else with it
+            //return response()->json(['url' => $url], 200);
+            return $url;
+        }
+
+        return false;
+        // Handle the case where no file was uploaded
+        return response()->json(['error' => 'No file uploaded'], 400);
+
     }
     public function createProduct(Request $request)
     {
