@@ -171,7 +171,7 @@ function setSelected(selected) {
         img = ` <img src="./signage.jpg" height="500px" style="position: absolute;left: 120px;top: 8px;height: 435px;width: 300px" alt="" id="canvasBg" />`;
     }
     if (selected !== 1) {
-        getEl("text-controls-additional").hidden = true;
+        //getEl("text-controls-additional").hidden = true;
     }
     const canvasBgImage = getEl("canvasBgImage");
     canvasBgImage.innerHTML += img;
