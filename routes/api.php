@@ -23,6 +23,7 @@ Route::resource('file', FileController::class);
 Route::post('/createProduct', [FileController::class, 'createProduct']);
 Route::post('/getProduct', [FileController::class, 'getProduct']);
 Route::post('/createOrder', [FileController::class, 'createOrder']);
+Route::post('/updateOrder/{id}', [FileController::class, 'updateOrder']);
 Route::post('/calculateShippingRate', [FileController::class, 'calculateShippingRate']);
 
 

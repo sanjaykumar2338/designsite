@@ -22,6 +22,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 
+    <style>
+        .loader {
+            border-top-color: #3498db;
+            -webkit-animation: spinner 1.5s linear infinite;
+            animation: spinner 1.5s linear infinite;
+        }
+
+        @-webkit-keyframes spinner {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spinner {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+    </style>
     <!-- <script
       src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.js"
       integrity="sha512-hOJ0mwaJavqi11j0XoBN1PtOJ3ykPdP6lp9n29WVVVVZxgx9LO7kMwyyhaznGJ+kbZrDN1jFZMt2G9bxkOHWFQ=="
@@ -196,6 +222,83 @@
         </div>
     </div>
 
+    <div id="loader"  hidden>
+        <div  class="fixed top-0 left-0 right-0 bottom-0 w-full h-screen z-50 overflow-hidden bg-gray-500 opacity-75 flex flex-col items-center justify-center">
+            <div class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-12 w-12 mb-4"></div>
+            <h2 class="text-center text-white text-xl font-semibold">Loading...</h2>
+            <p class="w-1/3 text-center text-white">This may take a few seconds, please don't close this page.</p>
+        </div>
+    </div>
+
+    <!-- MODEL START -->
+    <div class="fixed z-10 overflow-y-auto top-0 w-full left-0" id="payment-modal" hidden>
+        <div class="flex items-center justify-center min-height-100vh pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+            <div class="fixed inset-0 transition-opacity">
+                <div class="absolute inset-0 bg-gray-900 opacity-75" />
+            </div>
+            <span class="hidden sm:inline-block sm:align-middle sm:h-screen">
+                &#8203;
+            </span>
+            <div class="inline-block align-center bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
+                role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+                <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                    <label class="font-bold text-gray-800">Payment Details</label> 
+                    <br> 
+                    <br>
+                    <div id="subtotal" class="font-medium text-gray-800">Subtotal:</div>
+                    <div id="shipping" class="font-medium text-gray-800">Shipping:</div>
+                    <div id="total" class="font-bold text-gray-800">Total:</div>
+                    <br>
+                    <br>
+                    <label class="font-medium text-gray-800">Name</label>
+                    <input type="text" id="payment-modal-name" class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3"
+                        value="John Smith" placeholder="Full Name" />
+                    <label class="font-medium text-gray-800">Email</label>
+                    <input type="text" id="payment-modal-email" class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3"
+                        value="john@gmail.com" placeholder="email" />
+                    <label class="font-medium text-gray-800">Phone Number</label>
+                    <input type="text" id="payment-modal-phone" class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3"
+                        value="7384728374" placeholder="Phone Number" />
+                    <label class="font-medium text-gray-800">Address</label>
+                    <input type="text" id="payment-modal-address" class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3"
+                        value="19749 Dearborn St" placeholder="Address" />
+                    <label class="font-medium text-gray-800">Card Number</label>
+                    <input type="text" id="payment-modal-card" class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3"
+                        value="1234567890123456"maxlength="16" placeholder="1234 5678 9012 3456" />
+                        <div class="flex gap-6">
+                            
+                            <div class="flex flex-col">
+                                <label class="font-medium text-gray-800">Year</label>
+                                <input type="text" id="payment-modal-year" class="w-[55px] outline-none rounded bg-gray-100 p-2 mt-2 mb-3"
+                                value="2025" type="number" placeholder="2025" maxlength="4" />
+                            </div>                                                       
+                            <div class="flex flex-col">
+                                <label class="font-medium text-gray-800">Month</label>
+                                <input type="text" id="payment-modal-month" class="w-[35px] outline-none rounded bg-gray-100 p-2 mt-2 mb-3"
+                                value="08" type="number" placeholder="08" maxlength="2" />
+                            </div>
+
+                            <div class="flex flex-col">
+                                <label class="font-medium text-gray-800">CVC</label>
+                                <input type="text" id="payment-modal-cvc" class="w-[45px] outline-none rounded bg-gray-100 p-2 mt-2 mb-3"
+                                value="123" type="number" placeholder="123" maxlength="3"/>
+                            </div>
+                        </div>
+                </div>
+                <div class="bg-gray-200 px-4 py-3 text-right">
+                    <button type="button" class="py-2 px-4 bg-gray-500 text-white rounded hover:bg-gray-700 mr-2"
+                        onclick="setShowPaymentModal(false)">
+                        Cancel
+                    </button>
+                    <button type="button" class="py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-700 mr-2"
+                        type="submit" onclick="submitPayment()">
+                        Place Order
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MODEL END -->
     <!-- MODEL START -->
     <div class="fixed z-10 overflow-y-auto top-0 w-full left-0" id="modal" hidden>
         <div class="flex items-center justify-center min-height-100vh pt-4 px-4 pb-20 text-center sm:block sm:p-0">
@@ -226,6 +329,15 @@
         </div>
     </div>
     <!-- MODEL END -->
+    
+    
+    <!-- SPINNER -->
+    <div wire:loading class="fixed top-0 left-0 right-0 bottom-0 w-full h-screen z-50 overflow-hidden bg-gray-700 opacity-75 flex flex-col items-center justify-center">
+        <div class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-12 w-12 mb-4"></div>
+        <h2 class="text-center text-white text-xl font-semibold">Loading...</h2>
+        <p class="w-1/3 text-center text-white">This may take a few seconds, please don't close this page.</p>
+    </div>
+    <!-- SPINNER END -->
 </body>
 <script src="./html2canvas.min.js"></script>
 <script src="./script.js"></script>

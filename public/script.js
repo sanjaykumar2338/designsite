@@ -1,5 +1,7 @@
 var canvas = new fabric.Canvas("c");
 let selectedObject;
+let order;
+
 function objectSelectedUpdated(_obj) {
     // console.log(_obj);
     if (!_obj.selected || !_obj.selected.length) return;
@@ -226,6 +228,14 @@ function setShowModal(bool) {
     const el = getEl("modal");
     el.hidden = !bool;
 }
+function setShowPaymentModal(bool) {
+    const el = getEl("payment-modal");
+    el.hidden = !bool;
+}
+function setIsLoading(bool) {
+    const el = getEl("loader");
+    el.hidden = !bool;
+}
 function submitImgUrl() {
     const el = getEl("imgUrl");
     console.log(el.value);
@@ -389,6 +399,7 @@ function htmltoCanvas() {
                 text: "Please Wait..",
                 className: "warn",
             }).showToast();
+            setIsLoading(true);
             fetch("http://localhost:8000/api/file", requestOptions)
                 .then((response) => response.text())
                 .then((result) => {
@@ -482,7 +493,10 @@ function createProduct(imageUrl) {
                 className: "info",
             }).showToast();
         })
-        .catch((error) => console.log("error", error));
+        .catch((error) => {
+            console.log("error", error);
+            setIsLoading(false);
+        });
 }
 function getProduct(id) {
     var myHeaders = new Headers();
@@ -521,13 +535,88 @@ function createOrder(product) {
     fetch("http://localhost:8000/api/createOrder", requestOptions)
         .then((response) => response.text())
         .then((result) => {
-            console.log("createOrder", JSON.parse(result));
+            order = JSON.parse(result);
+            console.log("createOrder", order);
+
+            setShowPaymentModal(true);
+            setTimeout(() => {
+                setCost();
+            }, 500);
+            setIsLoading(false);
             Toastify({
                 text: "Order Placed",
                 className: "success",
             }).showToast();
         })
-        .catch((error) => console.log("error", error));
+        .catch((error) => {
+            console.log("error", error);
+            setIsLoading(false);
+        });
+}
+
+function setCost() {
+    getEl(
+        "subtotal"
+    ).innerHTML = `Subtotal: ${order.result.retail_costs.subtotal}`;
+    getEl(
+        "shipping"
+    ).innerHTML = `Shipping: ${order.result.retail_costs.shipping}`;
+    getEl("total").innerHTML = `Total: ${order.result.retail_costs.total}`;
+}
+
+function submitPayment() {
+    const formData = {
+        name: getEl("payment-modal-name").value,
+        email: getEl("payment-modal-email").value,
+        phone: getEl("payment-modal-phone").value,
+        address: getEl("payment-modal-address").value,
+        card: getEl("payment-modal-card").value,
+        year: getEl("payment-modal-year").value,
+        month: getEl("payment-modal-month").value,
+        cvc: getEl("payment-modal-cvc").value,
+    };
+
+    console.log(formData);
+    const updateData = {
+        recipient: {
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            address1: formData.address,
+        },
+    };
+
+    var jsonString = JSON.stringify(updateData);
+
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+    var requestOptions = {
+        method: "POST",
+        body: JSON.stringify({ jsonString }),
+        headers: myHeaders,
+        redirect: "follow",
+    };
+    setIsLoading(true);
+    fetch(
+        // `http://localhost:8000/api/updateOrder/99416078`,
+        `http://localhost:8000/api/updateOrder/${order.result.id}`,
+        requestOptions
+    )
+        .then((response) => response.text())
+        .then((result) => {
+            order = JSON.parse(result);
+            console.log("Submit Payment", order);
+            setIsLoading(false);
+            Toastify({
+                text: "Payment Success!",
+                className: "success",
+            }).showToast();
+            setShowPaymentModal(false);
+        })
+        .catch((error) => {
+            console.log("error", error);
+            setIsLoading(false);
+        });
 }
 
 const sampleOrderData = {
@@ -535,14 +624,14 @@ const sampleOrderData = {
     recipient: {
         name: "John Smith",
         company: "John Smith Inc",
-        address1: "19749 Dearborn St",
+        address1: "Mr John Smith. 132, My Street, Kingston, New York 12401",
         address2: "string",
-        city: "Chatsworth",
-        state_code: "CA",
-        state_name: "California",
+        city: "New York",
+        state_code: "NY",
+        state_name: "New York",
         country_code: "US",
         country_name: "United States",
-        zip: "91311",
+        zip: "12401",
         phone: "9090909090",
         email: "test@gmail.com",
     },
