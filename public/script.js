@@ -416,7 +416,9 @@ function htmltoCanvas() {
                 className: "warn",
             }).showToast();
             setIsLoading(true);
-            fetch("http://localhost:8000/api/file", requestOptions)
+
+            let url = '.api/file';
+            fetch(url, requestOptions)
                 .then((response) => response.text())
                 .then((result) => {
                     console.log("imageURL", result);
