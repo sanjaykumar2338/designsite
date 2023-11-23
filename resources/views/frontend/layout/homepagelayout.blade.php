@@ -33,7 +33,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="left-side" id="logo-hide">
-                        <img src="asset/frontend/images/new-logo.jpg" alt="">
+                        <a href="/"><img src="asset/frontend/images/new-logo.jpg" alt=""></a>
                     </div>
                 </div>
                 <div class="col-md-6 d-flex justify-content-end">
