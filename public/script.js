@@ -500,7 +500,7 @@ function createProduct(imageUrl) {
         headers: myHeaders,
         redirect: "follow",
     };
-    fetch("http://localhost:8000/api/createProduct", requestOptions)
+    fetch("api/createProduct", requestOptions)
         .then((response) => response.text())
         .then((result) => {
             const data = JSON.parse(result);
@@ -525,7 +525,7 @@ function getProduct(id) {
         headers: myHeaders,
         redirect: "follow",
     };
-    fetch("http://localhost:8000/api/getProduct", requestOptions)
+    fetch("api/getProduct", requestOptions)
         .then((response) => response.text())
         .then((result) => {
             console.log("getProduct", JSON.parse(result));
@@ -550,7 +550,7 @@ function createOrder(product) {
         headers: myHeaders,
         redirect: "follow",
     };
-    fetch("http://localhost:8000/api/createOrder", requestOptions)
+    fetch("api/createOrder", requestOptions)
         .then((response) => response.text())
         .then((result) => {
             order = JSON.parse(result);
@@ -617,7 +617,7 @@ function submitPayment() {
     setIsLoading(true);
     fetch(
         // `http://localhost:8000/api/updateOrder/99416078`,
-        `http://localhost:8000/api/updateOrder/${order.result.id}`,
+        `api/updateOrder/${order.result.id}`,
         requestOptions
     )
         .then((response) => response.text())
