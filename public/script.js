@@ -417,7 +417,7 @@ function htmltoCanvas() {
             }).showToast();
             setIsLoading(true);
 
-            let url = '.api/file';
+            let url = 'api/file';
             fetch(url, requestOptions)
                 .then((response) => response.text())
                 .then((result) => {
@@ -480,7 +480,7 @@ function calculateShippingRate() {
         headers: myHeaders,
         redirect: "follow",
     };
-    fetch("http://localhost:8000/api/calculateShippingRate", requestOptions)
+    fetch("api/calculateShippingRate", requestOptions)
         .then((response) => response.text())
         .then((result) => {
             const data = JSON.parse(result);
