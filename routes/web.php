@@ -42,3 +42,8 @@ Route::get('/login', [App\Http\Controllers\HomeController::class, 'login'])->nam
 Route::get('/register', [App\Http\Controllers\HomeController::class, 'register'])->name('register');
 Route::get('/product_design', [App\Http\Controllers\HomeController::class, 'product_design'])->name('product_design');
 Route::get('/create_product', [App\Http\Controllers\HomeController::class, 'create_product'])->name('create_product');
+
+
+Route::post('/register', [App\Http\Controllers\UserController::class, 'register'])->name('register');
+Route::get('/logout', [App\Http\Controllers\UserController::class, 'logout'])->name('logout');
+Route::post('/login', [App\Http\Controllers\UserController::class, 'login'])->name('login');

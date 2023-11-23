@@ -13,6 +13,12 @@
     </div>
 </section>
 
+@if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
+
 <!-- ========== Start about-us-section ========== -->
 <section class="about-section">
     <div class="container">

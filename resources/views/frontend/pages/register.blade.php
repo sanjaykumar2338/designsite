@@ -52,27 +52,46 @@
 </style>
 </head>
 <body>
-<form action="/action_page.php" method="post">
+
+<form method="POST" action="{{ route('register') }}">
+  {{ csrf_field() }}
   <div class="imgcontainer">
     <h2>Sign Up</h2>
   </div>
 
   <div class="container">
-    <label for="uname"><b>First Name</b></label>
-    <input type="text" placeholder="Enter First Name" name="fname" required>
+    <div>
+        <label for="uname"><b>Name</b></label>
+        <input type="text" placeholder="Enter First Name" name="name">
+        @error('name')
+            <span class="text-danger">{{ $message }}</span>
+        @enderror
+    </div>
 
-    <label for="uname"><b>Last Name</b></label>
-    <input type="text" placeholder="Enter Last Name" name="lname" required>
+    <div>
+      <label for="uname"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email">
+       @error('email')
+            <span class="text-danger">{{ $message }}</span>
+       @enderror
+    </div>
 
-    <label for="uname"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
+    <div>
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="password">
+      @error('password')
+          <span class="text-danger">{{ $message }}</span>
+      @enderror
+    </div>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="password" required>
+    <div>
+      <label for="psw"><b>Confirm Password</b></label>
+      <input type="password" placeholder="Enter Confirm Password" name="password_confirmation">
+      @error('password_confirmation')
+          <span class="text-danger">{{ $message }}</span>
+      @enderror
+    </div>
 
-    <label for="psw"><b>Confirm Password</b></label>
-    <input type="password" placeholder="Enter Confirm Password" name="cpassword" required>
-        
     <button type="submit" class="btn btn-primary">Submit</button>   
   </div>
 </form>

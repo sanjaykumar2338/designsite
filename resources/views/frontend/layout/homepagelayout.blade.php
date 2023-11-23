@@ -38,16 +38,32 @@
                 </div>
                 <div class="col-md-6 d-flex justify-content-end">
                     <div class="left-side">
-                        <li>
-                            <span style="cursor: pointer;" class="add-border" onclick='location.href ="{{route('login')}}";'>
-                                login
-                            </span>
-                        </li>
-                        <li>
-                            <span style="cursor: pointer;" onclick='location.href ="{{route('register')}}";'>
-                                sign up
-                            </span>
-                        </li>
+
+                        @if (Auth::check())
+                            <li>
+                                <span style="cursor: pointer;" class="add-border" onclick='location.href ="{{route('my_account')}}";'>
+                                    My Account
+                                </span>
+                            </li>
+                            <li>
+                                <span style="cursor: pointer;" onclick='location.href ="{{route('logout')}}";'>
+                                    Logout
+                                </span>
+                            </li>
+                        @else                            
+                            <li>
+                                <span style="cursor: pointer;" class="add-border" onclick='location.href ="{{route('register')}}";'>
+                                    sign up
+                                </span>
+                            </li>
+
+                            <li>
+                                <span style="cursor: pointer;" onclick='location.href ="{{route('login')}}";'>
+                                    login
+                                </span>
+                            </li>
+                        @endif
+
                     </div>
                 </div>
             </div>
