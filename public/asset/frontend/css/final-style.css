@@ -2454,3 +2454,6 @@
     align-items: center;
   }
 
+ header .collapse {
+    visibility: visible;
+  }
