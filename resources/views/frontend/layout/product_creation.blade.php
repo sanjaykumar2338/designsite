@@ -6,9 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CauseStand</title>
     <!-- stylesheet  -->
-    <link rel="stylesheet" href="asset/frontend/css/bootstrap.min.css">
-    <link rel="stylesheet" href="asset/frontend/css/stylesheet.css">
-    <link rel="stylesheet" href="asset/frontend/css/responsive.css">
+    <link rel="stylesheet" href="{{url('/')}}/asset/frontend/css/bootstrap.min.css">
+
+    <!--
+        <link rel="stylesheet" href="asset/frontend/css/stylesheet.css">
+        <link rel="stylesheet" href="asset/frontend/css/responsive.css">
+    -->
+
+    <link rel="stylesheet" href="{{url('/')}}/asset/frontend/css/final-style.css">
+    <link rel="stylesheet" href="{{url('/')}}/asset/frontend/css/final-responsive.css">
+    
     <!-- font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
@@ -22,7 +29,7 @@
         integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="asset/frontend/images/new-logo.jpg">
+    <link rel="icon" type="image/x-icon" href="{{url('/')}}/asset/frontend/images/new-logo.jpg">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js"
         integrity="sha512-CeIsOAsgJnmevfCi2C7Zsyy6bQKi43utIjdA87Q0ZY84oDqnI0uwfM9+bKiIkI75lUeI00WG/+uJzOmuHlesMA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -70,7 +77,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="left-side" id="logo-hide">
-                        <a href="/"><img src="asset/frontend/images/new-logo.jpg" alt=""></a>
+                        <a href="/"><img src="{{url('/')}}/asset/frontend/images/new-logo.jpg" alt=""></a>
                     </div>
                 </div>
                 <div class="col-md-6 d-flex justify-content-end">
@@ -89,13 +96,13 @@
                             </li>
                         @else                            
                             <li>
-                                <span style="cursor: pointer;" onclick='location.href ="{{route('register')}}";'>
+                                <span style="cursor: pointer;" class="add-border" onclick='location.href ="{{route('register')}}";'>
                                     sign up
                                 </span>
                             </li>
-                            |
+
                             <li>
-                                <span style="cursor: pointer;" class="add-border" onclick='location.href ="{{route('login')}}";'>
+                                <span style="cursor: pointer;" onclick='location.href ="{{route('login')}}";'>
                                     login
                                 </span>
                             </li>
@@ -112,7 +119,7 @@
     <header class="position-sticky">
         <nav class="navbar navbar-expand-lg ">
             <div class="container">
-                <a class="navbar-brand" href="index.html"> <img src="asset/frontend/images/new-logo.jpg" alt="">
+                <a class="navbar-brand" href="{{url('/')}}"> <img src="{{url('/')}}/asset/frontend/images/new-logo.jpg" alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -131,7 +138,7 @@
                             <a class="nav-link" href="{{route('causes')}}">Causes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('shop')}}">Shop</a>
+                            <a class="nav-link" href="{{route('shop2')}}">Shop</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('media')}}">Media</a>
@@ -160,7 +167,7 @@
             <div class="row">
                 <div class="col-md-12 col-lg-3">
                     <div class="fo-one">
-                        <img src="asset/frontend/images/logo-footer.png" alt="">
+                        <img src="{{url('/')}}/asset/frontend/images/logo-footer.png" alt="">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum aut esse repudiandae sequi?
                         </p>
                         <div class="f-icon">
@@ -237,7 +244,7 @@
 
             <div class="copy-right">
                 <p>© {{date('Y')}} All Rights Reserved | cause stand.</p>
-                <img src="asset/frontend/images/pay.png" alt="">
+                <img src="{{url('/')}}/asset/frontend/images/pay.png" alt="">
             </div>
 
 
@@ -252,7 +259,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
         integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="asset/frontend/js/bootstrap.bundle.min.js"></script>
+    <script src="{{url('/')}}/asset/frontend/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
@@ -285,8 +292,8 @@
             owl.trigger('stop.owl.autoplay')
         })
     </script>
-    <script src="./html2canvas.min.js"></script>
-    <script src="./script.js?v={{time()}}"></script>
+    <script src="{{url('/')}}/html2canvas.min.js"></script>
+    <script src="{{url('/')}}/script.js?v={{time()}}"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {

@@ -231,57 +231,7 @@
     transform: translateY(-50%);
     z-index: 888;
 }
-  .vioce {
-    padding: 15px;
-    margin-top: 0;
-    background: #fff;
-    border-radius: 11px;
-    background: transparent;
-    backdrop-filter: blur(50px);
-    color: #fff;
-  }
-
-  .vioce h4 {
-    font-size: 25px;
-    font-weight: 700;
-    text-align: center;
-    margin-top: 10px;
-    padding-bottom: 0px;
-  }
-
-  .vioce a {
-    text-decoration: none;
-    color: black;
-
-  }
-
-  .vioce li {
-    list-style: none;
-    text-transform: capitalize;
-    font-size: 18px;
-    text-align: center;
-    padding: 10px;
-    background-color: #f7f7f7;
-    margin: 14px 0px;
-    border-radius: 4px;
-  }
-
-  .vioce li:hover a {
-    color: #fff;
-  }
-
-  .vioce li:hover {
-    color: #fff;
-    background-color: var(--btn-color);
-    cursor: pointer;
-  }
-
-  .add-flex {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-  }
-
+  
   /***** End slider *****/
 
 
@@ -2403,3 +2353,104 @@
     border: 1px solid #ef4444 !important;
 }
   /***** End Create product *****/
+
+
+
+
+  .carousel-caption {
+    bottom: 14.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    left: 8%;
+    text-align: left;
+    z-index: 777;
+    width: 100%;
+    max-width: 700px;
+  }
+
+
+
+
+
+
+  
+  .main-vioce {
+    position: relative;
+  }
+
+
+  .add-bg {
+    position: absolute;
+    z-index: 777 !important;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  /* .box-3{
+    position: absolute;
+    z-index: 777 !important;
+    display: none;
+  } */
+
+  .vioce {
+    padding: 15px;
+    z-index: 777;
+    background: #fff;
+    border-radius: 11px;
+    background: transparent;
+    backdrop-filter: blur(50px);
+    color: #fff;
+    margin-top: -170%;
+  }
+
+  .vioce h4 {
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 10px;
+    padding-bottom: 0px;
+  }
+
+  .vioce a {
+    text-decoration: none;
+    color: black;
+
+  }
+
+  .vioce li {
+    list-style: none;
+    text-transform: capitalize;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+    background-color: #f7f7f7;
+    margin: 14px 0px;
+    border-radius: 4px;
+    color: #000 !important;
+  }
+
+  .vioce li:hover {
+    background-color: var(--btn-color);
+    color: #fff !important;
+    cursor: pointer;
+  }
+
+
+  /* .vioce li:hover {
+    color: #fff !important;
+  }
+
+  .vioce li:hover {
+    color: #fff;
+    background-color: var(--btn-color);
+    cursor: pointer;
+  } */
+
+  .add-flex {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+

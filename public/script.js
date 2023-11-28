@@ -21,7 +21,7 @@ function init() {
     });
 
     const img =
-        "<img src='./blank-t-shirt.jpg' height='500px' style='position: absolute; height: 500px; width: 500px' alt='' id='canvasBg' />";
+        "<img src='./../../blank-t-shirt.jpg' height='500px' style='position: absolute; height: 500px; width: 500px' alt='' id='canvasBg' />";
     const canvasBgImage = getEl("canvasBgImage");
     canvasBgImage.innerHTML += img;
 }
@@ -163,12 +163,12 @@ function setSelected(selected) {
     cleanForSelection();
     let img;
     if (selected === 1) {
-        img = ` <img   src="./blank-t-shirt.jpg"   height="500px"   style="position: absolute; height: 500px; width: 500px"   alt=""   id="canvasBg" />`;
+        img = ` <img   src="./../../blank-t-shirt.jpg"   height="500px"   style="position: absolute; height: 500px; width: 500px"   alt=""   id="canvasBg" />`;
         getEl("text-controls-additional").hidden = false;
     } else if (selected === 2) {
-        img = ` <img    src="./poster.jpg"    style="position: absolute;top: 35px; left: 100px;height: 330px;width: 330px"    alt=""    id="canvasBg"  />`;
+        img = ` <img    src="./../../poster.jpg"    style="position: absolute;top: 35px; left: 100px;height: 330px;width: 330px"    alt=""    id="canvasBg"  />`;
     } else if (selected === 3) {
-        img = ` <img src="./signage.jpg" height="500px" style="position: absolute;left: 120px;top: 8px;height: 435px;width: 300px" alt="" id="canvasBg" />`;
+        img = ` <img src="./../../signage.jpg" height="500px" style="position: absolute;left: 120px;top: 8px;height: 435px;width: 300px" alt="" id="canvasBg" />`;
     }
     if (selected !== 1) {
         //getEl("text-controls-additional").hidden = true;

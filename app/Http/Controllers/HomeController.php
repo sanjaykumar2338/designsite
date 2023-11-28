@@ -46,7 +46,7 @@ class HomeController extends Controller
         return view('frontend.pages.causes');
     }
 
-    public function shop()
+    public function shop2()
     {
         return view('frontend.pages.shop');
     }
@@ -133,6 +133,10 @@ class HomeController extends Controller
 
     public function create_product()
     {
+        return view('frontend.pages.create_product');
+    }
+
+    public function shop(){
         return view('frontend.pages.create_product');
     }
 }

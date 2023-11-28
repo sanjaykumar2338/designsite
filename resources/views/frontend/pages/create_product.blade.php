@@ -1,175 +1,194 @@
 @extends('frontend.layout.product_creation')
 
 @section('content')
-    <div class="flex gap-2">
-        <div class="flex flex-col">
-            <button class="hover:bg-slate-200 h-[50px] w-[50px]" onclick="setSelected(1)">
-                <img src="/blank-t-shirt.jpg" class="h-full" alt="" />
-            </button>
-            <button class="hover:bg-slate-200 h-[50px] w-[50px]" onclick="setSelected(2)">
-                <img src="./poster.jpg" class="h-full" alt="" />
-            </button>
-            <button class="hover:bg-slate-200 h-[50px] w-[50px]" onclick="setSelected(3)">
-                <img src="./signage.jpg" class="h-full" alt="" />
-            </button>
-        </div>
-        <div style="position: relative" id="canvasParent">
-            <div style="height: 500px; width: 500px; position: absolute" id="canvasBgImage"></div>
-            <div style="height: 500px; width: 500px; position: relative">
-                <div class="border-[1px] border-neutral-300"
-                    style="
-                            position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-43%, -70%);
-                            z-index: 10;
-                        ">
-                    <canvas id="c" width="200" height="250"
-                        style="border: 1px; border-color: black"></canvas>
-                </div>
-            </div>
-        </div>
-        <div class="flex flex-col gap-2" id="editables"></div>
-    </div>
-    <div class="flex gap-4">
-        <button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="setShowModal(true)">
-            Add Image
-        </button>
-        <input id="image-picker" type="file" accept="image/*" class="w-[200px]" onchange="onImagePikked()" />
+<div class="crt-prd-main">
+	<div class="container">
+		<div class="flex flex-wrap">
+			<div class="prd-left">
+				<div class="flex flex-wrap prd-crs-img">
+					<button class="hover:bg-slate-200 h-[50px] w-[50px]" onclick="setSelected(1)">
+						<img src="{{url('/')}}/blank-t-shirt.jpg" class="h-full" alt="" />
+					</button>
+					<button class="hover:bg-slate-200 h-[50px] w-[50px]" onclick="setSelected(2)">
+						<img src="{{url('/')}}/poster.jpg" class="h-full" alt="" />
+					</button>
+					<button class="hover:bg-slate-200 h-[50px] w-[50px]" onclick="setSelected(3)">
+						<img src="{{url('/')}}/signage.jpg" class="h-full" alt="" />
+					</button>
+				</div>
+				<div class="prd-image">
+					<div style="position: relative" id="canvasParent">
+						<div class="cmn-frame" style="height: 500px; width: 500px; position: absolute" id="canvasBgImage"></div>
+						<div class="cmn-frame" style="height: 500px; width: 500px; position: relative">
+							<div class="border-[1px] border-neutral-300 frame-area"
+								style="
+										position: absolute;
+										top: 50%;
+										left: 50%;
+										transform: translate(-43%, -70%);
+										z-index: 10;
+									">
+								<canvas id="c" width="200" height="250"
+									style="border: 1px; border-color: black"></canvas>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="prd-right">
+			<div class="flex flex-col gap-2" id="editables"></div>
+			<div class="prd-option">
+				<div class="flex flex-wrap prd-opt-one align-items-center cmn-prd-opt">
+					<button class="border prd-btn rounded-lg p-2 px-3" onclick="setShowModal(true)">
+						Add Image
+					</button>
+					<div class="img-add-opt">
+						<input id="image-picker" type="file" accept="image/*" class="w-[200px]" onchange="onImagePikked()" />
+					</div>
+					<button class="border prd-btn rounded-lg p-2 px-3" onclick="addText()">
+						Add Text
+					</button>
 
-        <button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="addText()">
-            Add Text
-        </button>
+					
+				</div>
+				<div class="prd-opt-two cmn-prd-opt">
+					<button class="border rounded-lg p-2 px-3 place-btn" onclick="htmltoCanvas()">
+						Place order
+					</button>
+				</div>
+				<div class="prd-opt-three cmn-prd-opt" id="text-controls-additional">
+					<div class="flex flex-wrap gap-2 prd-sze">
+						<h4>T-shirt Size :</h4>
+						<input type="radio" id="X" name="fav_language" value="X" />
+						<label for="X">X</label>
+						<br />
+						<input type="radio" id="M" name="fav_language" value="M" />
+						<label for="M">M</label>
+						<br />
+						<input type="radio" id="L" name="fav_language" value="L" />
+						<label for="L">L</label>
+					</div>
+					<div class="prd-opt-four">
+						<h4>Objects:</h4>
+						<!-- <button
+					class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+					onclick="addLine()"
+				  >
+					Line
+				  </button>
+				  <button
+					class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+					onclick="addRect()"
+				  >
+					Rectangle
+				  </button>
+				  <button
+					class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+					onclick="addCircle()"
+				  >
+					Circle
+				  </button>
+				  <button
+					class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+					onclick="addTriangle()"
+				  >
+					Triangle
+				  </button> -->
+					<div class="prd-objects flex flex-wrap">
+						<button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="addObjectImage(`{{url('/')}}/1-circle-1.svg`)">
+							<img src="{{url('/')}}/objects/1-circle-1.svg" width="50px" alt="" />
+						</button>
+						<button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="addObjectImage(`{{url('/')}}/1-circle-2.svg`)">
+							<img src="{{url('/')}}/objects/1-circle-2.svg" width="50px" alt="" />
+						</button>
+						<button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="addObjectImage(`{{url('/')}}/1-circle-3.svg`)">
+							<img src="{{url('/')}}/objects/1-circle-3.svg" width="50px" alt="" />
+						</button>
 
-        <button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="htmltoCanvas()">
-            Place order
-        </button>
-    </div>
-    <div id="text-controls-additional">
-        <div class="flex gap-2 m-2">
-            T-shirt Size :
-            <input type="radio" id="X" name="fav_language" value="X" />
-            <label for="X">X</label>
-            <br />
-            <input type="radio" id="M" name="fav_language" value="M" />
-            <label for="M">M</label>
-            <br />
-            <input type="radio" id="L" name="fav_language" value="L" />
-            <label for="L">L</label>
-        </div>
-        <div class="grid grid-cols-3 w-[250px]">
-            <div class="col-span-3">Objects:</div>
-            <!-- <button
-        class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-        onclick="addLine()"
-      >
-        Line
-      </button>
-      <button
-        class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-        onclick="addRect()"
-      >
-        Rectangle
-      </button>
-      <button
-        class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-        onclick="addCircle()"
-      >
-        Circle
-      </button>
-      <button
-        class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-        onclick="addTriangle()"
-      >
-        Triangle
-      </button> -->
+						<button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="addObjectImage(`{{url('/')}}/2-rect-1.svg`)">
+							<img src="{{url('/')}}/objects/2-rect-1.svg" width="50px" alt="" />
+						</button>
+						<button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="addObjectImage(`{{url('/')}}/2-rect-2.svg`)">
+							<img src="{{url('/')}}/objects/2-rect-2.svg" width="50px" alt="" />
+						</button>
+						<button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="addObjectImage(`{{url('/')}}/2-rect-3.svg`)">
+							<img src="{{url('/')}}/objects/2-rect-3.svg" width="50px" alt="" />
+						</button>
 
-            <button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="addObjectImage(`1-circle-1.svg`)">
-                <img src="objects/1-circle-1.svg" width="50px" alt="" />
-            </button>
-            <button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="addObjectImage(`1-circle-2.svg`)">
-                <img src="objects/1-circle-2.svg" width="50px" alt="" />
-            </button>
-            <button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="addObjectImage(`1-circle-3.svg`)">
-                <img src="objects/1-circle-3.svg" width="50px" alt="" />
-            </button>
+						<button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+							onclick="addObjectImage(`{{url('/')}}/3-triangle-1.svg`)">
+							<img src="{{url('/')}}/objects/3-triangle-1.svg" width="50px" alt="" />
+						</button>
+						<button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+							onclick="addObjectImage(`{{url('/')}}/3-triangle-2.svg`)">
+							<img src="{{url('/')}}/objects/3-triangle-2.svg" width="50px" alt="" />
+						</button>
+						<button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+							onclick="addObjectImage(`{{url('/')}}/3-triangle-3.svg`)">
+							<img src="{{url('/')}}/objects/3-triangle-3.svg" width="50px" alt="" />
+						</button>
 
-            <button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="addObjectImage(`2-rect-1.svg`)">
-                <img src="objects/2-rect-1.svg" width="50px" alt="" />
-            </button>
-            <button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="addObjectImage(`2-rect-2.svg`)">
-                <img src="objects/2-rect-2.svg" width="50px" alt="" />
-            </button>
-            <button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="addObjectImage(`2-rect-3.svg`)">
-                <img src="objects/2-rect-3.svg" width="50px" alt="" />
-            </button>
+						<button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="addObjectImage(`{{url('/')}}/5-poly-1.svg`)">
+							<img src="{{url('/')}}/objects/5-poly-1.svg" width="50px" alt="" />
+						</button>
+						<button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="addObjectImage(`{{url('/')}}/5-poly-2.svg`)">
+							<img src="{{url('/')}}/objects/5-poly-2.svg" width="50px" alt="" />
+						</button>
+						<button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="addObjectImage(`{{url('/')}}/5-poly-3.svg`)">
+							<img src="{{url('/')}}/objects/5-poly-3.svg" width="50px" alt="" />
+						</button>
+						<button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="addObjectImage(`6-poly-1.svg`)">
+							<img src="{{url('/')}}/objects/6-poly-1.svg" width="50px" alt="" />
+						</button>
+						<button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="addObjectImage(`{{url('/')}}/6-poly-2.svg`)">
+							<img src="{{url('/')}}/objects/6-poly-2.svg" width="50px" alt="" />
+						</button>
+						<button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="addObjectImage(`{{url('/')}}/6-poly-3.svg`)">
+							<img src="{{url('/')}}/objects/6-poly-3.svg" width="50px" alt="" />
+						</button>
+						<button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="addObjectImage(`{{url('/')}}/7-arrow-1.svg`)">
+							<img src="{{url('/')}}/objects/7-arrow-1.svg" width="50px" alt="" />
+						</button>
+						<button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="addObjectImage(`{{url('/')}}/7-arrow-2.svg`)">
+							<img src="{{url('/')}}/objects/7-arrow-2.svg" width="50px" alt="" />
+						</button>
 
-            <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                onclick="addObjectImage(`3-triangle-1.svg`)">
-                <img src="objects/3-triangle-1.svg" width="50px" alt="" />
-            </button>
-            <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                onclick="addObjectImage(`3-triangle-2.svg`)">
-                <img src="objects/3-triangle-2.svg" width="50px" alt="" />
-            </button>
-            <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                onclick="addObjectImage(`3-triangle-3.svg`)">
-                <img src="objects/3-triangle-3.svg" width="50px" alt="" />
-            </button>
+						<button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="addObjectImage(`{{url('/')}}/7-arrow-3.svg`)">
+							<img src="{{url('/')}}/objects/7-arrow-3.svg" width="50px" alt="" />
+						</button>
+						<button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+							onclick="addObjectImage(`{{url('/')}}/bookmark-shapes.svg`)">
+							<img src="{{url('/')}}/objects/bookmark-shapes.svg" width="50px" alt="" />
+						</button>
+						<button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="addObjectImage(`{{url('/')}}/circle.svg`)">
+							<img src="{{url('/')}}/objects/circle.svg" width="50px" alt="" />
+						</button>
+						<button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="addObjectImage(`{{url('/')}}/cloud.svg`)">
+							<img src="{{url('/')}}/objects/cloud.svg" width="50px" alt="" />
+						</button>
 
-            <button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="addObjectImage(`5-poly-1.svg`)">
-                <img src="objects/5-poly-1.svg" width="50px" alt="" />
-            </button>
-            <button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="addObjectImage(`5-poly-2.svg`)">
-                <img src="objects/5-poly-2.svg" width="50px" alt="" />
-            </button>
-            <button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="addObjectImage(`5-poly-3.svg`)">
-                <img src="objects/5-poly-3.svg" width="50px" alt="" />
-            </button>
-            <button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="addObjectImage(`6-poly-1.svg`)">
-                <img src="objects/6-poly-1.svg" width="50px" alt="" />
-            </button>
-            <button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="addObjectImage(`6-poly-2.svg`)">
-                <img src="objects/6-poly-2.svg" width="50px" alt="" />
-            </button>
-            <button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="addObjectImage(`6-poly-3.svg`)">
-                <img src="objects/6-poly-3.svg" width="50px" alt="" />
-            </button>
-            <button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="addObjectImage(`7-arrow-1.svg`)">
-                <img src="objects/7-arrow-1.svg" width="50px" alt="" />
-            </button>
-            <button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="addObjectImage(`7-arrow-2.svg`)">
-                <img src="objects/7-arrow-2.svg" width="50px" alt="" />
-            </button>
-
-            <button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="addObjectImage(`7-arrow-3.svg`)">
-                <img src="objects/7-arrow-3.svg" width="50px" alt="" />
-            </button>
-            <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                onclick="addObjectImage(`bookmark-shapes.svg`)">
-                <img src="objects/bookmark-shapes.svg" width="50px" alt="" />
-            </button>
-            <button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="addObjectImage(`circle.svg`)">
-                <img src="objects/circle.svg" width="50px" alt="" />
-            </button>
-            <button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="addObjectImage(`cloud.svg`)">
-                <img src="objects/cloud.svg" width="50px" alt="" />
-            </button>
-
-            <button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="addObjectImage(`cube.svg`)">
-                <img src="objects/cube.svg" width="50px" alt="" />
-            </button>
-            <button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="addObjectImage(`heart.svg`)">
-                <img src="objects/heart.svg" width="50px" alt="" />
-            </button>
-            <button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="addObjectImage(`moon.svg`)">
-                <img src="objects/moon.svg" width="50px" alt="" />
-            </button>
-            <button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="addObjectImage(`star.svg`)">
-                <img src="objects/star.svg" width="50px" alt="" />
-            </button>
-        </div>
-    </div>
+						<button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="addObjectImage(`{{url('/')}}/cube.svg`)">
+							<img src="{{url('/')}}/objects/cube.svg" width="50px" alt="" />
+						</button>
+						<button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="addObjectImage(`{{url('/')}}/heart.svg`)">
+							<img src="{{url('/')}}/objects/heart.svg" width="50px" alt="" />
+						</button>
+						<button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="addObjectImage(`{{url('/')}}/moon.svg`)">
+							<img src="{{url('/')}}/objects/moon.svg" width="50px" alt="" />
+						</button>
+						<button class="border rounded-lg p-2 px-3 hover:bg-slate-200" onclick="addObjectImage(`{{url('/')}}/star.svg`)">
+							<img src="{{url('/')}}/objects/star.svg" width="50px" alt="" />
+						</button>
+					</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>
+    
 
     <div id="modal" hidden>
         <div class="fixed z-20 overflow-y-auto top-0 w-full left-0">

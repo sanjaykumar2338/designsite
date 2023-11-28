@@ -47,21 +47,67 @@
     </div>
 </section>
 
-<!-- ========== Start top-align-slider ========== -->
-<div class="container">
-    <div class="row add-flex">
-        <div class="col-md-12 col-lg-3 z-3 ">
-            <div class="vioce">
-                <h4>Display your voice</h4>
-                <ul>
-                    <li><a href="{{route('create_product')}}">poster</a></li>
-                    <li><a href="{{route('create_product')}}">sigange</a></li>
-                    <li><a href="{{route('create_product')}}">t-shirt</a></li>
-                </ul>
-            </div>
+    <section id="align-h">
+        <div class="container">
+            <div class="row add-flex">
+                <div class="col-md-12 col-lg-3 z-3 ">
+                    <div class="main-vioce z-3 ">
+                        <div class="vioce box-1" id="box-1">
+                            <h4>Choose a Conflict</h4>
+                            <ul>
+                                <li class="israel-1 option-conflict">Israel & Palestine
+                                </li>
+                                <li class="option-conflict">Nagorno & Karabakh
+                                </li>
+                                <li class="option-conflict">Nagorno & Karabakh
+                                </li>
+                                <li class="option-conflict">Turkey & Kurdistan </li>
+                                <li class="option-conflict">India & Pakistan</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="vioce add-bg" id="box-2">
+                            <h4>Stand for a Cause </h4>
+                            <ul>
+                                <li class="Israel-2 option-conflict-li1 standwith">Israel</li>
+                                <li class="option-conflict-li2 standwith">Palestine</li>
+                            </ul>
+                        </div>
+
+                        <div class="vioce add-bg" id="box-3">
+                            <h4>Choose a Display </h4>
+                            <ul>
+                                <li class="apparel">Apparel</li>
+                                <li class="accessories">Accessories</li>
+                            </ul>
+                        </div>
+
+                        <div class="vioce add-bg" id="box-4">
+                            <h4>Shop a Category </h4>
+                            <ul>
+                                <li class="typeofproduct">Shirts</li>
+                                <li class="typeofproduct">Hoodies</a></li>
+                                <li class="typeofproduct">Sweatshirts</a></li>
+                                <li class="typeofproduct">Bottoms</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="vioce add-bg" id="box-5">
+                            <h4>Shop a Category</h4>
+                            <ul>
+                                <li class="typeofproduct">Caps</a></li>
+                                <li class="typeofproduct">Scarfs</a></li>
+                                <li class="typeofproduct">Flyers</a></li>
+                                <li class="typeofproduct">Pins</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                </div>
         </div>
-    </div>
-</div>
+    </section>
+
 
 <section class="Products">
         <div class="container">
@@ -451,4 +497,8 @@
         </div>
 
     </section>
+
+    <script>
+        
+    </script>
 @endsection

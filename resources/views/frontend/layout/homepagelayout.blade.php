@@ -7,8 +7,16 @@
     <title>CauseStand</title>
     <!-- stylesheet  -->
     <link rel="stylesheet" href="asset/frontend/css/bootstrap.min.css">
-    <link rel="stylesheet" href="asset/frontend/css/stylesheet.css">
-    <link rel="stylesheet" href="asset/frontend/css/responsive.css">
+
+    <!--
+        <link rel="stylesheet" href="asset/frontend/css/stylesheet.css">
+        <link rel="stylesheet" href="asset/frontend/css/responsive.css">
+    -->
+
+    <link rel="stylesheet" href="asset/frontend/css/final-style.css">
+    <link rel="stylesheet" href="asset/frontend/css/final-responsive.css">
+
+
     <!-- font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
@@ -94,7 +102,7 @@
                             <a class="nav-link" href="{{route('causes')}}">Causes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('shop')}}">Shop</a>
+                            <a class="nav-link" href="{{route('shop2')}}">Shop</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('media')}}">Media</a>
@@ -220,6 +228,83 @@
     <script>
         AOS.init();
     </script>
+
+    <script>
+        const conflicts = document.querySelectorAll('.option-conflict');
+        const box1 = document.getElementById('box-1');
+        const box2 = document.getElementById('box-2');
+        const box3 = document.getElementById('box-3');
+        const box4 = document.getElementById('box-4');
+
+        conflicts.forEach(conflict => {
+            conflict.addEventListener('click', () => {
+                const values = conflict.textContent.split(' & ');
+
+                const li1 = document.querySelector('.option-conflict-li1');
+                const li2 = document.querySelector('.option-conflict-li2');
+
+                li1.textContent = values[0];
+                li2.textContent = values[1];
+
+                box1.style.display = 'none';
+                box2.style.display = 'block';
+            });
+        });
+
+        const chosenConflicts = document.querySelectorAll('.option-conflict-li1, .option-conflict-li2');
+
+        chosenConflicts.forEach(chosenConflict => {
+            chosenConflict.addEventListener('click', () => {
+                const values = chosenConflict.textContent;
+
+                const chosenLi1 = document.querySelector('.chosen-conflict-li1');
+                const chosenLi2 = document.querySelector('.chosen-conflict-li2');              
+
+                box1.style.display = 'none';
+                box2.style.display = 'none';
+                box3.style.display = 'block';
+            });
+        });
+
+        const box3Options = document.querySelectorAll('.apparel, .accessories');
+
+        box3Options.forEach(option => {
+            option.addEventListener('click', () => {
+                box3.style.display = 'none';
+                box4.style.display = 'block';
+            });
+        });
+
+
+        const elements = document.querySelectorAll('.standwith');
+
+        elements.forEach(element => {
+            element.addEventListener('click', standwith);
+        });
+
+        let standwithtype = '';
+        function standwith(event) {
+            const text = event.target.textContent;
+            standwithtype = event.target.textContent.trim();
+            console.log('Clicked on:', text, standwithtype);
+        }
+
+        const elements2 = document.querySelectorAll('.typeofproduct');
+
+        elements2.forEach(element => {
+            element.addEventListener('click', typeofproduct);
+        });
+
+        let product_type = '';
+        function typeofproduct(event) {
+            const productType = event.target.textContent.trim();
+            const baseUrl = "{{ url('/') }}";        
+            const finalUrl = `${baseUrl}/${encodeURIComponent(standwithtype)}/shop/${encodeURIComponent(productType)}`;
+
+            window.location.href = finalUrl;
+        }
+    </script>
+
     <script>
         var owl = $('.owl-carousel');
         owl.owlCarousel({

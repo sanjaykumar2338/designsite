@@ -24,7 +24,7 @@ Route::get('/contactus', [App\Http\Controllers\HomeController::class, 'contactus
 Route::get('/aboutus', [App\Http\Controllers\HomeController::class, 'aboutus'])->name('aboutus');
 Route::get('/conflicts', [App\Http\Controllers\HomeController::class, 'conflicts'])->name('conflicts');
 Route::get('/causes', [App\Http\Controllers\HomeController::class, 'causes'])->name('causes');
-Route::get('/shop', [App\Http\Controllers\HomeController::class, 'shop'])->name('shop');
+Route::get('/shop2', [App\Http\Controllers\HomeController::class, 'shop2'])->name('shop2');
 Route::get('/media', [App\Http\Controllers\HomeController::class, 'media'])->name('media');
 Route::get('/justice', [App\Http\Controllers\HomeController::class, 'justice'])->name('justice');
 Route::get('/blog', [App\Http\Controllers\HomeController::class, 'blog'])->name('blog');
@@ -42,6 +42,9 @@ Route::get('/login', [App\Http\Controllers\HomeController::class, 'login'])->nam
 Route::get('/register', [App\Http\Controllers\HomeController::class, 'register'])->name('register');
 Route::get('/product_design', [App\Http\Controllers\HomeController::class, 'product_design'])->name('product_design');
 Route::get('/create_product', [App\Http\Controllers\HomeController::class, 'create_product'])->name('create_product');
+Route::get('/{standwithtype}/shop/{productType}', [App\Http\Controllers\HomeController::class, 'shop'])->name('shop');
+
+
 
 
 Route::post('/register', [App\Http\Controllers\UserController::class, 'register'])->name('register');
