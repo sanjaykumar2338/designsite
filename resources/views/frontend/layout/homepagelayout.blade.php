@@ -282,10 +282,10 @@
             element.addEventListener('click', standwith);
         });
 
-        let standwithtype = '';
+        let standwithtype = 'stand-with-';
         function standwith(event) {
             const text = event.target.textContent;
-            standwithtype = event.target.textContent.trim();
+            standwithtype += event.target.textContent.toLowerCase().trim();
             console.log('Clicked on:', text, standwithtype);
         }
 
@@ -297,7 +297,7 @@
 
         let product_type = '';
         function typeofproduct(event) {
-            const productType = event.target.textContent.trim();
+            const productType = event.target.textContent.toLowerCase().trim();
             const baseUrl = "{{ url('/') }}";        
             const finalUrl = `${baseUrl}/${encodeURIComponent(standwithtype)}/shop/${encodeURIComponent(productType)}`;
 
