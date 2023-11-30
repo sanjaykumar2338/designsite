@@ -1848,7 +1848,13 @@
     padding-top: 5px;
   }
 
-
+  .Donations p{
+    text-align: center;
+    font-size: 20px;
+    text-transform: capitalize;
+    padding-bottom: 20px;
+    line-height: 0px;
+  }
 
   .Donations {
     padding: 50PX 0PX 50PX 0PX;

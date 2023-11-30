@@ -132,7 +132,7 @@
                 <div class="col-md-12 col-lg-3">
                     <div class="fo-one">
                         <img src="asset/frontend/images/logo-footer.png" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum aut esse repudiandae sequi?
+                        <p>Demonstrate your voice, challenge deception, and advocate for accountability.
                         </p>
                         <div class="f-icon">
                             <i class="fa-brands fa-facebook-f"></i>

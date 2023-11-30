@@ -19,24 +19,24 @@
                         <div class="carousel-item active">
                             <img src="asset/frontend/images/parallax-1.jpg" class="d-block w-100" alt="...">
                             <div class="carousel-caption ">
-                                <h5> WE LOVE ALL PEOPLE</h5>
-                                <p>Check Our Latest Causes And Missions</p>
+                                <h5>MOVED BY<br> IMAGES!</h5>
+                                <p>Stand in the Face of Oppression<br> Challenge False Narratives<br> and Demand Accountability.</p>
                                 <button onclick='location.href ="{{route('donate_now')}}";' class=" donate"> donate now</button>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <img src="asset/frontend/images/banner-2.jpg" class="d-block w-100" alt="...">
                             <div class="carousel-caption ">
-                                <h5> WE LOVE ALL PEOPLE</h5>
-                                <p>Check Our Latest Causes And Missions</p>
+                                <h5>MOVED BY<br> IMAGES!</h5>
+                                <p>Stand in the Face of Oppression<br> Challenge False Narratives<br> and Demand Accountability.</p>
                                 <button onclick='location.href ="{{route('donate_now')}}";' class=" donate"> donate now</button>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <img src="asset/frontend/images/banner-3.jpg" class="d-block w-100" alt="...">
                             <div class="carousel-caption ">
-                                <h5> WE LOVE ALL PEOPLE</h5>
-                                <p>Check Our Latest Causes And Missions</p>
+                                <h5>MOVED BY<br> IMAGES!</h5>
+                                <p>Stand in the Face of Oppression<br> Challenge False Narratives<br> and Demand Accountability.</p>
                                 <button onclick='location.href ="{{route('donate_now')}}";' class=" donate"> donate now</button>
                             </div>
                         </div>
@@ -112,8 +112,7 @@
 <section class="Products">
         <div class="container">
             <h3> Apparel </h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, eius magni aliquam ullam at odio ea!
-                Doloremque porro, eveniet totam cum impedit, hic mollitia libero maxime nobis beatae voluptate nulla!
+            <p>Express your support for a cause and stand in the face of injustice by adding images that resonate with your values into your apparel. Shop to donate and make a difference.
             </p>
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-6">
@@ -176,8 +175,7 @@
     <section class="Products-3 bg-img">
         <div class="container">
             <h3> Accessories </h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, eius magni aliquam ullam at odio ea!
-                Doloremque porro, eveniet totam cum impedit, hic mollitia libero maxime nobis beatae voluptate nulla!
+            <p>Demonstrate solidarity with a cause and oppose misinformation by accessorizing your fashion with images that reflect your voice. Shop to donate and effect positive change.
             </p>
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-6">
@@ -240,7 +238,7 @@
     <section class="Donations">
         <div class="container">
             <h3 class="heading">Donations</h3>
-
+            <p>Upon incorporating an image into your purchase, a $10 contribution is donated to strengthen the associated cause.</p>
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-6 add-margin">
                     <div class="Donations-box">
@@ -314,16 +312,10 @@
     </section>
 
     <!-- ========== End Donations ========== -->
-
-
-
-
     <section class="Media">
         <div class="container">
             <h4 class="heading-two">media</h4>
-            <p class="p">Lorem Ipsum Dolor Sit Amet Consectetur, Adipisicing Elit. Autem, Eius Magni Aliquam Ullam At
-                Odio Ea!
-                Doloremque Porro, Eveniet Totam Cum Impedit, Hic Mollitia Libero Maxime Nobis Beatae Voluptate Nulla!
+            <p class="p">Explore trending media posts that shed light on current conflicts so you can support or oppose the narrative. Select a cause to view social posts from various media.
             </p>
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-6">
@@ -388,13 +380,12 @@
             <div class="row">
                 <div class="col-md-12 col-lg-6">
                     <div class="left-text">
-                        <h4 class="text">Justice</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus maiores quos, corporis
-                            perferendis
-                            odio sit, consequuntur recusandae architecto quia illum doloremque magni aperiam, quibusdam
-                            nesciunt corrupti modi eaque pariatur officiis? Aliquam perspiciatis saepe beatae. Amet
-                            eaque
-                            alias voluptas aliquid? Libero?</p>
+                        <h4 class="text">Accountable to Truth</h4>
+                        <p>Ensuring accountability for the aggressor demands a commitment to truth
+and transparency. Holding those who perpetrate wrongdoing accountable is
+necessary to peace.
+
+Stand in the face of crime and advocate for justice, explore the Hall of Shame to prosecute those who intentionally propagate bigoted narratives.</p>
                         <button onclick='location.href ="{{route('justice')}}";' class="Read"> Read more</button>
 
                     </div>
@@ -403,8 +394,9 @@
 
                 <div class="col-md-12 col-lg-6">
                     <div class="text">
-                        <h5 class="Hall">Hall of Shame
+                        <h5 class="Hall">Hall Of Shame
                             Advocate: Sign a List</h5>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Explore and advocate for prosecution</p>
                     </div>
                 </div>
             </div>
@@ -421,17 +413,10 @@
 
                 <div class="col-lg-6">
                     <div class="card-one-1">
-                        <h3 class="latest add">General Blogs:</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe nostrum error at. Optio
-                            deleniti sit autem, mollitia iure officia adipisci illum qui eveniet et voluptates,
-                            excepturi obcaecati assumenda nulla pariatur possimus molestias a aut? Obcaecati laboriosam
-                            error at quidem provident, ipsa commodi reprehenderit recusandae animi. Itaque dolores neque
-                            illo recusandae?</p>
+                        <h3 class="latest add">Trending Blogs:</h3>
+                        <p>Join us on this journey as we navigate through the intricacies of global affairs, shedding light on the why behind the what, and putting a spotlight on the injustices affecting our reality and shaping our world.</p>
 
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam saepe voluptatibus facere
-                            iste, assumenda dolorem voluptas soluta qui. Quia magnam veritatis id cumque officia.
-                            Eveniet omnis quaerat aut odio, commodi fugit distinctio provident, asperiores, ad
-                            laboriosam dignissimos quidem error natus.</p>
+                        <p>Step into our General Blog, a space that offers insightful perspectives on current events and conflicts. We venture beyond the headlines, we investigate the pivotal questions surrounding the motivations propelling these conflicts.</p>
                     </div>
 
                 </div>
