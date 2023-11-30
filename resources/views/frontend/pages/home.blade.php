@@ -21,7 +21,7 @@
                             <div class="carousel-caption ">
                                 <h5>MOVED BY<br> IMAGES!</h5>
                                 <p>Stand in the Face of Oppression<br> Challenge False Narratives<br> and Demand Accountability.</p>
-                                <button onclick='location.href ="{{route('donate_now')}}";' class=" donate"> donate now</button>
+                                <button onclick='location.href ="{{route('donate_now')}}";' class=" donate"> shop and donate</button>
                             </div>
                         </div>
                         <div class="carousel-item">
@@ -29,7 +29,7 @@
                             <div class="carousel-caption ">
                                 <h5>MOVED BY<br> IMAGES!</h5>
                                 <p>Stand in the Face of Oppression<br> Challenge False Narratives<br> and Demand Accountability.</p>
-                                <button onclick='location.href ="{{route('donate_now')}}";' class=" donate"> donate now</button>
+                                <button onclick='location.href ="{{route('donate_now')}}";' class=" donate"> shop and donate</button>
                             </div>
                         </div>
                         <div class="carousel-item">
@@ -37,7 +37,7 @@
                             <div class="carousel-caption ">
                                 <h5>MOVED BY<br> IMAGES!</h5>
                                 <p>Stand in the Face of Oppression<br> Challenge False Narratives<br> and Demand Accountability.</p>
-                                <button onclick='location.href ="{{route('donate_now')}}";' class=" donate"> donate now</button>
+                                <button onclick='location.href ="{{route('donate_now')}}";' class=" donate"> shop and donate</button>
                             </div>
                         </div>
                     </div>
@@ -486,4 +486,4 @@ Stand in the face of crime and advocate for justice, explore the Hall of Shame t
     <script>
         
     </script>
-@endsection
+    @endsection
