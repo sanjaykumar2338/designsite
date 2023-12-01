@@ -75,14 +75,14 @@
     <div class="top-bar">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-10">
                     <div class="left-side" id="logo-hide">
-                        <a href="/"><img src="{{url('/')}}/asset/frontend/images/new-logo.jpg" alt=""></a>
+                        <img src="{{url('/')}}/asset/frontend/images/new-logo.jpg" alt="">
                     </div>
                 </div>
-                <div class="col-md-6 d-flex justify-content-end">
+                <div class="col-lg-2  d-flex justify-content-end">
                     <div class="left-side">
-                        
+
                         @if (Auth::check())
                             <li>
                                 <span style="cursor: pointer;" class="add-border" onclick='location.href ="{{route('my_account')}}";'>
@@ -112,8 +112,8 @@
                 </div>
             </div>
         </div>
-
     </div>
+    
     <!-- ========== End top-bar ========== -->
     <!-- ========== Start header ========== -->
     <header class="position-sticky">
