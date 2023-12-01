@@ -29,8 +29,8 @@ class FileController extends Controller
      */
     public function store(Request $request)
     {
-        //$uploadedFileUrl = Cloudinary::upload($request->file('file')->getRealPath())->getSecurePath();
-        //return $uploadedFileUrl;
+        // $uploadedFileUrl = Cloudinary::upload($request->file('file')->getRealPath())->getSecurePath();
+        // return $uploadedFileUrl;
 
         $uploadedFile = $request->file('file');
 
@@ -56,7 +56,8 @@ class FileController extends Controller
 
 
         $curl = curl_init();
-        $body = '{ "sync_product": {"name": "test","thumbnail":  "' . $request->imageUrl . '" }, "sync_variants": [{  "files": [ {"url": "' . $request->imageUrl . '","thumbnail_url": "' . $request->imageUrl . '" }  ],  "variant_id": 1, "retail_price": "20", "currency": "USD"} ]}';
+
+        // dd($request->jsonString);
 
         curl_setopt_array(
             $curl,
@@ -69,7 +70,7 @@ class FileController extends Controller
                 CURLOPT_FOLLOWLOCATION => true,
                 CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
                 CURLOPT_CUSTOMREQUEST => 'POST',
-                CURLOPT_POSTFIELDS => $body,
+                CURLOPT_POSTFIELDS => $request->jsonString,
                 CURLOPT_HTTPHEADER => array(
                     'X-PF-Store-Id: 12631976',
                     'Content-Type: application/json',
