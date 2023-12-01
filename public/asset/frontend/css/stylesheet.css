@@ -2300,6 +2300,10 @@
     padding-left: 50px;
   }
 
+  header .collapse {
+    visibility: visible;
+  }
+
 
   /***** End product-details *****/
   
