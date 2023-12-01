@@ -139,21 +139,72 @@
 }
 
 @media (max-width: 1199.98px) {
+    .vioce {
+        margin-top: 0% !important;
+    }
+
     .blog .card-one img {
         width: 100%;
         height: 200px;
     }
+
+    .vioce h4 {
+        font-size: 20px !important;
+        color: #fff !important;
+        padding-bottom: 20x !important;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     .vioce {
         padding: 15px;
         margin-top: 30px;
         margin-bottom: 30px;
         background-color: #f7f7f7;
+        margin-top: 0% !important;
     }
+
+    #align-h {
+        padding: 50px 0px 10px 0px !important;
+        height: 470px !important;
+    }
+
+    .vioce li {
+        font-size: 14px !important;
+        background-color: #ffffff;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     .add-flex {
         display: flex;
-        justify-content: center;
+        justify-content: center !important;
         align-items: center;
     }
 
@@ -163,9 +214,7 @@
         color: #000;
     }
 
-    .vioce li {
-        background-color: #ffffff;
-    }
+
 
     header .nav-link {
         padding: 10px 0;
@@ -211,8 +260,9 @@
 
     header .nav-link {
         padding: 10px 0;
-        margin-right: 4px;
+        margin-right: 15px !important;
         font-size: 13px;
+        color: #fff !important;
     }
 
     .Support-Cause .box-two h2 {
@@ -278,7 +328,21 @@
     }
 }
 
+
+
+
+
+
+
+
+
 @media (max-width: 991.98px) {
+    div#navbarSupportedContent a {
+        color: #fff !important;
+    }
+
+    
+
     .product-details .text {
         padding-left: 15px;
         margin-top: 39px;
@@ -288,35 +352,59 @@
         margin-top: 25px;
     }
 
-    header {
-        background-color: #434343;
-    }
+
 
     .top-bar {
         display: block;
         background: #fff;
     }
 
-    .top-bar .left-side li span {
-        font-size: 13px;
-        color: #000;
-    }
 
-    .top-bar .add-border {
-        border-right: 1px solid #000;
-        margin-left: 21px;
-        padding-right: 15px;
-    }
 
     .top-bar .add-border {
         margin-left: 21px;
         margin-right: 13px;
+        color: #fff !important;
+    }
+
+
+
+
+
+
+
+
+
+    .top-bar .add-border {
+        border-right: 1px solid #000 !important;
+        margin-left: 21px;
+        padding-right: 15px;
+    }
+
+    header {
+        background-color: #434343 !important;
+    }
+
+    .top-bar .left-side li span {
+        font-size: 13px;
+        color: #000 !important;
     }
 
     .top-bar {
         display: block;
-        padding: 10px 0px 10px 0px;
+        background-color: #fff !important;
+        padding: 10px 0px 10px 0px !important;
     }
+
+
+
+
+
+
+
+
+
+
 
     #logo-hide {
         display: none;
@@ -347,8 +435,9 @@
     }
 
     .vioce h4 {
-        font-size: 23px;
-        padding-bottom: 20px;
+        font-size: 20px !important;
+        color: #fff !important;
+        padding-bottom: 20px !important;
     }
 
     .Funnel-leads .design-box h4 {
@@ -364,12 +453,12 @@
     }
 
     footer .add-padding {
-        padding-left: 15px;
+        padding-left: 15px !important;
         margin-top: 40px;
     }
 
     footer .add-padding-two {
-        padding-left: 15px;
+        padding-left: 15px !important;
     }
 
     footer .fo-one h3 {
@@ -455,11 +544,21 @@
     }
 
     .Justice .text .Hall {
-        padding-left: 0px;
+        padding-left: 0px !important;
         padding-top: 30px;
         font-size: 27px;
     }
 }
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 767.98px) {
     .cards-c {
@@ -729,7 +828,7 @@
     }
 
     .slider-Product h5 {
-        font-size: 41px;
+        font-size: 41px !important;
     }
 
     .slider-Product button {
@@ -745,9 +844,9 @@
     }
 
     .vioce h4 {
-        padding-bottom: 4px;
-        margin-top: 4px;
-        font-size: 20px;
+        padding-bottom: 0px !important;
+        margin-top: 4px !important;
+        font-size: 20px !important;
     }
 
     .vioce li {
@@ -796,18 +895,18 @@
     }
 
     .Products {
-        padding: 14px 0px 20px 0px;
+        padding: 14px 0px 20px 0px !important;
     }
 
     .Products p {
-        font-size: 16px;
-        line-height: 1px;
+        font-size: 16px !important;
+        line-height: 1px !important;
     }
 
     .Products h3 {
-        font-size: 25px;
-        padding-bottom: 0px;
-        line-height: 38px;
+        font-size: 25px !important;
+        padding-bottom: 0px !important;
+        line-height: 38px !important;
     }
 
     .Products .img {
@@ -895,25 +994,25 @@
     }
 
     footer .fo-one li {
-        font-size: 15px;
-        margin: 16px 0px 0px 0px;
+        font-size: 15px !important;
+        margin: 16px 0px 0px 0px !important;
     }
 
     footer .fo-one h3 {
-        padding-bottom: 0px;
-        font-size: 21px;
-        padding-top: 11px;
+        padding-bottom: 0px !important;
+        font-size: 21px !important; 
+        padding-top: 11px !important;
     }
 
     footer .fo-one p {
-        padding: 13px 0px 5px 0px;
-        font-size: 15px;
+        padding: 13px 0px 5px 0px !important;
+        font-size: 15px !important;
     }
 
     footer .mobile-number {
-        font-size: 19px;
-        margin: 0;
-        padding: 1px 0px;
+        font-size: 19px !important;
+        margin: 0 !important;
+        padding: 1px 0px !important;
     }
 
     footer .align {
@@ -1258,55 +1357,55 @@
     }
 
     .Products-3 {
-        padding: 14px 0px 35px 0px;
+        padding: 14px 0px 35px 0px !important;
     }
 
     .Products-3 h3 {
-        font-size: 25px;
-        padding-bottom: 0px;
-        line-height: 38px;
+        font-size: 25px !important;
+        padding-bottom: 0px !important;
+        line-height: 38px !important;
     }
 
     .Products-3 p {
-        font-size: 15px;
-        line-height: 28px;
+        font-size: 15px !important;
+        line-height: 28px !important;
     }
 
     .Donations {
-        padding: 20PX 0PX 20PX 0PX;
-    }
+        padding: 20PX 0PX 20PX 0PX !important;
+    } 
 
     .heading {
-        font-size: 25px;
-        padding-bottom: 0px;
-        line-height: 38px;
-        padding-bottom: 15px;
+        font-size: 25px !important;
+        padding-bottom: 0px !important;
+        line-height: 38px !important;
+        padding-bottom: 15px !important;
     }
 
     .Donations .Donations-box h3 {
-        font-size: 20px;
-        padding-bottom: 0px;
+        font-size: 20px !important;
+        padding-bottom: 0px !important;
     }
 
     .Donations .Donations-box .p {
-        font-size: 15px;
-        padding-top: 7px;
-        line-height: 26px;
+        font-size: 15px !important;
+        padding-top: 7px !important;
+        line-height: 26px !important;
     }
 
     .Media {
-        padding: 20px 0px 20px 0px;
+        padding: 20px 0px 20px 0px !important;
     }
 
     .Media .heading-two {
-        font-size: 25px;
-        padding-bottom: 0px;
+        font-size: 25px !important;
+        padding-bottom: 0px !important;
     }
 
     .Media .p {
-        font-size: 16px;
-        padding-bottom: 3px;
-        line-height: 28px;
+        font-size: 16px !important;
+        padding-bottom: 3px !important;
+        line-height: 28px !important;
     }
 
     .add_video {
@@ -1314,27 +1413,27 @@
     }
 
     .Justice {
-        padding: 20px 0px 20px 0px;
-        background-color: #f7f7f7;
+        padding: 20px 0px 20px 0px !important;
+        background-color: #f7f7f7 !important;
     }
 
     .Justice .j_u {
-        font-size: 25px;
-        padding-bottom: 8px;
-        line-height: 22px;
-        padding-bottom: 28px;
+        font-size: 25px !important;
+        padding-bottom: 8px !important;
+        line-height: 22px !important;
+        padding-bottom: 28px !important;
     }
 
     .Justice .left-text p {
-        font-size: 16px;
-        padding-bottom: 7px;
-        line-height: 31px;
+        font-size: 16px !important;
+        padding-bottom: 7px !important;
+        line-height: 31px !important;
     }
 
     .Justice .text .Hall {
-        padding-left: 0px;
-        padding-top: 30px;
-        font-size: 21px;
+        padding-left: 0px !important;
+        padding-top: 30px !important;
+        font-size: 21px !important;
     }
 
     .blog .card-one-1 {
@@ -1343,9 +1442,9 @@
     }
 
     .blog .latest {
-        font-size: 24px;
-        padding-bottom: 10px;
-        line-height: 23px;
+        font-size: 24px !important;
+        padding-bottom: 10px !important;
+        line-height: 23px !important;
         padding-top: 6px !important;
     }
 
@@ -1358,8 +1457,8 @@
     }
 
     .Donations .Donations-box {
-        padding: 15px;
-        padding-bottom: 30px;
+        padding: 15px !important;
+        padding-bottom: 30px !important;
     }
 
     .product-details .align-tab {
@@ -1433,5 +1532,8 @@
     .carousel-caption {
         width: 100%;
         max-width: 1000px;
+    }
+    .blog {
+        padding: 22px 0px 50px 0px !important;
     }
 }

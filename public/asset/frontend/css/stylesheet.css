@@ -23,7 +23,7 @@
   .buy_now {
     background-color: var(--btn-color);
     border: none;
-    outline: none; 
+    outline: none;
     color: #fff;
     padding: 12px 34px;
     border-radius: 25px;
@@ -41,9 +41,10 @@
 
   /***** top-bar *****/
   .left-side img {
-    padding: 5px 0px 5px 0px;
-  }
-
+    padding: 5px 0px 5px 0px !important;
+    padding-left: 150px !important;
+    margin: auto !important;
+}
   .top-bar {
     padding: 2px 0px 2px 0px;
     background: var(--bg-color);
@@ -191,21 +192,13 @@
 
   .slider-Product img {
     object-fit: cover;
-    height: 100vh;
+    min-height: 700px !important;
   }
 
   .slider-Product .shop {
     width: max-content;
   }
 
-  .carousel-caption {
-    bottom: 17.25rem;
-    padding-bottom: 1.25rem;
-    color: #fff;
-    left: 8%;
-    text-align: left;
-    z-index: 777;
-  }
 
   .slider-Product .shop {
     width: max-content;
@@ -217,28 +210,34 @@
     color: #fff;
     background: var(--btn-color);
   }
-.ds-main .container {
-    position: relative;
-}
 
-.ds-voice {
-    max-width: 306px;
-    width: 100%;
-    margin-left: auto;
+  .main-vioce {
+    position: relative;
+  }
+
+
+  .add-bg {
     position: absolute;
-    margin-top: -34%;
+    z-index: 777 !important;
+    display: none;
+    top: 0;
+    left: 0;
     right: 0;
-    transform: translateY(-50%);
-    z-index: 888;
-}
+  }
+
+  /* .box-3{
+    position: absolute;
+    z-index: 777 !important;
+    display: none;
+  } */
+
   .vioce {
     padding: 15px;
-    margin-top: 0;
-    background: #fff;
+    z-index: 777;
+    background: #28201d85 !important;
     border-radius: 11px;
-    background: transparent;
-    backdrop-filter: blur(50px);
     color: #fff;
+    margin-top: -185%;
   }
 
   .vioce h4 {
@@ -264,17 +263,25 @@
     background-color: #f7f7f7;
     margin: 14px 0px;
     border-radius: 4px;
+    color: #000 !important;
   }
 
-  .vioce li:hover a {
-    color: #fff;
+  .vioce li:hover {
+    background-color: var(--btn-color);
+    color: #fff !important;
+    cursor: pointer;
+  }
+
+
+  /* .vioce li:hover {
+    color: #fff !important;
   }
 
   .vioce li:hover {
     color: #fff;
     background-color: var(--btn-color);
     cursor: pointer;
-  }
+  } */
 
   .add-flex {
     display: flex;
@@ -2293,113 +2300,6 @@
     padding-left: 50px;
   }
 
+
   /***** End product-details *****/
   
-  /***** Create product *****/
-  .prd-left {
-    width: 40%;
-    padding: 0 15px;
-}
-
-.prd-right {
-    width: 60%;
-    padding: 0 15px;
-}
-.prd-btn {
-    background-color: #f0f0f0;
-    border: 1px solid #eee !important;
-    border-radius: 4px !important;
-    font-size: 17px;
-    text-transform: capitalize;
-    font-weight: 600;
-    transition: 0.2s;
-    padding: 10px 45px !important;
-}
-
-.prd-btn:hover {
-    background-color: #eb3e32 !important;
-    color: #fff;
-    border-color: #eb3e32 !important;
-}
-
-.place-btn {
-    background-color: #eb3e32;
-    border-radius: 4px !important;
-    color: #fff;
-    font-size: 17px;
-    text-transform: capitalize;
-    font-weight: 600;
-    transition: 0.2s;
-    padding: 10px 75px !important;
-    border-color: #eb3e32 !important;
-}
-.cmn-prd-opt {
-    border-bottom: 1px solid #f0f0f0;
-    padding: 15px 0;
-}
-
-.img-add-opt {
-    margin: 4px 15px;
-}
-.prd-opt-one button {
-    margin: 4px 0;
-}
-.prd-opt-four {
-    margin-top: 15px;
-}
-
-.prd-opt-four h4, .prd-sze h4 {
-    text-transform: capitalize;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: normal;
-    margin: 0 0 10px;
-}
-.prd-sze h4 {
-    width: 100%;
-    margin-bottom: 0;
-}
-.prd-crs-img {
-    width: 50px;
-}
-
-.prd-crs-img button {
-    margin: 0 0 5px;
-    border: 1px solid #f0f0f0;
-    padding: 5px;
-    text-align: center;
-    border-radius: 4px;
-}
-
-.prd-crs-img button img {
-    margin: 0 auto;
-    display: block;
-}
-
-.prd-left {
-    display: flex;
-    align-items: self-start;
-    justify-content: space-between;
-}
-
-.prd-image {
-    width: calc(100% - 60px);
-}
-.prd-objects button {
-    margin: 5px 10px 5px 0px;
-    border-radius: 4px !important;
-}
-.crt-prd-main {
-    padding: 50px 0;
-}
-
-.cmn-prd-opt:last-child {
-    border-bottom: none;
-}
-#editables button {
-    padding: 10px 25px !important;
-    font-weight: 600;
-    border-radius: 4px !important;
-    border: 1px solid #ef4444 !important;
-}
-/***** End Create product *****/

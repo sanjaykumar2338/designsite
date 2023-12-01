@@ -1,13 +1,5 @@
-@media (max-width: 1535px) {
-.prd-right {
-    width: 50%;
-}
-
-.prd-left {
-    width: 50%;
-}	
-}
 @media (max-width: 1399.98px) {
+
     .conflicts .edit-box {
         overflow: scroll;
     }
@@ -110,31 +102,7 @@
 
 
 }
-@media (max-width: 1279px) {
-.cmn-frame {
-    width: 400px !important;
-    height: 400px !important;
-}
 
-#canvasBgImage img {
-    height: 400px !important;
-}
-
-.frame-area canvas {
-    width: 150px !important;
-    height: 200px !important;
-}
-
-.frame-area .canvas-container {
-    width: 150px !important;
-    height: 200px !important;
-}
-
-.prd-btn {
-    padding: 10px 25px !important;
-    font-size: 14px;
-}	
-}
 @media (max-width: 1199.98px) {
     .blog .card-one img {
         width: 100%;
@@ -257,31 +225,19 @@
     .Products-2 {
         padding: 20px 0px 20px 0px;
     }
-.ds-voice {
-    position: unset;
-    margin: 0 auto;
-    transform: unset;
-}	
-}
-@media (max-width: 1023px) {
-.prd-left {
-    width: 100%;
 }
 
-.prd-right {
-    width: 100%;
-}	
-}
 
 @media (max-width: 991.98px) {
     .product-details .text {
         padding-left: 15px;
         margin-top: 39px;
     }
-    
+
     .cards-c .style-box .text-box h4 {
         margin-top: 25px;
     }
+
     header {
         background-color: #434343;
     }
@@ -327,7 +283,7 @@
     header .nav-link {
         font-size: 17px;
         text-align: left;
-        color: #fff !important;
+        /* color: #fff !importa nt; */
         margin: 4px;
         padding: 9px 0px;
     }
@@ -453,20 +409,27 @@
         padding-top: 30px;
         font-size: 27px;
     }
+    .nav-link{
+        color: #fff !important;
+    }
 }
 
 @media (max-width: 767.98px) {
+    
     .cards-c {
         padding: 0px 0px 10px 0px;
     }
+
     .cards-c .style-box {
         padding: 10px;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     }
+
     .cards-c .style-box .text-box h4 {
         margin-top: 20px;
         font-size: 17px;
     }
+
     .cards-c .style-box .text-box p {
         font-size: 15px;
     }
@@ -478,6 +441,7 @@
         margin-top: 2px;
         margin-bottom: 10px;
     }
+
     .blog .latest {
         padding-bottom: 35px !important;
     }
@@ -658,26 +622,6 @@
     .post-events .box .text h2 {
         font-size: 35px !important;
     }
-	
-.cmn-frame {width: 250px !important;height: 250px !important;}
-
-#canvasBgImage img {
-    height: 250px !important;
-}
-
-.frame-area .canvas-container {
-    width: 90px !important;
-    height: 120px !important;
-}	
-.img-add-opt {
-    margin: 10px 0;
-}
-.prd-opt-one button {
-    width: 100%;
-}
-.place-btn {
-    width: 100%;
-}
 }
 
 
@@ -685,27 +629,33 @@
     .Stand h4 {
         font-size: 20px;
     }
+
     .Stand {
         padding: 25px 0px 25px 0px;
     }
+
     .donate {
         padding: 25px 0px 25px 0px;
     }
+
     .donate .box-text h4 {
         font-size: 22px;
 
         padding: 0px 0px 2px 0px;
     }
+
     .donate .box-text p {
         font-size: 14px;
         line-height: 24px;
         padding: 0px 0px 9px 0px;
     }
+
     .donate .box-text button {
         padding: 13px 15px;
         border-radius: 5px;
         font-size: 15px;
     }
+
     .slider-Product h5 {
         font-size: 41px;
     }
@@ -1280,95 +1230,135 @@
         font-size: 25px;
         padding-bottom: 0px;
     }
+
     .Media .p {
         font-size: 16px;
         padding-bottom: 3px;
         line-height: 28px;
     }
+
     .add_video {
         margin: 6px 0px;
     }
+
     .Justice {
         padding: 20px 0px 20px 0px;
         background-color: #f7f7f7;
     }
+
     .Justice .j_u {
         font-size: 25px;
         padding-bottom: 8px;
         line-height: 22px;
         padding-bottom: 28px;
     }
+
     .Justice .left-text p {
         font-size: 16px;
         padding-bottom: 7px;
         line-height: 31px;
     }
+
     .Justice .text .Hall {
         padding-left: 0px;
         padding-top: 30px;
         font-size: 21px;
     }
+
     .blog .card-one-1 {
         margin-top: 15px !important;
         padding: 13px !important;
     }
+
     .blog .latest {
         font-size: 24px;
         padding-bottom: 10px;
         line-height: 23px;
         padding-top: 6px !important;
     }
+
     .blog .card-one {
         margin: 25px 0px;
     }
+
     .add-margin {
         margin: 4px 0px;
     }
+
     .Donations .Donations-box {
         padding: 15px;
         padding-bottom: 30px;
     }
+
     .product-details .align-tab {
         flex-direction: column;
     }
+
     .product-details .add-cart {
         flex-direction: column;
     }
+
     .product-details .align-btn {
         align-items: start;
         flex-direction: column;
     }
+
     .product-details .Men-Slim {
         font-size: 19px;
         padding-bottom: 0px;
         line-height: 24px;
     }
+
     .product-details .text {
         padding-left: 15px;
         margin-top: 0;
     }
+
     .product-details .p-text {
         padding-top: 15px;
         line-height: 29px;
         font-size: 15px;
         padding-bottom: 15px;
     }
+
     .product-details .page-link {
         padding: 8px 17px;
         font-size: 17px;
     }
+
     .color {
         padding-bottom: 22px;
     }
+
     .product-details .select {
         font-size: 17px;
         padding-bottom: 3px;
     }
+
     .product-details .align-tab {
         padding-bottom: 25px;
         margin-bottom: 15px;
     }
+
     .product-details .align-btn h4 {
         font-size: 32px;
     }
+
+    .carousel-caption {
+        bottom: 15.75rem;
+        padding-bottom: 0px;
+        color: #fff;
+        left: 8%;
+        text-align: left;
+        z-index: 777;
+    }
+
+
+    #align-h {
+        min-height: 450px;
+    }
+    .carousel-caption {
+        width: 100%;
+        max-width: 1000px;
+      }
 }

@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CauseStand</title>
     <!-- stylesheet  -->
-    <link rel="stylesheet" href="asset/frontend/css/bootstrap.min.css">
+    
 
     <!--
         <link rel="stylesheet" href="asset/frontend/css/stylesheet.css">
         <link rel="stylesheet" href="asset/frontend/css/responsive.css">
     -->
 
+    <link rel="stylesheet" href="asset/frontend/css/bootstrap.min.css">
+    <link rel="stylesheet" href="asset/frontend/css/responsive.css">
+    <link rel="stylesheet" href="asset/frontend/css/stylesheet.css">
     <link rel="stylesheet" href="asset/frontend/css/final-style.css">
     <link rel="stylesheet" href="asset/frontend/css/final-responsive.css">
 
@@ -36,15 +39,16 @@
 
 <body>
     <!-- ========== Start top-bar ========== -->
+
     <div class="top-bar">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-10">
                     <div class="left-side" id="logo-hide">
-                        <a href="/"><img src="asset/frontend/images/new-logo.jpg" alt=""></a>
+                        <img src="asset/frontend/images/new-logo.jpg" alt="">
                     </div>
                 </div>
-                <div class="col-md-6 d-flex justify-content-end">
+                <div class="col-lg-2  d-flex justify-content-end">
                     <div class="left-side">
 
                         @if (Auth::check())
@@ -76,14 +80,13 @@
                 </div>
             </div>
         </div>
-
     </div>
-    <!-- ========== End top-bar ========== -->
+
     <!-- ========== Start header ========== -->
     <header class="position-sticky">
         <nav class="navbar navbar-expand-lg ">
             <div class="container">
-                <a class="navbar-brand" href="index.html"> <img src="asset/frontend/images/new-logo.jpg" alt="">
+                <a class="navbar-brand" href="{{url('/')}}"> <img src="asset/frontend/images/new-logo.jpg" alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"

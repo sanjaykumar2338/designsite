@@ -199,7 +199,7 @@
   }
 
   .carousel-caption {
-    bottom: 17.25rem;
+    bottom: 20.25rem !important;
     padding-bottom: 1.25rem;
     color: #fff;
     left: 8%;
@@ -1848,13 +1848,7 @@
     padding-top: 5px;
   }
 
-  .Donations p{
-    text-align: center;
-    font-size: 20px;
-    text-transform: capitalize;
-    padding-bottom: 20px;
-    line-height: 0px;
-  }
+
 
   .Donations {
     padding: 50PX 0PX 50PX 0PX;
@@ -2406,9 +2400,9 @@
     background: #fff;
     border-radius: 11px;
     background: transparent;
-    backdrop-filter: blur(50px);
+    /* backdrop-filter: blur(50px); */
     color: #fff;
-    margin-top: -170%;
+    margin-top: -180% !;
   }
 
   .vioce h4 {
@@ -2460,6 +2454,3 @@
     align-items: center;
   }
 
- header .collapse {
-    visibility: visible;
-  }
