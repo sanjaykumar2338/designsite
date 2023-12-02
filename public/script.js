@@ -8,32 +8,33 @@ const product_variant_ids = {
     t_shirt: 12634,
 };
 
-const t_shirtColours = {
-    Maroon: { name: "Maroon", code: "#47001b" },
-    Black: { name: "Black", code: "#141313" },
-    Navy: { name: "Navy", code: "#1a2330" },
-    Purple: { name: "Purple", code: "#48197d" },
-    Red: { name: "Red", code: "#d80019" },
-    Dark: { name: "Dark Chocolate", code: "#463b33" },
-    Cardinal: { name: "Cardinal", code: "#c21b3a" },
-    Royal: { name: "Royal", code: "#175ac7" },
-    Dark: { name: "Dark Heather", code: "#595959" },
-    Charcoal: { name: "Charcoal", code: "#6a6967" },
-    Military: { name: "Military Green", code: "#737a5f" },
-    Orange: { name: "Orange", code: "#ff5f2e" },
-    Brown: { name: "Brown Savana", code: "#9f8971" },
-    Irish: { name: "Irish Green", code: "#00ba69" },
-    Azalea: { name: "Azalea", code: "#ff98c6" },
-    Carolina: { name: "Carolina Blue", code: "#96bbff" },
-    Gold: { name: "Gold", code: "#ffb22d" },
-    Sport: { name: "Sport Grey", code: "#c4c0be" },
-    Sand: { name: "Sand", code: "#d6c0ab" },
-    Sky: { name: "Sky", code: "#8ee0ff" },
-    Natural: { name: "Natural", code: "#e8dacd" },
-    Light: { name: "Light Blue", code: "#d9efff" },
-    Ash: { name: "Ash", code: "#f3f3f3" },
-    White: { name: "White", code: "#fffefa" },
-};
+let t_shirtColours = {};
+// {
+//     Maroon: { name: "Maroon", code: "#47001b" },
+//     Black: { name: "Black", code: "#141313" },
+//     Navy: { name: "Navy", code: "#1a2330" },
+//     Purple: { name: "Purple", code: "#48197d" },
+//     Red: { name: "Red", code: "#d80019" },
+//     Dark: { name: "Dark Chocolate", code: "#463b33" },
+//     Cardinal: { name: "Cardinal", code: "#c21b3a" },
+//     Royal: { name: "Royal", code: "#175ac7" },
+//     Dark: { name: "Dark Heather", code: "#595959" },
+//     Charcoal: { name: "Charcoal", code: "#6a6967" },
+//     Military: { name: "Military Green", code: "#737a5f" },
+//     Orange: { name: "Orange", code: "#ff5f2e" },
+//     Brown: { name: "Brown Savana", code: "#9f8971" },
+//     Irish: { name: "Irish Green", code: "#00ba69" },
+//     Azalea: { name: "Azalea", code: "#ff98c6" },
+//     Carolina: { name: "Carolina Blue", code: "#96bbff" },
+//     Gold: { name: "Gold", code: "#ffb22d" },
+//     Sport: { name: "Sport Grey", code: "#c4c0be" },
+//     Sand: { name: "Sand", code: "#d6c0ab" },
+//     Sky: { name: "Sky", code: "#8ee0ff" },
+//     Natural: { name: "Natural", code: "#e8dacd" },
+//     Light: { name: "Light Blue", code: "#d9efff" },
+//     Ash: { name: "Ash", code: "#f3f3f3" },
+//     White: { name: "White", code: "#fffefa" },
+// };
 const elements = {
     div_front: "div_front",
     div_back: "div_back",
@@ -104,6 +105,14 @@ function setShowCanvas(name, bool) {
         }
     });
 }
+function setProductColoursUI() {
+    let colourButtons = "";
+    Object.values(t_shirtColours).forEach((v) => {
+        colourButtons += ` <button class="border rounded-lg" style="height: 30px; width: 30px; background-color: ${v.code}" onclick="setProductColour('${v.code}')"></button>`;
+    });
+    const productColoursDiv = getEl("product-colours");
+    productColoursDiv.innerHTML = colourButtons;
+}
 function init() {
     Object.values(canvases).forEach((c) => {
         c.selection = false;
@@ -117,11 +126,12 @@ function init() {
             setSelectedObject(undefined);
         });
     });
-    selected_variant = paroduct_variants.find(
+    selected_variant = product_variants.find(
         (v) => v.color_code === t_shirtColours.White.code
     ).id;
     console.log(selected_variant, "selected_variant");
     setShowCanvas(elements.canvas_front, true);
+    setProductColoursUI();
 }
 
 function removeObject() {
@@ -699,6 +709,17 @@ function setCost() {
     getEl("total").innerHTML = `Total: $${order.result.retail_costs.total}`;
 }
 
+function setProductColour(colourCode) {
+    console.log(colourCode);
+    const productDiv = getEl("canvasBgImage");
+    productDiv.style.backgroundColor = colourCode;
+
+    const productThumbnails = getEl("product-thumbnails").children;
+    for (let i = 0; i < productThumbnails.length; i++) {
+        productThumbnails[i].style.backgroundColor = colourCode;
+    }
+}
+
 function submitPayment() {
     const formData = {
         name: getEl("payment-modal-name").value,
@@ -855,7 +876,7 @@ const sampleOrderData = {
     packing_slip: {},
 };
 
-const paroduct_variants = [
+const product_variants = [
     {
         id: 11546,
         product_id: 438,
@@ -8281,5 +8302,16 @@ const paroduct_variants = [
         },
     },
 ];
+
+const _colours = [];
+product_variants.forEach((v) => {
+    if (!t_shirtColours[v.color]) {
+        t_shirtColours = {
+            ...t_shirtColours,
+            [v.color]: { name: v.color, code: v.color_code },
+        };
+    }
+});
+console.log(t_shirtColours);
 
 init();

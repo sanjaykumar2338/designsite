@@ -19,7 +19,8 @@
                     </div> --}}
                     <div class="prd-image">
                         <div style="position: relative" id="canvasParent">
-                            <div class="cmn-frame" style="height: 500px; width: 500px; position: absolute" id="canvasBgImage">
+                            <div class="cmn-frame" style="height: 500px; width: 500px; position: absolute; backgorud"
+                                id="canvasBgImage">
                             </div>
                             <div class="cmn-frame" style="height: 500px; width: 500px; position: relative">
                                 <div class="border-[1px] border-neutral-300 frame-area"
@@ -78,7 +79,7 @@
                 <div class="prd-right">
                     <div class="flex flex-col gap-2" id="editables"></div>
                     <div class="prd-option">
-                        <div>
+                        <div id="product-thumbnails">
                             <button class="border rounded-lg" onclick="setShowCanvas(`canvas_front`, true)">
                                 <img src="https://files.cdn.printful.com/m/ec1000/medium/onman/front/05_ec1000_onman_front_base_whitebg.png?v=1675420344"
                                     alt="" class="w-[50px]">
@@ -100,6 +101,10 @@
                                 {{-- sleeve_right --}}
                             </button>
                         </div>
+
+                        <div id="product-colours">
+                        </div>
+
                         <div class="flex flex-wrap prd-opt-one align-items-center cmn-prd-opt">
                             <button class="border prd-btn rounded-lg p-2 px-3" onclick="setShowModal(true)">
                                 Add Image
@@ -134,29 +139,29 @@
                             <div class="prd-opt-four">
                                 <h4>Objects:</h4>
                                 <!-- <button
-                                                                                                                                                                             class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                                                                                                                                                             onclick="addLine()"
-                                                                                                                                                                            >
-                                                                                                                                                                             Line
-                                                                                                                                                                            </button>
-                                                                                                                                                                            <button
-                                                                                                                                                                             class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                                                                                                                                                             onclick="addRect()"
-                                                                                                                                                                            >
-                                                                                                                                                                             Rectangle
-                                                                                                                                                                            </button>
-                                                                                                                                                                            <button
-                                                                                                                                                                             class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                                                                                                                                                             onclick="addCircle()"
-                                                                                                                                                                            >
-                                                                                                                                                                             Circle
-                                                                                                                                                                            </button>
-                                                                                                                                                                            <button
-                                                                                                                                                                             class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                                                                                                                                                             onclick="addTriangle()"
-                                                                                                                                                                            >
-                                                                                                                                                                             Triangle
-                                                                                                                                                                            </button> -->
+                                                                                                                                                                                                                 class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+                                                                                                                                                                                                                 onclick="addLine()"
+                                                                                                                                                                                                                >
+                                                                                                                                                                                                                 Line
+                                                                                                                                                                                                                </button>
+                                                                                                                                                                                                                <button
+                                                                                                                                                                                                                 class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+                                                                                                                                                                                                                 onclick="addRect()"
+                                                                                                                                                                                                                >
+                                                                                                                                                                                                                 Rectangle
+                                                                                                                                                                                                                </button>
+                                                                                                                                                                                                                <button
+                                                                                                                                                                                                                 class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+                                                                                                                                                                                                                 onclick="addCircle()"
+                                                                                                                                                                                                                >
+                                                                                                                                                                                                                 Circle
+                                                                                                                                                                                                                </button>
+                                                                                                                                                                                                                <button
+                                                                                                                                                                                                                 class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+                                                                                                                                                                                                                 onclick="addTriangle()"
+                                                                                                                                                                                                                >
+                                                                                                                                                                                                                 Triangle
+                                                                                                                                                                                                                </button> -->
                                 <div class="prd-objects flex flex-wrap">
                                     <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
                                         onclick="addObjectImage(`{{ url('/') }}/objects/1-circle-1.svg`)">
