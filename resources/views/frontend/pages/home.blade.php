@@ -59,8 +59,6 @@
                                 </li>
                                 <li class="option-conflict">Nagorno & Karabakh
                                 </li>
-                                <li class="option-conflict">Nagorno & Karabakh
-                                </li>
                                 <li class="option-conflict">Turkey & Kurdistan </li>
                                 <li class="option-conflict">India & Pakistan</li>
                             </ul>
