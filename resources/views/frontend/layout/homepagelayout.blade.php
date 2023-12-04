@@ -238,6 +238,8 @@
         const box2 = document.getElementById('box-2');
         const box3 = document.getElementById('box-3');
         const box4 = document.getElementById('box-4');
+        const box5 = document.getElementById('box-5');
+        const box6 = document.getElementById('box-6');
 
         conflicts.forEach(conflict => {
             conflict.addEventListener('click', () => {
@@ -278,6 +280,27 @@
             });
         });
 
+        const box4Options = document.querySelectorAll('.typeofproduct');
+
+        box4Options.forEach(option => {
+            option.addEventListener('click', () => {
+                box3.style.display = 'none';
+                box4.style.display = 'none';
+                box5.style.display = 'block';
+            });
+        });
+
+        const box5Options = document.querySelectorAll('.typeofproduct3');
+
+        box5Options.forEach(option => {
+            option.addEventListener('click', () => {
+                box3.style.display = 'none';
+                box4.style.display = 'none';
+                box5.style.display = 'none';
+                box6.style.display = 'block';
+            });
+        });
+
 
         const elements = document.querySelectorAll('.standwith');
 
@@ -292,7 +315,7 @@
             console.log('Clicked on:', text, standwithtype);
         }
 
-        const elements2 = document.querySelectorAll('.typeofproduct');
+        const elements2 = document.querySelectorAll('.typeofproduct4');
 
         elements2.forEach(element => {
             element.addEventListener('click', typeofproduct);

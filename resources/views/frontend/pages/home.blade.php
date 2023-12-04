@@ -73,10 +73,10 @@
                         </div>
 
                         <div class="vioce add-bg" id="box-3">
-                            <h4>Choose a Display </h4>
+                            <h4>Shop Subcategory</h4>
                             <ul>
-                                <li class="apparel">Apparel</li>
-                                <li class="accessories">Accessories</li>
+                                <li class="apparel">Men's Apparel</li>
+                                <li class="accessories">Weman's Apparel</li>
                             </ul>
                         </div>
 
@@ -91,12 +91,21 @@
                         </div>
 
                         <div class="vioce add-bg" id="box-5">
-                            <h4>Shop a Category</h4>
+                            <h4>Shop a Subcategory</h4>
                             <ul>
-                                <li class="typeofproduct">Caps</a></li>
-                                <li class="typeofproduct">Scarfs</a></li>
-                                <li class="typeofproduct">Flyers</a></li>
-                                <li class="typeofproduct">Pins</a></li>
+                                <li class="typeofproduct3">Light Weight</a></li>
+                                <li class="typeofproduct3">Heavy Weight</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="vioce add-bg" id="box-6">
+                            <h4>Shop a Subcategory</h4>
+                            <ul>
+                                <li class="typeofproduct4">Oversized</a></li>
+                                <li class="typeofproduct4">Fitted</a></li>
+                                <li class="typeofproduct4">V-Neck</a></li>
+                                <li class="typeofproduct4">Long Sleeve</a></li>
+                                <li class="typeofproduct4">Polo</a></li>
                             </ul>
                         </div>
 
