@@ -8,13 +8,18 @@ const product_variant_ids = {
     t_shirt: 12634,
 };
 
-let t_shirtColours = {};
+let t_shirtColours = {
+    Red: { name: "Red", code: "#d80019" },
+    White: { name: "White", code: "#fffefa" },
+    Black: { name: "Black", code: "#141313" },
+};
 // {
-//     Maroon: { name: "Maroon", code: "#47001b" },
+//     Red: { name: "Red", code: "#d80019" },
+//     Heather_Grey: { name: "Heather Grey", code: "#9a978e" },
 //     Black: { name: "Black", code: "#141313" },
+//     Maroon: { name: "Maroon", code: "#47001b" },
 //     Navy: { name: "Navy", code: "#1a2330" },
 //     Purple: { name: "Purple", code: "#48197d" },
-//     Red: { name: "Red", code: "#d80019" },
 //     Dark: { name: "Dark Chocolate", code: "#463b33" },
 //     Cardinal: { name: "Cardinal", code: "#c21b3a" },
 //     Royal: { name: "Royal", code: "#175ac7" },
@@ -132,6 +137,43 @@ function init() {
     console.log(selected_variant, "selected_variant");
     setShowCanvas(elements.canvas_front, true);
     setProductColoursUI();
+
+    fabric.Image.fromURL(
+        "objects/fornt_top_left_logo.png",
+        function (oImg) {
+            if (oImg._element == null) {
+                alert(
+                    "Cant access the file! Please download the image and upload it from local storage"
+                );
+                return;
+            }
+            oImg.scale(0.06);
+            console.log(oImg);
+            oImg.set("left", 103);
+            oImg.set("selectable", false);
+            canvases.canvas_front.add(oImg);
+        },
+        { crossOrigin: "Anonymous" }
+    );
+
+    fabric.Image.fromURL(
+        "objects/left_sleeve_isreal.png",
+        function (oImg) {
+            if (oImg._element == null) {
+                alert(
+                    "Cant access the file! Please download the image and upload it from local storage"
+                );
+                return;
+            }
+            oImg.scale(0.12);
+            console.log(oImg);
+            oImg.set("top", 60);
+            oImg.set("left", 50);
+            oImg.set("selectable", false);
+            canvases.canvas_sleeve_left.add(oImg);
+        },
+        { crossOrigin: "Anonymous" }
+    );
 }
 
 function removeObject() {
@@ -617,7 +659,7 @@ function createProduct(files) {
                 variant_id: selected_variant,
                 retail_price: "20",
                 currency: "USD",
-                color: t_shirtColours.Gold.code,
+                // color: selected,
             },
         ],
     });
@@ -8303,15 +8345,98 @@ const product_variants = [
     },
 ];
 
-const _colours = [];
-product_variants.forEach((v) => {
-    if (!t_shirtColours[v.color]) {
-        t_shirtColours = {
-            ...t_shirtColours,
-            [v.color]: { name: v.color, code: v.color_code },
-        };
-    }
-});
+const productTemplates = [
+    {
+        id: 61258390,
+        product_id: 108,
+        external_product_id: null,
+        title: "Short Sleeve T-shirt copy <>  Isreal|Tshirt",
+        available_variant_ids: [
+            4872, 4873, 4874, 4875, 4876, 4877, 4878, 4879, 4880, 4881, 4882,
+            4883, 4884, 4885, 5331, 5332, 5333, 5334, 5335, 5336, 5337,
+        ],
+        option_data: [
+            {
+                id: "text_thread_colors_front",
+                value: [],
+            },
+            {
+                id: "text_thread_colors_sleeve_left",
+                value: [],
+            },
+            {
+                id: "text_thread_colors_label_outside",
+                value: [],
+            },
+        ],
+        colors: [
+            {
+                color_name: "Red",
+                color_codes: ["#d50732"],
+            },
+            {
+                color_name: "Heather Grey",
+                color_codes: ["#9a978e"],
+            },
+            {
+                color_name: "White",
+                color_codes: ["#ffffff"],
+            },
+        ],
+        sizes: ["XS", "S", "M", "L", "XL", "2XL", "3XL"],
+        mockup_file_url:
+            "https://files.cdn.printful.com/upload/product-templates/77/77de35e09e4d0eba56798a3f7c3e688f_l",
+        placements: [
+            {
+                placement: "front",
+                display_name: "Front print",
+                technique_key: "DTG",
+                technique_display_name: "DTG printing",
+                options: [],
+            },
+            {
+                placement: "sleeve_left",
+                display_name: "Left sleeve",
+                technique_key: "DTG",
+                technique_display_name: "DTG printing",
+                options: [],
+            },
+            {
+                placement: "label_outside",
+                display_name: "Outside label",
+                technique_key: "DTG",
+                technique_display_name: "DTG printing",
+                options: [],
+            },
+        ],
+        created_at: 1701475954,
+        updated_at: 1701514418,
+        placement_option_data: [
+            {
+                type: "front",
+                options: [],
+            },
+            {
+                type: "sleeve_left",
+                options: [],
+            },
+            {
+                type: "label_outside",
+                options: [],
+            },
+        ],
+    },
+];
+
+// const _colours = [];
+// product_variants.forEach((v) => {
+//     if (!t_shirtColours[v.color]) {
+//         t_shirtColours = {
+//             ...t_shirtColours,
+//             [v.color]: { name: v.color, code: v.color_code },
+//         };
+//     }
+// });
 console.log(t_shirtColours);
 
 init();
