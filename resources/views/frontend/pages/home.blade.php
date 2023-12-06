@@ -55,10 +55,9 @@
                         <div class="vioce box-1" id="box-1">
                             <h4>Choose a Conflict</h4>
                             <ul>
-                                <li class="israel-1 option-conflict">Israel & Palestine
-                                </li>
-                                <li class="option-conflict">Nagorno & Karabakh
-                                </li>
+                                <li class="israel-1 option-conflict">Israel & Palestine</li>
+                                <li class="israel-1 option-conflict">Azerbaijan & Armenia</li>
+                                <li class="option-conflict">Russia & Ukraine</li>
                                 <li class="option-conflict">Turkey & Kurdistan </li>
                                 <li class="option-conflict">India & Pakistan</li>
                             </ul>
@@ -75,8 +74,9 @@
                         <div class="vioce add-bg" id="box-3">
                             <h4>Shop Subcategory</h4>
                             <ul>
-                                <li class="apparel">Men's Apparel</li>
-                                <li class="accessories">Weman's Apparel</li>
+                                <li class="men_apparel">Men's Apparel</li>
+                                <li class="woman_accessories">Weman's Apparel</li>
+                                <li class="accessories">Accessories</li>
                             </ul>
                         </div>
 
@@ -91,14 +91,6 @@
                         </div>
 
                         <div class="vioce add-bg" id="box-5">
-                            <h4>Shop a Subcategory</h4>
-                            <ul>
-                                <li class="typeofproduct3">Light Weight</a></li>
-                                <li class="typeofproduct3">Heavy Weight</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="vioce add-bg" id="box-6">
                             <h4>Shop a Subcategory</h4>
                             <ul>
                                 <li class="typeofproduct4">Oversized</a></li>

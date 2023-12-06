@@ -239,8 +239,7 @@
         const box3 = document.getElementById('box-3');
         const box4 = document.getElementById('box-4');
         const box5 = document.getElementById('box-5');
-        const box6 = document.getElementById('box-6');
-
+        
         conflicts.forEach(conflict => {
             conflict.addEventListener('click', () => {
                 const values = conflict.textContent.split(' & ');
@@ -271,7 +270,7 @@
             });
         });
 
-        const box3Options = document.querySelectorAll('.apparel, .accessories');
+        const box3Options = document.querySelectorAll('.men_apparel, .woman_accessories, .accessories');
 
         box3Options.forEach(option => {
             option.addEventListener('click', () => {
@@ -287,17 +286,6 @@
                 box3.style.display = 'none';
                 box4.style.display = 'none';
                 box5.style.display = 'block';
-            });
-        });
-
-        const box5Options = document.querySelectorAll('.typeofproduct3');
-
-        box5Options.forEach(option => {
-            option.addEventListener('click', () => {
-                box3.style.display = 'none';
-                box4.style.display = 'none';
-                box5.style.display = 'none';
-                box6.style.display = 'block';
             });
         });
 
