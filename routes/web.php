@@ -17,9 +17,9 @@ use App\Http\Controllers\Admin\ProductsController;
 */
 
 Route::group(['prefix' => 'admin'], function () {
-    Route::get('index', [AdminController::class, 'index']);
-    Route::get('/','ProductsController@product_show');
-    Route::get('/show/{product}','ProductsController@product_view');
+    Route::get('', [AdminController::class, 'index']);
+    //Route::get('/',[ProductsController::class, 'product_show']);
+    //Route::get('/show/{product}',[ProductsController::class,'product_view']);
     Route::resource('/products',ProductsController::class);
     Route::post('/products', [ProductsController::class, 'store'])->name('admin.products.store');
     Route::post('/products/update/{id}', [ProductsController::class, 'update']);
