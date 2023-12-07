@@ -285,7 +285,7 @@
                         </div>
                         <div class="prd-opt-two cmn-prd-opt">
                             <button class="border rounded-lg p-2 px-3 place-btn" onclick="placeOrder()">
-                                Place order
+                                Update Template
                             </button>
                         </div>
                         <div class="prd-opt-three cmn-prd-opt" id="text-controls-additional">
