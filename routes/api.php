@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ProductsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FileController;
@@ -26,4 +27,5 @@ Route::post('/createOrder', [FileController::class, 'createOrder']);
 Route::post('/updateOrder/{id}', [FileController::class, 'updateOrder']);
 Route::post('/calculateShippingRate', [FileController::class, 'calculateShippingRate']);
 
-
+Route::post('/store_template', [ProductsController::class, 'store_template']);
+Route::get('/get_template', [ProductsController::class, 'get_template']);

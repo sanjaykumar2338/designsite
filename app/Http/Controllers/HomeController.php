@@ -136,7 +136,8 @@ class HomeController extends Controller
         return view('frontend.pages.create_product');
     }
 
-    public function shop(){
+    public function shop()
+    {
         return view('frontend.pages.create_product');
     }
 }

@@ -20,12 +20,13 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('', [AdminController::class, 'index']);
     //Route::get('/',[ProductsController::class, 'product_show']);
     //Route::get('/show/{product}',[ProductsController::class,'product_view']);
-    Route::resource('/products',ProductsController::class);
+    Route::get('products/create_template', [ProductsController::class, 'create_template']);
+    Route::resource('/products', ProductsController::class);
     Route::post('/products', [ProductsController::class, 'store'])->name('admin.products.store');
     Route::post('/products/update/{id}', [ProductsController::class, 'update']);
     Route::get('/products/remove/{id}', [ProductsController::class, 'destroy']);
     Route::get('products/{product}', 'ProductsController@show');
-    Route::get('photos/create/{id}','PhotoController@create');
+    Route::get('photos/create/{id}', 'PhotoController@create');
 });
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -51,6 +52,7 @@ Route::get('/login', [App\Http\Controllers\HomeController::class, 'login'])->nam
 Route::get('/register', [App\Http\Controllers\HomeController::class, 'register'])->name('register');
 Route::get('/product_design', [App\Http\Controllers\HomeController::class, 'product_design'])->name('product_design');
 Route::get('/create_product', [App\Http\Controllers\HomeController::class, 'create_product'])->name('create_product');
+
 Route::get('/{standwithtype}/shop/{productType}', [App\Http\Controllers\HomeController::class, 'shop'])->name('shop');
 
 

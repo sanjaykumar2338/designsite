@@ -137,100 +137,43 @@ function init() {
     console.log(selected_variant, "selected_variant");
     setShowCanvas(elements.canvas_front, true);
     setProductColoursUI();
-    setImages();
-}
 
-function setImages() {
-    var requestOptions = {
-        method: "GET",
-        headers: {},
-        redirect: "follow",
-    };
+    // fabric.Image.fromURL(
+    //     "objects/fornt_top_left_logo.png",
+    //     function (oImg) {
+    //         if (oImg._element == null) {
+    //             alert(
+    //                 "Cant access the file! Please download the image and upload it from local storage"
+    //             );
+    //             return;
+    //         }
+    //         oImg.scale(0.06);
+    //         console.log(oImg);
+    //         oImg.set("left", 103);
+    //         oImg.set("selectable", false);
+    //         canvases.canvas_front.add(oImg);
+    //     },
+    //     { crossOrigin: "Anonymous" }
+    // );
 
-    fetch("/api/get_template", requestOptions)
-        .then((response) => response.text())
-        .then((_result) => {
-            const result = JSON.parse(_result);
-            console.log(result);
-            if (result.frontImage)
-                fabric.Image.fromURL(
-                    result.frontImage,
-                    function (oImg) {
-                        if (oImg._element == null) {
-                            alert(
-                                "Cant access the file! Please download the image and upload it from local storage"
-                            );
-                            return;
-                        }
-
-                        oImg.set("selectable", false);
-                        oImg.scaleToHeight(canvases.canvas_front.getHeight());
-                        oImg.scaleToWidth(canvases.canvas_front.getWidth());
-                        canvases.canvas_front.add(oImg);
-                    },
-                    { crossOrigin: "Anonymous" }
-                );
-            if (result.backImage)
-                fabric.Image.fromURL(
-                    result.backImage,
-                    function (oImg) {
-                        if (oImg._element == null) {
-                            alert(
-                                "Cant access the file! Please download the image and upload it from local storage"
-                            );
-                            return;
-                        }
-                        oImg.set("selectable", false);
-                        oImg.scaleToHeight(canvases.canvas_back.getHeight());
-                        oImg.scaleToWidth(canvases.canvas_back.getWidth());
-                        canvases.canvas_back.add(oImg);
-                    },
-                    { crossOrigin: "Anonymous" }
-                );
-            if (result.leftImage)
-                fabric.Image.fromURL(
-                    result.leftImage,
-                    function (oImg) {
-                        if (oImg._element == null) {
-                            alert(
-                                "Cant access the file! Please download the image and upload it from local storage"
-                            );
-                            return;
-                        }
-                        oImg.set("selectable", false);
-                        oImg.scaleToHeight(
-                            canvases.canvas_sleeve_left.getHeight()
-                        );
-                        oImg.scaleToWidth(
-                            canvases.canvas_sleeve_left.getWidth()
-                        );
-                        canvases.canvas_sleeve_left.add(oImg);
-                    },
-                    { crossOrigin: "Anonymous" }
-                );
-            if (result.rightImage)
-                fabric.Image.fromURL(
-                    result.rightImage,
-                    function (oImg) {
-                        if (oImg._element == null) {
-                            alert(
-                                "Cant access the file! Please download the image and upload it from local storage"
-                            );
-                            return;
-                        }
-                        oImg.set("selectable", false);
-                        oImg.scaleToHeight(
-                            canvases.canvas_sleeve_right.getHeight()
-                        );
-                        oImg.scaleToWidth(
-                            canvases.canvas_sleeve_right.getWidth()
-                        );
-                        canvases.canvas_sleeve_right.add(oImg);
-                    },
-                    { crossOrigin: "Anonymous" }
-                );
-        })
-        .catch((error) => console.log("error", error));
+    // fabric.Image.fromURL(
+    //     "objects/left_sleeve_isreal.png",
+    //     function (oImg) {
+    //         if (oImg._element == null) {
+    //             alert(
+    //                 "Cant access the file! Please download the image and upload it from local storage"
+    //             );
+    //             return;
+    //         }
+    //         oImg.scale(0.12);
+    //         console.log(oImg);
+    //         oImg.set("top", 60);
+    //         oImg.set("left", 50);
+    //         oImg.set("selectable", false);
+    //         canvases.canvas_sleeve_left.add(oImg);
+    //     },
+    //     { crossOrigin: "Anonymous" }
+    // );
 }
 
 function removeObject() {
@@ -469,7 +412,9 @@ function addImage(imgUrl) {
                 // }).showToast();
                 return;
             }
-            oImg.scale(0.5);
+            // oImg.scale(0.5);
+            oImg.scaleToHeight(canvas.getHeight());
+            oImg.scaleToWidth(canvas.getWidth());
             canvas.add(oImg);
         },
         { crossOrigin: "Anonymous" }
@@ -557,6 +502,13 @@ function textOverline() {
 }
 
 async function placeOrder() {
+    // Object.keys(canvases).forEach((key) => {
+    //     console.log(key);
+    //     const v = canvases[key];
+    //     v.getObjects().forEach((co) => {
+    //         console.log(co);
+    //     });
+    // });
     try {
         if (productType === productTypes.t_shirt) {
             const images = {};
@@ -575,16 +527,28 @@ async function placeOrder() {
                     ? await htmltoCanvas(canvases.canvas_sleeve_right)
                     : undefined;
 
-            const files = Object.keys(canvases)
-                .map((key) => ({
-                    url: images[key],
-                    thumbnail_url: images[key],
-                    type: key.replace("canvas_", ""),
-                }))
-                .filter((v) => v.thumbnail_url);
-            console.log(files);
-            debugger;
-            createProduct(files);
+            // const files = Object.keys(canvases)
+            //     .map((key) => ({
+            //         url: images[key],
+            //         thumbnail_url: images[key],
+            //         type: key.replace("canvas_", ""),
+            //     }))
+            //     .filter((v) => v.thumbnail_url);
+            console.log({
+                product_name: "Test",
+                commission: "10",
+                supporting_country: "Isreal",
+                product_for: "Isreal",
+                product_type: "Shirt",
+                product_sub_type: "Shirt",
+                frontImage: images.canvas_front,
+                backImage: images.canvas_back,
+                leftImage: images.canvas_sleeve_left,
+                rightImage: images.canvas_sleeve_right,
+            });
+
+            // debugger;
+            // createProduct(files);
         }
     } catch (error) {
         console.error(error);
@@ -636,7 +600,7 @@ function htmltoCanvas(canvas) {
                 }).showToast();
                 setIsLoading(true);
 
-                let url = "api/file";
+                let url = "/api/file";
                 fetch(url, requestOptions)
                     .then((response) => response.text())
                     .then((result) => {
