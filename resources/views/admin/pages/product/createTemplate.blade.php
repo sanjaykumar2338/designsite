@@ -569,7 +569,7 @@
                         </button>
                         <button type="button" class="py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-700 mr-2"
                             type="submit" onclick="submitPayment()">
-                            Place Order
+                            Update Template
                         </button>
                     </div>
                 </div>
