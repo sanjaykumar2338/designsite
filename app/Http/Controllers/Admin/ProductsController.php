@@ -234,22 +234,22 @@ class ProductsController extends Controller
 
         // simulate store template
 
-        return
-            response($request)
-                ->header('Content-Type', 'text/json');
+        // return
+        //     response($request)
+        //         ->header('Content-Type', 'text/json');
 
-        $this->validate($request, [
-            'product_name' => 'required|min:3|max:50',
-            'commission' => 'required',
-            'supporting_country' => 'required',
-            'product_for' => 'required',
-            'product_type' => 'required',
-            'product_sub_type' => 'required',
-            'front_image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'back_image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'right_image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'left_image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-        ]);
+        // $this->validate($request, [
+        //     'product_name' => 'required|min:3|max:50',
+        //     'commission' => 'required',
+        //     'supporting_country' => 'required',
+        //     'product_for' => 'required',
+        //     'product_type' => 'required',
+        //     'product_sub_type' => 'required',
+        //     'front_image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+        //     'back_image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+        //     'right_image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+        //     'left_image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+        // ]);
 
 
 
@@ -271,26 +271,27 @@ class ProductsController extends Controller
 
         // return $product;
         return
-            response($request)
+            response($product)
                 ->header('Content-Type', 'text/json');
     }
 
     public function get_template(Request $request)
     {
-
+        $product = Products::latest()->first();
+        // dd($product);
         // simulate get template 
-        $product = '{
-            "product_name": "Test",
-            "commission": "10",
-            "supporting_country": "Isreal",
-            "product_for": "Isreal",
-            "product_type": "Shirt",
-            "product_sub_type": "Shirt",
-            "frontImage": "https://res.cloudinary.com/dvjz9gnxu/image/upload/v1701966170/d5bdjv0xydifx2kbwulc.png",
-            "backImage": "https://res.cloudinary.com/dvjz9gnxu/image/upload/v1701966172/hort99ok9ni5sthopzf9.png",
-            "leftImage": "https://res.cloudinary.com/dvjz9gnxu/image/upload/v1701966174/y5ptvhe3ks8wolutlcla.png",
-            "rightImage": "https://res.cloudinary.com/dvjz9gnxu/image/upload/v1701966177/k0pykhdwhp5a4qaejb0h.png"
-        }';
+        // $product = '{
+        //     "product_name": "Test",
+        //     "commission": "10",
+        //     "supporting_country": "Isreal",
+        //     "product_for": "Isreal",
+        //     "product_type": "Shirt",
+        //     "product_sub_type": "Shirt",
+        //     "frontImage": "https://res.cloudinary.com/dvjz9gnxu/image/upload/v1701966170/d5bdjv0xydifx2kbwulc.png",
+        //     "backImage": "https://res.cloudinary.com/dvjz9gnxu/image/upload/v1701966172/hort99ok9ni5sthopzf9.png",
+        //     "leftImage": "https://res.cloudinary.com/dvjz9gnxu/image/upload/v1701966174/y5ptvhe3ks8wolutlcla.png",
+        //     "rightImage": "https://res.cloudinary.com/dvjz9gnxu/image/upload/v1701966177/k0pykhdwhp5a4qaejb0h.png"
+        // }';
         return
             response($product)
                 ->header('Content-Type', 'text/json');

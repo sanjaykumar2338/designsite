@@ -152,9 +152,9 @@ function setImages() {
         .then((_result) => {
             const result = JSON.parse(_result);
             console.log(result);
-            if (result.frontImage)
+            if (result.front_image)
                 fabric.Image.fromURL(
-                    result.frontImage,
+                    result.front_image,
                     function (oImg) {
                         if (oImg._element == null) {
                             alert(
@@ -170,9 +170,9 @@ function setImages() {
                     },
                     { crossOrigin: "Anonymous" }
                 );
-            if (result.backImage)
+            if (result.back_image)
                 fabric.Image.fromURL(
-                    result.backImage,
+                    result.back_image,
                     function (oImg) {
                         if (oImg._element == null) {
                             alert(
@@ -187,9 +187,9 @@ function setImages() {
                     },
                     { crossOrigin: "Anonymous" }
                 );
-            if (result.leftImage)
+            if (result.left_image)
                 fabric.Image.fromURL(
-                    result.leftImage,
+                    result.left_image,
                     function (oImg) {
                         if (oImg._element == null) {
                             alert(
@@ -208,9 +208,9 @@ function setImages() {
                     },
                     { crossOrigin: "Anonymous" }
                 );
-            if (result.rightImage)
+            if (result.right_image)
                 fabric.Image.fromURL(
-                    result.rightImage,
+                    result.right_image,
                     function (oImg) {
                         if (oImg._element == null) {
                             alert(
@@ -583,7 +583,6 @@ async function placeOrder() {
                 }))
                 .filter((v) => v.thumbnail_url);
             console.log(files);
-            debugger;
             createProduct(files);
         }
     } catch (error) {
@@ -636,7 +635,15 @@ function htmltoCanvas(canvas) {
                 }).showToast();
                 setIsLoading(true);
 
-                let url = "api/file";
+                let url =
+                    (window.location.hostname.includes("127.0.0.1")
+                        ? "http://"
+                        : "https://") +
+                    window.location.hostname +
+                    (window.location.hostname.includes("127.0.0.1")
+                        ? ":8000"
+                        : "") +
+                    "/api/file";
                 fetch(url, requestOptions)
                     .then((response) => response.text())
                     .then((result) => {
@@ -694,7 +701,7 @@ function calculateShippingRate() {
         headers: myHeaders,
         redirect: "follow",
     };
-    fetch("api/calculateShippingRate", requestOptions)
+    fetch("/api/calculateShippingRate", requestOptions)
         .then((response) => response.text())
         .then((result) => {
             const data = JSON.parse(result);
@@ -726,7 +733,7 @@ function createProduct(files) {
         headers: myHeaders,
         redirect: "follow",
     };
-    fetch("api/createProduct", requestOptions)
+    fetch("/api/createProduct", requestOptions)
         .then((response) => response.text())
         .then((result) => {
             const data = JSON.parse(result);
@@ -751,7 +758,7 @@ function getProduct(id) {
         headers: myHeaders,
         redirect: "follow",
     };
-    fetch("api/getProduct", requestOptions)
+    fetch("/api/getProduct", requestOptions)
         .then((response) => response.text())
         .then((result) => {
             console.log("getProduct", JSON.parse(result));
@@ -776,7 +783,7 @@ function createOrder(product) {
         headers: myHeaders,
         redirect: "follow",
     };
-    fetch("api/createOrder", requestOptions)
+    fetch("/api/createOrder", requestOptions)
         .then((response) => response.text())
         .then((result) => {
             order = JSON.parse(result);
@@ -854,7 +861,7 @@ function submitPayment() {
     setIsLoading(true);
     fetch(
         // `http://localhost:8000/api/updateOrder/99416078`,
-        `api/updateOrder/${order.result.id}`,
+        `/api/updateOrder/${order.result.id}`,
         requestOptions
     )
         .then((response) => response.text())
