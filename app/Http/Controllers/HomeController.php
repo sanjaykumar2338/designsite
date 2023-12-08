@@ -98,7 +98,11 @@ class HomeController extends Controller
 
     public function my_account()
     {
-        return view('frontend.pages.my_account');
+        if(auth()->user()->email=='admin@gmail.com'){
+            return redirect('admin');
+        }else{
+            return view('frontend.pages.my_account');
+        }
     }
 
     public function order_history()

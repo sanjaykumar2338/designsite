@@ -21,6 +21,14 @@ class ProductsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+    {
+        if(auth()->user()->email!='admin@gmail.com'){
+            return redirect('/');
+        }
+    }
+
     public function index()
     {
         $products = Products::paginate(5);

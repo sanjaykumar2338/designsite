@@ -16,7 +16,7 @@ use App\Http\Controllers\Admin\ProductsController;
 |
 */
 
-Route::group(['prefix' => 'admin'], function () {
+Route::group(['prefix' => 'admin','middleware' => 'check.auth'], function () {
     Route::get('', [AdminController::class, 'index']);
     //Route::get('/',[ProductsController::class, 'product_show']);
     //Route::get('/show/{product}',[ProductsController::class,'product_view']);
