@@ -534,7 +534,7 @@ async function placeOrder() {
             //         type: key.replace("canvas_", ""),
             //     }))
             //     .filter((v) => v.thumbnail_url);
-            console.log({
+            const data = {
                 product_name: "Test",
                 commission: "10",
                 supporting_country: "Isreal",
@@ -545,7 +545,21 @@ async function placeOrder() {
                 backImage: images.canvas_back,
                 leftImage: images.canvas_sleeve_left,
                 rightImage: images.canvas_sleeve_right,
-            });
+            };
+            var raw = JSON.stringify(data);
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+            var requestOptions = {
+                method: "POST",
+                headers: myHeaders,
+                body: raw,
+                redirect: "follow",
+            };
+
+            fetch("/api/store_template", requestOptions)
+                .then((response) => response.text())
+                .then((result) => console.log(result))
+                .catch((error) => console.log("error", error));
 
             // debugger;
             // createProduct(files);
