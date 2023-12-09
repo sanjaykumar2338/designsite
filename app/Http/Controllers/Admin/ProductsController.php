@@ -24,9 +24,9 @@ class ProductsController extends Controller
 
     public function __construct()
     {
-        if(auth()->user()->email!='admin@gmail.com'){
-            return redirect('/');
-        }
+        //if(auth()->user()->email!='admin@gmail.com'){
+            //return redirect('/');
+        //}
     }
 
     public function index()
