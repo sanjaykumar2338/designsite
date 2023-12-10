@@ -20,7 +20,7 @@ Route::group(['prefix' => 'admin','middleware' => 'check.auth'], function () {
     Route::get('', [AdminController::class, 'index']);
     //Route::get('/',[ProductsController::class, 'product_show']);
     //Route::get('/show/{product}',[ProductsController::class,'product_view']);
-    Route::get('products/create_template', [ProductsController::class, 'create_template']);
+    Route::get('products/create_template/{id}', [ProductsController::class, 'create_template']);
     Route::resource('/products', ProductsController::class);
     Route::post('/products', [ProductsController::class, 'store'])->name('admin.products.store');
     Route::post('/products/update/{id}', [ProductsController::class, 'update']);

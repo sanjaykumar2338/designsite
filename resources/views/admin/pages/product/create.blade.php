@@ -43,6 +43,11 @@
                 </div>
 
                 <div class="mb-3 mt-3">
+                  <label for="product_name">Product Description:</label>
+                  <textarea class="form-control" id="product_description" rows="6" placeholder="Enter Product Description" name="product_description"></textarea>
+                </div>
+
+                <div class="mb-3 mt-3">
                   <label for="product_name">Commission:</label>
                   <input type="number" class="form-control" id="commission" placeholder="Enter Commission" name="commission">
                 </div>
@@ -103,8 +108,28 @@
                 </div>
 
                 <div class="mb-3 mt-3">
+                  <label for="title">Front Image Price:</label>
+                  <input type="number" class="form-control" name="front_image_price">
+                </div>
+
+                <div class="mb-3 mt-3">
+                  <label for="title">Front Image Donation Description:</label>
+                  <textarea class="form-control" name="front_image_donation"></textarea>
+                </div>
+
+                <div class="mb-3 mt-3">
                   <label for="title">Back Image:</label>
                   <input type="file" class="form-control" name="back_image">
+                </div>
+
+                <div class="mb-3 mt-3">
+                  <label for="title">Back Image Price:</label>
+                  <input type="number" class="form-control" name="back_image_price">
+                </div>
+
+                <div class="mb-3 mt-3">
+                  <label for="title">Back Image Donation:</label>
+                  <textarea class="form-control" name="back_image_donation"></textarea>
                 </div>
 
                 <div class="mb-3 mt-3">
@@ -115,6 +140,21 @@
                 <div class="mb-3 mt-3">
                   <label for="title">Left Image:</label>
                   <input type="file" class="form-control" name="left_image">
+                </div>
+
+                <div class="mb-3 mt-3">
+                  <label for="title">Seo Title:</label>
+                  <input type="text" class="form-control" name="seo_title">
+                </div>
+
+                <div class="mb-3 mt-3">
+                  <label for="title">Meta Description:</label>
+                  <textarea class="form-control" name="meta_description"></textarea>
+                </div>
+
+                <div class="mb-3 mt-3">
+                  <label for="title">Meta Keyword:</label>
+                  <textarea class="form-control" name="meta_keyword"></textarea>
                 </div>
 
                 <button type="submit" class="btn btn-primary">Create</button>

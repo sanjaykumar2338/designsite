@@ -57,17 +57,25 @@ class ProductsController extends Controller
     {
 
         $this->validate($request, [
-            'product_name' => 'required|min:3|max:50',
+            'product_name' => 'required',
+            'product_description' => '',
             'commission' => 'required',
             'supporting_country' => 'required',
             'product_for' => 'required',
             'product_type' => 'required',
             'product_sub_type' => 'required',
-            'front_image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'back_image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'right_image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'left_image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-        ]);
+            'front_image' => 'required|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
+            'front_image_price' => 'required',
+            'front_image_donation' => '',
+            'back_image' => 'required|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
+            'back_image_price' => 'required',
+            'back_image_donation' => '',
+            'right_image' => 'required|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
+            'left_image' => 'required|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
+            'seo_title' => '',
+            'meta_description' => '',
+            'meta_keyword' => ''
+        ]);        
 
         // Handle image uploads
         $frontImage = $request->file('front_image')->store('public/images');
@@ -78,15 +86,23 @@ class ProductsController extends Controller
         // Save data to the database
         $product = new Products();
         $product->product_name = $request->input('product_name');
+        $product->product_description = $request->input('product_description');
         $product->commission = $request->input('commission');
         $product->supporting_country = $request->input('supporting_country');
         $product->product_for = $request->input('product_for');
         $product->product_type = $request->input('product_type');
         $product->product_sub_type = $request->input('product_sub_type');
         $product->front_image = $frontImage;
+        $product->front_image_price = $request->input('front_image_price');
+        $product->front_image_donation = $request->input('front_image_donation');
         $product->back_image = $backImage;
+        $product->back_image_price = $request->input('back_image_price');
+        $product->back_image_donation = $request->input('back_image_donation');
         $product->right_image = $rightImage;
         $product->left_image = $leftImage;
+        $product->seo_title = $request->input('seo_title');
+        $product->meta_description = $request->input('meta_description');
+        $product->meta_keyword = $request->input('meta_keyword');
 
         // Save the product
         $product->save();
@@ -132,17 +148,25 @@ class ProductsController extends Controller
 
         $product = Products::find($id);
         $this->validate($request, [
-            'product_name' => 'required|min:3|max:50',
+            'product_name' => 'required',
+            'product_description' => '',
             'commission' => 'required',
             'supporting_country' => 'required',
             'product_for' => 'required',
             'product_type' => 'required',
             'product_sub_type' => 'required',
             'front_image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+            'front_image_price' => 'required',
+            'front_image_donation' => '',
             'back_image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+            'back_image_price' => 'required',
+            'back_image_donation' => '',
             'right_image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
             'left_image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
-        ]);
+            'seo_title' => '',
+            'meta_description' => '',
+            'meta_keyword' => ''
+        ]);  
 
         // Handle image uploads
 
@@ -164,11 +188,19 @@ class ProductsController extends Controller
 
         // Save data to the database          
         $product->product_name = $request->input('product_name');
+        $product->product_description = $request->input('product_description');
         $product->commission = $request->input('commission');
         $product->supporting_country = $request->input('supporting_country');
         $product->product_for = $request->input('product_for');
         $product->product_type = $request->input('product_type');
         $product->product_sub_type = $request->input('product_sub_type');
+        $product->seo_title = $request->input('seo_title');
+        $product->meta_description = $request->input('meta_description');
+        $product->meta_keyword = $request->input('meta_keyword');
+        $product->front_image_price = $request->input('front_image_price');
+        $product->front_image_donation = $request->input('front_image_donation');
+        $product->back_image_price = $request->input('back_image_price');
+        $product->back_image_donation = $request->input('back_image_donation');
 
         if ($request->file('front_image')) {
             $product->front_image = $frontImage;
@@ -233,9 +265,10 @@ class ProductsController extends Controller
 
         return view('products.product_view')->with('products', $product);
     }
-    public function create_template()
-    {
-        return view('admin.pages.product.createTemplate');
+    public function create_template(Request $request, $id)
+    {  
+        $product = Products::find($id);
+        return view('admin.pages.product.createTemplate')->with('product',$product);
     }
     public function store_template(Request $request)
     {

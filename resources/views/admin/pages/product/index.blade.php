@@ -54,18 +54,18 @@
                                     <table class="table table-hover">
                                         <thead>
                                         <tr>
-                                            <th>Product</th>
+                                            <th class="col-sm-4 col-md-4">Product</th>
 
-                                            <th class="text-center">Commission</th>
+                                            <th class="col-sm-4 col-md-4">Commission</th>
 
-                                            <th></th>
+                                            <th class="col-sm-4 col-md-4"  style="text-align: center">Action</th>
                                         </tr>
                                         </thead>
                                         <tbody>
 
                                         <tr>
 
-                                            <td class="col-sm-8 col-md-12">
+                                            <td class="col-sm-4 col-md-4">
 
                                                 <div class="media">
                                                     <div class="media-body">
@@ -75,23 +75,16 @@
                                                     </div>
 
                                                 </div>
-
                                             </td>
-
-                                            <td class="col-sm-1 col-md-1 text-center"><strong>  {{$product->commission}}$</strong></td>
-
-                                            <td class="col-sm-1 col-md-1" style="text-align: center">
-                                               <a href="/admin/products/remove/{{$product->id}}" class="btn btn-danger">Remove</a>
-
-                                                <a href="/admin/products/{{$product->id}}/edit" class="btn btn-primary">EDIT</a>
+                                            <td class="col-sm-4 col-md-4"><strong>  {{$product->commission}}$</strong></td>
+                                            <td class="col-sm-4 col-md-4" style="text-align: right">
+                                              <a href="/admin/products/remove/{{$product->id}}" class="btn btn-danger">Remove</a>
+                                              <a href="/admin/products/{{$product->id}}/edit" class="btn btn-primary">EDIT</a>
+                                              <a href="/admin/products/create_template/{{$product->id}}" class="btn btn-primary">Design Templates</a>
                                             </td>
-
                                         </tr>
-
-
                                         </tbody>
-                                    </table>
-
+                                      </table>
                             </div>
                         @endforeach
                     @else
