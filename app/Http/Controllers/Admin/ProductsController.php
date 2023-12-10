@@ -268,6 +268,9 @@ class ProductsController extends Controller
     public function create_template(Request $request, $id)
     {  
         $product = Products::find($id);
+        $url = fileToUrl($product->front_image);
+        //echo "<pre>"; print_r($url); die;
+
         return view('admin.pages.product.createTemplate')->with('product',$product);
     }
     public function store_template(Request $request)
