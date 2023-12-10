@@ -268,10 +268,10 @@ class ProductsController extends Controller
     public function create_template(Request $request, $id)
     {
         $product = Products::find($id);
-        // $product->front_image = fileToUrl($product->front_image);
-        // $product->back_image = fileToUrl($product->back_image);
-        // $product->left_image = fileToUrl($product->left_image);
-        // $product->right_image = fileToUrl($product->right_image);
+        $product->front_image = str_replace("public/", "storage/", $product->front_image);
+        $product->back_image = str_replace("public/", "storage/", $product->back_image);
+        $product->left_image = str_replace("public/", "storage/", $product->left_image);
+        $product->right_image = str_replace("public/", "storage/", $product->right_image);
         return view('admin.pages.product.createTemplate')->with('product', $product);
     }
 
@@ -324,20 +324,10 @@ class ProductsController extends Controller
     public function get_template(Request $request)
     {
         $product = Products::latest()->first();
-        // dd($product);
-        // simulate get template 
-        // $product = '{
-        //     "product_name": "Test",
-        //     "commission": "10",
-        //     "supporting_country": "Isreal",
-        //     "product_for": "Isreal",
-        //     "product_type": "Shirt",
-        //     "product_sub_type": "Shirt",
-        //     "frontImage": "https://res.cloudinary.com/dvjz9gnxu/image/upload/v1701966170/d5bdjv0xydifx2kbwulc.png",
-        //     "backImage": "https://res.cloudinary.com/dvjz9gnxu/image/upload/v1701966172/hort99ok9ni5sthopzf9.png",
-        //     "leftImage": "https://res.cloudinary.com/dvjz9gnxu/image/upload/v1701966174/y5ptvhe3ks8wolutlcla.png",
-        //     "rightImage": "https://res.cloudinary.com/dvjz9gnxu/image/upload/v1701966177/k0pykhdwhp5a4qaejb0h.png"
-        // }';
+        $product->front_image = str_replace("public/", "storage/", $product->front_image);
+        $product->back_image = str_replace("public/", "storage/", $product->back_image);
+        $product->left_image = str_replace("public/", "storage/", $product->left_image);
+        $product->right_image = str_replace("public/", "storage/", $product->right_image);
         return
             response($product)
                 ->header('Content-Type', 'text/json');

@@ -143,6 +143,10 @@ function init() {
 }
 
 function setImage(url, position) {
+    url =
+        (window.location.hostname.includes("127.0.0.1")
+            ? "http://127.0.0.1:8000/"
+            : `https://+${window.location.hostname}/`) + url;
     fabric.Image.fromURL(
         url,
         function (oImg) {
@@ -155,7 +159,6 @@ function setImage(url, position) {
             const h = canvases[position].getHeight();
             const w = canvases[position].getWidth();
             // oImg.set("selectable", false);
-            debugger;
             oImg.set("top", h / 4);
             oImg.set("left", w / 4);
             oImg.scaleToHeight(h / 2);

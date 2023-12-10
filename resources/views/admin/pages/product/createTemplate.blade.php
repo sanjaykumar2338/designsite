@@ -73,6 +73,7 @@
     <!-- ========== Start top-bar ========== -->
 
     <input type="hidden" value="{{ url('/') }}" id="site_url">
+    <div id="data" hidden>{{ $product }}</div>
 
     <div class="top-bar">
         <div class="container">
@@ -674,7 +675,6 @@
                 <img src="{{ url('/') }}/asset/frontend/images/pay.png" alt="">
             </div>
 
-            <div id="data" hidden>{{ $product }}</div>
         </div>
     </footer>
     <!-- ========== End footer ========== -->

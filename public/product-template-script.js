@@ -158,7 +158,6 @@ function setImage(url, position) {
             const h = canvases[position].getHeight();
             const w = canvases[position].getWidth();
             // oImg.set("selectable", false);
-            debugger;
             oImg.set("top", h / 4);
             oImg.set("left", w / 4);
             oImg.scaleToHeight(h / 2);
@@ -171,7 +170,6 @@ function setImage(url, position) {
 
 function setImages() {
     product = JSON.parse(getEl("data").innerText);
-    debugger;
     // var requestOptions = {
     //     method: "GET",
     //     headers: {},
