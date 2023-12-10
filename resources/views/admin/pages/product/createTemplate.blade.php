@@ -73,6 +73,7 @@
     <!-- ========== Start top-bar ========== -->
 
     <input type="hidden" value="{{ url('/') }}" id="site_url">
+    <div id="data" hidden>{{ $product }}</div>
 
     <div class="top-bar">
         <div class="container">
@@ -190,13 +191,13 @@
                                 <div class="border-[1px] border-neutral-300 frame-area"
                                     style="
 										position: absolute;
-										top: 60%;
+										top: 52%;
 										left: 48%;
 										transform: translate(-43%, -70%);
 										z-index: 10;
 									"
                                     id="div_front" hidden>
-                                    <canvas id="canvas_front" width="150" height="250"
+                                    <canvas id="canvas_front" width="150" height="200"
                                         style="border: 1px; border-color: black"></canvas>
                                 </div>
                                 <div class="border-[1px] border-neutral-300 frame-area"
@@ -673,7 +674,6 @@
                 <p>© {{ date('Y') }} All Rights Reserved | cause stand.</p>
                 <img src="{{ url('/') }}/asset/frontend/images/pay.png" alt="">
             </div>
-
 
         </div>
     </footer>

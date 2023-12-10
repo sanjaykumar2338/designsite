@@ -8,6 +8,8 @@ const product_variant_ids = {
     t_shirt: 12634,
 };
 
+let product;
+
 let t_shirtColours = {
     Red: { name: "Red", code: "#d80019" },
     White: { name: "White", code: "#fffefa" },
@@ -140,6 +142,33 @@ function init() {
     setImages();
 }
 
+function setImage(url, position) {
+    url =
+        (window.location.hostname.includes("127.0.0.1")
+            ? "http://127.0.0.1:8000/"
+            : `https://+${window.location.hostname}/`) + url;
+    fabric.Image.fromURL(
+        url,
+        function (oImg) {
+            if (oImg._element == null) {
+                // alert(
+                //     "Cant access the file! Please download the image and upload it from local storage"
+                // );
+                return;
+            }
+            const h = canvases[position].getHeight();
+            const w = canvases[position].getWidth();
+            // oImg.set("selectable", false);
+            oImg.set("top", h / 4);
+            oImg.set("left", w / 4);
+            oImg.scaleToHeight(h / 2);
+            oImg.scaleToWidth(w / 2);
+            canvases[position].add(oImg);
+        },
+        { crossOrigin: "Anonymous" }
+    );
+}
+
 function setImages() {
     var requestOptions = {
         method: "GET",
@@ -150,85 +179,17 @@ function setImages() {
     fetch("/api/get_template", requestOptions)
         .then((response) => response.text())
         .then((_result) => {
-            const result = JSON.parse(_result);
-            console.log(result);
-            if (result.front_image)
-                fabric.Image.fromURL(
-                    result.front_image,
-                    function (oImg) {
-                        if (oImg._element == null) {
-                            alert(
-                                "Cant access the file! Please download the image and upload it from local storage"
-                            );
-                            return;
-                        }
+            product = JSON.parse(_result);
+            console.log(product);
+            if (product.front_image)
+                setImage(product.front_image, "canvas_front");
+            if (product.back_image) setImage(product.back_image, "canvas_back");
 
-                        oImg.set("selectable", false);
-                        oImg.scaleToHeight(canvases.canvas_front.getHeight());
-                        oImg.scaleToWidth(canvases.canvas_front.getWidth());
-                        canvases.canvas_front.add(oImg);
-                    },
-                    { crossOrigin: "Anonymous" }
-                );
-            if (result.back_image)
-                fabric.Image.fromURL(
-                    result.back_image,
-                    function (oImg) {
-                        if (oImg._element == null) {
-                            alert(
-                                "Cant access the file! Please download the image and upload it from local storage"
-                            );
-                            return;
-                        }
-                        oImg.set("selectable", false);
-                        oImg.scaleToHeight(canvases.canvas_back.getHeight());
-                        oImg.scaleToWidth(canvases.canvas_back.getWidth());
-                        canvases.canvas_back.add(oImg);
-                    },
-                    { crossOrigin: "Anonymous" }
-                );
-            if (result.left_image)
-                fabric.Image.fromURL(
-                    result.left_image,
-                    function (oImg) {
-                        if (oImg._element == null) {
-                            alert(
-                                "Cant access the file! Please download the image and upload it from local storage"
-                            );
-                            return;
-                        }
-                        oImg.set("selectable", false);
-                        oImg.scaleToHeight(
-                            canvases.canvas_sleeve_left.getHeight()
-                        );
-                        oImg.scaleToWidth(
-                            canvases.canvas_sleeve_left.getWidth()
-                        );
-                        canvases.canvas_sleeve_left.add(oImg);
-                    },
-                    { crossOrigin: "Anonymous" }
-                );
-            if (result.right_image)
-                fabric.Image.fromURL(
-                    result.right_image,
-                    function (oImg) {
-                        if (oImg._element == null) {
-                            alert(
-                                "Cant access the file! Please download the image and upload it from local storage"
-                            );
-                            return;
-                        }
-                        oImg.set("selectable", false);
-                        oImg.scaleToHeight(
-                            canvases.canvas_sleeve_right.getHeight()
-                        );
-                        oImg.scaleToWidth(
-                            canvases.canvas_sleeve_right.getWidth()
-                        );
-                        canvases.canvas_sleeve_right.add(oImg);
-                    },
-                    { crossOrigin: "Anonymous" }
-                );
+            if (product.left_image)
+                setImage(product.left_image, "canvas_sleeve_left");
+
+            if (product.right_image)
+                setImage(product.right_image, "canvas_sleeve_right");
         })
         .catch((error) => console.log("error", error));
 }

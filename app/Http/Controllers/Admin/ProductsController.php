@@ -25,7 +25,7 @@ class ProductsController extends Controller
     public function __construct()
     {
         //if(auth()->user()->email!='admin@gmail.com'){
-            //return redirect('/');
+        //return redirect('/');
         //}
     }
 
@@ -75,7 +75,7 @@ class ProductsController extends Controller
             'seo_title' => '',
             'meta_description' => '',
             'meta_keyword' => ''
-        ]);        
+        ]);
 
         // Handle image uploads
         $frontImage = $request->file('front_image')->store('public/images');
@@ -166,7 +166,7 @@ class ProductsController extends Controller
             'seo_title' => '',
             'meta_description' => '',
             'meta_keyword' => ''
-        ]);  
+        ]);
 
         // Handle image uploads
 
@@ -266,13 +266,11 @@ class ProductsController extends Controller
         return view('products.product_view')->with('products', $product);
     }
     public function create_template(Request $request, $id)
-    {  
+    {
         $product = Products::find($id);
-        $url = fileToUrl($product->front_image);
-        //echo "<pre>"; print_r($url); die;
-
         return view('admin.pages.product.createTemplate')->with('product',$product);
     }
+
     public function store_template(Request $request)
     {
 
@@ -322,20 +320,10 @@ class ProductsController extends Controller
     public function get_template(Request $request)
     {
         $product = Products::latest()->first();
-        // dd($product);
-        // simulate get template 
-        // $product = '{
-        //     "product_name": "Test",
-        //     "commission": "10",
-        //     "supporting_country": "Isreal",
-        //     "product_for": "Isreal",
-        //     "product_type": "Shirt",
-        //     "product_sub_type": "Shirt",
-        //     "frontImage": "https://res.cloudinary.com/dvjz9gnxu/image/upload/v1701966170/d5bdjv0xydifx2kbwulc.png",
-        //     "backImage": "https://res.cloudinary.com/dvjz9gnxu/image/upload/v1701966172/hort99ok9ni5sthopzf9.png",
-        //     "leftImage": "https://res.cloudinary.com/dvjz9gnxu/image/upload/v1701966174/y5ptvhe3ks8wolutlcla.png",
-        //     "rightImage": "https://res.cloudinary.com/dvjz9gnxu/image/upload/v1701966177/k0pykhdwhp5a4qaejb0h.png"
-        // }';
+        $product->front_image = str_replace("public/", "storage/", $product->front_image);
+        $product->back_image = str_replace("public/", "storage/", $product->back_image);
+        $product->left_image = str_replace("public/", "storage/", $product->left_image);
+        $product->right_image = str_replace("public/", "storage/", $product->right_image);
         return
             response($product)
                 ->header('Content-Type', 'text/json');
