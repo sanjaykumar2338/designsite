@@ -674,7 +674,7 @@
                 <img src="{{ url('/') }}/asset/frontend/images/pay.png" alt="">
             </div>
 
-
+            <div id="data" hidden>{{ $product }}</div>
         </div>
     </footer>
     <!-- ========== End footer ========== -->

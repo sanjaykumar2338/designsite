@@ -7,6 +7,7 @@ const product_variant_ids = {
     t_shirt_black: 10286,
     t_shirt: 12634,
 };
+let product;
 
 let t_shirtColours = {
     Red: { name: "Red", code: "#d80019" },
@@ -137,43 +138,60 @@ function init() {
     console.log(selected_variant, "selected_variant");
     setShowCanvas(elements.canvas_front, true);
     setProductColoursUI();
+    setImages();
+}
 
-    // fabric.Image.fromURL(
-    //     "objects/fornt_top_left_logo.png",
-    //     function (oImg) {
-    //         if (oImg._element == null) {
-    //             alert(
-    //                 "Cant access the file! Please download the image and upload it from local storage"
-    //             );
-    //             return;
-    //         }
-    //         oImg.scale(0.06);
-    //         console.log(oImg);
-    //         oImg.set("left", 103);
-    //         oImg.set("selectable", false);
-    //         canvases.canvas_front.add(oImg);
-    //     },
-    //     { crossOrigin: "Anonymous" }
-    // );
+function setImage(url, position) {
+    url =
+        (window.location.hostname.includes("127.0.0.1")
+            ? "http://127.0.0.1:8000/"
+            : `https://+${window.location.hostname}/`) + url;
+    fabric.Image.fromURL(
+        url,
+        function (oImg) {
+            if (oImg._element == null) {
+                // alert(
+                //     "Cant access the file! Please download the image and upload it from local storage"
+                // );
+                return;
+            }
+            const h = canvases[position].getHeight();
+            const w = canvases[position].getWidth();
+            // oImg.set("selectable", false);
+            debugger;
+            oImg.set("top", h / 4);
+            oImg.set("left", w / 4);
+            oImg.scaleToHeight(h / 2);
+            oImg.scaleToWidth(w / 2);
+            canvases[position].add(oImg);
+        },
+        { crossOrigin: "Anonymous" }
+    );
+}
 
-    // fabric.Image.fromURL(
-    //     "objects/left_sleeve_isreal.png",
-    //     function (oImg) {
-    //         if (oImg._element == null) {
-    //             alert(
-    //                 "Cant access the file! Please download the image and upload it from local storage"
-    //             );
-    //             return;
-    //         }
-    //         oImg.scale(0.12);
-    //         console.log(oImg);
-    //         oImg.set("top", 60);
-    //         oImg.set("left", 50);
-    //         oImg.set("selectable", false);
-    //         canvases.canvas_sleeve_left.add(oImg);
-    //     },
-    //     { crossOrigin: "Anonymous" }
-    // );
+function setImages() {
+    product = JSON.parse(getEl("data").innerText);
+    debugger;
+    // var requestOptions = {
+    //     method: "GET",
+    //     headers: {},
+    //     redirect: "follow",
+    // };
+
+    // fetch("/api/get_template", requestOptions)
+    //     .then((response) => response.text())
+    //     .then((_result) => {
+    //         product = JSON.parse(_result);
+    console.log(product);
+    if (product.front_image) setImage(product.front_image, "canvas_front");
+    if (product.back_image) setImage(product.back_image, "canvas_back");
+
+    if (product.left_image) setImage(product.left_image, "canvas_sleeve_left");
+
+    if (product.right_image)
+        setImage(product.right_image, "canvas_sleeve_right");
+    // })
+    // .catch((error) => console.log("error", error));
 }
 
 function removeObject() {

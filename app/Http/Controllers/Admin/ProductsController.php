@@ -25,7 +25,7 @@ class ProductsController extends Controller
     public function __construct()
     {
         //if(auth()->user()->email!='admin@gmail.com'){
-            //return redirect('/');
+        //return redirect('/');
         //}
     }
 
@@ -75,7 +75,7 @@ class ProductsController extends Controller
             'seo_title' => '',
             'meta_description' => '',
             'meta_keyword' => ''
-        ]);        
+        ]);
 
         // Handle image uploads
         $frontImage = $request->file('front_image')->store('public/images');
@@ -166,7 +166,7 @@ class ProductsController extends Controller
             'seo_title' => '',
             'meta_description' => '',
             'meta_keyword' => ''
-        ]);  
+        ]);
 
         // Handle image uploads
 
@@ -266,10 +266,15 @@ class ProductsController extends Controller
         return view('products.product_view')->with('products', $product);
     }
     public function create_template(Request $request, $id)
-    {  
+    {
         $product = Products::find($id);
-        return view('admin.pages.product.createTemplate')->with('product',$product);
+        // $product->front_image = fileToUrl($product->front_image);
+        // $product->back_image = fileToUrl($product->back_image);
+        // $product->left_image = fileToUrl($product->left_image);
+        // $product->right_image = fileToUrl($product->right_image);
+        return view('admin.pages.product.createTemplate')->with('product', $product);
     }
+
     public function store_template(Request $request)
     {
 
