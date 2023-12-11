@@ -2,6 +2,7 @@
 
 @section('content')
     <div class="crt-prd-main">
+        <div id="data" hidden>{{ $product }}</div>
         <div class="container">
             <div class="flex flex-wrap">
                 <div class="prd-left">
@@ -90,12 +91,12 @@
                                     alt="" class="w-[50px]">
                                 {{-- back --}}
                             </button>
-                            <button class="border  rounded-lg" onclick="setShowCanvas(`canvas_sleeve_left`, true)">
+                            <button class="border  rounded-lg" onclick="setShowCanvas(`canvas_sleeve_left`, true)" hidden>
                                 <img src="https://files.cdn.printful.com/m/ec1000/medium/onman/left/zoomed/05_ec1000_onman_left_base_whitebg.png?v=1675420344"
                                     alt="" class="w-[50px]">
                                 {{-- sleeve_left --}}
                             </button>
-                            <button class="border  rounded-lg" onclick="setShowCanvas(`canvas_sleeve_right`, true)">
+                            <button class="border  rounded-lg" onclick="setShowCanvas(`canvas_sleeve_right`, true)" hidden>
                                 <img src="https://files.cdn.printful.com/m/ec1000/medium/onman/right/zoomed/05_ec1000_onman_right_base_whitebg.png?v=1675420344"
                                     alt="" class="w-[50px]">
                                 {{-- sleeve_right --}}
@@ -139,29 +140,29 @@
                             <div class="prd-opt-four">
                                 <h4>Objects:</h4>
                                 <!-- <button
-                                                                                                                                                                                                                                             class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                                                                                                                                                                                                                             onclick="addLine()"
-                                                                                                                                                                                                                                            >
-                                                                                                                                                                                                                                             Line
-                                                                                                                                                                                                                                            </button>
-                                                                                                                                                                                                                                            <button
-                                                                                                                                                                                                                                             class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                                                                                                                                                                                                                             onclick="addRect()"
-                                                                                                                                                                                                                                            >
-                                                                                                                                                                                                                                             Rectangle
-                                                                                                                                                                                                                                            </button>
-                                                                                                                                                                                                                                            <button
-                                                                                                                                                                                                                                             class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                                                                                                                                                                                                                             onclick="addCircle()"
-                                                                                                                                                                                                                                            >
-                                                                                                                                                                                                                                             Circle
-                                                                                                                                                                                                                                            </button>
-                                                                                                                                                                                                                                            <button
-                                                                                                                                                                                                                                             class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                                                                                                                                                                                                                             onclick="addTriangle()"
-                                                                                                                                                                                                                                            >
-                                                                                                                                                                                                                                             Triangle
-                                                                                                                                                                                                                                            </button> -->
+                                                                                                                                                                                                                                                                     class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+                                                                                                                                                                                                                                                                     onclick="addLine()"
+                                                                                                                                                                                                                                                                    >
+                                                                                                                                                                                                                                                                     Line
+                                                                                                                                                                                                                                                                    </button>
+                                                                                                                                                                                                                                                                    <button
+                                                                                                                                                                                                                                                                     class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+                                                                                                                                                                                                                                                                     onclick="addRect()"
+                                                                                                                                                                                                                                                                    >
+                                                                                                                                                                                                                                                                     Rectangle
+                                                                                                                                                                                                                                                                    </button>
+                                                                                                                                                                                                                                                                    <button
+                                                                                                                                                                                                                                                                     class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+                                                                                                                                                                                                                                                                     onclick="addCircle()"
+                                                                                                                                                                                                                                                                    >
+                                                                                                                                                                                                                                                                     Circle
+                                                                                                                                                                                                                                                                    </button>
+                                                                                                                                                                                                                                                                    <button
+                                                                                                                                                                                                                                                                     class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+                                                                                                                                                                                                                                                                     onclick="addTriangle()"
+                                                                                                                                                                                                                                                                    >
+                                                                                                                                                                                                                                                                     Triangle
+                                                                                                                                                                                                                                                                    </button> -->
                                 <div class="prd-objects flex flex-wrap">
                                     <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
                                         onclick="addObjectImage(`{{ url('/') }}/objects/1-circle-1.svg`)">
@@ -347,6 +348,9 @@
                         <label class="font-bold text-gray-800">Payment Details</label>
                         <br>
                         <br>
+                        <div id="price" class="font-medium text-gray-800">Price:</div>
+                        <div id="front" class="font-medium text-gray-800" hidden>Front:</div>
+                        <div id="back" class="font-medium text-gray-800" hidden>Back:</div>
                         <div id="subtotal" class="font-medium text-gray-800">Subtotal:</div>
                         <div id="shipping" class="font-medium text-gray-800">Shipping:</div>
                         <div id="total" class="font-bold text-gray-800">Total:</div>

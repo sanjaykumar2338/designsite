@@ -139,6 +139,7 @@ function init() {
     console.log(selected_variant, "selected_variant");
     setShowCanvas(elements.canvas_front, true);
     setProductColoursUI();
+    product = JSON.parse(getEl("data").innerText);
     setImages();
 }
 
@@ -158,11 +159,11 @@ function setImage(url, position) {
             }
             const h = canvases[position].getHeight();
             const w = canvases[position].getWidth();
-            // oImg.set("selectable", false);
-            oImg.set("top", h / 4);
-            oImg.set("left", w / 4);
-            oImg.scaleToHeight(h / 2);
-            oImg.scaleToWidth(w / 2);
+            oImg.set("selectable", false);
+            // oImg.set("top", h / 4);
+            // oImg.set("left", w / 4);
+            oImg.scaleToHeight(h);
+            oImg.scaleToWidth(w);
             canvases[position].add(oImg);
         },
         { crossOrigin: "Anonymous" }
@@ -170,28 +171,14 @@ function setImage(url, position) {
 }
 
 function setImages() {
-    var requestOptions = {
-        method: "GET",
-        headers: {},
-        redirect: "follow",
-    };
+    console.log(product);
+    if (product.front_image) setImage(product.front_image, "canvas_front");
+    if (product.back_image) setImage(product.back_image, "canvas_back");
 
-    fetch("/api/get_template", requestOptions)
-        .then((response) => response.text())
-        .then((_result) => {
-            product = JSON.parse(_result);
-            console.log(product);
-            if (product.front_image)
-                setImage(product.front_image, "canvas_front");
-            if (product.back_image) setImage(product.back_image, "canvas_back");
+    if (product.left_image) setImage(product.left_image, "canvas_sleeve_left");
 
-            if (product.left_image)
-                setImage(product.left_image, "canvas_sleeve_left");
-
-            if (product.right_image)
-                setImage(product.right_image, "canvas_sleeve_right");
-        })
-        .catch((error) => console.log("error", error));
+    if (product.right_image)
+        setImage(product.right_image, "canvas_sleeve_right");
 }
 
 function removeObject() {
@@ -676,13 +663,32 @@ function calculateShippingRate() {
 function createProduct(files) {
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
-    const product = JSON.stringify({
+    let price = 20;
+
+    Object.keys(canvases).forEach((k) => {
+        let addPrice = false;
+        canvases[k].getObjects().forEach((c) => {
+            if (c.selectable) {
+                addPrice = true;
+            }
+        });
+        if (!addPrice) return;
+        if (k === "canvas_front") {
+            price += +product.front_image_price;
+        }
+        if (k === "canvas_back") {
+            price += +product.back_image_price;
+        }
+    });
+
+    debugger;
+    const _product = JSON.stringify({
         sync_product: { name: "test", thumbnail: files[0].url },
         sync_variants: [
             {
                 files,
                 variant_id: selected_variant,
-                retail_price: "20",
+                retail_price: price.toString(),
                 currency: "USD",
                 // color: selected,
             },
@@ -690,7 +696,7 @@ function createProduct(files) {
     });
     var requestOptions = {
         method: "POST",
-        body: JSON.stringify({ jsonString: product }),
+        body: JSON.stringify({ jsonString: _product }),
         headers: myHeaders,
         redirect: "follow",
     };
@@ -767,9 +773,30 @@ function createOrder(product) {
 }
 
 function setCost() {
+    Object.keys(canvases).forEach((k) => {
+        let addPrice = false;
+        canvases[k].getObjects().forEach((c) => {
+            if (c.selectable) {
+                addPrice = true;
+            }
+            debugger;
+        });
+        if (!addPrice) return;
+        if (k === "canvas_front") {
+            getEl("front").hidden = false;
+            getEl("front").innerHTML = `Front: $${product.front_image_price}`;
+        }
+        if (k === "canvas_back") {
+            getEl("back").hidden = false;
+            getEl("back").innerHTML = `Back: $${product.back_image_price}`;
+        }
+        debugger;
+    });
+    getEl("price").innerHTML = `Price: $20`;
     getEl(
         "subtotal"
     ).innerHTML = `Subtotal: $${order.result.retail_costs.subtotal}`;
+
     getEl(
         "shipping"
     ).innerHTML = `Shipping: $${order.result.retail_costs.shipping}`;

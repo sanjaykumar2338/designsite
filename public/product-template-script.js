@@ -138,6 +138,7 @@ function init() {
     console.log(selected_variant, "selected_variant");
     setShowCanvas(elements.canvas_front, true);
     setProductColoursUI();
+    product = JSON.parse(getEl("data").innerText);
     setImages();
 }
 
@@ -158,10 +159,10 @@ function setImage(url, position) {
             const h = canvases[position].getHeight();
             const w = canvases[position].getWidth();
             // oImg.set("selectable", false);
-            oImg.set("top", h / 4);
-            oImg.set("left", w / 4);
-            oImg.scaleToHeight(h / 2);
-            oImg.scaleToWidth(w / 2);
+            // oImg.set("top", h / 4);
+            // oImg.set("left", w / 4);
+            oImg.scaleToHeight(h);
+            oImg.scaleToWidth(w);
             canvases[position].add(oImg);
         },
         { crossOrigin: "Anonymous" }
@@ -169,17 +170,6 @@ function setImage(url, position) {
 }
 
 function setImages() {
-    product = JSON.parse(getEl("data").innerText);
-    // var requestOptions = {
-    //     method: "GET",
-    //     headers: {},
-    //     redirect: "follow",
-    // };
-
-    // fetch("/api/get_template", requestOptions)
-    //     .then((response) => response.text())
-    //     .then((_result) => {
-    //         product = JSON.parse(_result);
     console.log(product);
     if (product.front_image) setImage(product.front_image, "canvas_front");
     if (product.back_image) setImage(product.back_image, "canvas_back");
@@ -188,8 +178,6 @@ function setImages() {
 
     if (product.right_image)
         setImage(product.right_image, "canvas_sleeve_right");
-    // })
-    // .catch((error) => console.log("error", error));
 }
 
 function removeObject() {
@@ -527,56 +515,60 @@ async function placeOrder() {
     // });
     try {
         if (productType === productTypes.t_shirt) {
-            const images = {};
-            images.canvas_front = canvases.canvas_front.getObjects().length
+            Toastify({
+                text: "Uploading Image...",
+                className: "warn",
+            }).showToast();
+            const imageFiles = {};
+            imageFiles.canvas_front = canvases.canvas_front.getObjects().length
                 ? await htmltoCanvas(canvases.canvas_front)
                 : undefined;
-            images.canvas_back = canvases.canvas_back.getObjects().length
+            imageFiles.canvas_back = canvases.canvas_back.getObjects().length
                 ? await htmltoCanvas(canvases.canvas_back)
                 : undefined;
-            images.canvas_sleeve_left = canvases.canvas_sleeve_left.getObjects()
-                .length
-                ? await htmltoCanvas(canvases.canvas_sleeve_left)
-                : undefined;
-            images.canvas_sleeve_right =
+            imageFiles.canvas_sleeve_left =
+                canvases.canvas_sleeve_left.getObjects().length
+                    ? await htmltoCanvas(canvases.canvas_sleeve_left)
+                    : undefined;
+            imageFiles.canvas_sleeve_right =
                 canvases.canvas_sleeve_right.getObjects().length
                     ? await htmltoCanvas(canvases.canvas_sleeve_right)
                     : undefined;
 
-            // const files = Object.keys(canvases)
-            //     .map((key) => ({
-            //         url: images[key],
-            //         thumbnail_url: images[key],
-            //         type: key.replace("canvas_", ""),
-            //     }))
-            //     .filter((v) => v.thumbnail_url);
             const data = {
-                product_name: "Test",
-                commission: "10",
-                supporting_country: "Isreal",
-                product_for: "Isreal",
-                product_type: "Shirt",
-                product_sub_type: "Shirt",
-                frontImage: images.canvas_front,
-                backImage: images.canvas_back,
-                leftImage: images.canvas_sleeve_left,
-                rightImage: images.canvas_sleeve_right,
+                front_image: imageFiles.canvas_front,
+                back_image: imageFiles.canvas_back,
+                right_image: imageFiles.canvas_sleeve_left,
+                left_image: imageFiles.canvas_sleeve_right,
             };
-            var raw = JSON.stringify(data);
-            var myHeaders = new Headers();
-            myHeaders.append("Content-Type", "application/json");
+
+            var formdata = new FormData();
+            Object.keys(data).forEach((k) => {
+                if (data[k]) {
+                    formdata.append(k, data[k]);
+                }
+            });
             var requestOptions = {
                 method: "POST",
-                headers: myHeaders,
-                body: raw,
+                body: formdata,
                 redirect: "follow",
             };
+            setIsLoading(true);
+            debugger;
 
-            fetch("/api/store_template", requestOptions)
+            let url = `/api/update_template/${product.id}`;
+            fetch(url, requestOptions)
                 .then((response) => response.text())
-                .then((result) => console.log(result))
-                .catch((error) => console.log("error", error));
-
+                .then((result) => {
+                    console.log("update product", result);
+                    Toastify({
+                        text: "Product Updated...",
+                        className: "warn",
+                    }).showToast();
+                })
+                .catch((error) => {
+                    console.log("update product", error);
+                });
             // debugger;
             // createProduct(files);
         }
@@ -602,45 +594,9 @@ function htmltoCanvas(canvas) {
             // height: 200,
         });
 
-        // console.log(dt, "canvas.toDataURL");
-        // dt = dt.replace(/^data:image\/[^;]*/, "data:application/octet-stream");
-        // dt = dt.replace(
-        //     /^data:application\/octet-stream/,
-        //     "data:application/octet-stream;headers=Content-Disposition%3A%20attachment%3B%20filename=Canvas.png"
-        // );
-
-        // let a = document.createElement("a");
-        // a.href = dt;
-        // a.download = "canvas.png";
-        // a.click();
-
         fetch(dt).then((base64Response) => {
             base64Response.blob().then((file) => {
-                var formdata = new FormData();
-                formdata.append("file", file, "test.jpg");
-
-                var requestOptions = {
-                    method: "POST",
-                    body: formdata,
-                    redirect: "follow",
-                };
-                Toastify({
-                    text: "Uploading Image...",
-                    className: "warn",
-                }).showToast();
-                setIsLoading(true);
-
-                let url = "/api/file";
-                fetch(url, requestOptions)
-                    .then((response) => response.text())
-                    .then((result) => {
-                        console.log("imageURL", result);
-                        resolve(result);
-                    })
-                    .catch((error) => {
-                        console.log("error", error);
-                        reject(error);
-                    });
+                resolve(file);
             });
         });
     });

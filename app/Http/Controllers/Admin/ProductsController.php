@@ -335,4 +335,44 @@ class ProductsController extends Controller
                 ->header('Content-Type', 'text/json');
     }
 
+    public function updateApi(Request $request, $id)
+    {
+
+        $product = Products::find($id);
+        $this->validate($request, [
+            'front_image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+            'back_image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+            'right_image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+            'left_image' => 'image|mimes:jpeg,png,jpg,gif|max:2048'
+        ]);
+
+        // Handle image uploads
+
+        if ($request->file('front_image')) {
+            $frontImage = $request->file('front_image')->store('public/images');
+            $product->front_image = $frontImage;
+        }
+
+        if ($request->file('back_image')) {
+            $backImage = $request->file('back_image')->store('public/images');
+            $product->back_image = $backImage;
+        }
+
+        if ($request->file('right_image')) {
+            $rightImage = $request->file('right_image')->store('public/images');
+            $product->right_image = $rightImage;
+        }
+
+        if ($request->file('left_image')) {
+            $leftImage = $request->file('left_image')->store('public/images');
+            $product->left_image = $leftImage;
+        }
+
+        // Save the product
+        $product->update();
+        return
+            response($product)
+                ->header('Content-Type', 'text/json');
+    }
+
 }
