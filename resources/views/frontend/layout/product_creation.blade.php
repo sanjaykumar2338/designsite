@@ -105,7 +105,7 @@
 
                             <li>
                                 <span style="cursor: pointer;" onclick='location.href ="{{route('login')}}";'>
-                                    login
+                                    sign in
                                 </span>
                             </li>
                         @endif
