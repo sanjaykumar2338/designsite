@@ -268,7 +268,18 @@ class ProductsController extends Controller
     public function create_template(Request $request, $id)
     {
         $product = Products::find($id);
+<<<<<<<<< Temporary merge branch 1
+        $url = fileToUrl($product->front_image);
+        //echo "<pre>"; print_r($url); die;
+
         return view('admin.pages.product.createTemplate')->with('product',$product);
+=========
+        $product->front_image = str_replace("public/", "storage/", $product->front_image);
+        $product->back_image = str_replace("public/", "storage/", $product->back_image);
+        $product->left_image = str_replace("public/", "storage/", $product->left_image);
+        $product->right_image = str_replace("public/", "storage/", $product->right_image);
+        return view('admin.pages.product.createTemplate')->with('product', $product);
+>>>>>>>>> Temporary merge branch 2
     }
 
     public function store_template(Request $request)
