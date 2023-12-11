@@ -79,7 +79,7 @@
             <div class="row">
                 <div class="col-md-9">
                     <div class="left-side" id="logo-hide">
-                        <img onclick='location.href ="{{route('/')}}";' src="{{url('/')}}/asset/frontend/images/new-logo.jpg" alt="">
+                    <img onclick="window.location.href = '{{ route('home') }}';" src="{{ url('/asset/frontend/images/new-logo.jpg') }}" alt="">
                     </div>
                 </div>
                 <div class="col-lg-3 d-flex justify-content-end">
