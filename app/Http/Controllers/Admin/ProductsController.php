@@ -326,10 +326,10 @@ class ProductsController extends Controller
     public function get_template(Request $request)
     {
         $product = Products::latest()->first();
-        $product->front_image = str_replace("public/", "storage/", $product->front_image);
-        $product->back_image = str_replace("public/", "storage/", $product->back_image);
-        $product->left_image = str_replace("public/", "storage/", $product->left_image);
-        $product->right_image = str_replace("public/", "storage/", $product->right_image);
+        $product->front_image = fileToUrl($product->front_image);
+        $product->back_image = fileToUrl($product->back_image);
+        $product->left_image = fileToUrl($product->left_image);
+        $product->right_image = fileToUrl($product->right_image);
         return
             response($product)
                 ->header('Content-Type', 'text/json');

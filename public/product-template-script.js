@@ -142,10 +142,10 @@ function init() {
 }
 
 function setImage(url, position) {
-    url =
-        (window.location.hostname.includes("127.0.0.1")
-            ? "http://127.0.0.1:8000/"
-            : `https://+${window.location.hostname}/`) + url;
+    // url =
+    //     (window.location.hostname.includes("127.0.0.1")
+    //         ? "http://127.0.0.1:8000/"
+    //         : `https://+${window.location.hostname}/`) + url;
     fabric.Image.fromURL(
         url,
         function (oImg) {
