@@ -155,14 +155,14 @@ class ProductsController extends Controller
             'product_for' => 'required',
             'product_type' => 'required',
             'product_sub_type' => 'required',
-            'front_image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+            'front_image' => 'image|mimes:jpeg,png,jpg,gif,webp|max:2048',
             'front_image_price' => 'required',
             'front_image_donation' => '',
-            'back_image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+            'back_image' => 'image|mimes:jpeg,png,jpg,gif,webp|max:2048',
             'back_image_price' => 'required',
             'back_image_donation' => '',
-            'right_image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
-            'left_image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+            'right_image' => 'image|mimes:jpeg,png,jpg,gif,webp|max:2048',
+            'left_image' => 'image|mimes:jpeg,png,jpg,gif,webp|max:2048',
             'seo_title' => '',
             'meta_description' => '',
             'meta_keyword' => ''
@@ -334,5 +334,4 @@ class ProductsController extends Controller
             response($product)
                 ->header('Content-Type', 'text/json');
     }
-
 }

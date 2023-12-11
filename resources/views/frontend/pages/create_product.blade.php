@@ -102,31 +102,27 @@
                             </button>
                         </div>
 
+                        <br>
+                        <h4>Choose Color:</h4>
                         <div id="product-colours">
                         </div>
 
                         <div class="flex flex-wrap prd-opt-one align-items-center cmn-prd-opt">
                             <button class="border prd-btn rounded-lg p-2 px-3" onclick="setShowModal(true)">
                                 Add Image
+                            </button>&nbsp;&nbsp;
+                            <button class="border prd-btn rounded-lg p-2 px-3" onclick="addText()">
+                                Add Text
                             </button>
                             <div class="img-add-opt">
                                 <input id="image-picker" type="file" accept="image/*" class="w-[200px]"
                                     onchange="onImagePikked()" />
                             </div>
-                            <button class="border prd-btn rounded-lg p-2 px-3" onclick="addText()">
-                                Add Text
-                            </button>
-
-
                         </div>
-                        <div class="prd-opt-two cmn-prd-opt">
-                            <button class="border rounded-lg p-2 px-3 place-btn" onclick="placeOrder()">
-                                Place order
-                            </button>
-                        </div>
+                        
                         <div class="prd-opt-three cmn-prd-opt" id="text-controls-additional">
                             <div class="flex flex-wrap gap-2 prd-sze">
-                                <h4>T-shirt Size :</h4>
+                                <h4>Product Size :</h4>
                                 <input type="radio" id="X" name="fav_language" value="X" />
                                 <label for="X">X</label>
                                 <br />
@@ -137,7 +133,7 @@
                                 <label for="L">L</label>
                             </div>
                             <div class="prd-opt-four">
-                                <h4>Objects:</h4>
+                                <h4>Draw Shapes:</h4>
                                 <!-- <button
                                                                                                                                                                                                                                              class="border rounded-lg p-2 px-3 hover:bg-slate-200"
                                                                                                                                                                                                                                              onclick="addLine()"
@@ -293,6 +289,13 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="prd-opt-two cmn-prd-opt">
+                            <button class="border rounded-lg p-2 px-3 place-btn" onclick="placeOrder()">
+                                Next
+                            </button>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -333,85 +336,74 @@
     </div>
 
     <div id="payment-modal" hidden>
-        <div class="fixed z-10 overflow-y-auto top-0 w-full left-0">
-            <div class="flex items-center justify-center min-height-100vh pt-4 px-4 pb-20 text-center sm:block sm:p-0">
-                <div class="fixed inset-0 transition-opacity">
-                    <div class="absolute inset-0 bg-gray-900 opacity-75"></div>
-                </div>
-                <span class="hidden sm:inline-block sm:align-middle sm:h-screen">
-                    &#8203;
-                </span>
-                <div class="inline-block align-center bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
-                    role="dialog" aria-modal="true" aria-labelledby="modal-headline">
-                    <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-                        <label class="font-bold text-gray-800">Payment Details</label>
-                        <br>
-                        <br>
-                        <div id="subtotal" class="font-medium text-gray-800">Subtotal:</div>
-                        <div id="shipping" class="font-medium text-gray-800">Shipping:</div>
-                        <div id="total" class="font-bold text-gray-800">Total:</div>
-                        <br>
-                        <br>
-                        <label class="font-medium text-gray-800">Name</label>
-                        <input type="text" id="payment-modal-name"
-                            class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" value="John Smith"
-                            placeholder="Full Name" />
-                        <label class="font-medium text-gray-800">Email</label>
-                        <input type="text" id="payment-modal-email"
-                            class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" value="john@gmail.com"
-                            placeholder="email" />
-                        <label class="font-medium text-gray-800">Phone Number</label>
-                        <input type="text" id="payment-modal-phone"
-                            class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" value="7384728374"
-                            placeholder="Phone Number" />
-                        <label class="font-medium text-gray-800">Address</label>
-                        <input type="text" id="payment-modal-address"
-                            class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" value="19749 Dearborn St"
-                            placeholder="Address" />
-                        <label class="font-medium text-gray-800">Card Number</label>
-                        <input type="text" id="payment-modal-card"
-                            class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3"
-                            value="1234567890123456"maxlength="16" placeholder="1234 5678 9012 3456" />
-                        <div class="flex gap-6">
-
-                            <div class="flex flex-col">
-                                <label class="font-medium text-gray-800">Year</label>
-                                <input type="text" id="payment-modal-year"
-                                    class="w-[55px] outline-none rounded bg-gray-100 p-2 mt-2 mb-3" value="2025"
-                                    type="number" placeholder="2025" maxlength="4" />
-                            </div>
-                            <div class="flex flex-col">
-                                <label class="font-medium text-gray-800">Month</label>
-                                <input type="text" id="payment-modal-month"
-                                    class="w-[35px] outline-none rounded bg-gray-100 p-2 mt-2 mb-3" value="08"
-                                    type="number" placeholder="08" maxlength="2" />
-                            </div>
-
-                            <div class="flex flex-col">
-                                <label class="font-medium text-gray-800">CVC</label>
-                                <input type="text" id="payment-modal-cvc"
-                                    class="w-[45px] outline-none rounded bg-gray-100 p-2 mt-2 mb-3" value="123"
-                                    type="number" placeholder="123" maxlength="3" />
+        <form action="{{ route('charge') }}" method="post" id="payment-form">
+            @csrf
+            <div class="fixed z-10 overflow-y-auto top-0 w-full left-0">
+                <div class="flex items-center justify-center min-height-100vh pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+                    <div class="fixed inset-0 transition-opacity">
+                        <div class="absolute inset-0 bg-gray-900 opacity-75"></div>
+                    </div>
+                    <span class="hidden sm:inline-block sm:align-middle sm:h-screen">
+                        &#8203;
+                    </span>
+                    <div class="inline-block align-center bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
+                        role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+                        <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                            <label class="font-bold text-gray-800">Payment Details</label>
+                            <br>
+                            <br>
+                            <div id="subtotal" class="font-medium text-gray-800">Subtotal:</div>
+                            <div id="shipping" class="font-medium text-gray-800">Shipping:</div>
+                            <div id="total" class="font-bold text-gray-800">Total:</div>
+                            <br>
+                            <br>
+                            <label class="font-medium text-gray-800">Name</label>
+                            <input type="text" id="payment-modal-name"
+                                class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" value="John Smith"
+                                placeholder="Full Name" />
+                            <label class="font-medium text-gray-800">Email</label>
+                            <input type="text" id="payment-modal-email"
+                                class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" value="john@gmail.com"
+                                placeholder="email" />
+                            <label class="font-medium text-gray-800">Phone Number</label>
+                            <input type="text" id="payment-modal-phone"
+                                class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" value="7384728374"
+                                placeholder="Phone Number" />
+                            <label class="font-medium text-gray-800">Address</label>
+                            <input type="text" id="payment-modal-address"
+                                class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" value="19749 Dearborn St"
+                                placeholder="Address" />
+                                <div class="form-group">
+                                <label for="card-element">
+                                    Credit or debit card
+                                </label>
+                                <div id="card-element">
+                                    <!-- A Stripe Element will be inserted here. -->
+                                </div>
+                                <!-- Used to display form errors. -->
+                                <div id="card-errors" role="alert"></div>
                             </div>
                         </div>
-                    </div>
-                    <div class="bg-gray-200 px-4 py-3 text-right">
-                        <button type="button" class="py-2 px-4 bg-gray-500 text-white rounded hover:bg-gray-700 mr-2"
-                            onclick="setShowPaymentModal(false)">
-                            Cancel
-                        </button>
-                        <button type="button" class="py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-700 mr-2"
-                            type="submit" onclick="submitPayment()">
-                            Place Order
-                        </button>
+                        <div class="bg-gray-200 px-4 py-3 text-right">
+                            <button type="button" class="py-2 px-4 bg-gray-500 text-white rounded hover:bg-gray-700 mr-2"
+                                onclick="setShowPaymentModal(false)">
+                                Cancel
+                            </button>
+                            
+                            <button type="submit" class="btn btn-primary">Submit Payment</button>
+
+                            <!--
+                            <button type="button" class="py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-700 mr-2"
+                                type="submit" onclick="submitPayment()">
+                                Place Order
+                            </button>
+                            -->
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </form>   
     </div>
-
-
-
 
     <!-- SPINNER -->
     <div id="loader" hidden style="display: none" wire:loading
@@ -420,4 +412,115 @@
         <h2 class="text-center text-white text-xl font-semibold">Loading...</h2>
         <p class="w-1/3 text-center text-white">This may take a few seconds, please don't close this page.</p>
     </div>
+
+    <script src="https://js.stripe.com/v3/"></script>
+    <script>
+        const stripe = Stripe('{{ env('STRIPE_KEY') }}');
+        const elements2 = stripe.elements();
+
+        // Create an instance of the card Element.
+        const card = elements2.create('card');
+
+        // Add an instance of the card Element into the `card-element` div.
+        card.mount('#card-element');
+
+        // Handle form submission.
+        const form = document.getElementById('payment-form');
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            // Create a payment method using the card Element.
+            const { paymentMethod, error } = await stripe.createPaymentMethod({
+                type: 'card',
+                card: card,
+            });
+
+            if (error) {
+                // Display error message to the user.
+                const errorElement = document.getElementById('card-errors');
+                errorElement.textContent = error.message;
+            } else {
+                // If no errors, token should be sent to your server.
+                stripeTokenHandler(paymentMethod);
+            }
+        });
+
+        // Send the payment method ID to your server to complete the payment.
+        const stripeTokenHandler = async (paymentMethod) => {
+            const token = paymentMethod.id;
+
+            // Submit the form with the token ID to your Laravel controller.
+            const amountString = document.getElementById('total').innerText;
+            const extractedDecimal = extractDecimalFromString(amountString);
+
+            console.log('extractedDecimal',extractedDecimal,document.getElementById('total'));
+
+            if (extractedDecimal !== null) {
+                const decimalValue = parseFloat(extractedDecimal);
+                const centsValue = convertToCents(decimalValue);
+
+                const formData = new FormData();
+                formData.append('_token', '{{ csrf_token() }}');
+                formData.append('payment_method_id', token);
+                formData.append('total', centsValue);
+
+                try {
+                    const response = await fetch('{{ route('charge') }}', {
+                        method: 'POST',
+                        body: formData,
+                    });
+
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok.');
+                    }
+
+                    const data = await response.json();
+
+                    if (data.success) {
+                        alert(data.message);
+                    } else {
+                        alert(data.error);
+                    }
+
+                    window.location.reload();
+                } catch (error) {
+                    console.error('There was an error:', error);
+                    alert('There was an error while processing the payment.');
+                }
+            } else {
+                alert('No Price');
+            }
+        };
+
+        function extractDecimalFromString(amountString) {
+            // Regular expression to match the decimal part
+            const regex = /(\d+\.\d+)/;
+            
+            // Match the decimal part in the string
+            const match = amountString.match(regex);
+
+            if (match && match.length > 0) {
+                return match[0]; // Extracted decimal value
+            } else {
+                return null; // If no decimal value is found
+            }
+        }
+
+        function convertToCents(decimalAmount) {
+            const cents = Math.round(decimalAmount * 100);
+            return cents;
+        }
+
+        const amountString = "Your amount is $25.50";
+        const extractedDecimal = extractDecimalFromString(amountString);
+
+        if (extractedDecimal !== null) {
+            const decimalValue = parseFloat(extractedDecimal); 
+            const centsValue = convertToCents(decimalValue);
+            console.log(centsValue);
+        } else {
+            console.log('No decimal value found in the string.');
+        }
+    </script>
+
 @endsection

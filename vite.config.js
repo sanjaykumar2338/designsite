@@ -7,8 +7,7 @@ export default defineConfig({
             input: [
                 "resources/sass/app.scss",
                 "resources/js/app.js",
-                "resources/js/script.js",
-                "resources/js/html2canvas.min.js",
+                "resources/js/script.js"
             ],
             refresh: true,
         }),

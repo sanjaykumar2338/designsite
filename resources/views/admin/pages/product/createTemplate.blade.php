@@ -719,7 +719,6 @@
             owl.trigger('stop.owl.autoplay')
         })
     </script>
-    <script src="{{ url('/') }}/html2canvas.min.js"></script>
     <script src="{{ url('/') }}/product-template-script.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>

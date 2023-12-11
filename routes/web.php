@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\ProductsController;
+use Laravel\Cashier\Http\Controllers\WebhookController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,10 +55,13 @@ Route::get('/product_design', [App\Http\Controllers\HomeController::class, 'prod
 Route::get('/create_product', [App\Http\Controllers\HomeController::class, 'create_product'])->name('create_product');
 
 Route::get('/{standwithtype}/shop/{productType}', [App\Http\Controllers\HomeController::class, 'shop'])->name('shop');
-
-
-
-
 Route::post('/register', [App\Http\Controllers\UserController::class, 'register'])->name('register');
 Route::get('/logout', [App\Http\Controllers\UserController::class, 'logout'])->name('logout');
 Route::post('/login', [App\Http\Controllers\UserController::class, 'login'])->name('login');
+
+Route::post(
+    'stripe/webhook',
+    [WebhookController::class, 'handleWebhook']
+);
+
+Route::post('/charge', [App\Http\Controllers\PaymentController::class, 'processPayment'])->name('charge');
