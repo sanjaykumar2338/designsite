@@ -29,9 +29,11 @@ class FileController extends Controller
      */
     public function store(Request $request)
     {
-        $uploadedFileUrl = Cloudinary::upload($request->file('file')->getRealPath())->getSecurePath();
-        return $uploadedFileUrl;
+        // $uploadedFileUrl = Cloudinary::upload($request->file('file')->getRealPath())->getSecurePath();
+        // return $uploadedFileUrl;
 
+        $file = $request->file('file')->store('public/images');
+        return fileToUrl($file);
         // $uploadedFile = $request->file('file');
 
         // if ($uploadedFile) {

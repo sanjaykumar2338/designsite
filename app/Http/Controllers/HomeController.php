@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Products;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -98,9 +99,9 @@ class HomeController extends Controller
 
     public function my_account()
     {
-        if(auth()->user()->email=='admin@gmail.com'){
+        if (auth()->user()->email == 'admin@gmail.com') {
             return redirect('admin');
-        }else{
+        } else {
             return view('frontend.pages.my_account');
         }
     }
@@ -142,6 +143,12 @@ class HomeController extends Controller
 
     public function shop()
     {
-        return view('frontend.pages.create_product');
+        $product = Products::latest()->first();
+        $product->front_image = fileToUrl($product->front_image);
+        $product->back_image = fileToUrl($product->back_image);
+        $product->left_image = fileToUrl($product->left_image);
+        $product->right_image = fileToUrl($product->right_image);
+        return view('frontend.pages.create_product')->with('product', $product);
+        ;
     }
 }
