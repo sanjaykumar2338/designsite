@@ -65,3 +65,6 @@ Route::post(
 );
 
 Route::post('/charge', [App\Http\Controllers\PaymentController::class, 'processPayment'])->name('charge');
+Route::get('/linkstorage', function () {
+    Artisan::call('storage:link');
+});

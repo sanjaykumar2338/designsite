@@ -513,17 +513,6 @@
             const cents = Math.round(decimalAmount * 100);
             return cents;
         }
-
-        const amountString = "Your amount is $25.50";
-        const extractedDecimal = extractDecimalFromString(amountString);
-
-        if (extractedDecimal !== null) {
-            const decimalValue = parseFloat(extractedDecimal); 
-            const centsValue = convertToCents(decimalValue);
-            console.log(centsValue);
-        } else {
-            console.log('No decimal value found in the string.');
-        }
     </script>
 
 @endsection
