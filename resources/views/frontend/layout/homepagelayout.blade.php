@@ -45,7 +45,7 @@
             <div class="row">
                 <div class="col-md-9">
                     <div class="left-side" id="logo-hide">
-                        <img src="asset/frontend/images/new-logo.jpg" alt="">
+                        <a href="{{url('/')}}"><img src="asset/frontend/images/new-logo.jpg" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-3 d-flex justify-content-end">
