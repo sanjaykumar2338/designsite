@@ -334,8 +334,6 @@ class ProductsController extends Controller
             response($product)
                 ->header('Content-Type', 'text/json');
     }
-<<<<<<< HEAD
-=======
 
     public function updateApi(Request $request, $id)
     {
@@ -377,5 +375,4 @@ class ProductsController extends Controller
                 ->header('Content-Type', 'text/json');
     }
 
->>>>>>> 766969ebf04a3de49f5a7bb5c34aaef0433c9da1
 }
