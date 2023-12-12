@@ -141,14 +141,20 @@ class HomeController extends Controller
         return view('frontend.pages.create_product');
     }
 
-    public function shop()
+    public function shop(Request $request ,$id)
     {
-        $product = Products::latest()->first();
+        //echo $id; die;
+        $product = Products::find($request->id);        
         $product->front_image = fileToUrl($product->front_image);
         $product->back_image = fileToUrl($product->back_image);
         $product->left_image = fileToUrl($product->left_image);
         $product->right_image = fileToUrl($product->right_image);
         return view('frontend.pages.create_product')->with('product', $product);
-        ;
+    }
+
+    public function product_list(){
+        $products = Products::get();
+        //echo "<pre> ggg"; print_r($products); die;
+        return view('frontend.pages.product_list')->with('products', $products);
     }
 }

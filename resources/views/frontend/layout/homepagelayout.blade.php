@@ -238,7 +238,7 @@
         const box2 = document.getElementById('box-2');
         const box3 = document.getElementById('box-3');
         const box4 = document.getElementById('box-4');
-        const box5 = document.getElementById('box-5');
+        //const box5 = document.getElementById('box-5');
         
         conflicts.forEach(conflict => {
             conflict.addEventListener('click', () => {
@@ -285,7 +285,7 @@
             option.addEventListener('click', () => {
                 box3.style.display = 'none';
                 box4.style.display = 'none';
-                box5.style.display = 'block';
+                //box5.style.display = 'block';
             });
         });
 
@@ -315,7 +315,8 @@
             const baseUrl = "{{ url('/') }}";        
             const finalUrl = `${baseUrl}/${encodeURIComponent(standwithtype)}/shop/${encodeURIComponent(productType)}`;
 
-            window.location.href = finalUrl;
+            //window.location.href = finalUrl;
+            window.location.href = "{{ url('/') }}/product_list";
         }
     </script>
 

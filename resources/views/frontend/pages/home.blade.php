@@ -83,13 +83,14 @@
                         <div class="vioce add-bg" id="box-4">
                             <h4>Shop a Category </h4>
                             <ul>
-                                <li class="typeofproduct">Shirts</li>
-                                <li class="typeofproduct">Hoodies</a></li>
-                                <li class="typeofproduct">Sweatshirts</a></li>
-                                <li class="typeofproduct">Bottoms</a></li>
+                                <li class="typeofproduct4">Shirts</li>
+                                <li class="typeofproduct4">Hoodies</a></li>
+                                <li class="typeofproduct4">Sweatshirts</a></li>
+                                <li class="typeofproduct4">Bottoms</a></li>
                             </ul>
                         </div>
 
+                        <!--
                         <div class="vioce add-bg" id="box-5">
                             <h4>Shop a Subcategory</h4>
                             <ul>
@@ -100,7 +101,7 @@
                                 <li class="typeofproduct4">Polo</a></li>
                             </ul>
                         </div>
-
+                        -->
                     </div>
                 </div>
                 </div>
