@@ -81,23 +81,27 @@
                     <div class="flex flex-col gap-2" id="editables"></div>
                     <div class="prd-option">
                         <div id="product-thumbnails">
+                            
                             <button class="border rounded-lg" onclick="setShowCanvas(`canvas_front`, true)">
                                 <img id="thumbnail_front" src="" alt="" class="h-[50px] w-[50px]">
                                 {{-- front --}}
                             </button>
+                            
                             <button class="border  rounded-lg" onclick="setShowCanvas(`canvas_back`, true)">
                                 <img id="thumbnail_back" src="" alt="" class="h-[50px] w-[50px]">
                                 {{-- back --}}
                             </button>
+                            
                             <button class="border  rounded-lg" onclick="setShowCanvas(`canvas_sleeve_left`, true)">
-                                <img id="thumbnail_sleeve_left" src="" alt="" {{-- sleeve_left --}}
-                                    </button>
-                                <button class="border  rounded-lg" onclick="setShowCanvas(`canvas_sleeve_right`, true)"
-                                >
-                                    <img id="thumbnail_sleeve_right" src="" alt=""
-                                        class="h-[50px] w-[50px]">
-                                    {{-- sleeve_right --}}
-                                </button>
+                                <img id="thumbnail_sleeve_left" src="" alt="" {{-- sleeve_left --}}>
+                            </button>
+
+                            <button class="border  rounded-lg" onclick="setShowCanvas(`canvas_sleeve_right`, true)">
+                                <img id="thumbnail_sleeve_right" src="" alt=""
+                                    class="h-[50px] w-[50px]">
+                                {{-- sleeve_right --}}
+                            </button>
+
                         </div>
 
                         <br>
