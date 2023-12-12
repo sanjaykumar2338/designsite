@@ -89,11 +89,11 @@
                                 <img id="thumbnail_back" src="" alt="" class="h-[50px] w-[50px]">
                                 {{-- back --}}
                             </button>
-                            <button class="border  rounded-lg" onclick="setShowCanvas(`canvas_sleeve_left`, true)" hidden>
+                            <button class="border  rounded-lg" onclick="setShowCanvas(`canvas_sleeve_left`, true)">
                                 <img id="thumbnail_sleeve_left" src="" alt="" {{-- sleeve_left --}}
                                     </button>
                                 <button class="border  rounded-lg" onclick="setShowCanvas(`canvas_sleeve_right`, true)"
-                                    hidden>
+                                >
                                     <img id="thumbnail_sleeve_right" src="" alt=""
                                         class="h-[50px] w-[50px]">
                                     {{-- sleeve_right --}}
