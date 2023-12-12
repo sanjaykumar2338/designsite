@@ -246,23 +246,21 @@
                     <div class="prd-option">
                         <div id="product-thumbnails">
                             <button class="border rounded-lg" onclick="setShowCanvas(`canvas_front`, true)">
-                                <img src="https://files.cdn.printful.com/m/ec1000/medium/onman/front/05_ec1000_onman_front_base_whitebg.png?v=1675420344"
-                                    alt="" class="w-[50px]">
+                                <img id="thumbnail_front" src="" alt="" class="h-[50px] w-[50px]">
                                 {{-- front --}}
                             </button>
                             <button class="border  rounded-lg" onclick="setShowCanvas(`canvas_back`, true)">
-                                <img src="https://files.cdn.printful.com/m/ec1000/medium/onman/back/05_ec1000_onman_back_base_whitebg.png?v=1676986615"
-                                    alt="" class="w-[50px]">
+                                <img id="thumbnail_back" src="" alt="" class="h-[50px] w-[50px]">
                                 {{-- back --}}
                             </button>
                             <button class="border  rounded-lg" onclick="setShowCanvas(`canvas_sleeve_left`, true)">
-                                <img src="https://files.cdn.printful.com/m/ec1000/medium/onman/left/zoomed/05_ec1000_onman_left_base_whitebg.png?v=1675420344"
-                                    alt="" class="w-[50px]">
+                                <img id="thumbnail_sleeve_left" src="" alt=""
+                                    class="h-[50px] w-[50px]">
                                 {{-- sleeve_left --}}
                             </button>
                             <button class="border  rounded-lg" onclick="setShowCanvas(`canvas_sleeve_right`, true)">
-                                <img src="https://files.cdn.printful.com/m/ec1000/medium/onman/right/zoomed/05_ec1000_onman_right_base_whitebg.png?v=1675420344"
-                                    alt="" class="w-[50px]">
+                                <img id="thumbnail_sleeve_right" src="" alt=""
+                                    class="h-[50px] w-[50px]">
                                 {{-- sleeve_right --}}
                             </button>
                         </div>

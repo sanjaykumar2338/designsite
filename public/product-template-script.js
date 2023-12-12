@@ -119,6 +119,17 @@ function setProductColoursUI() {
     const productColoursDiv = getEl("product-colours");
     productColoursDiv.innerHTML = colourButtons;
 }
+function setProductImages() {
+    canvas_images.canvas_front = product.front_image;
+    canvas_images.canvas_back = product.back_image;
+    canvas_images.canvas_sleeve_right = product.right_image;
+    canvas_images.canvas_sleeve_left = product.left_image;
+
+    getEl("thumbnail_front").src = product.front_image;
+    getEl("thumbnail_back").src = product.back_image;
+    getEl("thumbnail_sleeve_right").src = product.right_image;
+    getEl("thumbnail_sleeve_left").src = product.left_image;
+}
 function init() {
     Object.values(canvases).forEach((c) => {
         c.selection = false;
@@ -136,10 +147,11 @@ function init() {
         (v) => v.color_code === t_shirtColours.White.code
     ).id;
     console.log(selected_variant, "selected_variant");
+    product = JSON.parse(getEl("data").innerText);
+    setProductImages();
     setShowCanvas(elements.canvas_front, true);
     setProductColoursUI();
-    product = JSON.parse(getEl("data").innerText);
-    setImages();
+    // setImages();
 }
 
 function setImage(url, position) {
