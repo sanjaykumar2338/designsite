@@ -27,7 +27,7 @@
                                 <div class="text-two">
                                     <h4>{{$product->product_name}}</h4>
                                     @php
-                                        $url = url('/').'/stand-with-'.strtolower($product->supporting_country).'/shop/'.strtolower($product->product_type).'/'.$product->id;
+                                        $url = url('/').'/stand-with-'.strtolower($product->supporting_country).'/shop/'.strtolower($product->product_type).'/'.$product->product_slug;
                                     @endphp
                                     <a class="buy_now" href="{{$url}}"> buy now</a>
                                 </div>

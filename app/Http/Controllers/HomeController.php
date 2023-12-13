@@ -141,10 +141,10 @@ class HomeController extends Controller
         return view('frontend.pages.create_product');
     }
 
-    public function shop(Request $request ,$id)
+    public function shop(Request $request ,$slug)
     {
         //echo $id; die;
-        $product = Products::find($request->id);        
+        $product = Products::where('product_slug',$request->slug)->first();        
         $product->front_image = fileToUrl($product->front_image);
         $product->back_image = fileToUrl($product->back_image);
         $product->left_image = fileToUrl($product->left_image);

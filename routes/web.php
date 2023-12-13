@@ -55,7 +55,7 @@ Route::get('/product_design', [App\Http\Controllers\HomeController::class, 'prod
 Route::get('/create_product', [App\Http\Controllers\HomeController::class, 'create_product'])->name('create_product');
 
 Route::get('/product/list/{standwith}/{productfor}/{producttype}', [App\Http\Controllers\HomeController::class, 'product_list']);
-Route::get('/{standwithtype}/shop/{productType}/{id}', [App\Http\Controllers\HomeController::class, 'shop'])->name('shop');
+Route::get('/{standwithtype}/shop/{productType}/{slug}', [App\Http\Controllers\HomeController::class, 'shop'])->name('shop');
 Route::post('/register', [App\Http\Controllers\UserController::class, 'register'])->name('register');
 Route::get('/logout', [App\Http\Controllers\UserController::class, 'logout'])->name('logout');
 Route::post('/login', [App\Http\Controllers\UserController::class, 'login'])->name('login');
