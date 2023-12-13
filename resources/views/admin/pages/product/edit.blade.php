@@ -36,10 +36,16 @@
 
           <div class="col-md-12">
             <form method="post" enctype="multipart/form-data" action="{{ url('/admin/products/update/'.$product->id) }}">
+                
                 @csrf
                 <div class="mb-3 mt-3">
                   <label for="product_name">Product Name:</label>
                   <input type="text" value="{{$product->product_name}}" class="form-control" id="product_name" placeholder="Enter Product Name" name="product_name">
+                </div>
+
+                <div class="mb-3 mt-3">
+                  <label for="product_name">Product Price:</label>
+                  <input type="number" value="{{$product->product_price}}" class="form-control" id="product_price" placeholder="Enter Product Price" name="product_price">
                 </div>
 
                 <div class="mb-3 mt-3">
@@ -48,7 +54,7 @@
                 </div>
 
                 <div class="mb-3 mt-3">
-                  <label for="product_name">Commission:</label>
+                  <label for="product_name">Commission (%):</label>
                   <input type="number" value="{{$product->commission}}" class="form-control" id="commission" placeholder="Enter Commission" name="commission">
                 </div>
 

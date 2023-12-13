@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Form;
 use Validator;
 use Auth;
-
+use Illuminate\Support\Str;
 
 class ProductsController extends Controller
 {
@@ -58,6 +58,7 @@ class ProductsController extends Controller
 
         $this->validate($request, [
             'product_name' => 'required',
+            'product_price' => 'required',
             'product_description' => '',
             'commission' => 'required',
             'supporting_country' => 'required',
@@ -104,7 +105,21 @@ class ProductsController extends Controller
         $product->meta_description = $request->input('meta_description');
         $product->meta_keyword = $request->input('meta_keyword');
 
+        $slug = Str::slug($request->input('product_name'));
+        $existingSlug = Products::where('product_slug', $slug)->exists();
+
+        if ($existingSlug) {
+            $counter = 1;
+            do {
+                $newSlug = $slug . '-' . $counter;
+                $existingSlug = Products::where('product_slug', $newSlug)->exists();
+                $counter++;
+            } while ($existingSlug);
+            $slug = $newSlug;
+        }
+
         // Save the product
+        $product->product_slug=$slug;
         $product->save();
         return redirect('/admin/products')->with('success');
     }
@@ -149,6 +164,7 @@ class ProductsController extends Controller
         $product = Products::find($id);
         $this->validate($request, [
             'product_name' => 'required',
+            'product_price' => 'required',
             'product_description' => '',
             'commission' => 'required',
             'supporting_country' => 'required',
@@ -218,7 +234,25 @@ class ProductsController extends Controller
             $product->left_image = $leftImage;
         }
 
+        $slug = Str::slug($request->input('product_name'));
+        $originalSlug = $product->product_slug;
+
+        if ($originalSlug !== $slug) {
+            $existingSlug = Products::where('product_slug', $slug)->exists();
+    
+            if ($existingSlug) {
+                $counter = 1;
+                do {
+                    $newSlug = $slug . '-' . $counter;
+                    $existingSlug = Products::where('product_slug', $newSlug)->exists();
+                    $counter++;
+                } while ($existingSlug);
+                $slug = $newSlug;
+            }
+        }
+
         // Save the product
+        $product->product_slug=$slug;
         $product->update();
         return redirect('/admin/products')->with('success');
     }
