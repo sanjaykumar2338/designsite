@@ -79,6 +79,11 @@
 
                 <div class="prd-right">
                     <div class="flex flex-col gap-2" id="editables"></div>
+
+                    <h1 class="product_title">{{$product->product_name}}</h1>
+                    <p class="desc">{{$product->product_description}}</p>
+                    <br>
+
                     <div class="prd-option">
                         <div id="product-thumbnails">
                             
@@ -134,8 +139,9 @@
                                 <input type="radio" id="L" name="fav_language" value="L" />
                                 <label for="L">L</label>
                             </div>
+                            <br>
                             <div class="prd-opt-four">
-                                <h4>Draw Shapes:</h4>
+                                <h4 class="expand_option" style="cursor:pointer">Click to Draw Shapes:</h4>
                                 <!-- <button
                                                                                                                                                                                                                                                                          class="border rounded-lg p-2 px-3 hover:bg-slate-200"
                                                                                                                                                                                                                                                                          onclick="addLine()"
@@ -160,7 +166,7 @@
                                                                                                                                                                                                                                                                         >
                                                                                                                                                                                                                                                                          Triangle
                                                                                                                                                                                                                                                                         </button> -->
-                                <div class="prd-objects flex flex-wrap">
+                                <div class="prd-objects flex flex-wrap" style="display:none;">
                                     <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
                                         onclick="addObjectImage(`{{ url('/') }}/objects/1-circle-1.svg`)">
                                         <img src="{{ url('/') }}/objects/1-circle-1.svg" width="50px"
@@ -303,7 +309,10 @@
             </div>
         </div>
     </div>
-
+    
+    <div class="crt-prd-main">
+        
+    </div>
 
     <div id="modal" hidden>
         <div class="fixed z-20 overflow-y-auto top-0 w-full left-0">
@@ -514,6 +523,20 @@
             const cents = Math.round(decimalAmount * 100);
             return cents;
         }
+
+        const expand_option = document.querySelector('.expand_option');
+        const prd_objects = document.querySelector('.prd-objects');
+
+        expand_option.addEventListener('click', function() {
+            const computedStyle = window.getComputedStyle(prd_objects);
+            const displayProperty = computedStyle.getPropertyValue('display');
+            
+            if (displayProperty === 'none') {
+                prd_objects.style.display = 'block';
+            } else {
+                prd_objects.style.display = 'none';
+            }
+        });
     </script>
 
 @endsection

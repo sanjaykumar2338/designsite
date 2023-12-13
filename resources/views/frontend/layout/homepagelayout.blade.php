@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CauseStand</title>
+    <title>{{env('APP_NAME')}}</title>
     <!-- stylesheet  -->
     
 
@@ -13,11 +13,11 @@
         <link rel="stylesheet" href="asset/frontend/css/responsive.css">
     -->
 
-    <link rel="stylesheet" href="asset/frontend/css/bootstrap.min.css">
-    <link rel="stylesheet" href="asset/frontend/css/responsive.css">
-    <link rel="stylesheet" href="asset/frontend/css/stylesheet.css">
-    <link rel="stylesheet" href="asset/frontend/css/final-style.css">
-    <link rel="stylesheet" href="asset/frontend/css/final-responsive.css">
+    <link rel="stylesheet" href="{{url('/')}}/asset/frontend/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{url('/')}}/asset/frontend/css/responsive.css">
+    <link rel="stylesheet" href="{{url('/')}}/asset/frontend/css/stylesheet.css">
+    <link rel="stylesheet" href="{{url('/')}}/asset/frontend/css/final-style.css">
+    <link rel="stylesheet" href="{{url('/')}}/asset/frontend/css/final-responsive.css">
 
 
     <!-- font-awesome -->
@@ -86,7 +86,7 @@
     <header class="position-sticky">
         <nav class="navbar navbar-expand-lg ">
             <div class="container">
-                <a class="navbar-brand" href="{{url('/')}}"> <img src="asset/frontend/images/new-logo.jpg" alt="">
+                <a class="navbar-brand" href="{{url('/')}}"> <img src="{{url('/')}}/asset/frontend/images/new-logo.jpg" alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -134,7 +134,7 @@
             <div class="row">
                 <div class="col-md-12 col-lg-3">
                     <div class="fo-one">
-                        <img src="asset/frontend/images/logo-footer.png" alt="">
+                        <img src="{{url('/')}}/asset/frontend/images/logo-footer.png" alt="">
                         <p>Demonstrate your voice, challenge deception, and advocate for accountability.
                         </p>
                         <div class="f-icon">
@@ -211,7 +211,7 @@
 
             <div class="copy-right">
                 <p>© {{date('Y')}} All Rights Reserved | cause stand.</p>
-                <img src="asset/frontend/images/pay.png" alt="">
+                <img src="{{url('/')}}/asset/frontend/images/pay.png" alt="">
             </div>
 
 
@@ -226,7 +226,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
         integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="asset/frontend/js/bootstrap.bundle.min.js"></script>
+    <script src="{{url('/')}}/asset/frontend/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
@@ -270,12 +270,13 @@
             });
         });
 
-        const box3Options = document.querySelectorAll('.men_apparel, .woman_accessories, .accessories');
-
+        var product = '';
+        const box3Options = document.querySelectorAll('.men, .woman, .accessories');
         box3Options.forEach(option => {
-            option.addEventListener('click', () => {
+            option.addEventListener('click', (event) => {
                 box3.style.display = 'none';
                 box4.style.display = 'block';
+                product = event.target.className;
             });
         });
 
@@ -312,11 +313,11 @@
         let product_type = '';
         function typeofproduct(event) {
             const productType = event.target.textContent.toLowerCase().trim();
-            const baseUrl = "{{ url('/') }}";        
-            const finalUrl = `${baseUrl}/${encodeURIComponent(standwithtype)}/shop/${encodeURIComponent(productType)}`;
+            const baseUrl = "{{ url('product/list') }}/"; 
+            const finalUrl = `${baseUrl}${encodeURIComponent(standwithtype)}/${encodeURIComponent(productType)}/${encodeURIComponent(product)}`;
 
-            //window.location.href = finalUrl;
-            window.location.href = "{{ url('/') }}/product_list";
+            window.location.href = finalUrl;
+            //window.location.href = "{{ url('/') }}/product_list";
         }
     </script>
 

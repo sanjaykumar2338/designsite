@@ -16,7 +16,7 @@
         <div class="container">                     
             <div class="row">
                 
-                @if($products)
+                @if($products->count())
                     @foreach($products as $product)
                         <div class="col-lg-3 col-md-6 col-sm-6">
                             <div class="img aos-init aos-animate" data-aos="zoom-in">
@@ -34,6 +34,8 @@
                             </div>
                         </div>
                     @endforeach
+                @else
+                    <p>No Product Found!</p>
                 @endif
             </div>
         </div>

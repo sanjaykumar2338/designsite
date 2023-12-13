@@ -74,8 +74,8 @@
                         <div class="vioce add-bg" id="box-3">
                             <h4>Shop Subcategory</h4>
                             <ul>
-                                <li class="men_apparel">Men's Apparel</li>
-                                <li class="woman_accessories">Weman's Apparel</li>
+                                <li class="men">Men's Apparel</li>
+                                <li class="woman">Weman's Apparel</li>
                                 <li class="accessories">Accessories</li>
                             </ul>
                         </div>

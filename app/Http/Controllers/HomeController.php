@@ -152,9 +152,14 @@ class HomeController extends Controller
         return view('frontend.pages.create_product')->with('product', $product);
     }
 
-    public function product_list(){
-        $products = Products::get();
-        //echo "<pre> ggg"; print_r($products); die;
+    public function product_list(Request $request, $standwith, $productfor, $producttype){
+        //echo "<pre>"; print_r(explode('-',$standwith)[2]); die;
+        $standwith = @ucfirst(explode('-',$standwith)[2]);
+        $productfor = @ucfirst($productfor);
+        $producttype = @ucfirst($producttype);
+
+        //echo $producttype; die;
+        $products = Products::where(['supporting_country'=>$standwith,'product_for'=>$producttype,'product_type'=>$productfor])->get();
         return view('frontend.pages.product_list')->with('products', $products);
     }
 }

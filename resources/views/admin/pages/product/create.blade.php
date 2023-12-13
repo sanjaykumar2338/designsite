@@ -70,7 +70,7 @@
                 </div>
 
                 <div class="mb-3 mt-3">
-                  <label for="title">Product For:</label>
+                  <label for="title">Product Category:</label>
                   <select class="form-control" id="product_for" name="product_for">
                     <option value="">Select</option>
                     <option value="Men">Men</option>
@@ -90,7 +90,7 @@
                   </select>
                 </div>
 
-                <div class="mb-3 mt-3">
+                <div class="mb-3 mt-3" style="display:none">
                   <label for="title">Product Sub Type:</label>
                   <select class="form-control" id="product_sub_type" name="product_sub_type">
                     <option value="">Select</option>
