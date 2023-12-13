@@ -119,7 +119,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('aboutus')}}">About Us</a>
                         </li>
-                        <button class="donate" onclick='location.href ="{{route('donate_now')}}";'>DONATE NOW</button>
+                        <button hidden class="donate" onclick='location.href ="{{route('donate_now')}}";'>DONATE NOW</button>
                     </ul>
                 </div>
             </div>
