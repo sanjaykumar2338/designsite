@@ -4,7 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
+use App\Models\User;
+use App\Models\Payment;
 class AdminController extends Controller{
     
     public function __construct()
@@ -16,7 +17,13 @@ class AdminController extends Controller{
         return view('admin.pages.dashboard')->with('activeLink','dashboard');
     }
 
-    public function logout(){
-        return redirect('/');
+    public function order(){
+        $orders = Payment::join('users','users.id','=','payments.user_id')->select('payments.*','users.name')->get();
+        return view('admin.pages.order.index')->with('orders',$orders)->with('activeLink','order');
+    }
+
+    public function customer(){
+        $customers = User::all();
+        return view('admin.pages.user.index')->with('customers',$customers)->with('activeLink','customer');
     }
 }

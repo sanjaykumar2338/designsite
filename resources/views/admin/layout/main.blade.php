@@ -59,32 +59,39 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link {{$activeLink=='dashboard'?'active':''}}">
+            <a href="{{url('/')}}/admin" class="nav-link {{$activeLink=='dashboard'?'active':''}}">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
-                <i class="right fas fa-angle-left"></i>
+                <i class="right fas"></i>
               </p>
             </a>            
           </li>        
           
           <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-solid fa-list"></i>
+            <a href="{{url('/admin/customer')}}" class="nav-link {{$activeLink=='customer'?'active':''}}">
+              <i class="nav-icon fas fa-solid fa-user"></i>
+              <p>
+                Users
+              </p>
+            </a>
+
+            <a href="{{url('/admin/order')}}" class="nav-link {{$activeLink=='order'?'active':''}}">
+              <i class="nav-icon fas fa-shopping-bag"></i>
               <p>
                 Orders
               </p>
             </a>
 
             <a href="{{url('/admin/products')}}" class="nav-link {{$activeLink=='product'?'active':''}}">
-              <i class="nav-icon fas fa-solid fa-list"></i>
+              <i class="nav-icon fas fa-solid fa-box"></i>
               <p>
                 Products
               </p>
             </a>
 
             <a href="{{url('/logout')}}" class="nav-link">
-              <i class="nav-icon fas fa-solid fa-list"></i>
+              <i class="nav-icon fas fa-sign-out-alt"></i>
               <p>
                 Logout
               </p>

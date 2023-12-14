@@ -28,6 +28,8 @@ Route::group(['prefix' => 'admin','middleware' => 'check.auth'], function () {
     Route::get('/products/remove/{id}', [ProductsController::class, 'destroy']);
     Route::get('products/{product}', 'ProductsController@show');
     Route::get('photos/create/{id}', 'PhotoController@create');
+    Route::get('/order', [AdminController::class, 'order']);
+    Route::get('/customer', [AdminController::class, 'customer']);
 });
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

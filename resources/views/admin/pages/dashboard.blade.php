@@ -6,12 +6,12 @@
   <div class="container-fluid">
     <div class="row mb-2">
       <div class="col-sm-6">
-        <h1 class="m-0 text-dark">Dashboard</h1>
+        <h1 class="m-0 text-dark"><a href="{{url('/')}}/admin">Dashboard</a></h1>
       </div><!-- /.col -->
       <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
-          <li class="breadcrumb-item"><a href="#">Home</a></li>
-          <li class="breadcrumb-item active">Dashboard v1</li>
+          <li class="breadcrumb-item"><a href="{{url('/')}}/admin">Home</a></li>
+          <li class="breadcrumb-item active">Dashboard</li>
         </ol>
       </div><!-- /.col -->
     </div><!-- /.row -->
@@ -27,9 +27,8 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>150</h3>
-
-                <p>New Orders</p>
+                <h3>{{App\Models\User::count()}}</h3>
+                <p>Users</p>
               </div>
               <div class="icon">
                 <i class="ion ion-bag"></i>
@@ -42,9 +41,8 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>53<sup style="font-size: 20px">%</sup></h3>
-
-                <p>Bounce Rate</p>
+                <h3>{{App\Models\Payment::count()}}</h3>
+                <p>Orders</p>
               </div>
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
@@ -57,34 +55,16 @@
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3>44</h3>
-
-                <p>User Registrations</p>
+                <h3>{{App\Models\Products::count()}}</h3>
+                <p>Products</p>
               </div>
               <div class="icon">
                 <i class="ion ion-person-add"></i>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="{{url('/')}}/admin/products" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-danger">
-              <div class="inner">
-                <h3>65</h3>
-
-                <p>Unique Visitors</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-pie-graph"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
         </div>
-        
       </div><!-- /.container-fluid -->
 </section>
 @endsection
