@@ -24,7 +24,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('frontend.pages.home');
+        $products = Products::select('product_type', \DB::raw('MAX(id) as max_id'), \DB::raw('MAX(front_image) as max_front_image'))
+        ->groupBy('product_type')
+        ->get();
+        //echo "<pre>"; print_r($products); die;
+        return view('frontend.pages.home')->with('products',$products);
     }
 
     public function contactus()
@@ -153,6 +157,17 @@ class HomeController extends Controller
     }
 
     public function product_list(Request $request, $standwith, $productfor, $producttype){
+        //echo "<pre>"; print_r(explode('-',$standwith)[2]); die;
+        $standwith = @ucfirst(explode('-',$standwith)[2]);
+        $productfor = @ucfirst($productfor);
+        $producttype = @ucfirst($producttype);
+
+        //echo $producttype; die;
+        $products = Products::where(['supporting_country'=>$standwith,'product_for'=>$producttype,'product_type'=>$productfor])->get();
+        return view('frontend.pages.product_list')->with('products', $products);
+    }
+
+    public function product_category(Request $request, $catgory){
         //echo "<pre>"; print_r(explode('-',$standwith)[2]); die;
         $standwith = @ucfirst(explode('-',$standwith)[2]);
         $productfor = @ucfirst($productfor);

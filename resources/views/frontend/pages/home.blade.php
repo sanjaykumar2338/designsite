@@ -108,70 +108,34 @@
         </div>
     </section>
 
+    @if(count($products) > 0)
+        <section class="Products">
+            <div class="container">
+                <h3> Apparel </h3>
+                <p>Express your support for a cause and stand in the face of injustice by adding images that resonate with your values into your apparel. Shop to donate and make a difference.
+                </p>
 
-<section class="Products">
-        <div class="container">
-            <h3> Apparel </h3>
-            <p>Express your support for a cause and stand in the face of injustice by adding images that resonate with your values into your apparel. Shop to donate and make a difference.
-            </p>
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="img aos-init aos-animate" data-aos="zoom-in">
-                        <img src="asset/frontend/images/p-1.jpg" alt="">
-                        <div class="text-one">
-                            <span>$ 13.40</span>
+                <div class="row">
+                    @foreach($products as $product)
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="img aos-init aos-animate" data-aos="zoom-in">
+                                <img src="{{fileToUrl($product->max_front_image)}}" alt="">
+                                <div class="text-one" hidden>
+                                    <span></span>
+                                </div>
+                                <div class="text-two">
+                                    <h4>{{$product->product_type}}</h4>
+                                    <a class="buy_now">View All</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="text-two">
-                            <h4>Shirts</h4>
-                             <button class="buy_now"> buy now</button>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="img aos-init aos-animate" data-aos="zoom-in">
-                        <img src="asset/frontend/images/p-2.jpg" alt="">
-                        <div class="text-one">
-                            <span>$ 13.40</span>
-                        </div>
-                        <div class="text-two">
-                            <h4>Hoodies</h4>
-                             <button class="buy_now"> buy now</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="img aos-init aos-animate" data-aos="zoom-in">
-                        <img src="asset/frontend/images/p-3.jpg" alt="">
-                        <div class="text-one">
-                            <span>$ 13.40</span>
-                        </div>
-                        <div class="text-two">
-                            <h4>Sweatshirts</h4>
-                             <button class="buy_now"> buy now</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="img aos-init aos-animate" data-aos="zoom-in">
-                        <img src="asset/frontend/images/p-3.jpg" alt="">
-                        <div class="text-one">
-                            <span>$ 13.40</span>
-                        </div>
-                        <div class="text-two">
-                            <h4>Bottom</h4>
-                             <button class="buy_now"> buy now</button>
-                        </div>
-                    </div>
-                </div>
-
-
-
             </div>
-        </div>
-    </section>
+        </section>
+    @endif
 
     <!-- ========== End Apparel ========== -->
-
     <section class="Products-3 bg-img">
         <div class="container">
             <h3> Accessories </h3>

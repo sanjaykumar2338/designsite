@@ -37,6 +37,7 @@
   .buy_now:hover {
     background-color: var(--btn-color);
     border: 2px solid var(--btn-color);
+    cursor: pointer;
   }
 
   /***** top-bar *****/
