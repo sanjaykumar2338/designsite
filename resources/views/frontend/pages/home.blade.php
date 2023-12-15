@@ -125,7 +125,7 @@
                                 </div>
                                 <div class="text-two">
                                     <h4>{{$product->product_type}}</h4>
-                                    <a class="buy_now">View All</a>
+                                    <a class="buy_now" href="{{url('/product/category/')}}/{{strtolower($product->product_type)}}">View All</a>
                                 </div>
                             </div>
                         </div>

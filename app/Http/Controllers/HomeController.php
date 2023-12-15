@@ -167,14 +167,9 @@ class HomeController extends Controller
         return view('frontend.pages.product_list')->with('products', $products);
     }
 
-    public function product_category(Request $request, $catgory){
-        //echo "<pre>"; print_r(explode('-',$standwith)[2]); die;
-        $standwith = @ucfirst(explode('-',$standwith)[2]);
-        $productfor = @ucfirst($productfor);
-        $producttype = @ucfirst($producttype);
-
-        //echo $producttype; die;
-        $products = Products::where(['supporting_country'=>$standwith,'product_for'=>$producttype,'product_type'=>$productfor])->get();
+    public function product_category(Request $request, $category){        
+        $producttype = @ucfirst($category);
+        $products = Products::where(['product_type'=>$producttype])->get();
         return view('frontend.pages.product_list')->with('products', $products);
     }
 }
