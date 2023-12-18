@@ -543,6 +543,13 @@ async function placeOrder() {
                 }))
                 .filter((v) => v.thumbnail_url);
             console.log(files);
+            if (!files.length) {
+                Toastify({
+                    text: "Please customize the product!",
+                    className: "warn",
+                }).showToast();
+                return;
+            }
             createProduct(files);
         }
     } catch (error) {
