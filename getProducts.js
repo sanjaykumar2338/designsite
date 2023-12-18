@@ -40,6 +40,7 @@ class Product {
                     return v.title === this.productName;
                 });
                 this.product = product;
+                // console.log(product.id);
                 this.getVariants(product.id);
             })
             .catch((error) => console.log("error", error));
@@ -171,9 +172,10 @@ class Product {
             .then(async (response) => {
                 const json = await response.json();
                 const images = json.data.images.filter((i) => {
-                    return (
-                        i.option_group === "Ghost" || i.option_group === "Men's"
-                    );
+                    return true;
+                    // return (
+                    //     i.option_group === "Ghost" || i.option_group === "Men's"
+                    // );
                 });
                 const data = {
                     productName: this.productName,
@@ -192,40 +194,60 @@ class Product {
 
 const products = [
     //Mens T-Shirts
-    // new Product(1, "Unisex Performance Crew Neck T-Shirt | A4 N3142"),
-    // new Product(1, "Unisex Tri-Blend T-Shirt | Bella + Canvas 3413"),
-    // new Product(1, "Unisex V-Neck Tee | Bella + Canvas 3005"),
-    // new Product(1, "Men's Premium Heavyweight Tee | Cotton Heritage MC1086"),
-    // new Product(1, "Unisex Long Sleeve Tee | Bella + Canvas 3501"),
-    // new Product(1, "Unisex Muscle Shirt | Bella + Canvas 3483"),
-    // new Product(1, "Premium Polo Shirt | Port Authority K500", true),
+    // {cid:1, name: "Unisex Performance Crew Neck T-Shirt | A4 N3142"},
+    // {cid:1, name: "Unisex Tri-Blend T-Shirt | Bella + Canvas 3413"},
+    // {cid:1, name: "Unisex V-Neck Tee | Bella + Canvas 3005"},
+    // {cid:1, name: "Men's Premium Heavyweight Tee | Cotton Heritage MC1086"},
+    // {cid:1, name: "Unisex Long Sleeve Tee | Bella + Canvas 3501"},
+    // {cid:1, name: "Unisex Muscle Shirt | Bella + Canvas 3483"},
+    // {cid:1, name: "Premium Polo Shirt | Port Authority K500"},
     // Mens Hoodies
-    // new Product(9, "Unisex Heavy Blend Hoodie | Gildan 18500"),
-    // new Product(9, "Unisex Pullover Hoodie | Bella + Canvas 3719"),
-    // new Product(9, "Unisex Lightweight Zip Hoodie | Bella + Canvas 3939"),
-    // new Product(9, "Unisex Heavy Blend Zip Hoodie | Gildan 18600"),
+    // {cid:9, name: "Unisex Heavy Blend Hoodie | Gildan 18500"},
+    // {cid:9, name: "Unisex Pullover Hoodie | Bella + Canvas 3719"},
+    // {cid:9, name: "Unisex Lightweight Zip Hoodie | Bella + Canvas 3939"},
+    // {cid:9, name: "Unisex Heavy Blend Zip Hoodie | Gildan 18600"},
     // mens Sweatshirts
-    // new Product(9, "Unisex Premium Sweatshirt | Cotton Heritage M2480"),
-    // new Product(9, "Unisex Fleece Pullover | Cotton Heritage M2475"),
+    // {cid:9, name: "Unisex Premium Sweatshirt | Cotton Heritage M2480"},
+    // {cid:9, name: "Unisex Fleece Pullover | Cotton Heritage M2475"},
     // mena Bottoms
-    new Product(106, "Unisex Fleece Sweatpants | Cotton Heritage M7580"),
-    new Product(
-        106,
-        "Unisex Pigment-Dyed Sweatpants | Independent Trading Co. PRM50PTPD"
-    ),
+    // {cid:10 name:6, "Unisex Fleece Sweatpants | Cotton Heritage M7580"},
+    // {cid:10 name:6, "Unisex Pigment-Dyed Sweatpants | Independent Trading Co. PRM50PTPD"},
     // womans t-shirt
-    // new Product(2, "Women's Relaxed T-Shirt | Bella + Canvas 6400"),
-    // new Product(2, "Women's Fashion Fit T-Shirt | Gildan 880"),
-    // new Product(2, "Women's High-Waisted Tee | Cotton Heritage OW1086"),
-    // new Product(2, "Women's Recycled V-Neck T-Shirt | District DT8001"),
-    // new Product(2, "Unisex Long Sleeve Tee | Bella + Canvas 3501"),
-    // new Product(2, "Unisex Hooded Long Sleeve Tee | Bella Canvas 3512"),
-    // new Product(2, "Women's Muscle Tank | Bella + Canvas 8803"),
-    // new Product(2, "Women's Pique Polo Shirt | Gildan 64800L"),
+    // {cid:2, name: "Women's Relaxed T-Shirt | Bella + Canvas 6400"},
+    // {cid:2, name: "Women's Fashion Fit T-Shirt | Gildan 880"},
+    // {cid:2, name: "Women's High-Waisted Tee | Cotton Heritage OW1086"},
+    // {cid:2, name: "Women's Recycled V-Neck T-Shirt | District DT8001"},
+    // {cid:2, name: "Unisex Long Sleeve Tee | Bella + Canvas 3501"},
+    // {cid:2, name: "Unisex Hooded Long Sleeve Tee | Bella Canvas 3512"},
+    // {cid:2, name: "Women's Muscle Tank | Bella + Canvas 8803"},
+    // {cid:2, name: "Women's Pique Polo Shirt | Gildan 64800L"},
 
     // womans Hoodies
-    // new Product(2, "Unisex Premium Hoodie | Cotton Heritage M2580"),
-    // new Product(2, "Unisex Heavy Blend Hoodie | Gildan 18500"),
-    // new Product(2, "Women's Cropped Hoodie | Bella + Canvas 7502"),
-    // new Product(2, "Unisex Lightweight Zip Hoodie | Bella + Canvas 3939"),
+    // {cid:2, name: "Unisex Premium Hoodie | Cotton Heritage M2580"},
+    // {cid:2, name: "Unisex Heavy Blend Hoodie | Gildan 18500"},
+    // {cid:2, name: "Women's Cropped Hoodie | Bella + Canvas 7502"},
+    // {cid:2, name: "Unisex Lightweight Zip Hoodie | Bella + Canvas 3939"},
+
+    // hats
+    // {cid:15 name:, "Classic Snapback | Yupoong 6089M"},
+    // {cid:15 name:, "Snapback | Otto Cap 125-978"},
+    // {cid:15 name:, "5 Panel Cap | Yupoong 7005"},
+
+    // accessories
+    { cid: 4, name: "All-Over Print Tote" },
+    { cid: 4, name: "All-Over Print Minimalist Backpack" },
+    // { cid: 4, name: "Embroidered Simple Backpack I BagBase BG126" },
+    { cid: 4, name: "Men's High Top Canvas Shoes" },
+    { cid: 4, name: "Women's High Top Canvas Shoes" },
+    { cid: 4, name: "Men's Slip-On Canvas Shoes" },
+    { cid: 4, name: "Women's Slip-On Canvas Shoes" },
+    { cid: 4, name: "Women's Lace-Up Canvas Shoes" },
+    { cid: 4, name: "Men's Slides" },
+    { cid: 4, name: "Women's Slides" },
 ];
+
+products.forEach((p, i) => {
+    setTimeout(() => {
+        new Product(p.cid, p.name);
+    }, 3000 * i);
+});
