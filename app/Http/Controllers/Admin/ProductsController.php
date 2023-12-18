@@ -75,7 +75,11 @@ class ProductsController extends Controller
             'left_image' => 'required|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
             'seo_title' => '',
             'meta_description' => '',
-            'meta_keyword' => ''
+            'meta_keyword' => '',
+            'product_x_axis' => '',
+            'product_y_axis' => '',
+            'product_width' => '',
+            'product_height' => ''
         ]);
 
         // Handle image uploads
@@ -87,6 +91,7 @@ class ProductsController extends Controller
         // Save data to the database
         $product = new Products();
         $product->product_name = $request->input('product_name');
+        $product->product_price = $request->input('product_price');
         $product->product_description = $request->input('product_description');
         $product->commission = $request->input('commission');
         $product->supporting_country = $request->input('supporting_country');
@@ -104,6 +109,10 @@ class ProductsController extends Controller
         $product->seo_title = $request->input('seo_title');
         $product->meta_description = $request->input('meta_description');
         $product->meta_keyword = $request->input('meta_keyword');
+        $product->product_x_axis = $request->input('product_x_axis');
+        $product->product_y_axis = $request->input('product_y_axis');
+        $product->product_width = $request->input('product_width');
+        $product->product_height = $request->input('product_height');
 
         $slug = Str::slug($request->input('product_name'));
         $existingSlug = Products::where('product_slug', $slug)->exists();
@@ -160,7 +169,7 @@ class ProductsController extends Controller
      */
     public function update(Request $request, $id)
     {
-
+        //echo "<pre>"; print_r($request->all()); die;
         $product = Products::find($id);
         $this->validate($request, [
             'product_name' => 'required',
@@ -181,7 +190,11 @@ class ProductsController extends Controller
             'left_image' => 'image|mimes:jpeg,png,jpg,gif,webp|max:2048',
             'seo_title' => '',
             'meta_description' => '',
-            'meta_keyword' => ''
+            'meta_keyword' => '',
+            'product_x_axis' => '',
+            'product_y_axis' => '',
+            'product_width' => '',
+            'product_height' => ''
         ]);
 
         // Handle image uploads
@@ -204,6 +217,7 @@ class ProductsController extends Controller
 
         // Save data to the database          
         $product->product_name = $request->input('product_name');
+        $product->product_price = $request->input('product_price');
         $product->product_description = $request->input('product_description');
         $product->commission = $request->input('commission');
         $product->supporting_country = $request->input('supporting_country');
@@ -217,6 +231,10 @@ class ProductsController extends Controller
         $product->front_image_donation = $request->input('front_image_donation');
         $product->back_image_price = $request->input('back_image_price');
         $product->back_image_donation = $request->input('back_image_donation');
+        $product->product_x_axis = $request->input('product_x_axis');
+        $product->product_y_axis = $request->input('product_y_axis');
+        $product->product_width = $request->input('product_width');
+        $product->product_height = $request->input('product_height');
 
         if ($request->file('front_image')) {
             $product->front_image = $frontImage;

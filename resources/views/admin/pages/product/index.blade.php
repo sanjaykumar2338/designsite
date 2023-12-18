@@ -54,18 +54,22 @@
                                     <table class="table table-hover">
                                         <thead>
                                         <tr>
-                                            <th class="col-sm-4 col-md-4">Product</th>
+                                            <th class="col-sm-2 col-md-2">Product</th>
 
-                                            <th class="col-sm-4 col-md-4">Commission</th>
+                                            <th class="col-sm-2 col-md-2">Commission</th>
 
-                                            <th class="col-sm-4 col-md-4"  style="text-align: center">Action</th>
+                                            <th class="col-sm-2 col-md-2">Price</th>
+
+                                            <th class="col-sm-1 col-md-1">Country</th>
+
+                                            <th class="col-sm-3 col-md-3"  style="text-align: right;">Action</th>
                                         </tr>
                                         </thead>
                                         <tbody>
 
                                         <tr>
 
-                                            <td class="col-sm-4 col-md-4">
+                                            <td class="col-sm-2 col-md-2">
 
                                                 <div class="media">
                                                     <div class="media-body">
@@ -76,8 +80,11 @@
 
                                                 </div>
                                             </td>
-                                            <td class="col-sm-4 col-md-4"><strong>  {{$product->commission}}$</strong></td>
-                                            <td class="col-sm-4 col-md-4" style="text-align: right">
+
+                                            <th class="col-sm-2 col-md-2"> {{$product->commission}}$</th>
+                                            <td class="col-sm-2 col-md-2"><strong>  {{$product->product_price}}$</strong></td>
+                                            <td class="col-sm-1 col-md-1"><strong>  {{$product->supporting_country}}</strong></td>
+                                            <td class="col-sm-3 col-md-3" style="text-align: right">
                                               <a href="/admin/products/remove/{{$product->id}}" class="btn btn-danger">Remove</a>
                                               <a href="/admin/products/{{$product->id}}/edit" class="btn btn-primary">EDIT</a>
                                               <a href="/admin/products/create_template/{{$product->id}}" class="btn btn-primary">Design Templates</a>

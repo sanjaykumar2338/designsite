@@ -106,7 +106,7 @@ class HomeController extends Controller
         if (auth()->user()->email == 'admin@gmail.com') {
             return redirect('admin');
         } else {
-            return view('frontend.pages.my_account');
+            return view('frontend.pages.my_account')->with('activeLink','home');
         }
     }
 

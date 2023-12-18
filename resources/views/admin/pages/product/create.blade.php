@@ -162,6 +162,11 @@
                   <textarea class="form-control" name="meta_keyword"></textarea>
                 </div>
 
+                <label for="title">Product Diemsion:</label>
+                <div class="mb-3" style="display: flex;width: 1143px;">
+                  <input type="text" class="form-control" placeholder="Product X-axis" name="product_x_axis">&nbsp;&nbsp;<input type="text" class="form-control" placeholder="Product Y-axis" name="product_y_axis">&nbsp;&nbsp;<input type="text" class="form-control" placeholder="Product Width" name="product_width">&nbsp;&nbsp;<input type="text" class="form-control" placeholder="Product Height" name="product_height">
+                </div>
+
                 <button type="submit" class="btn btn-primary">Create</button>
               </form>
           </div>
