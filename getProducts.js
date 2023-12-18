@@ -172,8 +172,7 @@ class Product {
                 const json = await response.json();
                 const images = json.data.images.filter((i) => {
                     return (
-                        i.option_group === "Ghost" ||
-                        i.option_group === "Women's"
+                        i.option_group === "Ghost" || i.option_group === "Men's"
                     );
                 });
                 const data = {
@@ -209,11 +208,11 @@ const products = [
     // new Product(9, "Unisex Premium Sweatshirt | Cotton Heritage M2480"),
     // new Product(9, "Unisex Fleece Pullover | Cotton Heritage M2475"),
     // mena Bottoms
-    // new Product(106, "Unisex Fleece Sweatpants | Cotton Heritage M7580"),
-    // new Product(
-    //     106,
-    //     "Unisex Pigment-Dyed Sweatpants | Independent Trading Co. PRM50PTPD"
-    // ),
+    new Product(106, "Unisex Fleece Sweatpants | Cotton Heritage M7580"),
+    new Product(
+        106,
+        "Unisex Pigment-Dyed Sweatpants | Independent Trading Co. PRM50PTPD"
+    ),
     // womans t-shirt
     // new Product(2, "Women's Relaxed T-Shirt | Bella + Canvas 6400"),
     // new Product(2, "Women's Fashion Fit T-Shirt | Gildan 880"),
@@ -225,8 +224,8 @@ const products = [
     // new Product(2, "Women's Pique Polo Shirt | Gildan 64800L"),
 
     // womans Hoodies
-    new Product(2, "Unisex Premium Hoodie | Cotton Heritage M2580"),
-    new Product(2, "Unisex Heavy Blend Hoodie | Gildan 18500"),
-    new Product(2, "Women's Cropped Hoodie | Bella + Canvas 7502"),
-    new Product(2, "Unisex Lightweight Zip Hoodie | Bella + Canvas 3939"),
+    // new Product(2, "Unisex Premium Hoodie | Cotton Heritage M2580"),
+    // new Product(2, "Unisex Heavy Blend Hoodie | Gildan 18500"),
+    // new Product(2, "Women's Cropped Hoodie | Bella + Canvas 7502"),
+    // new Product(2, "Unisex Lightweight Zip Hoodie | Bella + Canvas 3939"),
 ];
