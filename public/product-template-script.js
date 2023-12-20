@@ -148,6 +148,7 @@ function init() {
     ).id;
     console.log(selected_variant, "selected_variant");
     product = JSON.parse(getEl("data").innerText);
+    debugger;
     setProductImages();
     setShowCanvas(elements.canvas_front, true);
     setProductColoursUI();

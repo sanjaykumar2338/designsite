@@ -30,3 +30,5 @@ Route::post('/calculateShippingRate', [FileController::class, 'calculateShipping
 Route::post('/store_template', [ProductsController::class, 'store_template']);
 Route::get('/get_template', [ProductsController::class, 'get_template']);
 Route::post('/update_template/{id}', [ProductsController::class, 'updateApi']);
+
+Route::post('/storeViaApi', [ProductsController::class, 'storeViaApi']);

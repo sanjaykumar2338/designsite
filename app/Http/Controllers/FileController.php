@@ -33,6 +33,9 @@ class FileController extends Controller
         // return $uploadedFileUrl;
 
         $file = $request->file('file')->store('public/images');
+        if ($request->getDbUrl == "true") {
+            return $file;
+        }
         return fileToUrl($file);
         // $uploadedFile = $request->file('file');
 
@@ -159,7 +162,6 @@ class FileController extends Controller
 
         curl_close($curl);
         return $response;
-
     }
 
     public function createOrder(Request $request)
@@ -192,7 +194,6 @@ class FileController extends Controller
 
         curl_close($curl);
         return $response;
-
     }
 
     public function updateOrder(Request $request, string $id)
@@ -226,7 +227,6 @@ class FileController extends Controller
 
         curl_close($curl);
         return $response;
-
     }
     /**
      * Display the specified resource.

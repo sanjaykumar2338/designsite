@@ -719,6 +719,7 @@ function createProduct(files) {
         headers: myHeaders,
         redirect: "follow",
     };
+
     fetch("/api/createProduct", requestOptions)
         .then((response) => response.text())
         .then((result) => {
@@ -734,6 +735,9 @@ function createProduct(files) {
             console.log("error", error);
             setIsLoading(false);
         });
+    return new Promise((re, rej) => {
+        resolve();
+    });
 }
 function getProduct(id) {
     var myHeaders = new Headers();

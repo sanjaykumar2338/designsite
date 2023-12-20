@@ -128,7 +128,7 @@ class ProductsController extends Controller
         }
 
         // Save the product
-        $product->product_slug=$slug;
+        $product->product_slug = $slug;
         $product->save();
         return redirect('/admin/products')->with('success');
     }
@@ -156,8 +156,6 @@ class ProductsController extends Controller
 
         //echo "<pre>"; print_r($product); die;
         return view('admin.pages.product.edit')->with('product', $product)->with('activeLink', 'product');
-
-
     }
 
     /**
@@ -257,7 +255,7 @@ class ProductsController extends Controller
 
         if ($originalSlug !== $slug) {
             $existingSlug = Products::where('product_slug', $slug)->exists();
-    
+
             if ($existingSlug) {
                 $counter = 1;
                 do {
@@ -270,7 +268,7 @@ class ProductsController extends Controller
         }
 
         // Save the product
-        $product->product_slug=$slug;
+        $product->product_slug = $slug;
         $product->update();
         return redirect('/admin/products')->with('success');
     }
@@ -297,9 +295,6 @@ class ProductsController extends Controller
 
 
         return redirect('/admin/products')->with('delete', ' ');
-
-
-
     }
 
     //FRONTEND CONTROL -  ANY PRODUCT SHOW LIST, AND  INDIVIDUAL PRODUCT VIEW
@@ -309,7 +304,6 @@ class ProductsController extends Controller
         $products = Products::paginate(4);
 
         return view('products.product_show')->with('products', $products);
-
     }
     public function product_view(Products $product)
     {
@@ -326,7 +320,6 @@ class ProductsController extends Controller
         $product->left_image = fileToUrl($product->left_image);
         $product->right_image = fileToUrl($product->right_image);
         return view('admin.pages.product.createTemplate')->with('product', $product);
-
     }
 
     public function store_template(Request $request)
@@ -372,7 +365,7 @@ class ProductsController extends Controller
         // return $product;
         return
             response($product)
-                ->header('Content-Type', 'text/json');
+            ->header('Content-Type', 'text/json');
     }
 
     public function get_template(Request $request)
@@ -384,7 +377,7 @@ class ProductsController extends Controller
         $product->right_image = fileToUrl($product->right_image);
         return
             response($product)
-                ->header('Content-Type', 'text/json');
+            ->header('Content-Type', 'text/json');
     }
 
     public function updateApi(Request $request, $id)
@@ -424,7 +417,98 @@ class ProductsController extends Controller
         $product->update();
         return
             response($product)
-                ->header('Content-Type', 'text/json');
+            ->header('Content-Type', 'text/json');
     }
 
+    public function storeViaApi(Request $request)
+    {
+
+        try {
+            $_request = json_decode($request->getContent());
+
+            // $this->validate($request, [
+            //     'product_name' => 'required',
+            //     'product_price' => 'required',
+            //     'product_description' => '',
+            //     'commission' => 'required',
+            //     'supporting_country' => '',
+            //     'product_for' => 'required',
+            //     'product_type' => 'required',
+            //     'product_sub_type' => '',
+            //     'front_image' => '',
+            //     'front_image_price' => 'required',
+            //     'front_image_donation' => '',
+            //     'back_image' => '',
+            //     'back_image_price' => 'required',
+            //     'back_image_donation' => '',
+            //     'right_image' => '',
+            //     'left_image' => '',
+            //     'seo_title' => '',
+            //     'meta_description' => '',
+            //     'meta_keyword' => '',
+            //     'product_x_axis' => '',
+            //     'product_y_axis' => '',
+            //     'product_width' => '',
+            //     'product_height' => ''
+            // ]);
+
+            // Handle image uploads
+            // $frontImage = $request->file('front_image')->store('public/images');
+            // $backImage = $request->file('back_image')->store('public/images');
+            // $rightImage = $request->file('right_image')->store('public/images');
+            // $leftImage = $request->file('left_image')->store('public/images');
+
+            // Save data to the database
+            $product = new Products();
+            $product->product_name = $_request->product_name;
+            $product->product_price = $_request->product_price;
+            $product->product_description = $_request->product_description;
+            $product->commission = $_request->commission;
+            $product->supporting_country = $_request->supporting_country;
+            $product->product_for = $_request->product_for;
+            $product->product_type = $_request->product_type;
+            $product->product_sub_type = $_request->product_sub_type;
+            $product->front_image = $_request->front_image;
+            $product->front_image_price = $_request->front_image_price;
+            $product->front_image_donation = $_request->front_image_donation;
+            $product->back_image = $_request->back_image;
+            $product->back_image_price = $_request->back_image_price;
+            $product->back_image_donation = $_request->back_image_donation;
+            $product->right_image = $_request->right_image;
+            $product->left_image = $_request->left_image;
+            $product->seo_title = $_request->seo_title;
+            $product->meta_description = $_request->meta_description;
+            $product->meta_keyword = $_request->meta_keyword;
+            $product->product_x_axis = $_request->product_x_axis;
+            $product->product_y_axis = $_request->product_y_axis;
+            $product->product_width = $_request->product_width;
+            $product->product_height = $_request->product_height;
+            $slug = Str::slug($_request->product_name);
+            $existingSlug = Products::where('product_slug', $slug)->exists();
+
+            if ($existingSlug) {
+                $counter = 1;
+                do {
+                    $newSlug = $slug . '-' . $counter;
+                    $existingSlug = Products::where('product_slug', $newSlug)->exists();
+                    $counter++;
+                } while ($existingSlug);
+                $slug = $newSlug;
+            }
+
+            // Save the product
+            $product->product_slug = $slug;
+            $product->save();
+            return response($product)
+                ->header('Content-Type', 'text/json');
+        } catch (\Exception $e) {
+            // Handling the exception
+            return response()->json([
+                'error' => [
+                    'message' => $e->getMessage(), // Retrieve the error message
+                    'code' => $e->getCode(), // Retrieve the error code
+                ]
+            ], 500); // Internal Server Error status code
+        }
+    }
 }
