@@ -234,8 +234,9 @@ class HomeController extends Controller
                 if (strpos($imageUrl, 'https://files.cdn.printful.com/') === 0) {
                     $image = Http::get($imageUrl);
                     if ($image->successful()) {
-                        $imagePath = 'public/images/' . basename($imageUrl);
-                        Storage::put($imagePath, $image);
+                        $img = explode('?', $imageUrl)[0];
+                        $imagePath = 'public/images/' . basename($img);
+                        Storage::put($imagePath, $img);
 
                         // Update the column in the database with the new image path
                         $product->{$column} = $imagePath;
