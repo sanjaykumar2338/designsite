@@ -174,6 +174,35 @@ class HomeController extends Controller
         return view('frontend.pages.product_list')->with('products', $products);
     }
 
+    public function updateEmptyImageColumns()
+    {
+        // Find all products where any image column contains 'public/images/images'
+        $products = Product::where('front_image', 'public/images/images')
+            ->orWhere('back_image', 'public/images/images')
+            ->orWhere('right_image', 'public/images/images')
+            ->orWhere('left_image', 'public/images/images')
+            ->get();
+
+        foreach ($products as $product) {
+            // Update each column if it matches 'public/images/images'
+            if ($product->front_image === 'public/images/images') {
+                $product->front_image = '';
+            }
+            if ($product->back_image === 'public/images/images') {
+                $product->back_image = '';
+            }
+            if ($product->right_image === 'public/images/images') {
+                $product->right_image = '';
+            }
+            if ($product->left_image === 'public/images/images') {
+                $product->left_image = '';
+            }
+
+            // Save the updated product
+            $product->save();
+        }
+    }
+
     public function updateImageNames()
     {
         $products = Products::all();

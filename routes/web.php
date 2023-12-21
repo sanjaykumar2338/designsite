@@ -35,6 +35,8 @@ Route::group(['prefix' => 'admin','middleware' => 'check.auth'], function () {
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/get_images', [App\Http\Controllers\HomeController::class, 'get_images'])->name('get_images');
 Route::get('/updateImageNames', [App\Http\Controllers\HomeController::class, 'updateImageNames'])->name('updateImageNames');
+Route::get('/updateEmptyImageColumns', [App\Http\Controllers\HomeController::class, 'updateEmptyImageColumns'])->name('updateEmptyImageColumns');
+
 
 Route::get('/contactus', [App\Http\Controllers\HomeController::class, 'contactus'])->name('contactus');
 Route::get('/aboutus', [App\Http\Controllers\HomeController::class, 'aboutus'])->name('aboutus');
