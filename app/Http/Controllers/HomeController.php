@@ -174,6 +174,37 @@ class HomeController extends Controller
         return view('frontend.pages.product_list')->with('products', $products);
     }
 
+    public function updateImageNames()
+    {
+        $products = Products::all();
+
+        foreach ($products as $product) {
+            $imageColumns = ['front_image', 'back_image', 'right_image', 'left_image'];
+
+            foreach ($imageColumns as $column) {
+                $imageUrl = $product->{$column};
+
+                // Extract filename without query string
+                $filenameWithQuery = basename(parse_url($imageUrl, PHP_URL_PATH));
+                $filenameWithoutQuery = strtok($filenameWithQuery, '?');
+
+                // Check if the image file exists in the storage directory
+                $currentImagePath = 'public/images/' . $filenameWithQuery;
+                if (Storage::exists($currentImagePath)) {
+                    // Generate the new path without the query string
+                    $newImagePath = 'public/images/' . $filenameWithoutQuery;
+
+                    // Rename the file in storage
+                    Storage::move($currentImagePath, $newImagePath);
+
+                    // Update the database entry with the new filename
+                    $product->{$column} = $newImagePath;
+                    $product->save();
+                }
+            }
+        }
+    }
+
     public function get_images(Request $request)
     {
         // Fetch products from the database
