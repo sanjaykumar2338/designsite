@@ -177,15 +177,10 @@ class HomeController extends Controller
     public function updateEmptyImageColumns()
     {
         // Find all products where any image column contains 'public/images/images'
-        $products = Products::get();
+        $products = Products::where('product_name', 'test desc')->get();
 
         foreach ($products as $product) {
-            // Update each column if it matches 'public/images/images'
-            if ($product->product_name == 'test desc') {
-                $product->product_name = '';
-            }
-
-            // Save the updated product
+            $product->product_name = '';
             $product->save();
         }
     }
