@@ -177,7 +177,7 @@ class HomeController extends Controller
     public function updateEmptyImageColumns()
     {
         // Find all products where any image column contains 'public/images/images'
-        $products = Products::where('product_name', 'test desc')->get();
+        $products = Products::where('product_description', 'test desc')->get();
 
         foreach ($products as $product) {
             $product->product_name = '';
