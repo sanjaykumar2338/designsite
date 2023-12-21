@@ -189,7 +189,7 @@ class HomeController extends Controller
                 $filenameWithoutQuery = strtok($filenameWithQuery, '?');
 
                 // Check if the image file exists in the storage directory
-                $currentImagePath = 'public/images/' . $filenameWithQuery;
+                $currentImagePath = $imageUrl;
                 if (Storage::exists($currentImagePath)) {
                     // Generate the new path without the query string
                     $newImagePath = 'public/images/' . $filenameWithoutQuery;
