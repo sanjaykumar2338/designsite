@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Products;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Storage;
 class HomeController extends Controller
 {
     /**
@@ -171,5 +172,32 @@ class HomeController extends Controller
         $producttype = @ucfirst($category);
         $products = Products::where(['product_type'=>$producttype])->get();
         return view('frontend.pages.product_list')->with('products', $products);
+    }
+
+    public function get_images(Request $request)
+    {
+        // Fetch products from the database
+        $products = Products::get();
+
+        foreach ($products as $product) {
+            $imageColumns = ['front_image', 'back_image', 'right_image', 'left_image'];
+
+            foreach ($imageColumns as $column) {
+                $imageUrl = $product->{$column};
+
+                // Check if URL starts with a specific prefix
+                if (strpos($imageUrl, 'https://files.cdn.printful.com/') === 0) {
+                    $image = Http::get($imageUrl);
+                    if ($image->successful()) {
+                        $imagePath = 'public/images/' . basename($imageUrl);
+                        Storage::put($imagePath, $image);
+
+                        // Update the column in the database with the new image path
+                        $product->{$column} = $imagePath;
+                        $product->save();
+                    }
+                }
+            }
+        }
     }
 }
