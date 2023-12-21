@@ -176,7 +176,7 @@ class HomeController extends Controller
 
     public function updateImageNames()
     {
-        $products = Products::all();
+        $products = Product::all();
 
         foreach ($products as $product) {
             $imageColumns = ['front_image', 'back_image', 'right_image', 'left_image'];
@@ -194,12 +194,15 @@ class HomeController extends Controller
                     // Generate the new path without the query string
                     $newImagePath = 'public/images/' . $filenameWithoutQuery;
 
-                    // Rename the file in storage
-                    Storage::move($currentImagePath, $newImagePath);
+                    // Check if the new filename already exists
+                    if (!Storage::exists($newImagePath)) {
+                        // Rename the file in storage
+                        Storage::move($currentImagePath, $newImagePath);
 
-                    // Update the database entry with the new filename
-                    $product->{$column} = $newImagePath;
-                    $product->save();
+                        // Update the database entry with the new filename
+                        $product->{$column} = $newImagePath;
+                        $product->save();
+                    }
                 }
             }
         }
