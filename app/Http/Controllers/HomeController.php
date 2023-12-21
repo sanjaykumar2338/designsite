@@ -181,7 +181,7 @@ class HomeController extends Controller
 
         foreach ($products as $product) {
             // Update each column if it matches 'public/images/images'
-            if ($product->product_name === 'test desc') {
+            if ($product->product_name == 'test desc') {
                 $product->product_name = '';
             }
 
