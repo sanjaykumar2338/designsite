@@ -180,7 +180,7 @@ class HomeController extends Controller
         $products = Products::where('product_description', 'test desc')->get();
 
         foreach ($products as $product) {
-            $product->product_name = '';
+            $product->product_description = '';
             $product->save();
         }
     }
