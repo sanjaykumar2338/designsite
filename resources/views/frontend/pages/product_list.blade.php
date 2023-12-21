@@ -18,21 +18,23 @@
                 
                 @if($products->count())
                     @foreach($products as $product)
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                            <div class="img aos-init aos-animate" data-aos="zoom-in">
-                                <img src="{{fileToUrl($product->front_image)}}" alt="">
-                                <div class="text-one">
-                                    <span>${{$product->commission?$product->commission:9}}</span>
-                                </div>
-                                <div class="text-two">
-                                    <h4>{{$product->product_name}}</h4>
-                                    @php
-                                        $url = url('/').'/stand-with-'.strtolower($product->supporting_country).'/shop/'.strtolower($product->product_type).'/'.$product->product_slug;
-                                    @endphp
-                                    <a class="buy_now" href="{{$url}}"> buy now</a>
+                        @if($product->front_image && $product->back_image && $product->right_image && $product->left_image)
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <div class="img aos-init aos-animate" data-aos="zoom-in">
+                                    <img src="{{fileToUrl($product->front_image)}}" alt="">
+                                    <div class="text-one">
+                                        <span>${{$product->commission?$product->commission:9}}</span>
+                                    </div>
+                                    <div class="text-two">
+                                        <h4>{{$product->product_name}}</h4>
+                                        @php
+                                            $url = url('/').'/stand-with-'.strtolower($product->supporting_country).'/shop/'.strtolower($product->product_type).'/'.$product->product_slug;
+                                        @endphp
+                                        <a class="buy_now" href="{{$url}}"> buy now</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        @endif
                     @endforeach
                 @else
                     <p>No Product Found!</p>
