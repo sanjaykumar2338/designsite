@@ -176,7 +176,7 @@ class HomeController extends Controller
 
     public function updateImageNames()
     {
-        $products = Product::all();
+        $products = Products::all();
 
         foreach ($products as $product) {
             $imageColumns = ['front_image', 'back_image', 'right_image', 'left_image'];
