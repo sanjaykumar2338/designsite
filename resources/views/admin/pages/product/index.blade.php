@@ -147,7 +147,7 @@
         @endif
         
         @if ($products->nextPageUrl())
-            <a href="{{ $products->nextPageUrl() }}">Next >></a>
+          &nbsp;&nbsp;&nbsp;<a href="{{ $products->nextPageUrl() }}">Next >></a>
         @endif
     </div>
 @endsection
