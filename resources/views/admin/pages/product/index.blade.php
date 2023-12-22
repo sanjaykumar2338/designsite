@@ -144,6 +144,7 @@
      <div class="pagination">
         @if ($products->previousPageUrl())
             <a href="{{ $products->previousPageUrl() }}"><< Previous</a>
+            |
         @endif
         
         @if ($products->nextPageUrl())
