@@ -93,6 +93,8 @@
 
                                             <th class="col-sm-1 col-md-1">Country</th>
 
+                                            <th class="col-sm-1 col-md-1">Product For</th>
+
                                             <th class="col-sm-3 col-md-3"  style="text-align: right;">Action</th>
                                         </tr>
                                         </thead>
@@ -115,6 +117,7 @@
                                             <th class="col-sm-2 col-md-2"> {{$product->commission}}$</th>
                                             <td class="col-sm-2 col-md-2"><strong>  {{$product->product_price}}$</strong></td>
                                             <td class="col-sm-1 col-md-1"><strong>  {{$product->supporting_country}}</strong></td>
+                                            <td class="col-sm-1 col-md-1"><strong>  {{$product->product_for}}</strong></td>
                                             <td class="col-sm-3 col-md-3" style="text-align: right">
                                               <a href="/admin/products/remove/{{$product->id}}" class="btn btn-danger">Remove</a>
                                               <a href="/admin/products/{{$product->id}}/edit" class="btn btn-primary">EDIT</a>
