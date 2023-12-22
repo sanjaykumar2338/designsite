@@ -18,12 +18,12 @@ class AdminController extends Controller{
     }
 
     public function order(){
-        $orders = Payment::join('users','users.id','=','payments.user_id')->select('payments.*','users.name')->get();
+        $orders = Payment::join('users','users.id','=','payments.user_id')->select('payments.*','users.name')->paginate(5);
         return view('admin.pages.order.index')->with('orders',$orders)->with('activeLink','order');
     }
 
     public function customer(){
-        $customers = User::all();
+        $customers = User::paginate(5);
         return view('admin.pages.user.index')->with('customers',$customers)->with('activeLink','customer');
     }
 }

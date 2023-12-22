@@ -1,7 +1,38 @@
 @extends('admin.layout.main')
 
 @section('content')
+      <style>
+        /* Example styles for pagination */
+        .pagination {
+          font-size: 21px;
+          /* padding: 43px; */
+          float: inline-end;
+          padding-right: 18px;
+        }
 
+        .pagination ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .pagination ul li {
+            display: inline;
+            margin-right: 5px;
+        }
+
+        .pagination ul li a {
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .pagination ul li a.active {
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
     <section class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
@@ -100,6 +131,8 @@
                 @endif
                 </div>
 
+              
+
 
               <!-- /.card-body -->
             </div>
@@ -107,4 +140,14 @@
           </div>
       </div>
     </section>
+     <!-- Previous and Next buttons -->
+     <div class="pagination">
+        @if ($products->previousPageUrl())
+            <a href="{{ $products->previousPageUrl() }}">Previous <<</a>
+        @endif
+        
+        @if ($products->nextPageUrl())
+            <a href="{{ $products->nextPageUrl() }}">Next >></a>
+        @endif
+    </div>
 @endsection
