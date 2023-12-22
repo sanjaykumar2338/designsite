@@ -98,7 +98,7 @@
 </section>
 <div class="pagination">
         @if ($customers->previousPageUrl())
-            <<<a href="{{ $customers->previousPageUrl() }}">Previous</a>
+            << <a href="{{ $customers->previousPageUrl() }}">Previous</a>
         @endif
         
         @if ($customers->nextPageUrl())
