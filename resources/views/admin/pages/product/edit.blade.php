@@ -116,6 +116,9 @@
                 <div class="mb-3 mt-3">
                   <label for="title">Front Image:</label>
                   <input type="file" class="form-control" name="front_image">
+                  @if($product->front_image)
+                      <a target="_blank" href="{{fileToUrl($product->front_image)}}">View Front Image</a>
+                  @endif
                 </div>
 
                 <div class="mb-3 mt-3">
@@ -131,6 +134,9 @@
                 <div class="mb-3 mt-3">
                   <label for="title">Back Image:</label>
                   <input type="file" class="form-control" name="back_image">
+                  @if($product->back_image)
+                      <a target="_blank" href="{{fileToUrl($product->back_image)}}">View Front Image</a>
+                  @endif
                 </div>
                 
                 <div class="mb-3 mt-3">
@@ -146,11 +152,17 @@
                 <div class="mb-3 mt-3">
                   <label for="title">Right Image:</label>
                   <input type="file" class="form-control" name="right_image">
+                  @if($product->right_image)
+                      <a target="_blank" href="{{fileToUrl($product->right_image)}}">View Right Image</a>
+                  @endif
                 </div>
 
                 <div class="mb-3 mt-3">
                   <label for="title">Left Image:</label>
                   <input type="file" class="form-control" name="left_image">
+                  @if($product->left_image)
+                      <a target="_blank" href="{{fileToUrl($product->left_image)}}">View Front Image</a>
+                  @endif
                 </div>
 
                 <div class="mb-3 mt-3">
