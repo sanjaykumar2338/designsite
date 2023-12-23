@@ -6,6 +6,8 @@ use App\Models\Products;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
+use App\Models\User;
+use App\Models\Payment;
 class HomeController extends Controller
 {
     /**
@@ -107,7 +109,8 @@ class HomeController extends Controller
         if (auth()->user()->email == 'admin@gmail.com') {
             return redirect('admin');
         } else {
-            return view('frontend.pages.my_account')->with('activeLink','home');
+            $orders = Payment::join('users','users.id','=','payments.user_id')->select('payments.*','users.name')->paginate(5);
+            return view('frontend.pages.my_account')->with('activeLink','orders')->with('orders',$orders);
         }
     }
 

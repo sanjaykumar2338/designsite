@@ -43,12 +43,10 @@
 
   <!-- /.navbar -->
 
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: cadetblue;">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
-      <img style="margin-left: -0.2rem;" src="{{url('/')}}/asset/admin/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
-           style="opacity: .8">
-      <span style="font-size: 17PX;" class="brand-text font-weight-light">CauseStand</span>
+    <a href="{{url('/')}}/my_account" class="brand-link">
+      <span style="font-size: 18px;" class="brand-text font-weight-light">Welcome {{auth()->user()->name}}</span>
     </a>
 
     <!-- Sidebar -->
@@ -58,35 +56,19 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item has-treeview menu-open">
-            <a href="{{url('/')}}/admin" class="nav-link {{$activeLink=='dashboard'?'active':''}}">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Dashboard
-                <i class="right fas"></i>
-              </p>
-            </a>            
-          </li>        
-          
           <li class="nav-item has-treeview">
-            <a href="{{url('/admin/customer')}}" class="nav-link {{$activeLink=='customer'?'active':''}}">
-              <i class="nav-icon fas fa-solid fa-user"></i>
-              <p>
-                Users
-              </p>
-            </a>
-
-            <a href="{{url('/admin/order')}}" class="nav-link {{$activeLink=='order'?'active':''}}">
+          
+            <a href="{{url('/admin/order')}}" class="nav-link {{$activeLink=='orders'?'active':''}}">
               <i class="nav-icon fas fa-shopping-bag"></i>
               <p>
-                Orders
+                My Orders
               </p>
             </a>
 
-            <a href="{{url('/admin/products')}}" class="nav-link {{$activeLink=='product'?'active':''}}">
-              <i class="nav-icon fas fa-solid fa-box"></i>
+            <a href="{{url('/admin/order')}}" style="display:none;" class="nav-link {{$activeLink=='order'?'active':''}}">
+              <i class="nav-icon fas fa-shopping-bag"></i>
               <p>
-                Products
+                Setting
               </p>
             </a>
 
