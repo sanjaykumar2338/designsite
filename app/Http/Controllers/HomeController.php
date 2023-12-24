@@ -181,8 +181,8 @@ class HomeController extends Controller
     public function product_category(Request $request, $category){        
         $producttype = @ucfirst($category);
         $products = Products::where('product_type', 'LIKE', '%' . $producttype . '%')->get();
-        echo "<pre>"; print_r($products); die;
-        
+        //echo "<pre>"; print_r($products); die;
+
         return view('frontend.pages.product_list')->with('products', $products);
     }
 
