@@ -15,7 +15,6 @@ if (!function_exists('fileToUrl')) {
 if (!function_exists('fileExist')) {
     function fileExist($url)
     {
-        echo $url; die;
         $fileExists = false;
         try {
             $response = \Illuminate\Support\Facades\Http::get($url);
@@ -25,5 +24,7 @@ if (!function_exists('fileExist')) {
             // Handle exceptions if the URL is unreachable or throws an error
             $fileExists = false;
         }
+
+        return $fileExists;
     }
 }
