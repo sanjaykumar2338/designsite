@@ -18,7 +18,7 @@
                 
                 @if($products->count())
                     @foreach($products as $product)
-                        @if($product->front_image!="" && $product->back_image!="" && $product->right_image!="" && $product->left_image!="")
+                        @if($product->front_image!="")
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <div class="img aos-init aos-animate" data-aos="zoom-in">
                                     <img src="{{fileToUrl($product->front_image)}}" alt="">
