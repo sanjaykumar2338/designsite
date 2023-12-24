@@ -1,4 +1,4 @@
-const mens = {
+export const mens = {
     shirts: [
         {
             productName: "Premium Polo Shirt | Port Authority K500",
@@ -2677,7 +2677,7 @@ const mens = {
     ],
 };
 
-const womans = {
+export const womans = {
     TShirts: [
         {
             productName: "Women's Recycled V-Neck T-Shirt | District DT8001",
@@ -4489,7 +4489,7 @@ const womans = {
     ],
 };
 
-const hats = [
+export const hats = [
     {
         productName: "5 Panel Cap | Yupoong 7005",
         price: 15.95,
@@ -5530,7 +5530,7 @@ const hats = [
     },
 ];
 
-const accessories = [
+export const accessories = [
     {
         productName: "All-Over Print Tote",
         price: 17.75,

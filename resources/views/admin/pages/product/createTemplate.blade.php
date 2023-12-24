@@ -168,6 +168,7 @@
 
     <div class="crt-prd-main">
         <div class="container">
+            {{ $product->product_name }}
             <div class="flex flex-wrap">
                 <div class="prd-left">
                     {{-- <div class="flex flex-wrap prd-crs-img">
@@ -193,48 +194,49 @@
 										position: absolute;
 										top: 52%;
 										left: 48%;
-										transform: translate(-43%, -70%);
+										/* transform: translate(-43%, -70%); */
 										z-index: 10;
 									"
                                     id="div_front" hidden>
-                                    <canvas id="canvas_front" width="150" height="200"
-                                        style="border: 1px; border-color: black"></canvas>
+
+                                    {{-- <canvas id="canvas_front" width="150" height="200"
+                                        style="border: 1px; border-color: black"></canvas> --}}
                                 </div>
                                 <div class="border-[1px] border-neutral-300 frame-area"
                                     style="
 										position: absolute;
 										top: 60%;
 										left: 48%;
-										transform: translate(-43%, -70%);
+										/* transform: translate(-43%, -70%); */
 										z-index: 10;
 									"
                                     id="div_back" hidden>
-                                    <canvas id="canvas_back" width="150" height="250"
-                                        style="border: 1px; border-color: black"></canvas>
+                                    {{-- <canvas id="canvas_back" width="150" height="250"
+                                        style="border: 1px; border-color: black"></canvas> --}}
                                 </div>
                                 <div class="border-[1px] border-neutral-300 frame-area"
                                     style="
 										position: absolute;
 										top: 60%;
 										left: 60%;
-										transform: translate(-43%, -70%);
+										/* transform: translate(-43%, -70%); */
 										z-index: 10;
 									"
                                     id="div_sleeve_left" hidden>
-                                    <canvas id="canvas_sleeve_left" width="140" height="140"
-                                        style="border: 1px; border-color: black"></canvas>
+                                    {{-- <canvas id="canvas_sleeve_left" width="140" height="140"
+                                        style="border: 1px; border-color: black"></canvas> --}}
                                 </div>
                                 <div class="border-[1px] border-neutral-300 frame-area"
                                     style="
 										position: absolute;
 										top: 60%;
 										left: 40%;
-										transform: translate(-43%, -70%);
+										/* transform: translate(-43%, -70%); */
 										z-index: 10;
 									"
                                     id="div_sleeve_right" hidden>
-                                    <canvas id="canvas_sleeve_right" width="140" height="140"
-                                        style="border: 1px; border-color: black"></canvas>
+                                    {{-- <canvas id="canvas_sleeve_right" width="140" height="140"
+                                        style="border: 1px; border-color: black"></canvas> --}}
                                 </div>
                             </div>
                         </div>
@@ -263,6 +265,20 @@
                                     class="h-[50px] w-[50px]">
                                 {{-- sleeve_right --}}
                             </button>
+                            <input id="pos-adjust-top" type="number" style="width: 50px; height: 50px;"
+                                value="10">
+                            <input id="pos-adjust-left" type="number" style="width: 50px; height: 50px;"
+                                value="10">
+                            <input id="pos-adjust-height" type="number" style="width: 50px; height: 50px;"
+                                value="10">
+                            <input id="pos-adjust-width" type="number" style="width: 50px; height: 50px;"
+                                value="10">
+                        </div>
+                        <div id="product-thumbnails-selection">
+                            {{-- <button class="border rounded-lg" >
+                                <img id="thumbnail_front" src="" alt="" class="h-[50px] w-[50px]">                               
+                            </button> --}}
+
                         </div>
 
                         <div id="product-colours">
