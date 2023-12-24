@@ -165,7 +165,7 @@ class HomeController extends Controller
         $product->left_image = fileToUrl($product->left_image);
         $product->right_image = fileToUrl($product->right_image); 
 
-        //echo "<pre>"; print_r($product); die;
+        //echo "<pre>"; print_r(file_exists($product->front_image)); die;
         return view('frontend.pages.create_product')->with('product', $product);
     }
 

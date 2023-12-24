@@ -11,3 +11,18 @@ if (!function_exists('fileToUrl')) {
         return $url;
     }
 }
+
+if (!function_exists('fileExist')) {
+    function fileExist($url)
+    {
+        $fileExists = false;
+        try {
+            $response = \Illuminate\Support\Facades\Http::get($url);
+            $statusCode = $response->status();
+            $fileExists = ($statusCode >= 200 && $statusCode < 400);
+        } catch (\Exception $e) {
+            // Handle exceptions if the URL is unreachable or throws an error
+            $fileExists = false;
+        }
+    }
+}
