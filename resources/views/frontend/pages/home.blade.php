@@ -143,7 +143,7 @@
             </p>
             <div class="row">
                 
-                @foreach($products as $product)
+                @foreach($accessories as $product)
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="img aos-init aos-animate" data-aos="zoom-in">
                             <img src="{{fileToUrl($product->max_front_image)}}" alt="">
