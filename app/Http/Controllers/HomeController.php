@@ -28,10 +28,17 @@ class HomeController extends Controller
     public function index()
     {
         $products = Products::select('product_type', \DB::raw('MAX(id) as max_id'), \DB::raw('MAX(front_image) as max_front_image'))
-        ->groupBy('product_type')
+            ->whereIn('product_type', ['Shirts', 'Hoodies', 'Sweatshirts', 'Hoodies'])
+            ->groupBy('product_type')
+        ->get();
+
+        $accessories = Products::select('product_type', \DB::raw('MAX(id) as max_id'), \DB::raw('MAX(front_image) as max_front_image'))
+            ->whereIn('product_type', ['Hat', 'Headwear', 'Footwear', 'Hoodies','Bags','Phone Cases'])
+            ->groupBy('product_type')
         ->get();
         //echo "<pre>"; print_r($products); die;
-        return view('frontend.pages.home')->with('products',$products);
+        
+        return view('frontend.pages.home')->with('products',$products)->with('accessories',$accessories);
     }
 
     public function contactus()

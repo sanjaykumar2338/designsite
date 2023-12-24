@@ -58,6 +58,13 @@
                with font-awesome or any other icon font library -->
           <li class="nav-item has-treeview">
           
+            <a href="{{url('/')}}" class="nav-link">
+              <i class="nav-icon fas fa-home"></i>
+              <p>
+                Home
+              </p>
+            </a>
+
             <a href="{{url('/admin/order')}}" class="nav-link {{$activeLink=='orders'?'active':''}}">
               <i class="nav-icon fas fa-shopping-bag"></i>
               <p>

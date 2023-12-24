@@ -142,57 +142,22 @@
             <p>Demonstrate solidarity with a cause and oppose misinformation by accessorizing your fashion with images that reflect your voice. Shop to donate and effect positive change.
             </p>
             <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="img aos-init aos-animate" data-aos="zoom-in">
-                        <img src="asset/frontend/images/caps-1.webp" alt="">
-                        <div class="text-one">
-                            <span>$ 13.40</span>
-                        </div>
-                        <div class="text-two">
-                            <h4>Caps</h4>
-                            <button class="buy_now"> buy now</button>
+                
+                @foreach($products as $product)
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="img aos-init aos-animate" data-aos="zoom-in">
+                            <img src="{{fileToUrl($product->max_front_image)}}" alt="">
+                            <div class="text-one" style="display:none;">
+                                <span></span>
+                            </div>
+                            <div class="text-two">
+                                <h4>{{$product->product_type}}</h4>
+                                <a class="buy_now" href="{{url('/product/category/')}}/{{strtolower($product->product_type)}}">View All</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="img aos-init aos-animate" data-aos="zoom-in">
-                        <img src="asset/frontend/images/sc-2.png" alt="">
+                @endforeach
 
-                        <div class="text-one">
-                            <span>$ 13.40</span>
-                        </div>
-                        <div class="text-two">
-                            <h4>Scarfs</h4>
-                            <button class="buy_now"> buy now</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="img aos-init aos-animate" data-aos="zoom-in">
-                        <img src="asset/frontend/images/b-1.png" alt="">
-
-                        <div class="text-one">
-                            <span>$ 13.40</span>
-                        </div>
-                        <div class="text-two">
-                            <h4>Flyers</h4>
-                            <button class="buy_now"> buy now</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="img aos-init aos-animate" data-aos="zoom-in">
-                        <img src="asset/frontend/images/pin.png" alt="">
-
-                        <div class="text-one">
-                            <span>$ 13.40</span>
-                        </div>
-                        <div class="text-two">
-                            <h4>Pins</h4>
-                            <button class="buy_now"> buy now</button>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
