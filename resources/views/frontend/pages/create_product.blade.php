@@ -128,6 +128,8 @@
                         </div>
                         
                         <div class="prd-opt-three cmn-prd-opt" id="text-controls-additional">
+                            
+                            @if(in_array($product->product_type,['Shirts', 'Hoodies', 'Sweatshirts', 'Hoodies']))
                             <div class="flex flex-wrap gap-2 prd-sze">
                                 <h4>Product Size :</h4>
                                 <input type="radio" id="X" name="fav_language" value="X" />
@@ -138,8 +140,9 @@
                                 <br />
                                 <input type="radio" id="L" name="fav_language" value="L" />
                                 <label for="L">L</label>
-                            </div>
-                            <br>
+                            </div><br/>
+                            @endif
+                            
                             <div class="prd-opt-four">
                                 <h4 class="expand_option" style="cursor:pointer">Click to Draw Shapes:</h4>
                                 <!-- <button
