@@ -33,7 +33,7 @@ class HomeController extends Controller
         ->get();
 
         $accessories = Products::select('product_type', \DB::raw('MAX(id) as max_id'), \DB::raw('MAX(front_image) as max_front_image'))
-            ->whereIn('product_type', ['Hat', 'Headwear', 'Footwear', 'Hoodies','Bags','Phone Cases'])
+            ->whereIn('product_type', ['Hat', 'Headwear', 'Footwear','Bags','Phone Cases'])
             ->groupBy('product_type')
         ->get();
         //echo "<pre>"; print_r($products); die;
