@@ -94,6 +94,7 @@
                             </button>
                             @endif
                             
+                            {{$product->back_image}}
                             @if($product->back_image)
                             <button class="border  rounded-lg" onclick="setShowCanvas(`canvas_back`, true)">
                                 <img width="50" height="50" id="thumbnail_back" src="" alt="" class="h-[50px] w-[50px]">
