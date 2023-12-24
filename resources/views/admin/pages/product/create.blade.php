@@ -112,7 +112,7 @@
                   </select>
                 </div>
 
-                <div class="mb-3 mt-3">
+                <div class="mb-3 mt-3" style="display:none">
                   <label for="title">Front Image:</label>
                   <input type="file" class="form-control" name="front_image">
                 </div>
@@ -127,7 +127,7 @@
                   <textarea class="form-control" name="front_image_donation"></textarea>
                 </div>
 
-                <div class="mb-3 mt-3">
+                <div class="mb-3 mt-3" style="display:none">
                   <label for="title">Back Image:</label>
                   <input type="file" class="form-control" name="back_image">
                 </div>
@@ -142,12 +142,12 @@
                   <textarea class="form-control" name="back_image_donation"></textarea>
                 </div>
 
-                <div class="mb-3 mt-3">
+                <div class="mb-3 mt-3" style="display:none">
                   <label for="title">Right Image:</label>
                   <input type="file" class="form-control" name="right_image">
                 </div>
 
-                <div class="mb-3 mt-3">
+                <div class="mb-3 mt-3" style="display:none">
                   <label for="title">Left Image:</label>
                   <input type="file" class="form-control" name="left_image">
                 </div>

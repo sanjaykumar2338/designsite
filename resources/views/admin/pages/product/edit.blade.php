@@ -113,7 +113,7 @@
                   </select>
                 </div>
 
-                <div class="mb-3 mt-3">
+                <div class="mb-3 mt-3" style="display:none">
                   <label for="title">Front Image:</label>
                   <input type="file" class="form-control" name="front_image">
                   @if($product->front_image)
@@ -131,7 +131,7 @@
                   <textarea class="form-control" name="front_image_donation">{{$product->front_image_donation}}</textarea>
                 </div>
 
-                <div class="mb-3 mt-3">
+                <div class="mb-3 mt-3" style="display:none">
                   <label for="title">Back Image:</label>
                   <input type="file" class="form-control" name="back_image">
                   @if($product->back_image)
@@ -149,7 +149,7 @@
                   <textarea class="form-control" name="back_image_donation">{{$product->back_image_price}}</textarea>
                 </div>
 
-                <div class="mb-3 mt-3">
+                <div class="mb-3 mt-3" style="display:none">
                   <label for="title">Right Image:</label>
                   <input type="file" class="form-control" name="right_image">
                   @if($product->right_image)
@@ -157,7 +157,7 @@
                   @endif
                 </div>
 
-                <div class="mb-3 mt-3">
+                <div class="mb-3 mt-3" style="display:none">
                   <label for="title">Left Image:</label>
                   <input type="file" class="form-control" name="left_image">
                   @if($product->left_image)
