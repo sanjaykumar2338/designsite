@@ -87,34 +87,26 @@
                     <div class="prd-option">
                         <div id="product-thumbnails">
                             
-                            @if(fileExist($product->front_image))
+                            
                             <button class="border rounded-lg" onclick="setShowCanvas(`canvas_front`, true)">
                                 <img width="50" height="50" id="thumbnail_front" src="" alt="" class="h-[50px] w-[50px]">
                                 {{-- front --}}
                             </button>
-                            @endif
                             
-                            @if(fileExist($product->back_image))
                             <button class="border  rounded-lg" onclick="setShowCanvas(`canvas_back`, true)">
                                 <img width="50" height="50" id="thumbnail_back" src="" alt="" class="h-[50px] w-[50px]">
                                 {{-- back --}}
                             </button>
-                            @endif
                             
-                            @if(fileExist($product->left_image))
                             <button class="border  rounded-lg" onclick="setShowCanvas(`canvas_sleeve_left`, true)">
                                 <img width="50" height="50" id="thumbnail_sleeve_left" src="" alt="" {{-- sleeve_left --}}>
                             </button>
-                            @endif
-
-                            @if(fileExist($product->right_image))
+                            
                             <button class="border  rounded-lg" onclick="setShowCanvas(`canvas_sleeve_right`, true)">
                                 <img width="50" height="50" id="thumbnail_sleeve_right" src="" alt=""
                                     class="h-[50px] w-[50px]">
                                 {{-- sleeve_right --}}
                             </button>
-                            @endif
-
                         </div>
 
                         <br>
