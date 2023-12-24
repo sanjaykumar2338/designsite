@@ -412,7 +412,7 @@ class ProductsController extends Controller
             $leftImage = $request->file('left_image')->store('public/images');
             $product->left_image = $leftImage;
         }
-
+        $product->imageData = $request->input('imageData');
         // Save the product
         $product->update();
         return

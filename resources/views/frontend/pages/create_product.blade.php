@@ -29,48 +29,48 @@
 										position: absolute;
 										top: 52%;
 										left: 48%;
-										transform: translate(-43%, -70%);
+										/* transform: translate(-43%, -70%); */
 										z-index: 10;
 									"
                                     id="div_front" hidden>
-                                    <canvas id="canvas_front" width="150" height="200"
-                                        style="border: 1px; border-color: black"></canvas>
+                                    {{-- <canvas id="canvas_front" width="150" height="200"
+                                        style="border: 1px; border-color: black"></canvas> --}}
                                 </div>
                                 <div class="border-[1px] border-neutral-300 frame-area"
                                     style="
 										position: absolute;
 										top: 60%;
 										left: 48%;
-										transform: translate(-43%, -70%);
+										/* transform: translate(-43%, -70%); */
 										z-index: 10;
 									"
                                     id="div_back" hidden>
-                                    <canvas id="canvas_back" width="150" height="250"
-                                        style="border: 1px; border-color: black"></canvas>
+                                    {{-- <canvas id="canvas_back" width="150" height="250"
+                                        style="border: 1px; border-color: black"></canvas> --}}
                                 </div>
                                 <div class="border-[1px] border-neutral-300 frame-area"
                                     style="
 										position: absolute;
 										top: 60%;
 										left: 60%;
-										transform: translate(-43%, -70%);
+										/* transform: translate(-43%, -70%); */
 										z-index: 10;
 									"
                                     id="div_sleeve_left" hidden>
-                                    <canvas id="canvas_sleeve_left" width="140" height="140"
-                                        style="border: 1px; border-color: black"></canvas>
+                                    {{-- <canvas id="canvas_sleeve_left" width="140" height="140"
+                                        style="border: 1px; border-color: black"></canvas> --}}
                                 </div>
                                 <div class="border-[1px] border-neutral-300 frame-area"
                                     style="
 										position: absolute;
 										top: 60%;
 										left: 40%;
-										transform: translate(-43%, -70%);
+										/* transform: translate(-43%, -70%); */
 										z-index: 10;
 									"
                                     id="div_sleeve_right" hidden>
-                                    <canvas id="canvas_sleeve_right" width="140" height="140"
-                                        style="border: 1px; border-color: black"></canvas>
+                                    {{-- <canvas id="canvas_sleeve_right" width="140" height="140"
+                                        style="border: 1px; border-color: black"></canvas> --}}
                                 </div>
                             </div>
                         </div>
@@ -80,25 +80,28 @@
                 <div class="prd-right">
                     <div class="flex flex-col gap-2" id="editables"></div>
 
-                    <h1 class="product_title">{{$product->product_name}}</h1>
-                    <p class="desc">{{$product->product_description}}</p>
+                    <h1 class="product_title">{{ $product->product_name }}</h1>
+                    <p class="desc">{{ $product->product_description }}</p>
                     <br>
 
                     <div class="prd-option">
                         <div id="product-thumbnails">
-                            
+
                             <button class="border rounded-lg" onclick="setShowCanvas(`canvas_front`, true)">
-                                <img width="50" height="50" id="thumbnail_front" src="" alt="" class="h-[50px] w-[50px]">
+                                <img width="50" height="50" id="thumbnail_front" src="" alt=""
+                                    class="h-[50px] w-[50px]">
                                 {{-- front --}}
                             </button>
-                            
+
                             <button class="border  rounded-lg" onclick="setShowCanvas(`canvas_back`, true)">
-                                <img width="50" height="50" id="thumbnail_back" src="" alt="" class="h-[50px] w-[50px]">
+                                <img width="50" height="50" id="thumbnail_back" src="" alt=""
+                                    class="h-[50px] w-[50px]">
                                 {{-- back --}}
                             </button>
-                            
+
                             <button class="border  rounded-lg" onclick="setShowCanvas(`canvas_sleeve_left`, true)">
-                                <img width="50" height="50" id="thumbnail_sleeve_left" src="" alt="" {{-- sleeve_left --}}>
+                                <img width="50" height="50" id="thumbnail_sleeve_left" src="" alt=""
+                                    {{-- sleeve_left --}}>
                             </button>
 
                             <button class="border  rounded-lg" onclick="setShowCanvas(`canvas_sleeve_right`, true)">
@@ -126,7 +129,7 @@
                                     onchange="onImagePikked()" />
                             </div>
                         </div>
-                        
+
                         <div class="prd-opt-three cmn-prd-opt" id="text-controls-additional">
                             <div class="flex flex-wrap gap-2 prd-sze">
                                 <h4>Product Size :</h4>
@@ -143,29 +146,29 @@
                             <div class="prd-opt-four">
                                 <h4 class="expand_option" style="cursor:pointer">Click to Draw Shapes:</h4>
                                 <!-- <button
-                                                                                                                                                                                                                                                                         class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                                                                                                                                                                                                                                                         onclick="addLine()"
-                                                                                                                                                                                                                                                                        >
-                                                                                                                                                                                                                                                                         Line
-                                                                                                                                                                                                                                                                        </button>
-                                                                                                                                                                                                                                                                        <button
-                                                                                                                                                                                                                                                                         class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                                                                                                                                                                                                                                                         onclick="addRect()"
-                                                                                                                                                                                                                                                                        >
-                                                                                                                                                                                                                                                                         Rectangle
-                                                                                                                                                                                                                                                                        </button>
-                                                                                                                                                                                                                                                                        <button
-                                                                                                                                                                                                                                                                         class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                                                                                                                                                                                                                                                         onclick="addCircle()"
-                                                                                                                                                                                                                                                                        >
-                                                                                                                                                                                                                                                                         Circle
-                                                                                                                                                                                                                                                                        </button>
-                                                                                                                                                                                                                                                                        <button
-                                                                                                                                                                                                                                                                         class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                                                                                                                                                                                                                                                         onclick="addTriangle()"
-                                                                                                                                                                                                                                                                        >
-                                                                                                                                                                                                                                                                         Triangle
-                                                                                                                                                                                                                                                                        </button> -->
+                                                                                                                                                                                                                                                                                 class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+                                                                                                                                                                                                                                                                                 onclick="addLine()"
+                                                                                                                                                                                                                                                                                >
+                                                                                                                                                                                                                                                                                 Line
+                                                                                                                                                                                                                                                                                </button>
+                                                                                                                                                                                                                                                                                <button
+                                                                                                                                                                                                                                                                                 class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+                                                                                                                                                                                                                                                                                 onclick="addRect()"
+                                                                                                                                                                                                                                                                                >
+                                                                                                                                                                                                                                                                                 Rectangle
+                                                                                                                                                                                                                                                                                </button>
+                                                                                                                                                                                                                                                                                <button
+                                                                                                                                                                                                                                                                                 class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+                                                                                                                                                                                                                                                                                 onclick="addCircle()"
+                                                                                                                                                                                                                                                                                >
+                                                                                                                                                                                                                                                                                 Circle
+                                                                                                                                                                                                                                                                                </button>
+                                                                                                                                                                                                                                                                                <button
+                                                                                                                                                                                                                                                                                 class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+                                                                                                                                                                                                                                                                                 onclick="addTriangle()"
+                                                                                                                                                                                                                                                                                >
+                                                                                                                                                                                                                                                                                 Triangle
+                                                                                                                                                                                                                                                                                </button> -->
                                 <div class="prd-objects flex flex-wrap" style="display:none;">
                                     <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
                                         onclick="addObjectImage(`{{ url('/') }}/objects/1-circle-1.svg`)">
@@ -309,9 +312,9 @@
             </div>
         </div>
     </div>
-    
+
     <div class="crt-prd-main">
-        
+
     </div>
 
     <div id="modal" hidden>
@@ -348,46 +351,46 @@
 
     <div id="payment-modal" hidden>
         <form action="{{ route('charge') }}" method="post" id="payment-form">
-        @csrf
-        <div class="fixed z-10 overflow-y-auto top-0 w-full left-0">
-            <div class="flex items-center justify-center min-height-100vh pt-4 px-4 pb-20 text-center sm:block sm:p-0">
-                <div class="fixed inset-0 transition-opacity">
-                    <div class="absolute inset-0 bg-gray-900 opacity-75"></div>
-                </div>
-                <span class="hidden sm:inline-block sm:align-middle sm:h-screen">
-                    &#8203;
-                </span>
-                <div class="inline-block align-center bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
-                    role="dialog" style="max-width: 50rem;" aria-modal="true" aria-labelledby="modal-headline">
-                    <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-                        <label class="font-bold text-gray-800">Payment Details</label>
-                        <br>
-                        <br>
-                        <div id="price" class="font-medium text-gray-800">Price:</div>
-                        <div id="front" class="font-medium text-gray-800" hidden>Front:</div>
-                        <div id="back" class="font-medium text-gray-800" hidden>Back:</div>
-                        <div id="subtotal" class="font-medium text-gray-800">Subtotal:</div>
-                        <div id="shipping" class="font-medium text-gray-800">Shipping:</div>
-                        <div id="total" class="font-bold text-gray-800">Total:</div>
-                        <br>
-                        <br>
-                        <label class="font-medium text-gray-800">Name</label>
-                        <input type="text" id="payment-modal-name"
-                            class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" value="John Smith"
-                            placeholder="Full Name" />
-                        <label class="font-medium text-gray-800">Email</label>
-                        <input type="text" id="payment-modal-email"
-                            class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" value="john@gmail.com"
-                            placeholder="email" />
-                        <label class="font-medium text-gray-800">Phone Number</label>
-                        <input type="text" id="payment-modal-phone"
-                            class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" value="7384728374"
-                            placeholder="Phone Number" />
-                        <label class="font-medium text-gray-800">Address</label>
-                        <input type="text" id="payment-modal-address"
+            @csrf
+            <div class="fixed z-10 overflow-y-auto top-0 w-full left-0">
+                <div class="flex items-center justify-center min-height-100vh pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+                    <div class="fixed inset-0 transition-opacity">
+                        <div class="absolute inset-0 bg-gray-900 opacity-75"></div>
+                    </div>
+                    <span class="hidden sm:inline-block sm:align-middle sm:h-screen">
+                        &#8203;
+                    </span>
+                    <div class="inline-block align-center bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
+                        role="dialog" style="max-width: 50rem;" aria-modal="true" aria-labelledby="modal-headline">
+                        <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                            <label class="font-bold text-gray-800">Payment Details</label>
+                            <br>
+                            <br>
+                            <div id="price" class="font-medium text-gray-800">Price:</div>
+                            <div id="front" class="font-medium text-gray-800" hidden>Front:</div>
+                            <div id="back" class="font-medium text-gray-800" hidden>Back:</div>
+                            <div id="subtotal" class="font-medium text-gray-800">Subtotal:</div>
+                            <div id="shipping" class="font-medium text-gray-800">Shipping:</div>
+                            <div id="total" class="font-bold text-gray-800">Total:</div>
+                            <br>
+                            <br>
+                            <label class="font-medium text-gray-800">Name</label>
+                            <input type="text" id="payment-modal-name"
+                                class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" value="John Smith"
+                                placeholder="Full Name" />
+                            <label class="font-medium text-gray-800">Email</label>
+                            <input type="text" id="payment-modal-email"
+                                class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" value="john@gmail.com"
+                                placeholder="email" />
+                            <label class="font-medium text-gray-800">Phone Number</label>
+                            <input type="text" id="payment-modal-phone"
+                                class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" value="7384728374"
+                                placeholder="Phone Number" />
+                            <label class="font-medium text-gray-800">Address</label>
+                            <input type="text" id="payment-modal-address"
                                 class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" value="19749 Dearborn St"
                                 placeholder="Address" />
-                                <div class="form-group">
+                            <div class="form-group">
                                 <label for="card-element">
                                     Credit or debit card
                                 </label>
@@ -398,26 +401,26 @@
                                 <div id="card-errors" role="alert"></div>
                             </div>
                         </div>
-                        
+
                         <div class="bg-gray-200 px-4 py-3 text-right">
                             <button type="button" class="py-2 px-4 bg-gray-500 text-white rounded hover:bg-gray-700 mr-2"
                                 onclick="setShowPaymentModal(false)">
                                 Cancel
                             </button>
-                            
+
                             <button type="submit" class="btn btn-primary">Submit Payment</button>
 
                             <!--
-                            <button type="button" class="py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-700 mr-2"
-                                type="submit" onclick="submitPayment()">
-                                Place Order
-                            </button>
-                            -->
+                                    <button type="button" class="py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-700 mr-2"
+                                        type="submit" onclick="submitPayment()">
+                                        Place Order
+                                    </button>
+                                    -->
                         </div>
                     </div>
                 </div>
-            </div> 
-        </form>    
+            </div>
+        </form>
     </div>
 
     <!-- SPINNER -->
@@ -445,7 +448,10 @@
             event.preventDefault();
 
             // Create a payment method using the card Element.
-            const { paymentMethod, error } = await stripe.createPaymentMethod({
+            const {
+                paymentMethod,
+                error
+            } = await stripe.createPaymentMethod({
                 type: 'card',
                 card: card,
             });
@@ -468,7 +474,7 @@
             const amountString = document.getElementById('total').innerText;
             const extractedDecimal = extractPriceFromString(amountString);
 
-            console.log('extractedDecimal',extractedDecimal,document.getElementById('total'));
+            console.log('extractedDecimal', extractedDecimal, document.getElementById('total'));
 
             if (extractedDecimal !== null) {
                 const decimalValue = parseFloat(extractedDecimal);
@@ -530,7 +536,7 @@
         expand_option.addEventListener('click', function() {
             const computedStyle = window.getComputedStyle(prd_objects);
             const displayProperty = computedStyle.getPropertyValue('display');
-            
+
             if (displayProperty === 'none') {
                 prd_objects.style.display = 'block';
             } else {
@@ -538,5 +544,4 @@
             }
         });
     </script>
-
 @endsection

@@ -1,11 +1,12 @@
-const base_url = "http://127.0.0.1:8000";
+// const base_url = "http://127.0.0.1:8000";
+const base_url = "https://causestand.com";
 function storeFile(url) {
     return new Promise((resolve, reject) => {
         fetch(url)
             .then((res) => res.blob()) // Gets the response and returns it as a blob
             .then((blob) => {
                 var formdata = new FormData();
-                formdata.append("file", blob, "ib-login-banner3-1797x800.jpg");
+                formdata.append("file", blob);
                 formdata.append("getDbUrl", "true");
 
                 var requestOptions = {
@@ -43,8 +44,9 @@ async function _createProduct(data) {
 }
 
 async function main() {
-    for await (const p of mens.shirts) {
-        let front_image = p.images.find((i) => i.option === "Front").image_url;
+    for await (const p of womans.TShirts) {
+        let front_image =
+            p.images.find((i) => i.option === "Front")?.image_url || "";
         // if(!image) front_image = p.images.find((i) => i.option === "Front Left").image_url
 
         let back_image =
@@ -65,10 +67,10 @@ async function main() {
                 p.images.find((i) => i.option === "Front Left")?.image_url ||
                 "";
 
-        if (front_image !== "") front_image = await storeFile(front_image);
-        if (back_image !== "") back_image = await storeFile(back_image);
-        if (right_image !== "") right_image = await storeFile(right_image);
-        if (left_image !== "") left_image = await storeFile(left_image);
+        // if (front_image !== "") front_image = await storeFile(front_image);
+        // if (back_image !== "") back_image = await storeFile(back_image);
+        // if (right_image !== "") right_image = await storeFile(right_image);
+        // if (left_image !== "") left_image = await storeFile(left_image);
 
         console.log(p.productName);
         console.log("front_image", front_image !== "");
@@ -79,10 +81,10 @@ async function main() {
         var data = {
             product_name: p.productName,
             product_price: p.price,
-            product_description: "test desc",
+            product_description: "",
             commission: 10,
             supporting_country: "Isreal",
-            product_for: "Men",
+            product_for: "Woman",
             product_type: "Shirts",
             product_sub_type: "",
             front_image,
@@ -93,8 +95,8 @@ async function main() {
             back_image_donation: "",
             right_image,
             left_image,
-            seo_title: "Test",
-            meta_description: "test",
+            seo_title: "",
+            meta_description: "",
             meta_keyword: "",
             product_x_axis: "10",
             product_y_axis: "10",
