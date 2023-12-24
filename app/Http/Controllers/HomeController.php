@@ -180,7 +180,7 @@ class HomeController extends Controller
 
     public function product_category(Request $request, $category){        
         $producttype = @ucfirst($category);
-        $products = Products::where(['product_type'=>$producttype])->get();
+        $products = Products::where('product_type', 'LIKE', '%' . $producttype . '%')->get();
         return view('frontend.pages.product_list')->with('products', $products);
     }
 
