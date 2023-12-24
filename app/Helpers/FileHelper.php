@@ -15,6 +15,7 @@ if (!function_exists('fileToUrl')) {
 if (!function_exists('fileExist')) {
     function fileExist($url)
     {
+        echo $url; die;
         $fileExists = false;
         try {
             $response = \Illuminate\Support\Facades\Http::get($url);
