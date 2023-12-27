@@ -265,14 +265,30 @@
                                     class="h-[50px] w-[50px]">
                                 {{-- sleeve_right --}}
                             </button>
-                            <input id="pos-adjust-top" type="number" style="width: 50px; height: 50px;"
-                                value="10">
-                            <input id="pos-adjust-left" type="number" style="width: 50px; height: 50px;"
-                                value="10">
-                            <input id="pos-adjust-height" type="number" style="width: 50px; height: 50px;"
-                                value="10">
-                            <input id="pos-adjust-width" type="number" style="width: 50px; height: 50px;"
-                                value="10">
+                        </div>
+                        <h3>Set Dimentions</h3>
+                        <div>
+                            <label for="pos-adjust-top">top</label><input id="pos-adjust-top" type="number"
+                                style="width: 50px; height: 50px; border: 1px solid" value="10">
+                            <label for="pos-adjust-left">left</label><input id="pos-adjust-left" type="number"
+                                style="width: 50px; height: 50px; border: 1px solid" value="10">
+                            <label for="pos-adjust-height">height</label><input id="pos-adjust-height" type="number"
+                                style="width: 50px; height: 50px; border: 1px solid" value="10">
+                            <label for="pos-adjust-width">width</label><input id="pos-adjust-width" type="number"
+                                style="width: 50px; height: 50px; border: 1px solid" value="10">
+
+                        </div>
+                        <h3>Set Images</h3>
+                        <div>
+
+                            <label for="pos-adjust-top">front</label><input id="thumbnail_front_input" type="number"
+                                style="width: 50px; height: 50px; border: 1px solid" value="0">
+                            <label for="pos-adjust-top">back</label><input id="thumbnail_back_input" type="number"
+                                style="width: 50px; height: 50px; border: 1px solid" value="1">
+                            <label for="pos-adjust-top">left</label><input id="thumbnail_sleeve_left_input"
+                                type="number" style="width: 50px; height: 50px; border: 1px solid" value="2">
+                            <label for="pos-adjust-top">right</label><input id="thumbnail_sleeve_right_input"
+                                type="number" style="width: 50px; height: 50px; border: 1px solid" value="3">
                         </div>
                         <div id="product-thumbnails-selection">
                             {{-- <button class="border rounded-lg" >
