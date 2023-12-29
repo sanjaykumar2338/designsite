@@ -91,6 +91,7 @@ class ProductsController extends Controller
         // Save data to the database
         $product = new Products();
         $product->product_name = $request->input('product_name');
+        $product->website_product_name = $request->input('website_product_name') ? $request->input('website_product_name') : $request->input('product_name');
         $product->product_price = $request->input('product_price');
         $product->product_description = $request->input('product_description');
         $product->commission = $request->input('commission');
@@ -215,6 +216,7 @@ class ProductsController extends Controller
 
         // Save data to the database          
         $product->product_name = $request->input('product_name');
+        $product->website_product_name = $request->input('website_product_name') ? $request->input('website_product_name') : $request->input('product_name');
         $product->product_price = $request->input('product_price');
         $product->product_description = $request->input('product_description');
         $product->commission = $request->input('commission');

@@ -39,8 +39,13 @@
                 
                 @csrf
                 <div class="mb-3 mt-3">
-                  <label for="product_name">Product Name:</label>
-                  <input type="text" value="{{$product->product_name}}" class="form-control" id="product_name" placeholder="Enter Product Name" name="product_name">
+                  <label for="product_name">Printful Product Name:</label>
+                  <input type="text" value="{{$product->product_name}}" class="form-control" id="product_name" placeholder="Enter Printful Product Name" name="product_name">
+                </div>
+
+                <div class="mb-3 mt-3">
+                  <label for="product_name">Website Product Name:</label>
+                  <input type="text" value="{{$product->website_product_name}}" class="form-control" id="website_product_name" placeholder="Enter Webstie Product Name" name="website_product_name">
                 </div>
 
                 <div class="mb-3 mt-3">

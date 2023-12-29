@@ -38,8 +38,13 @@
             <form method="post" enctype="multipart/form-data" action="{{ route('admin.products.store') }}">
                 @csrf
                 <div class="mb-3 mt-3">
-                  <label for="product_name">Product Name:</label>
-                  <input type="text" class="form-control" id="product_name" placeholder="Enter Product Name" name="product_name">
+                  <label for="product_name">Printful Product Name:</label>
+                  <input type="text" class="form-control" id="product_name" placeholder="Enter Printful Product Name" name="product_name">
+                </div>
+
+                <div class="mb-3 mt-3">
+                  <label for="product_name">Website Product Name:</label>
+                  <input type="text" class="form-control" id="product_name" placeholder="Enter Website Product Name" name="product_name">
                 </div>
 
                 <div class="mb-3 mt-3">
