@@ -44,7 +44,7 @@ async function _createProduct(data) {
 }
 
 async function main() {
-    for await (const p of womans.TShirts) {
+    for await (const p of womans.Hoodies) {
         let front_image =
             p.images.find((i) => i.option === "Front")?.image_url || "";
         // if(!image) front_image = p.images.find((i) => i.option === "Front Left").image_url
@@ -85,7 +85,7 @@ async function main() {
             commission: 10,
             supporting_country: "Isreal",
             product_for: "Woman",
-            product_type: "Shirts",
+            product_type: "Hoodies",
             product_sub_type: "",
             front_image,
             front_image_price: 10,
@@ -3598,122 +3598,122 @@ const womans = {
         },
     ],
     Hoodies: [
-        {
-            productName: "Unisex Lightweight Zip Hoodie | Bella + Canvas 3939",
-            price: 33.5,
-            images: [
-                {
-                    placement: "front",
-                    image_url:
-                        "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/front/04_bc3939_onmodel_front_base_whitebg.png?v=1696406294",
-                    background_color: null,
-                    background_image:
-                        "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/front/01_bc3939_onmodel_front_black.png?v=1696406294",
-                    option: "Front",
-                    option_group: "Women's",
-                },
-                {
-                    placement: "back",
-                    image_url:
-                        "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/back/04_bc3939_onmodel_back_base_whitebg.png?v=1696406294",
-                    background_color: null,
-                    background_image:
-                        "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/back/01_bc3939_onmodel_back_black.png?v=1696406294",
-                    option: "Back",
-                    option_group: "Women's",
-                },
-                {
-                    placement: "embroidery_chest_left",
-                    image_url:
-                        "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/front/04_bc3939_onmodel_front_base_whitebg.png?v=1696406294",
-                    background_color: null,
-                    background_image:
-                        "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/front/01_bc3939_onmodel_front_black.png?v=1696406294",
-                    option: "Front",
-                    option_group: "Women's",
-                },
-                {
-                    placement: "embroidery_chest_left",
-                    image_url:
-                        "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/front/embroidery/05_bc3939_onwoman_front_base_whitebg.png?v=1696406294",
-                    background_color: null,
-                    background_image:
-                        "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/front/embroidery/02_bc3939_onwoman_front_solidblack.png?v=1696406294",
-                    option: "Zoomed-in",
-                    option_group: "Women's",
-                },
-                {
-                    placement: "embroidery_wrist_left",
-                    image_url:
-                        "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/front/04_bc3939_onmodel_front_base_whitebg.png?v=1696406294",
-                    background_color: null,
-                    background_image:
-                        "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/front/01_bc3939_onmodel_front_black.png?v=1696406294",
-                    option: "Front",
-                    option_group: "Women's",
-                },
-                {
-                    placement: "embroidery_wrist_right",
-                    image_url:
-                        "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/front/04_bc3939_onmodel_front_base_whitebg.png?v=1696406294",
-                    background_color: null,
-                    background_image:
-                        "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/front/01_bc3939_onmodel_front_black.png?v=1696406294",
-                    option: "Front",
-                    option_group: "Women's",
-                },
-                {
-                    placement: "embroidery_wrist_left",
-                    image_url:
-                        "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/back/04_bc3939_onmodel_back_base_whitebg.png?v=1696406294",
-                    background_color: null,
-                    background_image:
-                        "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/back/01_bc3939_onmodel_back_black.png?v=1696406294",
-                    option: "Back",
-                    option_group: "Women's",
-                },
-                {
-                    placement: "embroidery_wrist_right",
-                    image_url:
-                        "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/back/04_bc3939_onmodel_back_base_whitebg.png?v=1696406294",
-                    background_color: null,
-                    background_image:
-                        "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/back/01_bc3939_onmodel_back_black.png?v=1696406294",
-                    option: "Back",
-                    option_group: "Women's",
-                },
-                {
-                    placement: "embroidery_wrist_left",
-                    image_url:
-                        "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/front/embroidery/05_bc3939_onwoman_front_base_whitebg.png?v=1696406294",
-                    background_color: null,
-                    background_image:
-                        "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/front/embroidery/02_bc3939_onwoman_front_solidblack.png?v=1696406294",
-                    option: "Zoomed-in",
-                    option_group: "Women's",
-                },
-                {
-                    placement: "embroidery_wrist_right",
-                    image_url:
-                        "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/front/embroidery/05_bc3939_onwoman_front_base_whitebg.png?v=1696406294",
-                    background_color: null,
-                    background_image:
-                        "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/front/embroidery/02_bc3939_onwoman_front_solidblack.png?v=1696406294",
-                    option: "Zoomed-in",
-                    option_group: "Women's",
-                },
-                {
-                    placement: "label_outside",
-                    image_url:
-                        "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/back/04_bc3939_onmodel_back_base_whitebg.png?v=1696406294",
-                    background_color: null,
-                    background_image:
-                        "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/back/01_bc3939_onmodel_back_black.png?v=1696406294",
-                    option: "Back",
-                    option_group: "Women's",
-                },
-            ],
-        },
+        // {
+        //     productName: "Unisex Lightweight Zip Hoodie | Bella + Canvas 3939",
+        //     price: 33.5,
+        //     images: [
+        //         {
+        //             placement: "front",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/front/04_bc3939_onmodel_front_base_whitebg.png?v=1696406294",
+        //             background_color: null,
+        //             background_image:
+        //                 "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/front/01_bc3939_onmodel_front_black.png?v=1696406294",
+        //             option: "Front",
+        //             option_group: "Women's",
+        //         },
+        //         {
+        //             placement: "back",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/back/04_bc3939_onmodel_back_base_whitebg.png?v=1696406294",
+        //             background_color: null,
+        //             background_image:
+        //                 "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/back/01_bc3939_onmodel_back_black.png?v=1696406294",
+        //             option: "Back",
+        //             option_group: "Women's",
+        //         },
+        //         {
+        //             placement: "embroidery_chest_left",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/front/04_bc3939_onmodel_front_base_whitebg.png?v=1696406294",
+        //             background_color: null,
+        //             background_image:
+        //                 "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/front/01_bc3939_onmodel_front_black.png?v=1696406294",
+        //             option: "Front",
+        //             option_group: "Women's",
+        //         },
+        //         {
+        //             placement: "embroidery_chest_left",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/front/embroidery/05_bc3939_onwoman_front_base_whitebg.png?v=1696406294",
+        //             background_color: null,
+        //             background_image:
+        //                 "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/front/embroidery/02_bc3939_onwoman_front_solidblack.png?v=1696406294",
+        //             option: "Zoomed-in",
+        //             option_group: "Women's",
+        //         },
+        //         {
+        //             placement: "embroidery_wrist_left",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/front/04_bc3939_onmodel_front_base_whitebg.png?v=1696406294",
+        //             background_color: null,
+        //             background_image:
+        //                 "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/front/01_bc3939_onmodel_front_black.png?v=1696406294",
+        //             option: "Front",
+        //             option_group: "Women's",
+        //         },
+        //         {
+        //             placement: "embroidery_wrist_right",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/front/04_bc3939_onmodel_front_base_whitebg.png?v=1696406294",
+        //             background_color: null,
+        //             background_image:
+        //                 "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/front/01_bc3939_onmodel_front_black.png?v=1696406294",
+        //             option: "Front",
+        //             option_group: "Women's",
+        //         },
+        //         {
+        //             placement: "embroidery_wrist_left",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/back/04_bc3939_onmodel_back_base_whitebg.png?v=1696406294",
+        //             background_color: null,
+        //             background_image:
+        //                 "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/back/01_bc3939_onmodel_back_black.png?v=1696406294",
+        //             option: "Back",
+        //             option_group: "Women's",
+        //         },
+        //         {
+        //             placement: "embroidery_wrist_right",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/back/04_bc3939_onmodel_back_base_whitebg.png?v=1696406294",
+        //             background_color: null,
+        //             background_image:
+        //                 "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/back/01_bc3939_onmodel_back_black.png?v=1696406294",
+        //             option: "Back",
+        //             option_group: "Women's",
+        //         },
+        //         {
+        //             placement: "embroidery_wrist_left",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/front/embroidery/05_bc3939_onwoman_front_base_whitebg.png?v=1696406294",
+        //             background_color: null,
+        //             background_image:
+        //                 "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/front/embroidery/02_bc3939_onwoman_front_solidblack.png?v=1696406294",
+        //             option: "Zoomed-in",
+        //             option_group: "Women's",
+        //         },
+        //         {
+        //             placement: "embroidery_wrist_right",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/front/embroidery/05_bc3939_onwoman_front_base_whitebg.png?v=1696406294",
+        //             background_color: null,
+        //             background_image:
+        //                 "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/front/embroidery/02_bc3939_onwoman_front_solidblack.png?v=1696406294",
+        //             option: "Zoomed-in",
+        //             option_group: "Women's",
+        //         },
+        //         {
+        //             placement: "label_outside",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/back/04_bc3939_onmodel_back_base_whitebg.png?v=1696406294",
+        //             background_color: null,
+        //             background_image:
+        //                 "https://files.cdn.printful.com/m/185-bella-canvas-3939/medium/onmodel/woman/back/01_bc3939_onmodel_back_black.png?v=1696406294",
+        //             option: "Back",
+        //             option_group: "Women's",
+        //         },
+        //     ],
+        // },
         {
             productName: "Unisex Premium Hoodie | Cotton Heritage M2580",
             price: 29.45,
@@ -3999,603 +3999,603 @@ const womans = {
                 },
             ],
         },
-        {
-            productName: "Unisex Heavy Blend Hoodie | Gildan 18500",
-            price: 21.95,
-            images: [
-                {
-                    placement: "front",
-                    image_url:
-                        "https://files.cdn.printful.com/m/g18500/medium/ghost/front/05_gildan18500_ghost_front_base_whitebg.png?v=1700731048",
-                    background_color: "#ffffff",
-                    background_image: null,
-                    option: "Front",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "back",
-                    image_url:
-                        "https://files.cdn.printful.com/m/g18500/medium/ghost/back/05_gildan18500_ghost_back_base_whitebg.png?v=1700731048",
-                    background_color: "#ffffff",
-                    background_image: null,
-                    option: "Back",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "sleeve_left",
-                    image_url:
-                        "https://files.cdn.printful.com/m/g18500/medium/ghost/left/05_gildan18500_ghost_left_base_whitebg.png?v=1701094386",
-                    background_color: "#ffffff",
-                    background_image: null,
-                    option: "Left",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "sleeve_right",
-                    image_url:
-                        "https://files.cdn.printful.com/m/g18500/medium/ghost/right/05_gildan18500_ghost_right_base_whitebg.png?v=1700731048",
-                    background_color: "#ffffff",
-                    background_image: null,
-                    option: "Right",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "embroidery_chest_center",
-                    image_url:
-                        "https://files.cdn.printful.com/m/g18500/medium/ghost/front/zoomed/05_gildan18500_ghost_front_base_whitebg.png?v=1700731048",
-                    background_color: "#ffffff",
-                    background_image: null,
-                    option: "Zoomed-in",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "embroidery_chest_left",
-                    image_url:
-                        "https://files.cdn.printful.com/m/g18500/medium/ghost/front/zoomed/05_gildan18500_ghost_front_base_whitebg.png?v=1700731048",
-                    background_color: "#ffffff",
-                    background_image: null,
-                    option: "Zoomed-in",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "embroidery_wrist_left",
-                    image_url:
-                        "https://files.cdn.printful.com/m/g18500/medium/ghost/left/zoomed/05_gildan18500_ghost_left_base_whitebg.png?v=1700731048",
-                    background_color: "#ffffff",
-                    background_image: null,
-                    option: "Zoomed-in",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "embroidery_wrist_right",
-                    image_url:
-                        "https://files.cdn.printful.com/m/g18500/medium/ghost/right/zoomed/05_gildan18500_ghost_right_base_whitebg.png?v=1700731048",
-                    background_color: "#ffffff",
-                    background_image: null,
-                    option: "Zoomed-in",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "embroidery_chest_center",
-                    image_url:
-                        "https://files.cdn.printful.com/m/g18500/medium/ghost/front/05_gildan18500_ghost_front_base_whitebg.png?v=1700731048",
-                    background_color: "#ffffff",
-                    background_image: null,
-                    option: "Front",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "embroidery_chest_left",
-                    image_url:
-                        "https://files.cdn.printful.com/m/g18500/medium/ghost/front/05_gildan18500_ghost_front_base_whitebg.png?v=1700731048",
-                    background_color: "#ffffff",
-                    background_image: null,
-                    option: "Front",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "label_outside",
-                    image_url:
-                        "https://files.cdn.printful.com/m/g18500/medium/ghost/back/05_gildan18500_ghost_back_base_whitebg.png?v=1700731048",
-                    background_color: "#ffffff",
-                    background_image: null,
-                    option: "Back",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "embroidery_wrist_left",
-                    image_url:
-                        "https://files.cdn.printful.com/m/g18500/medium/ghost/back/05_gildan18500_ghost_back_base_whitebg.png?v=1700731048",
-                    background_color: "#ffffff",
-                    background_image: null,
-                    option: "Back",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "embroidery_wrist_right",
-                    image_url:
-                        "https://files.cdn.printful.com/m/g18500/medium/ghost/back/05_gildan18500_ghost_back_base_whitebg.png?v=1700731048",
-                    background_color: "#ffffff",
-                    background_image: null,
-                    option: "Back",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "sleeve_left",
-                    image_url:
-                        "https://files.cdn.printful.com/m/g18500/medium/ghost/back/05_gildan18500_ghost_back_base_whitebg.png?v=1700731048",
-                    background_color: "#ffffff",
-                    background_image: null,
-                    option: "Back",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "sleeve_right",
-                    image_url:
-                        "https://files.cdn.printful.com/m/g18500/medium/ghost/back/05_gildan18500_ghost_back_base_whitebg.png?v=1700731048",
-                    background_color: "#ffffff",
-                    background_image: null,
-                    option: "Back",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "embroidery_wrist_left",
-                    image_url:
-                        "https://files.cdn.printful.com/m/g18500/medium/ghost/front/05_gildan18500_ghost_front_base_whitebg.png?v=1700731048",
-                    background_color: "#ffffff",
-                    background_image: null,
-                    option: "Front",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "embroidery_wrist_right",
-                    image_url:
-                        "https://files.cdn.printful.com/m/g18500/medium/ghost/front/05_gildan18500_ghost_front_base_whitebg.png?v=1700731048",
-                    background_color: "#ffffff",
-                    background_image: null,
-                    option: "Front",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "sleeve_left",
-                    image_url:
-                        "https://files.cdn.printful.com/m/g18500/medium/ghost/front/05_gildan18500_ghost_front_base_whitebg.png?v=1700731048",
-                    background_color: "#ffffff",
-                    background_image: null,
-                    option: "Front",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "sleeve_right",
-                    image_url:
-                        "https://files.cdn.printful.com/m/g18500/medium/ghost/front/05_gildan18500_ghost_front_base_whitebg.png?v=1700731048",
-                    background_color: "#ffffff",
-                    background_image: null,
-                    option: "Front",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "embroidery_chest_center",
-                    image_url:
-                        "https://files.cdn.printful.com/m/g18500/medium/ghost/left/05_gildan18500_ghost_left_base_whitebg.png?v=1701094387",
-                    background_color: "#ffffff",
-                    background_image: null,
-                    option: "Left",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "embroidery_chest_center",
-                    image_url:
-                        "https://files.cdn.printful.com/m/g18500/medium/ghost/right/05_gildan18500_ghost_right_base_whitebg.png?v=1700731048",
-                    background_color: "#ffffff",
-                    background_image: null,
-                    option: "Right",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "embroidery_chest_left",
-                    image_url:
-                        "https://files.cdn.printful.com/m/g18500/medium/ghost/left/05_gildan18500_ghost_left_base_whitebg.png?v=1701094387",
-                    background_color: "#ffffff",
-                    background_image: null,
-                    option: "Left",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "embroidery_chest_left",
-                    image_url:
-                        "https://files.cdn.printful.com/m/g18500/medium/ghost/right/05_gildan18500_ghost_right_base_whitebg.png?v=1700731048",
-                    background_color: "#ffffff",
-                    background_image: null,
-                    option: "Right",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "embroidery_wrist_left",
-                    image_url:
-                        "https://files.cdn.printful.com/m/g18500/medium/ghost/left/05_gildan18500_ghost_left_base_whitebg.png?v=1701094389",
-                    background_color: "#ffffff",
-                    background_image: null,
-                    option: "Left",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "embroidery_wrist_right",
-                    image_url:
-                        "https://files.cdn.printful.com/m/g18500/medium/ghost/right/05_gildan18500_ghost_right_base_whitebg.png?v=1700731048",
-                    background_color: "#ffffff",
-                    background_image: null,
-                    option: "Right",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "front_dtf",
-                    image_url:
-                        "https://files.cdn.printful.com/m/g18500/medium/ghost/front/05_gildan18500_ghost_front_base_whitebg.png?v=1700731683",
-                    background_color: "#ffffff",
-                    background_image: null,
-                    option: "Front",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "back_dtf",
-                    image_url:
-                        "https://files.cdn.printful.com/m/g18500/medium/ghost/back/05_gildan18500_ghost_back_base_whitebg.png?v=1700731048",
-                    background_color: "#ffffff",
-                    background_image: null,
-                    option: "Back",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "long_sleeve_left_dtf",
-                    image_url:
-                        "https://files.cdn.printful.com/m/g18500/medium/ghost/left/05_gildan18500_ghost_left_base_whitebg.png?v=1701094389",
-                    background_color: "#ffffff",
-                    background_image: null,
-                    option: "Left",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "long_sleeve_right_dtf",
-                    image_url:
-                        "https://files.cdn.printful.com/m/g18500/medium/ghost/right/05_gildan18500_ghost_right_base_whitebg.png?v=1700731761",
-                    background_color: "#ffffff",
-                    background_image: null,
-                    option: "Right",
-                    option_group: "Ghost",
-                },
-            ],
-        },
-        {
-            productName: "Women's Cropped Hoodie | Bella + Canvas 7502",
-            price: 34.5,
-            images: [
-                {
-                    placement: "front",
-                    image_url:
-                        "https://files.cdn.printful.com/m/bc7502/medium/onwoman/front/04_bc7502_onwoman_front_base_whitebg.png?v=1701956506",
-                    background_color: "#0d0d0d",
-                    background_image: null,
-                    option: "Front",
-                    option_group: "Women's",
-                },
-                {
-                    placement: "back",
-                    image_url:
-                        "https://files.cdn.printful.com/m/bc7502/medium/onwoman/back/04_bc7502_onwoman_back_base_whitebg.png?v=1701956506",
-                    background_color: "#0d0d0d",
-                    background_image: null,
-                    option: "Back",
-                    option_group: "Women's",
-                },
-                {
-                    placement: "embroidery_chest_left",
-                    image_url:
-                        "https://files.cdn.printful.com/m/bc7502/medium/onwoman/front/04_bc7502_onwoman_front_base_whitebg.png?v=1701956506",
-                    background_color: "#0d0d0d",
-                    background_image: null,
-                    option: "Front",
-                    option_group: "Women's",
-                },
-                {
-                    placement: "embroidery_chest_left",
-                    image_url:
-                        "https://files.cdn.printful.com/m/bc7502/medium/onwoman/embroidery_chest_left/zoomed/05_bc7502_onwoman_front_base_whitebg.png?v=1701956506",
-                    background_color: "#0d0d0d",
-                    background_image: null,
-                    option: "Zoomed-in",
-                    option_group: "Women's",
-                },
-                {
-                    placement: "embroidery_chest_center",
-                    image_url:
-                        "https://files.cdn.printful.com/m/bc7502/medium/onwoman/front/04_bc7502_onwoman_front_base_whitebg.png?v=1701956506",
-                    background_color: "#0d0d0d",
-                    background_image: null,
-                    option: "Front",
-                    option_group: "Women's",
-                },
-                {
-                    placement: "embroidery_chest_center",
-                    image_url:
-                        "https://files.cdn.printful.com/m/bc7502/medium/onwoman/embroidery_chest_left/zoomed/05_bc7502_onwoman_front_base_whitebg.png?v=1701956506",
-                    background_color: "#0d0d0d",
-                    background_image: null,
-                    option: "Zoomed-in",
-                    option_group: "Women's",
-                },
-                {
-                    placement: "sleeve_left",
-                    image_url:
-                        "https://files.cdn.printful.com/m/bc7502/medium/onwoman/left_template/05_bc7502_onwoman_left_base_whitebg.png?v=1701956506",
-                    background_color: "#0d0d0d",
-                    background_image: null,
-                    option: "Left Template",
-                    option_group: "Women's",
-                },
-                {
-                    placement: "sleeve_left",
-                    image_url:
-                        "https://files.cdn.printful.com/m/bc7502/medium/onwoman/left/04_bc7502_onwoman_left_base_whitebg.png?v=1701956506",
-                    background_color: "#0d0d0d",
-                    background_image: null,
-                    option: "Left",
-                    option_group: "Women's",
-                },
-                {
-                    placement: "sleeve_right",
-                    image_url:
-                        "https://files.cdn.printful.com/m/bc7502/medium/onwoman/right_template/05_bc7502_onwoman_right_base_whitebg.png?v=1701956506",
-                    background_color: "#0d0d0d",
-                    background_image: null,
-                    option: "Right Template",
-                    option_group: "Women's",
-                },
-                {
-                    placement: "sleeve_right",
-                    image_url:
-                        "https://files.cdn.printful.com/m/bc7502/medium/onwoman/right/04_bc7502_onwoman_right_base_whitebg.png?v=1701956506",
-                    background_color: "#0d0d0d",
-                    background_image: null,
-                    option: "Right",
-                    option_group: "Women's",
-                },
-                {
-                    placement: "sleeve_left",
-                    image_url:
-                        "https://files.cdn.printful.com/m/bc7502/medium/onwoman/frontleft/04_bc7502_onwoman_frontleft_base_whitebg.png?v=1701956506",
-                    background_color: "#0d0d0d",
-                    background_image: null,
-                    option: "Left Front",
-                    option_group: "Women's",
-                },
-                {
-                    placement: "sleeve_right",
-                    image_url:
-                        "https://files.cdn.printful.com/m/bc7502/medium/onwoman/frontright/04_bc7502_onwoman_frontright_base_whitebg.png?v=1701956506",
-                    background_color: "#0d0d0d",
-                    background_image: null,
-                    option: "Right Front",
-                    option_group: "Women's",
-                },
-                {
-                    placement: "embroidery_wrist_left",
-                    image_url:
-                        "https://files.cdn.printful.com/m/bc7502/medium/onwoman/left/04_bc7502_onwoman_left_base_whitebg.png?v=1701956506",
-                    background_color: "#0d0d0d",
-                    background_image: null,
-                    option: "Left",
-                    option_group: "Women's",
-                },
-                {
-                    placement: "embroidery_wrist_left",
-                    image_url:
-                        "https://files.cdn.printful.com/m/bc7502/medium/onwoman/frontleft/04_bc7502_onwoman_frontleft_base_whitebg.png?v=1701956506",
-                    background_color: "#0d0d0d",
-                    background_image: null,
-                    option: "Left Front",
-                    option_group: "Women's",
-                },
-                {
-                    placement: "embroidery_wrist_right",
-                    image_url:
-                        "https://files.cdn.printful.com/m/bc7502/medium/onwoman/right/04_bc7502_onwoman_right_base_whitebg.png?v=1701956506",
-                    background_color: "#0d0d0d",
-                    background_image: null,
-                    option: "Right",
-                    option_group: "Women's",
-                },
-                {
-                    placement: "embroidery_wrist_right",
-                    image_url:
-                        "https://files.cdn.printful.com/m/bc7502/medium/onwoman/frontright/04_bc7502_onwoman_frontright_base_whitebg.png?v=1701956506",
-                    background_color: "#0d0d0d",
-                    background_image: null,
-                    option: "Right Front",
-                    option_group: "Women's",
-                },
-                {
-                    placement: "back",
-                    image_url:
-                        "https://files.cdn.printful.com/m/bc7502/medium/ghost/back/05_bc7502_ghost_back_base_whitebg.png?v=1702387391",
-                    background_color: "#0d0d0d",
-                    background_image: null,
-                    option: "Back",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "front",
-                    image_url:
-                        "https://files.cdn.printful.com/m/bc7502/medium/ghost/front/05_bc7502_ghost_front_base_whitebg.png?v=1702387395",
-                    background_color: "#0d0d0d",
-                    background_image: null,
-                    option: "Front",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "sleeve_left",
-                    image_url:
-                        "https://files.cdn.printful.com/m/bc7502/medium/ghost/left/05_bc7502_ghost_left_base_whitebg.png?v=1702387398",
-                    background_color: "#0d0d0d",
-                    background_image: null,
-                    option: "Left",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "sleeve_right",
-                    image_url:
-                        "https://files.cdn.printful.com/m/bc7502/medium/ghost/right/05_bc7502_ghost_right_base_whitebg.png?v=1702387400",
-                    background_color: "#0d0d0d",
-                    background_image: null,
-                    option: "Right",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "embroidery_wrist_right",
-                    image_url:
-                        "https://files.cdn.printful.com/m/bc7502/medium/ghost/right/05_bc7502_ghost_right_base_whitebg.png?v=1702387400",
-                    background_color: "#0d0d0d",
-                    background_image: null,
-                    option: "Right",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "embroidery_wrist_right",
-                    image_url:
-                        "https://files.cdn.printful.com/m/bc7502/medium/ghost/left/05_bc7502_ghost_left_base_whitebg.png?v=1702387398",
-                    background_color: "#0d0d0d",
-                    background_image: null,
-                    option: "Left",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "embroidery_chest_left",
-                    image_url:
-                        "https://files.cdn.printful.com/m/bc7502/medium/ghost/front/05_bc7502_ghost_front_base_whitebg.png?v=1702387395",
-                    background_color: "#0d0d0d",
-                    background_image: null,
-                    option: "Front",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "embroidery_chest_center",
-                    image_url:
-                        "https://files.cdn.printful.com/m/bc7502/medium/ghost/front/05_bc7502_ghost_front_base_whitebg.png?v=1702387395",
-                    background_color: "#0d0d0d",
-                    background_image: null,
-                    option: "Front",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "sleeve_left",
-                    image_url:
-                        "https://files.cdn.printful.com/m/bc7502/medium/ghost/back/05_bc7502_ghost_back_base_whitebg.png?v=1702387392",
-                    background_color: "#0d0d0d",
-                    background_image: null,
-                    option: "Back",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "sleeve_right",
-                    image_url:
-                        "https://files.cdn.printful.com/m/bc7502/medium/ghost/back/05_bc7502_ghost_back_base_whitebg.png?v=1702387392",
-                    background_color: "#0d0d0d",
-                    background_image: null,
-                    option: "Back",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "embroidery_wrist_left",
-                    image_url:
-                        "https://files.cdn.printful.com/m/bc7502/medium/ghost/back/05_bc7502_ghost_back_base_whitebg.png?v=1702387392",
-                    background_color: "#0d0d0d",
-                    background_image: null,
-                    option: "Back",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "embroidery_wrist_right",
-                    image_url:
-                        "https://files.cdn.printful.com/m/bc7502/medium/ghost/back/05_bc7502_ghost_back_base_whitebg.png?v=1702387392",
-                    background_color: "#0d0d0d",
-                    background_image: null,
-                    option: "Back",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "sleeve_left",
-                    image_url:
-                        "https://files.cdn.printful.com/m/bc7502/medium/ghost/front/05_bc7502_ghost_front_base_whitebg.png?v=1702387395",
-                    background_color: "#0d0d0d",
-                    background_image: null,
-                    option: "Front",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "sleeve_right",
-                    image_url:
-                        "https://files.cdn.printful.com/m/bc7502/medium/ghost/front/05_bc7502_ghost_front_base_whitebg.png?v=1702387395",
-                    background_color: "#0d0d0d",
-                    background_image: null,
-                    option: "Front",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "embroidery_wrist_left",
-                    image_url:
-                        "https://files.cdn.printful.com/m/bc7502/medium/ghost/front/05_bc7502_ghost_front_base_whitebg.png?v=1702387395",
-                    background_color: "#0d0d0d",
-                    background_image: null,
-                    option: "Front",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "embroidery_wrist_right",
-                    image_url:
-                        "https://files.cdn.printful.com/m/bc7502/medium/ghost/front/05_bc7502_ghost_front_base_whitebg.png?v=1702387395",
-                    background_color: "#0d0d0d",
-                    background_image: null,
-                    option: "Front",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "front",
-                    image_url:
-                        "https://files.cdn.printful.com/m/bc7502/medium/ghost/left/05_bc7502_ghost_left_base_whitebg.png?v=1702387398",
-                    background_color: "#0d0d0d",
-                    background_image: null,
-                    option: "Left",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "back",
-                    image_url:
-                        "https://files.cdn.printful.com/m/bc7502/medium/ghost/left/05_bc7502_ghost_left_base_whitebg.png?v=1702387398",
-                    background_color: "#0d0d0d",
-                    background_image: null,
-                    option: "Left",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "back",
-                    image_url:
-                        "https://files.cdn.printful.com/m/bc7502/medium/ghost/right/05_bc7502_ghost_right_base_whitebg.png?v=1702387400",
-                    background_color: "#0d0d0d",
-                    background_image: null,
-                    option: "Right",
-                    option_group: "Ghost",
-                },
-                {
-                    placement: "front",
-                    image_url:
-                        "https://files.cdn.printful.com/m/bc7502/medium/ghost/right/05_bc7502_ghost_right_base_whitebg.png?v=1702387400",
-                    background_color: "#0d0d0d",
-                    background_image: null,
-                    option: "Right",
-                    option_group: "Ghost",
-                },
-            ],
-        },
+        // {
+        //     productName: "Unisex Heavy Blend Hoodie | Gildan 18500",
+        //     price: 21.95,
+        //     images: [
+        //         {
+        //             placement: "front",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/g18500/medium/ghost/front/05_gildan18500_ghost_front_base_whitebg.png?v=1700731048",
+        //             background_color: "#ffffff",
+        //             background_image: null,
+        //             option: "Front",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "back",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/g18500/medium/ghost/back/05_gildan18500_ghost_back_base_whitebg.png?v=1700731048",
+        //             background_color: "#ffffff",
+        //             background_image: null,
+        //             option: "Back",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "sleeve_left",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/g18500/medium/ghost/left/05_gildan18500_ghost_left_base_whitebg.png?v=1701094386",
+        //             background_color: "#ffffff",
+        //             background_image: null,
+        //             option: "Left",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "sleeve_right",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/g18500/medium/ghost/right/05_gildan18500_ghost_right_base_whitebg.png?v=1700731048",
+        //             background_color: "#ffffff",
+        //             background_image: null,
+        //             option: "Right",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "embroidery_chest_center",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/g18500/medium/ghost/front/zoomed/05_gildan18500_ghost_front_base_whitebg.png?v=1700731048",
+        //             background_color: "#ffffff",
+        //             background_image: null,
+        //             option: "Zoomed-in",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "embroidery_chest_left",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/g18500/medium/ghost/front/zoomed/05_gildan18500_ghost_front_base_whitebg.png?v=1700731048",
+        //             background_color: "#ffffff",
+        //             background_image: null,
+        //             option: "Zoomed-in",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "embroidery_wrist_left",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/g18500/medium/ghost/left/zoomed/05_gildan18500_ghost_left_base_whitebg.png?v=1700731048",
+        //             background_color: "#ffffff",
+        //             background_image: null,
+        //             option: "Zoomed-in",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "embroidery_wrist_right",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/g18500/medium/ghost/right/zoomed/05_gildan18500_ghost_right_base_whitebg.png?v=1700731048",
+        //             background_color: "#ffffff",
+        //             background_image: null,
+        //             option: "Zoomed-in",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "embroidery_chest_center",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/g18500/medium/ghost/front/05_gildan18500_ghost_front_base_whitebg.png?v=1700731048",
+        //             background_color: "#ffffff",
+        //             background_image: null,
+        //             option: "Front",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "embroidery_chest_left",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/g18500/medium/ghost/front/05_gildan18500_ghost_front_base_whitebg.png?v=1700731048",
+        //             background_color: "#ffffff",
+        //             background_image: null,
+        //             option: "Front",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "label_outside",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/g18500/medium/ghost/back/05_gildan18500_ghost_back_base_whitebg.png?v=1700731048",
+        //             background_color: "#ffffff",
+        //             background_image: null,
+        //             option: "Back",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "embroidery_wrist_left",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/g18500/medium/ghost/back/05_gildan18500_ghost_back_base_whitebg.png?v=1700731048",
+        //             background_color: "#ffffff",
+        //             background_image: null,
+        //             option: "Back",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "embroidery_wrist_right",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/g18500/medium/ghost/back/05_gildan18500_ghost_back_base_whitebg.png?v=1700731048",
+        //             background_color: "#ffffff",
+        //             background_image: null,
+        //             option: "Back",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "sleeve_left",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/g18500/medium/ghost/back/05_gildan18500_ghost_back_base_whitebg.png?v=1700731048",
+        //             background_color: "#ffffff",
+        //             background_image: null,
+        //             option: "Back",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "sleeve_right",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/g18500/medium/ghost/back/05_gildan18500_ghost_back_base_whitebg.png?v=1700731048",
+        //             background_color: "#ffffff",
+        //             background_image: null,
+        //             option: "Back",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "embroidery_wrist_left",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/g18500/medium/ghost/front/05_gildan18500_ghost_front_base_whitebg.png?v=1700731048",
+        //             background_color: "#ffffff",
+        //             background_image: null,
+        //             option: "Front",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "embroidery_wrist_right",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/g18500/medium/ghost/front/05_gildan18500_ghost_front_base_whitebg.png?v=1700731048",
+        //             background_color: "#ffffff",
+        //             background_image: null,
+        //             option: "Front",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "sleeve_left",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/g18500/medium/ghost/front/05_gildan18500_ghost_front_base_whitebg.png?v=1700731048",
+        //             background_color: "#ffffff",
+        //             background_image: null,
+        //             option: "Front",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "sleeve_right",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/g18500/medium/ghost/front/05_gildan18500_ghost_front_base_whitebg.png?v=1700731048",
+        //             background_color: "#ffffff",
+        //             background_image: null,
+        //             option: "Front",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "embroidery_chest_center",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/g18500/medium/ghost/left/05_gildan18500_ghost_left_base_whitebg.png?v=1701094387",
+        //             background_color: "#ffffff",
+        //             background_image: null,
+        //             option: "Left",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "embroidery_chest_center",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/g18500/medium/ghost/right/05_gildan18500_ghost_right_base_whitebg.png?v=1700731048",
+        //             background_color: "#ffffff",
+        //             background_image: null,
+        //             option: "Right",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "embroidery_chest_left",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/g18500/medium/ghost/left/05_gildan18500_ghost_left_base_whitebg.png?v=1701094387",
+        //             background_color: "#ffffff",
+        //             background_image: null,
+        //             option: "Left",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "embroidery_chest_left",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/g18500/medium/ghost/right/05_gildan18500_ghost_right_base_whitebg.png?v=1700731048",
+        //             background_color: "#ffffff",
+        //             background_image: null,
+        //             option: "Right",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "embroidery_wrist_left",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/g18500/medium/ghost/left/05_gildan18500_ghost_left_base_whitebg.png?v=1701094389",
+        //             background_color: "#ffffff",
+        //             background_image: null,
+        //             option: "Left",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "embroidery_wrist_right",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/g18500/medium/ghost/right/05_gildan18500_ghost_right_base_whitebg.png?v=1700731048",
+        //             background_color: "#ffffff",
+        //             background_image: null,
+        //             option: "Right",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "front_dtf",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/g18500/medium/ghost/front/05_gildan18500_ghost_front_base_whitebg.png?v=1700731683",
+        //             background_color: "#ffffff",
+        //             background_image: null,
+        //             option: "Front",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "back_dtf",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/g18500/medium/ghost/back/05_gildan18500_ghost_back_base_whitebg.png?v=1700731048",
+        //             background_color: "#ffffff",
+        //             background_image: null,
+        //             option: "Back",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "long_sleeve_left_dtf",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/g18500/medium/ghost/left/05_gildan18500_ghost_left_base_whitebg.png?v=1701094389",
+        //             background_color: "#ffffff",
+        //             background_image: null,
+        //             option: "Left",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "long_sleeve_right_dtf",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/g18500/medium/ghost/right/05_gildan18500_ghost_right_base_whitebg.png?v=1700731761",
+        //             background_color: "#ffffff",
+        //             background_image: null,
+        //             option: "Right",
+        //             option_group: "Ghost",
+        //         },
+        //     ],
+        // },
+        // {
+        //     productName: "Women's Cropped Hoodie | Bella + Canvas 7502",
+        //     price: 34.5,
+        //     images: [
+        //         {
+        //             placement: "front",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/bc7502/medium/onwoman/front/04_bc7502_onwoman_front_base_whitebg.png?v=1701956506",
+        //             background_color: "#0d0d0d",
+        //             background_image: null,
+        //             option: "Front",
+        //             option_group: "Women's",
+        //         },
+        //         {
+        //             placement: "back",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/bc7502/medium/onwoman/back/04_bc7502_onwoman_back_base_whitebg.png?v=1701956506",
+        //             background_color: "#0d0d0d",
+        //             background_image: null,
+        //             option: "Back",
+        //             option_group: "Women's",
+        //         },
+        //         {
+        //             placement: "embroidery_chest_left",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/bc7502/medium/onwoman/front/04_bc7502_onwoman_front_base_whitebg.png?v=1701956506",
+        //             background_color: "#0d0d0d",
+        //             background_image: null,
+        //             option: "Front",
+        //             option_group: "Women's",
+        //         },
+        //         {
+        //             placement: "embroidery_chest_left",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/bc7502/medium/onwoman/embroidery_chest_left/zoomed/05_bc7502_onwoman_front_base_whitebg.png?v=1701956506",
+        //             background_color: "#0d0d0d",
+        //             background_image: null,
+        //             option: "Zoomed-in",
+        //             option_group: "Women's",
+        //         },
+        //         {
+        //             placement: "embroidery_chest_center",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/bc7502/medium/onwoman/front/04_bc7502_onwoman_front_base_whitebg.png?v=1701956506",
+        //             background_color: "#0d0d0d",
+        //             background_image: null,
+        //             option: "Front",
+        //             option_group: "Women's",
+        //         },
+        //         {
+        //             placement: "embroidery_chest_center",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/bc7502/medium/onwoman/embroidery_chest_left/zoomed/05_bc7502_onwoman_front_base_whitebg.png?v=1701956506",
+        //             background_color: "#0d0d0d",
+        //             background_image: null,
+        //             option: "Zoomed-in",
+        //             option_group: "Women's",
+        //         },
+        //         {
+        //             placement: "sleeve_left",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/bc7502/medium/onwoman/left_template/05_bc7502_onwoman_left_base_whitebg.png?v=1701956506",
+        //             background_color: "#0d0d0d",
+        //             background_image: null,
+        //             option: "Left Template",
+        //             option_group: "Women's",
+        //         },
+        //         {
+        //             placement: "sleeve_left",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/bc7502/medium/onwoman/left/04_bc7502_onwoman_left_base_whitebg.png?v=1701956506",
+        //             background_color: "#0d0d0d",
+        //             background_image: null,
+        //             option: "Left",
+        //             option_group: "Women's",
+        //         },
+        //         {
+        //             placement: "sleeve_right",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/bc7502/medium/onwoman/right_template/05_bc7502_onwoman_right_base_whitebg.png?v=1701956506",
+        //             background_color: "#0d0d0d",
+        //             background_image: null,
+        //             option: "Right Template",
+        //             option_group: "Women's",
+        //         },
+        //         {
+        //             placement: "sleeve_right",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/bc7502/medium/onwoman/right/04_bc7502_onwoman_right_base_whitebg.png?v=1701956506",
+        //             background_color: "#0d0d0d",
+        //             background_image: null,
+        //             option: "Right",
+        //             option_group: "Women's",
+        //         },
+        //         {
+        //             placement: "sleeve_left",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/bc7502/medium/onwoman/frontleft/04_bc7502_onwoman_frontleft_base_whitebg.png?v=1701956506",
+        //             background_color: "#0d0d0d",
+        //             background_image: null,
+        //             option: "Left Front",
+        //             option_group: "Women's",
+        //         },
+        //         {
+        //             placement: "sleeve_right",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/bc7502/medium/onwoman/frontright/04_bc7502_onwoman_frontright_base_whitebg.png?v=1701956506",
+        //             background_color: "#0d0d0d",
+        //             background_image: null,
+        //             option: "Right Front",
+        //             option_group: "Women's",
+        //         },
+        //         {
+        //             placement: "embroidery_wrist_left",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/bc7502/medium/onwoman/left/04_bc7502_onwoman_left_base_whitebg.png?v=1701956506",
+        //             background_color: "#0d0d0d",
+        //             background_image: null,
+        //             option: "Left",
+        //             option_group: "Women's",
+        //         },
+        //         {
+        //             placement: "embroidery_wrist_left",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/bc7502/medium/onwoman/frontleft/04_bc7502_onwoman_frontleft_base_whitebg.png?v=1701956506",
+        //             background_color: "#0d0d0d",
+        //             background_image: null,
+        //             option: "Left Front",
+        //             option_group: "Women's",
+        //         },
+        //         {
+        //             placement: "embroidery_wrist_right",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/bc7502/medium/onwoman/right/04_bc7502_onwoman_right_base_whitebg.png?v=1701956506",
+        //             background_color: "#0d0d0d",
+        //             background_image: null,
+        //             option: "Right",
+        //             option_group: "Women's",
+        //         },
+        //         {
+        //             placement: "embroidery_wrist_right",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/bc7502/medium/onwoman/frontright/04_bc7502_onwoman_frontright_base_whitebg.png?v=1701956506",
+        //             background_color: "#0d0d0d",
+        //             background_image: null,
+        //             option: "Right Front",
+        //             option_group: "Women's",
+        //         },
+        //         {
+        //             placement: "back",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/bc7502/medium/ghost/back/05_bc7502_ghost_back_base_whitebg.png?v=1702387391",
+        //             background_color: "#0d0d0d",
+        //             background_image: null,
+        //             option: "Back",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "front",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/bc7502/medium/ghost/front/05_bc7502_ghost_front_base_whitebg.png?v=1702387395",
+        //             background_color: "#0d0d0d",
+        //             background_image: null,
+        //             option: "Front",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "sleeve_left",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/bc7502/medium/ghost/left/05_bc7502_ghost_left_base_whitebg.png?v=1702387398",
+        //             background_color: "#0d0d0d",
+        //             background_image: null,
+        //             option: "Left",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "sleeve_right",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/bc7502/medium/ghost/right/05_bc7502_ghost_right_base_whitebg.png?v=1702387400",
+        //             background_color: "#0d0d0d",
+        //             background_image: null,
+        //             option: "Right",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "embroidery_wrist_right",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/bc7502/medium/ghost/right/05_bc7502_ghost_right_base_whitebg.png?v=1702387400",
+        //             background_color: "#0d0d0d",
+        //             background_image: null,
+        //             option: "Right",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "embroidery_wrist_right",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/bc7502/medium/ghost/left/05_bc7502_ghost_left_base_whitebg.png?v=1702387398",
+        //             background_color: "#0d0d0d",
+        //             background_image: null,
+        //             option: "Left",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "embroidery_chest_left",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/bc7502/medium/ghost/front/05_bc7502_ghost_front_base_whitebg.png?v=1702387395",
+        //             background_color: "#0d0d0d",
+        //             background_image: null,
+        //             option: "Front",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "embroidery_chest_center",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/bc7502/medium/ghost/front/05_bc7502_ghost_front_base_whitebg.png?v=1702387395",
+        //             background_color: "#0d0d0d",
+        //             background_image: null,
+        //             option: "Front",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "sleeve_left",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/bc7502/medium/ghost/back/05_bc7502_ghost_back_base_whitebg.png?v=1702387392",
+        //             background_color: "#0d0d0d",
+        //             background_image: null,
+        //             option: "Back",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "sleeve_right",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/bc7502/medium/ghost/back/05_bc7502_ghost_back_base_whitebg.png?v=1702387392",
+        //             background_color: "#0d0d0d",
+        //             background_image: null,
+        //             option: "Back",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "embroidery_wrist_left",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/bc7502/medium/ghost/back/05_bc7502_ghost_back_base_whitebg.png?v=1702387392",
+        //             background_color: "#0d0d0d",
+        //             background_image: null,
+        //             option: "Back",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "embroidery_wrist_right",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/bc7502/medium/ghost/back/05_bc7502_ghost_back_base_whitebg.png?v=1702387392",
+        //             background_color: "#0d0d0d",
+        //             background_image: null,
+        //             option: "Back",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "sleeve_left",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/bc7502/medium/ghost/front/05_bc7502_ghost_front_base_whitebg.png?v=1702387395",
+        //             background_color: "#0d0d0d",
+        //             background_image: null,
+        //             option: "Front",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "sleeve_right",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/bc7502/medium/ghost/front/05_bc7502_ghost_front_base_whitebg.png?v=1702387395",
+        //             background_color: "#0d0d0d",
+        //             background_image: null,
+        //             option: "Front",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "embroidery_wrist_left",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/bc7502/medium/ghost/front/05_bc7502_ghost_front_base_whitebg.png?v=1702387395",
+        //             background_color: "#0d0d0d",
+        //             background_image: null,
+        //             option: "Front",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "embroidery_wrist_right",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/bc7502/medium/ghost/front/05_bc7502_ghost_front_base_whitebg.png?v=1702387395",
+        //             background_color: "#0d0d0d",
+        //             background_image: null,
+        //             option: "Front",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "front",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/bc7502/medium/ghost/left/05_bc7502_ghost_left_base_whitebg.png?v=1702387398",
+        //             background_color: "#0d0d0d",
+        //             background_image: null,
+        //             option: "Left",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "back",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/bc7502/medium/ghost/left/05_bc7502_ghost_left_base_whitebg.png?v=1702387398",
+        //             background_color: "#0d0d0d",
+        //             background_image: null,
+        //             option: "Left",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "back",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/bc7502/medium/ghost/right/05_bc7502_ghost_right_base_whitebg.png?v=1702387400",
+        //             background_color: "#0d0d0d",
+        //             background_image: null,
+        //             option: "Right",
+        //             option_group: "Ghost",
+        //         },
+        //         {
+        //             placement: "front",
+        //             image_url:
+        //                 "https://files.cdn.printful.com/m/bc7502/medium/ghost/right/05_bc7502_ghost_right_base_whitebg.png?v=1702387400",
+        //             background_color: "#0d0d0d",
+        //             background_image: null,
+        //             option: "Right",
+        //             option_group: "Ghost",
+        //         },
+        //     ],
+        // },
     ],
 };
 

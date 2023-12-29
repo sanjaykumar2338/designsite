@@ -42272,6 +42272,150 @@ const allProductsImages = [
             {
                 placement: "leg_front_left",
                 image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/flat/front/05_chm7580_flat_front_base_whitebg.png?v=1643177299",
+                background_color: "#141414",
+                background_image: null,
+                option: "Front Left Leg",
+                option_group: "Flat",
+            },
+            {
+                placement: "leg_front_right",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/flat/front/05_chm7580_flat_front_base_whitebg.png?v=1643177394",
+                background_color: "#141414",
+                background_image: null,
+                option: "Front Right Leg",
+                option_group: "Flat",
+            },
+            {
+                placement: "leg_back_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/flat/back/05_chm7580_flat_back_base_whitebg.png?v=1643176959",
+                background_color: "#141414",
+                background_image: null,
+                option: "Back Left Leg",
+                option_group: "Flat",
+            },
+            {
+                placement: "leg_back_right",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/flat/back/05_chm7580_flat_back_base_whitebg.png?v=1643177005",
+                background_color: "#141414",
+                background_image: null,
+                option: "Back Right Leg",
+                option_group: "Flat",
+            },
+            {
+                placement: "pocket",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/flat/back/zoomed/05_chm7580_flat_back_base_whitebg.png?v=1643177428",
+                background_color: "#141414",
+                background_image: null,
+                option: "Pocket",
+                option_group: "Flat",
+            },
+            {
+                placement: "leg_front_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/flat/front/05_chm7580_flat_front_base_whitebg.png?v=1646228343",
+                background_color: "#141414",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat",
+            },
+            {
+                placement: "leg_front_right",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/flat/front/05_chm7580_flat_front_base_whitebg.png?v=1646228359",
+                background_color: "#141414",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat",
+            },
+            {
+                placement: "leg_back_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/flat/back/05_chm7580_flat_back_base_whitebg.png?v=1646228265",
+                background_color: "#141414",
+                background_image: null,
+                option: "Back",
+                option_group: "Flat",
+            },
+            {
+                placement: "leg_back_right",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/flat/back/05_chm7580_flat_back_base_whitebg.png?v=1646228281",
+                background_color: "#141414",
+                background_image: null,
+                option: "Back",
+                option_group: "Flat",
+            },
+            {
+                placement: "pocket",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/flat/back/05_chm7580_flat_back_base_whitebg.png?v=1646228297",
+                background_color: "#141414",
+                background_image: null,
+                option: "Back",
+                option_group: "Flat",
+            },
+            {
+                placement: "pocket",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/flat/back/zoomed/05_chm7580_flat_back_base_whitebg.png?v=1646228452",
+                background_color: "#141414",
+                background_image: null,
+                option: "Zoomed-in",
+                option_group: "Flat",
+            },
+            {
+                placement: "leg_front_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/flat/frontleft/05_chm7580_flat_frontleft_base_whitebg.png?v=1646228378",
+                background_color: "#141414",
+                background_image: null,
+                option: "Front Left",
+                option_group: "Flat",
+            },
+            {
+                placement: "leg_front_right",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/flat/frontright/05_chm7580_flat_frontright_base_whitebg.png?v=1646228398",
+                background_color: "#141414",
+                background_image: null,
+                option: "Front Right",
+                option_group: "Flat",
+            },
+            {
+                placement: "embroidery_apparel_front",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/flat/front/05_chm7580_flat_front_base_whitebg.png?v=1646228314",
+                background_color: "#141414",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat",
+            },
+            {
+                placement: "embroidery_apparel_front",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/flat/front/zoomed/05_chm7580_flat_front_base_whitebg.png?v=1643177092",
+                background_color: "#141414",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat",
+            },
+            {
+                placement: "embroidery_apparel_front",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/flat/front/zoomed/05_chm7580_flat_front_base_whitebg.png?v=1646228431",
+                background_color: "#141414",
+                background_image: null,
+                option: "Zoomed-in",
+                option_group: "Flat",
+            },
+            {
+                placement: "leg_front_left",
+                image_url:
                     "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onman/front/05_chm7580_onman_front_base_whitebg.png?v=1646227809",
                 background_color: "#141414",
                 background_image: null,
@@ -42358,6 +42502,420 @@ const allProductsImages = [
                 background_image: null,
                 option: "Front",
                 option_group: "Men's",
+            },
+            {
+                placement: "leg_front_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onman/front/zoomed/05_chm7580_onman_front_base_whitebg.png?v=1646228154",
+                background_color: "#141414",
+                background_image: null,
+                option: "Front",
+                option_group: "Men's 2",
+            },
+            {
+                placement: "leg_front_right",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onman/front/zoomed/05_chm7580_onman_front_base_whitebg.png?v=1646228173",
+                background_color: "#141414",
+                background_image: null,
+                option: "Front",
+                option_group: "Men's 2",
+            },
+            {
+                placement: "leg_back_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onman/back/zoomed/05_chm7580_onman_back_base_whitebg.png?v=1680250971",
+                background_color: "#141414",
+                background_image: null,
+                option: "Back",
+                option_group: "Men's 2",
+            },
+            {
+                placement: "leg_back_right",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onman/back/zoomed/05_chm7580_onman_back_base_whitebg.png?v=1680250976",
+                background_color: "#141414",
+                background_image: null,
+                option: "Back",
+                option_group: "Men's 2",
+            },
+            {
+                placement: "pocket",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onman/back/zoomed/05_chm7580_onman_back_base_whitebg.png?v=1680250980",
+                background_color: "#141414",
+                background_image: null,
+                option: "Back",
+                option_group: "Men's 2",
+            },
+            {
+                placement: "leg_front_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onman/left/zoomed/05_chm7580_onman_left_base_whitebg.png?v=1646228192",
+                background_color: "#141414",
+                background_image: null,
+                option: "Left",
+                option_group: "Men's 2",
+            },
+            {
+                placement: "leg_front_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onman/frontleft/zoomed/05_chm7580_onman_frontleft_base_whitebg.png?v=1646228210",
+                background_color: "#141414",
+                background_image: null,
+                option: "Left Front",
+                option_group: "Men's 2",
+            },
+            {
+                placement: "leg_back_right",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onman/right/zoomed/05_chm7580_onman_right_base_whitebg.png?v=1680250993",
+                background_color: "#141414",
+                background_image: null,
+                option: "Right",
+                option_group: "Men's 2",
+            },
+            {
+                placement: "leg_front_right",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onman/frontright/zoomed/05_chm7580_onman_frontright_base_whitebg.png?v=1680250999",
+                background_color: "#141414",
+                background_image: null,
+                option: "Right Front",
+                option_group: "Men's 2",
+            },
+            {
+                placement: "embroidery_apparel_front",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onman/front/zoomed/05_chm7580_onman_front_base_whitebg.png?v=1646228136",
+                background_color: "#141414",
+                background_image: null,
+                option: "Front",
+                option_group: "Men's 2",
+            },
+            {
+                placement: "leg_front_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onman_2/front/05_chm7580_onman_front_base_whitebg.png?v=1646228607",
+                background_color: "#141414",
+                background_image: null,
+                option: "Front",
+                option_group: "Men's 3",
+            },
+            {
+                placement: "leg_front_right",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onman_2/front/05_chm7580_onman_front_base_whitebg.png?v=1646228636",
+                background_color: "#141414",
+                background_image: null,
+                option: "Front",
+                option_group: "Men's 3",
+            },
+            {
+                placement: "leg_back_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onman_2/back/05_chm7580_onman_back_base_whitebg.png?v=1680251012",
+                background_color: "#141414",
+                background_image: null,
+                option: "Back",
+                option_group: "Men's 3",
+            },
+            {
+                placement: "leg_back_right",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onman_2/back/05_chm7580_onman_back_base_whitebg.png?v=1680251016",
+                background_color: "#141414",
+                background_image: null,
+                option: "Back",
+                option_group: "Men's 3",
+            },
+            {
+                placement: "pocket",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onman_2/back/05_chm7580_onman_back_base_whitebg.png?v=1680251021",
+                background_color: "#141414",
+                background_image: null,
+                option: "Back",
+                option_group: "Men's 3",
+            },
+            {
+                placement: "leg_front_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onman_2/frontleft/05_chm7580_onman_frontleft_base_whitebg.png?v=1646228664",
+                background_color: "#141414",
+                background_image: null,
+                option: "Left Front",
+                option_group: "Men's 3",
+            },
+            {
+                placement: "leg_front_right",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onman_2/frontright/05_chm7580_onman_frontlright_base_whitebg.png?v=1646228691",
+                background_color: "#141414",
+                background_image: null,
+                option: "Right Front",
+                option_group: "Men's 3",
+            },
+            {
+                placement: "embroidery_apparel_front",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onman_2/front/05_chm7580_onman_front_base_whitebg.png?v=1646228580",
+                background_color: "#141414",
+                background_image: null,
+                option: "Front",
+                option_group: "Men's 3",
+            },
+            {
+                placement: "leg_front_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onman_2/front/zoomed/05_chm7580_onman_front_base_whitebg.png?v=1646228873",
+                background_color: "#141414",
+                background_image: null,
+                option: "Front",
+                option_group: "Men's 4",
+            },
+            {
+                placement: "leg_front_right",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onman_2/front/zoomed/05_chm7580_onman_front_base_whitebg.png?v=1646228901",
+                background_color: "#141414",
+                background_image: null,
+                option: "Front",
+                option_group: "Men's 4",
+            },
+            {
+                placement: "leg_back_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onman_2/back/zoomed/05_chm7580_onman_back_base_whitebg.png?v=1680251032",
+                background_color: "#141414",
+                background_image: null,
+                option: "Back",
+                option_group: "Men's 4",
+            },
+            {
+                placement: "leg_back_right",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onman_2/back/zoomed/05_chm7580_onman_back_base_whitebg.png?v=1680251037",
+                background_color: "#141414",
+                background_image: null,
+                option: "Back",
+                option_group: "Men's 4",
+            },
+            {
+                placement: "pocket",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onman_2/back/zoomed/05_chm7580_onman_back_base_whitebg.png?v=1680251041",
+                background_color: "#141414",
+                background_image: null,
+                option: "Back",
+                option_group: "Men's 4",
+            },
+            {
+                placement: "leg_front_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onman_2/frontleft/zoomed/05_chm7580_onman_frontleft_base_whitebg.png?v=1646228929",
+                background_color: "#141414",
+                background_image: null,
+                option: "Left Front",
+                option_group: "Men's 4",
+            },
+            {
+                placement: "leg_front_right",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onman_2/frontright/zoomed/05_chm7580_onman_frontlright_base_whitebg.png?v=1646228958",
+                background_color: "#141414",
+                background_image: null,
+                option: "Right Front",
+                option_group: "Men's 4",
+            },
+            {
+                placement: "embroidery_apparel_front",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onman_2/front/zoomed/05_chm7580_onman_front_base_whitebg.png?v=1646228846",
+                background_color: "#141414",
+                background_image: null,
+                option: "Front",
+                option_group: "Men's 4",
+            },
+            {
+                placement: "leg_front_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onwoman/front/05_chm7580_onwoman_front_base_whitebg.png?v=1646229117",
+                background_color: "#141414",
+                background_image: null,
+                option: "Front",
+                option_group: "Women's",
+            },
+            {
+                placement: "leg_front_right",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onwoman/front/05_chm7580_onwoman_front_base_whitebg.png?v=1646229145",
+                background_color: "#141414",
+                background_image: null,
+                option: "Front",
+                option_group: "Women's",
+            },
+            {
+                placement: "leg_back_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onwoman/back/05_chm7580_onwoman_back_base_whitebg.png?v=1680251061",
+                background_color: "#141414",
+                background_image: null,
+                option: "Back",
+                option_group: "Women's",
+            },
+            {
+                placement: "leg_back_right",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onwoman/back/05_chm7580_onwoman_back_base_whitebg.png?v=1680251067",
+                background_color: "#141414",
+                background_image: null,
+                option: "Back",
+                option_group: "Women's",
+            },
+            {
+                placement: "pocket",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onwoman/back/05_chm7580_onwoman_back_base_whitebg.png?v=1680251071",
+                background_color: "#141414",
+                background_image: null,
+                option: "Back",
+                option_group: "Women's",
+            },
+            {
+                placement: "leg_front_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onwoman/frontleft/05_chm7580_onwoman_frontleft_base_whitebg.png?v=1646229208",
+                background_color: "#141414",
+                background_image: null,
+                option: "Left Front",
+                option_group: "Women's",
+            },
+            {
+                placement: "leg_back_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onwoman/left/05_chm7580_onwoman_left_base_whitebg.png?v=1646229176",
+                background_color: "#141414",
+                background_image: null,
+                option: "Left",
+                option_group: "Women's",
+            },
+            {
+                placement: "leg_front_right",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onwoman/frontright/05_chm7580_onwoman_frontright_base_whitebg.png?v=1646229262",
+                background_color: "#141414",
+                background_image: null,
+                option: "Right Front",
+                option_group: "Women's",
+            },
+            {
+                placement: "leg_front_right",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onwoman/right/05_chm7580_onwoman_right_base_whitebg.png?v=1680251077",
+                background_color: "#141414",
+                background_image: null,
+                option: "Right",
+                option_group: "Women's",
+            },
+            {
+                placement: "embroidery_apparel_front",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onwoman/front/05_chm7580_onwoman_front_base_whitebg.png?v=1646229088",
+                background_color: "#141414",
+                background_image: null,
+                option: "Front",
+                option_group: "Women's",
+            },
+            {
+                placement: "leg_front_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onwoman/front/zoomed/05_chm7580_onwoman_front_base_whitebg.png?v=1646229421",
+                background_color: "#141414",
+                background_image: null,
+                option: "Front",
+                option_group: "Women's 2",
+            },
+            {
+                placement: "leg_front_right",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onwoman/front/zoomed/05_chm7580_onwoman_front_base_whitebg.png?v=1646229453",
+                background_color: "#141414",
+                background_image: null,
+                option: "Front",
+                option_group: "Women's 2",
+            },
+            {
+                placement: "leg_back_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onwoman/back/zoomed/05_chm7580_onwoman_back_base_whitebg.png?v=1680251181",
+                background_color: "#141414",
+                background_image: null,
+                option: "Back",
+                option_group: "Women's 2",
+            },
+            {
+                placement: "leg_back_right",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onwoman/back/zoomed/05_chm7580_onwoman_back_base_whitebg.png?v=1680251177",
+                background_color: "#141414",
+                background_image: null,
+                option: "Back",
+                option_group: "Women's 2",
+            },
+            {
+                placement: "pocket",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onwoman/back/zoomed/05_chm7580_onwoman_back_base_whitebg.png?v=1680251165",
+                background_color: "#141414",
+                background_image: null,
+                option: "Back",
+                option_group: "Women's 2",
+            },
+            {
+                placement: "leg_back_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onwoman/left/zoomed/05_chm7580_onwoman_left_base_whitebg.png?v=1646229485",
+                background_color: "#141414",
+                background_image: null,
+                option: "Left",
+                option_group: "Women's 2",
+            },
+            {
+                placement: "leg_front_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onwoman/frontleft/zoomed/05_chm7580_onwoman_frontleft_base_whitebg.png?v=1646229514",
+                background_color: "#141414",
+                background_image: null,
+                option: "Left Front",
+                option_group: "Women's 2",
+            },
+            {
+                placement: "leg_front_right",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onwoman/right/zoomed/05_chm7580_onwoman_right_base_whitebg.png?v=1680251189",
+                background_color: "#141414",
+                background_image: null,
+                option: "Right",
+                option_group: "Women's 2",
+            },
+            {
+                placement: "leg_front_right",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onwoman/frontright/zoomed/05_chm7580_onwoman_frontright_base_whitebg.png?v=1646229575",
+                background_color: "#141414",
+                background_image: null,
+                option: "Right Front",
+                option_group: "Women's 2",
+            },
+            {
+                placement: "embroidery_apparel_front",
+                image_url:
+                    "https://files.cdn.printful.com/m/ch-m7580-sweatpants/medium/onwoman/front/zoomed/05_chm7580_onwoman_front_base_whitebg.png?v=1646229384",
+                background_color: "#141414",
+                background_image: null,
+                option: "Front",
+                option_group: "Women's 2",
             },
         ],
         variants: [
@@ -47561,114 +48119,860 @@ const allProductsImages = [
         ],
         images: [
             {
+                placement: "label_outside",
+                image_url:
+                    "https://files.cdn.printful.com/m/templates/medium/outside_label_3x3.png?v=1702995419",
+                background_color: "#b7b7b7",
+                background_image: null,
+                option: "Outside label",
+                option_group: "Labels",
+            },
+            {
                 placement: "front",
                 image_url:
-                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman/front/05_bc6400_onwoman_front_base_whitebg.png?v=1673947773",
+                    "https://files.cdn.printful.com/m/bc6400/medium/flat/front/05_bc6400_flat_front_base_whitebg.png?v=1702995419",
                 background_color: null,
                 background_image:
-                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1673947773",
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/zoomed/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Front",
+                option_group: "Flat",
+            },
+            {
+                placement: "back",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/flat/back/05_bc6400_flat_back_base_whitebg.png?v=1702995419",
+                background_color: null,
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/zoomed/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Back",
+                option_group: "Flat",
+            },
+            {
+                placement: "embroidery_chest_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/flat/front/05_bc6400_flat_front_base_whitebg.png?v=1702995419",
+                background_color: null,
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/zoomed/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Front",
+                option_group: "Flat",
+            },
+            {
+                placement: "front",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/wrinkled/front/05_bc6400_wrinkled_front_base_whitebg.png?v=1702995419",
+                background_color: null,
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Front",
+                option_group: "Wrinkled",
+            },
+            {
+                placement: "back",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/wrinkled/back/05_bc6400_wrinkled_back_base_whitebg.png?v=1702995419",
+                background_color: null,
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Back",
+                option_group: "Wrinkled",
+            },
+            {
+                placement: "embroidery_chest_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/wrinkled/front/05_bc6400_wrinkled_front_base_whitebg.png?v=1702995419",
+                background_color: null,
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/zoomed/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Front",
+                option_group: "Wrinkled",
+            },
+            {
+                placement: "front",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/onhanger/front/05_bc6400_onhanger_front_base_whitebg.png?v=1702995419",
+                background_color: null,
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/zoomed/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Front",
+                option_group: "Hanger",
+            },
+            {
+                placement: "back",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/onhanger/back/05_bc6400_onhanger_back_base_whitebg.png?v=1702995419",
+                background_color: null,
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/zoomed/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Back",
+                option_group: "Hanger",
+            },
+            {
+                placement: "embroidery_chest_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/onhanger/front/05_bc6400_onhanger_front_base_whitebg.png?v=1702995419",
+                background_color: null,
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/zoomed/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Front",
+                option_group: "Hanger",
+            },
+            {
+                placement: "front",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman/front/05_bc6400_onwoman_front_base_whitebg.png?v=1702995419",
+                background_color: null,
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
                 option: "Front",
                 option_group: "Women's",
             },
             {
                 placement: "back",
                 image_url:
-                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman/back/05_bc6400_onwoman_back_base_whitebg.png?v=1673947773",
+                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman/back/05_bc6400_onwoman_back_base_whitebg.png?v=1702995419",
                 background_color: null,
                 background_image:
-                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1673947773",
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
                 option: "Back",
                 option_group: "Women's",
             },
             {
                 placement: "sleeve_left",
                 image_url:
-                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman/frontleft/05_bc6400_onwoman_frontleft_base_whitebg.png?v=1674543903",
+                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman/frontleft/05_bc6400_onwoman_frontleft_base_whitebg.png?v=1702995419",
                 background_color: null,
                 background_image:
-                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1674543903",
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
                 option: "Left Front",
                 option_group: "Women's",
             },
             {
                 placement: "sleeve_left",
                 image_url:
-                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman/left/zoomed/05_bc6400_onwoman_left_base_whitebg.png?v=1674543903",
+                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman/left/zoomed/05_bc6400_onwoman_left_base_whitebg.png?v=1702995419",
                 background_color: null,
                 background_image:
-                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1674543903",
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
                 option: "Left",
                 option_group: "Women's",
             },
             {
                 placement: "sleeve_right",
                 image_url:
-                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman/frontright/05_bc6400_onwoman_frontright_base_whitebg.png?v=1674543907",
+                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman/frontright/05_bc6400_onwoman_frontright_base_whitebg.png?v=1702995419",
                 background_color: null,
                 background_image:
-                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1674543907",
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
                 option: "Right Front",
                 option_group: "Women's",
             },
             {
                 placement: "sleeve_right",
                 image_url:
-                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman/right/zoomed/05_bc6400_onwoman_right_base_whitebg.png?v=1674543904",
+                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman/right/zoomed/05_bc6400_onwoman_right_base_whitebg.png?v=1702995419",
                 background_color: null,
                 background_image:
-                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1674543904",
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
                 option: "Right",
                 option_group: "Women's",
             },
             {
                 placement: "embroidery_chest_left",
                 image_url:
-                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman/embroidery_chest_left/zoomed/05_bc6400_onwoman_front_base_whitebg.png?v=1673947773",
+                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman/embroidery_chest_left/zoomed/05_bc6400_onwoman_front_base_whitebg.png?v=1702995419",
                 background_color: null,
                 background_image:
-                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/zoomed/01_bc6400_bi_athletic-heather.jpg?v=1673947773",
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/zoomed/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
                 option: "Zoomed-in",
                 option_group: "Women's",
             },
             {
                 placement: "embroidery_chest_left",
                 image_url:
-                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman/front/05_bc6400_onwoman_front_base_whitebg.png?v=1673947773",
+                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman/front/05_bc6400_onwoman_front_base_whitebg.png?v=1702995419",
                 background_color: null,
                 background_image:
-                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1673947773",
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
                 option: "Front",
                 option_group: "Women's",
             },
             {
-                placement: "embroidery_chest_center",
+                placement: "front",
                 image_url:
-                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman/front/05_bc6400_onwoman_front_base_whitebg.png?v=1673947773",
-                background_color: "#b7b7b7",
+                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman_2/front/05_bc6400_onwoman_2_front_base_whitebg.png?v=1702995419",
+                background_color: null,
                 background_image:
-                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1673947773",
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
                 option: "Front",
-                option_group: "Women's",
+                option_group: "Women's 2",
             },
             {
-                placement: "embroidery_chest_center",
+                placement: "back",
                 image_url:
-                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman/embroidery_chest_left/zoomed/05_bc6400_onwoman_front_base_whitebg.png?v=1673947773",
-                background_color: "#b7b7b7",
+                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman_2/back/05_bc6400_onwoman_2_back_base_whitebg.png?v=1702995419",
+                background_color: null,
                 background_image:
-                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/zoomed/01_bc6400_bi_athletic-heather.jpg?v=1673947773",
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Back",
+                option_group: "Women's 2",
+            },
+            {
+                placement: "sleeve_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman_2/frontleft/05_bc6400_onwoman_2_frontleft_base_whitebg.png?v=1702995419",
+                background_color: null,
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Left Front",
+                option_group: "Women's 2",
+            },
+            {
+                placement: "sleeve_right",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman_2/frontright/05_bc6400_onwoman_2_frontright_base_whitebg.png?v=1702995419",
+                background_color: null,
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Right Front",
+                option_group: "Women's 2",
+            },
+            {
+                placement: "sleeve_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman_2/left/zoomed/05_bc6400_onwoman_2_left_base_whitebg.png?v=1702995419",
+                background_color: null,
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Left",
+                option_group: "Women's 2",
+            },
+            {
+                placement: "sleeve_right",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman_2/right/zoomed/05_bc6400_onwoman_2_right_base_whitebg.png?v=1702995419",
+                background_color: null,
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Right",
+                option_group: "Women's 2",
+            },
+            {
+                placement: "embroidery_chest_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman_2/embroidery_chest_left/zoomed/05_bc6400_onwoman_2_front_base_whitebg.png?v=1702995419",
+                background_color: null,
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/zoomed/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
                 option: "Zoomed-in",
+                option_group: "Women's 2",
+            },
+            {
+                placement: "embroidery_chest_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman_2/front/05_bc6400_onwoman_2_front_base_whitebg.png?v=1702995419",
+                background_color: null,
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Front",
+                option_group: "Women's 2",
+            },
+            {
+                placement: "front",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman_3/front/05_bc6400_onwoman_3_front_base_whitebg.png?v=1702995419",
+                background_color: null,
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Front",
+                option_group: "Women's 3",
+            },
+            {
+                placement: "front",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman_3/front/zoomed/05_bc6400_onwoman_3_front_base_whitebg.png?v=1702995419",
+                background_color: null,
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Front",
+                option_group: "Women's 3",
+            },
+            {
+                placement: "back",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman_3/back/05_bc6400_onwoman_3_back_base_whitebg.png?v=1702995419",
+                background_color: null,
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Back",
+                option_group: "Women's 3",
+            },
+            {
+                placement: "back",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman_3/back/zoomed/05_bc6400_onwoman_3_back_base_whitebg.png?v=1702995419",
+                background_color: null,
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Back",
+                option_group: "Women's 3",
+            },
+            {
+                placement: "sleeve_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman_3/frontleft/05_bc6400_onwoman_3_frontleft_base_whitebg.png?v=1703074549",
+                background_color: null,
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1703074549",
+                option: "Left Front",
+                option_group: "Women's 3",
+            },
+            {
+                placement: "sleeve_right",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman_3/frontright/05_bc6400_onwoman_3_frontright_base_whitebg.png?v=1703074565",
+                background_color: null,
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1703074565",
+                option: "Right Front",
+                option_group: "Women's 3",
+            },
+            {
+                placement: "sleeve_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman_3/left/05_bc6400_onwoman_3_left_base_whitebg.png?v=1703074541",
+                background_color: null,
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1703074541",
+                option: "Left",
+                option_group: "Women's 3",
+            },
+            {
+                placement: "sleeve_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman_3/left/zoomed/05_bc6400_onwoman_3_left_base_whitebg.png?v=1703074545",
+                background_color: null,
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1703074545",
+                option: "Left",
+                option_group: "Women's 3",
+            },
+            {
+                placement: "sleeve_right",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman_3/right/05_bc6400_onwoman_3_right_base_whitebg.png?v=1703074552",
+                background_color: null,
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1703074552",
+                option: "Right",
+                option_group: "Women's 3",
+            },
+            {
+                placement: "sleeve_right",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman_3/right/zoomed/05_bc6400_onwoman_3_right_base_whitebg.png?v=1703074561",
+                background_color: null,
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1703074561",
+                option: "Right",
+                option_group: "Women's 3",
+            },
+            {
+                placement: "embroidery_chest_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman_3/embroidery_chest_left/zoomed/05_bc6400_onwoman_3_front_base_whitebg.png?v=1702995419",
+                background_color: null,
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/zoomed/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Zoomed-in",
+                option_group: "Women's 3",
+            },
+            {
+                placement: "embroidery_chest_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman_3/front/05_bc6400_onwoman_3_front_base_whitebg.png?v=1702995419",
+                background_color: null,
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Front",
+                option_group: "Women's 3",
+            },
+            {
+                placement: "label_inside",
+                image_url:
+                    "https://files.cdn.printful.com/m/templates/medium/inside_label__3x3.png?v=1702995419",
+                background_color: "#9b9fa8",
+                background_image: null,
+                option: "Inside label",
+                option_group: "Labels",
+            },
+            {
+                placement: "label_inside",
+                image_url:
+                    "https://files.cdn.printful.com/m/templates/medium/inside_label__3x3.png?v=1702995419",
+                background_color: "#9b9fa8",
+                background_image: null,
+                option: "Inside label",
+                option_group: "Labels",
+            },
+            {
+                placement: "embroidery_chest_center",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/flat/front/05_bc6400_flat_front_base_whitebg.png?v=1702995419",
+                background_color: "#b7b7b7",
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/zoomed/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Front",
+                option_group: "Flat",
+            },
+            {
+                placement: "embroidery_chest_center",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/onhanger/front/05_bc6400_onhanger_front_base_whitebg.png?v=1702995419",
+                background_color: "#b7b7b7",
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/zoomed/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Front",
+                option_group: "Hanger",
+            },
+            {
+                placement: "embroidery_chest_center",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman/front/05_bc6400_onwoman_front_base_whitebg.png?v=1702995419",
+                background_color: "#b7b7b7",
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Front",
+                option_group: "Women's",
+            },
+            {
+                placement: "embroidery_chest_center",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman/embroidery_chest_left/zoomed/05_bc6400_onwoman_front_base_whitebg.png?v=1702995419",
+                background_color: "#b7b7b7",
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/zoomed/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Zoomed-in",
+                option_group: "Women's",
+            },
+            {
+                placement: "embroidery_chest_center",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman_2/front/05_bc6400_onwoman_2_front_base_whitebg.png?v=1702995419",
+                background_color: "#b7b7b7",
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Front",
+                option_group: "Women's 2",
+            },
+            {
+                placement: "embroidery_chest_center",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman_2/embroidery_chest_left/zoomed/05_bc6400_onwoman_2_front_base_whitebg.png?v=1702995419",
+                background_color: "#b7b7b7",
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/zoomed/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Zoomed-in",
+                option_group: "Women's 2",
+            },
+            {
+                placement: "embroidery_chest_center",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman_3/front/05_bc6400_onwoman_3_front_base_whitebg.png?v=1702995419",
+                background_color: "#b7b7b7",
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Front",
+                option_group: "Women's 3",
+            },
+            {
+                placement: "embroidery_chest_center",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman_3/embroidery_chest_left/zoomed/05_bc6400_onwoman_3_front_base_whitebg.png?v=1702995419",
+                background_color: "#b7b7b7",
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/zoomed/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Zoomed-in",
+                option_group: "Women's 3",
+            },
+            {
+                placement: "embroidery_chest_center",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/wrinkled/front/05_bc6400_wrinkled_front_base_whitebg.png?v=1702995419",
+                background_color: "#b7b7b7",
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/zoomed/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Front",
+                option_group: "Wrinkled",
+            },
+            {
+                placement: "label_inside",
+                image_url:
+                    "https://files.cdn.printful.com/m/templates/medium/inside_label__3x3.png?v=1702995419",
+                background_color: "#9b9fa8",
+                background_image: null,
+                option: "Inside label",
+                option_group: "Labels",
+            },
+            {
+                placement: "label_outside",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/flat/back/05_bc6400_flat_back_base_whitebg.png?v=1702995419",
+                background_color: null,
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/zoomed/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Back",
+                option_group: "Flat",
+            },
+            {
+                placement: "label_inside",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/flat/front/05_bc6400_flat_front_base_whitebg.png?v=1702995419",
+                background_color: "#b7b7b7",
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/zoomed/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Front",
+                option_group: "Flat",
+            },
+            {
+                placement: "label_inside",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/flat/front/05_bc6400_flat_front_base_whitebg.png?v=1702995419",
+                background_color: "#b7b7b7",
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/zoomed/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Front",
+                option_group: "Flat",
+            },
+            {
+                placement: "label_inside",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/flat/front/05_bc6400_flat_front_base_whitebg.png?v=1702995419",
+                background_color: "#b7b7b7",
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/zoomed/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Front",
+                option_group: "Flat",
+            },
+            {
+                placement: "label_outside",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/onhanger/back/05_bc6400_onhanger_back_base_whitebg.png?v=1702995419",
+                background_color: null,
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/zoomed/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Back",
+                option_group: "Hanger",
+            },
+            {
+                placement: "label_inside",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/onhanger/front/05_bc6400_onhanger_front_base_whitebg.png?v=1702995419",
+                background_color: "#b7b7b7",
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/zoomed/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Front",
+                option_group: "Hanger",
+            },
+            {
+                placement: "label_inside",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/onhanger/front/05_bc6400_onhanger_front_base_whitebg.png?v=1702995419",
+                background_color: "#b7b7b7",
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/zoomed/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Front",
+                option_group: "Hanger",
+            },
+            {
+                placement: "label_inside",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/onhanger/front/05_bc6400_onhanger_front_base_whitebg.png?v=1702995419",
+                background_color: "#b7b7b7",
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/zoomed/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Front",
+                option_group: "Hanger",
+            },
+            {
+                placement: "label_outside",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman/back/05_bc6400_onwoman_back_base_whitebg.png?v=1702995419",
+                background_color: null,
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Back",
                 option_group: "Women's",
             },
             {
                 placement: "label_outside",
                 image_url:
-                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman/back/05_bc6400_onwoman_back_base_whitebg.png?v=1674543901",
+                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman_2/back/05_bc6400_onwoman_2_back_base_whitebg.png?v=1702995419",
                 background_color: null,
                 background_image:
-                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1674543901",
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
                 option: "Back",
-                option_group: "Women's",
+                option_group: "Women's 2",
+            },
+            {
+                placement: "label_outside",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/onwoman_3/back/05_bc6400_onwoman_3_back_base_whitebg.png?v=1702995419",
+                background_color: null,
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Back",
+                option_group: "Women's 3",
+            },
+            {
+                placement: "label_outside",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/wrinkled/back/05_bc6400_wrinkled_back_base_whitebg.png?v=1702995419",
+                background_color: null,
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Back",
+                option_group: "Wrinkled",
+            },
+            {
+                placement: "label_inside",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/wrinkled/front/05_bc6400_wrinkled_front_base_whitebg.png?v=1702995419",
+                background_color: "#b7b7b7",
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/zoomed/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Front",
+                option_group: "Wrinkled",
+            },
+            {
+                placement: "label_inside",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/wrinkled/front/05_bc6400_wrinkled_front_base_whitebg.png?v=1702995419",
+                background_color: "#b7b7b7",
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/zoomed/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Front",
+                option_group: "Wrinkled",
+            },
+            {
+                placement: "label_inside",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/wrinkled/front/05_bc6400_wrinkled_front_base_whitebg.png?v=1702995419",
+                background_color: "#b7b7b7",
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/zoomed/01_bc6400_bi_athletic-heather.jpg?v=1702995419",
+                option: "Front",
+                option_group: "Wrinkled",
+            },
+            {
+                placement: "front",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/womens4/front/05_bc6400_womens4_front_base_whitebg.png?v=1703069758",
+                background_color: "#b7b7b7",
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1703069758",
+                option: "Front",
+                option_group: "Women's 4",
+            },
+            {
+                placement: "back",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/womens4/back/05_bc6400_womens4_back_base_whitebg.png?v=1703069752",
+                background_color: "#b7b7b7",
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1703069752",
+                option: "Back",
+                option_group: "Women's 4",
+            },
+            {
+                placement: "sleeve_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/womens4/frontleft/05_bc6400_womens4_frontleft_base_whitebg.png?v=1703069770",
+                background_color: "#b7b7b7",
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1703069770",
+                option: "Left Front",
+                option_group: "Women's 4",
+            },
+            {
+                placement: "front",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/womens4/lifestyle/05_bc6400_womens_lifestyle_front_base.png?v=1703069776",
+                background_color: "#b7b7b7",
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1703069776",
+                option: "Front",
+                option_group: "Women's Lifestyle",
+            },
+            {
+                placement: "label_outside",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/womens4/back/05_bc6400_womens4_back_base_whitebg.png?v=1703069756",
+                background_color: "#b7b7b7",
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1703069756",
+                option: "Back",
+                option_group: "Women's 4",
+            },
+            {
+                placement: "sleeve_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/womens4/back/05_bc6400_womens4_back_base_whitebg.png?v=1703069753",
+                background_color: "#b7b7b7",
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1703069753",
+                option: "Back",
+                option_group: "Women's 4",
+            },
+            {
+                placement: "sleeve_right",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/womens4/back/05_bc6400_womens4_back_base_whitebg.png?v=1703069754",
+                background_color: "#b7b7b7",
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1703069754",
+                option: "Back",
+                option_group: "Women's 4",
+            },
+            {
+                placement: "embroidery_chest_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/womens4/front/05_bc6400_womens4_front_base_whitebg.png?v=1703069759",
+                background_color: "#b7b7b7",
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1703069759",
+                option: "Front",
+                option_group: "Women's 4",
+            },
+            {
+                placement: "embroidery_chest_center",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/womens4/front/05_bc6400_womens4_front_base_whitebg.png?v=1703069764",
+                background_color: "#b7b7b7",
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1703069764",
+                option: "Front",
+                option_group: "Women's 4",
+            },
+            {
+                placement: "sleeve_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/womens4/front/05_bc6400_womens4_front_base_whitebg.png?v=1703069761",
+                background_color: "#b7b7b7",
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1703069761",
+                option: "Front",
+                option_group: "Women's 4",
+            },
+            {
+                placement: "sleeve_right",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/womens4/front/05_bc6400_womens4_front_base_whitebg.png?v=1703069762",
+                background_color: "#b7b7b7",
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1703069762",
+                option: "Front",
+                option_group: "Women's 4",
+            },
+            {
+                placement: "sleeve_right",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/womens4/frontleft/05_bc6400_womens4_frontleft_base_whitebg.png?v=1703069771",
+                background_color: "#b7b7b7",
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1703069771",
+                option: "Left Front",
+                option_group: "Women's 4",
+            },
+            {
+                placement: "embroidery_chest_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/womens4/frontleft/05_bc6400_womens4_frontleft_base_whitebg.png?v=1703069768",
+                background_color: "#b7b7b7",
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1703069768",
+                option: "Left Front",
+                option_group: "Women's 4",
+            },
+            {
+                placement: "embroidery_chest_center",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/womens4/frontleft/05_bc6400_womens4_frontleft_base_whitebg.png?v=1703069773",
+                background_color: "#b7b7b7",
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1703069773",
+                option: "Left Front",
+                option_group: "Women's 4",
+            },
+            {
+                placement: "front",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/womens4/frontleft/05_bc6400_womens4_frontleft_base_whitebg.png?v=1703069767",
+                background_color: "#b7b7b7",
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1703069767",
+                option: "Left Front",
+                option_group: "Women's 4",
+            },
+            {
+                placement: "embroidery_chest_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/womens4/lifestyle/05_bc6400_womens_lifestyle_front_base.png?v=1703069779",
+                background_color: "#b7b7b7",
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1703069779",
+                option: "Front",
+                option_group: "Women's Lifestyle",
+            },
+            {
+                placement: "embroidery_chest_center",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/womens4/lifestyle/05_bc6400_womens_lifestyle_front_base.png?v=1703069785",
+                background_color: "#b7b7b7",
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1703069785",
+                option: "Front",
+                option_group: "Women's Lifestyle",
+            },
+            {
+                placement: "back",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/womens4/lifestyle/05_bc6400_womens_lifestyle_front_base.png?v=1703069777",
+                background_color: "#b7b7b7",
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1703069777",
+                option: "Front",
+                option_group: "Women's Lifestyle",
+            },
+            {
+                placement: "sleeve_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/womens4/lifestyle/05_bc6400_womens_lifestyle_front_base.png?v=1703069780",
+                background_color: "#b7b7b7",
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1703069780",
+                option: "Front",
+                option_group: "Women's Lifestyle",
+            },
+            {
+                placement: "sleeve_right",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/womens4/lifestyle/05_bc6400_womens_lifestyle_front_base.png?v=1703069782",
+                background_color: "#b7b7b7",
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1703069782",
+                option: "Front",
+                option_group: "Women's Lifestyle",
+            },
+            {
+                placement: "label_outside",
+                image_url:
+                    "https://files.cdn.printful.com/m/bc6400/medium/womens4/lifestyle/05_bc6400_womens_lifestyle_front_base.png?v=1703069784",
+                background_color: "#b7b7b7",
+                background_image:
+                    "https://files.cdn.printful.com/m/bc6400/medium/bgImages/01_bc6400_bi_athletic-heather.jpg?v=1703069784",
+                option: "Front",
+                option_group: "Women's Lifestyle",
             },
         ],
         variants: [
