@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
 use App\Models\User;
 use App\Models\Payment;
+
 class HomeController extends Controller
 {
     /**
@@ -30,15 +31,15 @@ class HomeController extends Controller
         $products = Products::select('product_type', \DB::raw('MAX(id) as max_id'), \DB::raw('MAX(front_image) as max_front_image'))
             ->whereIn('product_type', ['Shirts', 'Hoodies', 'Sweatshirts', 'Hoodies'])
             ->groupBy('product_type')
-        ->get();
+            ->get();
 
         $accessories = Products::select('product_type', \DB::raw('MAX(id) as max_id'), \DB::raw('MAX(front_image) as max_front_image'))
-            ->whereIn('product_type', ['Hat', 'Headwear', 'Footwear','Bags','Phone Cases'])
+            ->whereIn('product_type', ['Hat', 'Headwear', 'Footwear', 'Bags', 'Phone Cases'])
             ->groupBy('product_type')
-        ->get();
+            ->get();
         //echo "<pre>"; print_r($products); die;
-        
-        return view('frontend.pages.home')->with('products',$products)->with('accessories',$accessories);
+
+        return view('frontend.pages.home')->with('products', $products)->with('accessories', $accessories);
     }
 
     public function contactus()
@@ -116,8 +117,8 @@ class HomeController extends Controller
         if (auth()->user()->email == 'admin@gmail.com') {
             return redirect('admin');
         } else {
-            $orders = Payment::join('users','users.id','=','payments.user_id')->select('payments.*','users.name')->paginate(5);
-            return view('frontend.pages.my_account')->with('activeLink','orders')->with('orders',$orders);
+            $orders = Payment::join('users', 'users.id', '=', 'payments.user_id')->select('payments.*', 'users.name')->paginate(5);
+            return view('frontend.pages.my_account')->with('activeLink', 'orders')->with('orders', $orders);
         }
     }
 
@@ -156,31 +157,32 @@ class HomeController extends Controller
         return view('frontend.pages.create_product');
     }
 
-    public function shop(Request $request ,$slug)
+    public function shop(Request $request, $slug)
     {
-        //echo $id; die;
-        $product = Products::where('product_slug',$request->slug)->first();        
+        $product = Products::where('product_slug', $request->slug)->first();
         $product->front_image = fileToUrl($product->front_image);
         $product->back_image = fileToUrl($product->back_image);
         $product->left_image = fileToUrl($product->left_image);
-        $product->right_image = fileToUrl($product->right_image); 
+        $product->right_image = fileToUrl($product->right_image);
 
         //echo "<pre>"; print_r(file_exists($product->front_image)); die;
         return view('frontend.pages.create_product')->with('product', $product);
     }
 
-    public function product_list(Request $request, $standwith, $productfor, $producttype){
+    public function product_list(Request $request, $standwith, $productfor, $producttype)
+    {
         //echo "<pre>"; print_r(explode('-',$standwith)[2]); die;
-        $standwith = @ucfirst(explode('-',$standwith)[2]);
+        $standwith = @ucfirst(explode('-', $standwith)[2]);
         $productfor = @ucfirst($productfor);
         $producttype = @ucfirst($producttype);
 
         //echo $producttype; die;
-        $products = Products::where(['supporting_country'=>$standwith,'product_for'=>$producttype,'product_type'=>$productfor])->get();
+        $products = Products::where(['supporting_country' => $standwith, 'product_for' => $producttype, 'product_type' => $productfor])->get();
         return view('frontend.pages.product_list')->with('products', $products);
     }
 
-    public function product_category(Request $request, $category){        
+    public function product_category(Request $request, $category)
+    {
         $producttype = @ucfirst($category);
         $products = Products::where('product_type', 'LIKE', '%' . $producttype . '%')->get();
         //echo "<pre>"; print_r($products); die;
