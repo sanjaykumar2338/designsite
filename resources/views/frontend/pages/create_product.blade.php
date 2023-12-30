@@ -79,8 +79,14 @@
 
                 <div class="prd-right">
                     <div class="flex flex-col gap-2" id="editables"></div>
+                    
+                    @php
+                        $commissionAmount = ($product->commission / 100) * $product->product_price;
+                        $totalPrice = $product->product_price + $commissionAmount;
+                    @endphp
 
-                    <h1 class="product_title">{{ $product->product_name }}</h1>
+                    <h1 class="product_title">{{ $product->product_name }}</h1><br>
+                    <h1 class="">Price: ${{number_format($totalPrice,2)}}</h1>
                     <p class="desc">{{ $product->product_description }}</p>
                     <br>
 

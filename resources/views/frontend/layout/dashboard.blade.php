@@ -61,7 +61,7 @@
             <a href="{{url('/')}}" class="nav-link">
               <i class="nav-icon fas fa-home"></i>
               <p>
-                Home
+                View Site
               </p>
             </a>
 

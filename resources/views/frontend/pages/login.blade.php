@@ -66,6 +66,12 @@
       </div>
   @endif
 
+  @if(session('message'))
+    <div class="alert alert-info">
+        {{ session('message') }}
+    </div>
+  @endif
+
   <div class="container">
     <label for="uname"><b>Email</b></label>
     <input type="text" placeholder="Enter Username" name="email" required>

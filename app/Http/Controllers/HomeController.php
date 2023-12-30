@@ -166,6 +166,11 @@ class HomeController extends Controller
         $product->right_image = fileToUrl($product->right_image);
 
         //echo "<pre>"; print_r(file_exists($product->front_image)); die;
+
+        if (!auth()->check()) {
+            return redirect()->route('login')->with('message', 'Please login to access this page.');
+        }
+
         return view('frontend.pages.create_product')->with('product', $product);
     }
 
