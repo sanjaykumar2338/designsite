@@ -314,6 +314,11 @@
 
 
                         </div>
+                        <div>
+                            <button class="border prd-btn rounded-lg p-2 px-3" onclick="togglePreview()">
+                                Preview
+                            </button>
+                        </div>
                         <div class="prd-opt-two cmn-prd-opt">
                             <button class="border rounded-lg p-2 px-3 place-btn" onclick="placeOrder()">
                                 Update Template

@@ -93,7 +93,14 @@ function setCanvasImage(url) {
     const canvasBgImage = getEl("canvasBgImage");
     canvasBgImage.innerHTML = img;
 }
-
+function togglePreview() {
+    const canvasBg = getEl("canvasBg");
+    if (canvasBg.style.zIndex === 20) {
+        canvasBg.style.zIndex = 0;
+    } else {
+        canvasBg.style.zIndex = 20;
+    }
+}
 function addThumbnailsSelection() {
     const images = allProductsImages.find(
         (p) => p.productName === product.product_name
@@ -687,7 +694,12 @@ function addImage(imgUrl) {
                 // }).showToast();
                 return;
             }
-            // oImg.scale(0.5);
+            const h = canvas.getHeight();
+            const w = canvas.getWidth();
+            // oImg.set("top", h / 4);
+            // oImg.set("left", w / 4);
+            oImg.scaleToHeight(h);
+            oImg.scaleToWidth(w);
             oImg.scaleToHeight(canvas.getHeight());
             oImg.scaleToWidth(canvas.getWidth());
             canvas.add(oImg);
@@ -936,7 +948,12 @@ function addImageFromFile(e) {
             //   scaleX: 0.1,
             //   scaleY: 0.1,
             // });
-            canvas.centerObject(image);
+            const h = canvas.getHeight();
+            const w = canvas.getWidth();
+            // oImg.set("top", h / 4);
+            // oImg.set("left", w / 4);
+            canvas.scaleToHeight(h);
+            canvas.scaleToWidth(w);
             canvas.add(image);
             canvas.renderAll();
         };
