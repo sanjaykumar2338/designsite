@@ -85,7 +85,7 @@
                         $totalPrice = $product->product_price + $commissionAmount;
                     @endphp
 
-                    <h1 class="product_title">{{ $product->product_name }}</h1><br>
+                    <h1 class="product_title">{{ $product->website_product_name ? $product->website_product_name : $product->product_name }}</h1><br>
                     <h1 class="">Price: ${{number_format($totalPrice,2)}}</h1>
                     <p class="desc">{{ $product->product_description }}</p>
                     <br>
