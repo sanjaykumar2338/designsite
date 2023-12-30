@@ -89,9 +89,17 @@ function objectSelectedUpdated(_obj) {
     setSelectedObject(obj);
 }
 function setCanvasImage(url) {
-    const img = `<img src='${url}' height='500px' style='position: absolute; height: 500px; width: 500px' alt='' id='canvasBg' />`;
+    const img = `<img src='${url}' height='500px' style=' position: absolute; height: 500px; width: 500px' alt='' id='canvasBg' />`;
     const canvasBgImage = getEl("canvasBgImage");
     canvasBgImage.innerHTML = img;
+}
+function togglePreview() {
+    const canvasBg = getEl("canvasBg");
+    if (canvasBg.style.zIndex === 20) {
+        canvasBg.style.zIndex = 0;
+    } else {
+        canvasBg.style.zIndex = 20;
+    }
 }
 function addCanvas() {
     console.log(getEl(canvas_divs.canvas_front).clientWidth);
@@ -555,7 +563,13 @@ function addImage(imgUrl) {
                 // }).showToast();
                 return;
             }
-            oImg.scale(0.5);
+            // oImg.scale(0.5);
+            const h = canvas.getHeight();
+            const w = canvas.getWidth();
+            // oImg.set("top", h / 4);
+            // oImg.set("left", w / 4);
+            oImg.scaleToHeight(h);
+            oImg.scaleToWidth(w);
             canvas.add(oImg);
         },
         { crossOrigin: "Anonymous" }
@@ -779,7 +793,12 @@ function addImageFromFile(e) {
             //   scaleX: 0.1,
             //   scaleY: 0.1,
             // });
-            canvas.centerObject(image);
+            const h = canvas.getHeight();
+            const w = canvas.getWidth();
+            // image.set("top", h / 4);
+            // image.set("left", w / 4);
+            image.scaleToHeight(h);
+            image.scaleToWidth(w);
             canvas.add(image);
             canvas.renderAll();
         };
