@@ -95,7 +95,7 @@ function setCanvasImage(url) {
 }
 function togglePreview() {
     const canvasBg = getEl("canvasBg");
-    if (canvasBg.style.zIndex === 20) {
+    if (canvasBg.style.zIndex === "20") {
         canvasBg.style.zIndex = 0;
     } else {
         canvasBg.style.zIndex = 20;
