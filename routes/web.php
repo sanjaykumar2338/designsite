@@ -67,6 +67,7 @@ Route::get('/{standwithtype}/shop/{productType}/{slug}', [App\Http\Controllers\H
 Route::post('/register', [App\Http\Controllers\UserController::class, 'register'])->name('register');
 Route::get('/logout', [App\Http\Controllers\UserController::class, 'logout'])->name('logout');
 Route::post('/login', [App\Http\Controllers\UserController::class, 'login'])->name('login');
+Route::get('/product_slug', [App\Http\Controllers\UserController::class, 'product_slug'])->name('product_slug');
 
 Route::post(
     'stripe/webhook',
