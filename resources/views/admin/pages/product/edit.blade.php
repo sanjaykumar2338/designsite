@@ -118,7 +118,7 @@
                   </select>
                 </div>
 
-                <div class="mb-3 mt-3" style="display:none">
+                <div class="mb-3 mt-3">
                   <label for="title">Front Image:</label>
                   <input type="file" class="form-control" name="front_image">
                   @if($product->front_image)
