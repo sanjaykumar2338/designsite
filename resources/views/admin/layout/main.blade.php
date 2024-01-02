@@ -70,7 +70,7 @@
           
           <li class="nav-item has-treeview menu-open">
             <a href="{{url('/')}}" class="nav-link" target="_blank">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <i class="nav-icon fas fa-solid fa-globe"></i>
               <p>
                 View Site
                 <i class="right fas"></i>

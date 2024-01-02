@@ -59,7 +59,7 @@
           <li class="nav-item has-treeview">
           
             <a href="{{url('/')}}" class="nav-link" target="_blank">
-              <i class="nav-icon fas fa-home"></i>
+              <i class="nav-icon fas fa-solid fa-globe"></i>
               <p>
                 View Site
               </p>
