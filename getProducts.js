@@ -52,10 +52,6 @@ class Product {
             "Authorization",
             "Bearer te6lqpl4ju9anm3y0TWtWTLaAVDiQz6ddtAspwJc"
         );
-        myHeaders.append(
-            "Cookie",
-            "__cf_bm=FMHIpQ9lQoZBi7uXiUdxgLGO0R7lmxVbabNuRhPpVgs-1702618698-1-AVOxyZjbagfeV/KqrmoLKC8rwyzlUy8QQA29HzTDf2TBdpDl2l330B2efRai/8P+8aZH5E/6axt6eXpugqTvXQE=; dsr_setting=%7B%22region%22%3A1%2C%22requirement%22%3Anull%7D"
-        );
 
         var requestOptions = {
             method: "GET",
@@ -181,6 +177,7 @@ class Product {
                     productName: this.productName,
                     price: this.maxPrice,
                     images,
+                    variants: this.variants,
                 };
                 // console.log(data);
                 allProducts.push(data);
@@ -234,16 +231,19 @@ const products = [
     // {cid:15 name:, "5 Panel Cap | Yupoong 7005"},
 
     // accessories
-    { cid: 4, name: "All-Over Print Tote" },
-    { cid: 4, name: "All-Over Print Minimalist Backpack" },
+    // { cid: 4, name: "All-Over Print Tote" },
+    // { cid: 4, name: "All-Over Print Minimalist Backpack" },
     // { cid: 4, name: "Embroidered Simple Backpack I BagBase BG126" },
-    { cid: 4, name: "Men's High Top Canvas Shoes" },
-    { cid: 4, name: "Women's High Top Canvas Shoes" },
-    { cid: 4, name: "Men's Slip-On Canvas Shoes" },
-    { cid: 4, name: "Women's Slip-On Canvas Shoes" },
-    { cid: 4, name: "Women's Lace-Up Canvas Shoes" },
-    { cid: 4, name: "Men's Slides" },
-    { cid: 4, name: "Women's Slides" },
+    // { cid: 4, name: "Men's High Top Canvas Shoes" },
+    // { cid: 4, name: "Women's High Top Canvas Shoes" },
+    // { cid: 4, name: "Men's Slip-On Canvas Shoes" },
+    // { cid: 4, name: "Women's Slip-On Canvas Shoes" },
+    // { cid: 4, name: "Women's Lace-Up Canvas Shoes" },
+    // { cid: 4, name: "Men's Slides" },
+    // { cid: 4, name: "Women's Slides" },
+
+    // { cid: 4, name: "Tough Case for iPhone®" },
+    { cid: 4, name: "Clear Case for Samsung®" },
 ];
 
 products.forEach((p, i) => {
