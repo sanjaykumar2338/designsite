@@ -66,7 +66,17 @@
                 <i class="right fas"></i>
               </p>
             </a>            
-          </li>        
+          </li>  
+          
+          <li class="nav-item has-treeview menu-open">
+            <a href="{{url('/')}}" class="nav-link" target="_blank">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                View Site
+                <i class="right fas"></i>
+              </p>
+            </a>            
+          </li>  
           
           <li class="nav-item has-treeview">
             <a href="{{url('/admin/customer')}}" class="nav-link {{$activeLink=='customer'?'active':''}}">
