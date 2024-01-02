@@ -523,6 +523,7 @@ class ProductsController extends Controller
             $_request = json_decode($request->getContent());
             $order = new PrintfulOrder();
             $order->printful_order_data = $_request->printful_order_data;
+            $order->product_id = $_request->product_id;
 
             $order->save();
             return response($order)

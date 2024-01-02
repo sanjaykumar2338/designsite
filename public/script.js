@@ -1022,6 +1022,7 @@ function saveOrder(data) {
 
     var raw = JSON.stringify({
         printful_order_data: JSON.stringify(data),
+        product_id: product.id,
     });
 
     var requestOptions = {
