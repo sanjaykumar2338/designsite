@@ -1,5 +1,5 @@
-// const base_url = "http://127.0.0.1:8000";
-const base_url = "https://causestand.com";
+const base_url = "http://127.0.0.1:8000";
+// const base_url = "https://causestand.com";
 function storeFile(url) {
     return new Promise((resolve, reject) => {
         fetch(url)
@@ -44,7 +44,7 @@ async function _createProduct(data) {
 }
 
 async function main() {
-    for await (const p of womans.Hoodies) {
+    for await (const p of accessories) {
         let front_image =
             p.images.find((i) => i.option === "Front")?.image_url || "";
         // if(!image) front_image = p.images.find((i) => i.option === "Front Left").image_url
@@ -84,8 +84,8 @@ async function main() {
             product_description: "",
             commission: 10,
             supporting_country: "Isreal",
-            product_for: "Woman",
-            product_type: "Hoodies",
+            product_for: "Accessories",
+            product_type: "Phone Cases",
             product_sub_type: "",
             front_image,
             front_image_price: 10,
@@ -103,8 +103,8 @@ async function main() {
             product_width: "10",
             product_height: "10",
         };
-        // const res = await _createProduct(data);
-        // console.log(res);
+        const res = await _createProduct(data);
+        console.log(res);
     }
 }
 
@@ -5642,355 +5642,13 @@ const hats = [
 
 const accessories = [
     {
-        productName: "All-Over Print Tote",
-        price: 17.75,
+        productName: "Tough Case for iPhone®",
+        price: 16.5,
         images: [
             {
                 placement: "default",
                 image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/03-allovertote-black-base.png?v=1679898197",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Mockup",
-                option_group: "Default",
-            },
-            {
-                placement: "default",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/template1/No_text_allovertote-template-simple.png?v=1679898197",
-                background_color: null,
-                background_image: null,
-                option: null,
-                option_group: null,
-            },
-            {
-                placement: "default",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/template/NO_text_tote_bag_mockup.png?v=1679898197",
-                background_color: null,
-                background_image: null,
-                option: null,
-                option_group: null,
-            },
-            {
-                placement: "default",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/03-allovertote-black-base.png?v=1679898197",
-                background_color: null,
-                background_image: null,
-                option: "Front",
-                option_group: "Default",
-            },
-            {
-                placement: "default",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/03-allovertote-black-base.png?v=1679898197",
-                background_color: null,
-                background_image: null,
-                option: "Back",
-                option_group: "Default",
-            },
-            {
-                placement: "default",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/lifestyle/02_totebag_black_base.png?v=1679898197",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Mockup",
-                option_group: "Lifestyle",
-            },
-            {
-                placement: "default",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/lifestyle/02_totebag_black_base.png?v=1679898197",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Lifestyle",
-            },
-            {
-                placement: "default",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/lifestyle/02_totebag_black_base.png?v=1679898197",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Back",
-                option_group: "Lifestyle",
-            },
-            {
-                placement: "default",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/flatlay/02_totebag_flatlay_black_base.png?v=1679898197",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Mockup",
-                option_group: "Flat Lifestyle",
-            },
-            {
-                placement: "default",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/flatlay/02_totebag_flatlay_black_base.png?v=1679898197",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Flat Lifestyle",
-            },
-            {
-                placement: "default",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/flatlay/02_totebag_flatlay_black_base.png?v=1679898197",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Back",
-                option_group: "Flat Lifestyle",
-            },
-            {
-                placement: "default",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/lifestyle2/02_totebag_black_base.png?v=1679898197",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Mockup",
-                option_group: "Lifestyle 2",
-            },
-            {
-                placement: "default",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/lifestyle2/02_totebag_black_base.png?v=1679898197",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Lifestyle 2",
-            },
-            {
-                placement: "default",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/lifestyle2/02_totebag_black_base.png?v=1679898197",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Back",
-                option_group: "Lifestyle 2",
-            },
-            {
-                placement: "default",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/lifestyle3/02_totebag_black_base.png?v=1679898197",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Mockup",
-                option_group: "Lifestyle 3",
-            },
-            {
-                placement: "default",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/lifestyle3/02_totebag_black_base.png?v=1679898197",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Lifestyle 3",
-            },
-            {
-                placement: "default",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/lifestyle3/02_totebag_black_base.png?v=1679898197",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Back",
-                option_group: "Lifestyle 3",
-            },
-            {
-                placement: "default",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/lifestyle4/02_totebag_black_base.png?v=1679898197",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Mockup",
-                option_group: "Lifestyle 4",
-            },
-            {
-                placement: "default",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/lifestyle4/02_totebag_black_base.png?v=1679898197",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Lifestyle 4",
-            },
-            {
-                placement: "default",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/lifestyle4/02_totebag_black_base.png?v=1679898197",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Back",
-                option_group: "Lifestyle 4",
-            },
-            {
-                placement: "default",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/halloween/dark/05_totebag_flat_black_base.png?v=1679898197",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Mockup",
-                option_group: "Halloween",
-            },
-            {
-                placement: "default",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/halloween/light/05_totebag_flat_black_base.png?v=1679898197",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Mockup",
-                option_group: "Halloween",
-            },
-            {
-                placement: "default",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/halloween/dark/05_totebag_flat_black_base.png?v=1679898197",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Halloween",
-            },
-            {
-                placement: "default",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/halloween/light/05_totebag_flat_black_base.png?v=1679898197",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Halloween",
-            },
-            {
-                placement: "default",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/halloween/dark/05_totebag_flat_black_base.png?v=1679898197",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Back",
-                option_group: "Halloween",
-            },
-            {
-                placement: "default",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/halloween/light/05_totebag_flat_black_base.png?v=1679898197",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Back",
-                option_group: "Halloween",
-            },
-            {
-                placement: "default",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/christmas/wood/05_totebag_flat_black_base.png?v=1679898197",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Holiday season",
-            },
-            {
-                placement: "default",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/christmas/light/05_totebag_flat_black_base.png?v=1679898197",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Holiday season",
-            },
-            {
-                placement: "default",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/christmas/wood/05_totebag_flat_black_base.png?v=1679898197",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Back",
-                option_group: "Holiday season",
-            },
-            {
-                placement: "default",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/christmas/light/05_totebag_flat_black_base.png?v=1679898197",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Back",
-                option_group: "Holiday season",
-            },
-            {
-                placement: "default",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/christmas/wood/05_totebag_flat_black_base.png?v=1679898197",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Mockup",
-                option_group: "Holiday season",
-            },
-            {
-                placement: "default",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/christmas/light/05_totebag_flat_black_base.png?v=1679898197",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Mockup",
-                option_group: "Holiday season",
-            },
-            {
-                placement: "default",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/spring-summer/05_totebag_flat_black_yellow_base.png?v=1679898197",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Spring/summer vibes",
-            },
-            {
-                placement: "default",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/spring-summer/05_totebag_flat_black_yellow_base.png?v=1679898197",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Back",
-                option_group: "Spring/summer vibes",
-            },
-            {
-                placement: "default",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/spring-summer/05_totebag_flat_black_light_base.png?v=1679898197",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Spring/summer vibes",
-            },
-            {
-                placement: "default",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/spring-summer/05_totebag_flat_black_light_base.png?v=1679898197",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Back",
-                option_group: "Spring/summer vibes",
-            },
-            {
-                placement: "default",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/spring-summer/05_totebag_flat_black_yellow_base.png?v=1679898197",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Mockup",
-                option_group: "Spring/summer vibes",
-            },
-            {
-                placement: "default",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/spring-summer/05_totebag_flat_black_light_base.png?v=1679898197",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Mockup",
-                option_group: "Spring/summer vibes",
-            },
-            {
-                placement: "default",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/flat/05_aop_totebag_flat_black_base_whitebg.png?v=1679898197",
+                    "https://files.cdn.printful.com/m/Tough_iPhone_case/medium/flat/11/05_toughcase_iphone11_flat_base_whitebg.png?v=1694600424",
                 background_color: "#ffffff",
                 background_image: null,
                 option: "Front",
@@ -5999,3085 +5657,5356 @@ const accessories = [
             {
                 placement: "default",
                 image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/flat/05_aop_totebag_flat_black_base_whitebg.png?v=1679898197",
+                    "https://files.cdn.printful.com/m/Tough_iPhone_case/medium/product_spec/11/05_toughcase_iphone11_flat_base_whitebg.png?v=1694600424",
                 background_color: "#ffffff",
                 background_image: null,
                 option: "Front",
-                option_group: "Flat",
+                option_group: "Product specs",
             },
             {
                 placement: "default",
                 image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/detail/05_aop_totebag_detail_black_base_whitebg.png?v=1679898197",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Product details",
-                option_group: "Product details",
-            },
-            {
-                placement: "default",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/detail/05_aop_totebag_detail_black_base_whitebg.png?v=1679898197",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Product details",
-                option_group: "Product details",
-            },
-            {
-                placement: "default",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/onhanger/05_aop_totebag_onhanger_black_base_whitebg.png?v=1679898197",
+                    "https://files.cdn.printful.com/m/Tough_iPhone_case/medium/flat2/11/05_toughcase_iphone11_flat_base_whitebg.png?v=1694600424",
                 background_color: "#ffffff",
                 background_image: null,
                 option: "Front",
-                option_group: "On Hanger",
+                option_group: "Flat 2",
             },
             {
                 placement: "default",
                 image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/onhanger/05_aop_totebag_onhanger_black_base_whitebg.png?v=1679898197",
+                    "https://files.cdn.printful.com/m/Tough_iPhone_case/medium/lifestyle2/11/05_toughcase_iphone11_base_whitebg.png?v=1694600424",
+                background_color: "#ffffff",
+                background_image: null,
+                option: "Right",
+                option_group: "Lifestyle",
+            },
+            {
+                placement: "default",
+                image_url:
+                    "https://files.cdn.printful.com/m/Tough_iPhone_case/medium/template2/11.png?v=1694600424",
                 background_color: "#ffffff",
                 background_image: null,
                 option: "Front",
-                option_group: "On Hanger",
+                option_group: "Template",
             },
             {
                 placement: "default",
                 image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/inhand/05_aop_totebag_inhand_black_base_whitebg.png?v=1679898197",
+                    "https://files.cdn.printful.com/m/Tough_iPhone_case/medium/lifestyle_3/11/05_tough_iphone_11_lifestyle3_base.png?v=1694600424",
                 background_color: "#ffffff",
                 background_image: null,
                 option: "Front",
-                option_group: "Lifestyle 5",
+                option_group: "Lifestyle 2",
             },
             {
                 placement: "default",
                 image_url:
-                    "https://files.cdn.printful.com/m/all-over-tote/medium/inhand/05_aop_totebag_inhand_black_base_whitebg.png?v=1679898197",
+                    "https://files.cdn.printful.com/m/Tough_iPhone_case/medium/lifestyle_4/11/05_tough_iphone_11_lifestyle4_base.png?v=1694600424",
+                background_color: "#ffffff",
+                background_image: null,
+                option: "Front",
+                option_group: "Lifestyle 3",
+            },
+            {
+                placement: "default",
+                image_url:
+                    "https://files.cdn.printful.com/m/Tough_iPhone_case/medium/lifestyle_5/11/05_tough_iphone_11_lifestyle5_base.png?v=1694600424",
+                background_color: "#ffffff",
+                background_image: null,
+                option: "Front",
+                option_group: "Lifestyle 4",
+            },
+            {
+                placement: "default",
+                image_url:
+                    "https://files.cdn.printful.com/m/Tough_iPhone_case/medium/lifestyle_6/11/05_tough_iphone_11_lifestyle6_base.png?v=1694600424",
                 background_color: "#ffffff",
                 background_image: null,
                 option: "Front",
                 option_group: "Lifestyle 5",
             },
         ],
+        variants: [
+            {
+                id: 15381,
+                product_id: 601,
+                name: "Tough iPhone Case (Glossy / iPhone 11)",
+                size: "iPhone 11",
+                color: "Glossy",
+                color_code: "#ffffff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/601/15381_1654239978.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15381",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/601",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/601/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15381/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15381/images",
+                    },
+                },
+            },
+            {
+                id: 15382,
+                product_id: 601,
+                name: "Tough iPhone Case (Glossy / iPhone 11 Pro)",
+                size: "iPhone 11 Pro",
+                color: "Glossy",
+                color_code: "#ffffff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/601/15382_1654239978.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15382",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/601",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/601/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15382/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15382/images",
+                    },
+                },
+            },
+            {
+                id: 15383,
+                product_id: 601,
+                name: "Tough iPhone Case (Glossy / iPhone 11 Pro Max)",
+                size: "iPhone 11 Pro Max",
+                color: "Glossy",
+                color_code: "#ffffff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/601/15383_1654239967.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15383",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/601",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/601/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15383/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15383/images",
+                    },
+                },
+            },
+            {
+                id: 15384,
+                product_id: 601,
+                name: "Tough iPhone Case (Glossy / iPhone 12)",
+                size: "iPhone 12",
+                color: "Glossy",
+                color_code: "#ffffff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/601/15384_1654240008.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15384",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/601",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/601/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15384/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15384/images",
+                    },
+                },
+            },
+            {
+                id: 15385,
+                product_id: 601,
+                name: "Tough iPhone Case (Glossy / iPhone 12 mini)",
+                size: "iPhone 12 mini",
+                color: "Glossy",
+                color_code: "#ffffff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/601/15385_1654239988.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15385",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/601",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/601/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15385/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15385/images",
+                    },
+                },
+            },
+            {
+                id: 15386,
+                product_id: 601,
+                name: "Tough iPhone Case (Glossy / iPhone 12 Pro)",
+                size: "iPhone 12 Pro",
+                color: "Glossy",
+                color_code: "#ffffff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/601/15386_1654239998.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15386",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/601",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/601/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15386/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15386/images",
+                    },
+                },
+            },
+            {
+                id: 15387,
+                product_id: 601,
+                name: "Tough iPhone Case (Glossy / iPhone 12 Pro Max)",
+                size: "iPhone 12 Pro Max",
+                color: "Glossy",
+                color_code: "#ffffff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/601/15387_1654239988.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15387",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/601",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/601/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15387/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15387/images",
+                    },
+                },
+            },
+            {
+                id: 15388,
+                product_id: 601,
+                name: "Tough iPhone Case (Glossy / iPhone 13)",
+                size: "iPhone 13",
+                color: "Glossy",
+                color_code: "#ffffff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/601/15388_1654240110.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15388",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/601",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/601/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15388/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15388/images",
+                    },
+                },
+            },
+            {
+                id: 15389,
+                product_id: 601,
+                name: "Tough iPhone Case (Glossy / iPhone 13 mini)",
+                size: "iPhone 13 mini",
+                color: "Glossy",
+                color_code: "#ffffff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/601/15389_1654240008.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15389",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/601",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/601/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15389/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15389/images",
+                    },
+                },
+            },
+            {
+                id: 15390,
+                product_id: 601,
+                name: "Tough iPhone Case (Glossy / iPhone 13 Pro)",
+                size: "iPhone 13 Pro",
+                color: "Glossy",
+                color_code: "#ffffff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/601/15390_1654240019.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15390",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/601",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/601/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15390/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15390/images",
+                    },
+                },
+            },
+            {
+                id: 15391,
+                product_id: 601,
+                name: "Tough iPhone Case (Glossy / iPhone 13 Pro Max)",
+                size: "iPhone 13 Pro Max",
+                color: "Glossy",
+                color_code: "#ffffff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/601/15391_1654240019.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15391",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/601",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/601/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15391/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15391/images",
+                    },
+                },
+            },
+            {
+                id: 15392,
+                product_id: 601,
+                name: "Tough iPhone Case (Matte / iPhone 11)",
+                size: "iPhone 11",
+                color: "Matte",
+                color_code: "#ffffff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/601/15392_1654240710.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15392",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/601",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/601/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15392/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15392/images",
+                    },
+                },
+            },
+            {
+                id: 15393,
+                product_id: 601,
+                name: "Tough iPhone Case (Matte / iPhone 11 Pro)",
+                size: "iPhone 11 Pro",
+                color: "Matte",
+                color_code: "#ffffff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/601/15393_1654240709.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15393",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/601",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/601/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15393/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15393/images",
+                    },
+                },
+            },
+            {
+                id: 15394,
+                product_id: 601,
+                name: "Tough iPhone Case (Matte / iPhone 11 Pro Max)",
+                size: "iPhone 11 Pro Max",
+                color: "Matte",
+                color_code: "#ffffff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/601/15394_1654240029.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15394",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/601",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/601/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15394/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15394/images",
+                    },
+                },
+            },
+            {
+                id: 15395,
+                product_id: 601,
+                name: "Tough iPhone Case (Matte / iPhone 12)",
+                size: "iPhone 12",
+                color: "Matte",
+                color_code: "#ffffff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/601/15395_1654240740.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15395",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/601",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/601/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15395/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15395/images",
+                    },
+                },
+            },
+            {
+                id: 15396,
+                product_id: 601,
+                name: "Tough iPhone Case (Matte / iPhone 12 mini)",
+                size: "iPhone 12 mini",
+                color: "Matte",
+                color_code: "#ffffff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/601/15396_1654240710.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15396",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/601",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/601/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15396/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15396/images",
+                    },
+                },
+            },
+            {
+                id: 15397,
+                product_id: 601,
+                name: "Tough iPhone Case (Matte / iPhone 12 Pro)",
+                size: "iPhone 12 Pro",
+                color: "Matte",
+                color_code: "#ffffff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/601/15397_1654240730.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15397",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/601",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/601/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15397/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15397/images",
+                    },
+                },
+            },
+            {
+                id: 15398,
+                product_id: 601,
+                name: "Tough iPhone Case (Matte / iPhone 12 Pro Max)",
+                size: "iPhone 12 Pro Max",
+                color: "Matte",
+                color_code: "#ffffff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/601/15398_1654240720.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15398",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/601",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/601/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15398/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15398/images",
+                    },
+                },
+            },
+            {
+                id: 15399,
+                product_id: 601,
+                name: "Tough iPhone Case (Matte / iPhone 13)",
+                size: "iPhone 13",
+                color: "Matte",
+                color_code: "#ffffff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/601/15399_1654240761.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15399",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/601",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/601/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15399/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15399/images",
+                    },
+                },
+            },
+            {
+                id: 15400,
+                product_id: 601,
+                name: "Tough iPhone Case (Matte / iPhone 13 mini)",
+                size: "iPhone 13 mini",
+                color: "Matte",
+                color_code: "#ffffff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/601/15400_1654240740.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15400",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/601",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/601/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15400/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15400/images",
+                    },
+                },
+            },
+            {
+                id: 15401,
+                product_id: 601,
+                name: "Tough iPhone Case (Matte / iPhone 13 Pro)",
+                size: "iPhone 13 Pro",
+                color: "Matte",
+                color_code: "#ffffff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/601/15401_1654240751.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15401",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/601",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/601/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15401/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15401/images",
+                    },
+                },
+            },
+            {
+                id: 15402,
+                product_id: 601,
+                name: "Tough iPhone Case (Matte / iPhone 13 Pro Max)",
+                size: "iPhone 13 Pro Max",
+                color: "Matte",
+                color_code: "#ffffff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/601/15402_1654240750.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15402",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/601",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/601/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15402/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15402/images",
+                    },
+                },
+            },
+            {
+                id: 16124,
+                product_id: 601,
+                name: "Tough iPhone Case (Glossy / iPhone 14)",
+                size: "iPhone 14",
+                color: "Glossy",
+                color_code: "#ffffff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/601/16124_1663581883.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/16124",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/601",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/601/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/16124/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/16124/images",
+                    },
+                },
+            },
+            {
+                id: 16125,
+                product_id: 601,
+                name: "Tough iPhone Case (Matte / iPhone 14)",
+                size: "iPhone 14",
+                color: "Matte",
+                color_code: "#ffffff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/601/16125_1663581915.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/16125",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/601",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/601/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/16125/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/16125/images",
+                    },
+                },
+            },
+            {
+                id: 16126,
+                product_id: 601,
+                name: "Tough iPhone Case (Glossy / iPhone 14 Pro)",
+                size: "iPhone 14 Pro",
+                color: "Glossy",
+                color_code: "#ffffff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/601/16126_1663581883.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/16126",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/601",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/601/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/16126/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/16126/images",
+                    },
+                },
+            },
+            {
+                id: 16127,
+                product_id: 601,
+                name: "Tough iPhone Case (Matte / iPhone 14 Pro)",
+                size: "iPhone 14 Pro",
+                color: "Matte",
+                color_code: "#ffffff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/601/16127_1663581915.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/16127",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/601",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/601/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/16127/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/16127/images",
+                    },
+                },
+            },
+            {
+                id: 16128,
+                product_id: 601,
+                name: "Tough iPhone Case (Glossy / iPhone 14 Plus)",
+                size: "iPhone 14 Plus",
+                color: "Glossy",
+                color_code: "#ffffff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/601/16128_1663581873.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/16128",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/601",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/601/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/16128/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/16128/images",
+                    },
+                },
+            },
+            {
+                id: 16129,
+                product_id: 601,
+                name: "Tough iPhone Case (Matte / iPhone 14 Plus)",
+                size: "iPhone 14 Plus",
+                color: "Matte",
+                color_code: "#ffffff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/601/16129_1663581905.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/16129",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/601",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/601/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/16129/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/16129/images",
+                    },
+                },
+            },
+            {
+                id: 16130,
+                product_id: 601,
+                name: "Tough iPhone Case (Glossy / iPhone 14 Pro Max)",
+                size: "iPhone 14 Pro Max",
+                color: "Glossy",
+                color_code: "#ffffff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/601/16130_1663581877.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/16130",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/601",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/601/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/16130/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/16130/images",
+                    },
+                },
+            },
+            {
+                id: 16131,
+                product_id: 601,
+                name: "Tough iPhone Case (Matte / iPhone 14 Pro Max)",
+                size: "iPhone 14 Pro Max",
+                color: "Matte",
+                color_code: "#ffffff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/601/16131_1663581905.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/16131",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/601",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/601/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/16131/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/16131/images",
+                    },
+                },
+            },
+            {
+                id: 17714,
+                product_id: 601,
+                name: "Tough iPhone Case (Glossy / iPhone 15)",
+                size: "iPhone 15",
+                color: "Glossy",
+                color_code: "#ffffff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/601/17714_1694436355.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/17714",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/601",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/601/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/17714/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/17714/images",
+                    },
+                },
+            },
+            {
+                id: 17715,
+                product_id: 601,
+                name: "Tough iPhone Case (Matte / iPhone 15)",
+                size: "iPhone 15",
+                color: "Matte",
+                color_code: "#ffffff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/601/17715_1694436372.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/17715",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/601",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/601/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/17715/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/17715/images",
+                    },
+                },
+            },
+            {
+                id: 17716,
+                product_id: 601,
+                name: "Tough iPhone Case (Glossy / iPhone 15 Plus)",
+                size: "iPhone 15 Plus",
+                color: "Glossy",
+                color_code: "#ffffff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/601/17716_1694436350.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/17716",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/601",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/601/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/17716/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/17716/images",
+                    },
+                },
+            },
+            {
+                id: 17717,
+                product_id: 601,
+                name: "Tough iPhone Case (Matte / iPhone 15 Plus)",
+                size: "iPhone 15 Plus",
+                color: "Matte",
+                color_code: "#ffffff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/601/17717_1694436361.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/17717",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/601",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/601/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/17717/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/17717/images",
+                    },
+                },
+            },
+            {
+                id: 17718,
+                product_id: 601,
+                name: "Tough iPhone Case (Glossy / iPhone 15 Pro)",
+                size: "iPhone 15 Pro",
+                color: "Glossy",
+                color_code: "#ffffff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/601/17718_1694436354.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/17718",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/601",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/601/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/17718/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/17718/images",
+                    },
+                },
+            },
+            {
+                id: 17719,
+                product_id: 601,
+                name: "Tough iPhone Case (Matte / iPhone 15 Pro)",
+                size: "iPhone 15 Pro",
+                color: "Matte",
+                color_code: "#ffffff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/601/17719_1694436372.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/17719",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/601",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/601/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/17719/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/17719/images",
+                    },
+                },
+            },
+            {
+                id: 17720,
+                product_id: 601,
+                name: "Tough iPhone Case (Glossy / iPhone 15 Pro Max)",
+                size: "iPhone 15 Pro Max",
+                color: "Glossy",
+                color_code: "#ffffff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/601/17720_1694436351.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/17720",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/601",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/601/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/17720/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/17720/images",
+                    },
+                },
+            },
+            {
+                id: 17721,
+                product_id: 601,
+                name: "Tough iPhone Case (Matte / iPhone 15 Pro Max)",
+                size: "iPhone 15 Pro Max",
+                color: "Matte",
+                color_code: "#ffffff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/601/17721_1694436371.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/17721",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/601",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/601/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/17721/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/17721/images",
+                    },
+                },
+            },
+        ],
     },
     {
-        productName: "All-Over Print Minimalist Backpack",
-        price: 35.25,
+        productName: "Clear Case for Samsung®",
+        price: 10.75,
         images: [
             {
-                placement: "front",
+                placement: "default",
                 image_url:
-                    "https://files.cdn.printful.com/m/all-over-backpack-minimalist/medium/template1/mockup_generator_template_front_No_text.png?v=1675853790",
+                    "https://files.cdn.printful.com/m/163-samsung-cases/medium/s10/05_samsung_s10_overlay.png?v=1647433821",
+                background_color: null,
+                background_image:
+                    "https://files.cdn.printful.com/m/163-samsung-cases/medium/s10/02_samsung_s10_base.png?v=1647433821",
+                option: "Case on phone",
+                option_group: "Default",
+            },
+            {
+                placement: "default",
+                image_url:
+                    "https://files.cdn.printful.com/m/163-samsung-cases/medium/s10/off/05_samsung_s10_overlay.png?v=1647433821",
+                background_color: null,
+                background_image:
+                    "https://files.cdn.printful.com/m/163-samsung-cases/medium/s10/off/02_samsung_s10_base.png?v=1647433821",
+                option: "Case with phone",
+                option_group: "Default",
+            },
+            {
+                placement: "default",
+                image_url:
+                    "https://files.cdn.printful.com/m/163-samsung-cases/medium/lifestyle_ver1/s10/02_samsung_s10_base.png?v=1647433821",
+                background_color: null,
+                background_image:
+                    "https://files.cdn.printful.com/m/163-samsung-cases/medium/lifestyle_ver1/s10/02_samsung_s10_base.png?v=1647433821",
+                option: "Lifestyle 1",
+                option_group: "Lifestyle",
+            },
+            {
+                placement: "default",
+                image_url:
+                    "https://files.cdn.printful.com/m/163-samsung-cases/medium/lifestyle_ver2/s10/02_samsung_s10_base.png?v=1647433821",
+                background_color: null,
+                background_image:
+                    "https://files.cdn.printful.com/m/163-samsung-cases/medium/lifestyle_ver2/s10/02_samsung_s10_base.png?v=1647433821",
+                option: "Lifestyle 2",
+                option_group: "Lifestyle",
+            },
+            {
+                placement: "default",
+                image_url:
+                    "https://files.cdn.printful.com/m/163-samsung-cases/medium/lifestyle_ver4/s10/02_samsung_s10_base.png?v=1647433821",
+                background_color: null,
+                background_image:
+                    "https://files.cdn.printful.com/m/163-samsung-cases/medium/lifestyle_ver4/s10/02_samsung_s10_base.png?v=1647433821",
+                option: "Lifestyle 4",
+                option_group: "Lifestyle",
+            },
+            {
+                placement: "default",
+                image_url:
+                    "https://files.cdn.printful.com/m/163-samsung-cases/medium/halloween/dark/S10/03_samsung_s10_base.png?v=1647433821",
+                background_color: null,
+                background_image:
+                    "https://files.cdn.printful.com/m/163-samsung-cases/medium/halloween/dark/S10/03_samsung_s10_base.png?v=1647433821",
+                option: "Halloween",
+                option_group: "Halloween",
+            },
+            {
+                placement: "default",
+                image_url:
+                    "https://files.cdn.printful.com/m/163-samsung-cases/medium/halloween/light/S10/03_samsung_s10_base.png?v=1647433821",
+                background_color: null,
+                background_image:
+                    "https://files.cdn.printful.com/m/163-samsung-cases/medium/halloween/light/S10/03_samsung_s10_base.png?v=1647433821",
+                option: "Halloween 2",
+                option_group: "Halloween",
+            },
+            {
+                placement: "default",
+                image_url:
+                    "https://files.cdn.printful.com/m/163-samsung-cases/medium/Christmas/s10/03_s10_christmas_base.png?v=1647433821",
+                background_color: null,
+                background_image:
+                    "https://files.cdn.printful.com/m/163-samsung-cases/medium/Christmas/s10/03_s10_christmas_base.png?v=1647433821",
+                option: "Christmas",
+                option_group: "Holiday season",
+            },
+            {
+                placement: "default",
+                image_url:
+                    "https://files.cdn.printful.com/m/163-samsung-cases/medium/spring-summer/s10/03_s10_summer_yellow_base.png?v=1647433821",
+                background_color: null,
+                background_image:
+                    "https://files.cdn.printful.com/m/163-samsung-cases/medium/spring-summer/s10/03_s10_summer_yellow_base.png?v=1647433821",
+                option: "Spring/Summer",
+                option_group: "Spring/summer vibes",
+            },
+            {
+                placement: "default",
+                image_url:
+                    "https://files.cdn.printful.com/m/163-samsung-cases/medium/spring-summer/s10/03_s10_summer_light_base.png?v=1647433821",
+                background_color: null,
+                background_image:
+                    "https://files.cdn.printful.com/m/163-samsung-cases/medium/spring-summer/s10/03_s10_summer_light_base.png?v=1647433821",
+                option: "Spring/Summer 2",
+                option_group: "Spring/summer vibes",
+            },
+            {
+                placement: "default",
+                image_url:
+                    "https://files.cdn.printful.com/m/163-samsung-cases/medium/splash/s10/03_s10_lifestyle_white_base_whitebg.png?v=1647433821",
                 background_color: null,
                 background_image: null,
-                option: "Front",
-                option_group: null,
-            },
-            {
-                placement: "top",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-backpack-minimalist/medium/template1/mockup_generator_template_top_No_text.png?v=1675853790",
-                background_color: null,
-                background_image: null,
-                option: "Top",
-                option_group: null,
-            },
-            {
-                placement: "bottom",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-backpack-minimalist/medium/template1/mockup_generator_template_bottom_No_text.png?v=1675853790",
-                background_color: null,
-                background_image: null,
-                option: "Bottom",
-                option_group: null,
-            },
-            {
-                placement: "front",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-backpack-minimalist/medium/default/front/05_premiumbackpack_front_base_whitebg.png?v=1675853790",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Default",
-            },
-            {
-                placement: "top",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-backpack-minimalist/medium/default/back/05_premiumbackpack_back_base_whitebg.png?v=1675853790",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Back",
-                option_group: "Default",
-            },
-            {
-                placement: "bottom",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-backpack-minimalist/medium/default/bottom/05_premiumbackpack_bottom_base_whitebg.png?v=1675853790",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Bottom",
-                option_group: "Default",
-            },
-            {
-                placement: "front",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-backpack-minimalist/medium/default/frontleft/05_premiumbackpack_frontleft_base_whitebg.png?v=1675853790",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left",
-                option_group: "Default",
-            },
-            {
-                placement: "front",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-backpack-minimalist/medium/default/frontright/05_premiumbackpack_frontright_base_whitebg.png?v=1675853790",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right",
-                option_group: "Default",
-            },
-            {
-                placement: "front",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-backpack-minimalist/medium/lifestyle/front/05_premiumbackpack_lifestyle_onhanger_base.png?v=1675853790",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Lifestyle 1",
-            },
-            {
-                placement: "front",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-backpack-minimalist/medium/lifestyle_2/front/05_premiumbackpack_lifestyle_withplants_base.png?v=1675853790",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
+                option: "Case on phone",
                 option_group: "Lifestyle 2",
             },
             {
-                placement: "front",
+                placement: "default",
                 image_url:
-                    "https://files.cdn.printful.com/m/all-over-backpack-minimalist/medium/boys_lifestyle/frontright/05_premiumbackpack_onboy_lifestyle_base_whitebg.png?v=1675853790",
-                background_color: "#ffffff",
+                    "https://files.cdn.printful.com/m/163-samsung-cases/medium/splash/s10/03_s10_lifestyle_blue_base_whitebg.png?v=1647433821",
+                background_color: null,
                 background_image: null,
-                option: "Right Front",
-                option_group: "Boy's Lifestyle",
+                option: "Case on phone 2",
+                option_group: "Lifestyle 2",
             },
             {
-                placement: "front",
+                placement: "default",
                 image_url:
-                    "https://files.cdn.printful.com/m/all-over-backpack-minimalist/medium/boys_lifestyle/frontleft/05_premiumbackpack_onboy_lifestyle_base_whitebg.png?v=1675853790",
-                background_color: "#ffffff",
+                    "https://files.cdn.printful.com/m/163-samsung-cases/medium/splash/s10/03_s10_lifestyle_orange_base_whitebg.png?v=1647433821",
+                background_color: null,
                 background_image: null,
-                option: "Left Front",
-                option_group: "Boy's Lifestyle",
+                option: "Case on phone 3",
+                option_group: "Lifestyle 2",
             },
             {
-                placement: "front",
+                placement: "default",
                 image_url:
-                    "https://files.cdn.printful.com/m/all-over-backpack-minimalist/medium/boys_lifestyle/frontleft/zoomed/05_premiumbackpack_onboy_lifestyle_base_whitebg.png?v=1675853790",
-                background_color: "#ffffff",
+                    "https://files.cdn.printful.com/m/163-samsung-cases/medium/lifestyle_3/s10/04_samsung_s10_inhand_base_whitebg.png?v=1647433821",
+                background_color: null,
                 background_image: null,
-                option: "Zoomed-in",
-                option_group: "Boy's Lifestyle",
+                option: "Case on phone",
+                option_group: "Lifestyle 3",
+            },
+        ],
+        variants: [
+            {
+                id: 9945,
+                product_id: 267,
+                name: "Clear Case for Samsung® (Samsung Galaxy S10)",
+                size: "Samsung Galaxy S10",
+                color: null,
+                color_code: null,
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/267/9945_1582201424.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Latvia", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/9945",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/267",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/267/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/9945/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/9945/images",
+                    },
+                },
             },
             {
-                placement: "front",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-backpack-minimalist/medium/boys_lifestyle/frontright/zoomed/05_premiumbackpack_onboy_lifestyle_base_whitebg.png?v=1675853790",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Zoomed-in",
-                option_group: "Boy's Lifestyle",
+                id: 9946,
+                product_id: 267,
+                name: "Clear Case for Samsung® (Samsung Galaxy S10e)",
+                size: "Samsung Galaxy S10e",
+                color: null,
+                color_code: null,
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/267/9946_1582201474.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Latvia", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/9946",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/267",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/267/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/9946/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/9946/images",
+                    },
+                },
             },
             {
-                placement: "front",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-backpack-minimalist/medium/mens_lifestyle/front/05_premiumbackpack_onman_lifestyle_base_whitebg.png?v=1675853790",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Men's Lifestyle",
+                id: 9947,
+                product_id: 267,
+                name: "Clear Case for Samsung® (Samsung Galaxy S10+)",
+                size: "Samsung Galaxy S10+",
+                color: null,
+                color_code: null,
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/267/9947_1582201447.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Latvia", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/9947",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/267",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/267/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/9947/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/9947/images",
+                    },
+                },
             },
             {
-                placement: "front",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-backpack-minimalist/medium/mens_lifestyle/frontright/05_premiumbackpack_onman_lifestyle_base_whitebg.png?v=1675853790",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right Front",
-                option_group: "Men's Lifestyle",
+                id: 11347,
+                product_id: 267,
+                name: "Clear Case for Samsung® (Samsung Galaxy S20)",
+                size: "Samsung Galaxy S20",
+                color: null,
+                color_code: null,
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/267/11347_1584528512.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Latvia", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/11347",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/267",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/267/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/11347/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/11347/images",
+                    },
+                },
             },
             {
-                placement: "front",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-backpack-minimalist/medium/boys2/front/06_AOP_Minimalist_Backpack_Mockup_Boy_front_base_whitebg.png?v=1675856209",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Boy's Lifestyle 2",
+                id: 11348,
+                product_id: 267,
+                name: "Clear Case for Samsung® (Samsung Galaxy S20 Plus)",
+                size: "Samsung Galaxy S20 Plus",
+                color: null,
+                color_code: null,
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/267/11348_1584528498.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Latvia", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/11348",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/267",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/267/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/11348/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/11348/images",
+                    },
+                },
             },
             {
-                placement: "front",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-backpack-minimalist/medium/boys2/back/06_AOP_Minimalist_Backpack_Mockup_Boy_back_base_whitebg.png?v=1675856209",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right Front",
-                option_group: "Boy's Lifestyle 2",
+                id: 11349,
+                product_id: 267,
+                name: "Clear Case for Samsung® (Samsung Galaxy S20 Ultra)",
+                size: "Samsung Galaxy S20 Ultra",
+                color: null,
+                color_code: null,
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/267/11349_1584528399.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Latvia", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/11349",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/267",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/267/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/11349/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/11349/images",
+                    },
+                },
             },
             {
-                placement: "front",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-backpack-minimalist/medium/girls/front/06_AOP_Minimalist_Backpack_Mockup_Girl_base_whitebg.png?v=1675856213",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Girl's Lifestyle",
+                id: 12024,
+                product_id: 267,
+                name: "Clear Case for Samsung® (Samsung Galaxy S20 FE)",
+                size: "Samsung Galaxy S20 FE",
+                color: null,
+                color_code: null,
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/267/12024_1614239810.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Latvia", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/12024",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/267",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/267/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/12024/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/12024/images",
+                    },
+                },
             },
             {
-                placement: "front",
-                image_url:
-                    "https://files.cdn.printful.com/m/all-over-backpack-minimalist/medium/girls/left/06_AOP_Minimalist_Backpack_Mockup_Girl_left_base_whitebg.png?v=1675856213",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right Front",
-                option_group: "Girl's Lifestyle",
+                id: 12025,
+                product_id: 267,
+                name: "Clear Case for Samsung® (Samsung Galaxy S21)",
+                size: "Samsung Galaxy S21",
+                color: null,
+                color_code: null,
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/267/12025_1615296198.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Latvia", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "stocked_on_demand" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/12025",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/267",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/267/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/12025/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/12025/images",
+                    },
+                },
+            },
+            {
+                id: 12026,
+                product_id: 267,
+                name: "Clear Case for Samsung® (Samsung Galaxy S21 Ultra)",
+                size: "Samsung Galaxy S21 Ultra",
+                color: null,
+                color_code: null,
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/267/12026_1615296332.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Latvia", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/12026",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/267",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/267/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/12026/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/12026/images",
+                    },
+                },
+            },
+            {
+                id: 12027,
+                product_id: 267,
+                name: "Clear Case for Samsung® (Samsung Galaxy S21 Plus)",
+                size: "Samsung Galaxy S21 Plus",
+                color: null,
+                color_code: null,
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/267/12027_1615296293.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Latvia", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/12027",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/267",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/267/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/12027/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/12027/images",
+                    },
+                },
+            },
+            {
+                id: 14633,
+                product_id: 267,
+                name: "Clear Case for Samsung® (Samsung Galaxy S22)",
+                size: "Samsung Galaxy S22",
+                color: null,
+                color_code: null,
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/267/14633_1645797555.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Latvia", status: "supplier_out_of_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/14633",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/267",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/267/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/14633/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/14633/images",
+                    },
+                },
+            },
+            {
+                id: 14634,
+                product_id: 267,
+                name: "Clear Case for Samsung® (Samsung Galaxy S22 Plus)",
+                size: "Samsung Galaxy S22 Plus",
+                color: null,
+                color_code: null,
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/267/14634_1645797547.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Latvia", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/14634",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/267",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/267/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/14634/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/14634/images",
+                    },
+                },
+            },
+            {
+                id: 14635,
+                product_id: 267,
+                name: "Clear Case for Samsung® (Samsung Galaxy S22 Ultra)",
+                size: "Samsung Galaxy S22 Ultra",
+                color: null,
+                color_code: null,
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/267/14635_1645797548.jpg",
+                availability: [
+                    { region: "United States", status: "in_stock" },
+                    { region: "Europe", status: "in_stock" },
+                    { region: "Latvia", status: "in_stock" },
+                    { region: "Australia", status: "in_stock" },
+                    { region: "United Kingdom", status: "in_stock" },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/14635",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/267",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/267/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/14635/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/14635/images",
+                    },
+                },
             },
         ],
     },
-    {
-        productName: "Men's High Top Canvas Shoes",
-        price: 45,
-        images: [
-            {
-                placement: "shoe_tongue_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/front/05_KinCustom_hightop_shoes_mockup_front_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/template/Kincustom_shoe_left_leg_no_text-188.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left shoe",
-                option_group: "Template",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/template/Kincustom_shoe_right_leg_no_text-189.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right shoe",
-                option_group: "Template",
-            },
-            {
-                placement: "shoe_tongue_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/template/Kincustom_shoe_right_leg_tongue_no_text.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right shoe tongue",
-                option_group: "Template",
-            },
-            {
-                placement: "shoe_tongue_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/template/Kincustom_shoe_left_leg_tongue_no_text.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left shoe tongue",
-                option_group: "Template",
-            },
-            {
-                placement: "label_inside",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/template/Np_text_branding_shoes-191.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding",
-                option_group: "Template",
-            },
-            {
-                placement: "shoe_tongue_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/front/05_KinCustom_hightop_shoes_mockup_front_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_tongue_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/front2/05_KinCustom_hightop_shoes_mockup_front2_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front 2",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_tongue_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/front2/05_KinCustom_hightop_shoes_mockup_front2_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front 2",
-                option_group: "Flat",
-            },
-            {
-                placement: "label_inside",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/front2/05_KinCustom_hightop_shoes_mockup_front2_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front 2",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/back/05_KinCustom_hightop_shoes_mockup_back_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Back",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/back/05_KinCustom_hightop_shoes_mockup_back_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Back",
-                option_group: "Flat",
-            },
-            {
-                placement: "label_inside",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/back/05_KinCustom_hightop_shoes_mockup_back_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Back",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/backleft/05_KinCustom_hightop_shoes_mockup_backleft_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left Back",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/backright/05_KinCustom_hightop_shoes_mockup_backright_base_whitebg-2.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right Back",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/frontright/05_KinCustom_hightop_shoes_mockup_frontright_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right Front",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/frontleft/05_KinCustom_hightop_shoes_mockup_frontleft_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left Front",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/left/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/right/05_KinCustom_hightop_shoes_mockup_right_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_tongue_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/leftfront/05_KinCustom_hightop_shoes_mockup_frontleft_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left Front",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_tongue_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/leftfront/05_KinCustom_hightop_shoes_mockup_frontleft_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left Front",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_tongue_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/frontright/05_KinCustom_hightop_shoes_mockup_frontright_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right Front",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_tongue_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/frontright/05_KinCustom_hightop_shoes_mockup_frontright_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right Front",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat2/left_outside/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left Outside",
-                option_group: "Flat 2",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat2/right_inside/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right Inside",
-                option_group: "Flat 2",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat2/right_outside/05_KinCustom_hightop_shoes_mockup_right_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right Outside",
-                option_group: "Flat 2",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat2/left_inside/05_KinCustom_hightop_shoes_mockup_right_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left Inside",
-                option_group: "Flat 2",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat3/left/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left",
-                option_group: "Flat 3",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat3/left/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left",
-                option_group: "Flat 3",
-            },
-            {
-                placement: "shoe_tongue_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat3/left/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left",
-                option_group: "Flat 3",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat3/right/05_KinCustom_hightop_shoes_mockup_right_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right",
-                option_group: "Flat 3",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat3/right/05_KinCustom_hightop_shoes_mockup_right_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right",
-                option_group: "Flat 3",
-            },
-            {
-                placement: "shoe_tongue_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat3/right/05_KinCustom_hightop_shoes_mockup_right_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right",
-                option_group: "Flat 3",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat4/left/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left",
-                option_group: "Flat 4",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat4/right/05_KinCustom_hightop_shoes_mockup_right_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right",
-                option_group: "Flat 4",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat_lifestyle/front/05_KinCustom_hightop_shoes_mockup_lifestyle_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Flat Lifestyle",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat_lifestyle/front/05_KinCustom_hightop_shoes_mockup_lifestyle_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Flat Lifestyle",
-            },
-            {
-                placement: "label_inside",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/1/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding 1",
-                option_group: "Branding",
-            },
-            {
-                placement: "label_inside",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/2/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding 2",
-                option_group: "Branding",
-            },
-            {
-                placement: "label_inside",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/3/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding 3",
-                option_group: "Branding",
-            },
-            {
-                placement: "label_inside",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/4/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding 4",
-                option_group: "Branding",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_details/1/05_KinCustom_hightop_shoes_mockup_details_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Product details",
-                option_group: "Product details",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_details/1/05_KinCustom_hightop_shoes_mockup_details_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Product details",
-                option_group: "Product details",
-            },
-            {
-                placement: "shoe_tongue_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_details/1/05_KinCustom_hightop_shoes_mockup_details_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Product details",
-                option_group: "Product details",
-            },
-            {
-                placement: "shoe_tongue_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_details/1/05_KinCustom_hightop_shoes_mockup_details_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Product details",
-                option_group: "Product details",
-            },
-            {
-                placement: "label_inside",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_details/1/05_KinCustom_hightop_shoes_mockup_details_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Product details",
-                option_group: "Product details",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_details/2/05_KinCustom_hightop_shoes_mockup_details_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Product details 2",
-                option_group: "Product details",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_details/2/05_KinCustom_hightop_shoes_mockup_details_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Product details 2",
-                option_group: "Product details",
-            },
-            {
-                placement: "shoe_tongue_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_details/2/05_KinCustom_hightop_shoes_mockup_details_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Product details 2",
-                option_group: "Product details",
-            },
-            {
-                placement: "shoe_tongue_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_details/2/05_KinCustom_hightop_shoes_mockup_details_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Product details 2",
-                option_group: "Product details",
-            },
-            {
-                placement: "label_inside",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_details/2/05_KinCustom_hightop_shoes_mockup_details_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Product details 2",
-                option_group: "Product details",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/mens/frontleft/05_KinCustom_hightop_shoes_onman_frontleft_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left",
-                option_group: "Men's",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/mens/frontright/05_KinCustom_hightop_shoes_onman_frontright_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right",
-                option_group: "Men's",
-            },
-            {
-                placement: "shoe_tongue_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/mens/frontleft/05_KinCustom_hightop_shoes_onman_frontleft_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left",
-                option_group: "Men's",
-            },
-            {
-                placement: "shoe_tongue_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/mens/frontright/05_KinCustom_hightop_shoes_onman_frontright_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right",
-                option_group: "Men's",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/mens/back/05_KinCustom_hightop_shoes_onman_back_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Back",
-                option_group: "Men's",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/mens/back/05_KinCustom_hightop_shoes_onman_back_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Back",
-                option_group: "Men's",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/mens_lifestyle/left/05_KinCustom_hightop_shoes_onman_frontleft_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left",
-                option_group: "Men's Lifestyle",
-            },
-            {
-                placement: "shoe_tongue_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/mens_lifestyle/left/05_KinCustom_hightop_shoes_onman_frontleft_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left",
-                option_group: "Men's Lifestyle",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/mens_lifestyle/left2/05_KinCustom_hightop_shoes_onman_frontleft_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left",
-                option_group: "Men's Lifestyle",
-            },
-            {
-                placement: "shoe_tongue_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/mens_lifestyle/left2/05_KinCustom_hightop_shoes_onman_frontleft_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left",
-                option_group: "Men's Lifestyle",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat5/front/05_KinCustom_hightop_shoes_mockup_front_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Flat 5",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat5/front/05_KinCustom_hightop_shoes_mockup_front_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Flat 5",
-            },
-            {
-                placement: "shoe_tongue_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/1/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding 1",
-                option_group: "Branding",
-            },
-            {
-                placement: "shoe_tongue_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/3/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding 3",
-                option_group: "Branding",
-            },
-            {
-                placement: "shoe_tongue_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/4/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding 4",
-                option_group: "Branding",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/2/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding 2",
-                option_group: "Branding",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/2/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding 2",
-                option_group: "Branding",
-            },
-            {
-                placement: "shoe_tongue_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/2/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding 2",
-                option_group: "Branding",
-            },
-            {
-                placement: "shoe_tongue_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/2/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding 2",
-                option_group: "Branding",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/leftfront/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left Front",
-                option_group: "Product specs",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/left/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left",
-                option_group: "Product specs",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/left3/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left",
-                option_group: "Product specs",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/left/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left",
-                option_group: "Product specs",
-            },
-            {
-                placement: "shoe_tongue_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/left/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left",
-                option_group: "Product specs",
-            },
-            {
-                placement: "shoe_tongue_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/left/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left",
-                option_group: "Product specs",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/leftfront/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left Front",
-                option_group: "Product specs",
-            },
-            {
-                placement: "shoe_tongue_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/leftfront/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left Front",
-                option_group: "Product specs",
-            },
-            {
-                placement: "shoe_tongue_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/leftfront/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left Front",
-                option_group: "Product specs",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/left3/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left",
-                option_group: "Product specs",
-            },
-            {
-                placement: "shoe_tongue_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/left3/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left",
-                option_group: "Product specs",
-            },
-            {
-                placement: "shoe_tongue_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/left3/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left",
-                option_group: "Product specs",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/1/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding 1",
-                option_group: "Branding",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/3/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding 3",
-                option_group: "Branding",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/4/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding 4",
-                option_group: "Branding",
-            },
-            {
-                placement: "shoe_tongue_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/1/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding 1",
-                option_group: "Branding",
-            },
-            {
-                placement: "shoe_tongue_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/3/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding 3",
-                option_group: "Branding",
-            },
-            {
-                placement: "shoe_tongue_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/4/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding 4",
-                option_group: "Branding",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/1/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding 1",
-                option_group: "Branding",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/3/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding 3",
-                option_group: "Branding",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/4/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding 4",
-                option_group: "Branding",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/mens_lifestyle2/right/05_hightop_shoes_onman_lifestyle_right_base.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right",
-                option_group: "Men's Lifestyle 2",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/mens_lifestyle2/left/05_hightop_shoes_onman_lifestyle_left_base.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left",
-                option_group: "Men's Lifestyle 2",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/mens_lifestyle2/right_2/05_hightop_shoes_onman_lifestyle_right2_base.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right 2",
-                option_group: "Men's Lifestyle 2",
-            },
-            {
-                placement: "shoe_tongue_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/mens_lifestyle2/right/05_hightop_shoes_onman_lifestyle_right_base.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right",
-                option_group: "Men's Lifestyle 2",
-            },
-            {
-                placement: "shoe_tongue_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/mens_lifestyle2/right_2/05_hightop_shoes_onman_lifestyle_right2_base.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right 2",
-                option_group: "Men's Lifestyle 2",
-            },
-            {
-                placement: "shoe_tongue_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/mens_lifestyle2/left/05_hightop_shoes_onman_lifestyle_left_base.png?v=1692783049",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left",
-                option_group: "Men's Lifestyle 2",
-            },
-        ],
-    },
-    {
-        productName: "Women's High Top Canvas Shoes",
-        price: 45,
-        images: [
-            {
-                placement: "label_inside",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/templates/Np_text_branding_shoes.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding",
-                option_group: "Template",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/template2/Kincustom_shoe_left_leg_no_text-188.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left Shoe",
-                option_group: "Template",
-            },
-            {
-                placement: "shoe_tongue_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/template/Kincustom_shoe_left_leg_tongue_no_text.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left Shoe Tongue",
-                option_group: "Template",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/template1/Kincustom_shoe_right_leg_no_text.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right Shoe",
-                option_group: "Template",
-            },
-            {
-                placement: "shoe_tongue_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/template/Kincustom_shoe_right_leg_tongue_no_text.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right Shoe Tongue",
-                option_group: "Template",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/back/05_KinCustom_hightop_shoes_mockup_back_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Back",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/back/05_KinCustom_hightop_shoes_mockup_back_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Back",
-                option_group: "Flat",
-            },
-            {
-                placement: "label_inside",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/back/05_KinCustom_hightop_shoes_mockup_back_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Back",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_tongue_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/front/05_KinCustom_hightop_shoes_mockup_front_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_tongue_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/front/05_KinCustom_hightop_shoes_mockup_front_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_tongue_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/front2/05_KinCustom_hightop_shoes_mockup_front2_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front 2",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_tongue_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/front2/05_KinCustom_hightop_shoes_mockup_front2_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front 2",
-                option_group: "Flat",
-            },
-            {
-                placement: "label_inside",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/front2/05_KinCustom_hightop_shoes_mockup_front2_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front 2",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/left/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/backleft/05_KinCustom_hightop_shoes_mockup_backleft_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left Back",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/leftfront/05_KinCustom_hightop_shoes_mockup_frontleft_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left Front",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_tongue_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/leftfront/05_KinCustom_hightop_shoes_mockup_frontleft_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left Front",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_tongue_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/leftfront/05_KinCustom_hightop_shoes_mockup_frontleft_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left Front",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/right/05_KinCustom_hightop_shoes_mockup_right_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/backright/05_KinCustom_hightop_shoes_mockup_backright_base_whitebg-2.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right Back",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/frontright/05_KinCustom_hightop_shoes_mockup_frontright_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right Front",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_tongue_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/frontright/05_KinCustom_hightop_shoes_mockup_frontright_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right Front",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_tongue_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/frontright/05_KinCustom_hightop_shoes_mockup_frontright_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right Front",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat2/left_inside/05_KinCustom_hightop_shoes_mockup_right_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left Inside",
-                option_group: "Flat 2",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat2/left_outside/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left Outside",
-                option_group: "Flat 2",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat2/right_inside/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right Inside",
-                option_group: "Flat 2",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat2/right_outside/05_KinCustom_hightop_shoes_mockup_right_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right Outside",
-                option_group: "Flat 2",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat3/left/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left",
-                option_group: "Flat 3",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat3/left/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left",
-                option_group: "Flat 3",
-            },
-            {
-                placement: "shoe_tongue_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat3/left/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left",
-                option_group: "Flat 3",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat3/right/05_KinCustom_hightop_shoes_mockup_right_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right",
-                option_group: "Flat 3",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat3/right/05_KinCustom_hightop_shoes_mockup_right_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right",
-                option_group: "Flat 3",
-            },
-            {
-                placement: "shoe_tongue_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat3/right/05_KinCustom_hightop_shoes_mockup_right_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right",
-                option_group: "Flat 3",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat4/left/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left",
-                option_group: "Flat 4",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat4/right/05_KinCustom_hightop_shoes_mockup_right_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right",
-                option_group: "Flat 4",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat5/front/05_KinCustom_hightop_shoes_mockup_front_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Flat 5",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat5/front/05_KinCustom_hightop_shoes_mockup_front_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Flat 5",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat_lifestyle/front/05_KinCustom_hightop_shoes_mockup_lifestyle_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Flat Lifestyle",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat_lifestyle/front/05_KinCustom_hightop_shoes_mockup_lifestyle_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Flat Lifestyle",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_details/1/05_KinCustom_hightop_shoes_mockup_details_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Product details",
-                option_group: "Product details",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_details/1/05_KinCustom_hightop_shoes_mockup_details_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Product details",
-                option_group: "Product details",
-            },
-            {
-                placement: "shoe_tongue_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_details/1/05_KinCustom_hightop_shoes_mockup_details_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Product details",
-                option_group: "Product details",
-            },
-            {
-                placement: "shoe_tongue_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_details/1/05_KinCustom_hightop_shoes_mockup_details_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Product details",
-                option_group: "Product details",
-            },
-            {
-                placement: "label_inside",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_details/1/05_KinCustom_hightop_shoes_mockup_details_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Product details",
-                option_group: "Product details",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_details/2/05_KinCustom_hightop_shoes_mockup_details_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Product details 2",
-                option_group: "Product details",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_details/2/05_KinCustom_hightop_shoes_mockup_details_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Product details 2",
-                option_group: "Product details",
-            },
-            {
-                placement: "shoe_tongue_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_details/2/05_KinCustom_hightop_shoes_mockup_details_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Product details 2",
-                option_group: "Product details",
-            },
-            {
-                placement: "shoe_tongue_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_details/2/05_KinCustom_hightop_shoes_mockup_details_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Product details 2",
-                option_group: "Product details",
-            },
-            {
-                placement: "label_inside",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_details/2/05_KinCustom_hightop_shoes_mockup_details_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Product details 2",
-                option_group: "Product details",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/womens/frontleft/05_KinCustom_hightop_shoes_onwoman_frontleft_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left",
-                option_group: "Women's",
-            },
-            {
-                placement: "shoe_tongue_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/womens/frontleft/05_KinCustom_hightop_shoes_onwoman_frontleft_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left",
-                option_group: "Women's",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/womens/frontright/05_KinCustom_hightop_shoes_onwoman_frontright_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right",
-                option_group: "Women's",
-            },
-            {
-                placement: "shoe_tongue_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/womens/frontright/05_KinCustom_hightop_shoes_onwoman_frontright_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right",
-                option_group: "Women's",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/womens/back/05_KinCustom_hightop_shoes_onwoman_back_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Back",
-                option_group: "Women's",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/womens/back/05_KinCustom_hightop_shoes_onwoman_back_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Back",
-                option_group: "Women's",
-            },
-            {
-                placement: "label_inside",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/1/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding 1",
-                option_group: "Branding",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/2/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding 2",
-                option_group: "Branding",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/2/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding 2",
-                option_group: "Branding",
-            },
-            {
-                placement: "shoe_tongue_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/2/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding 2",
-                option_group: "Branding",
-            },
-            {
-                placement: "shoe_tongue_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/2/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding 2",
-                option_group: "Branding",
-            },
-            {
-                placement: "label_inside",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/2/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding 2",
-                option_group: "Branding",
-            },
-            {
-                placement: "label_inside",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/3/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding 3",
-                option_group: "Branding",
-            },
-            {
-                placement: "label_inside",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/4/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding 4",
-                option_group: "Branding",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/womens_lifestyle/front/05_KinCustom_hightop_shoes_onwoman_front_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Women's Lifestyle",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/womens_lifestyle/front/05_KinCustom_hightop_shoes_onwoman_front_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Women's Lifestyle",
-            },
-            {
-                placement: "shoe_tongue_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/womens_lifestyle/front/05_KinCustom_hightop_shoes_onwoman_front_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Women's Lifestyle",
-            },
-            {
-                placement: "shoe_tongue_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/womens_lifestyle/front/05_KinCustom_hightop_shoes_onwoman_front_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Women's Lifestyle",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/womens_lifestyle/front2/05_KinCustom_hightop_shoes_onwoman_front2_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Women's Lifestyle",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/womens_lifestyle/front2/05_KinCustom_hightop_shoes_onwoman_front2_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Women's Lifestyle",
-            },
-            {
-                placement: "shoe_tongue_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/womens_lifestyle/front2/05_KinCustom_hightop_shoes_onwoman_front2_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Women's Lifestyle",
-            },
-            {
-                placement: "shoe_tongue_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/womens_lifestyle/front2/05_KinCustom_hightop_shoes_onwoman_front2_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Women's Lifestyle",
-            },
-            {
-                placement: "shoe_tongue_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/1/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding 1",
-                option_group: "Branding",
-            },
-            {
-                placement: "shoe_tongue_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/3/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding 3",
-                option_group: "Branding",
-            },
-            {
-                placement: "shoe_tongue_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/4/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding 4",
-                option_group: "Branding",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/left2/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left Front",
-                option_group: "Product specs",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/left/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left",
-                option_group: "Product specs",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/left3/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left",
-                option_group: "Product specs",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/left/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left",
-                option_group: "Product specs",
-            },
-            {
-                placement: "shoe_tongue_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/left/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left",
-                option_group: "Product specs",
-            },
-            {
-                placement: "shoe_tongue_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/left/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left",
-                option_group: "Product specs",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/left2/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left Front",
-                option_group: "Product specs",
-            },
-            {
-                placement: "shoe_tongue_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/left2/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left Front",
-                option_group: "Product specs",
-            },
-            {
-                placement: "shoe_tongue_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/left2/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left Front",
-                option_group: "Product specs",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/left3/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left",
-                option_group: "Product specs",
-            },
-            {
-                placement: "shoe_tongue_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/left3/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left",
-                option_group: "Product specs",
-            },
-            {
-                placement: "shoe_tongue_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/left3/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left",
-                option_group: "Product specs",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/1/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding 1",
-                option_group: "Branding",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/3/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding 3",
-                option_group: "Branding",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/4/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding 4",
-                option_group: "Branding",
-            },
-            {
-                placement: "shoe_tongue_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/1/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding 1",
-                option_group: "Branding",
-            },
-            {
-                placement: "shoe_tongue_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/3/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding 3",
-                option_group: "Branding",
-            },
-            {
-                placement: "shoe_tongue_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/4/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding 4",
-                option_group: "Branding",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/1/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding 1",
-                option_group: "Branding",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/3/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding 3",
-                option_group: "Branding",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/4/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding 4",
-                option_group: "Branding",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/womens2/left/05_base.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left",
-                option_group: "Women's 2",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/womens_lifestyle_2/right/05_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left",
-                option_group: "Women's Lifestyle 2",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/womens_lifestyle_2/left/05_base_whitebg.png?v=1692788970",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right",
-                option_group: "Women's Lifestyle 2",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/womens_lifestyle_3/front/05_base.png?v=1692789968",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Women's Lifestyle 3",
-            },
-        ],
-    },
-    {
-        productName: "Men's Slip-On Canvas Shoes",
-        price: 44,
-        images: [
-            {
-                placement: "shoe_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/flat/front/05_KinCustom_SlipOnShoes_flat_front_base_whitebg.png?v=1669272236",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/templates/right_leg_notext.png?v=1669272236",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right shoe",
-                option_group: "Templates",
-            },
-            {
-                placement: "shoe_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/templates/left_leg_notext.png?v=1669272236",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left shoe",
-                option_group: "Templates",
-            },
-            {
-                placement: "label_inside",
-                image_url:
-                    "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/templates/branding_notext.png?v=1669272236",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding",
-                option_group: "Templates",
-            },
-            {
-                placement: "shoe_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/flat/front/05_KinCustom_SlipOnShoes_flat_front_base_whitebg.png?v=1669272236",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Flat",
-            },
-            {
-                placement: "label_inside",
-                image_url:
-                    "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/flat/front/05_KinCustom_SlipOnShoes_flat_front_base_whitebg.png?v=1669272236",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/flat/frontleft/05_KinCustom_SlipOnShoes_flat_frontleft_base_whitebg.png?v=1669272236",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left Front",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/flat/frontright/05_KinCustom_SlipOnShoes_flat_frontright_base_whitebg.png?v=1669272236",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right Front",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/flat/inside/05_KinCustom_SlipOnShoes_flat_left_base_whitebg.png?v=1669272236",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right Inside",
-                option_group: "Flat 2",
-            },
-            {
-                placement: "shoe_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/flat/outside/05_KinCustom_SlipOnShoes_flat_right_base_whitebg.png?v=1669272236",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right Outside",
-                option_group: "Flat 2",
-            },
-            {
-                placement: "shoe_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/flat2/frontleft/05_KinCustom_SlipOnShoes_flat2_frontleft_base_whitebg.png?v=1669272236",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left Front",
-                option_group: "Flat 3",
-            },
-            {
-                placement: "shoe_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/flat2/frontright/05_KinCustom_SlipOnShoes_flat2_frontright_base_whitebg.png?v=1669272236",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right Front",
-                option_group: "Flat 3",
-            },
-            {
-                placement: "shoe_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/flat3/front/05_KinCustom_SlipOnShoes_flat4_front_base_whitebg.png?v=1669272236",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Flat 4",
-            },
-            {
-                placement: "shoe_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/mens/front/05_KinCustom_SlipOnShoes_onman_front_base_whitebg.png?v=1669272236",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Men's",
-            },
-            {
-                placement: "shoe_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/mens/back/05_KinCustom_SlipOnShoes_onman_back_base_whitebg.png?v=1669272236",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Back",
-                option_group: "Men's",
-            },
-            {
-                placement: "shoe_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/mens_lifestyle/frontleft/05_KinCustom_SlipOnShoes_onman2_lifestyle_frontleft_base_whitebg.png?v=1669272236",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left Front",
-                option_group: "Men's Lifestyle",
-            },
-            {
-                placement: "shoe_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/flat/back/05_KinCustom_SlipOnShoes_flat_back_base_whitebg.png?v=1669272236",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Back",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/flat/inside/05_KinCustom_SlipOnShoes_flat_left_base_whitebg.png?v=1669272236",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left Outside",
-                option_group: "Flat 2",
-            },
-            {
-                placement: "shoe_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/flat/outside/05_KinCustom_SlipOnShoes_flat_right_base_whitebg.png?v=1669272236",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left Inside",
-                option_group: "Flat 2",
-            },
-            {
-                placement: "shoe_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/flat4/front/05_KinCustom_SlipOnShoes_flat3_frontright_base_whitebg.png?v=1669272236",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Flat 5",
-            },
-            {
-                placement: "shoe_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/mens_lifestyle2/front_2/05_KinCustom_SlipOnShoes_onman_front2_base.png?v=1669627682",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Men's Lifestyle 2",
-            },
-            {
-                placement: "shoe_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/mens_lifestyle2/front_1/05_KinCustom_SlipOnShoes_onman_front1_base.png?v=1669627682",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front 2",
-                option_group: "Men's Lifestyle 2",
-            },
-            {
-                placement: "shoe_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/mens_lifestyle2/frontright/05_KinCustom_SlipOnShoes_onman_frontright_base.png?v=1669627682",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right Front",
-                option_group: "Men's Lifestyle 2",
-            },
-            {
-                placement: "shoe_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/mens_lifestyle2/right/05_KinCustom_SlipOnShoes_onman_right_base.png?v=1669627682",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right",
-                option_group: "Men's Lifestyle 2",
-            },
-        ],
-    },
-    {
-        productName: "Women's Slip-On Canvas Shoes",
-        price: 44,
-        images: [
-            {
-                placement: "shoe_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/flat/front/05_KinCustom_SlipOnShoes_flat_front_base_whitebg.png?v=1671460266",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/templates/left_leg_notext.png?v=1671460266",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left shoe",
-                option_group: "Template",
-            },
-            {
-                placement: "shoe_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/templates/right_leg_notext.png?v=1671460266",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right shoe",
-                option_group: "Template",
-            },
-            {
-                placement: "label_inside",
-                image_url:
-                    "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/templates/branding_notext.png?v=1671460266",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding",
-                option_group: "Template",
-            },
-            {
-                placement: "shoe_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/flat/front/05_KinCustom_SlipOnShoes_flat_front_base_whitebg.png?v=1671460266",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Flat",
-            },
-            {
-                placement: "label_inside",
-                image_url:
-                    "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/flat/front/05_KinCustom_SlipOnShoes_flat_front_base_whitebg.png?v=1671460266",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/flat/frontleft/05_KinCustom_SlipOnShoes_flat_frontleft_base_whitebg.png?v=1671460266",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left Front",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/flat/frontright/05_KinCustom_SlipOnShoes_flat_frontright_base_whitebg.png?v=1671460266",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right Front",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/flat/inside/05_KinCustom_SlipOnShoes_flat_left_base_whitebg.png?v=1671460266",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right Inside",
-                option_group: "Flat 2",
-            },
-            {
-                placement: "shoe_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/flat/outside/05_KinCustom_SlipOnShoes_flat_right_base_whitebg.png?v=1671460266",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right Outside",
-                option_group: "Flat 2",
-            },
-            {
-                placement: "shoe_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/flat2/frontleft/05_KinCustom_SlipOnShoes_flat2_frontleft_base_whitebg.png?v=1671460266",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left Front",
-                option_group: "Flat 3",
-            },
-            {
-                placement: "shoe_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/flat2/frontright/05_KinCustom_SlipOnShoes_flat2_frontright_base_whitebg.png?v=1671460266",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right Front",
-                option_group: "Flat 3",
-            },
-            {
-                placement: "shoe_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/flat3/front/05_KinCustom_SlipOnShoes_flat4_front_base_whitebg.png?v=1671460266",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Flat 4",
-            },
-            {
-                placement: "shoe_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/womens/left/05_KinCustom_SlipOnShoes_onwoman_left_base_whitebg.png?v=1671460266",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Women's",
-            },
-            {
-                placement: "shoe_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/womens/right/05_KinCustom_SlipOnShoes_onwoman_right_base_whitebg.png?v=1671460266",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right",
-                option_group: "Women's",
-            },
-            {
-                placement: "shoe_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/womens/back/05_KinCustom_SlipOnShoes_onwoman_back_base_whitebg.png?v=1671460266",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Back",
-                option_group: "Women's",
-            },
-            {
-                placement: "shoe_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/womens_lifestyle/front/05_KinCustom_SlipOnShoes_onwoman2_lifestyle_front_base.png?v=1671460266",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Women's Lifestyle",
-            },
-            {
-                placement: "shoe_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/flat/back/05_KinCustom_SlipOnShoes_flat_back_base_whitebg.png?v=1671460266",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Back",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/flat/inside/05_KinCustom_SlipOnShoes_flat_left_base_whitebg.png?v=1671460266",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left Outside",
-                option_group: "Flat 2",
-            },
-            {
-                placement: "shoe_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/flat/outside/05_KinCustom_SlipOnShoes_flat_right_base_whitebg.png?v=1671460266",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left Inside",
-                option_group: "Flat 2",
-            },
-            {
-                placement: "shoe_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/flat4/front/05_KinCustom_SlipOnShoes_flat3_frontright_base_whitebg.png?v=1671460266",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Flat 5",
-            },
-            {
-                placement: "shoe_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/womens_lifestyle_2/left/05_aop_womenscanvasshoes_base.png?v=1671529263",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right",
-                option_group: "Women's Lifestyle 2",
-            },
-            {
-                placement: "shoe_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/womens_lifestyle_3/front/05_aop_womenscanvasshoes_base.png?v=1671529265",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Women's Lifestyle 3",
-            },
-        ],
-    },
-    {
-        productName: "Women's Lace-Up Canvas Shoes",
-        price: 45,
-        images: [
-            {
-                placement: "label_inside",
-                image_url:
-                    "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/flat/front/05_KinCustomLaceUpShoes_flat_front_base_whitebg.png?v=1673965946",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Flat",
-            },
-            {
-                placement: "label_inside",
-                image_url:
-                    "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/templates/branding_notext.png?v=1673965946",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding",
-                option_group: "Templates",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/templates/left_quarter_notext.png?v=1673965946",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left shoe",
-                option_group: "Templates",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/templates/right_quarter_notext.png?v=1673965946",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right shoe",
-                option_group: "Templates",
-            },
-            {
-                placement: "shoe_tongue_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/templates/left_leg_vamp_tongue_notext.png?v=1673965946",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left shoe front",
-                option_group: "Templates",
-            },
-            {
-                placement: "shoe_tongue_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/templates/right_leg_vamp_tongue_notext.png?v=1673965946",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right shoe front",
-                option_group: "Templates",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/flat/front/05_KinCustomLaceUpShoes_flat_front_base_whitebg.png?v=1673965946",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/flat/front/05_KinCustomLaceUpShoes_flat_front_base_whitebg.png?v=1673965946",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_tongue_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/flat/front/05_KinCustomLaceUpShoes_flat_front_base_whitebg.png?v=1673965946",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_tongue_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/flat/front/05_KinCustomLaceUpShoes_flat_front_base_whitebg.png?v=1673965946",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/flat/frontleft/05_KinCustomLaceUpShoes_flat_frontleft_base_whitebg.png?v=1673965946",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left Front",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_tongue_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/flat/back/05_KinCustomLaceUpShoes_flat_back_base_whitebg.png?v=1673965946",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Back",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/flat/left/05_KinCustomLaceUpShoes_flat_left_base_whitebg.png?v=1673965946",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right Inside",
-                option_group: "Flat 2",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/flat/right/05_KinCustomLaceUpShoes_flat_right_base_whitebg.png?v=1673965946",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right Outside",
-                option_group: "Flat 2",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/flat/left/05_KinCustomLaceUpShoes_flat_left_base_whitebg.png?v=1673965946",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left Outside",
-                option_group: "Flat 2",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/flat/right/05_KinCustomLaceUpShoes_flat_right_base_whitebg.png?v=1673965946",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left Inside",
-                option_group: "Flat 2",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/flat2/05_KinCustomLaceUpShoes_flat2_front_base_whitebg.png?v=1673965946",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Flat 3",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/flat3/05_KinCustomLaceUpShoes_flat3_frontleft_base_whitebg.png?v=1673965946",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right Front",
-                option_group: "Flat 4",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/womens/back/05_KinCustomLaceUpShoes_onwoman_back_base_whitebg.png?v=1673965946",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Back",
-                option_group: "Women's",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/womens/frontright/05_KinCustomLaceUpShoes_onwoman_frontright_base_whitebg.png?v=1673965946",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Women's",
-            },
-            {
-                placement: "shoe_tongue_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/womens/frontleft/05_KinCustomLaceUpShoes_onwoman_frontleft_base_whitebg.png?v=1673965946",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left Front",
-                option_group: "Women's",
-            },
-            {
-                placement: "shoe_tongue_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/flat4/05_KinCustomLaceUpShoes_flat4_front_base_whitebg.png?v=1673965946",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Flat 5",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/womens2/frontright/05_KinCustomLaceUpShoes_onwoman2_frontright_base_whitebg.png?v=1673965946",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right",
-                option_group: "Women's Lifestyle",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/flat/front2/05_KinCustomLaceUpShoes_flat_front2_base_whitebg.png?v=1673965946",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front 2",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_tongue_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/flat/frontleft2/05_KinCustomLaceUpShoes_flat_frontleft2_base_whitebg.png?v=1673965946",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left Front 2",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/flat/frontright/05_KinCustomLaceUpShoes_flat_frontright_base_whitebg.png?v=1673965946",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right Front",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/womes_lifestyle_2/front/05_lifestyle_2_base.png?v=1674031053",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Women's Lifestyle 2",
-            },
-            {
-                placement: "shoe_quarters_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/Womens_lifestyle_3/front/05_lifestyle_base_whitebg.png?v=1674031055",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Women's Lifestyle 3",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/womes_lifestyle_2/front/05_lifestyle_2_base.png?v=1674031053",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Women's Lifestyle 2",
-            },
-            {
-                placement: "shoe_quarters_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/Womens_lifestyle_3/front/05_lifestyle_base_whitebg.png?v=1674031055",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Women's Lifestyle 3",
-            },
-        ],
-    },
-    {
-        productName: "Men's Slides",
-        price: 32,
-        images: [
-            {
-                placement: "shoe_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/Kincustom_slides/medium/template/right_shoe_notext.png?v=1698825583",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right shoe",
-                option_group: "Templates",
-            },
-            {
-                placement: "shoe_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/Kincustom_slides/medium/template/left_shoe_notext.png?v=1698825583",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left shoe",
-                option_group: "Templates",
-            },
-            {
-                placement: "label_inside",
-                image_url:
-                    "https://files.cdn.printful.com/m/Kincustom_slides/medium/template/branding.png?v=1698825583",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding",
-                option_group: "Templates",
-            },
-            {
-                placement: "shoe_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/Kincustom_slides/medium/flat/top/05_slides_flat_top_black_base_whitebg.png?v=1698825583",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/Kincustom_slides/medium/flat/frontleft/05_slides_flat_frontleft_black_base_whitebg.png?v=1698825583",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left Front",
-                option_group: "Flat",
-            },
-            {
-                placement: "label_inside",
-                image_url:
-                    "https://files.cdn.printful.com/m/Kincustom_slides/medium/flat/frontright/05_slides_flat_frontright_black_base_whitebg.png?v=1698909600",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right Front",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/Kincustom_slides/medium/flat2/right_inside/05_slides_flat_rightinside_black_base_whitebg.png?v=1698825583",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right Inside",
-                option_group: "Flat 2",
-            },
-            {
-                placement: "shoe_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/Kincustom_slides/medium/flat2/left_inside/05_slides_flat_leftinside_black_base_whitebg.png?v=1698825583",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left Inside",
-                option_group: "Flat 2",
-            },
-            {
-                placement: "shoe_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/Kincustom_slides/medium/flat3/front/05_slides_flat_front_black_base_whitebg.png?v=1698825583",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Flat 3",
-            },
-            {
-                placement: "shoe_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/Kincustom_slides/medium/flat4/front/05_slides_flat_side_black_base_whitebg.png?v=1698825583",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Flat 4",
-            },
-            {
-                placement: "shoe_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/Kincustom_slides/medium/flat5/front/05_slides_flat_levitating_black_base_whitebg.png?v=1698825583",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Flat 5",
-            },
-            {
-                placement: "shoe_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/Kincustom_slides/medium/mens/front/05_slides_onman_front_black_base_whitebg.png?v=1698825583",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Men's",
-            },
-            {
-                placement: "shoe_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/Kincustom_slides/medium/mens_lifestyle/front/05_onman_lifestyle_front_black_base.png?v=1698825583",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Men's Lifestyle",
-            },
-            {
-                placement: "shoe_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/Kincustom_slides/medium/flat/front2/05_slides_flat_top_black_base_whitebg.png?v=1698825583",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front 2",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/Kincustom_slides/medium/product_specs/top/05_slides_specs_top_black_base_whitebg.png?v=1698825583",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Product specs",
-            },
-            {
-                placement: "shoe_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/Kincustom_slides/medium/mens_lifestyle_2/lifestyle_3/05_lifestyle_3_black_base_witebg.png?v=1698825583",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Men's Lifestyle 2",
-            },
-            {
-                placement: "shoe_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/Kincustom_slides/medium/mens_lifestyle_2/lifestyle_4/05_lifestyle_4_black_base_whitebg.png?v=1698825583",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right Front",
-                option_group: "Men's Lifestyle 2",
-            },
-            {
-                placement: "shoe_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/Kincustom_slides/medium/mens_lifestyle_3/lifestyle_1/05_lifestyle_1_black_base.png?v=1698825583",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Men's Lifestyle 3",
-            },
-            {
-                placement: "shoe_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/Kincustom_slides/medium/mens_lifestyle_3/lifestyle_2/05_lifestyle_2_black_base.png?v=1698825583",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left Front",
-                option_group: "Men's Lifestyle 3",
-            },
-        ],
-    },
-    {
-        productName: "Women's Slides",
-        price: 32,
-        images: [
-            {
-                placement: "shoe_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/Kincustom_slides/medium/template/right_shoe_notext.png?v=1698825770",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right shoe",
-                option_group: "Templates",
-            },
-            {
-                placement: "shoe_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/Kincustom_slides/medium/template/left_shoe_notext.png?v=1698825770",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left shoe",
-                option_group: "Templates",
-            },
-            {
-                placement: "label_inside",
-                image_url:
-                    "https://files.cdn.printful.com/m/Kincustom_slides/medium/template/branding.png?v=1698825770",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Branding",
-                option_group: "Templates",
-            },
-            {
-                placement: "shoe_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/Kincustom_slides/medium/flat/top/05_slides_flat_top_white_base_whitebg.png?v=1698825770",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/Kincustom_slides/medium/flat/frontleft/05_slides_flat_frontleft_white_base_whitebg.png?v=1698825882",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left Front",
-                option_group: "Flat",
-            },
-            {
-                placement: "label_inside",
-                image_url:
-                    "https://files.cdn.printful.com/m/Kincustom_slides/medium/flat/frontright/05_slides_flat_frontright_white_base_whitebg.png?v=1698825770",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right Front",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/Kincustom_slides/medium/flat2/right_inside/05_slides_flat_rightinside_white_base_whitebg.png?v=1698825770",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Right inside",
-                option_group: "Flat 2",
-            },
-            {
-                placement: "shoe_left",
-                image_url:
-                    "https://files.cdn.printful.com/m/Kincustom_slides/medium/flat2/left_inside/05_slides_flat_leftinside_white_base_whitebg.png?v=1698825770",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Left inside",
-                option_group: "Flat 2",
-            },
-            {
-                placement: "shoe_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/Kincustom_slides/medium/flat3/front/05_slides_flat_front_white_base_whitebg.png?v=1698825770",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Flat 3",
-            },
-            {
-                placement: "shoe_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/Kincustom_slides/medium/flat4/front/05_slides_flat_side_white_base_whitebg.png?v=1698825770",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Flat 4",
-            },
-            {
-                placement: "shoe_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/Kincustom_slides/medium/flat5/front/05_slides_flat_levitating_white_base_whitebg.png?v=1698825770",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Flat 5",
-            },
-            {
-                placement: "shoe_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/Kincustom_slides/medium/womens/front/05_slides_onwoman_front_white_base_whitebg.png?v=1698825770",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Women's",
-            },
-            {
-                placement: "shoe_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/Kincustom_slides/medium/womens_lifestyle/05_slides_onwoman2_front_white_base_whitebg.png?v=1698825770",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Women's Lifestyle",
-            },
-            {
-                placement: "shoe_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/Kincustom_slides/medium/flat/front2/05_slides_flat_top_white_base_whitebg.png?v=1698825770",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front 2",
-                option_group: "Flat",
-            },
-            {
-                placement: "shoe_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/Kincustom_slides/medium/product_specs/top/05_slides_specs_top_white_base_whitebg.png?v=1698825770",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Product specs",
-            },
-            {
-                placement: "shoe_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/Kincustom_slides/medium/womens_lifestyle_2/front/05_lifestyle_white_base.png?v=1698825770",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Women's Lifestyle 2",
-            },
-            {
-                placement: "shoe_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/Kincustom_slides/medium/womens_lifestyle_2/front2/05_onwoman_lifestyle_2_white_base.png?v=1698825770",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front 2",
-                option_group: "Women's Lifestyle 2",
-            },
-            {
-                placement: "shoe_right",
-                image_url:
-                    "https://files.cdn.printful.com/m/Kincustom_slides/medium/womens_lifestyle_3/front/05_onwoman_lifestyle_3_white_base.png?v=1698825770",
-                background_color: "#ffffff",
-                background_image: null,
-                option: "Front",
-                option_group: "Women's Lifestyle 3",
-            },
-        ],
-    },
+    // {
+    //     productName: "All-Over Print Tote",
+    //     price: 17.75,
+    //     images: [
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/03-allovertote-black-base.png?v=1679898197",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Mockup",
+    //             option_group: "Default",
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/template1/No_text_allovertote-template-simple.png?v=1679898197",
+    //             background_color: null,
+    //             background_image: null,
+    //             option: null,
+    //             option_group: null,
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/template/NO_text_tote_bag_mockup.png?v=1679898197",
+    //             background_color: null,
+    //             background_image: null,
+    //             option: null,
+    //             option_group: null,
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/03-allovertote-black-base.png?v=1679898197",
+    //             background_color: null,
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Default",
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/03-allovertote-black-base.png?v=1679898197",
+    //             background_color: null,
+    //             background_image: null,
+    //             option: "Back",
+    //             option_group: "Default",
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/lifestyle/02_totebag_black_base.png?v=1679898197",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Mockup",
+    //             option_group: "Lifestyle",
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/lifestyle/02_totebag_black_base.png?v=1679898197",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Lifestyle",
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/lifestyle/02_totebag_black_base.png?v=1679898197",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Back",
+    //             option_group: "Lifestyle",
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/flatlay/02_totebag_flatlay_black_base.png?v=1679898197",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Mockup",
+    //             option_group: "Flat Lifestyle",
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/flatlay/02_totebag_flatlay_black_base.png?v=1679898197",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Flat Lifestyle",
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/flatlay/02_totebag_flatlay_black_base.png?v=1679898197",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Back",
+    //             option_group: "Flat Lifestyle",
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/lifestyle2/02_totebag_black_base.png?v=1679898197",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Mockup",
+    //             option_group: "Lifestyle 2",
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/lifestyle2/02_totebag_black_base.png?v=1679898197",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Lifestyle 2",
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/lifestyle2/02_totebag_black_base.png?v=1679898197",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Back",
+    //             option_group: "Lifestyle 2",
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/lifestyle3/02_totebag_black_base.png?v=1679898197",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Mockup",
+    //             option_group: "Lifestyle 3",
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/lifestyle3/02_totebag_black_base.png?v=1679898197",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Lifestyle 3",
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/lifestyle3/02_totebag_black_base.png?v=1679898197",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Back",
+    //             option_group: "Lifestyle 3",
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/lifestyle4/02_totebag_black_base.png?v=1679898197",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Mockup",
+    //             option_group: "Lifestyle 4",
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/lifestyle4/02_totebag_black_base.png?v=1679898197",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Lifestyle 4",
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/lifestyle4/02_totebag_black_base.png?v=1679898197",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Back",
+    //             option_group: "Lifestyle 4",
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/halloween/dark/05_totebag_flat_black_base.png?v=1679898197",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Mockup",
+    //             option_group: "Halloween",
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/halloween/light/05_totebag_flat_black_base.png?v=1679898197",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Mockup",
+    //             option_group: "Halloween",
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/halloween/dark/05_totebag_flat_black_base.png?v=1679898197",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Halloween",
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/halloween/light/05_totebag_flat_black_base.png?v=1679898197",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Halloween",
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/halloween/dark/05_totebag_flat_black_base.png?v=1679898197",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Back",
+    //             option_group: "Halloween",
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/halloween/light/05_totebag_flat_black_base.png?v=1679898197",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Back",
+    //             option_group: "Halloween",
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/christmas/wood/05_totebag_flat_black_base.png?v=1679898197",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Holiday season",
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/christmas/light/05_totebag_flat_black_base.png?v=1679898197",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Holiday season",
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/christmas/wood/05_totebag_flat_black_base.png?v=1679898197",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Back",
+    //             option_group: "Holiday season",
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/christmas/light/05_totebag_flat_black_base.png?v=1679898197",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Back",
+    //             option_group: "Holiday season",
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/christmas/wood/05_totebag_flat_black_base.png?v=1679898197",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Mockup",
+    //             option_group: "Holiday season",
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/christmas/light/05_totebag_flat_black_base.png?v=1679898197",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Mockup",
+    //             option_group: "Holiday season",
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/spring-summer/05_totebag_flat_black_yellow_base.png?v=1679898197",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Spring/summer vibes",
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/spring-summer/05_totebag_flat_black_yellow_base.png?v=1679898197",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Back",
+    //             option_group: "Spring/summer vibes",
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/spring-summer/05_totebag_flat_black_light_base.png?v=1679898197",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Spring/summer vibes",
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/spring-summer/05_totebag_flat_black_light_base.png?v=1679898197",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Back",
+    //             option_group: "Spring/summer vibes",
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/spring-summer/05_totebag_flat_black_yellow_base.png?v=1679898197",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Mockup",
+    //             option_group: "Spring/summer vibes",
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/spring-summer/05_totebag_flat_black_light_base.png?v=1679898197",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Mockup",
+    //             option_group: "Spring/summer vibes",
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/flat/05_aop_totebag_flat_black_base_whitebg.png?v=1679898197",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/flat/05_aop_totebag_flat_black_base_whitebg.png?v=1679898197",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/detail/05_aop_totebag_detail_black_base_whitebg.png?v=1679898197",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Product details",
+    //             option_group: "Product details",
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/detail/05_aop_totebag_detail_black_base_whitebg.png?v=1679898197",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Product details",
+    //             option_group: "Product details",
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/onhanger/05_aop_totebag_onhanger_black_base_whitebg.png?v=1679898197",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "On Hanger",
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/onhanger/05_aop_totebag_onhanger_black_base_whitebg.png?v=1679898197",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "On Hanger",
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/inhand/05_aop_totebag_inhand_black_base_whitebg.png?v=1679898197",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Lifestyle 5",
+    //         },
+    //         {
+    //             placement: "default",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-tote/medium/inhand/05_aop_totebag_inhand_black_base_whitebg.png?v=1679898197",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Lifestyle 5",
+    //         },
+    //     ],
+    // },
+    // {
+    //     productName: "All-Over Print Minimalist Backpack",
+    //     price: 35.25,
+    //     images: [
+    //         {
+    //             placement: "front",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-backpack-minimalist/medium/template1/mockup_generator_template_front_No_text.png?v=1675853790",
+    //             background_color: null,
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: null,
+    //         },
+    //         {
+    //             placement: "top",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-backpack-minimalist/medium/template1/mockup_generator_template_top_No_text.png?v=1675853790",
+    //             background_color: null,
+    //             background_image: null,
+    //             option: "Top",
+    //             option_group: null,
+    //         },
+    //         {
+    //             placement: "bottom",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-backpack-minimalist/medium/template1/mockup_generator_template_bottom_No_text.png?v=1675853790",
+    //             background_color: null,
+    //             background_image: null,
+    //             option: "Bottom",
+    //             option_group: null,
+    //         },
+    //         {
+    //             placement: "front",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-backpack-minimalist/medium/default/front/05_premiumbackpack_front_base_whitebg.png?v=1675853790",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Default",
+    //         },
+    //         {
+    //             placement: "top",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-backpack-minimalist/medium/default/back/05_premiumbackpack_back_base_whitebg.png?v=1675853790",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Back",
+    //             option_group: "Default",
+    //         },
+    //         {
+    //             placement: "bottom",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-backpack-minimalist/medium/default/bottom/05_premiumbackpack_bottom_base_whitebg.png?v=1675853790",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Bottom",
+    //             option_group: "Default",
+    //         },
+    //         {
+    //             placement: "front",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-backpack-minimalist/medium/default/frontleft/05_premiumbackpack_frontleft_base_whitebg.png?v=1675853790",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left",
+    //             option_group: "Default",
+    //         },
+    //         {
+    //             placement: "front",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-backpack-minimalist/medium/default/frontright/05_premiumbackpack_frontright_base_whitebg.png?v=1675853790",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right",
+    //             option_group: "Default",
+    //         },
+    //         {
+    //             placement: "front",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-backpack-minimalist/medium/lifestyle/front/05_premiumbackpack_lifestyle_onhanger_base.png?v=1675853790",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Lifestyle 1",
+    //         },
+    //         {
+    //             placement: "front",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-backpack-minimalist/medium/lifestyle_2/front/05_premiumbackpack_lifestyle_withplants_base.png?v=1675853790",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Lifestyle 2",
+    //         },
+    //         {
+    //             placement: "front",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-backpack-minimalist/medium/boys_lifestyle/frontright/05_premiumbackpack_onboy_lifestyle_base_whitebg.png?v=1675853790",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right Front",
+    //             option_group: "Boy's Lifestyle",
+    //         },
+    //         {
+    //             placement: "front",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-backpack-minimalist/medium/boys_lifestyle/frontleft/05_premiumbackpack_onboy_lifestyle_base_whitebg.png?v=1675853790",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left Front",
+    //             option_group: "Boy's Lifestyle",
+    //         },
+    //         {
+    //             placement: "front",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-backpack-minimalist/medium/boys_lifestyle/frontleft/zoomed/05_premiumbackpack_onboy_lifestyle_base_whitebg.png?v=1675853790",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Zoomed-in",
+    //             option_group: "Boy's Lifestyle",
+    //         },
+    //         {
+    //             placement: "front",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-backpack-minimalist/medium/boys_lifestyle/frontright/zoomed/05_premiumbackpack_onboy_lifestyle_base_whitebg.png?v=1675853790",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Zoomed-in",
+    //             option_group: "Boy's Lifestyle",
+    //         },
+    //         {
+    //             placement: "front",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-backpack-minimalist/medium/mens_lifestyle/front/05_premiumbackpack_onman_lifestyle_base_whitebg.png?v=1675853790",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Men's Lifestyle",
+    //         },
+    //         {
+    //             placement: "front",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-backpack-minimalist/medium/mens_lifestyle/frontright/05_premiumbackpack_onman_lifestyle_base_whitebg.png?v=1675853790",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right Front",
+    //             option_group: "Men's Lifestyle",
+    //         },
+    //         {
+    //             placement: "front",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-backpack-minimalist/medium/boys2/front/06_AOP_Minimalist_Backpack_Mockup_Boy_front_base_whitebg.png?v=1675856209",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Boy's Lifestyle 2",
+    //         },
+    //         {
+    //             placement: "front",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-backpack-minimalist/medium/boys2/back/06_AOP_Minimalist_Backpack_Mockup_Boy_back_base_whitebg.png?v=1675856209",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right Front",
+    //             option_group: "Boy's Lifestyle 2",
+    //         },
+    //         {
+    //             placement: "front",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-backpack-minimalist/medium/girls/front/06_AOP_Minimalist_Backpack_Mockup_Girl_base_whitebg.png?v=1675856213",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Girl's Lifestyle",
+    //         },
+    //         {
+    //             placement: "front",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/all-over-backpack-minimalist/medium/girls/left/06_AOP_Minimalist_Backpack_Mockup_Girl_left_base_whitebg.png?v=1675856213",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right Front",
+    //             option_group: "Girl's Lifestyle",
+    //         },
+    //     ],
+    // },
+    // {
+    //     productName: "Men's High Top Canvas Shoes",
+    //     price: 45,
+    //     images: [
+    //         {
+    //             placement: "shoe_tongue_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/front/05_KinCustom_hightop_shoes_mockup_front_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/template/Kincustom_shoe_left_leg_no_text-188.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left shoe",
+    //             option_group: "Template",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/template/Kincustom_shoe_right_leg_no_text-189.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right shoe",
+    //             option_group: "Template",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/template/Kincustom_shoe_right_leg_tongue_no_text.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right shoe tongue",
+    //             option_group: "Template",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/template/Kincustom_shoe_left_leg_tongue_no_text.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left shoe tongue",
+    //             option_group: "Template",
+    //         },
+    //         {
+    //             placement: "label_inside",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/template/Np_text_branding_shoes-191.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding",
+    //             option_group: "Template",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/front/05_KinCustom_hightop_shoes_mockup_front_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/front2/05_KinCustom_hightop_shoes_mockup_front2_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front 2",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/front2/05_KinCustom_hightop_shoes_mockup_front2_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front 2",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "label_inside",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/front2/05_KinCustom_hightop_shoes_mockup_front2_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front 2",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/back/05_KinCustom_hightop_shoes_mockup_back_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Back",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/back/05_KinCustom_hightop_shoes_mockup_back_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Back",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "label_inside",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/back/05_KinCustom_hightop_shoes_mockup_back_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Back",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/backleft/05_KinCustom_hightop_shoes_mockup_backleft_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left Back",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/backright/05_KinCustom_hightop_shoes_mockup_backright_base_whitebg-2.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right Back",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/frontright/05_KinCustom_hightop_shoes_mockup_frontright_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right Front",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/frontleft/05_KinCustom_hightop_shoes_mockup_frontleft_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left Front",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/left/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/right/05_KinCustom_hightop_shoes_mockup_right_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/leftfront/05_KinCustom_hightop_shoes_mockup_frontleft_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left Front",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/leftfront/05_KinCustom_hightop_shoes_mockup_frontleft_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left Front",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/frontright/05_KinCustom_hightop_shoes_mockup_frontright_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right Front",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/frontright/05_KinCustom_hightop_shoes_mockup_frontright_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right Front",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat2/left_outside/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left Outside",
+    //             option_group: "Flat 2",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat2/right_inside/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right Inside",
+    //             option_group: "Flat 2",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat2/right_outside/05_KinCustom_hightop_shoes_mockup_right_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right Outside",
+    //             option_group: "Flat 2",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat2/left_inside/05_KinCustom_hightop_shoes_mockup_right_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left Inside",
+    //             option_group: "Flat 2",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat3/left/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left",
+    //             option_group: "Flat 3",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat3/left/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left",
+    //             option_group: "Flat 3",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat3/left/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left",
+    //             option_group: "Flat 3",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat3/right/05_KinCustom_hightop_shoes_mockup_right_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right",
+    //             option_group: "Flat 3",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat3/right/05_KinCustom_hightop_shoes_mockup_right_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right",
+    //             option_group: "Flat 3",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat3/right/05_KinCustom_hightop_shoes_mockup_right_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right",
+    //             option_group: "Flat 3",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat4/left/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left",
+    //             option_group: "Flat 4",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat4/right/05_KinCustom_hightop_shoes_mockup_right_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right",
+    //             option_group: "Flat 4",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat_lifestyle/front/05_KinCustom_hightop_shoes_mockup_lifestyle_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Flat Lifestyle",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat_lifestyle/front/05_KinCustom_hightop_shoes_mockup_lifestyle_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Flat Lifestyle",
+    //         },
+    //         {
+    //             placement: "label_inside",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/1/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding 1",
+    //             option_group: "Branding",
+    //         },
+    //         {
+    //             placement: "label_inside",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/2/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding 2",
+    //             option_group: "Branding",
+    //         },
+    //         {
+    //             placement: "label_inside",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/3/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding 3",
+    //             option_group: "Branding",
+    //         },
+    //         {
+    //             placement: "label_inside",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/4/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding 4",
+    //             option_group: "Branding",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_details/1/05_KinCustom_hightop_shoes_mockup_details_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Product details",
+    //             option_group: "Product details",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_details/1/05_KinCustom_hightop_shoes_mockup_details_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Product details",
+    //             option_group: "Product details",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_details/1/05_KinCustom_hightop_shoes_mockup_details_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Product details",
+    //             option_group: "Product details",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_details/1/05_KinCustom_hightop_shoes_mockup_details_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Product details",
+    //             option_group: "Product details",
+    //         },
+    //         {
+    //             placement: "label_inside",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_details/1/05_KinCustom_hightop_shoes_mockup_details_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Product details",
+    //             option_group: "Product details",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_details/2/05_KinCustom_hightop_shoes_mockup_details_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Product details 2",
+    //             option_group: "Product details",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_details/2/05_KinCustom_hightop_shoes_mockup_details_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Product details 2",
+    //             option_group: "Product details",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_details/2/05_KinCustom_hightop_shoes_mockup_details_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Product details 2",
+    //             option_group: "Product details",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_details/2/05_KinCustom_hightop_shoes_mockup_details_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Product details 2",
+    //             option_group: "Product details",
+    //         },
+    //         {
+    //             placement: "label_inside",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_details/2/05_KinCustom_hightop_shoes_mockup_details_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Product details 2",
+    //             option_group: "Product details",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/mens/frontleft/05_KinCustom_hightop_shoes_onman_frontleft_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left",
+    //             option_group: "Men's",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/mens/frontright/05_KinCustom_hightop_shoes_onman_frontright_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right",
+    //             option_group: "Men's",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/mens/frontleft/05_KinCustom_hightop_shoes_onman_frontleft_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left",
+    //             option_group: "Men's",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/mens/frontright/05_KinCustom_hightop_shoes_onman_frontright_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right",
+    //             option_group: "Men's",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/mens/back/05_KinCustom_hightop_shoes_onman_back_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Back",
+    //             option_group: "Men's",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/mens/back/05_KinCustom_hightop_shoes_onman_back_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Back",
+    //             option_group: "Men's",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/mens_lifestyle/left/05_KinCustom_hightop_shoes_onman_frontleft_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left",
+    //             option_group: "Men's Lifestyle",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/mens_lifestyle/left/05_KinCustom_hightop_shoes_onman_frontleft_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left",
+    //             option_group: "Men's Lifestyle",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/mens_lifestyle/left2/05_KinCustom_hightop_shoes_onman_frontleft_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left",
+    //             option_group: "Men's Lifestyle",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/mens_lifestyle/left2/05_KinCustom_hightop_shoes_onman_frontleft_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left",
+    //             option_group: "Men's Lifestyle",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat5/front/05_KinCustom_hightop_shoes_mockup_front_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Flat 5",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat5/front/05_KinCustom_hightop_shoes_mockup_front_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Flat 5",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/1/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding 1",
+    //             option_group: "Branding",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/3/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding 3",
+    //             option_group: "Branding",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/4/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding 4",
+    //             option_group: "Branding",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/2/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding 2",
+    //             option_group: "Branding",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/2/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding 2",
+    //             option_group: "Branding",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/2/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding 2",
+    //             option_group: "Branding",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/2/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding 2",
+    //             option_group: "Branding",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/leftfront/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left Front",
+    //             option_group: "Product specs",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/left/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left",
+    //             option_group: "Product specs",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/left3/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left",
+    //             option_group: "Product specs",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/left/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left",
+    //             option_group: "Product specs",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/left/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left",
+    //             option_group: "Product specs",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/left/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left",
+    //             option_group: "Product specs",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/leftfront/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left Front",
+    //             option_group: "Product specs",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/leftfront/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left Front",
+    //             option_group: "Product specs",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/leftfront/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left Front",
+    //             option_group: "Product specs",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/left3/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left",
+    //             option_group: "Product specs",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/left3/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left",
+    //             option_group: "Product specs",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/left3/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left",
+    //             option_group: "Product specs",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/1/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding 1",
+    //             option_group: "Branding",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/3/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding 3",
+    //             option_group: "Branding",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/4/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding 4",
+    //             option_group: "Branding",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/1/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding 1",
+    //             option_group: "Branding",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/3/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding 3",
+    //             option_group: "Branding",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/4/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding 4",
+    //             option_group: "Branding",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/1/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding 1",
+    //             option_group: "Branding",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/3/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding 3",
+    //             option_group: "Branding",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/4/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding 4",
+    //             option_group: "Branding",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/mens_lifestyle2/right/05_hightop_shoes_onman_lifestyle_right_base.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right",
+    //             option_group: "Men's Lifestyle 2",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/mens_lifestyle2/left/05_hightop_shoes_onman_lifestyle_left_base.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left",
+    //             option_group: "Men's Lifestyle 2",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/mens_lifestyle2/right_2/05_hightop_shoes_onman_lifestyle_right2_base.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right 2",
+    //             option_group: "Men's Lifestyle 2",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/mens_lifestyle2/right/05_hightop_shoes_onman_lifestyle_right_base.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right",
+    //             option_group: "Men's Lifestyle 2",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/mens_lifestyle2/right_2/05_hightop_shoes_onman_lifestyle_right2_base.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right 2",
+    //             option_group: "Men's Lifestyle 2",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/mens_lifestyle2/left/05_hightop_shoes_onman_lifestyle_left_base.png?v=1692783049",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left",
+    //             option_group: "Men's Lifestyle 2",
+    //         },
+    //     ],
+    // },
+    // {
+    //     productName: "Women's High Top Canvas Shoes",
+    //     price: 45,
+    //     images: [
+    //         {
+    //             placement: "label_inside",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/templates/Np_text_branding_shoes.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding",
+    //             option_group: "Template",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/template2/Kincustom_shoe_left_leg_no_text-188.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left Shoe",
+    //             option_group: "Template",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/template/Kincustom_shoe_left_leg_tongue_no_text.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left Shoe Tongue",
+    //             option_group: "Template",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/template1/Kincustom_shoe_right_leg_no_text.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right Shoe",
+    //             option_group: "Template",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/template/Kincustom_shoe_right_leg_tongue_no_text.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right Shoe Tongue",
+    //             option_group: "Template",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/back/05_KinCustom_hightop_shoes_mockup_back_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Back",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/back/05_KinCustom_hightop_shoes_mockup_back_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Back",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "label_inside",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/back/05_KinCustom_hightop_shoes_mockup_back_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Back",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/front/05_KinCustom_hightop_shoes_mockup_front_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/front/05_KinCustom_hightop_shoes_mockup_front_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/front2/05_KinCustom_hightop_shoes_mockup_front2_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front 2",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/front2/05_KinCustom_hightop_shoes_mockup_front2_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front 2",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "label_inside",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/front2/05_KinCustom_hightop_shoes_mockup_front2_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front 2",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/left/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/backleft/05_KinCustom_hightop_shoes_mockup_backleft_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left Back",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/leftfront/05_KinCustom_hightop_shoes_mockup_frontleft_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left Front",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/leftfront/05_KinCustom_hightop_shoes_mockup_frontleft_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left Front",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/leftfront/05_KinCustom_hightop_shoes_mockup_frontleft_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left Front",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/right/05_KinCustom_hightop_shoes_mockup_right_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/backright/05_KinCustom_hightop_shoes_mockup_backright_base_whitebg-2.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right Back",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/frontright/05_KinCustom_hightop_shoes_mockup_frontright_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right Front",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/frontright/05_KinCustom_hightop_shoes_mockup_frontright_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right Front",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat/frontright/05_KinCustom_hightop_shoes_mockup_frontright_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right Front",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat2/left_inside/05_KinCustom_hightop_shoes_mockup_right_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left Inside",
+    //             option_group: "Flat 2",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat2/left_outside/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left Outside",
+    //             option_group: "Flat 2",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat2/right_inside/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right Inside",
+    //             option_group: "Flat 2",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat2/right_outside/05_KinCustom_hightop_shoes_mockup_right_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right Outside",
+    //             option_group: "Flat 2",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat3/left/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left",
+    //             option_group: "Flat 3",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat3/left/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left",
+    //             option_group: "Flat 3",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat3/left/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left",
+    //             option_group: "Flat 3",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat3/right/05_KinCustom_hightop_shoes_mockup_right_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right",
+    //             option_group: "Flat 3",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat3/right/05_KinCustom_hightop_shoes_mockup_right_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right",
+    //             option_group: "Flat 3",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat3/right/05_KinCustom_hightop_shoes_mockup_right_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right",
+    //             option_group: "Flat 3",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat4/left/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left",
+    //             option_group: "Flat 4",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat4/right/05_KinCustom_hightop_shoes_mockup_right_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right",
+    //             option_group: "Flat 4",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat5/front/05_KinCustom_hightop_shoes_mockup_front_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Flat 5",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat5/front/05_KinCustom_hightop_shoes_mockup_front_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Flat 5",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat_lifestyle/front/05_KinCustom_hightop_shoes_mockup_lifestyle_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Flat Lifestyle",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/flat_lifestyle/front/05_KinCustom_hightop_shoes_mockup_lifestyle_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Flat Lifestyle",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_details/1/05_KinCustom_hightop_shoes_mockup_details_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Product details",
+    //             option_group: "Product details",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_details/1/05_KinCustom_hightop_shoes_mockup_details_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Product details",
+    //             option_group: "Product details",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_details/1/05_KinCustom_hightop_shoes_mockup_details_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Product details",
+    //             option_group: "Product details",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_details/1/05_KinCustom_hightop_shoes_mockup_details_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Product details",
+    //             option_group: "Product details",
+    //         },
+    //         {
+    //             placement: "label_inside",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_details/1/05_KinCustom_hightop_shoes_mockup_details_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Product details",
+    //             option_group: "Product details",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_details/2/05_KinCustom_hightop_shoes_mockup_details_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Product details 2",
+    //             option_group: "Product details",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_details/2/05_KinCustom_hightop_shoes_mockup_details_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Product details 2",
+    //             option_group: "Product details",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_details/2/05_KinCustom_hightop_shoes_mockup_details_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Product details 2",
+    //             option_group: "Product details",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_details/2/05_KinCustom_hightop_shoes_mockup_details_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Product details 2",
+    //             option_group: "Product details",
+    //         },
+    //         {
+    //             placement: "label_inside",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_details/2/05_KinCustom_hightop_shoes_mockup_details_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Product details 2",
+    //             option_group: "Product details",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/womens/frontleft/05_KinCustom_hightop_shoes_onwoman_frontleft_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left",
+    //             option_group: "Women's",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/womens/frontleft/05_KinCustom_hightop_shoes_onwoman_frontleft_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left",
+    //             option_group: "Women's",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/womens/frontright/05_KinCustom_hightop_shoes_onwoman_frontright_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right",
+    //             option_group: "Women's",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/womens/frontright/05_KinCustom_hightop_shoes_onwoman_frontright_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right",
+    //             option_group: "Women's",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/womens/back/05_KinCustom_hightop_shoes_onwoman_back_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Back",
+    //             option_group: "Women's",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/womens/back/05_KinCustom_hightop_shoes_onwoman_back_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Back",
+    //             option_group: "Women's",
+    //         },
+    //         {
+    //             placement: "label_inside",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/1/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding 1",
+    //             option_group: "Branding",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/2/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding 2",
+    //             option_group: "Branding",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/2/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding 2",
+    //             option_group: "Branding",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/2/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding 2",
+    //             option_group: "Branding",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/2/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding 2",
+    //             option_group: "Branding",
+    //         },
+    //         {
+    //             placement: "label_inside",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/2/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding 2",
+    //             option_group: "Branding",
+    //         },
+    //         {
+    //             placement: "label_inside",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/3/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding 3",
+    //             option_group: "Branding",
+    //         },
+    //         {
+    //             placement: "label_inside",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/4/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding 4",
+    //             option_group: "Branding",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/womens_lifestyle/front/05_KinCustom_hightop_shoes_onwoman_front_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Women's Lifestyle",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/womens_lifestyle/front/05_KinCustom_hightop_shoes_onwoman_front_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Women's Lifestyle",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/womens_lifestyle/front/05_KinCustom_hightop_shoes_onwoman_front_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Women's Lifestyle",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/womens_lifestyle/front/05_KinCustom_hightop_shoes_onwoman_front_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Women's Lifestyle",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/womens_lifestyle/front2/05_KinCustom_hightop_shoes_onwoman_front2_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Women's Lifestyle",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/womens_lifestyle/front2/05_KinCustom_hightop_shoes_onwoman_front2_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Women's Lifestyle",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/womens_lifestyle/front2/05_KinCustom_hightop_shoes_onwoman_front2_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Women's Lifestyle",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/womens_lifestyle/front2/05_KinCustom_hightop_shoes_onwoman_front2_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Women's Lifestyle",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/1/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding 1",
+    //             option_group: "Branding",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/3/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding 3",
+    //             option_group: "Branding",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/4/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding 4",
+    //             option_group: "Branding",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/left2/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left Front",
+    //             option_group: "Product specs",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/left/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left",
+    //             option_group: "Product specs",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/left3/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left",
+    //             option_group: "Product specs",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/left/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left",
+    //             option_group: "Product specs",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/left/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left",
+    //             option_group: "Product specs",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/left/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left",
+    //             option_group: "Product specs",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/left2/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left Front",
+    //             option_group: "Product specs",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/left2/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left Front",
+    //             option_group: "Product specs",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/left2/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left Front",
+    //             option_group: "Product specs",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/left3/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left",
+    //             option_group: "Product specs",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/left3/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left",
+    //             option_group: "Product specs",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/product_specs/left3/05_KinCustom_hightop_shoes_mockup_left_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left",
+    //             option_group: "Product specs",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/1/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding 1",
+    //             option_group: "Branding",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/3/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding 3",
+    //             option_group: "Branding",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/4/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding 4",
+    //             option_group: "Branding",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/1/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding 1",
+    //             option_group: "Branding",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/3/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding 3",
+    //             option_group: "Branding",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/4/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding 4",
+    //             option_group: "Branding",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/1/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding 1",
+    //             option_group: "Branding",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/3/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding 3",
+    //             option_group: "Branding",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/branding/4/05_KinCustom_hightop_shoes_mockup_branding_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding 4",
+    //             option_group: "Branding",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/womens2/left/05_base.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left",
+    //             option_group: "Women's 2",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/womens_lifestyle_2/right/05_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left",
+    //             option_group: "Women's Lifestyle 2",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/womens_lifestyle_2/left/05_base_whitebg.png?v=1692788970",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right",
+    //             option_group: "Women's Lifestyle 2",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/KinCustom_canvas_shoes/medium/womens_lifestyle_3/front/05_base.png?v=1692789968",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Women's Lifestyle 3",
+    //         },
+    //     ],
+    // },
+    // {
+    //     productName: "Men's Slip-On Canvas Shoes",
+    //     price: 44,
+    //     images: [
+    //         {
+    //             placement: "shoe_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/flat/front/05_KinCustom_SlipOnShoes_flat_front_base_whitebg.png?v=1669272236",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/templates/right_leg_notext.png?v=1669272236",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right shoe",
+    //             option_group: "Templates",
+    //         },
+    //         {
+    //             placement: "shoe_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/templates/left_leg_notext.png?v=1669272236",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left shoe",
+    //             option_group: "Templates",
+    //         },
+    //         {
+    //             placement: "label_inside",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/templates/branding_notext.png?v=1669272236",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding",
+    //             option_group: "Templates",
+    //         },
+    //         {
+    //             placement: "shoe_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/flat/front/05_KinCustom_SlipOnShoes_flat_front_base_whitebg.png?v=1669272236",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "label_inside",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/flat/front/05_KinCustom_SlipOnShoes_flat_front_base_whitebg.png?v=1669272236",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/flat/frontleft/05_KinCustom_SlipOnShoes_flat_frontleft_base_whitebg.png?v=1669272236",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left Front",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/flat/frontright/05_KinCustom_SlipOnShoes_flat_frontright_base_whitebg.png?v=1669272236",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right Front",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/flat/inside/05_KinCustom_SlipOnShoes_flat_left_base_whitebg.png?v=1669272236",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right Inside",
+    //             option_group: "Flat 2",
+    //         },
+    //         {
+    //             placement: "shoe_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/flat/outside/05_KinCustom_SlipOnShoes_flat_right_base_whitebg.png?v=1669272236",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right Outside",
+    //             option_group: "Flat 2",
+    //         },
+    //         {
+    //             placement: "shoe_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/flat2/frontleft/05_KinCustom_SlipOnShoes_flat2_frontleft_base_whitebg.png?v=1669272236",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left Front",
+    //             option_group: "Flat 3",
+    //         },
+    //         {
+    //             placement: "shoe_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/flat2/frontright/05_KinCustom_SlipOnShoes_flat2_frontright_base_whitebg.png?v=1669272236",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right Front",
+    //             option_group: "Flat 3",
+    //         },
+    //         {
+    //             placement: "shoe_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/flat3/front/05_KinCustom_SlipOnShoes_flat4_front_base_whitebg.png?v=1669272236",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Flat 4",
+    //         },
+    //         {
+    //             placement: "shoe_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/mens/front/05_KinCustom_SlipOnShoes_onman_front_base_whitebg.png?v=1669272236",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Men's",
+    //         },
+    //         {
+    //             placement: "shoe_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/mens/back/05_KinCustom_SlipOnShoes_onman_back_base_whitebg.png?v=1669272236",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Back",
+    //             option_group: "Men's",
+    //         },
+    //         {
+    //             placement: "shoe_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/mens_lifestyle/frontleft/05_KinCustom_SlipOnShoes_onman2_lifestyle_frontleft_base_whitebg.png?v=1669272236",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left Front",
+    //             option_group: "Men's Lifestyle",
+    //         },
+    //         {
+    //             placement: "shoe_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/flat/back/05_KinCustom_SlipOnShoes_flat_back_base_whitebg.png?v=1669272236",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Back",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/flat/inside/05_KinCustom_SlipOnShoes_flat_left_base_whitebg.png?v=1669272236",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left Outside",
+    //             option_group: "Flat 2",
+    //         },
+    //         {
+    //             placement: "shoe_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/flat/outside/05_KinCustom_SlipOnShoes_flat_right_base_whitebg.png?v=1669272236",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left Inside",
+    //             option_group: "Flat 2",
+    //         },
+    //         {
+    //             placement: "shoe_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/flat4/front/05_KinCustom_SlipOnShoes_flat3_frontright_base_whitebg.png?v=1669272236",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Flat 5",
+    //         },
+    //         {
+    //             placement: "shoe_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/mens_lifestyle2/front_2/05_KinCustom_SlipOnShoes_onman_front2_base.png?v=1669627682",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Men's Lifestyle 2",
+    //         },
+    //         {
+    //             placement: "shoe_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/mens_lifestyle2/front_1/05_KinCustom_SlipOnShoes_onman_front1_base.png?v=1669627682",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front 2",
+    //             option_group: "Men's Lifestyle 2",
+    //         },
+    //         {
+    //             placement: "shoe_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/mens_lifestyle2/frontright/05_KinCustom_SlipOnShoes_onman_frontright_base.png?v=1669627682",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right Front",
+    //             option_group: "Men's Lifestyle 2",
+    //         },
+    //         {
+    //             placement: "shoe_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/mens_slip_on_shoes_kincustom/medium/mens_lifestyle2/right/05_KinCustom_SlipOnShoes_onman_right_base.png?v=1669627682",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right",
+    //             option_group: "Men's Lifestyle 2",
+    //         },
+    //     ],
+    // },
+    // {
+    //     productName: "Women's Slip-On Canvas Shoes",
+    //     price: 44,
+    //     images: [
+    //         {
+    //             placement: "shoe_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/flat/front/05_KinCustom_SlipOnShoes_flat_front_base_whitebg.png?v=1671460266",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/templates/left_leg_notext.png?v=1671460266",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left shoe",
+    //             option_group: "Template",
+    //         },
+    //         {
+    //             placement: "shoe_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/templates/right_leg_notext.png?v=1671460266",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right shoe",
+    //             option_group: "Template",
+    //         },
+    //         {
+    //             placement: "label_inside",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/templates/branding_notext.png?v=1671460266",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding",
+    //             option_group: "Template",
+    //         },
+    //         {
+    //             placement: "shoe_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/flat/front/05_KinCustom_SlipOnShoes_flat_front_base_whitebg.png?v=1671460266",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "label_inside",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/flat/front/05_KinCustom_SlipOnShoes_flat_front_base_whitebg.png?v=1671460266",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/flat/frontleft/05_KinCustom_SlipOnShoes_flat_frontleft_base_whitebg.png?v=1671460266",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left Front",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/flat/frontright/05_KinCustom_SlipOnShoes_flat_frontright_base_whitebg.png?v=1671460266",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right Front",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/flat/inside/05_KinCustom_SlipOnShoes_flat_left_base_whitebg.png?v=1671460266",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right Inside",
+    //             option_group: "Flat 2",
+    //         },
+    //         {
+    //             placement: "shoe_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/flat/outside/05_KinCustom_SlipOnShoes_flat_right_base_whitebg.png?v=1671460266",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right Outside",
+    //             option_group: "Flat 2",
+    //         },
+    //         {
+    //             placement: "shoe_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/flat2/frontleft/05_KinCustom_SlipOnShoes_flat2_frontleft_base_whitebg.png?v=1671460266",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left Front",
+    //             option_group: "Flat 3",
+    //         },
+    //         {
+    //             placement: "shoe_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/flat2/frontright/05_KinCustom_SlipOnShoes_flat2_frontright_base_whitebg.png?v=1671460266",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right Front",
+    //             option_group: "Flat 3",
+    //         },
+    //         {
+    //             placement: "shoe_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/flat3/front/05_KinCustom_SlipOnShoes_flat4_front_base_whitebg.png?v=1671460266",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Flat 4",
+    //         },
+    //         {
+    //             placement: "shoe_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/womens/left/05_KinCustom_SlipOnShoes_onwoman_left_base_whitebg.png?v=1671460266",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Women's",
+    //         },
+    //         {
+    //             placement: "shoe_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/womens/right/05_KinCustom_SlipOnShoes_onwoman_right_base_whitebg.png?v=1671460266",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right",
+    //             option_group: "Women's",
+    //         },
+    //         {
+    //             placement: "shoe_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/womens/back/05_KinCustom_SlipOnShoes_onwoman_back_base_whitebg.png?v=1671460266",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Back",
+    //             option_group: "Women's",
+    //         },
+    //         {
+    //             placement: "shoe_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/womens_lifestyle/front/05_KinCustom_SlipOnShoes_onwoman2_lifestyle_front_base.png?v=1671460266",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Women's Lifestyle",
+    //         },
+    //         {
+    //             placement: "shoe_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/flat/back/05_KinCustom_SlipOnShoes_flat_back_base_whitebg.png?v=1671460266",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Back",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/flat/inside/05_KinCustom_SlipOnShoes_flat_left_base_whitebg.png?v=1671460266",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left Outside",
+    //             option_group: "Flat 2",
+    //         },
+    //         {
+    //             placement: "shoe_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/flat/outside/05_KinCustom_SlipOnShoes_flat_right_base_whitebg.png?v=1671460266",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left Inside",
+    //             option_group: "Flat 2",
+    //         },
+    //         {
+    //             placement: "shoe_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/flat4/front/05_KinCustom_SlipOnShoes_flat3_frontright_base_whitebg.png?v=1671460266",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Flat 5",
+    //         },
+    //         {
+    //             placement: "shoe_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/womens_lifestyle_2/left/05_aop_womenscanvasshoes_base.png?v=1671529263",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right",
+    //             option_group: "Women's Lifestyle 2",
+    //         },
+    //         {
+    //             placement: "shoe_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/slip_on_shoes_kincustom/medium/womens_lifestyle_3/front/05_aop_womenscanvasshoes_base.png?v=1671529265",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Women's Lifestyle 3",
+    //         },
+    //     ],
+    // },
+    // {
+    //     productName: "Women's Lace-Up Canvas Shoes",
+    //     price: 45,
+    //     images: [
+    //         {
+    //             placement: "label_inside",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/flat/front/05_KinCustomLaceUpShoes_flat_front_base_whitebg.png?v=1673965946",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "label_inside",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/templates/branding_notext.png?v=1673965946",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding",
+    //             option_group: "Templates",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/templates/left_quarter_notext.png?v=1673965946",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left shoe",
+    //             option_group: "Templates",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/templates/right_quarter_notext.png?v=1673965946",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right shoe",
+    //             option_group: "Templates",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/templates/left_leg_vamp_tongue_notext.png?v=1673965946",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left shoe front",
+    //             option_group: "Templates",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/templates/right_leg_vamp_tongue_notext.png?v=1673965946",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right shoe front",
+    //             option_group: "Templates",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/flat/front/05_KinCustomLaceUpShoes_flat_front_base_whitebg.png?v=1673965946",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/flat/front/05_KinCustomLaceUpShoes_flat_front_base_whitebg.png?v=1673965946",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/flat/front/05_KinCustomLaceUpShoes_flat_front_base_whitebg.png?v=1673965946",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/flat/front/05_KinCustomLaceUpShoes_flat_front_base_whitebg.png?v=1673965946",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/flat/frontleft/05_KinCustomLaceUpShoes_flat_frontleft_base_whitebg.png?v=1673965946",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left Front",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/flat/back/05_KinCustomLaceUpShoes_flat_back_base_whitebg.png?v=1673965946",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Back",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/flat/left/05_KinCustomLaceUpShoes_flat_left_base_whitebg.png?v=1673965946",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right Inside",
+    //             option_group: "Flat 2",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/flat/right/05_KinCustomLaceUpShoes_flat_right_base_whitebg.png?v=1673965946",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right Outside",
+    //             option_group: "Flat 2",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/flat/left/05_KinCustomLaceUpShoes_flat_left_base_whitebg.png?v=1673965946",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left Outside",
+    //             option_group: "Flat 2",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/flat/right/05_KinCustomLaceUpShoes_flat_right_base_whitebg.png?v=1673965946",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left Inside",
+    //             option_group: "Flat 2",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/flat2/05_KinCustomLaceUpShoes_flat2_front_base_whitebg.png?v=1673965946",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Flat 3",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/flat3/05_KinCustomLaceUpShoes_flat3_frontleft_base_whitebg.png?v=1673965946",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right Front",
+    //             option_group: "Flat 4",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/womens/back/05_KinCustomLaceUpShoes_onwoman_back_base_whitebg.png?v=1673965946",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Back",
+    //             option_group: "Women's",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/womens/frontright/05_KinCustomLaceUpShoes_onwoman_frontright_base_whitebg.png?v=1673965946",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Women's",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/womens/frontleft/05_KinCustomLaceUpShoes_onwoman_frontleft_base_whitebg.png?v=1673965946",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left Front",
+    //             option_group: "Women's",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/flat4/05_KinCustomLaceUpShoes_flat4_front_base_whitebg.png?v=1673965946",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Flat 5",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/womens2/frontright/05_KinCustomLaceUpShoes_onwoman2_frontright_base_whitebg.png?v=1673965946",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right",
+    //             option_group: "Women's Lifestyle",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/flat/front2/05_KinCustomLaceUpShoes_flat_front2_base_whitebg.png?v=1673965946",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front 2",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_tongue_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/flat/frontleft2/05_KinCustomLaceUpShoes_flat_frontleft2_base_whitebg.png?v=1673965946",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left Front 2",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/flat/frontright/05_KinCustomLaceUpShoes_flat_frontright_base_whitebg.png?v=1673965946",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right Front",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/womes_lifestyle_2/front/05_lifestyle_2_base.png?v=1674031053",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Women's Lifestyle 2",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/Womens_lifestyle_3/front/05_lifestyle_base_whitebg.png?v=1674031055",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Women's Lifestyle 3",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/womes_lifestyle_2/front/05_lifestyle_2_base.png?v=1674031053",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Women's Lifestyle 2",
+    //         },
+    //         {
+    //             placement: "shoe_quarters_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/womens_laceup_shoes/medium/Womens_lifestyle_3/front/05_lifestyle_base_whitebg.png?v=1674031055",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Women's Lifestyle 3",
+    //         },
+    //     ],
+    // },
+    // {
+    //     productName: "Men's Slides",
+    //     price: 32,
+    //     images: [
+    //         {
+    //             placement: "shoe_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/Kincustom_slides/medium/template/right_shoe_notext.png?v=1698825583",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right shoe",
+    //             option_group: "Templates",
+    //         },
+    //         {
+    //             placement: "shoe_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/Kincustom_slides/medium/template/left_shoe_notext.png?v=1698825583",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left shoe",
+    //             option_group: "Templates",
+    //         },
+    //         {
+    //             placement: "label_inside",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/Kincustom_slides/medium/template/branding.png?v=1698825583",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding",
+    //             option_group: "Templates",
+    //         },
+    //         {
+    //             placement: "shoe_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/Kincustom_slides/medium/flat/top/05_slides_flat_top_black_base_whitebg.png?v=1698825583",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/Kincustom_slides/medium/flat/frontleft/05_slides_flat_frontleft_black_base_whitebg.png?v=1698825583",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left Front",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "label_inside",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/Kincustom_slides/medium/flat/frontright/05_slides_flat_frontright_black_base_whitebg.png?v=1698909600",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right Front",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/Kincustom_slides/medium/flat2/right_inside/05_slides_flat_rightinside_black_base_whitebg.png?v=1698825583",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right Inside",
+    //             option_group: "Flat 2",
+    //         },
+    //         {
+    //             placement: "shoe_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/Kincustom_slides/medium/flat2/left_inside/05_slides_flat_leftinside_black_base_whitebg.png?v=1698825583",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left Inside",
+    //             option_group: "Flat 2",
+    //         },
+    //         {
+    //             placement: "shoe_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/Kincustom_slides/medium/flat3/front/05_slides_flat_front_black_base_whitebg.png?v=1698825583",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Flat 3",
+    //         },
+    //         {
+    //             placement: "shoe_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/Kincustom_slides/medium/flat4/front/05_slides_flat_side_black_base_whitebg.png?v=1698825583",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Flat 4",
+    //         },
+    //         {
+    //             placement: "shoe_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/Kincustom_slides/medium/flat5/front/05_slides_flat_levitating_black_base_whitebg.png?v=1698825583",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Flat 5",
+    //         },
+    //         {
+    //             placement: "shoe_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/Kincustom_slides/medium/mens/front/05_slides_onman_front_black_base_whitebg.png?v=1698825583",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Men's",
+    //         },
+    //         {
+    //             placement: "shoe_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/Kincustom_slides/medium/mens_lifestyle/front/05_onman_lifestyle_front_black_base.png?v=1698825583",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Men's Lifestyle",
+    //         },
+    //         {
+    //             placement: "shoe_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/Kincustom_slides/medium/flat/front2/05_slides_flat_top_black_base_whitebg.png?v=1698825583",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front 2",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/Kincustom_slides/medium/product_specs/top/05_slides_specs_top_black_base_whitebg.png?v=1698825583",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Product specs",
+    //         },
+    //         {
+    //             placement: "shoe_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/Kincustom_slides/medium/mens_lifestyle_2/lifestyle_3/05_lifestyle_3_black_base_witebg.png?v=1698825583",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Men's Lifestyle 2",
+    //         },
+    //         {
+    //             placement: "shoe_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/Kincustom_slides/medium/mens_lifestyle_2/lifestyle_4/05_lifestyle_4_black_base_whitebg.png?v=1698825583",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right Front",
+    //             option_group: "Men's Lifestyle 2",
+    //         },
+    //         {
+    //             placement: "shoe_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/Kincustom_slides/medium/mens_lifestyle_3/lifestyle_1/05_lifestyle_1_black_base.png?v=1698825583",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Men's Lifestyle 3",
+    //         },
+    //         {
+    //             placement: "shoe_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/Kincustom_slides/medium/mens_lifestyle_3/lifestyle_2/05_lifestyle_2_black_base.png?v=1698825583",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left Front",
+    //             option_group: "Men's Lifestyle 3",
+    //         },
+    //     ],
+    // },
+    // {
+    //     productName: "Women's Slides",
+    //     price: 32,
+    //     images: [
+    //         {
+    //             placement: "shoe_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/Kincustom_slides/medium/template/right_shoe_notext.png?v=1698825770",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right shoe",
+    //             option_group: "Templates",
+    //         },
+    //         {
+    //             placement: "shoe_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/Kincustom_slides/medium/template/left_shoe_notext.png?v=1698825770",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left shoe",
+    //             option_group: "Templates",
+    //         },
+    //         {
+    //             placement: "label_inside",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/Kincustom_slides/medium/template/branding.png?v=1698825770",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Branding",
+    //             option_group: "Templates",
+    //         },
+    //         {
+    //             placement: "shoe_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/Kincustom_slides/medium/flat/top/05_slides_flat_top_white_base_whitebg.png?v=1698825770",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/Kincustom_slides/medium/flat/frontleft/05_slides_flat_frontleft_white_base_whitebg.png?v=1698825882",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left Front",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "label_inside",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/Kincustom_slides/medium/flat/frontright/05_slides_flat_frontright_white_base_whitebg.png?v=1698825770",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right Front",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/Kincustom_slides/medium/flat2/right_inside/05_slides_flat_rightinside_white_base_whitebg.png?v=1698825770",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Right inside",
+    //             option_group: "Flat 2",
+    //         },
+    //         {
+    //             placement: "shoe_left",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/Kincustom_slides/medium/flat2/left_inside/05_slides_flat_leftinside_white_base_whitebg.png?v=1698825770",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Left inside",
+    //             option_group: "Flat 2",
+    //         },
+    //         {
+    //             placement: "shoe_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/Kincustom_slides/medium/flat3/front/05_slides_flat_front_white_base_whitebg.png?v=1698825770",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Flat 3",
+    //         },
+    //         {
+    //             placement: "shoe_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/Kincustom_slides/medium/flat4/front/05_slides_flat_side_white_base_whitebg.png?v=1698825770",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Flat 4",
+    //         },
+    //         {
+    //             placement: "shoe_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/Kincustom_slides/medium/flat5/front/05_slides_flat_levitating_white_base_whitebg.png?v=1698825770",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Flat 5",
+    //         },
+    //         {
+    //             placement: "shoe_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/Kincustom_slides/medium/womens/front/05_slides_onwoman_front_white_base_whitebg.png?v=1698825770",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Women's",
+    //         },
+    //         {
+    //             placement: "shoe_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/Kincustom_slides/medium/womens_lifestyle/05_slides_onwoman2_front_white_base_whitebg.png?v=1698825770",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Women's Lifestyle",
+    //         },
+    //         {
+    //             placement: "shoe_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/Kincustom_slides/medium/flat/front2/05_slides_flat_top_white_base_whitebg.png?v=1698825770",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front 2",
+    //             option_group: "Flat",
+    //         },
+    //         {
+    //             placement: "shoe_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/Kincustom_slides/medium/product_specs/top/05_slides_specs_top_white_base_whitebg.png?v=1698825770",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Product specs",
+    //         },
+    //         {
+    //             placement: "shoe_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/Kincustom_slides/medium/womens_lifestyle_2/front/05_lifestyle_white_base.png?v=1698825770",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Women's Lifestyle 2",
+    //         },
+    //         {
+    //             placement: "shoe_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/Kincustom_slides/medium/womens_lifestyle_2/front2/05_onwoman_lifestyle_2_white_base.png?v=1698825770",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front 2",
+    //             option_group: "Women's Lifestyle 2",
+    //         },
+    //         {
+    //             placement: "shoe_right",
+    //             image_url:
+    //                 "https://files.cdn.printful.com/m/Kincustom_slides/medium/womens_lifestyle_3/front/05_onwoman_lifestyle_3_white_base.png?v=1698825770",
+    //             background_color: "#ffffff",
+    //             background_image: null,
+    //             option: "Front",
+    //             option_group: "Women's Lifestyle 3",
+    //         },
+    //     ],
+    // },
 ];
 main();

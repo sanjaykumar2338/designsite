@@ -412,9 +412,10 @@
     </div>
 
     <!-- SPINNER -->
-    <div id="loader" hidden style="display: none" wire:loading
+    <div id="loader" hidden style="" wire:loading
         class="fixed top-0 left-0 right-0 bottom-0 w-full h-screen z-50 overflow-hidden bg-gray-700 opacity-75 flex flex-col items-center justify-center">
-        <div class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-12 w-12 mb-4"></div>
+        <div style="border-top-color: #3498db !important"
+            class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-12 w-12 mb-4"></div>
         <h2 class="text-center text-white text-xl font-semibold">Loading...</h2>
         <p class="w-1/3 text-center text-white">This may take a few seconds, please don't close this page.</p>
     </div>
@@ -434,6 +435,7 @@
         const form = document.getElementById('payment-form');
         form.addEventListener('submit', async (event) => {
             event.preventDefault();
+            setIsLoading(true);
 
             // Create a payment method using the card Element.
             const {
@@ -486,7 +488,11 @@
                     const data = await response.json();
 
                     if (data.success) {
-                        alert(data.message);
+                        // alert(data.message);
+                        Toastify({
+                            text: "Payment Success!",
+                            className: "info",
+                        }).showToast();
                     } else {
                         alert(data.error);
                     }
@@ -498,6 +504,7 @@
                 }
             } else {
                 alert('No Price');
+                setIsLoading(false);
             }
         };
 
