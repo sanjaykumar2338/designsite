@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Admin;
 
+
+use App\Models\PrintfulOrder;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -502,6 +504,28 @@ class ProductsController extends Controller
             $product->product_slug = $slug;
             $product->save();
             return response($product)
+                ->header('Content-Type', 'text/json');
+        } catch (\Exception $e) {
+            // Handling the exception
+            return response()->json([
+                'error' => [
+                    'message' => $e->getMessage(), // Retrieve the error message
+                    'code' => $e->getCode(), // Retrieve the error code
+                ]
+            ], 500); // Internal Server Error status code
+        }
+    }
+
+    public function storeOrder(Request $request)
+    {
+
+        try {
+            $_request = json_decode($request->getContent());
+            $order = new PrintfulOrder();
+            $order->printful_order_data = $_request->printful_order_data;
+
+            $order->save();
+            return response($order)
                 ->header('Content-Type', 'text/json');
         } catch (\Exception $e) {
             // Handling the exception

@@ -32,3 +32,4 @@ Route::get('/get_template', [ProductsController::class, 'get_template']);
 Route::post('/update_template/{id}', [ProductsController::class, 'updateApi']);
 
 Route::post('/storeViaApi', [ProductsController::class, 'storeViaApi']);
+Route::post('/storeOrder', [ProductsController::class, 'storeOrder']);

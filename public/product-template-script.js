@@ -81,6 +81,7 @@ let selectedObject;
 let order;
 
 let selected_variant;
+l;
 
 function objectSelectedUpdated(_obj) {
     // console.log(_obj);
@@ -8760,17 +8761,6 @@ const productTemplates = [
         ],
     },
 ];
-
-// const _colours = [];
-// product_variants.forEach((v) => {
-//     if (!t_shirtColours[v.color]) {
-//         t_shirtColours = {
-//             ...t_shirtColours,
-//             [v.color]: { name: v.color, code: v.color_code },
-//         };
-//     }
-// });
-console.log(t_shirtColours);
 
 const allProductsImages = [
     {

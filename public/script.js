@@ -213,7 +213,6 @@ function setProductsSizeUI(variants) {
             sizes.push(v.size);
         }
     });
-    debugger;
     const product_size = getEl("product_size");
     if (!product_size) return;
     product_size.innerHTML = "";
@@ -269,7 +268,7 @@ function getCurrentVariant() {
 function setVariant(color_code, size) {
     const currentVariant = getCurrentVariant();
     let filtered;
-    debugger;
+    let newVariant;
     if (color_code) {
         filtered = product.variants.filter((v) => {
             if (color_code) return v.color_code === color_code;
@@ -279,7 +278,7 @@ function setVariant(color_code, size) {
         });
         setProductsSizeUI(filtered);
         // setProductColoursUI(filtered);
-        filtered = filtered.find((v) => {
+        newVariant = filtered.find((v) => {
             return v.size === sizes[0];
         });
     } else if (size) {
@@ -290,15 +289,33 @@ function setVariant(color_code, size) {
         });
         setProductColoursUI(filtered);
         // setProductsSizeUI(filtered);
-        filtered = filtered.find((v) => {
+        newVariant = filtered.find((v) => {
             return v.color === Object.keys(t_shirtColours)[0];
         });
     }
 
-    selected_variant = filtered.id;
-    console.log("variant", `${filtered.color} - ${filtered.size}`);
-    setProductColour(filtered.color_code);
-    setProductSize(filtered.size);
+    selected_variant = newVariant.id;
+    console.log("variant", `${newVariant.color} - ${newVariant.size}`);
+    if (
+        color_code ||
+        !(
+            currentVariant &&
+            filtered.find((v) => v.color_code === currentVariant.color_code)
+        )
+    ) {
+        debugger;
+        setProductColour(newVariant.color_code);
+    }
+    if (
+        size ||
+        !(
+            currentVariant &&
+            filtered.find((v) => v.size === currentVariant.size)
+        )
+    ) {
+        debugger;
+        setProductSize(newVariant.size);
+    }
 }
 
 function init() {
@@ -942,9 +959,6 @@ function createProduct(files) {
             console.log("error", error);
             setIsLoading(false);
         });
-    return new Promise((re, rej) => {
-        resolve();
-    });
 }
 function getProduct(id) {
     var myHeaders = new Headers();
@@ -1000,6 +1014,34 @@ function createOrder(product) {
             console.log("error", error);
             setIsLoading(false);
         });
+}
+
+function saveOrder(data) {
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    var raw = JSON.stringify({
+        printful_order_data: JSON.stringify(data),
+    });
+
+    var requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        body: raw,
+        redirect: "follow",
+    };
+
+    fetch("/api/storeOrder", requestOptions)
+        .then((response) => {
+            response.json().then((json) => {
+                console.log("save order", json);
+                Toastify({
+                    text: "Order Saved!",
+                    className: "success",
+                }).showToast();
+            });
+        })
+        .catch((error) => console.log("error", error));
 }
 
 function setCost() {
@@ -1087,6 +1129,7 @@ function submitPayment() {
         .then((result) => {
             order = JSON.parse(result);
             console.log("Submit Payment", order);
+            saveOrder(order.result);
             setIsLoading(false);
             Toastify({
                 text: "Order Placed!",
@@ -1194,10 +1237,10 @@ const sampleOrderData = {
         shipping: "5.00",
         tax: "0.00",
     },
-    gift: {
-        subject: "To John",
-        message: "Have a nice day",
-    },
+    // gift: {
+    //     subject: "To John",
+    //     message: "Have a nice day",
+    // },
     packing_slip: {},
 };
 

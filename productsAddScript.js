@@ -103,8 +103,8 @@ async function main() {
             product_width: "10",
             product_height: "10",
         };
-        const res = await _createProduct(data);
-        console.log(res);
+        // const res = await _createProduct(data);
+        // console.log(res);
     }
 }
 
