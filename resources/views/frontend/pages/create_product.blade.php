@@ -435,7 +435,7 @@
         const form = document.getElementById('payment-form');
         form.addEventListener('submit', async (event) => {
             event.preventDefault();
-            setIsLoading(true);
+            // setIsLoading(true);
 
             // Create a payment method using the card Element.
             const {
@@ -476,6 +476,7 @@
                 formData.append('total', centsValue);
 
                 try {
+                    setIsLoading(true)
                     const response = await fetch('{{ route('charge') }}', {
                         method: 'POST',
                         body: formData,
@@ -493,9 +494,11 @@
                             text: "Payment Success!",
                             className: "info",
                         }).showToast();
+
                     } else {
                         alert(data.error);
                     }
+
                     submitPayment()
                     // window.location.reload();
                 } catch (error) {
