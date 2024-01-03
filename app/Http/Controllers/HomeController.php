@@ -191,8 +191,17 @@ class HomeController extends Controller
         $producttype = @ucfirst($category);
         $products = Products::where('product_type', 'LIKE', '%' . $producttype . '%')->get();
         //echo "<pre>"; print_r($products); die;
-
         return view('frontend.pages.product_list')->with('products', $products);
+    }
+
+    public function country_product (Request $request, $category){
+        $producttype = @ucfirst($category);
+        $products = Products::select('supporting_country', \DB::raw('MAX(id) as max_id'), \DB::raw('MAX(front_image) as max_front_image'))
+            ->where('product_type', $producttype)
+            ->groupBy('supporting_country')
+            ->get();        
+        echo "<pre>"; print_r($products); die;
+        return view('frontend.pages.supporting_list')->with('products', $products);
     }
 
     public function updateEmptyImageColumns()
