@@ -17,7 +17,7 @@
             <div class="row">
                 
                 @php
-                    echo "<pre>"; print_r($products);
+                   //echo "<pre>"; print_r($products);
                 @endphp
 
                 @if($products->count())
