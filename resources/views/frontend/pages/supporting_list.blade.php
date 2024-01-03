@@ -21,8 +21,7 @@
                         @if($product->max_front_image!="")
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <div class="img aos-init aos-animate" data-aos="zoom-in">
-                                    <img src="{{fileToUrl($product->max_front_image)}}" alt="">
-                                    
+                                    <img src="{{fileToUrl($product->max_front_image)}}" alt="">                                    
                                     @php
                                         $commissionAmount = ($product->commission / 100) * $product->product_price;
                                         $totalPrice = $product->product_price + $commissionAmount;
