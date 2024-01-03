@@ -16,6 +16,10 @@
         <div class="container">                     
             <div class="row">
                 
+                @php
+                    echo "<pre>"; print_r($products);
+                @endphp
+
                 @if($products->count())
                     @foreach($products as $product)
                         @if($product->front_image!="")
