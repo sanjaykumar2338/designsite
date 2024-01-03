@@ -196,11 +196,12 @@ class HomeController extends Controller
 
     public function country_product (Request $request, $category){
         $producttype = @ucfirst($category);
-        $products = Products::select('supporting_country', \DB::raw('MAX(id) as max_id'), \DB::raw('MAX(front_image) as max_front_image'))
+        $products = Products::select('supporting_country', \DB::raw('MAX(id) as max_id'), \DB::raw('MAX(front_image) as max_front_image'), \DB::raw('MAX(product_type) as product_type'), \DB::raw('MAX(supporting_country) as supporting_country'))
             ->where('product_type', $producttype)
             ->groupBy('supporting_country')
             ->get();        
-        echo "<pre>"; print_r($products); die;
+
+        //echo "<pre>"; print_r($products); die;
         return view('frontend.pages.supporting_list')->with('products', $products);
     }
 
