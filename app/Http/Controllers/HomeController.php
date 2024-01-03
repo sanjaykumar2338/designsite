@@ -201,7 +201,7 @@ class HomeController extends Controller
             ->groupBy('supporting_country')
             ->get();        
 
-        echo "<pre>"; print_r($products); die;
+        //echo "<pre>"; print_r($products); die;
         return view('frontend.pages.supporting_list')->with('products', $products);
     }
 
