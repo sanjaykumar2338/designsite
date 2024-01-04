@@ -524,6 +524,7 @@ class ProductsController extends Controller
             $order = new PrintfulOrder();
             $order->printful_order_data = $_request->printful_order_data;
             $order->product_id = $_request->product_id;
+            $order->user_id = auth()->user()->id;
 
             $order->save();
             return response($order)
