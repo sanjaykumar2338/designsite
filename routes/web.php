@@ -70,6 +70,7 @@ Route::post('/register', [App\Http\Controllers\UserController::class, 'register'
 Route::get('/logout', [App\Http\Controllers\UserController::class, 'logout'])->name('logout');
 Route::post('/login', [App\Http\Controllers\UserController::class, 'login'])->name('login');
 Route::get('/product_slug', [App\Http\Controllers\UserController::class, 'product_slug'])->name('product_slug');
+Route::post('/storeOrder', [App\Http\Controllers\UserController::class, 'storeOrder']);
 
 Route::post(
     'stripe/webhook',

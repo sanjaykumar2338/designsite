@@ -1032,7 +1032,7 @@ function saveOrder(data) {
         redirect: "follow",
     };
 
-    fetch("/api/storeOrder", requestOptions)
+    fetch("/storeOrder", requestOptions)
         .then((response) => {
             response.json().then((json) => {
                 console.log("save order", json);
