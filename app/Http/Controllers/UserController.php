@@ -5,6 +5,8 @@ use App\Models\Products;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Auth;
+use App\Models\PrintfulOrder;
+
 
 class UserController extends Controller
 {
@@ -99,6 +101,29 @@ class UserController extends Controller
         // Display the updated products
         foreach ($products as $product) {
             echo "Product Name: {$product->name} - Updated Slug: {$product->product_slug}\n";
+        }
+    }
+    public function storeOrder(Request $request)
+    {
+
+        try {
+            $_request = json_decode($request->getContent());
+            $order = new PrintfulOrder();
+            $order->printful_order_data = $_request->printful_order_data;
+            $order->product_id = $_request->product_id;
+            $order->user_id = auth()->user()->id;
+
+            $order->save();
+            return response($order)
+                ->header('Content-Type', 'text/json');
+        } catch (\Exception $e) {
+            // Handling the exception
+            return response()->json([
+                'error' => [
+                    'message' => $e->getMessage(), // Retrieve the error message
+                    'code' => $e->getCode(), // Retrieve the error code
+                ]
+            ], 500); // Internal Server Error status code
         }
     }
 }

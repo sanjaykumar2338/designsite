@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\ProductsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FileController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,4 +33,4 @@ Route::get('/get_template', [ProductsController::class, 'get_template']);
 Route::post('/update_template/{id}', [ProductsController::class, 'updateApi']);
 
 Route::post('/storeViaApi', [ProductsController::class, 'storeViaApi']);
-Route::post('/storeOrder', [ProductsController::class, 'storeOrder']);
+Route::post('/storeOrder', [UserController::class, 'storeOrder']);
