@@ -1148,7 +1148,7 @@ const sampleOrderData = {
     shipping: "STANDARD",
     recipient: {
         name: "John Smith",
-        company: "John Smith Inc",
+        company: "CauseStand",
         address1: "Mr John Smith. 132, My Street, Kingston, New York 12401",
         address2: "string",
         city: "New York",
