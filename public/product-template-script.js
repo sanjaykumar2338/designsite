@@ -1156,9 +1156,9 @@ const sampleOrderData = {
     shipping: "STANDARD",
     recipient: {
         name: "John Smith",
-        company: "John Smith Inc",
+        company: "CauseStand",
         address1: "Mr John Smith. 132, My Street, Kingston, New York 12401",
-        address2: "string",
+        address2: "",
         city: "New York",
         state_code: "NY",
         state_name: "New York",
