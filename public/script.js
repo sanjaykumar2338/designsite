@@ -324,6 +324,7 @@ function init() {
         (p) => p.productName === product.product_name
     );
     product.variants = _product.variants;
+    debugger;
     if (product.imageData) {
         product.imageData = JSON.parse(product.imageData);
     } else {
