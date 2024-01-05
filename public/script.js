@@ -1230,7 +1230,39 @@ function onCountrySelect() {
     });
 }
 
-function submitCustomerDetails() {
+async function submitCustomerDetails() {
+    const images = {};
+    images.canvas_front = canvases.canvas_front.getObjects().length
+        ? await htmltoCanvas(canvases.canvas_front)
+        : undefined;
+    images.canvas_back = canvases.canvas_back.getObjects().length
+        ? await htmltoCanvas(canvases.canvas_back)
+        : undefined;
+    images.canvas_sleeve_left = canvases.canvas_sleeve_left.getObjects().length
+        ? await htmltoCanvas(canvases.canvas_sleeve_left)
+        : undefined;
+    images.canvas_sleeve_right = canvases.canvas_sleeve_right.getObjects()
+        .length
+        ? await htmltoCanvas(canvases.canvas_sleeve_right)
+        : undefined;
+
+    const files = Object.keys(canvases)
+        .map((key, i) => {
+            return {
+                url: images[key],
+                thumbnail_url: images[key],
+                type: product.imageData[i].placement, //key.replace("canvas_", ""),
+            };
+        })
+        .filter((v) => v.thumbnail_url);
+    console.log(files);
+    if (!files.length) {
+        Toastify({
+            text: "Please customize the product!",
+            className: "warn",
+        }).showToast();
+        return;
+    }
     const country = countries.find((c) => c.code === getEl("country").value);
     const state = country.states
         ? country.states.find((c) => c.code === getEl("state").value)
