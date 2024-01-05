@@ -975,7 +975,7 @@ function createProduct(files) {
     //         price += +product.back_image_price;
     //     }
     // });
-
+    debugger;
     const _product = JSON.stringify({
         sync_product: { name: "test", thumbnail: files[0].url },
         sync_variants: [
