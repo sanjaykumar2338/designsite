@@ -1245,6 +1245,7 @@ function submitCustomerDetails() {
         zip: getEl("cd_zip").value,
         address1: getEl("cd_address").value,
     };
+    debugger;
     getEl("customer_name").value = sampleOrderData.recipient.name;
     getEl("customer_email").value = sampleOrderData.recipient.email;
     getEl("customer_number").value = sampleOrderData.recipient.phone;
@@ -1259,7 +1260,7 @@ const sampleOrderData = {
         company: "",
         address1: "Mr John Smith. 132, My Street, Kingston, New York 12401",
         address2: "",
-        city: "New York",
+        // city: "New York",
         state_code: "NY",
         state_name: "New York",
         country_code: "US",
