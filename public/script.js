@@ -9,6 +9,7 @@ const product_variant_ids = {
 };
 
 let product;
+let subtotal;
 let shippingCost;
 let t_shirtColours = {
     Red: { name: "Red", code: "#d80019" },
@@ -935,23 +936,23 @@ function calculateShippingRate() {
 function createProduct(files) {
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
-    let price = +product.product_price + +product.commission;
+    // let price = +product.product_price + +product.commission;
 
-    Object.keys(canvases).forEach((k) => {
-        let addPrice = false;
-        canvases[k].getObjects().forEach((c) => {
-            if (c.selectable) {
-                addPrice = true;
-            }
-        });
-        if (!addPrice) return;
-        if (k === "canvas_front") {
-            price += +product.front_image_price;
-        }
-        if (k === "canvas_back") {
-            price += +product.back_image_price;
-        }
-    });
+    // Object.keys(canvases).forEach((k) => {
+    //     let addPrice = false;
+    //     canvases[k].getObjects().forEach((c) => {
+    //         if (c.selectable) {
+    //             addPrice = true;
+    //         }
+    //     });
+    //     if (!addPrice) return;
+    //     if (k === "canvas_front") {
+    //         price += +product.front_image_price;
+    //     }
+    //     if (k === "canvas_back") {
+    //         price += +product.back_image_price;
+    //     }
+    // });
 
     const _product = JSON.stringify({
         sync_product: { name: "test", thumbnail: files[0].url },
@@ -959,7 +960,7 @@ function createProduct(files) {
             {
                 files,
                 variant_id: selected_variant,
-                retail_price: price.toString(),
+                retail_price: subtotal.toString(),
                 currency: "USD",
                 // color: selected,
             },
@@ -1093,11 +1094,12 @@ function setCost() {
             subtotal += +product.back_image_price;
         }
     });
+    let total = subtotal + shippingCost;
     getEl("price").innerHTML = `Price: $${price}`;
     getEl("subtotal").innerHTML = `Subtotal: $${subtotal}`;
 
     getEl("shipping").innerHTML = `Shipping: $${shippingCost}`;
-    getEl("total").innerHTML = `Total: $${price + subtotal + shippingCost}`;
+    getEl("total").innerHTML = `Total: $${total}`;
 }
 
 function setProductColour(colourCode) {
