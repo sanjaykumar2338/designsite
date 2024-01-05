@@ -1058,6 +1058,7 @@ function createOrder(product) {
                 text: "Order placed...",
                 className: "success",
             }).showToast();
+            saveOrder(order.result);
         })
         .catch((error) => {
             console.log("error", error);
