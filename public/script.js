@@ -644,6 +644,7 @@ async function setShowDetailsModal(bool) {
             })
             .filter((v) => v.thumbnail_url);
         console.log(files);
+        setIsLoading(false);
         if (!files.length) {
             Toastify({
                 text: "Please customize the product!",
