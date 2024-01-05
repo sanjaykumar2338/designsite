@@ -923,8 +923,8 @@ function calculateShippingRate() {
             );
             shippingCost = +data.result[0].rate;
             setIsLoading(false);
-            setShowPaymentModal(true);
             setCost();
+            setShowPaymentModal(true);
         });
     // .catch((error) => {
     //     console.log("error", error);
@@ -1035,7 +1035,6 @@ function createOrder(product) {
                 text: "Order placed...",
                 className: "success",
             }).showToast();
-            saveOrder(order);
         })
         .catch((error) => {
             console.log("error", error);
@@ -1230,13 +1229,19 @@ function onCountrySelect() {
 }
 
 function submitCustomerDetails() {
+    const country = countries.find((c) => c.code === getEl("country").value);
+    const state = country.states
+        ? country.states.find((c) => c.code === getEl("state").value)
+        : undefined;
     sampleOrderData.recipient = {
         ...sampleOrderData.recipient,
         name: getEl("cd_name").value,
         email: getEl("cd_email").value,
         phone: getEl("cd_number").value,
-        state_name: getEl("state").value,
-        country_name: getEl("country").value,
+        state_name: state ? state.name : null,
+        state_code: state ? state.code : null,
+        country_name: country.name,
+        country_code: country.code,
         zip: getEl("cd_zip").value,
         address1: getEl("cd_address").value,
     };

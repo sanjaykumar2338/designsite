@@ -476,9 +476,6 @@
                                 class="py-2 px-4 bg-gray-500 text-white rounded hover:bg-gray-700 mr-2">Submit
                                 Payment</button>
 
-                            {{-- <div onclick="placeOrder()"
-                                class="py-2 px-4 bg-gray-500 text-white rounded hover:bg-gray-700 mr-2">Submit
-                                Payment</div> --}}
 
                             {{-- <button type="button" class="py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-700 mr-2"
                                 type="submit">
