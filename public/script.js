@@ -1059,6 +1059,7 @@ function createOrder(product) {
                 className: "success",
             }).showToast();
             saveOrder(order.result);
+            setShowPaymentModal(false);
         })
         .catch((error) => {
             console.log("error", error);
