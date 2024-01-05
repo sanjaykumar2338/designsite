@@ -1096,7 +1096,7 @@ function saveOrder(data) {
 
 function setCost() {
     let price = +product.product_price + +product.commission;
-    let subtotal = price;
+    subtotal = price;
     Object.keys(canvases).forEach((k) => {
         let addPrice = false;
         canvases[k].getObjects().forEach((c) => {
