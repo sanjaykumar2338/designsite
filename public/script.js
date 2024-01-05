@@ -1242,6 +1242,7 @@ function submitCustomerDetails() {
         state_code: state ? state.code : null,
         country_name: country.name,
         country_code: country.code,
+        city: getEl("cd_city").value,
         zip: getEl("cd_zip").value,
         address1: getEl("cd_address").value,
     };
