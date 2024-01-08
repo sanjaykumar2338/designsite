@@ -83,10 +83,11 @@
                         <div class="vioce add-bg" id="box-4">
                             <h4>Shop a Category </h4>
                             <ul>
-                                <li class="typeofproduct4">Shirts</li>
-                                <li class="typeofproduct4">Hoodies</a></li>
-                                <li class="typeofproduct4">Sweatshirts</a></li>
-                                <li class="typeofproduct4">Bottoms</a></li>
+                                <li class="typeofproduct4">Hats</li>
+                                <li class="typeofproduct4">Headwear</a></li>
+                                <li class="typeofproduct4">Footwear</a></li>
+                                <li class="typeofproduct4">Bags</a></li>
+                                <li class="typeofproduct4">Phone Cases</a></li>
                             </ul>
                         </div>
 
