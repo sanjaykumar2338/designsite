@@ -365,6 +365,10 @@ function init() {
             });
         });
     }, 500);
+    setIsLoading(true);
+    setTimeout(() => {
+        setIsLoading(false);
+    }, 2000);
 }
 
 function setImage(url, position) {
@@ -947,6 +951,7 @@ function calculateShippingRate() {
             shippingCost = +data.result[0].rate;
             setIsLoading(false);
             setCost();
+            setShowDetailsModal(false);
             setShowPaymentModal(true);
         });
     // .catch((error) => {
