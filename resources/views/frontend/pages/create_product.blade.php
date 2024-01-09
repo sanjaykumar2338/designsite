@@ -438,20 +438,20 @@
                             <div id="total" class="font-bold text-gray-800">Total:</div>
                             <br>
                             <br>
-                            <label class="font-medium text-gray-800">Name</label>
-                            <input type="text" id="customer_name"
+                            <label hidden class="font-medium text-gray-800">Name</label>
+                            <input hidden type="text" id="customer_name"
                                 class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" name="customer_name"
                                 disabled value="" placeholder="Full Name" required />
-                            <label class="font-medium text-gray-800">Email</label>
-                            <input type="text" id="customer_email"
+                            <label hidden class="font-medium text-gray-800">Email</label>
+                            <input hidden type="text" id="customer_email"
                                 class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" value="" disabled
                                 placeholder="email" name="customer_email" required />
-                            <label class="font-medium text-gray-800">Phone Number</label>
-                            <input type="text" id="customer_number"
+                            <label hidden class="font-medium text-gray-800">Phone Number</label>
+                            <input hidden type="text" id="customer_number"
                                 class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" value="" disabled
                                 placeholder="Phone Number" name="customer_number" required />
-                            <label class="font-medium text-gray-800">Address</label>
-                            <input type="text" id="customer_address"
+                            <label hidden class="font-medium text-gray-800">Address</label>
+                            <input hidden type="text" id="customer_address"
                                 class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" value="" disabled
                                 placeholder="Address" name="customer_address" required />
                             <div class="form-group">

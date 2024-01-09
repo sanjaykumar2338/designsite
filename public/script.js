@@ -1110,12 +1110,12 @@ function setCost() {
         if (k === "canvas_front") {
             getEl("front").hidden = false;
             getEl("front").innerHTML = `Front: $${product.front_image_price}`;
-            subtotal += +product.front_image_price;
+            // subtotal += +product.front_image_price;
         }
         if (k === "canvas_back") {
             getEl("back").hidden = false;
             getEl("back").innerHTML = `Back: $${product.back_image_price}`;
-            subtotal += +product.back_image_price;
+            // subtotal += +product.back_image_price;
         }
     });
     let total = subtotal + shippingCost;
