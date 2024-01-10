@@ -1261,30 +1261,47 @@ function onCountrySelect() {
 }
 
 async function submitCustomerDetails() {
+    const name = getEl("cd_name").value;
+    const email = getEl("cd_email").value;
+    const phone = getEl("cd_number").value;
+    const city = getEl("cd_city").value;
+    const zip = getEl("cd_zip").value;
+    const address = getEl("cd_address").value;
+
+    // Check if any of the required fields are empty
+    if (!name || !email || !phone || !city || !zip || !address) {
+        alert("Please fill in all required fields.");
+        return false; // Prevent further execution
+    }
+
     const country = countries.find((c) => c.code === getEl("country").value);
     const state = country.states
         ? country.states.find((c) => c.code === getEl("state").value)
         : undefined;
+
     sampleOrderData.recipient = {
         ...sampleOrderData.recipient,
-        name: getEl("cd_name").value,
-        email: getEl("cd_email").value,
-        phone: getEl("cd_number").value,
+        name: name,
+        email: email,
+        phone: phone,
         state_name: state ? state.name : null,
         state_code: state ? state.code : null,
         country_name: country.name,
         country_code: country.code,
-        city: getEl("cd_city").value,
-        zip: getEl("cd_zip").value,
-        address1: getEl("cd_address").value,
+        city: city,
+        zip: zip,
+        address1: address,
     };
+
     debugger;
     getEl("customer_name").value = sampleOrderData.recipient.name;
     getEl("customer_email").value = sampleOrderData.recipient.email;
     getEl("customer_number").value = sampleOrderData.recipient.phone;
     getEl("customer_address").value = sampleOrderData.recipient.address1;
+
     calculateShippingRate();
 }
+
 
 const sampleOrderData = {
     shipping: "STANDARD",
