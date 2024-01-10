@@ -172,9 +172,10 @@
                 <div class="col-lg-3 col-md-6 col-sm-6 add-margin">
                     <div class="Donations-box">
                         <h3>Donations</h3>
-                        <p class="p">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, eius magni aliquam
-                            ullam at odio ea!
-                            Doloremque porro, eveniet totam cum impedit, hic mollitia
+                        <span>How Does it Work?</span>
+                        <p class="p">Customize your apparel to donate! *$10 contribution is added per image added
+                        </p>
+                        <p class="p">Contributions are donated instantly from the shoppers’ account *CauseStand pays the fees
                         </p>
                     </div>
                 </div>

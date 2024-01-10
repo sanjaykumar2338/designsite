@@ -17,7 +17,7 @@
             <div class="style-box">
                 <div class="row">
                     <div class="col-md-12 col-lg-4">
-                        <img src="asset/frontend/images/is-1.jfif" alt="">
+                        <img src="asset/frontend/images/conflicts/Israel-Palestine-conflict.jpg" alt="">
                     </div>
                     <div class="col-lg-8 col-md-12 d-flex align-items-center">
                         <div class="text-box">
@@ -40,7 +40,7 @@
             <div class="style-box">
                 <div class="row">
                     <div class="col-md-12 col-lg-4">
-                        <img src="asset/frontend/images/nag.jpg" alt="">
+                        <img src="asset/frontend/images/conflicts/India-Pakistan-conflict.jpg" alt="">
                     </div>
                     <div class="col-lg-8 col-md-12 d-flex align-items-center">
                         <div class="text-box">
@@ -59,7 +59,7 @@
             <div class="style-box">
                 <div class="row">
                     <div class="col-lg-4 col-md-12">
-                        <img src="asset/frontend/images/rau.jpg" alt="">
+                        <img src="asset/frontend/images/conflicts/Russia-Ukraine-conflict.jpg" alt="">
                     </div>
                     <div class="col-lg-8 col-md-12 d-flex align-items-center">
                         <div class="text-box">
@@ -82,11 +82,31 @@
             <div class="style-box">
                 <div class="row">
                     <div class="col-lg-4 col-md-12">
-                        <img src="asset/frontend/images/tu.cms" alt="">
+                        <img src="asset/frontend/images/conflicts/Turkey-Kurdistan-conflict.jpg" alt="">
                     </div>
                     <div class="col-lg-8 col-md-12 d-flex align-items-center">
                         <div class="text-box">
                             <h4>Turkey & Kurdistan                            </h4>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id rerum aperiam ducimus
+                                facilis nulla beatae, possimus ipsum accusantium assumenda asperiores doloribus libero
+                                labore quia? Ipsum quaerat, suscipit eaque vitae ab repellendus quam officia, nisi
+                                omnis, sint sapiente aspernatur sunt culpa assumenda dolorum blanditiis soluta optio
+                                excepturi aut debitis et facilis eum dicta nemo. Voluptate, quam labore nesciunt fuga
+                                omnis cumque.</p>
+                                <button class="Read"> Read more</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="style-box">
+                <div class="row">
+                    <div class="col-lg-4 col-md-12">
+                        <img src="asset/frontend/images/conflicts/Azerbaijan-Armenia-conflict.jpg" alt="">
+                    </div>
+                    <div class="col-lg-8 col-md-12 d-flex align-items-center">
+                        <div class="text-box">
+                            <h4>Azerbaijan & Armenia                            </h4>
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id rerum aperiam ducimus
                                 facilis nulla beatae, possimus ipsum accusantium assumenda asperiores doloribus libero
                                 labore quia? Ipsum quaerat, suscipit eaque vitae ab repellendus quam officia, nisi
