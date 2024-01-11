@@ -322,38 +322,39 @@
     </script>
 
     <script>
-        var owl = $('.owl-carousel');
-        owl.owlCarousel({
-            items: 4,
-            loop: true,
-            margin: 30,
-            autoplay: true,
-            autoplayTimeout: 1000,
-            autoplayHoverPause: true,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 2
-                },
-                1000: {
-                    items: 4
+        $(document).ready(function(){
+            var owl = $('.owl-carousel');
+            owl.owlCarousel({
+                items: 4,
+                loop: true,
+                margin: 30,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: false,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    1000: {
+                        items: 4
+                    }
                 }
-            }
-        });
-        $('.play').on('click', function () {
-            owl.trigger('play.owl.autoplay', [1500])
+            });
+            $('.play').on('click', function () {
+                owl.trigger('play.owl.autoplay', [1500])
+            })
+            $('.stop').on('click', function () {
+                owl.trigger('stop.owl.autoplay')
+            })
+    
+            $('#myCarousel').carousel({
+                interval: 3000,
+                cycle: true
+            });
         })
-        $('.stop').on('click', function () {
-            owl.trigger('stop.owl.autoplay')
-        })
-    </script>
-    <script>
-        $('#myCarousel').carousel({
-            interval: 3000,
-            cycle: true
-        });
     </script>
 </body>
 

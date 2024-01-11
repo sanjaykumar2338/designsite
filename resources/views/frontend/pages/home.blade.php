@@ -14,10 +14,12 @@
                             aria-label="Slide 2"></button>
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
                             aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="asset/frontend/images/parallax-1.jpg" class="d-block w-100" alt="...">
+                            <img src="asset/frontend/images/banner/stand-with-Israel.jpg" class="d-block w-100" alt="...">
                             <div class="carousel-caption ">
                                 <h5>MOVED BY<br> IMAGES!</h5>
                                 <p>Stand in the Face of Oppression<br> Challenge False Narratives<br> and Demand Accountability.</p>
@@ -25,7 +27,7 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="asset/frontend/images/banner-2.jpg" class="d-block w-100" alt="...">
+                            <img src="asset/frontend/images/banner/stand-with-Palestine.jpg" class="d-block w-100" alt="...">
                             <div class="carousel-caption ">
                                 <h5>MOVED BY<br> IMAGES!</h5>
                                 <p>Stand in the Face of Oppression<br> Challenge False Narratives<br> and Demand Accountability.</p>
@@ -33,7 +35,15 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="asset/frontend/images/banner-3.jpg" class="d-block w-100" alt="...">
+                            <img src="asset/frontend/images/banner/Israel-Palestine-War.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption ">
+                                <h5>MOVED BY<br> IMAGES!</h5>
+                                <p>Stand in the Face of Oppression<br> Challenge False Narratives<br> and Demand Accountability.</p>
+                                <button onclick='location.href ="{{route('donate_now')}}";' class=" donate"> shop and donate</button>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="asset/frontend/images/banner/donate-to-cause.jpg" class="d-block w-100" alt="...">
                             <div class="carousel-caption ">
                                 <h5>MOVED BY<br> IMAGES!</h5>
                                 <p>Stand in the Face of Oppression<br> Challenge False Narratives<br> and Demand Accountability.</p>
