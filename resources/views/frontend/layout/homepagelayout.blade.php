@@ -329,8 +329,8 @@
                 loop: true,
                 margin: 30,
                 autoplay: true,
-                autoplayTimeout: 3000,
-                autoplayHoverPause: false,
+                autoplayTimeout: 1000,
+                autoplayHoverPause: true,
                 responsive: {
                     0: {
                         items: 1
