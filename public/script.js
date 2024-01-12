@@ -202,7 +202,7 @@ function setProductColoursUI(variants) {
         t_shirtColours[v.color] = { name: v.color, code: v.color_code };
     });
     Object.values(t_shirtColours).forEach((v) => {
-        if (v.color)
+        if (v.code)
             colourButtons += ` <button class="border rounded-lg" style="height: 30px; width: 30px; background-color: ${v.code}" onclick="setVariant('${v.code}', undefined)"></button>`;
     });
     const productColoursDiv = getEl("product-colours");
@@ -643,7 +643,7 @@ async function setShowDetailsModal(bool) {
                 return {
                     url: product_print_images[key],
                     thumbnail_url: product_print_images[key],
-                    type: product.imageData[i].placement, //key.replace("canvas_", ""),
+                    type: product.imageData[i]?.placement || undefined, //key.replace("canvas_", ""),
                 };
             })
             .filter((v) => v.thumbnail_url);
@@ -980,7 +980,7 @@ function createProduct(files) {
     //         price += +product.back_image_price;
     //     }
     // });
-    debugger;
+
     const _product = JSON.stringify({
         sync_product: { name: "test", thumbnail: files[0].url },
         sync_variants: [
@@ -1293,7 +1293,6 @@ async function submitCustomerDetails() {
         address1: address,
     };
 
-    debugger;
     getEl("customer_name").value = sampleOrderData.recipient.name;
     getEl("customer_email").value = sampleOrderData.recipient.email;
     getEl("customer_number").value = sampleOrderData.recipient.phone;
@@ -1301,7 +1300,6 @@ async function submitCustomerDetails() {
 
     calculateShippingRate();
 }
-
 
 const sampleOrderData = {
     shipping: "STANDARD",
