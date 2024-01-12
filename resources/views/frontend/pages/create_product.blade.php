@@ -365,11 +365,12 @@
                             class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" value=""
                             placeholder="Phone Number" name="cd_number" required />
                         <label class="font-medium text-gray-800">Country*</label><br>
-                        <select style="height: 40px; border: 1px solid #eee" class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" name="country" id="country"
+                        <select style="height: 40px; border: 1px solid #eee"
+                            class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" name="country" id="country"
                             onchange="onCountrySelect()">
                             <option value="select" disabled>select*</option>
                         </select>
-                        <select style="height: 40px; border: 1px solid #eee" name="state" id="state">
+                        <select style="height: 40px; border: 1px solid #eee" name="state" id="state" hidden>
                             <option value="select" disabled>select</option>
                         </select>
 
@@ -383,7 +384,7 @@
                         <input type="text" id="cd_zip"
                             class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" value=""
                             placeholder="Zip code" name="cd_zip" required />
-                            <label class="font-medium text-gray-800">Address*</label>
+                        <label class="font-medium text-gray-800">Address*</label>
                         <input type="text" id="cd_address"
                             class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" value=""
                             placeholder="Address" name="cd_address" required />

@@ -1251,7 +1251,12 @@ function onCountrySelect() {
     console.log(countryEl.value);
     const country = countries.find((c) => c.code == countryEl.value);
     stateEl.innerHTML = '<option value="select" disabled>select</option>';
-    if (!country.states) return;
+
+    if (!country.states) {
+        stateEl.hidden = true;
+        return;
+    }
+    stateEl.hidden = false;
     country.states.forEach((c) => {
         const option = document.createElement("option");
         option.value = c.code;
