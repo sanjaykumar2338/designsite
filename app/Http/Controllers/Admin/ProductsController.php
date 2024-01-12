@@ -33,7 +33,7 @@ class ProductsController extends Controller
 
     public function index()
     {
-        $products = Products::paginate(5);
+        $products = Products::whereIn('supporting_country', ['Israel', 'Palestine', 'Russia', 'Ukraine'])->paginate(5);
         return view('admin.pages.product.index')->with('products', $products)->with('activeLink', 'product');
     }
 
