@@ -352,21 +352,21 @@
                         <br>
                         <br>
 
-                        <label class="font-medium text-gray-800">Name</label>
+                        <label class="font-medium text-gray-800">Name*</label>
                         <input type="text" id="cd_name"
                             class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" name="cd_name" value=""
                             placeholder="Full Name" required />
-                        <label class="font-medium text-gray-800">Email</label>
+                        <label class="font-medium text-gray-800">Email*</label>
                         <input type="text" id="cd_email"
                             class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" value=""
                             placeholder="email" name="cd_email" required />
-                        <label class="font-medium text-gray-800">Phone Number</label>
+                        <label class="font-medium text-gray-800">Phone Number*</label>
                         <input type="text" id="cd_number"
                             class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" value=""
                             placeholder="Phone Number" name="cd_number" required />
                         <select style="height: 40px; border: 1px solid #eee" name="country" id="country"
                             onchange="onCountrySelect()">
-                            <option value="select" disabled>select</option>
+                            <option value="select" disabled>select*</option>
                         </select>
                         <select style="height: 40px; border: 1px solid #eee" name="state" id="state">
                             <option value="select" disabled>select</option>
@@ -374,14 +374,15 @@
 
                         <br>
 
-                        <label class="font-medium text-gray-800">City</label>
+                        <label class="font-medium text-gray-800">City*</label>
                         <input type="text" id="cd_city"
                             class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" value=""
                             placeholder="City" name="cd_city" required />
-                        <label class="font-medium text-gray-800">Zip Code</label>
+                        <label class="font-medium text-gray-800">Zip Code*</label>
                         <input type="text" id="cd_zip"
                             class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" value=""
                             placeholder="Zip code" name="cd_zip" required />
+                            <label class="font-medium text-gray-800">Address*</label>
                         <input type="text" id="cd_address"
                             class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" value=""
                             placeholder="Address" name="cd_address" required />
