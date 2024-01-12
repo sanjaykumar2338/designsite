@@ -168,7 +168,9 @@
 
     <div class="crt-prd-main">
         <div class="container">
-            {{ $product->product_name }}
+            <h1 class="product_title">
+                {{ $product->website_product_name ? $product->website_product_name : $product->product_name }}</h1>
+            <br>
             <div class="flex flex-wrap">
                 <div class="prd-left">
                     {{-- <div class="flex flex-wrap prd-crs-img">
