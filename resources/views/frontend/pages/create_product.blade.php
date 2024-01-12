@@ -370,7 +370,9 @@
                             onchange="onCountrySelect()">
                             <option value="select" disabled>select*</option>
                         </select>
-                        <select style="height: 40px; border: 1px solid #eee" name="state" id="state" hidden>
+                        <select style="height: 40px; border: 1px solid #eee"
+                            class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" name="state" id="state"
+                            hidden>
                             <option value="select" disabled>select</option>
                         </select>
 
