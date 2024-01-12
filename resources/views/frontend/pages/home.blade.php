@@ -66,10 +66,10 @@
                             <h4>Choose a Conflict</h4>
                             <ul>
                                 <li class="israel-1 option-conflict">Israel & Palestine</li>
-                                <li class="israel-1 option-conflict">Azerbaijan & Armenia</li>
+                                <li style="display:none" class="israel-1 option-conflict">Azerbaijan & Armenia</li>
                                 <li class="option-conflict">Russia & Ukraine</li>
-                                <li class="option-conflict">Turkey & Kurdistan </li>
-                                <li class="option-conflict">India & Pakistan</li>
+                                <li style="display:none" class="option-conflict">Turkey & Kurdistan </li>
+                                <li style="display:none" class="option-conflict">India & Pakistan</li>
                             </ul>
                         </div>
                         
