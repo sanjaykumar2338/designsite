@@ -791,7 +791,7 @@ async function placeOrder() {
                     return {
                         url: product_print_images[key],
                         thumbnail_url: product_print_images[key],
-                        type: product.imageData[i].placement, //key.replace("canvas_", ""),
+                        type: product.imageData[i]?.placement || undefined, //key.replace("canvas_", ""),
                     };
                 })
                 .filter((v) => v.thumbnail_url);
