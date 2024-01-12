@@ -29,12 +29,14 @@ class HomeController extends Controller
     public function index()
     {
         $products = Products::select('product_type', \DB::raw('MAX(id) as max_id'), \DB::raw('MAX(front_image) as max_front_image'))
-            ->whereIn('product_type', ['Shirts', 'Hoodies', 'Sweatshirts', 'Hoodies'])
+            ->whereIn('product_type', ['Shirts', 'Hoodies', 'Sweatshirts'])
+            ->whereIn('supporting_country', ['Israel', 'Palestine', 'Russia', 'Ukraine'])
             ->groupBy('product_type')
             ->get();
 
         $accessories = Products::select('product_type', \DB::raw('MAX(id) as max_id'), \DB::raw('MAX(front_image) as max_front_image'))
             ->whereIn('product_type', ['Hat', 'Headwear', 'Footwear', 'Bags', 'Phone Cases'])
+            ->whereIn('supporting_country', ['Israel', 'Palestine', 'Russia', 'Ukraine'])
             ->groupBy('product_type')
             ->get();
         //echo "<pre>"; print_r($products); die;
@@ -198,6 +200,7 @@ class HomeController extends Controller
         $producttype = @ucfirst($category);
         $products = Products::select('supporting_country', \DB::raw('MAX(id) as max_id'), \DB::raw('MAX(front_image) as max_front_image'), \DB::raw('MAX(product_type) as product_type'), \DB::raw('MAX(supporting_country) as supporting_country'), \DB::raw('MAX(website_product_name) as website_product_name'), \DB::raw('MAX(product_name) as product_name'), \DB::raw('MAX(product_slug) as product_slug'), \DB::raw('MAX(product_price) as product_price'), \DB::raw('MAX(commission) as commission'))
             ->where('product_type', $producttype)
+            ->whereIn('supporting_country', ['Israel', 'Palestine', 'Russia', 'Ukraine'])
             ->groupBy('supporting_country')
             ->get();
         //echo "<pre>"; print_r($products); die;
