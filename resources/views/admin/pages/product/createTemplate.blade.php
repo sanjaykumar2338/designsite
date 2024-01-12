@@ -169,7 +169,7 @@
     <div class="crt-prd-main">
         <div class="container">
             <h1 class="product_title">
-                {{ $product->website_product_name ? $product->website_product_name : $product->product_name }}, (For {{ $product->supporting_country}}) </h1>
+                {{ $product->website_product_name ? $product->website_product_name : $product->product_name }} (For {{ $product->supporting_country}}) </h1>
             <br>
             <div class="flex flex-wrap">
                 <div class="prd-left">
