@@ -9,6 +9,22 @@
         </div>
     </section>
 
+    <section class="Support-Cause">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-6 col-sm-6">
+                <div class="">
+                   
+                    <p>We shine a spotlight on both narratives, also include stories from journalists and let the people judge!
+here we cite the resources and media used and give full credit to authors.
+We encourage everyone to subscribe o the media that fits their narrative, and work toward peace.
+</p>
+
+</div>
+</div>
+</div>
+</section>
+
 
     <section class="text-all">
         <div class="container">
