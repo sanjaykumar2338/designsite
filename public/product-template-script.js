@@ -941,21 +941,11 @@ function addImageFromFile(e) {
         imgObj.src = event.target.result;
         imgObj.onload = function () {
             var image = new fabric.Image(imgObj);
-            // image.set({
-            //   // angle: 0,
-            //   // padding: 10,
-            //   // cornersize: 10,
-            //   // height: 110,
-            //   // width: 110,
-            //   scaleX: 0.1,
-            //   scaleY: 0.1,
-            // });
             const h = canvas.getHeight();
             const w = canvas.getWidth();
-            // oImg.set("top", h / 4);
-            // oImg.set("left", w / 4);
-            canvas.scaleToHeight(h);
-            canvas.scaleToWidth(w);
+
+            image.scaleToHeight(h);
+            image.scaleToWidth(w);
             canvas.add(image);
             canvas.renderAll();
         };
@@ -86579,15 +86569,5 @@ const allProductsImages = [
         ],
     },
 ];
-// Object.values(mens).forEach((v) => {
-//     allProductsImages.push(...v);
-// });
-// Object.values(womans).forEach((v) => {
-//     allProductsImages.push(...v);
-// });
 
-// allProductsImages.push(...hats);
-// allProductsImages.push(...accessories);
-
-// console.log(allProductsImages);
 init();
