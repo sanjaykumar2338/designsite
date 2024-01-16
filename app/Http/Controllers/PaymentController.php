@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Stripe\Stripe;
 use Stripe\PaymentIntent;
 use App\Models\Payment;
+use Auth;
 class PaymentController extends Controller
 {
     public function processPayment(Request $request)
@@ -21,7 +22,15 @@ class PaymentController extends Controller
 
             // Save payment data to your database
             $payment = new Payment();
-            $payment->user_id = auth()->user()->id; // Assuming you have a user and want to associate payments with users
+            // Check if the user is authenticated
+            if (Auth::check()) {
+                // User is logged in, set the user_id
+                $payment->user_id = auth()->user()->id;
+            } else {
+                // User is not logged in, set user_id to null
+                $payment->user_id = null;
+            }
+
             $payment->amount = $request->total / 100;
             $payment->payment_intent_id = $paymentIntent->id;
             // Add more fields or manipulate data as needed
