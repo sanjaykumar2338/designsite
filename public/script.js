@@ -1102,7 +1102,7 @@ function saveOrder(data) {
                     text: "Order Saved!",
                     className: "success",
                 }).showToast();
-                window.location.reload();
+                //window.location.reload();
             });
         })
         .catch((error) => console.log("error", error));
