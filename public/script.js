@@ -783,7 +783,12 @@ function textOverline() {
     canvas.renderAll();
 }
 
-async function placeOrder() {
+async function placeOrder(payment_id) {
+    //alert(payment_id)
+    
+    localStorage.setItem('payment_id',payment_id);
+    //payment_id = payment_id;
+
     try {
         if (productType === productTypes.t_shirt) {
             const files = Object.keys(canvases)
@@ -1079,6 +1084,7 @@ function saveOrder(data) {
     var raw = JSON.stringify({
         printful_order_data: JSON.stringify(data),
         product_id: product.id,
+        payment_id: localStorage.getItem('payment_id')
     });
 
     var requestOptions = {

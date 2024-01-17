@@ -37,7 +37,7 @@ class PaymentController extends Controller
             $payment->save();
 
             // Handle successful payment - send a success response
-            return response()->json(['success' => true, 'message' => 'Payment successful']);
+            return response()->json(['success' => true, 'message' => 'Payment successful','payment_id' => $payment->id]);
         } catch (\Exception $e) {
             // Handle payment failure - send an error response
             return response()->json(['success' => false, 'error' => $e->getMessage()]);

@@ -111,7 +111,13 @@ class UserController extends Controller
             $order = new PrintfulOrder();
             $order->printful_order_data = $_request->printful_order_data;
             $order->product_id = $_request->product_id;
-            $order->user_id = auth()->user()->id;
+            $order->payment_id = $request->payment_id;
+            $order->printful_order_id = json_decode($_request->printful_order_data,true)['id'];
+            $order->customer_email = json_decode($_request->printful_order_data,true)['recipient']['email'];
+
+            if (auth()->check()) {
+                $order->user_id = auth()->user()->id;
+            }
 
             $order->save();
             return response($order)

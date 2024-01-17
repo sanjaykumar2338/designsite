@@ -580,7 +580,7 @@
                     } else {
                         alert(data.error);
                     }
-                    placeOrder()
+                    placeOrder(data.payment_id)
                     // submitPayment()
                     // window.location.reload();
                 } catch (error) {
