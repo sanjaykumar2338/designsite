@@ -120,7 +120,8 @@ class HomeController extends Controller
         if (auth()->user()->email == 'admin@gmail.com') {
             return redirect('admin');
         } else {
-            $orders = PrintfulOrder::join('users', 'users.id', '=', 'printful_orders.user_id')->join('products', 'products.id', '=', 'printful_orders.product_id')->join('payments', 'payments.id', '=', 'printful_orders.payment_id')->select('products.*','printful_order_data','payment_intent_id','payments.amount as amt')->paginate(5);
+            $email = auth()->user()->email;
+            $orders = PrintfulOrder::join('users', 'users.email', '=', 'printful_orders.customer_email')->join('products', 'products.id', '=', 'printful_orders.product_id')->join('payments', 'payments.id', '=', 'printful_orders.payment_id')->select('products.*','printful_order_data','payment_intent_id','payments.amount as amt')->where('printful_orders.customer_email',$email)->paginate(5);
             //echo "<pre>"; print_r($orders); die;
             //$orders = PrintfulOrder::join('users', 'users.id', '=', 'printful_orders.user_id')->paginate(5);
             //$orders = Payment::join('users', 'users.id', '=', 'payments.user_id')->select('payments.*', 'users.name')->paginate(5);
