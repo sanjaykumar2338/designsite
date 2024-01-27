@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
 use App\Models\User;
+use App\Models\PrintfulOrder;
 use App\Models\Payment;
 
 class HomeController extends Controller
@@ -119,7 +120,10 @@ class HomeController extends Controller
         if (auth()->user()->email == 'admin@gmail.com') {
             return redirect('admin');
         } else {
-            $orders = Payment::join('users', 'users.id', '=', 'payments.user_id')->select('payments.*', 'users.name')->paginate(5);
+            $orders = PrintfulOrder::join('users', 'users.id', '=', 'printful_orders.user_id')->join('products', 'products.id', '=', 'printful_orders.product_id')->join('payments', 'payments.id', '=', 'printful_orders.payment_id')->select('products.*','printful_order_data','payment_intent_id','payments.amount as amt')->paginate(5);
+            //echo "<pre>"; print_r($orders); die;
+            //$orders = PrintfulOrder::join('users', 'users.id', '=', 'printful_orders.user_id')->paginate(5);
+            //$orders = Payment::join('users', 'users.id', '=', 'payments.user_id')->select('payments.*', 'users.name')->paginate(5);
             return view('frontend.pages.my_account')->with('activeLink', 'orders')->with('orders', $orders);
         }
     }

@@ -32,6 +32,10 @@ Route::group(['prefix' => 'admin','middleware' => 'check.auth'], function () {
     Route::get('/customer', [AdminController::class, 'customer']);
 });
 
+Route::group(['middleware' => 'check.auth'], function () {
+    Route::get('/my_account', [App\Http\Controllers\HomeController::class, 'my_account'])->name('my_account');
+});
+
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/get_images', [App\Http\Controllers\HomeController::class, 'get_images'])->name('get_images');
 Route::get('/updateImageNames', [App\Http\Controllers\HomeController::class, 'updateImageNames'])->name('updateImageNames');
@@ -52,7 +56,6 @@ Route::get('/events', [App\Http\Controllers\HomeController::class, 'events'])->n
 Route::get('/track_order', [App\Http\Controllers\HomeController::class, 'track_order'])->name('track_order');
 Route::get('/shipping', [App\Http\Controllers\HomeController::class, 'shipping'])->name('shipping');
 Route::get('/wishlist', [App\Http\Controllers\HomeController::class, 'wishlist'])->name('wishlist');
-Route::get('/my_account', [App\Http\Controllers\HomeController::class, 'my_account'])->name('my_account');
 Route::get('/order_history', [App\Http\Controllers\HomeController::class, 'order_history'])->name('order_history');
 Route::get('/return_order', [App\Http\Controllers\HomeController::class, 'return_order'])->name('return_order');
 Route::get('/donate_now', [App\Http\Controllers\HomeController::class, 'donate_now'])->name('donate_now');
