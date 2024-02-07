@@ -26,6 +26,12 @@
   <link rel="stylesheet" href="{{url('/')}}/asset/admin/plugins/summernote/summernote-bs4.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+  <style>
+    .ck-editor__editable_inline {
+        min-height: 200px;
+    }
+  </style>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 
@@ -101,6 +107,13 @@
               </p>
             </a>
 
+            <a href="{{url('/admin/blogs')}}" class="nav-link {{$activeLink=='blogs'?'active':''}}">
+              <i class="nav-icon fas fa-solid fa-box"></i>
+              <p>
+                Blogs
+              </p>
+            </a>
+
             <a href="{{url('/logout')}}" class="nav-link">
               <i class="nav-icon fas fa-sign-out-alt"></i>
               <p>
@@ -153,7 +166,7 @@
 <!-- jQuery Knob Chart -->
 <script src="{{url('/')}}/asset/admin/plugins/jquery-knob/jquery.knob.min.js"></script>
 <!-- daterangepicker -->
-<script src="{{url('/')}}/{{url('/')}}/asset/admin/plugins/moment/moment.min.js"></script>
+<script src="{{url('/')}}/asset/admin/plugins/moment/moment.min.js"></script>
 <script src="{{url('/')}}/asset/admin/plugins/daterangepicker/daterangepicker.js"></script>
 <!-- Tempusdominus Bootstrap 4 -->
 <script src="{{url('/')}}/asset/admin/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
@@ -167,5 +180,17 @@
 <script src="{{url('/')}}/asset/admin/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{url('/')}}/asset/admin/dist/js/demo.js"></script>
+
+<script src="https://cdn.ckeditor.com/ckeditor5/41.0.0/classic/ckeditor.js"></script>
+
+<script>
+    ClassicEditor
+      .create( document.querySelector( '#description'),{
+        height: 900
+      } )
+      .catch( error => {
+          console.error( error );
+      });
+</script>
 </body>
 </html> 

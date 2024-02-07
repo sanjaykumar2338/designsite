@@ -367,7 +367,7 @@ Stand in the face of crime and advocate for justice, explore the Hall of Shame t
                         <div class=" col-md-6">
                             <div class="card-one">
                                 <div class="img">
-                                    <img src="asset/frontend/images/post-05.jpg" alt="">
+                                    <img src="asset/frontend/images/combatants-cause-stand.jpg" alt="">
                                 </div>
                                 <div class="text">
                                     <p class="mas">MASONRY</p>
@@ -387,7 +387,7 @@ Stand in the face of crime and advocate for justice, explore the Hall of Shame t
                         <div class=" col-md-6">
                             <div class="card-one">
                                 <div class="img">
-                                    <img src="asset/frontend/images/post-07.jpg" alt="">
+                                    <img src="asset/frontend/images/leveling-gaza-cause-stand.jpg" alt="">
                                 </div>
                                 <div class="text">
                                     <p class="mas">MASONRY</p>

@@ -4,7 +4,7 @@
 
 <!-- ========== Start blog-heading ========== -->
 <section class="blog-heading">
-    <div class="container">
+    <div class="container" style="background-image: url(asset/frontend/images/no-one-is-innocent-cause-stand.jpg);height: 360px;">
         <div class="text">
             <h2>Our Blogs</h2>
         </div>
@@ -19,10 +19,10 @@
             <div class="col-lg-4 col-md-6 col-sm-12  col-12">
                 <div class="style-box">
                     <div class="img-box">
-                        <img src="asset/frontend/images/img-1.webp" alt="">
+                        <img src="asset/frontend/images/trumping-all-real-estate-developers-cause-stand.jpg" alt="">
                     </div>
                     <div class="text">
-                        <h4>Lorem, ipsum dolor </h4>
+                        <h4>Trumping All Real Estate Developers</h4>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias enim provident earum
                             quidem ad!
                         </p>

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\ProductsController;
+use App\Http\Controllers\Admin\BlogsController;
 use Laravel\Cashier\Http\Controllers\WebhookController;
 
 /*
@@ -30,6 +31,15 @@ Route::group(['prefix' => 'admin','middleware' => 'check.auth'], function () {
     Route::get('photos/create/{id}', 'PhotoController@create');
     Route::get('/order', [AdminController::class, 'order']);
     Route::get('/customer', [AdminController::class, 'customer']);
+
+    //blogs
+    Route::get('blogs', [BlogsController::class, 'index']);
+    Route::post('/blogs', [BlogsController::class, 'store'])->name('admin.blogs.store');
+    Route::post('/blogs/update/{id}', [BlogsController::class, 'update']);
+    Route::get('/blogs/remove/{id}', [BlogsController::class, 'destroy']);
+    Route::get('/blogs/edit/{id}', [BlogsController::class, 'edit']);
+    Route::get('blogs/{product}', [BlogsController::class, 'show']);
+    Route::get('blogs/add/new', [BlogsController::class, 'create']);
 });
 
 Route::group(['middleware' => 'check.auth'], function () {
