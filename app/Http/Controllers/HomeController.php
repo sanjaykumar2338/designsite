@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
 use App\Models\User;
+use App\Models\Blogs;
 use App\Models\PrintfulOrder;
 use App\Models\Payment;
 
@@ -77,7 +78,12 @@ class HomeController extends Controller
 
     public function blog()
     {
-        return view('frontend.pages.blog');
+        $blogs = Blogs::all();
+        foreach($blogs as $blog){
+            $blog->image = fileToUrl($blog->image);
+        }
+
+        return view('frontend.pages.blog')->with('blogs',$blogs);
     }
 
     public function blog_detail()
