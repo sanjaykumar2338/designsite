@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Products;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
@@ -43,7 +44,12 @@ class HomeController extends Controller
             ->get();
         //echo "<pre>"; print_r($products); die;
 
-        return view('frontend.pages.home')->with('products', $products)->with('accessories', $accessories);
+        $blogs = Blogs::latest()->take(2)->get();
+        foreach($blogs as $blog){
+            $blog->image = fileToUrl($blog->image);
+        }
+
+        return view('frontend.pages.home')->with('products', $products)->with('accessories', $accessories)->with('blogs', $blogs);
     }
 
     public function contactus()
@@ -86,9 +92,12 @@ class HomeController extends Controller
         return view('frontend.pages.blog')->with('blogs',$blogs);
     }
 
-    public function blog_detail()
+    public function blog_detail(Request $request)
     {
-        return view('frontend.pages.blog_detail');
+        $slug = $request->slug;
+        $blog = Blogs::where('slug',$slug)->first();
+        //echo "<pre>"; print_r($blog); die;
+        return view('frontend.pages.blog_detail')->with('blog',$blog);
     }
 
     public function justice()

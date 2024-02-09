@@ -352,68 +352,41 @@ Stand in the face of crime and advocate for justice, explore the Hall of Shame t
             <div class="row">
 
                 <div class="col-lg-6">
-                    <div class="card-one-1">
+                    <div class="card-one-1">                        
                         <h3 class="latest add">Trending Blogs:</h3>
                         <p>Join us on this journey as we navigate through the intricacies of global affairs, shedding light on the why behind the what, and putting a spotlight on the injustices affecting our reality and shaping our world.</p>
-
                         <p>Step into our General Blog, a space that offers insightful perspectives on current events and conflicts. We venture beyond the headlines, we investigate the pivotal questions surrounding the motivations propelling these conflicts.</p>
-                    </div>
 
+                        <img src="asset/frontend/images/combatants-cause-stand.jpg">
+                    </div>
                 </div>
 
 
                 <div class="col-lg-6">
                     <div class="row">
-                        <div class=" col-md-6">
-                            <div class="card-one">
-                                <div class="img">
-                                    <img src="asset/frontend/images/combatants-cause-stand.jpg" alt="">
-                                </div>
-                                <div class="text">
-                                    <p class="mas">MASONRY</p>
-                                    <h3>New Website</h3>
-                                    <p class="pp">Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies
-                                        magna
-                                        et. Quisque
-                                        euismod orci.</p>
-                                </div>
-                                <div class="date">
-                                    <h4>14</h4>
-                                    <span class="mar">mar</span>
+
+                    @if($blogs)
+
+                        @foreach($blogs as $blog)
+                            <div class=" col-md-6">
+                                <div class="card-one">
+                                    <div class="img">
+                                        <img src="{{$blog->image}}" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p class="mas">MASONRY</p>
+                                        <h3>{{$blog->title}}</h3>
+                                        <p class="pp">{!! substr(strip_tags($blog->description), 0, 100) !!}...</p>
+                                    </div>
+                                    <div class="date">
+                                        <h4>{{date('d', strtotime($blog->updated_at))}}</h4>
+                                        <span class="mar">{{strtolower(date('M', strtotime($blog->updated_at)))}}</span>
+                                    </div>
                                 </div>
                             </div>
-
-                        </div>
-                        <div class=" col-md-6">
-                            <div class="card-one">
-                                <div class="img">
-                                    <img src="asset/frontend/images/leveling-gaza-cause-stand.jpg" alt="">
-                                </div>
-                                <div class="text">
-                                    <p class="mas">MASONRY</p>
-                                    <h3>New Website</h3>
-                                    <p class="pp">Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies
-                                        magna
-                                        et. Quisque
-                                        euismod orci.</p>
-                                </div>
-                                <div class="date">
-                                    <h4>14</h4>
-                                    <span class="mar">mar</span>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!-- <div class="col-lg-4 col-md-6">
-                    <div class="card-one">
-                        <div class="img">
-                            <img src="images/post-08.jpg" alt="" class="img-height">
-                        </div>
-
-                    </div>
-
-                </div> -->
+                        @endforeach
+                    @endif
+                    
 
                     </div>
                 </div>

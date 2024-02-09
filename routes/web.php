@@ -59,8 +59,8 @@ Route::get('/causes', [App\Http\Controllers\HomeController::class, 'causes'])->n
 Route::get('/shop2', [App\Http\Controllers\HomeController::class, 'shop2'])->name('shop2');
 Route::get('/media', [App\Http\Controllers\HomeController::class, 'media'])->name('media');
 Route::get('/justice', [App\Http\Controllers\HomeController::class, 'justice'])->name('justice');
-Route::get('/blog', [App\Http\Controllers\HomeController::class, 'blog'])->name('blog');
-Route::get('/blog_detail', [App\Http\Controllers\HomeController::class, 'blog_detail'])->name('blog_detail');
+Route::get('/blogs', [App\Http\Controllers\HomeController::class, 'blog'])->name('blogs');
+Route::get('/blog/{slug}', [App\Http\Controllers\HomeController::class, 'blog_detail'])->name('blog_detail');
 Route::get('/products', [App\Http\Controllers\HomeController::class, 'products'])->name('products');
 Route::get('/events', [App\Http\Controllers\HomeController::class, 'events'])->name('events');
 Route::get('/track_order', [App\Http\Controllers\HomeController::class, 'track_order'])->name('track_order');
