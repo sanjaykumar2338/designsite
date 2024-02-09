@@ -161,7 +161,7 @@ class BlogsController extends Controller
         $blog->meta_keywords = $request->input('meta_keywords');
 
         $slug = Str::slug($request->input('title'));
-        $existingSlug = Blogs::where('slug', $slug)->exists();
+        $existingSlug = Blogs::where('slug', $slug)->where('id','!=',$id)->exists();
 
         if ($existingSlug) {
             $counter = 1;

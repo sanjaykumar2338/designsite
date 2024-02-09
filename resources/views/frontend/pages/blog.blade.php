@@ -29,7 +29,7 @@
                                 <p>
                                     {!! substr(strip_tags($blog->description), 0, 100) !!}...
                                 </p>
-                            <a href="{{url('blog')}}/{{$blog->slug}}"> <button class="btn-style"> Read more </button></a>
+                                <a href="{{url('blog')}}/{{$blog->slug}}"> <button class="btn-style"> Read more </button></a>
                             </div>
                         </div>
                     </div>
