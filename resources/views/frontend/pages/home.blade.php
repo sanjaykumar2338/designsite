@@ -374,9 +374,13 @@ Stand in the face of crime and advocate for justice, explore the Hall of Shame t
                                         <img src="{{$blog->image}}" alt="">
                                     </div>
                                     <div class="text">
-                                        <p class="mas">MASONRY</p>
-                                        <h3>{{$blog->title}}</h3>
-                                        <p class="pp">{!! substr(strip_tags($blog->description), 0, 100) !!}...</p>
+                                        
+                                            <p class="mas">MASONRY</p>
+                                            <h3>{{$blog->title}}</h3>
+                                            <p class="pp">{!! substr(strip_tags($blog->description), 0, 100) !!}...</p>
+                                            <a href="blog/{{$blog->slug}}" style="text-decoration:none">
+                                                Read More..
+                                            </a>
                                     </div>
                                     <div class="date">
                                         <h4>{{date('d', strtotime($blog->updated_at))}}</h4>
