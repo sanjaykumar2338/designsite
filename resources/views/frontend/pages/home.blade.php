@@ -356,8 +356,6 @@ Stand in the face of crime and advocate for justice, explore the Hall of Shame t
                         <h3 class="latest add">Trending Blogs:</h3>
                         <p>Join us on this journey as we navigate through the intricacies of global affairs, shedding light on the why behind the what, and putting a spotlight on the injustices affecting our reality and shaping our world.</p>
                         <p>Step into our General Blog, a space that offers insightful perspectives on current events and conflicts. We venture beyond the headlines, we investigate the pivotal questions surrounding the motivations propelling these conflicts.</p>
-
-                        <img src="asset/frontend/images/combatants-cause-stand.jpg">
                     </div>
                 </div>
 
