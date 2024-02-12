@@ -21,8 +21,8 @@
                         <div class="carousel-item active">
                             <img src="asset/frontend/images/banner/stand-with-Israel.jpg" class="d-block w-100" alt="...">
                             <div class="carousel-caption ">
-                                <h5>MOVED BY<br> IMAGES!</h5>
-                                <p>Stand in the Face of Oppression<br> Challenge False Narratives<br> and Demand Accountability.</p>
+                                <h5>DEFIANT TO <br>AGGRESSION!</h5>
+                                <p>Stand to Defend against Aggression,<br> Demolish Terrorism,<br> and Claim Ownership to Peace.</p>
                                 <button onclick='location.href ="{{route('donate_now')}}";' class=" donate"> shop and donate</button>
                             </div>
                         </div>
@@ -30,23 +30,23 @@
                             <img src="asset/frontend/images/banner/stand-with-Palestine.jpg" class="d-block w-100" alt="...">
                             <div class="carousel-caption ">
                                 <h5>MOVED BY<br> IMAGES!</h5>
-                                <p>Stand in the Face of Oppression<br> Challenge False Narratives<br> and Demand Accountability.</p>
+                                <p>Stand in the Face of Oppression,<br> Challenge False Narratives,<br> and Demand Accountability.</p>
                                 <button onclick='location.href ="{{route('donate_now')}}";' class=" donate"> shop and donate</button>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="asset/frontend/images/banner/Israel-Palestine-War.jpg" class="d-block w-100" alt="...">
+                            <img src="asset/frontend/images/banner/3.jpg" class="d-block w-100" alt="...">
                             <div class="carousel-caption ">
-                                <h5>MOVED BY<br> IMAGES!</h5>
-                                <p>Stand in the Face of Oppression<br> Challenge False Narratives<br> and Demand Accountability.</p>
+                                <h5>FUELED BY<br> RIGHTEOUSNESS!</h5>
+                                <p>Stand for Unification,<br> Resist Unwanted Narratives,<br> and Demand Loyalty.</p>
                                 <button onclick='location.href ="{{route('donate_now')}}";' class=" donate"> shop and donate</button>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="asset/frontend/images/banner/donate-to-cause.jpg" class="d-block w-100" alt="...">
+                            <img src="asset/frontend/images/banner/stand-with-Ukraine.jpg" class="d-block w-100" alt="...">
                             <div class="carousel-caption ">
-                                <h5>MOVED BY<br> IMAGES!</h5>
-                                <p>Stand in the Face of Oppression<br> Challenge False Narratives<br> and Demand Accountability.</p>
+                                <h5>DRIVEN TO<br> BE FREE!</h5>
+                                <p>Stand for Sovereignty,<br> Reject Foreign Influence,<br> and Seek Independence.</p>
                                 <button onclick='location.href ="{{route('donate_now')}}";' class=" donate"> shop and donate</button>
                             </div>
                         </div>
@@ -395,6 +395,7 @@ Stand in the face of crime and advocate for justice, explore the Hall of Shame t
 
         </div>
 
+        
     </section>
 
     <script>

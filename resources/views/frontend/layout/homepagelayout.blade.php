@@ -355,6 +355,25 @@
                 cycle: true
             });
         })
+
+        const buttons = document.querySelectorAll('.carousel-indicators button');
+
+        function triggerClick() {
+            // Find the active button
+            const activeButton = document.querySelector('.carousel-indicators button.active');
+
+            // Find the index of the active button
+            const activeIndex = Array.from(buttons).indexOf(activeButton);
+
+            // Calculate the index of the next button
+            const nextIndex = (activeIndex + 1) % buttons.length;
+
+            // Trigger click on the next button
+            buttons[nextIndex].click();
+        }
+
+        // Set interval to trigger click every 3 seconds
+        setInterval(triggerClick, 3000);
     </script>
 </body>
 
