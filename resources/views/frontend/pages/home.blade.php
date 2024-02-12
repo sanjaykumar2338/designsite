@@ -369,11 +369,10 @@ Stand in the face of crime and advocate for justice, explore the Hall of Shame t
                             <div class=" col-md-6">
                                 <div class="card-one">
                                     <div class="img">
-                                        <img src="{{$blog->image}}" alt="">
+                                        <img src="{{$blog->feature_image}}" alt="">
                                     </div>
                                     <div class="text">
-                                        
-                                            <p class="mas">MASONRY</p>
+                                            <p class="mas" style="display:none;">MASONRY</p>
                                             <h3>{{$blog->title}}</h3>
                                             <p class="pp">{!! substr(strip_tags($blog->description), 0, 100) !!}...</p>
                                             <a href="blog/{{$blog->slug}}" style="text-decoration:none">
@@ -381,8 +380,8 @@ Stand in the face of crime and advocate for justice, explore the Hall of Shame t
                                             </a>
                                     </div>
                                     <div class="date">
-                                        <h4>{{date('d', strtotime($blog->updated_at))}}</h4>
-                                        <span class="mar">{{strtolower(date('M', strtotime($blog->updated_at)))}}</span>
+                                        <h4>{{date('d', strtotime($blog->created_at))}}</h4>
+                                        <span class="mar">{{strtolower(date('M', strtotime($blog->created_at)))}}</span>
                                     </div>
                                 </div>
                             </div>

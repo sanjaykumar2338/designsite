@@ -62,20 +62,23 @@ class BlogsController extends Controller
         $this->validate($request, [
             'title' => 'required|string|max:255',
             'description' => 'required',
-            'image' => '',
+            'feature_image' => '',
+            'blog_image' => '',
             'meta_title' => 'string|max:255',
             'meta_description' => '',
             'meta_keyword' => 'string|max:255'
         ]);
 
         // Handle image uploads
-        $image = $request->file('image')->store('public/images');
+        $feature_image = $request->file('feature_image')->store('public/images');
+        $blog_image = $request->file('blog_image')->store('public/images');
 
         // Save data to the database
         $blog = new Blogs();
         $blog->title = $request->input('title');
         $blog->description = $request->input('description');
-        $blog->image = $image;
+        $blog->feature_image = $feature_image;
+        $blog->blog_image = $blog_image;
         $blog->meta_title = $request->input('meta_title');
         $blog->meta_description = $request->input('meta_description');
         $blog->meta_keywords = $request->input('meta_keywords');
@@ -138,7 +141,8 @@ class BlogsController extends Controller
         $this->validate($request, [
             'title' => 'required|string|max:255',
             'description' => 'required',
-            'image' => '',
+            'feature_image' => '',
+            'blog_image' => '',
             'meta_title' => 'string|max:255',
             'meta_description' => '',
             'meta_keyword' => 'string|max:255'
@@ -146,16 +150,22 @@ class BlogsController extends Controller
 
         // Handle image uploads
 
-        $image = $blog->image;
-        if ($request->file('image')) {
-            $image = $request->file('image')->store('public/images');
+        $feature_image = $blog->feature_image;
+        if ($request->file('feature_image')) {
+            $feature_image = $request->file('feature_image')->store('public/images');
+        }
+
+        $blog_image = $blog->blog_image;
+        if ($request->file('blog_image')) {
+            $blog_image = $request->file('blog_image')->store('public/images');
         }
 
         // Save data to the database          
         //$blog = new Blogs();
         $blog->title = $request->input('title');
         $blog->description = $request->input('description');
-        $blog->image = $image;
+        $blog->blog_image = $blog_image;
+        $blog->feature_image = $feature_image;
         $blog->meta_title = $request->input('meta_title');
         $blog->meta_description = $request->input('meta_description');
         $blog->meta_keywords = $request->input('meta_keywords');

@@ -22,7 +22,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-12  col-12">
                         <div class="style-box">
                             <div class="img-box">
-                                <img src="{{$blog->image}}" alt="">
+                                <img src="{{$blog->feature_image}}" alt="">
                             </div>
                             <div class="text">
                                 <h4>{{$blog->title}}</h4>

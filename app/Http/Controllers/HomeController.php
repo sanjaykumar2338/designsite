@@ -46,7 +46,8 @@ class HomeController extends Controller
 
         $blogs = Blogs::latest()->take(2)->get();
         foreach($blogs as $blog){
-            $blog->image = fileToUrl($blog->image);
+            $blog->feature_image = fileToUrl($blog->feature_image);
+            $blog->blog_image = fileToUrl($blog->blog_image);
         }
 
         return view('frontend.pages.home')->with('products', $products)->with('accessories', $accessories)->with('blogs', $blogs);
@@ -86,7 +87,8 @@ class HomeController extends Controller
     {
         $blogs = Blogs::all();
         foreach($blogs as $blog){
-            $blog->image = fileToUrl($blog->image);
+            $blog->feature_image = fileToUrl($blog->feature_image);
+            $blog->blog_image = fileToUrl($blog->blog_image);
         }
 
         return view('frontend.pages.blog')->with('blogs',$blogs);
@@ -96,8 +98,10 @@ class HomeController extends Controller
     {
         $slug = $request->slug;
         $blog = Blogs::where('slug',$slug)->first();
+        $blog->feature_image = fileToUrl($blog->feature_image);
+        $blog->blog_image = fileToUrl($blog->blog_image);
         //echo "<pre>"; print_r($blog); die;
-        return view('frontend.pages.blog_detail')->with('blog',$blog);
+        return view('frontend.layout.blogtemplate')->with('blog',$blog);
     }
 
     public function justice()
