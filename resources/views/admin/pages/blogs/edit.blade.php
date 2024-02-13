@@ -57,7 +57,7 @@
                 <div class="mb-3 mt-3">
                   <label for="image">Blog Image:</label>
                   <input type="file" class="form-control" id="blog_image" name="blog_image">
-                  <a href="{{fileToUrl($blog->blog_image)}}" target="_blank">View BlogvImage</a>
+                  <a href="{{fileToUrl($blog->blog_image)}}" target="_blank">View Blog Image</a>
                 </div>
 
                 <div class="mb-3 mt-3">
