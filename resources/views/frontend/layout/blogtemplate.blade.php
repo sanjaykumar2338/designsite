@@ -38,6 +38,14 @@
     <meta name="description" content="{{$blog->meta_description}}">
     <meta name="keywords" content="{{$blog->meta_keywords}}">
     <meta name="author" content="{{$blog->meta_title}}">
+
+    <meta property="og:title" content="{{$blog->meta_title}}" />
+    <meta property="og:description" content="{{$blog->meta_description}}" />
+    <meta property="og:image" content="{{$blog->blog_image}}" />
+    <meta name="twitter:card" content="{{$blog->meta_description}}">
+    <meta name="twitter:title" content="{{$blog->meta_title}}">
+    <meta name="twitter:description" content="{{$blog->meta_description}}">
+    <meta name="twitter:image" content="{{$blog->blog_image}}">
 </head>
 
 <body>
