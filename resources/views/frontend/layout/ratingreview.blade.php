@@ -107,7 +107,9 @@
   <input id="submitForm" type="submit" style="display:none;">
 </form>
 <br><br>
-<h2>Read what others have said about us:</h2>
+@if($reviews)
+  <h2>Read what others have said about us:</h2>
+@endif
 <div id="review-container">
 </div>
 </div>
