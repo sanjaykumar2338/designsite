@@ -101,6 +101,7 @@
   @endauth
 
   <input type="hidden" value="" id="stars" name="stars">
+  <input type="hidden" value="{{$blog->id}}" id="blog_id" name="blog_id">
 
   <a href="#" id="submit" class="btn btn-primary">Submit</a>
   <input id="submitForm" type="submit" style="display:none;">

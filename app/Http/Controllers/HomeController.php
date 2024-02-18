@@ -102,7 +102,7 @@ class HomeController extends Controller
         $blog->feature_image = fileToUrl($blog->feature_image);
         $blog->blog_image = fileToUrl($blog->blog_image);
 
-        $reviews = BlogReview::all();
+        $reviews = BlogReview::where('blog_id',$blog->id)->all();
         //echo "<pre>"; print_r($blog); die;
         return view('frontend.layout.blogtemplate')->with('blog',$blog)->with('reviews',$reviews);
     }
@@ -316,6 +316,7 @@ class HomeController extends Controller
             }
 
             $rec->rate = $request->stars;
+            $rec->blog_id = $request->blog_id;
             $rec->review = $request->review;
             $rec->name = $request->name;
             $rec->email = $request->email;
