@@ -148,6 +148,13 @@
     <div style="background-image:url('{{$blog->blog_image}}');height:400px;">
     </div>
 
+    @if (\Session::has('success'))
+        <div class="alert alert-success">
+            <ul>
+                <li>{!! \Session::get('success') !!}</li>
+            </ul>
+        </div>
+    @endif
     <section class="text-all">
         <div class="container">
             <div class="row">
@@ -164,6 +171,8 @@
 
         </div>
     </section>       <!-- ========== Start footer ========== -->
+
+    @include('frontend.layout.ratingreview')
 
     <!-- ========== Start footer ========== -->
     <footer>

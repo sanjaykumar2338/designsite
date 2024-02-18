@@ -11,6 +11,7 @@ use App\Models\User;
 use App\Models\Blogs;
 use App\Models\PrintfulOrder;
 use App\Models\Payment;
+use App\Models\BlogReview;
 
 class HomeController extends Controller
 {
@@ -100,8 +101,10 @@ class HomeController extends Controller
         $blog = Blogs::where('slug',$slug)->first();
         $blog->feature_image = fileToUrl($blog->feature_image);
         $blog->blog_image = fileToUrl($blog->blog_image);
+
+        $reviews = BlogReview::all();
         //echo "<pre>"; print_r($blog); die;
-        return view('frontend.layout.blogtemplate')->with('blog',$blog);
+        return view('frontend.layout.blogtemplate')->with('blog',$blog)->with('reviews',$reviews);
     }
 
     public function justice()
@@ -301,6 +304,25 @@ class HomeController extends Controller
                     }
                 }
             }
+        }
+    }
+
+    public function save_review(Request $request){
+        //echo "<pre>"; print_r($request->all());
+        try{
+            $rec = new BlogReview;
+            if (auth()->check()) {
+                $rec->user_id = auth()->user()->id;
+            }
+
+            $rec->rate = $request->stars;
+            $rec->review = $request->review;
+            $rec->name = $request->name;
+            $rec->email = $request->email;
+            $rec->save();
+            return redirect()->back()->with('success', 'Your review submitted successfully');   
+        }catch(\Exception $e){
+            return redirect()->back()->with('success', $e->getMessage()); 
         }
     }
 }
