@@ -107,7 +107,7 @@
   <input id="submitForm" type="submit" style="display:none;">
 </form>
 <br><br>
-@if($reviews)
+@if($reviews->count())
   <h2>Read what others have said about us:</h2>
 @endif
 <div id="review-container">
