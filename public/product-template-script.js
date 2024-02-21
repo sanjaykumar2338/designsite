@@ -18017,7 +18017,7 @@ const allProductsImages = [
                     },
                 },
             },
-        ],
+        ].filter((variant) => variant.color_code === "#fffefa"),
     },
     {
         productName: "Premium Polo Shirt | Port Authority K500",

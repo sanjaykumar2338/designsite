@@ -785,8 +785,8 @@ function textOverline() {
 
 async function placeOrder(payment_id) {
     //alert(payment_id)
-    
-    localStorage.setItem('payment_id',payment_id);
+
+    localStorage.setItem("payment_id", payment_id);
     //payment_id = payment_id;
 
     try {
@@ -1084,7 +1084,7 @@ function saveOrder(data) {
     var raw = JSON.stringify({
         printful_order_data: JSON.stringify(data),
         product_id: product.id,
-        payment_id: localStorage.getItem('payment_id')
+        payment_id: localStorage.getItem("payment_id"),
     });
 
     var requestOptions = {
@@ -10771,7 +10771,7 @@ const allProductsImages = [
                     },
                 },
             },
-        ],
+        ].filter((variant) => variant.color_code === "#fffefa"),
     },
     {
         productName: "Premium Polo Shirt | Port Authority K500",
