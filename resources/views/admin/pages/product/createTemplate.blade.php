@@ -153,7 +153,7 @@
                             <a class="nav-link" href="{{ route('justice') }}">Justice</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('blog') }}">Blog</a>
+                            <a class="nav-link" href="{{ route('blogs') }}">Blog</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('aboutus') }}">About Us</a>
