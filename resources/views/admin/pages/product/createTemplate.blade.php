@@ -671,12 +671,12 @@
                             <li><a href="{{ route('products') }}">Products
                                 </a></li>
                             <li><a href="{{ route('events') }}">Events</a></li>
-                            <li><a href="{{ route('blogs') }}">Conflicts</a></li>
+                            <li><a href="{{ route('conflicts') }}">Conflicts</a></li>
                             <li><a href="{{ route('aboutus') }}">About Us</a></li>
                             <li><a href="{{ route('contactus') }}">Contact Us </a></li>
                             <li><a href="{{ route('media') }}"> Media</a></li>
                             <li><a href="{{ route('justice') }}"> Justice</a></li>
-                            <li><a href="{{ route('blog') }}"> Blog</a></li>
+                            <li><a href="{{ route('blogs') }}"> Blog</a></li>
                         </ul>
                     </div>
                 </div>
