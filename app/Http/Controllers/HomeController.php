@@ -34,13 +34,13 @@ class HomeController extends Controller
     {
         $products = Products::select('product_type', \DB::raw('MAX(id) as max_id'), \DB::raw('MAX(front_image) as max_front_image'))
             ->whereIn('product_type', ['Shirts', 'Hoodies', 'Sweatshirts'])
-            ->whereIn('supporting_country', ['Israel', 'Palestine', 'Russia', 'Ukraine'])
+            //->whereIn('supporting_country', ['Israel', 'Palestine', 'Russia', 'Ukraine'])
             ->groupBy('product_type')
             ->get();
 
         $accessories = Products::select('product_type', \DB::raw('MAX(id) as max_id'), \DB::raw('MAX(front_image) as max_front_image'))
-            ->whereIn('product_type', ['Hat', 'Headwear', 'Footwear', 'Bags', 'Phone Cases'])
-            ->whereIn('supporting_country', ['Israel', 'Palestine', 'Russia', 'Ukraine'])
+            ->whereIn('product_type', ['Hats', 'Footwear', 'Bags', 'Phone Cases'])
+            //->whereIn('supporting_country', ['Israel', 'Palestine', 'Russia', 'Ukraine'])
             ->groupBy('product_type')
             ->get();
         //echo "<pre>"; print_r($products); die;
