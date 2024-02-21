@@ -100,6 +100,16 @@
                             </ul>
                         </div>
 
+                        <div class="vioce add-bg" id="box-5">
+                            <h4>Shop a Category </h4>
+                            <ul>
+                                <li class="typeofproduct4">Bags</li>
+                                <li class="typeofproduct4">Footwear</a></li>
+                                <li class="typeofproduct4">Hats</a></li>
+                                <li class="typeofproduct4">Phone Cases</a></li>
+                            </ul>
+                        </div>
+
                         <!--
                         <div class="vioce add-bg" id="box-5">
                             <h4>Shop a Subcategory</h4>

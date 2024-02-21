@@ -238,7 +238,7 @@
         const box2 = document.getElementById('box-2');
         const box3 = document.getElementById('box-3');
         const box4 = document.getElementById('box-4');
-        //const box5 = document.getElementById('box-5');
+        const box5 = document.getElementById('box-5');
         
         conflicts.forEach(conflict => {
             conflict.addEventListener('click', () => {
@@ -274,9 +274,13 @@
         const box3Options = document.querySelectorAll('.men, .woman, .accessories');
         box3Options.forEach(option => {
             option.addEventListener('click', (event) => {
-                box3.style.display = 'none';
-                box4.style.display = 'block';
                 product = event.target.className;
+                box3.style.display = 'none';
+                if(product=='accessories'){
+                    box5.style.display = 'block';
+                }else{
+                    box4.style.display = 'block';
+                }
             });
         });
 
