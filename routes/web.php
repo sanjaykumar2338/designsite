@@ -40,6 +40,8 @@ Route::group(['prefix' => 'admin','middleware' => 'check.auth'], function () {
     Route::get('/blogs/edit/{id}', [BlogsController::class, 'edit']);
     Route::get('blogs/{product}', [BlogsController::class, 'show']);
     Route::get('blogs/add/new', [BlogsController::class, 'create']);
+    Route::get('blogs/moderate/{id}', [BlogsController::class, 'moderate']);
+    Route::get('blogs/moderate/changestatus/{id}/{status}', [BlogsController::class, 'changestatus']);
 });
 
 Route::group(['middleware' => 'check.auth'], function () {

@@ -116,6 +116,7 @@ class ProductsController extends Controller
         $product->product_y_axis = $request->input('product_y_axis');
         $product->product_width = $request->input('product_width');
         $product->product_height = $request->input('product_height');
+        $product->collections_type = $request->input('collections_type');
 
         $slug = Str::slug($request->input('product_name'));
         $existingSlug = Products::where('product_slug', $slug)->exists();
@@ -237,7 +238,8 @@ class ProductsController extends Controller
         $product->product_y_axis = $request->input('product_y_axis');
         $product->product_width = $request->input('product_width');
         $product->product_height = $request->input('product_height');
-
+        $product->collections_type = $request->input('collections_type');
+        
         if ($request->file('front_image')) {
             $product->front_image = $frontImage;
         }

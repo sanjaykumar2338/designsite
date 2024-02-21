@@ -102,7 +102,7 @@ class HomeController extends Controller
         $blog->feature_image = fileToUrl($blog->feature_image);
         $blog->blog_image = fileToUrl($blog->blog_image);
 
-        $reviews = BlogReview::where('blog_id',$blog->id)->get();
+        $reviews = BlogReview::where('blog_id',$blog->id)->where('status',1)->get();
         //echo "<pre>"; print_r($blog); die;
         return view('frontend.layout.blogtemplate')->with('blog',$blog)->with('reviews',$reviews);
     }

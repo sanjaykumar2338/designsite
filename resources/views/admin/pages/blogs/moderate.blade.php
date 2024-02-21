@@ -37,12 +37,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Blogs List</h1>
+            <h1>Blog Reviews List</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="{{url('/admin')}}">Home</a></li>
-              <li class="breadcrumb-item active">Blogs</li>
+              <li class="breadcrumb-item active">Reviews</li>
             </ol>
           </div>
         </div>
@@ -57,20 +57,6 @@
         <div class="row">
           <div class="col-12">
             <div class="card">
-              <div class="card-header">
-                <h3 class="card-title"><a href="{{url('admin/blogs/add/new')}}">Add New Blog</a></h3>
-                <div class="card-tools">
-                  <div class="input-group input-group-sm" style="width: 150px;">
-                    <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
-
-                    <div class="input-group-append">
-                      <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- /.card-header -->
-
                 <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success">
@@ -85,7 +71,11 @@
                                     <table class="table table-hover">
                                         <thead>
                                         <tr>
-                                            <th class="col-sm-2 col-md-2">Title</th>
+                                            <th class="col-sm-2 col-md-2">Review</th>
+
+                                            <th class="col-sm-2 col-md-2">Rating</th>
+
+                                            <th class="col-sm-2 col-md-2">Status</th>
 
                                             <th class="col-sm-3 col-md-3"  style="text-align: right;">Action</th>
                                         </tr>
@@ -98,17 +88,42 @@
 
                                                 <div class="media">
                                                     <div class="media-body">
-                                                        <h4  class="product-title" ><a href="#">{{$blog->title}}</a></h4>
+                                                        <h4  class="product-title" ><a href="#">{{$blog->review}}</a></h4>
 
                                                         <span>Created at :  </span><span class="text-success"><strong>{{$blog->created_at}}</strong></span>
                                                     </div>
 
                                                 </div>
                                             </td>
+                                            <td class="col-sm-2 col-md-2">
+
+                                                <div class="media">
+                                                    <div class="media-body">
+                                                        <h4  class="product-title" ><a href="#">{{$blog->rate}} star(s)</a></h4>
+                                                    </div>
+
+                                                </div>
+                                            </td>
+                                            <td class="col-sm-2 col-md-2">
+
+                                                <div class="media">
+                                                    <div class="media-body">
+                                                        @if($blog->status==0)
+                                                            In-Active
+                                                        @else
+                                                            Active
+                                                        @endif
+                                                    </div>
+
+                                                </div>
+                                            </td>
                                             <td class="col-sm-3 col-md-3" style="text-align: right">
-                                              <a href="/admin/blogs/remove/{{$blog->id}}" class="btn btn-danger">Remove</a>
-                                              <a href="/admin/blogs/edit/{{$blog->id}}" class="btn btn-primary">EDIT</a>
-                                              <a href="/admin/blogs/moderate/{{$blog->id}}" class="btn btn-primary">Moderate</a>
+                                              
+                                              @if($blog->status==0)
+                                                <a href="/admin/blogs/moderate/changestatus/{{$blog->id}}/1" class="btn btn-primary">Change Status</a>
+                                              @else
+                                                <a href="/admin/blogs/moderate/changestatus/{{$blog->id}}/0" class="btn btn-primary">Change Status</a>
+                                              @endif
                                             </td>
                                         </tr>
                                         </tbody>
@@ -116,7 +131,7 @@
                             </div>
                         @endforeach
                     @else
-                        <h6 class="display-8">THERE'S NO PRODUCT<BR><a href="/admin/blogs/add/new">ADD Blogs </a>  </h6>
+                        <h6 class="display-8">THERE'S NO REVIEWS</h6>
 
                 @endif
                 </div>

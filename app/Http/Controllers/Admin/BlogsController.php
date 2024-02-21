@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 
 use App\Models\Products;
 use App\Models\Blogs;
+use App\Models\BlogReview;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\Input;
@@ -423,5 +424,15 @@ class BlogsController extends Controller
                 ]
             ], 500); // Internal Server Error status code
         }
+    }
+
+    public function moderate(Request $request){
+        $blogs = BlogReview::where('blog_id',$request->id)->paginate();
+        return view('admin.pages.blogs.moderate')->with('blogs', $blogs)->with('activeLink', 'blogs');;
+    }
+
+    public function changestatus(Request $request){
+        $blogs = BlogReview::where('id',$request->id)->update(['status'=>$request->status]);
+        return redirect()->back()->with('status', 'Status Changed Successfully');
     }
 }
