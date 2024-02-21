@@ -8755,6 +8755,9271 @@ const productTemplates = [
 
 const allProductsImages = [
     {
+        productName: "Men’s Classic Tee | Gildan 5000",
+        price: 17.25,
+        images_to_use: [
+            {
+                pos: 0,
+                x: 10,
+                y: 10,
+                w: 10,
+                h: 10,
+            },
+            null,
+            {
+                pos: 6,
+                x: 10,
+                y: 10,
+                w: 10,
+                h: 10,
+            },
+            {
+                pos: 7,
+                x: 10,
+                y: 10,
+                w: 10,
+                h: 10,
+            },
+        ],
+        images: [
+            {
+                placement: "front",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat/front/05_gildan5000_flat_front_base_whitebg.png?v=1708429837",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat",
+            },
+            {
+                placement: "back",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat/back/05_gildan5000_flat_back_base_whitebg.png?v=1708078083",
+                background_color: "#141313",
+                background_image: null,
+                option: "Back",
+                option_group: "Flat",
+            },
+            {
+                placement: "embroidery_chest_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat/front/05_gildan5000_flat_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat",
+            },
+            {
+                placement: "embroidery_chest_center",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat/front/05_gildan5000_flat_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat",
+            },
+            {
+                placement: "front",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat2/front/05_gildan5000_flat_front_base_whitebg.png?v=1708429871",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat 2",
+            },
+            {
+                placement: "back",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat2/back/05_gildan5000_flat_back_base_whitebg.png?v=1708078162",
+                background_color: "#141313",
+                background_image: null,
+                option: "Back",
+                option_group: "Flat 2",
+            },
+            {
+                placement: "embroidery_chest_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat2/front/05_gildan5000_flat_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat 2",
+            },
+            {
+                placement: "embroidery_chest_center",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat2/front/05_gildan5000_flat_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat 2",
+            },
+            {
+                placement: "front",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/onhanger/front/05_gildan5000_onnhanger_front_base_whitebg.png?v=1708429983",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "On Hanger",
+            },
+            {
+                placement: "back",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/onhanger/back/05_gildan5000_onnhanger_back_base_whitebg.png?v=1708078335",
+                background_color: "#141313",
+                background_image: null,
+                option: "Back",
+                option_group: "On Hanger",
+            },
+            {
+                placement: "embroidery_chest_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/onhanger/front/05_gildan5000_onnhanger_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "On Hanger",
+            },
+            {
+                placement: "embroidery_chest_center",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/onhanger/front/05_gildan5000_onnhanger_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "On Hanger",
+            },
+            {
+                placement: "front",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens/front/05_gildan5000_mens_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Men's",
+            },
+            {
+                placement: "back",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens/back/05_gildan5000_mens_back_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Back",
+                option_group: "Men's",
+            },
+            {
+                placement: "sleeve_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens/left/05_gildan5000_mens_left_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Left",
+                option_group: "Men's",
+            },
+            {
+                placement: "sleeve_right",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens/right/05_gildan5000_mens_right_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Right",
+                option_group: "Men's",
+            },
+            {
+                placement: "sleeve_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens/leftfront/05_gildan5000_mens_leftfront_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Left Front",
+                option_group: "Men's",
+            },
+            {
+                placement: "sleeve_right",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens/rightfront/05_gildan5000_mens_rightfront_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Right Front",
+                option_group: "Men's",
+            },
+            {
+                placement: "back",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens/back2/05_gildan5000_mens_back_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Back 2",
+                option_group: "Men's",
+            },
+            {
+                placement: "front",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens/front2/05_gildan5000_mens_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front 2",
+                option_group: "Men's",
+            },
+            {
+                placement: "embroidery_chest_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens/front/05_gildan5000_mens_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Men's",
+            },
+            {
+                placement: "embroidery_chest_center",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens/front/05_gildan5000_mens_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Men's",
+            },
+            {
+                placement: "embroidery_chest_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens/front2/05_gildan5000_mens_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front 2",
+                option_group: "Men's",
+            },
+            {
+                placement: "embroidery_chest_center",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens/front2/05_gildan5000_mens_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front 2",
+                option_group: "Men's",
+            },
+            {
+                placement: "embroidery_chest_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens/front/embroidery/zoomed/05_gildan5000_mens_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Zoomed-in",
+                option_group: "Men's",
+            },
+            {
+                placement: "embroidery_chest_center",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens/front/embroidery/zoomed/05_gildan5000_mens_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Zoomed-in",
+                option_group: "Men's",
+            },
+            {
+                placement: "embroidery_chest_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens/front/embroidery/leftchest/05_gildan5000_mens_leftchest_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Zoomed-in 3",
+                option_group: "Men's",
+            },
+            {
+                placement: "embroidery_chest_center",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens/front/embroidery/middle/05_gildan5000_mens_middle_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Zoomed-in 3",
+                option_group: "Men's",
+            },
+            {
+                placement: "embroidery_chest_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens/front2/embroidery/05_gildan5000_mens_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Zoomed-in 2",
+                option_group: "Men's",
+            },
+            {
+                placement: "embroidery_chest_center",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens/front2/embroidery/05_gildan5000_mens_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Zoomed-in 2",
+                option_group: "Men's",
+            },
+            {
+                placement: "front",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens2/front/05_gildan5000_mens_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Men's 2",
+            },
+            {
+                placement: "back",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens2/back/05_gildan5000_mens_back_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Back",
+                option_group: "Men's 2",
+            },
+            {
+                placement: "sleeve_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens2/left/05_gildan5000_mens_left_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Left",
+                option_group: "Men's 2",
+            },
+            {
+                placement: "sleeve_right",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens2/right/05_gildan5000_mens_right_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Right",
+                option_group: "Men's 2",
+            },
+            {
+                placement: "sleeve_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens2/leftfront/05_gildan5000_mens_leftfront_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Left Front",
+                option_group: "Men's 2",
+            },
+            {
+                placement: "sleeve_right",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens2/rightfront/05_gildan5000_mens_rightfront_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Right Front",
+                option_group: "Men's 2",
+            },
+            {
+                placement: "embroidery_chest_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens2/front/05_gildan5000_mens_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Men's 2",
+            },
+            {
+                placement: "embroidery_chest_center",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens2/front/05_gildan5000_mens_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Men's 2",
+            },
+            {
+                placement: "embroidery_chest_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens2/front/embroidery/zoomed/05_gildan5000_mens_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Zoomed-in",
+                option_group: "Men's 2",
+            },
+            {
+                placement: "embroidery_chest_center",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens2/front/embroidery/zoomed/05_gildan5000_mens_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Zoomed-in",
+                option_group: "Men's 2",
+            },
+            {
+                placement: "embroidery_chest_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens2/front/embroidery/leftchest/05_gildan5000_mens_leftchest_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Zoomed-in 2",
+                option_group: "Men's 2",
+            },
+            {
+                placement: "embroidery_chest_center",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens2/front/embroidery/middle/05_gildan5000_mens_middle_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Zoomed-in 2",
+                option_group: "Men's 2",
+            },
+            {
+                placement: "label_outside",
+                image_url:
+                    "https://files.cdn.printful.com/m/templates/medium/outside_label_3x3.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Outside label",
+                option_group: "Labels",
+            },
+            {
+                placement: "label_inside",
+                image_url:
+                    "https://files.cdn.printful.com/m/templates/medium/inside_label__3x3.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Inside label",
+                option_group: "Labels",
+            },
+            {
+                placement: "label_inside",
+                image_url:
+                    "https://files.cdn.printful.com/m/templates/medium/inside_label__3x3.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Inside label",
+                option_group: "Labels",
+            },
+            {
+                placement: "front",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/spring-summer/front/05_gildan5000_flat_front_yellow_base.png?v=1708429953",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Spring/summer vibes",
+            },
+            {
+                placement: "back",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/spring-summer/back/05_gildan5000_flat_back_yellow_base.png?v=1708429684",
+                background_color: "#141313",
+                background_image: null,
+                option: "Back",
+                option_group: "Spring/summer vibes",
+            },
+            {
+                placement: "embroidery_chest_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/spring-summer/front/05_gildan5000_flat_front_yellow_base.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Spring/summer vibes",
+            },
+            {
+                placement: "embroidery_chest_center",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/spring-summer/front/05_gildan5000_flat_front_yellow_base.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Spring/summer vibes",
+            },
+            {
+                placement: "front",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/spring-summer/front/05_gildan5000_flat_front_light_base.png?v=1708429968",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front 2",
+                option_group: "Spring/summer vibes",
+            },
+            {
+                placement: "back",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/spring-summer/back/05_gildan5000_flat_back_light_base.png?v=1708429713",
+                background_color: "#141313",
+                background_image: null,
+                option: "Back 2",
+                option_group: "Spring/summer vibes",
+            },
+            {
+                placement: "embroidery_chest_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/spring-summer/front/05_gildan5000_flat_front_light_base.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front 2",
+                option_group: "Spring/summer vibes",
+            },
+            {
+                placement: "embroidery_chest_center",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/spring-summer/front/05_gildan5000_flat_front_light_base.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front 2",
+                option_group: "Spring/summer vibes",
+            },
+            {
+                placement: "label_inside",
+                image_url:
+                    "https://files.cdn.printful.com/m/templates/medium/inside_label__3x3.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Inside label",
+                option_group: "Labels",
+            },
+            {
+                placement: "front",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat3/front/05_Gildan_5000_Large_Print_flat_front_base_whitebg.png?v=1708429888",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat 3",
+            },
+            {
+                placement: "back",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat3/back/05_Gildan_5000_Large_Print_flat_back_base_whitebg.png?v=1708078217",
+                background_color: "#141313",
+                background_image: null,
+                option: "Back",
+                option_group: "Flat 3",
+            },
+            {
+                placement: "embroidery_chest_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat3/front/05_Gildan_5000_Large_Print_flat_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat 3",
+            },
+            {
+                placement: "embroidery_chest_center",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat3/front/05_Gildan_5000_Large_Print_flat_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat 3",
+            },
+            {
+                placement: "label_inside",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat/front/05_gildan5000_flat_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat",
+            },
+            {
+                placement: "label_inside",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat/front/05_gildan5000_flat_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat",
+            },
+            {
+                placement: "label_inside",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat/front/05_gildan5000_flat_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat",
+            },
+            {
+                placement: "label_inside",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat2/front/05_gildan5000_flat_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat 2",
+            },
+            {
+                placement: "label_inside",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat2/front/05_gildan5000_flat_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat 2",
+            },
+            {
+                placement: "label_inside",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat2/front/05_gildan5000_flat_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat 2",
+            },
+            {
+                placement: "label_inside",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat3/front/05_Gildan_5000_Large_Print_flat_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat 3",
+            },
+            {
+                placement: "label_inside",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat3/front/05_Gildan_5000_Large_Print_flat_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat 3",
+            },
+            {
+                placement: "label_inside",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat3/front/05_Gildan_5000_Large_Print_flat_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat 3",
+            },
+            {
+                placement: "label_inside",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/spring-summer/front/05_gildan5000_flat_front_light_base.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front 2",
+                option_group: "Spring/summer vibes",
+            },
+            {
+                placement: "label_inside",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/spring-summer/front/05_gildan5000_flat_front_light_base.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front 2",
+                option_group: "Spring/summer vibes",
+            },
+            {
+                placement: "label_inside",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/spring-summer/front/05_gildan5000_flat_front_light_base.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front 2",
+                option_group: "Spring/summer vibes",
+            },
+            {
+                placement: "label_inside",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/spring-summer/front/05_gildan5000_flat_front_yellow_base.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Spring/summer vibes",
+            },
+            {
+                placement: "label_inside",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/spring-summer/front/05_gildan5000_flat_front_yellow_base.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Spring/summer vibes",
+            },
+            {
+                placement: "label_inside",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/spring-summer/front/05_gildan5000_flat_front_yellow_base.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Spring/summer vibes",
+            },
+            {
+                placement: "label_inside",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/onhanger/front/05_gildan5000_onnhanger_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "On Hanger",
+            },
+            {
+                placement: "label_inside",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/onhanger/front/05_gildan5000_onnhanger_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "On Hanger",
+            },
+            {
+                placement: "label_inside",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/onhanger/front/05_gildan5000_onnhanger_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "On Hanger",
+            },
+            {
+                placement: "front",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/ghost/front/05_gildan5000_ghost_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Ghost",
+            },
+            {
+                placement: "back",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/ghost/back/05_gildan5000_ghost_back_base_whitebg.png?v=1708077323",
+                background_color: "#141313",
+                background_image: null,
+                option: "Back",
+                option_group: "Ghost",
+            },
+            {
+                placement: "sleeve_right",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/ghost/right/05_gildan5000_ghost_right_base_whitebg.png?v=1708077658",
+                background_color: "#141313",
+                background_image: null,
+                option: "Right",
+                option_group: "Ghost",
+            },
+            {
+                placement: "sleeve_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/ghost/left/05_gildan5000_ghost_left_base_whitebg.png?v=1708077481",
+                background_color: "#141313",
+                background_image: null,
+                option: "Left",
+                option_group: "Ghost",
+            },
+            {
+                placement: "embroidery_chest_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/ghost/front/zoomed/05_gildan5000_ghost_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Zoomed-in",
+                option_group: "Ghost",
+            },
+            {
+                placement: "embroidery_chest_center",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/ghost/front/zoomed/05_gildan5000_ghost_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Zoomed-in",
+                option_group: "Ghost",
+            },
+            {
+                placement: "embroidery_chest_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/ghost/front/05_gildan5000_ghost_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Ghost",
+            },
+            {
+                placement: "embroidery_chest_center",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/ghost/front/05_gildan5000_ghost_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Ghost",
+            },
+            {
+                placement: "sleeve_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/ghost/left/zoomed/05_gildan5000_ghost_left_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Zoomed-in",
+                option_group: "Ghost",
+            },
+            {
+                placement: "sleeve_right",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/ghost/right/zoomed/05_gildan5000_ghost_right_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Zoomed-in",
+                option_group: "Ghost",
+            },
+            {
+                placement: "front",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens3/front/05_Gildan_5000_M_male_mockup_front_base.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Men's Lifestyle",
+            },
+            {
+                placement: "front",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens4/frontright/05_Gildan_5000_2XL_male_mockup_frontright_base.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Men's Lifestyle 2",
+            },
+            {
+                placement: "front",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens3/fronleft/05_Gildan_5000_M_male_mockup_frontleft_base.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front 2",
+                option_group: "Men's Lifestyle",
+            },
+            {
+                placement: "front",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens4/closeup/05_Gildan_5000_2XL_male_mockup_closeup_base.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front 2",
+                option_group: "Men's Lifestyle 2",
+            },
+            {
+                placement: "embroidery_chest_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens4/frontright/05_Gildan_5000_2XL_male_mockup_frontright_base.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Men's Lifestyle 2",
+            },
+            {
+                placement: "embroidery_chest_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens4/closeup/05_Gildan_5000_2XL_male_mockup_closeup_base.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front 2",
+                option_group: "Men's Lifestyle 2",
+            },
+            {
+                placement: "embroidery_chest_center",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens4/frontright/05_Gildan_5000_2XL_male_mockup_frontright_base.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Men's Lifestyle 2",
+            },
+            {
+                placement: "embroidery_chest_center",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens4/closeup/05_Gildan_5000_2XL_male_mockup_closeup_base.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front 2",
+                option_group: "Men's Lifestyle 2",
+            },
+            {
+                placement: "sleeve_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens4/frontright/05_Gildan_5000_2XL_male_mockup_frontright_base.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Men's Lifestyle 2",
+            },
+            {
+                placement: "sleeve_right",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens4/frontright/05_Gildan_5000_2XL_male_mockup_frontright_base.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Men's Lifestyle 2",
+            },
+            {
+                placement: "embroidery_chest_center",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens3/front/05_Gildan_5000_M_male_mockup_front_base.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Men's Lifestyle",
+            },
+            {
+                placement: "embroidery_chest_center",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens3/fronleft/05_Gildan_5000_M_male_mockup_frontleft_base.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front 2",
+                option_group: "Men's Lifestyle",
+            },
+            {
+                placement: "embroidery_chest_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens3/front/05_Gildan_5000_M_male_mockup_front_base.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Men's Lifestyle",
+            },
+            {
+                placement: "embroidery_chest_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens3/fronleft/05_Gildan_5000_M_male_mockup_frontleft_base.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front 2",
+                option_group: "Men's Lifestyle",
+            },
+            {
+                placement: "sleeve_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens3/front/05_Gildan_5000_M_male_mockup_front_base.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Men's Lifestyle",
+            },
+            {
+                placement: "sleeve_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens3/fronleft/05_Gildan_5000_M_male_mockup_frontleft_base.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front 2",
+                option_group: "Men's Lifestyle",
+            },
+            {
+                placement: "sleeve_right",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens3/front/05_Gildan_5000_M_male_mockup_front_base.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Men's Lifestyle",
+            },
+            {
+                placement: "sleeve_right",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens3/fronleft/05_Gildan_5000_M_male_mockup_frontleft_base.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front 2",
+                option_group: "Men's Lifestyle",
+            },
+            {
+                placement: "label_outside",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat/back/05_gildan5000_flat_back_base_whitebg.png?v=1708078084",
+                background_color: "#141313",
+                background_image: null,
+                option: "Back",
+                option_group: "Flat",
+            },
+            {
+                placement: "label_outside",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat2/back/05_gildan5000_flat_back_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Back",
+                option_group: "Flat 2",
+            },
+            {
+                placement: "label_outside",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/onhanger/back/05_gildan5000_onnhanger_back_base_whitebg.png?v=1708078335",
+                background_color: "#141313",
+                background_image: null,
+                option: "Back",
+                option_group: "On Hanger",
+            },
+            {
+                placement: "label_outside",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens/back/05_gildan5000_mens_back_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Back",
+                option_group: "Men's",
+            },
+            {
+                placement: "label_outside",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens/back2/05_gildan5000_mens_back_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Back 2",
+                option_group: "Men's",
+            },
+            {
+                placement: "label_outside",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens2/back/05_gildan5000_mens_back_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Back",
+                option_group: "Men's 2",
+            },
+            {
+                placement: "label_outside",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/spring-summer/back/05_gildan5000_flat_back_yellow_base.png?v=1708429684",
+                background_color: "#141313",
+                background_image: null,
+                option: "Back",
+                option_group: "Spring/summer vibes",
+            },
+            {
+                placement: "label_outside",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/spring-summer/back/05_gildan5000_flat_back_light_base.png?v=1708429713",
+                background_color: "#141313",
+                background_image: null,
+                option: "Back 2",
+                option_group: "Spring/summer vibes",
+            },
+            {
+                placement: "label_outside",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat3/back/05_Gildan_5000_Large_Print_flat_back_base_whitebg.png?v=1708078218",
+                background_color: "#141313",
+                background_image: null,
+                option: "Back",
+                option_group: "Flat 3",
+            },
+            {
+                placement: "label_outside",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/ghost/back/05_gildan5000_ghost_back_base_whitebg.png?v=1708077323",
+                background_color: "#141313",
+                background_image: null,
+                option: "Back",
+                option_group: "Ghost",
+            },
+            {
+                placement: "embroidery_sleeve_left_top",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat/front/05_gildan5000_flat_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat",
+            },
+            {
+                placement: "embroidery_sleeve_right_top",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat/front/05_gildan5000_flat_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat",
+            },
+            {
+                placement: "embroidery_sleeve_left_top",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/ghost/left/05_gildan5000_ghost_left_base_whitebg.png?v=1708077482",
+                background_color: "#141313",
+                background_image: null,
+                option: "Left",
+                option_group: "Ghost",
+            },
+            {
+                placement: "embroidery_sleeve_right_top",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/ghost/right/05_gildan5000_ghost_right_base_whitebg.png?v=1708077659",
+                background_color: "#141313",
+                background_image: null,
+                option: "Right",
+                option_group: "Ghost",
+            },
+            {
+                placement: "embroidery_sleeve_left_top",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/ghost/left/zoomed/05_gildan5000_ghost_left_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Zoomed-in",
+                option_group: "Ghost",
+            },
+            {
+                placement: "embroidery_sleeve_right_top",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/ghost/right/zoomed/05_gildan5000_ghost_right_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Zoomed-in",
+                option_group: "Ghost",
+            },
+            {
+                placement: "embroidery_sleeve_left_top",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat2/front/05_gildan5000_flat_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat 2",
+            },
+            {
+                placement: "embroidery_sleeve_left_top",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens/front/05_gildan5000_mens_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Men's",
+            },
+            {
+                placement: "embroidery_sleeve_right_top",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens/front/05_gildan5000_mens_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Men's",
+            },
+            {
+                placement: "embroidery_sleeve_left_top",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens/left/05_gildan5000_mens_left_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Left",
+                option_group: "Men's",
+            },
+            {
+                placement: "embroidery_sleeve_left_top",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens/leftfront/05_gildan5000_mens_leftfront_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Left Front",
+                option_group: "Men's",
+            },
+            {
+                placement: "embroidery_sleeve_right_top",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens/right/05_gildan5000_mens_right_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Right",
+                option_group: "Men's",
+            },
+            {
+                placement: "embroidery_sleeve_right_top",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens/rightfront/05_gildan5000_mens_rightfront_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Right Front",
+                option_group: "Men's",
+            },
+            {
+                placement: "embroidery_sleeve_left_top",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens2/front/05_gildan5000_mens_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Men's 2",
+            },
+            {
+                placement: "embroidery_sleeve_right_top",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens2/front/05_gildan5000_mens_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Men's 2",
+            },
+            {
+                placement: "embroidery_sleeve_left_top",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens2/left/05_gildan5000_mens_left_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Left",
+                option_group: "Men's 2",
+            },
+            {
+                placement: "embroidery_sleeve_left_top",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens2/leftfront/05_gildan5000_mens_leftfront_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Left Front",
+                option_group: "Men's 2",
+            },
+            {
+                placement: "embroidery_sleeve_right_top",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens2/right/05_gildan5000_mens_right_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Right",
+                option_group: "Men's 2",
+            },
+            {
+                placement: "embroidery_sleeve_right_top",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens2/rightfront/05_gildan5000_mens_rightfront_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Right Front",
+                option_group: "Men's 2",
+            },
+            {
+                placement: "embroidery_sleeve_left_top",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens2/front/embroidery/zoomed/05_gildan5000_mens_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Zoomed-in",
+                option_group: "Men's 2",
+            },
+            {
+                placement: "embroidery_sleeve_right_top",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens2/front/embroidery/zoomed/05_gildan5000_mens_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Zoomed-in",
+                option_group: "Men's 2",
+            },
+            {
+                placement: "embroidery_sleeve_left_top",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens3/front/05_Gildan_5000_M_male_mockup_front_base.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Men's Lifestyle",
+            },
+            {
+                placement: "embroidery_sleeve_right_top",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens3/front/05_Gildan_5000_M_male_mockup_front_base.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Men's Lifestyle",
+            },
+            {
+                placement: "embroidery_sleeve_left_top",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens3/fronleft/05_Gildan_5000_M_male_mockup_frontleft_base.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front 2",
+                option_group: "Men's Lifestyle",
+            },
+            {
+                placement: "embroidery_sleeve_right_top",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens3/fronleft/05_Gildan_5000_M_male_mockup_frontleft_base.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front 2",
+                option_group: "Men's Lifestyle",
+            },
+            {
+                placement: "embroidery_sleeve_left_top",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens4/frontright/05_Gildan_5000_2XL_male_mockup_frontright_base.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Men's Lifestyle 2",
+            },
+            {
+                placement: "embroidery_sleeve_left_top",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens4/closeup/05_Gildan_5000_2XL_male_mockup_closeup_base.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front 2",
+                option_group: "Men's Lifestyle 2",
+            },
+            {
+                placement: "embroidery_sleeve_right_top",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens4/frontright/05_Gildan_5000_2XL_male_mockup_frontright_base.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Men's Lifestyle 2",
+            },
+            {
+                placement: "embroidery_sleeve_right_top",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens4/closeup/05_Gildan_5000_2XL_male_mockup_closeup_base.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front 2",
+                option_group: "Men's Lifestyle 2",
+            },
+            {
+                placement: "embroidery_sleeve_left_top",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/onhanger/front/05_gildan5000_onnhanger_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "On Hanger",
+            },
+            {
+                placement: "embroidery_sleeve_right_top",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/onhanger/front/05_gildan5000_onnhanger_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "On Hanger",
+            },
+            {
+                placement: "embroidery_sleeve_left_top",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/spring-summer/front/05_gildan5000_flat_front_yellow_base.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Spring/summer vibes",
+            },
+            {
+                placement: "embroidery_sleeve_right_top",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/spring-summer/front/05_gildan5000_flat_front_yellow_base.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Spring/summer vibes",
+            },
+            {
+                placement: "embroidery_sleeve_left_top",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat3/front/05_Gildan_5000_Large_Print_flat_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat 3",
+            },
+            {
+                placement: "embroidery_sleeve_right_top",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat3/front/05_Gildan_5000_Large_Print_flat_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat 3",
+            },
+            {
+                placement: "embroidery_sleeve_right_top",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat2/front/05_gildan5000_flat_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat 2",
+            },
+            {
+                placement: "front",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat4/front/05_gildan5000_flat3_front_base_whitebg.png?v=1708429919",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat 4",
+            },
+            {
+                placement: "back",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat4/back/05_gildan5000_flat3_back_base_whitebg.png?v=1708078271",
+                background_color: "#141313",
+                background_image: null,
+                option: "Back",
+                option_group: "Flat 4",
+            },
+            {
+                placement: "embroidery_chest_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat4/front/05_gildan5000_flat3_front_base_whitebg.png?v=1708429920",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat 4",
+            },
+            {
+                placement: "embroidery_chest_center",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat4/front/05_gildan5000_flat3_front_base_whitebg.png?v=1708429920",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat 4",
+            },
+            {
+                placement: "embroidery_sleeve_left_top",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat4/front/05_gildan5000_flat3_front_base_whitebg.png?v=1708429920",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat 4",
+            },
+            {
+                placement: "embroidery_sleeve_right_top",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat4/front/05_gildan5000_flat3_front_base_whitebg.png?v=1708429921",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat 4",
+            },
+            {
+                placement: "label_inside",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat4/front/05_gildan5000_flat3_front_base_whitebg.png?v=1708429921",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat 4",
+            },
+            {
+                placement: "label_inside",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat4/front/05_gildan5000_flat3_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat 4",
+            },
+            {
+                placement: "label_inside",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat4/front/05_gildan5000_flat3_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat 4",
+            },
+            {
+                placement: "sleeve_left",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat4/front/05_gildan5000_flat3_front_base_whitebg.png?v=1708429921",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat 4",
+            },
+            {
+                placement: "sleeve_right",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat4/front/05_gildan5000_flat3_front_base_whitebg.png?v=1708429921",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat 4",
+            },
+            {
+                placement: "label_outside",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat4/back/05_gildan5000_flat3_back_base_whitebg.png?v=1708078272",
+                background_color: "#141313",
+                background_image: null,
+                option: "Back",
+                option_group: "Flat 4",
+            },
+            {
+                placement: "front_dtf",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/ghost/front/05_gildan5000_ghost_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Ghost",
+            },
+            {
+                placement: "back_dtf",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/ghost/back/05_gildan5000_ghost_back_base_whitebg.png?v=1708077323",
+                background_color: "#141313",
+                background_image: null,
+                option: "Back",
+                option_group: "Ghost",
+            },
+            {
+                placement: "back_dtf",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat/back/05_gildan5000_flat_back_base_whitebg.png?v=1708078085",
+                background_color: "#141313",
+                background_image: null,
+                option: "Back",
+                option_group: "Flat",
+            },
+            {
+                placement: "back_dtf",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat2/back/05_gildan5000_flat_back_base_whitebg.png?v=1708078162",
+                background_color: "#141313",
+                background_image: null,
+                option: "Back",
+                option_group: "Flat 2",
+            },
+            {
+                placement: "back_dtf",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/onhanger/back/05_gildan5000_onnhanger_back_base_whitebg.png?v=1708078336",
+                background_color: "#141313",
+                background_image: null,
+                option: "Back",
+                option_group: "On Hanger",
+            },
+            {
+                placement: "back_dtf",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens/back/05_gildan5000_mens_back_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Back",
+                option_group: "Men's",
+            },
+            {
+                placement: "back_dtf",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens2/back/05_gildan5000_mens_back_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Back",
+                option_group: "Men's 2",
+            },
+            {
+                placement: "back_dtf",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/spring-summer/back/05_gildan5000_flat_back_yellow_base.png?v=1708429685",
+                background_color: "#141313",
+                background_image: null,
+                option: "Back",
+                option_group: "Spring/summer vibes",
+            },
+            {
+                placement: "back_dtf",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat3/back/05_Gildan_5000_Large_Print_flat_back_base_whitebg.png?v=1708078218",
+                background_color: "#141313",
+                background_image: null,
+                option: "Back",
+                option_group: "Flat 3",
+            },
+            {
+                placement: "back_dtf",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat4/back/05_gildan5000_flat3_back_base_whitebg.png?v=1708078272",
+                background_color: "#141313",
+                background_image: null,
+                option: "Back",
+                option_group: "Flat 4",
+            },
+            {
+                placement: "back_dtf",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/spring-summer/back/05_gildan5000_flat_back_light_base.png?v=1708429714",
+                background_color: "#141313",
+                background_image: null,
+                option: "Back 2",
+                option_group: "Spring/summer vibes",
+            },
+            {
+                placement: "front_dtf",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat/front/05_gildan5000_flat_front_base_whitebg.png?v=1708429837",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat",
+            },
+            {
+                placement: "front_dtf",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat2/front/05_gildan5000_flat_front_base_whitebg.png?v=1708429871",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat 2",
+            },
+            {
+                placement: "front_dtf",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/onhanger/front/05_gildan5000_onnhanger_front_base_whitebg.png?v=1708429984",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "On Hanger",
+            },
+            {
+                placement: "front_dtf",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens/front2/05_gildan5000_mens_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front 2",
+                option_group: "Men's",
+            },
+            {
+                placement: "front_dtf",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens/front/05_gildan5000_mens_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Men's",
+            },
+            {
+                placement: "front_dtf",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens2/front/05_gildan5000_mens_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Men's 2",
+            },
+            {
+                placement: "front_dtf",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/spring-summer/front/05_gildan5000_flat_front_yellow_base.png?v=1708429953",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Spring/summer vibes",
+            },
+            {
+                placement: "front_dtf",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/spring-summer/front/05_gildan5000_flat_front_light_base.png?v=1708429969",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front 2",
+                option_group: "Spring/summer vibes",
+            },
+            {
+                placement: "front_dtf",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat3/front/05_Gildan_5000_Large_Print_flat_front_base_whitebg.png?v=1708429888",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat 3",
+            },
+            {
+                placement: "front_dtf",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens4/frontright/05_Gildan_5000_2XL_male_mockup_frontright_base.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Men's Lifestyle 2",
+            },
+            {
+                placement: "front_dtf",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens4/closeup/05_Gildan_5000_2XL_male_mockup_closeup_base.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front 2",
+                option_group: "Men's Lifestyle 2",
+            },
+            {
+                placement: "front_dtf",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens3/front/05_Gildan_5000_M_male_mockup_front_base.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Men's Lifestyle",
+            },
+            {
+                placement: "front_dtf",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/mens3/fronleft/05_Gildan_5000_M_male_mockup_frontleft_base.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front 2",
+                option_group: "Men's Lifestyle",
+            },
+            {
+                placement: "front_dtf",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat4/front/05_gildan5000_flat3_front_base_whitebg.png?v=1708429922",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat 4",
+            },
+            {
+                placement: "label_inside_dtf",
+                image_url:
+                    "https://files.cdn.printful.com/m/templates/medium/inside_label__3x3.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Inside label",
+                option_group: "Labels",
+            },
+            {
+                placement: "label_inside_dtf",
+                image_url:
+                    "https://files.cdn.printful.com/m/templates/medium/inside_label__3x3.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Inside label",
+                option_group: "Labels",
+            },
+            {
+                placement: "label_inside_dtf",
+                image_url:
+                    "https://files.cdn.printful.com/m/templates/medium/inside_label__3x3.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Inside label",
+                option_group: "Labels",
+            },
+            {
+                placement: "label_inside_dtf",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat/front/05_gildan5000_flat_front_base_whitebg.png?v=1708429837",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat",
+            },
+            {
+                placement: "label_inside_dtf",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat/front/05_gildan5000_flat_front_base_whitebg.png?v=1708429838",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat",
+            },
+            {
+                placement: "label_inside_dtf",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat/front/05_gildan5000_flat_front_base_whitebg.png?v=1708076752",
+                background_color: "#141313",
+                background_image: null,
+                option: "Front",
+                option_group: "Flat",
+            },
+            {
+                placement: "back_large",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/ghost/back/05_gildan5000_ghost_back_base_whitebg.png?v=1708077814",
+                background_color: "#141313",
+                background_image: null,
+                option: "Back",
+                option_group: "Ghost",
+            },
+            {
+                placement: "back_large",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat/back/05_gildan5000_flat_back_base_whitebg.png?v=1708078085",
+                background_color: "#141313",
+                background_image: null,
+                option: "Back",
+                option_group: "Flat",
+            },
+            {
+                placement: "back_large",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat2/back/05_gildan5000_flat_back_base_whitebg.png?v=1708078162",
+                background_color: "#141313",
+                background_image: null,
+                option: "Back",
+                option_group: "Flat 2",
+            },
+            {
+                placement: "back_large",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat3/back/05_Gildan_5000_Large_Print_flat_back_base_whitebg.png?v=1708078218",
+                background_color: "#141313",
+                background_image: null,
+                option: "Back",
+                option_group: "Flat 3",
+            },
+            {
+                placement: "back_large",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/flat4/back/05_gildan5000_flat3_back_base_whitebg.png?v=1708078272",
+                background_color: "#141313",
+                background_image: null,
+                option: "Back",
+                option_group: "Flat 4",
+            },
+            {
+                placement: "back_large",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/onhanger/back/05_gildan5000_onnhanger_back_base_whitebg.png?v=1708078336",
+                background_color: "#141313",
+                background_image: null,
+                option: "Back",
+                option_group: "On Hanger",
+            },
+            {
+                placement: "back_large",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/spring-summer/back/05_gildan5000_flat_back_light_base.png?v=1708429714",
+                background_color: "#141313",
+                background_image: null,
+                option: "Back 2",
+                option_group: "Spring/summer vibes",
+            },
+            {
+                placement: "back_large",
+                image_url:
+                    "https://files.cdn.printful.com/m/Gildan5000/medium/spring-summer/back/05_gildan5000_flat_back_yellow_base.png?v=1708429685",
+                background_color: "#141313",
+                background_image: null,
+                option: "Back",
+                option_group: "Spring/summer vibes",
+            },
+        ],
+        variants: [
+            {
+                id: 11546,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Black / S)",
+                size: "S",
+                color: "Black",
+                color_code: "#141313",
+                color_code2: "",
+                image: "https://files.cdn.printful.com/products/438/11546_1642678249.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Spain",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Australia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Canada",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/11546",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/11546/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/11546/images",
+                    },
+                },
+            },
+            {
+                id: 11547,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Black / M)",
+                size: "M",
+                color: "Black",
+                color_code: "#141313",
+                color_code2: "",
+                image: "https://files.cdn.printful.com/products/438/11547_1642678240.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Spain",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Australia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Canada",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/11547",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/11547/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/11547/images",
+                    },
+                },
+            },
+            {
+                id: 11548,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Black / L)",
+                size: "L",
+                color: "Black",
+                color_code: "#141313",
+                color_code2: "",
+                image: "https://files.cdn.printful.com/products/438/11548_1642678239.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Spain",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Australia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Canada",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/11548",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/11548/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/11548/images",
+                    },
+                },
+            },
+            {
+                id: 11549,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Black / XL)",
+                size: "XL",
+                color: "Black",
+                color_code: "#141313",
+                color_code2: "",
+                image: "https://files.cdn.printful.com/products/438/11549_1642678249.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Spain",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Australia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Canada",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/11549",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/11549/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/11549/images",
+                    },
+                },
+            },
+            {
+                id: 11550,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Black / 2XL)",
+                size: "2XL",
+                color: "Black",
+                color_code: "#141313",
+                color_code2: "",
+                image: "https://files.cdn.printful.com/products/438/11550_1642678229.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Spain",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Australia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Canada",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/11550",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/11550/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/11550/images",
+                    },
+                },
+            },
+            {
+                id: 11556,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Natural / S)",
+                size: "S",
+                color: "Natural",
+                color_code: "#e8dacd",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/11556_1642678321.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/11556",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/11556/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/11556/images",
+                    },
+                },
+            },
+            {
+                id: 11557,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Natural / M)",
+                size: "M",
+                color: "Natural",
+                color_code: "#e8dacd",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/11557_1642678312.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/11557",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/11557/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/11557/images",
+                    },
+                },
+            },
+            {
+                id: 11558,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Natural / L)",
+                size: "L",
+                color: "Natural",
+                color_code: "#e8dacd",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/11558_1642678301.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/11558",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/11558/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/11558/images",
+                    },
+                },
+            },
+            {
+                id: 11559,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Natural / XL)",
+                size: "XL",
+                color: "Natural",
+                color_code: "#e8dacd",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/11559_1642678321.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/11559",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/11559/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/11559/images",
+                    },
+                },
+            },
+            {
+                id: 11560,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Natural / 2XL)",
+                size: "2XL",
+                color: "Natural",
+                color_code: "#e8dacd",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/11560_1642678300.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/11560",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/11560/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/11560/images",
+                    },
+                },
+            },
+            {
+                id: 11561,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Navy / S)",
+                size: "S",
+                color: "Navy",
+                color_code: "#1a2330",
+                color_code2: "",
+                image: "https://files.cdn.printful.com/products/438/11561_1642678343.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Spain",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Australia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Canada",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/11561",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/11561/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/11561/images",
+                    },
+                },
+            },
+            {
+                id: 11562,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Navy / M)",
+                size: "M",
+                color: "Navy",
+                color_code: "#1a2330",
+                color_code2: "",
+                image: "https://files.cdn.printful.com/products/438/11562_1642678342.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Spain",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Australia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Canada",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/11562",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/11562/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/11562/images",
+                    },
+                },
+            },
+            {
+                id: 11563,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Navy / L)",
+                size: "L",
+                color: "Navy",
+                color_code: "#1a2330",
+                color_code2: "",
+                image: "https://files.cdn.printful.com/products/438/11563_1642678342.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Spain",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Australia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Canada",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/11563",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/11563/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/11563/images",
+                    },
+                },
+            },
+            {
+                id: 11564,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Navy / XL)",
+                size: "XL",
+                color: "Navy",
+                color_code: "#1a2330",
+                color_code2: "",
+                image: "https://files.cdn.printful.com/products/438/11564_1642678353.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Spain",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Australia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Canada",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/11564",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/11564/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/11564/images",
+                    },
+                },
+            },
+            {
+                id: 11565,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Navy / 2XL)",
+                size: "2XL",
+                color: "Navy",
+                color_code: "#1a2330",
+                color_code2: "",
+                image: "https://files.cdn.printful.com/products/438/11565_1642678321.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Spain",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Australia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Canada",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/11565",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/11565/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/11565/images",
+                    },
+                },
+            },
+            {
+                id: 11566,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Red / S)",
+                size: "S",
+                color: "Red",
+                color_code: "#d80019",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/11566_1642678363.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Australia",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/11566",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/11566/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/11566/images",
+                    },
+                },
+            },
+            {
+                id: 11567,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Red / M)",
+                size: "M",
+                color: "Red",
+                color_code: "#d80019",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/11567_1642678363.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Australia",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/11567",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/11567/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/11567/images",
+                    },
+                },
+            },
+            {
+                id: 11568,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Red / L)",
+                size: "L",
+                color: "Red",
+                color_code: "#d80019",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/11568_1642678354.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Australia",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/11568",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/11568/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/11568/images",
+                    },
+                },
+            },
+            {
+                id: 11569,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Red / XL)",
+                size: "XL",
+                color: "Red",
+                color_code: "#d80019",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/11569_1642678363.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Australia",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/11569",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/11569/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/11569/images",
+                    },
+                },
+            },
+            {
+                id: 11570,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Red / 2XL)",
+                size: "2XL",
+                color: "Red",
+                color_code: "#d80019",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/11570_1642678353.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Australia",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/11570",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/11570/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/11570/images",
+                    },
+                },
+            },
+            {
+                id: 11571,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Sport Grey / S)",
+                size: "S",
+                color: "Sport Grey",
+                color_code: "#c4c0be",
+                color_code2: "",
+                image: "https://files.cdn.printful.com/products/438/11571_1642678426.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Spain",
+                        status: "stocked_on_demand",
+                    },
+                    {
+                        region: "Australia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Canada",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/11571",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/11571/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/11571/images",
+                    },
+                },
+            },
+            {
+                id: 11572,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Sport Grey / M)",
+                size: "M",
+                color: "Sport Grey",
+                color_code: "#c4c0be",
+                color_code2: "",
+                image: "https://files.cdn.printful.com/products/438/11572_1642678426.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Spain",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Australia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Canada",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/11572",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/11572/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/11572/images",
+                    },
+                },
+            },
+            {
+                id: 11573,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Sport Grey / L)",
+                size: "L",
+                color: "Sport Grey",
+                color_code: "#c4c0be",
+                color_code2: "",
+                image: "https://files.cdn.printful.com/products/438/11573_1642678415.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Spain",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Australia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Canada",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/11573",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/11573/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/11573/images",
+                    },
+                },
+            },
+            {
+                id: 11574,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Sport Grey / XL)",
+                size: "XL",
+                color: "Sport Grey",
+                color_code: "#c4c0be",
+                color_code2: "",
+                image: "https://files.cdn.printful.com/products/438/11574_1642678426.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Spain",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Australia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Canada",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/11574",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/11574/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/11574/images",
+                    },
+                },
+            },
+            {
+                id: 11575,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Sport Grey / 2XL)",
+                size: "2XL",
+                color: "Sport Grey",
+                color_code: "#c4c0be",
+                color_code2: "",
+                image: "https://files.cdn.printful.com/products/438/11575_1642678405.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Spain",
+                        status: "stocked_on_demand",
+                    },
+                    {
+                        region: "Australia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Canada",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/11575",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/11575/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/11575/images",
+                    },
+                },
+            },
+            {
+                id: 11576,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (White / S)",
+                size: "S",
+                color: "White",
+                color_code: "#fffefa",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/11576_1693310991.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Spain",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Australia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Canada",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/11576",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/11576/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/11576/images",
+                    },
+                },
+            },
+            {
+                id: 11577,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (White / M)",
+                size: "M",
+                color: "White",
+                color_code: "#fffefa",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/11577_1693310981.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Spain",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Australia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Canada",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/11577",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/11577/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/11577/images",
+                    },
+                },
+            },
+            {
+                id: 11578,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (White / L)",
+                size: "L",
+                color: "White",
+                color_code: "#fffefa",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/11578_1693310980.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Spain",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Australia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Canada",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/11578",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/11578/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/11578/images",
+                    },
+                },
+            },
+            {
+                id: 11579,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (White / XL)",
+                size: "XL",
+                color: "White",
+                color_code: "#fffefa",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/11579_1693310991.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Spain",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Australia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Canada",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/11579",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/11579/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/11579/images",
+                    },
+                },
+            },
+            {
+                id: 11580,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (White / 2XL)",
+                size: "2XL",
+                color: "White",
+                color_code: "#fffefa",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/11580_1693310960.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Spain",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Australia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Canada",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/11580",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/11580/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/11580/images",
+                    },
+                },
+            },
+            {
+                id: 12634,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Maroon / S)",
+                size: "S",
+                color: "Maroon",
+                color_code: "#47001b",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/12634_1642678290.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Australia",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/12634",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/12634/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/12634/images",
+                    },
+                },
+            },
+            {
+                id: 12635,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Maroon / M)",
+                size: "M",
+                color: "Maroon",
+                color_code: "#47001b",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/12635_1642678290.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Australia",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/12635",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/12635/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/12635/images",
+                    },
+                },
+            },
+            {
+                id: 12636,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Maroon / L)",
+                size: "L",
+                color: "Maroon",
+                color_code: "#47001b",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/12636_1642678282.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Australia",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/12636",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/12636/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/12636/images",
+                    },
+                },
+            },
+            {
+                id: 12637,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Maroon / XL)",
+                size: "XL",
+                color: "Maroon",
+                color_code: "#47001b",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/12637_1642678290.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Australia",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/12637",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/12637/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/12637/images",
+                    },
+                },
+            },
+            {
+                id: 12638,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Maroon / 2XL)",
+                size: "2XL",
+                color: "Maroon",
+                color_code: "#47001b",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/12638_1642678271.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Australia",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/12638",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/12638/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/12638/images",
+                    },
+                },
+            },
+            {
+                id: 12639,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Sand / S)",
+                size: "S",
+                color: "Sand",
+                color_code: "#d6c0ab",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/12639_1642678384.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/12639",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/12639/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/12639/images",
+                    },
+                },
+            },
+            {
+                id: 12640,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Sand / M)",
+                size: "M",
+                color: "Sand",
+                color_code: "#d6c0ab",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/12640_1642678384.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/12640",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/12640/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/12640/images",
+                    },
+                },
+            },
+            {
+                id: 12641,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Sand / L)",
+                size: "L",
+                color: "Sand",
+                color_code: "#d6c0ab",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/12641_1642678374.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/12641",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/12641/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/12641/images",
+                    },
+                },
+            },
+            {
+                id: 12642,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Sand / XL)",
+                size: "XL",
+                color: "Sand",
+                color_code: "#d6c0ab",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/12642_1642678384.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/12642",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/12642/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/12642/images",
+                    },
+                },
+            },
+            {
+                id: 12643,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Sand / 2XL)",
+                size: "2XL",
+                color: "Sand",
+                color_code: "#d6c0ab",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/12643_1642678374.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/12643",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/12643/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/12643/images",
+                    },
+                },
+            },
+            {
+                id: 12644,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Black / 3XL)",
+                size: "3XL",
+                color: "Black",
+                color_code: "#141313",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/12644_1642678228.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Australia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/12644",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/12644/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/12644/images",
+                    },
+                },
+            },
+            {
+                id: 12645,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Black / 4XL)",
+                size: "4XL",
+                color: "Black",
+                color_code: "#141313",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/12645_1642678228.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Australia",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/12645",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/12645/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/12645/images",
+                    },
+                },
+            },
+            {
+                id: 12646,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Black / 5XL)",
+                size: "5XL",
+                color: "Black",
+                color_code: "#141313",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/12646_1642678239.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Australia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/12646",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/12646/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/12646/images",
+                    },
+                },
+            },
+            {
+                id: 12647,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Sport Grey / 3XL)",
+                size: "3XL",
+                color: "Sport Grey",
+                color_code: "#c4c0be",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/12647_1642678405.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Australia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/12647",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/12647/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/12647/images",
+                    },
+                },
+            },
+            {
+                id: 12648,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Sport Grey / 4XL)",
+                size: "4XL",
+                color: "Sport Grey",
+                color_code: "#c4c0be",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/12648_1642678415.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Australia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/12648",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/12648/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/12648/images",
+                    },
+                },
+            },
+            {
+                id: 12649,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Sport Grey / 5XL)",
+                size: "5XL",
+                color: "Sport Grey",
+                color_code: "#c4c0be",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/12649_1642678415.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Australia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/12649",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/12649/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/12649/images",
+                    },
+                },
+            },
+            {
+                id: 12650,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (White / 3XL)",
+                size: "3XL",
+                color: "White",
+                color_code: "#fffefa",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/12650_1693310970.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Australia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/12650",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/12650/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/12650/images",
+                    },
+                },
+            },
+            {
+                id: 12651,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (White / 4XL)",
+                size: "4XL",
+                color: "White",
+                color_code: "#fffefa",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/12651_1693310980.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Australia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/12651",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/12651/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/12651/images",
+                    },
+                },
+            },
+            {
+                id: 12652,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (White / 5XL)",
+                size: "5XL",
+                color: "White",
+                color_code: "#fffefa",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/12652_1693310980.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Australia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/12652",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/12652/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/12652/images",
+                    },
+                },
+            },
+            {
+                id: 12653,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Navy / 3XL)",
+                size: "3XL",
+                color: "Navy",
+                color_code: "#1a2330",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/12653_1642678332.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Australia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Canada",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/12653",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/12653/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/12653/images",
+                    },
+                },
+            },
+            {
+                id: 12668,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Navy / 4XL)",
+                size: "4XL",
+                color: "Navy",
+                color_code: "#1a2330",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/12668_1642678332.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Australia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/12668",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/12668/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/12668/images",
+                    },
+                },
+            },
+            {
+                id: 12669,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Navy / 5XL)",
+                size: "5XL",
+                color: "Navy",
+                color_code: "#1a2330",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/12669_1642678332.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Australia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/12669",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/12669/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/12669/images",
+                    },
+                },
+            },
+            {
+                id: 14965,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Orange / S)",
+                size: "S",
+                color: "Orange",
+                color_code: "#ff5f2e",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/14965_1652249527.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/14965",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/14965/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/14965/images",
+                    },
+                },
+            },
+            {
+                id: 14966,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Orange / M)",
+                size: "M",
+                color: "Orange",
+                color_code: "#ff5f2e",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/14966_1652249527.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/14966",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/14966/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/14966/images",
+                    },
+                },
+            },
+            {
+                id: 14967,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Orange / L)",
+                size: "L",
+                color: "Orange",
+                color_code: "#ff5f2e",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/14967_1652249527.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/14967",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/14967/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/14967/images",
+                    },
+                },
+            },
+            {
+                id: 14968,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Orange / XL)",
+                size: "XL",
+                color: "Orange",
+                color_code: "#ff5f2e",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/14968_1652249538.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/14968",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/14968/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/14968/images",
+                    },
+                },
+            },
+            {
+                id: 14969,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Orange / 2XL)",
+                size: "2XL",
+                color: "Orange",
+                color_code: "#ff5f2e",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/14969_1652249514.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/14969",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/14969/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/14969/images",
+                    },
+                },
+            },
+            {
+                id: 14970,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Orange / 3XL)",
+                size: "3XL",
+                color: "Orange",
+                color_code: "#ff5f2e",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/14970_1652249516.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/14970",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/14970/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/14970/images",
+                    },
+                },
+            },
+            {
+                id: 14971,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Orange / 4XL)",
+                size: "4XL",
+                color: "Orange",
+                color_code: "#ff5f2e",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/14971_1652249516.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/14971",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/14971/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/14971/images",
+                    },
+                },
+            },
+            {
+                id: 14972,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Orange / 5XL)",
+                size: "5XL",
+                color: "Orange",
+                color_code: "#ff5f2e",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/14972_1652249516.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/14972",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/14972/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/14972/images",
+                    },
+                },
+            },
+            {
+                id: 14973,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Ash / S)",
+                size: "S",
+                color: "Ash",
+                color_code: "#f3f3f3",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/14973_1652249482.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/14973",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/14973/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/14973/images",
+                    },
+                },
+            },
+            {
+                id: 14974,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Ash / M)",
+                size: "M",
+                color: "Ash",
+                color_code: "#f3f3f3",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/14974_1652249482.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/14974",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/14974/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/14974/images",
+                    },
+                },
+            },
+            {
+                id: 14975,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Ash / L)",
+                size: "L",
+                color: "Ash",
+                color_code: "#f3f3f3",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/14975_1652249475.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/14975",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/14975/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/14975/images",
+                    },
+                },
+            },
+            {
+                id: 14976,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Ash / XL)",
+                size: "XL",
+                color: "Ash",
+                color_code: "#f3f3f3",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/14976_1652249487.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/14976",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/14976/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/14976/images",
+                    },
+                },
+            },
+            {
+                id: 14977,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Ash / 2XL)",
+                size: "2XL",
+                color: "Ash",
+                color_code: "#f3f3f3",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/14977_1652249461.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/14977",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/14977/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/14977/images",
+                    },
+                },
+            },
+            {
+                id: 14978,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Ash / 3XL)",
+                size: "3XL",
+                color: "Ash",
+                color_code: "#f3f3f3",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/14978_1652249464.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/14978",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/14978/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/14978/images",
+                    },
+                },
+            },
+            {
+                id: 14979,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Ash / 4XL)",
+                size: "4XL",
+                color: "Ash",
+                color_code: "#f3f3f3",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/14979_1652249467.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/14979",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/14979/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/14979/images",
+                    },
+                },
+            },
+            {
+                id: 14980,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Ash / 5XL)",
+                size: "5XL",
+                color: "Ash",
+                color_code: "#f3f3f3",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/14980_1652249471.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/14980",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/14980/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/14980/images",
+                    },
+                },
+            },
+            {
+                id: 14981,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Sky / S)",
+                size: "S",
+                color: "Sky",
+                color_code: "#8ee0ff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/14981_1652249559.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/14981",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/14981/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/14981/images",
+                    },
+                },
+            },
+            {
+                id: 14982,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Sky / M)",
+                size: "M",
+                color: "Sky",
+                color_code: "#8ee0ff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/14982_1652249559.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/14982",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/14982/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/14982/images",
+                    },
+                },
+            },
+            {
+                id: 14983,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Sky / L)",
+                size: "L",
+                color: "Sky",
+                color_code: "#8ee0ff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/14983_1652249552.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/14983",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/14983/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/14983/images",
+                    },
+                },
+            },
+            {
+                id: 14984,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Sky / XL)",
+                size: "XL",
+                color: "Sky",
+                color_code: "#8ee0ff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/14984_1652249563.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/14984",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/14984/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/14984/images",
+                    },
+                },
+            },
+            {
+                id: 14985,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Sky / 2XL)",
+                size: "2XL",
+                color: "Sky",
+                color_code: "#8ee0ff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/14985_1652249538.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/14985",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/14985/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/14985/images",
+                    },
+                },
+            },
+            {
+                id: 14986,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Sky / 3XL)",
+                size: "3XL",
+                color: "Sky",
+                color_code: "#8ee0ff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/14986_1652249548.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/14986",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/14986/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/14986/images",
+                    },
+                },
+            },
+            {
+                id: 14987,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Sky / 4XL)",
+                size: "4XL",
+                color: "Sky",
+                color_code: "#8ee0ff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/14987_1652249548.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/14987",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/14987/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/14987/images",
+                    },
+                },
+            },
+            {
+                id: 14988,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Sky / 5XL)",
+                size: "5XL",
+                color: "Sky",
+                color_code: "#8ee0ff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/14988_1652249548.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/14988",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/14988/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/14988/images",
+                    },
+                },
+            },
+            {
+                id: 15807,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Brown Savana / S)",
+                size: "S",
+                color: "Brown Savana",
+                color_code: "#9f8971",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15807_1661693873.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15807",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15807/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15807/images",
+                    },
+                },
+            },
+            {
+                id: 15808,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Brown Savana / M)",
+                size: "M",
+                color: "Brown Savana",
+                color_code: "#9f8971",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15808_1661693873.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15808",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15808/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15808/images",
+                    },
+                },
+            },
+            {
+                id: 15809,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Brown Savana / L)",
+                size: "L",
+                color: "Brown Savana",
+                color_code: "#9f8971",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15809_1661693873.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15809",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15809/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15809/images",
+                    },
+                },
+            },
+            {
+                id: 15810,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Brown Savana / XL)",
+                size: "XL",
+                color: "Brown Savana",
+                color_code: "#9f8971",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15810_1661693873.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15810",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15810/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15810/images",
+                    },
+                },
+            },
+            {
+                id: 15811,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Brown Savana / 2XL)",
+                size: "2XL",
+                color: "Brown Savana",
+                color_code: "#9f8971",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15811_1661693863.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15811",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15811/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15811/images",
+                    },
+                },
+            },
+            {
+                id: 15812,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Brown Savana / 3XL)",
+                size: "3XL",
+                color: "Brown Savana",
+                color_code: "#9f8971",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15812_1661693863.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15812",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15812/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15812/images",
+                    },
+                },
+            },
+            {
+                id: 15813,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Azalea / S)",
+                size: "S",
+                color: "Azalea",
+                color_code: "#ff98c6",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15813_1661693863.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15813",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15813/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15813/images",
+                    },
+                },
+            },
+            {
+                id: 15814,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Azalea / M)",
+                size: "M",
+                color: "Azalea",
+                color_code: "#ff98c6",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15814_1661693852.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15814",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15814/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15814/images",
+                    },
+                },
+            },
+            {
+                id: 15815,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Azalea / L)",
+                size: "L",
+                color: "Azalea",
+                color_code: "#ff98c6",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15815_1661693852.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15815",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15815/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15815/images",
+                    },
+                },
+            },
+            {
+                id: 15816,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Azalea / XL)",
+                size: "XL",
+                color: "Azalea",
+                color_code: "#ff98c6",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15816_1661693863.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15816",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15816/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15816/images",
+                    },
+                },
+            },
+            {
+                id: 15817,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Azalea / 2XL)",
+                size: "2XL",
+                color: "Azalea",
+                color_code: "#ff98c6",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15817_1661693852.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15817",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15817/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15817/images",
+                    },
+                },
+            },
+            {
+                id: 15818,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Azalea / 3XL)",
+                size: "3XL",
+                color: "Azalea",
+                color_code: "#ff98c6",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15818_1661693852.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15818",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15818/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15818/images",
+                    },
+                },
+            },
+            {
+                id: 15819,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Cardinal / S)",
+                size: "S",
+                color: "Cardinal",
+                color_code: "#c21b3a",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15819_1661693884.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15819",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15819/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15819/images",
+                    },
+                },
+            },
+            {
+                id: 15820,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Cardinal / M)",
+                size: "M",
+                color: "Cardinal",
+                color_code: "#c21b3a",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15820_1661693884.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15820",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15820/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15820/images",
+                    },
+                },
+            },
+            {
+                id: 15821,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Cardinal / L)",
+                size: "L",
+                color: "Cardinal",
+                color_code: "#c21b3a",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15821_1661693884.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15821",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15821/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15821/images",
+                    },
+                },
+            },
+            {
+                id: 15822,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Cardinal / XL)",
+                size: "XL",
+                color: "Cardinal",
+                color_code: "#c21b3a",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15822_1661693884.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15822",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15822/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15822/images",
+                    },
+                },
+            },
+            {
+                id: 15823,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Cardinal / 2XL)",
+                size: "2XL",
+                color: "Cardinal",
+                color_code: "#c21b3a",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15823_1661693873.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15823",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15823/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15823/images",
+                    },
+                },
+            },
+            {
+                id: 15824,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Cardinal / 3XL)",
+                size: "3XL",
+                color: "Cardinal",
+                color_code: "#c21b3a",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15824_1661693884.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15824",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15824/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15824/images",
+                    },
+                },
+            },
+            {
+                id: 15825,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Carolina Blue / S)",
+                size: "S",
+                color: "Carolina Blue",
+                color_code: "#96bbff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15825_1661693894.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15825",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15825/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15825/images",
+                    },
+                },
+            },
+            {
+                id: 15826,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Carolina Blue / M)",
+                size: "M",
+                color: "Carolina Blue",
+                color_code: "#96bbff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15826_1661693894.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15826",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15826/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15826/images",
+                    },
+                },
+            },
+            {
+                id: 15827,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Carolina Blue / L)",
+                size: "L",
+                color: "Carolina Blue",
+                color_code: "#96bbff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15827_1661693894.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15827",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15827/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15827/images",
+                    },
+                },
+            },
+            {
+                id: 15828,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Carolina Blue / XL)",
+                size: "XL",
+                color: "Carolina Blue",
+                color_code: "#96bbff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15828_1661693905.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15828",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15828/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15828/images",
+                    },
+                },
+            },
+            {
+                id: 15829,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Carolina Blue / 2XL)",
+                size: "2XL",
+                color: "Carolina Blue",
+                color_code: "#96bbff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15829_1661693894.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15829",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15829/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15829/images",
+                    },
+                },
+            },
+            {
+                id: 15830,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Carolina Blue / 3XL)",
+                size: "3XL",
+                color: "Carolina Blue",
+                color_code: "#96bbff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15830_1661693894.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15830",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15830/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15830/images",
+                    },
+                },
+            },
+            {
+                id: 15831,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Charcoal / S)",
+                size: "S",
+                color: "Charcoal",
+                color_code: "#6a6967",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15831_1661693915.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15831",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15831/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15831/images",
+                    },
+                },
+            },
+            {
+                id: 15832,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Charcoal / M)",
+                size: "M",
+                color: "Charcoal",
+                color_code: "#6a6967",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15832_1661693915.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15832",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15832/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15832/images",
+                    },
+                },
+            },
+            {
+                id: 15833,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Charcoal / L)",
+                size: "L",
+                color: "Charcoal",
+                color_code: "#6a6967",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15833_1661693915.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15833",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15833/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15833/images",
+                    },
+                },
+            },
+            {
+                id: 15834,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Charcoal / XL)",
+                size: "XL",
+                color: "Charcoal",
+                color_code: "#6a6967",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15834_1661693915.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15834",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15834/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15834/images",
+                    },
+                },
+            },
+            {
+                id: 15835,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Charcoal / 2XL)",
+                size: "2XL",
+                color: "Charcoal",
+                color_code: "#6a6967",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15835_1661693905.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15835",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15835/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15835/images",
+                    },
+                },
+            },
+            {
+                id: 15836,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Charcoal / 3XL)",
+                size: "3XL",
+                color: "Charcoal",
+                color_code: "#6a6967",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15836_1661693905.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15836",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15836/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15836/images",
+                    },
+                },
+            },
+            {
+                id: 15837,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Dark Chocolate / S)",
+                size: "S",
+                color: "Dark Chocolate",
+                color_code: "#463b33",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15837_1661693936.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15837",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15837/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15837/images",
+                    },
+                },
+            },
+            {
+                id: 15838,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Dark Chocolate / M)",
+                size: "M",
+                color: "Dark Chocolate",
+                color_code: "#463b33",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15838_1661693926.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15838",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15838/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15838/images",
+                    },
+                },
+            },
+            {
+                id: 15839,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Dark Chocolate / L)",
+                size: "L",
+                color: "Dark Chocolate",
+                color_code: "#463b33",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15839_1661693926.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15839",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15839/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15839/images",
+                    },
+                },
+            },
+            {
+                id: 15840,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Dark Chocolate / XL)",
+                size: "XL",
+                color: "Dark Chocolate",
+                color_code: "#463b33",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15840_1661693936.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15840",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15840/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15840/images",
+                    },
+                },
+            },
+            {
+                id: 15841,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Dark Chocolate / 2XL)",
+                size: "2XL",
+                color: "Dark Chocolate",
+                color_code: "#463b33",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15841_1661693925.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15841",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15841/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15841/images",
+                    },
+                },
+            },
+            {
+                id: 15842,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Dark Chocolate / 3XL)",
+                size: "3XL",
+                color: "Dark Chocolate",
+                color_code: "#463b33",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15842_1661693925.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15842",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15842/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15842/images",
+                    },
+                },
+            },
+            {
+                id: 15843,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Dark Heather / S)",
+                size: "S",
+                color: "Dark Heather",
+                color_code: "#595959",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15843_1661693966.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15843",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15843/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15843/images",
+                    },
+                },
+            },
+            {
+                id: 15844,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Dark Heather / M)",
+                size: "M",
+                color: "Dark Heather",
+                color_code: "#595959",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15844_1661693966.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15844",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15844/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15844/images",
+                    },
+                },
+            },
+            {
+                id: 15845,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Dark Heather / L)",
+                size: "L",
+                color: "Dark Heather",
+                color_code: "#595959",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15845_1661693957.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15845",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15845/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15845/images",
+                    },
+                },
+            },
+            {
+                id: 15846,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Dark Heather / XL)",
+                size: "XL",
+                color: "Dark Heather",
+                color_code: "#595959",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15846_1661693966.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15846",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15846/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15846/images",
+                    },
+                },
+            },
+            {
+                id: 15847,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Dark Heather / 2XL)",
+                size: "2XL",
+                color: "Dark Heather",
+                color_code: "#595959",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15847_1661693946.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15847",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15847/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15847/images",
+                    },
+                },
+            },
+            {
+                id: 15848,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Dark Heather / 3XL)",
+                size: "3XL",
+                color: "Dark Heather",
+                color_code: "#595959",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15848_1661693956.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15848",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15848/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15848/images",
+                    },
+                },
+            },
+            {
+                id: 15849,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Gold / S)",
+                size: "S",
+                color: "Gold",
+                color_code: "#ffb22d",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15849_1664355009.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15849",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15849/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15849/images",
+                    },
+                },
+            },
+            {
+                id: 15850,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Gold / M)",
+                size: "M",
+                color: "Gold",
+                color_code: "#ffb22d",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15850_1664355009.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15850",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15850/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15850/images",
+                    },
+                },
+            },
+            {
+                id: 15851,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Gold / L)",
+                size: "L",
+                color: "Gold",
+                color_code: "#ffb22d",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15851_1664355000.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15851",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15851/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15851/images",
+                    },
+                },
+            },
+            {
+                id: 15852,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Gold / XL)",
+                size: "XL",
+                color: "Gold",
+                color_code: "#ffb22d",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15852_1664355019.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15852",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15852/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15852/images",
+                    },
+                },
+            },
+            {
+                id: 15853,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Gold / 2XL)",
+                size: "2XL",
+                color: "Gold",
+                color_code: "#ffb22d",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15853_1664354988.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15853",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15853/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15853/images",
+                    },
+                },
+            },
+            {
+                id: 15854,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Gold / 3XL)",
+                size: "3XL",
+                color: "Gold",
+                color_code: "#ffb22d",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15854_1664354989.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15854",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15854/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15854/images",
+                    },
+                },
+            },
+            {
+                id: 15855,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Irish Green / S)",
+                size: "S",
+                color: "Irish Green",
+                color_code: "#00ba69",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15855_1661693988.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15855",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15855/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15855/images",
+                    },
+                },
+            },
+            {
+                id: 15856,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Irish Green / M)",
+                size: "M",
+                color: "Irish Green",
+                color_code: "#00ba69",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15856_1661693988.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15856",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15856/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15856/images",
+                    },
+                },
+            },
+            {
+                id: 15857,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Irish Green / L)",
+                size: "L",
+                color: "Irish Green",
+                color_code: "#00ba69",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15857_1661693987.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15857",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15857/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15857/images",
+                    },
+                },
+            },
+            {
+                id: 15858,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Irish Green / XL)",
+                size: "XL",
+                color: "Irish Green",
+                color_code: "#00ba69",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15858_1661693997.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15858",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15858/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15858/images",
+                    },
+                },
+            },
+            {
+                id: 15859,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Irish Green / 2XL)",
+                size: "2XL",
+                color: "Irish Green",
+                color_code: "#00ba69",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15859_1661693987.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15859",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15859/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15859/images",
+                    },
+                },
+            },
+            {
+                id: 15860,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Irish Green / 3XL)",
+                size: "3XL",
+                color: "Irish Green",
+                color_code: "#00ba69",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15860_1661693988.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15860",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15860/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15860/images",
+                    },
+                },
+            },
+            {
+                id: 15861,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Light Blue / S)",
+                size: "S",
+                color: "Light Blue",
+                color_code: "#d9efff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15861_1661694008.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15861",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15861/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15861/images",
+                    },
+                },
+            },
+            {
+                id: 15862,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Light Blue / M)",
+                size: "M",
+                color: "Light Blue",
+                color_code: "#d9efff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15862_1661693998.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15862",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15862/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15862/images",
+                    },
+                },
+            },
+            {
+                id: 15863,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Light Blue / L)",
+                size: "L",
+                color: "Light Blue",
+                color_code: "#d9efff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15863_1661693998.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15863",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15863/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15863/images",
+                    },
+                },
+            },
+            {
+                id: 15864,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Light Blue / XL)",
+                size: "XL",
+                color: "Light Blue",
+                color_code: "#d9efff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15864_1661694008.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15864",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15864/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15864/images",
+                    },
+                },
+            },
+            {
+                id: 15865,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Light Blue / 2XL)",
+                size: "2XL",
+                color: "Light Blue",
+                color_code: "#d9efff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15865_1661693998.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15865",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15865/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15865/images",
+                    },
+                },
+            },
+            {
+                id: 15866,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Light Blue / 3XL)",
+                size: "3XL",
+                color: "Light Blue",
+                color_code: "#d9efff",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15866_1661693998.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15866",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15866/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15866/images",
+                    },
+                },
+            },
+            {
+                id: 15867,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Military Green / S)",
+                size: "S",
+                color: "Military Green",
+                color_code: "#737a5f",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15867_1661694019.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15867",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15867/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15867/images",
+                    },
+                },
+            },
+            {
+                id: 15868,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Military Green / M)",
+                size: "M",
+                color: "Military Green",
+                color_code: "#737a5f",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15868_1661694019.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15868",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15868/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15868/images",
+                    },
+                },
+            },
+            {
+                id: 15869,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Military Green / L)",
+                size: "L",
+                color: "Military Green",
+                color_code: "#737a5f",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15869_1661694018.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15869",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15869/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15869/images",
+                    },
+                },
+            },
+            {
+                id: 15870,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Military Green / XL)",
+                size: "XL",
+                color: "Military Green",
+                color_code: "#737a5f",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15870_1661694019.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15870",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15870/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15870/images",
+                    },
+                },
+            },
+            {
+                id: 15871,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Military Green / 2XL)",
+                size: "2XL",
+                color: "Military Green",
+                color_code: "#737a5f",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15871_1661694008.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15871",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15871/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15871/images",
+                    },
+                },
+            },
+            {
+                id: 15872,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Military Green / 3XL)",
+                size: "3XL",
+                color: "Military Green",
+                color_code: "#737a5f",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15872_1661694018.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15872",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15872/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15872/images",
+                    },
+                },
+            },
+            {
+                id: 15873,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Purple / S)",
+                size: "S",
+                color: "Purple",
+                color_code: "#48197d",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15873_1661694030.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15873",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15873/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15873/images",
+                    },
+                },
+            },
+            {
+                id: 15874,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Purple / M)",
+                size: "M",
+                color: "Purple",
+                color_code: "#48197d",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15874_1661694029.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15874",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15874/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15874/images",
+                    },
+                },
+            },
+            {
+                id: 15875,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Purple / L)",
+                size: "L",
+                color: "Purple",
+                color_code: "#48197d",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15875_1661694029.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15875",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15875/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15875/images",
+                    },
+                },
+            },
+            {
+                id: 15876,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Purple / XL)",
+                size: "XL",
+                color: "Purple",
+                color_code: "#48197d",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15876_1661694030.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15876",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15876/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15876/images",
+                    },
+                },
+            },
+            {
+                id: 15877,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Purple / 2XL)",
+                size: "2XL",
+                color: "Purple",
+                color_code: "#48197d",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15877_1661694029.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15877",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15877/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15877/images",
+                    },
+                },
+            },
+            {
+                id: 15878,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Purple / 3XL)",
+                size: "3XL",
+                color: "Purple",
+                color_code: "#48197d",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15878_1661694029.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15878",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15878/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15878/images",
+                    },
+                },
+            },
+            {
+                id: 15879,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Royal / S)",
+                size: "S",
+                color: "Royal",
+                color_code: "#175ac7",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15879_1661694050.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15879",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15879/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15879/images",
+                    },
+                },
+            },
+            {
+                id: 15880,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Royal / M)",
+                size: "M",
+                color: "Royal",
+                color_code: "#175ac7",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15880_1661694050.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15880",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15880/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15880/images",
+                    },
+                },
+            },
+            {
+                id: 15881,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Royal / L)",
+                size: "L",
+                color: "Royal",
+                color_code: "#175ac7",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15881_1661694039.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15881",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15881/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15881/images",
+                    },
+                },
+            },
+            {
+                id: 15882,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Royal / XL)",
+                size: "XL",
+                color: "Royal",
+                color_code: "#175ac7",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15882_1661694050.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15882",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15882/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15882/images",
+                    },
+                },
+            },
+            {
+                id: 15883,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Royal / 2XL)",
+                size: "2XL",
+                color: "Royal",
+                color_code: "#175ac7",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15883_1661694039.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15883",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15883/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15883/images",
+                    },
+                },
+            },
+            {
+                id: 15884,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Royal / 3XL)",
+                size: "3XL",
+                color: "Royal",
+                color_code: "#175ac7",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/15884_1661694039.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "United Kingdom",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/15884",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/15884/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/15884/images",
+                    },
+                },
+            },
+            {
+                id: 16246,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Natural / 3XL)",
+                size: "3XL",
+                color: "Natural",
+                color_code: "#e8dacd",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/16246_1663165041.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/16246",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/16246/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/16246/images",
+                    },
+                },
+            },
+            {
+                id: 16247,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Maroon / 3XL)",
+                size: "3XL",
+                color: "Maroon",
+                color_code: "#47001b",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/16247_1663164958.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/16247",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/16247/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/16247/images",
+                    },
+                },
+            },
+            {
+                id: 16248,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Maroon / 4XL)",
+                size: "4XL",
+                color: "Maroon",
+                color_code: "#47001b",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/16248_1663164959.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/16248",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/16248/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/16248/images",
+                    },
+                },
+            },
+            {
+                id: 16249,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Maroon / 5XL)",
+                size: "5XL",
+                color: "Maroon",
+                color_code: "#47001b",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/16249_1663164969.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/16249",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/16249/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/16249/images",
+                    },
+                },
+            },
+            {
+                id: 16250,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Red / 3XL)",
+                size: "3XL",
+                color: "Red",
+                color_code: "#d80019",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/16250_1663165051.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/16250",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/16250/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/16250/images",
+                    },
+                },
+            },
+            {
+                id: 16251,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Red / 4XL)",
+                size: "4XL",
+                color: "Red",
+                color_code: "#d80019",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/16251_1663165053.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/16251",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/16251/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/16251/images",
+                    },
+                },
+            },
+            {
+                id: 16252,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Red / 5XL)",
+                size: "5XL",
+                color: "Red",
+                color_code: "#d80019",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/16252_1663165057.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/16252",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/16252/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/16252/images",
+                    },
+                },
+            },
+            {
+                id: 16253,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Military Green / 4XL)",
+                size: "4XL",
+                color: "Military Green",
+                color_code: "#737a5f",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/16253_1663165021.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/16253",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/16253/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/16253/images",
+                    },
+                },
+            },
+            {
+                id: 16254,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Military Green / 5XL)",
+                size: "5XL",
+                color: "Military Green",
+                color_code: "#737a5f",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/16254_1663165031.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/16254",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/16254/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/16254/images",
+                    },
+                },
+            },
+            {
+                id: 16255,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Sand / 3XL)",
+                size: "3XL",
+                color: "Sand",
+                color_code: "#d6c0ab",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/16255_1663165067.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Europe",
+                        status: "in_stock",
+                    },
+                    {
+                        region: "Latvia",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/16255",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/16255/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/16255/images",
+                    },
+                },
+            },
+            {
+                id: 16256,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Irish Green / 4XL)",
+                size: "4XL",
+                color: "Irish Green",
+                color_code: "#00ba69",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/16256_1663164926.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/16256",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/16256/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/16256/images",
+                    },
+                },
+            },
+            {
+                id: 16257,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Irish Green / 5XL)",
+                size: "5XL",
+                color: "Irish Green",
+                color_code: "#00ba69",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/16257_1663164937.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/16257",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/16257/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/16257/images",
+                    },
+                },
+            },
+            {
+                id: 16285,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Gold / 4XL)",
+                size: "4XL",
+                color: "Gold",
+                color_code: "#ffb22d",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/16285_1664354989.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/16285",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/16285/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/16285/images",
+                    },
+                },
+            },
+            {
+                id: 16286,
+                catalog_product_id: 438,
+                name: "Gildan 5000 Men’s Classic Tee (Gold / 5XL)",
+                size: "5XL",
+                color: "Gold",
+                color_code: "#ffb22d",
+                color_code2: null,
+                image: "https://files.cdn.printful.com/products/438/16286_1664354989.jpg",
+                availability: [
+                    {
+                        region: "United States",
+                        status: "in_stock",
+                    },
+                ],
+                _links: {
+                    self: {
+                        href: "https://api.printful.com/v2/catalog-variants/16286",
+                    },
+                    product_details: {
+                        href: "https://api.printful.com/v2/catalog-products/438",
+                    },
+                    product_variants: {
+                        href: "https://api.printful.com/v2/catalog-products/438/catalog-variants",
+                    },
+                    variant_prices: {
+                        href: "https://api.printful.com/v2/catalog-variants/16286/prices",
+                    },
+                    variant_images: {
+                        href: "https://api.printful.com/v2/catalog-variants/16286/images",
+                    },
+                },
+            },
+        ],
+    },
+    {
         productName: "Premium Polo Shirt | Port Authority K500",
         price: 26.5,
         images_to_use: [
