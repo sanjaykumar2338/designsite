@@ -243,7 +243,8 @@ const products = [
     // { cid: 4, name: "Women's Slides" },
 
     // { cid: 4, name: "Tough Case for iPhone®" },
-    { cid: 4, name: "Clear Case for Samsung®" },
+    // { cid: 4, name: "Clear Case for Samsung®" },
+    { cid: 1, name: "Men’s Classic Tee | Gildan 5000" },
 ];
 
 products.forEach((p, i) => {
