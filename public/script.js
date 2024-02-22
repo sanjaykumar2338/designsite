@@ -320,6 +320,12 @@ function setVariant(color_code, size) {
     }
 }
 
+function hideEditables() {
+    const elements = getElByClass("editable");
+    Array.from(elements).forEach((e) => {
+        e.style.display = "none";
+    });
+}
 function init() {
     getCountries();
     product = JSON.parse(getEl("data").innerText);
@@ -329,6 +335,7 @@ function init() {
     product.variants = _product.variants;
     if (product.imageData) {
         product.imageData = JSON.parse(product.imageData);
+        if (product.imageData.editable) hideEditables();
     } else {
         product.imageData = _product.images_to_use;
     }
@@ -564,6 +571,10 @@ function setSelected(selected) {
 
 function getEl(id) {
     return document.getElementById(id);
+}
+
+function getElByClass(name) {
+    return document.getElementsByClassName(name);
 }
 
 function addLine() {

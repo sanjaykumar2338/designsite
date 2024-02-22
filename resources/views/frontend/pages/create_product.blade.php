@@ -125,12 +125,11 @@
                         <div id="product-colours">
                         </div>
 
-                        <div class="flex flex-wrap prd-opt-one align-items-center cmn-prd-opt"
-                            style="{{ $product->imageData->editable ?? $product->imageData->editable ? 'display: none' : '' }}">
+                        <div class="flex flex-wrap prd-opt-one align-items-center cmn-prd-opt editable">
                             <button class="border prd-btn rounded-lg p-2 px-3" onclick="setShowModal(true)">
                                 Add Image
                             </button>&nbsp;&nbsp;
-                            <button class="border prd-btn rounded-lg p-2 px-3" onclick="addText()" style="">
+                            <button class="border prd-btn rounded-lg p-2 px-3" onclick="addText()">
                                 Add Text
                             </button>
                             <div class="img-add-opt">
@@ -154,7 +153,7 @@
                                 </div><br />
                             @endif
 
-                            <div class="prd-opt-four">
+                            <div class="prd-opt-four editable">
                                 <h4 class="expand_option" style="cursor:pointer">Click to Draw Shapes:</h4>
                                 <div class="prd-objects flex flex-wrap" style="display:none;">
                                     <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
