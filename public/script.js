@@ -321,6 +321,7 @@ function setVariant(color_code, size) {
 }
 
 function hideEditables() {
+    debugger;
     const elements = getElByClass("editable");
     Array.from(elements).forEach((e) => {
         e.style.display = "none";
