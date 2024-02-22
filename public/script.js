@@ -336,7 +336,8 @@ function init() {
     product.variants = _product.variants;
     if (product.imageData) {
         product.imageData = JSON.parse(product.imageData);
-        if (product.imageData.editable) hideEditables();
+        debugger;
+        if (product.imageData.editable === false) hideEditables();
     } else {
         product.imageData = _product.images_to_use;
     }
