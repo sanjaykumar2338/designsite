@@ -125,11 +125,12 @@
                         <div id="product-colours">
                         </div>
 
-                        <div class="flex flex-wrap prd-opt-one align-items-center cmn-prd-opt">
+                        <div class="flex flex-wrap prd-opt-one align-items-center cmn-prd-opt"
+                            style="{{ $product->imageData->editable ?? $product->imageData->editable ? 'display: none' : '' }}">
                             <button class="border prd-btn rounded-lg p-2 px-3" onclick="setShowModal(true)">
                                 Add Image
                             </button>&nbsp;&nbsp;
-                            <button class="border prd-btn rounded-lg p-2 px-3" onclick="addText()">
+                            <button class="border prd-btn rounded-lg p-2 px-3" onclick="addText()" style="">
                                 Add Text
                             </button>
                             <div class="img-add-opt">
@@ -364,7 +365,7 @@
                         <input type="text" id="cd_number"
                             class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" value=""
                             placeholder="Phone Number" name="cd_number" required />
-                        
+
                         <label class="font-medium text-gray-800">Address*</label>
                         <input type="text" id="cd_address"
                             class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" value=""
