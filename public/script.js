@@ -321,7 +321,6 @@ function setVariant(color_code, size) {
 }
 
 function hideEditables() {
-    debugger;
     const elements = getElByClass("editable");
     Array.from(elements).forEach((e) => {
         e.style.display = "none";
@@ -336,7 +335,6 @@ function init() {
     product.variants = _product.variants;
     if (product.imageData) {
         product.imageData = JSON.parse(product.imageData);
-        debugger;
         if (product.imageData.editable === false) hideEditables();
     } else {
         product.imageData = _product.images_to_use;
