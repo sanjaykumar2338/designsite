@@ -138,10 +138,10 @@
                         <p>Demonstrate your voice, challenge deception, and advocate for accountability.
                         </p>
                         <div class="f-icon">
-                            <i class="fa-brands fa-facebook-f"></i>
-                            <i class="fa-brands fa-twitter"></i>
-                            <i class="fa-brands fa-linkedin-in"></i>
-                            <i class="fa-brands fa-vimeo-v"></i>
+                            <a href="https://www.facebook.com/causestand" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/standcause" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@cause.stand" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+                            <a href="https://www.youtube.com/@CauseStand" target="_blank"><i class="fa-brands fa-youtube"></i></a>
                         </div>
                     </div>
                 </div>
@@ -184,18 +184,18 @@
                         <h3>Talk To Us</h3>
                         <p class="Got">Got Questions? Call us</p>
                         <h4 class="mobile-number">
-                            + 00 123 456 789
+                            + 973-437-3877
                         </h4>
                         <ul>
                             <li class="align">
                                 <i class="fa-regular fa-envelope"></i>
                                 <span>
-                                    info@gmail.com</span>
+                                   info@causestand.com</span>
                             </li>
                             <li class="align margin-top">
                                 <i class="fa-solid fa-location-dot"></i>
-                                <span>79 Sleepy Hollow St.
-                                    Jamaica,
+                                <span>96 Meadow Road
+                                    Rutherford, NJ 07070
                                 </span>
                             </li>
                         </ul>
