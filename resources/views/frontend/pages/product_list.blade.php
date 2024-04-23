@@ -22,6 +22,9 @@
 
                 @if($products->count())
                     @foreach($products as $product)
+                        
+                        <input type="hidden" name="product_ids" value="{{$product->id}}">
+
                         @if($product->front_image!="")
                             {{--Product ID: {{$product->id}}--}}
                             <div class="col-lg-3 col-md-6 col-sm-6">
