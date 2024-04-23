@@ -1,6 +1,9 @@
 @extends('frontend.layout.product_creation')
 
 @section('content')
+    
+    <input type="hidden" name="product_ids" value="{{$product->id}}">
+
     <div class="crt-prd-main">
         <div id="data" hidden>{{ $product }}</div>
         <div class="container">
