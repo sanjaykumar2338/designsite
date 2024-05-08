@@ -86020,7 +86020,7 @@ const allProductsImages = [
         ],
     },
     {
-        productName: "Tough Case for iPhone®",
+        productName: "Tough Case for iPhone",
         price: 16.5,
         images: [
             {
