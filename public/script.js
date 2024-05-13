@@ -999,7 +999,8 @@ function createProduct(files) {
     // });
 
     const _product = JSON.stringify({
-        sync_product: { name: "test", thumbnail: files[0].url },
+        sync_product: { name: product.product_name, thumbnail: files[0].url },
+        //sync_product: { name: "test", thumbnail: files[0].url },
         sync_variants: [
             {
                 files,

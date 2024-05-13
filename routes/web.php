@@ -94,6 +94,8 @@ Route::post(
 );
 
 Route::post('/charge', [App\Http\Controllers\PaymentController::class, 'processPayment'])->name('charge');
+Route::get('/create-checkout-session', [App\Http\Controllers\PaymentController::class, 'createCheckoutSession']);
+
 Route::get('/linkstorage', function () {
     Artisan::call('storage:link');
 });
