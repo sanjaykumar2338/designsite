@@ -1,18 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{env('APP_NAME')}}</title>
-    <!-- stylesheet  -->
-    
-
-    <!--
-        <link rel="stylesheet" href="asset/frontend/css/stylesheet.css">
-        <link rel="stylesheet" href="asset/frontend/css/responsive.css">
-    -->
-
+    <title>{{ isset($pageTitle) ? $pageTitle : env('APP_NAME') }}</title>
+    <meta name="description" content="{{ isset($metaDescription) ? $metaDescription : '' }}">
+    <meta name="keywords" content="{{ isset($keywords) ? $keywords : '' }}">
+   
     <link rel="stylesheet" href="{{url('/')}}/asset/frontend/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{url('/')}}/asset/frontend/css/responsive.css">
     <link rel="stylesheet" href="{{url('/')}}/asset/frontend/css/stylesheet.css">
@@ -36,10 +30,9 @@
     <link rel="icon" type="image/x-icon" href="asset/frontend/images/new-logo.jpg">
 
 </head>
-
 <body>
-    <!-- ========== Start top-bar ========== -->
 
+    <!-- ========== Start top-bar ========== -->
     <div class="top-bar">
         <div class="container">
             <div class="row">
@@ -135,7 +128,10 @@
                 <div class="col-md-12 col-lg-3">
                     <div class="fo-one">
                         <img src="{{url('/')}}/asset/frontend/images/logo-footer.png" alt="">
-                        <p>Demonstrate your voice, challenge deception, and advocate for accountability.
+                        
+                        <p>
+                            Cause Stand Urban Style - Where Fashion Meets Activism
+                            Explore our collection of activist streetwear clothing, blending style with substance. Our progressive fashion brand offers social justice clothing and advocacy apparel for college students, empowering you to express your beliefs boldly and support causes you care about. Join us in wearing your convictions proudly and spark change with every outfit. Shop the Cause Stand urban style brand to demonstrate your voice, challenge deception, and advocate for accountability.
                         </p>
                         <div class="f-icon">
                             <a href="https://www.facebook.com/causestand" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>

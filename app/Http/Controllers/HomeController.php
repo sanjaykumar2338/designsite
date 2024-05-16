@@ -61,7 +61,11 @@ class HomeController extends Controller
 
     public function aboutus()
     {
-        return view('frontend.pages.aboutus');
+        $metaDescription = 'As a progressive clothing brand excelling in activist streetwear clothing and political fashion, we champion fashion activism and offer social justice apparel.';
+        $keywords = 'activist streetwear clothing, political fashion, fashion activism, social justice apparel, progressive clothing brand';
+        $pageTitle = 'Fashion with a Cause - Activist Streetwear Clothing Brand';
+
+        return view('frontend.pages.aboutus')->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords);;
     }
 
     public function conflicts()
@@ -109,7 +113,11 @@ class HomeController extends Controller
 
     public function justice()
     {
-        return view('frontend.pages.justice');
+        $metaDescription = 'Join the movement for justice by shopping the Advocacy Fashion Collection to eject corrupt politicians, hold institutions accountable, and combat propaganda.';
+        $keywords = 'fashion activism, advocacy clothing, justice apparel, activist fashion';
+        $pageTitle = 'Advocate for Justice Through Fashion - Urban Style Advocacy';
+
+        return view('frontend.pages.justice')->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords);
     }
 
     public function products()
