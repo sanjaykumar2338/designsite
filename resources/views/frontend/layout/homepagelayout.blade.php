@@ -9,9 +9,9 @@
    
     <link rel="stylesheet" href="{{url('/')}}/asset/frontend/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{url('/')}}/asset/frontend/css/responsive.css">
-    <link rel="stylesheet" href="{{url('/')}}/asset/frontend/css/stylesheet.css">
-    <link rel="stylesheet" href="{{url('/')}}/asset/frontend/css/final-style.css">
-    <link rel="stylesheet" href="{{url('/')}}/asset/frontend/css/final-responsive.css">
+    <link rel="stylesheet" href="{{url('/')}}/asset/frontend/css/stylesheet.css?v={{time()}}">
+    <link rel="stylesheet" href="{{url('/')}}/asset/frontend/css/final-style.css?v={{time()}}">
+    <link rel="stylesheet" href="{{url('/')}}/asset/frontend/css/final-responsive.css?v={{time()}}">
 
 
     <!-- font-awesome -->
