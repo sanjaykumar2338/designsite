@@ -549,32 +549,42 @@
 <section class="Donations">
     <div class="container">
         <h3 class="heading">Donations</h3>
-        <p>Upon incorporating an image into your purchase, a $10 contribution is donated to strengthen the associated
+        <p class="Upon">Upon incorporating an image into your purchase, a $10 contribution is donated to strengthen the associated
             cause.</p>
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6 add-margin">
                 <div class="Donations-box">
                     <h3>Donations</h3>
+                    
+
+                    <div class="inner_text">
                     <span>How Does it Work?</span>
                     <p class="p">Customize your apparel to donate! *$10 contribution is added per image added
                     </p>
                     <p class="p">Contributions are donated instantly from the shoppers’ account *CauseStand pays the
                         fees
                     </p>
+                    </div>
+
                 </div>
             </div>
 
             <div class="col-lg-3 col-md-6 col-sm-6 add-margin">
                 <div class="Donations-box">
                     <h3>Total</h3>
+
+                    <div class="inner_text">
                     <p class="p">$3000
                     </p>
+                    </div>
                 </div>
             </div>
 
             <div class="col-lg-3 col-md-6 col-sm-6 add-margin">
                 <div class="Donations-box">
                     <h3>By Cause</h3>
+
+                    <div class="inner_text">
                     <div class="algin-span">
                         <span>Israeli</span>
                         <span>$1000</span>
@@ -600,6 +610,7 @@
                             Make a Difference </span>
                         <span>$6000</span>
                     </div>
+                    </div>
                 </div>
 
 
@@ -611,6 +622,7 @@
                 <div class="Donations-box">
                     <h3 class="add-style">Donate
                         Make a Difference</h3>
+                        <div class="inner_text">
                     <select class="form-select" aria-label="Default select example">
                         <option selected>Choose your Cause
                         </option>
@@ -618,7 +630,8 @@
                         <option value="2">Two</option>
                         <option value="3">Three</option>
                     </select>
-                </div>
+                    </div>
+                    </div>
             </div>
 
         </div>
