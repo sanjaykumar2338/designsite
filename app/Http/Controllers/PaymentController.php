@@ -7,6 +7,7 @@ use Stripe\Checkout\Session;
 use Stripe\PaymentIntent;
 use App\Models\Payment;
 use App\Mail\OrderPlaced;
+use App\Models\User;
 use Auth;
 use Mail;
 
@@ -23,6 +24,7 @@ class PaymentController extends Controller
                 'payment_method' => $request->payment_method_id,
                 'confirmation_method' => 'manual',
                 'confirm' => true,
+                'return_url' => 'https://causestand.com/return', // Specify your return URL here
             ]);
 
             // Save payment data to your database
@@ -37,8 +39,10 @@ class PaymentController extends Controller
             $payment->payment_intent_id = $paymentIntent->id;
             $payment->save();
 
+            $user = User::find(auth()->user()->id);
+
             // Send order placed email
-            Mail::to(auth()->user()->email)->send(new OrderPlaced($payment));
+            Mail::to(auth()->user()->email)->send(new OrderPlaced($payment, $user));
 
             return response()->json(['success' => true, 'message' => 'Payment successful','payment_id' => $payment->id]);
         } catch (\Exception $e) {
