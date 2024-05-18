@@ -2805,3 +2805,24 @@ footer .fo-one p {
   padding: 15px 0px 17px 0px !important;
   font-size: 16px !;
 }
+
+.sm\:pb-4 {
+  padding-top: 15px !important;
+  padding-bottom: 1rem;
+  display: block !important;
+  /* overflow-y: scroll !important; */
+}
+.outline-none {
+outline: 2px solid transparent;
+outline-offset: 2px;
+margin: 5px 0px 5px 0px !important;
+}
+.outline-none {
+outline: 2px solid transparent;
+outline-offset: 2px;
+margin: 5px 0px 5px 0px !important;
+}
+.fodal {
+max-width: 40rem;
+height: 100%;
+}

@@ -348,8 +348,8 @@
                 <span class="hidden sm:inline-block sm:align-middle sm:h-screen">
                     &#8203;
                 </span>
-                <div class="inline-block align-center bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:align-middle sm:max-w-lg sm:w-full"
-                    role="dialog" style="max-width: 50rem;" aria-modal="true" aria-labelledby="modal-headline">
+                <div class="fodal inline-block align-center bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:align-middle sm:max-w-lg sm:w-full"
+                    role="dialog" style="max-width: 45rem;" aria-modal="true" aria-labelledby="modal-headline">
                     <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                         <label class="font-bold text-gray-800">Your Details</label>
                         <br>
