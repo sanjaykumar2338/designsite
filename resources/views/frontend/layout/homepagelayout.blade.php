@@ -129,9 +129,10 @@
                     <div class="fo-one">
                         <img src="{{url('/')}}/asset/frontend/images/logo-footer.png" alt="">
                         
-                        <p>
-                            Cause Stand Urban Style - Where Fashion Meets Activism
-                            Explore our collection of activist streetwear clothing, blending style with substance. Our progressive fashion brand offers social justice clothing and advocacy apparel for college students, empowering you to express your beliefs boldly and support causes you care about. Join us in wearing your convictions proudly and spark change with every outfit. Shop the Cause Stand urban style brand to demonstrate your voice, challenge deception, and advocate for accountability.
+                        
+                            <h5>
+                            Cause Stand Urban Style - Where Fashion Meets Activism</h5>
+                        <p>    Explore our collection of activist streetwear clothing, blending style with substance. Our progressive fashion brand offers social justice clothing and advocacy apparel for college students, empowering you to express your beliefs boldly and support causes you care about. Join us in wearing your convictions proudly and spark change with every outfit. Shop the Cause Stand urban style brand to demonstrate your voice, challenge deception, and advocate for accountability.
                         </p>
                         <div class="f-icon">
                             <a href="https://www.facebook.com/causestand" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>

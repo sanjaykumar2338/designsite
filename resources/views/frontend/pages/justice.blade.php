@@ -68,7 +68,7 @@
 
 
 
-                    <p>:::>>>[Subscribe] [Shop the Collection] [Hall of Shame] [Learn more]<<<:::< /p>
+                    <!-- <p>:::>>>[Subscribe] [Shop the Collection] [Hall of Shame] [Learn more]<<<:::< /p> -->
 
                             <h3>Political Hypocrisy Awareness - Public Rejection</h3>
                             <p>Accepting Contribution and Robbing the People from the Truth! Display the hypocrisy of
@@ -108,7 +108,7 @@
 
 
 
-                            <p>:::>>>[Subscribe] [Shop the Collection] [Hall of Shame] [Learn more]<<<:::< /p>
+                            <!-- <p>:::>>>[Subscribe] [Shop the Collection] [Hall of Shame] [Learn more]<<<:::< /p> -->
                                     <h3>When Lawmakers Promote Legislation Favoring their Stock Trade!</h3>
                                     <p>Subscribe to join the Ethic-reform Movement; your subscription includes a monthly
                                         donation and the monthly “Hall of Shame” hoodie from the Trader Collection. Ban
@@ -141,8 +141,8 @@
 
 
 
-
-                                    <p>:::>>>[Subscribe] [Shop the Collection] [Hall of Shame] [Learn more]<<<:::< /p>
+<!-- 
+                                    <p>:::>>>[Subscribe] [Shop the Collection] [Hall of Shame] [Learn more]<<<:::< /p> -->
 
 
 
@@ -170,9 +170,7 @@
                                                 wearable reminder of the ongoing battle against biased and misleading
                                                 news. This collection is designed to raise awareness about the dangers
                                                 of propaganda.</p>
-                                            <p>:::>>>[Subscribe] [Shop the Collection] [Hall of Shame] [Learn more]
-                                                <<<:::< /p>
-
+                                           
                                                     <div class="row">
                                                         <div class="col-lg-3">
                                                             <div class="sub_">

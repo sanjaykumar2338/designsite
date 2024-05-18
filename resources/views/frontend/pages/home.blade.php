@@ -202,13 +202,52 @@
                     <h2 class="accordion-header" id="flush-headingOne">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                            Welcome to Cause Stand - Where Fashion Meets Activism v
+                            Welcome to Cause Stand - Where Fashion Meets Activism 
                         </button>
                     </h2>
                     <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
-                            <div class="row mt-4">
+
+                            <div class="body-text">
+                                <h5> <strong> Welcome to Cause Stand - Where Fashion Meets Activism</strong>
+                                </h5>
+                                <p>As a political fashion company, we are more than just a brand - we are a movement. As
+                                    one of the leading activist clothing brand, we take
+                                    pride in our commitment to social and political causes, offering a platform for
+                                    individuals to express their beliefs through fashion</p>
+                                <h5> <strong> Student Advocacy Apparel, Where Fashion Meets Passion </strong></h5>
+                                <p>We're more than just a clothing and accessories brand—we're a community of
+                                    change-makers dedicated to making a difference on college campuses
+                                    across the nation.
+                                    Our passion lies in crafting clothing that not only makes a statement but also
+                                    sparks conversations and drive change.
+                                    At Cause Stand, we redefine political fashion by blending style with substance,
+                                    creating clothing that resonates with progressive values and
+                                    challenges the status quo. Our collection of leftist clothing brands showcases bold
+                                    designs and powerful messages, empowering wearers to
+                                    proudly stand for what they believe in. </p>
+                                <h5> <strong>Controversial Political Shirts by a Progressive Clothing Brand </strong>
+                                </h5>
+                                <p>Each piece in our collection tells a story and serves as a symbol of resistance and
+                                    resilience.
+                                    With our extensive range of political merch, social justice clothing, and advocacy
+                                    gear, we provide a platform for your voice to be heard loud
+                                    and clear. From liberal to progressive, from anarchy to activism, our collection
+                                    caters to every shade of passion and belief. Our awareness
+                                    shirts are not just fabric; they're statements, rallying cries for a better
+                                    tomorrow.
+                                    Join us in wearing your convictions proudly, as we march forward in solidarity,
+                                    draped in the fabric of change.</p>
+                            </div>
+
+
+
+
+
+
+
+                            <!-- <div class="row mt-4">
                                 <div class="col-lg-5 p-0">
                                     <div class="student_s">
                                         <h4>College Students Discount
@@ -257,10 +296,60 @@
 
                                 </div>
 
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-lg-5 p-0">
+                    <div class="student_s">
+                        <h4>College Students Discount
+                        </h4>
+                        <p>Order trending demonstration clothing and accessories
+                        </p>
+                        <h6>UP TO 30% OFF
+                        </h6>
+                        <p>Shop tees, hoodies, bags, headwear, footwear and phone cases <br> that fit your
+                            cause.
+
+                        </p>
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="col-lg-7 p-0">
+                    <div class="Adv_ocacy">
+                        <h4>Shop Advocacy Apparel for Students</h4>
+                        <div class="row">
+                            <div class="col-lg-6 p-0">
+                                <li>Shop Advocacy Tees<br>
+                                    for the Advocate Student</li>
+                                <li class="mt-3">Shop demonstration hoodies<br>
+                                    for students advocating for<br>
+                                    ethical reform and<br>
+                                    political justice</li>
+                            </div>
+                            <div class="col-lg-6 p-0 edit_ ">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Stand With v
+                                    </option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                                <button>View Student Deals</button>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
         </div>
 
@@ -282,14 +371,35 @@
                     <h2 class="accordion-header" id="flush-headingtwo">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapsetwo" aria-expanded="false" aria-controls="flush-collapsetwo">
-                            Protest Clothing for the Advocate Student v
+                            Protest Clothing for the Advocate Student 
                         </button>
                     </h2>
                     <div id="flush-collapsetwo" class="accordion-collapse collapse" aria-labelledby="flush-headingtwo"
                         data-bs-parent="#accordionFlushExample">
+                        <h5><strong>Protest Clothing for the Advocate Student
+                            </strong></h5>
+                        <p>Our mission for the advocate student is simple, to provide resources to empower college
+                            students to express their beliefs and champion the causes they
+                            care about, all while looking effortlessly stylish. At Cause Stand, we believe that what you
+                            wear should be trending and express a powerful statement.
+                            That's why we're offering a unique collection of apparel and accessories designed to inspire
+                            action, ignite conversations, and promote advocacy.</p>
+                        <h5> </strong> Social Justice Clothing for the Advocate College Student
+                      </h5>  </h5>
+                        <p>For students seeking ethical and political justice, finding the right apparel to express
+                            their beliefs can be a powerful tool to advocate for ethical reform and political justice.
+                            At Cause Stand, we specialize in creating clothing and accessories that resonate with the
+                            passion and values of college students. From graphic advocacy
+                            shirts, demonstration hoodies and ethnic scarves to fashion bags, stylish shoes and
+                            awareness accessories with bold messages that
+                            stand out in a crowd, our products are made with quality and humanity in mind. Plus, a
+                            portion of every purchase goes directly to support non-profits and
+                            initiatives that align with your core values.
+                            Ready to wear your heart on your sleeve—literally!
+                            Wear your conviction proudly and be ready to turn heads and spark change, one outfit at a
+                            time!</p>
 
-
-                        <div class="text_">
+                        <!-- <div class="text_">
                             <h4>Shop a Fashion Collection and Join an Advocacy Movement</h4>
 
                             <div class="row mt-4">
@@ -372,8 +482,6 @@
 
                             </div>
                         </div>
-
-
                         <div class="text_2">
                             <h5>We Want to Hear from You - What do you Think?
                             </h5>
@@ -465,10 +573,185 @@
 
 
 
-                        </div>
+                        </div> -->
 
                     </div>
                 </div>
+            </div>
+            <div class="text_">
+                <h4>Shop a Fashion Collection and Join an Advocacy Movement</h4>
+
+                <div class="row mt-4">
+                    <div class="col-lg-3 ">
+                        <div class="card_s">
+                            <button> Boycott
+                                Movement</button>
+                            <h3>Shop the
+                                Oversight Collection</h3>
+                            <p>Hold institutions accountable
+                                for biased influence. </p>
+
+                            <div class="p_pic">
+                                <img src="http://127.0.0.1:8000/storage/images/hjEdInOhTho7sjcTKq7TUSGLQAP47YHs8pSTb1mk.webp"
+                                    alt="" class="img-fluid">
+
+                            </div>
+                            <a href="">Learn more</a>
+
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3 ">
+                        <div class="card_s">
+                            <button> Boycott
+                                Movement</button>
+                            <h3>Shop the
+                                Oversight Collection</h3>
+                            <p>Hold institutions accountable
+                                for biased influence. </p>
+
+                            <div class="p_pic">
+                                <img src="http://127.0.0.1:8000/storage/images/hjEdInOhTho7sjcTKq7TUSGLQAP47YHs8pSTb1mk.webp"
+                                    alt="" class="img-fluid">
+
+                            </div>
+                            <a href="">Learn more</a>
+
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3 ">
+                        <div class="card_s">
+                            <button> Boycott
+                                Movement</button>
+                            <h3>Shop the
+                                Oversight Collection</h3>
+                            <p>Hold institutions accountable
+                                for biased influence. </p>
+
+                            <div class="p_pic">
+                                <img src="http://127.0.0.1:8000/storage/images/hjEdInOhTho7sjcTKq7TUSGLQAP47YHs8pSTb1mk.webp"
+                                    alt="" class="img-fluid">
+
+                            </div>
+                            <a href="">Learn more</a>
+
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3 ">
+                        <div class="card_s">
+                            <button> Boycott
+                                Movement</button>
+                            <h3>Shop the
+                                Oversight Collection</h3>
+                            <p>Hold institutions accountable
+                                for biased influence. </p>
+
+                            <div class="p_pic">
+                                <img src="http://127.0.0.1:8000/storage/images/hjEdInOhTho7sjcTKq7TUSGLQAP47YHs8pSTb1mk.webp"
+                                    alt="" class="img-fluid">
+
+                            </div>
+                            <a href="">Learn more</a>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="text_2">
+                <h5>We Want to Hear from You - What do you Think?
+                </h5>
+                <p>Choose a cause and share your thoughts on today's most critical issues, from social
+                    justice and <br>political biases to corrupt ethics and
+                    manipulative perspectives</p>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected="">Stand With v
+                    </option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+
+
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="Question_s">
+                            <h4>Notional Poll - Public Standpoint</h4>
+                            <p>Share your perspective and ideological stance on current
+                                issues that should prompt critical thinking.</p>
+
+
+                            <h2>Question 1..........?</h2>
+
+
+
+                            <div class="input_s">
+                                <label class="container">A. Answer 1
+                                    <input type="radio" checked="checked" name="radio">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="container">A. Answer 2
+                                    <input type="radio" name="radio">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="container">A. Answer 3
+                                    <input type="radio" name="radio">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="container">A. Answer 4
+                                    <input type="radio" name="radio">
+                                    <span class="checkmark"></span>
+                                </label>
+
+                            </div>
+                            <div class="btn_s">
+                                <button>Submit </button>
+                                <button>Learn more</button>
+
+                            </div>
+
+
+
+
+
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+                    <div class="col-lg-6">
+                        <div class="Question_2">
+                            <h4>Notional Poll - Public Standpoint Hall of Shame Poll - Political Ejection
+                            </h4>
+                            <p>Assert your discontent with the establishment, empower
+                                your influence, and proclaim your voice.</p>
+                            <h6>Question 1..........?</h6>
+
+
+                            <div class="btn_s">
+                                <button>Submit </button>
+                                <button>Learn more</button>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+
             </div>
         </div>
 
@@ -549,21 +832,22 @@
 <section class="Donations">
     <div class="container">
         <h3 class="heading">Donations</h3>
-        <p class="Upon">Upon incorporating an image into your purchase, a $10 contribution is donated to strengthen the associated
+        <p class="Upon">Upon incorporating an image into your purchase, a $10 contribution is donated to strengthen the
+            associated
             cause.</p>
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6 add-margin">
                 <div class="Donations-box">
                     <h3>Donations</h3>
-                    
+
 
                     <div class="inner_text">
-                    <span>How Does it Work?</span>
-                    <p class="p">Customize your apparel to donate! *$10 contribution is added per image added
-                    </p>
-                    <p class="p">Contributions are donated instantly from the shoppers’ account *CauseStand pays the
-                        fees
-                    </p>
+                        <span>How Does it Work?</span>
+                        <p class="p">Customize your apparel to donate! *$10 contribution is added per image added
+                        </p>
+                        <p class="p">Contributions are donated instantly from the shoppers’ account *CauseStand pays the
+                            fees
+                        </p>
                     </div>
 
                 </div>
@@ -574,8 +858,8 @@
                     <h3>Total</h3>
 
                     <div class="inner_text">
-                    <p class="p">$3000
-                    </p>
+                        <p class="p">$3000
+                        </p>
                     </div>
                 </div>
             </div>
@@ -585,31 +869,31 @@
                     <h3>By Cause</h3>
 
                     <div class="inner_text">
-                    <div class="algin-span">
-                        <span>Israeli</span>
-                        <span>$1000</span>
-                    </div>
+                        <div class="algin-span">
+                            <span>Israeli</span>
+                            <span>$1000</span>
+                        </div>
 
-                    <div class="algin-span">
-                        <span>Palestinian</span>
-                        <span>$1211</span>
-                    </div>
+                        <div class="algin-span">
+                            <span>Palestinian</span>
+                            <span>$1211</span>
+                        </div>
 
 
 
-                    <div class="algin-span">
-                        <span>Russiona</span>
-                        <span>$591</span>
-                    </div>
-                    <div class="algin-span">
-                        <span>Ukraine</span>
-                        <span>$6000</span>
-                    </div>
-                    <div class="algin-span">
-                        <span>Donate
-                            Make a Difference </span>
-                        <span>$6000</span>
-                    </div>
+                        <div class="algin-span">
+                            <span>Russiona</span>
+                            <span>$591</span>
+                        </div>
+                        <div class="algin-span">
+                            <span>Ukraine</span>
+                            <span>$6000</span>
+                        </div>
+                        <div class="algin-span">
+                            <span>Donate
+                                Make a Difference </span>
+                            <span>$6000</span>
+                        </div>
                     </div>
                 </div>
 
@@ -622,16 +906,16 @@
                 <div class="Donations-box">
                     <h3 class="add-style">Donate
                         Make a Difference</h3>
-                        <div class="inner_text">
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Choose your Cause
-                        </option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
+                    <div class="inner_text">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Choose your Cause
+                            </option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
                     </div>
-                    </div>
+                </div>
             </div>
 
         </div>

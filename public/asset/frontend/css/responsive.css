@@ -409,13 +409,14 @@
         padding-top: 30px;
         font-size: 27px;
     }
-    .nav-link{
+
+    .nav-link {
         color: #fff !important;
     }
 }
 
 @media (max-width: 767.98px) {
-    
+
     .cards-c {
         padding: 0px 0px 10px 0px;
     }
@@ -626,6 +627,92 @@
 
 
 @media (max-width: 575.98px) {
+    .about-section .text-right li {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        line-height: 30px;
+        font-size: 15px;
+        margin-top: 10px;
+    }
+    .text-right button {
+        
+        margin: 10px 0px 10px 0px;
+    }
+    .drop_down {
+        flex-direction: column !important;
+    }
+    nav.breadcrumb {
+        align-items: center;
+        display: flex;
+        margin: 20px 0px 9px 0px;
+    }
+
+
+    .accordion-flush .accordion-item .accordion-button,
+    .accordion-flush .accordion-item .accordion-button.collapsed {
+        font-size: 17px;
+        padding: 10px;
+        line-height: 26px;
+    }
+
+
+    .student_s h4, h6 {
+        text-align: center !important;
+        font-size: 22px !important;
+        margin-top: 16px !important;
+    }
+    .student_s p {
+        padding: 8px 0px 5px 0px;
+        text-align: center;
+    }
+    .Adv_ocacy h4 {
+        font-size: 22px !important;
+        line-height: 28px !important;
+        padding-bottom: 24px !important;
+        text-align: center !important;
+    }
+
+    .Adv_ocacy li br {
+        display: none;
+    }
+    .one_col_2 .card_s {
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+    .one_col_2 .text_2 h5 {
+        font-size: 22px !important;
+        line-height: 35px !important;
+    }
+    .Question_s .btn_s {
+        flex-direction: column;
+        gap: 0px;
+    }
+    .one_col_2 .text_2 h5 {
+        font-size: 22px;
+        font-weight: 600;
+        text-transform: capitalize;
+        line-height: 33px;
+    }
+    .Adv_ocacy li {
+        margin-left: 0px;
+        margin-top: 0px;
+        text-align: center;
+        justify-content: center;
+    }
+    .edit_ {
+        margin-top: 20px;
+    }
+    .one_col_2 .text_ h4 {
+        text-align: center !important;
+        font-size: 22px !important;
+        line-height: 30px !important;
+    }
+
+    .Question_s .btn_s {
+        display: flex;
+        gap: 0px !important;
+    }
     .Stand h4 {
         font-size: 20px;
     }
@@ -1214,6 +1301,7 @@
     .Donations .Donations-box h3 {
         font-size: 20px;
         padding-bottom: 0px;
+
     }
 
     .Donations .Donations-box .p {
@@ -1355,10 +1443,11 @@
 
 
     #align-h {
-        min-height: 450px;
+        /* min-height: 450px; */
     }
+
     .carousel-caption {
         width: 100%;
         max-width: 1000px;
-      }
+    }
 }
