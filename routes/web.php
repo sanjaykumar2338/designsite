@@ -73,6 +73,8 @@ Route::get('/order_history', [App\Http\Controllers\HomeController::class, 'order
 Route::get('/return_order', [App\Http\Controllers\HomeController::class, 'return_order'])->name('return_order');
 Route::get('/donate_now', [App\Http\Controllers\HomeController::class, 'donate_now'])->name('donate_now');
 Route::get('/login', [App\Http\Controllers\HomeController::class, 'login'])->name('login');
+Route::post('/contact_save', [App\Http\Controllers\HomeController::class, 'contact_save'])->name('contact_save');
+
 Route::get('/register', [App\Http\Controllers\HomeController::class, 'register'])->name('register');
 Route::get('/product_design', [App\Http\Controllers\HomeController::class, 'product_design'])->name('product_design');
 Route::get('/create_product', [App\Http\Controllers\HomeController::class, 'create_product'])->name('create_product');

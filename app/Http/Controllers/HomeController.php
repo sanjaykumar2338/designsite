@@ -9,9 +9,12 @@ use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
 use App\Models\User;
 use App\Models\Blogs;
+use App\Models\Contacts;
 use App\Models\PrintfulOrder;
 use App\Models\Payment;
 use App\Models\BlogReview;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactMail;
 
 class HomeController extends Controller
 {
@@ -211,6 +214,25 @@ class HomeController extends Controller
         return view('frontend.pages.create_product')->with('product', $product);
     }
 
+    public function contact_save(Request $request){
+        // Save the contact data to the database
+        $contact = Contacts::create([
+            'first_name' => $request->first_name,
+            'last_name' => $request->last_name,
+            'phone' => $request->phone,
+            'email' => $request->email,
+            'message' => $request->message,
+        ]);
+
+        Mail::to($request->email)->send(new ContactMail($contact));
+
+         // Set a flash message
+         $request->session()->flash('success', 'Your message has been sent successfully!');
+
+         // Redirect back to the contact form (or any other page)
+         return redirect()->back();
+    }
+
     public function product_list(Request $request, $standwith, $productfor, $producttype)
     {
         //echo "<pre>"; print_r(explode('-',$standwith)[2]); die;
@@ -329,6 +351,7 @@ class HomeController extends Controller
             $rec->name = $request->name;
             $rec->email = $request->email;
             $rec->save();
+
             return redirect()->back()->with('success', 'Your review submitted successfully');   
         }catch(\Exception $e){
             return redirect()->back()->with('success', $e->getMessage()); 

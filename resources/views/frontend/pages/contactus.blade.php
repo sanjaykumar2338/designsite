@@ -66,27 +66,32 @@
                 </div>
 
                 <div class="col-lg-6 col-md-12 col-sm-12 col-12  s-padding">
-                    <form action="">
+                @if (session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
+                    <form method="post" action="{{url('contact_save')}}" name="contact_frm">
                         <span>REACH US</span>
                         <h3>CONTACT FORM </h3>
                         
                         @csrf
                         <div class="row">
                             <div class="col-md-6">
-                                <input type="text" placeholder="First name">
+                                <input type="text" placeholder="First name" name="first_name" required>
                             </div>
                             <div class="col-md-6">
-                                <input type="text" placeholder="Last name">
+                                <input type="text" placeholder="Last name" name="last_name" >
                             </div>
 
                             <div class="col-md-12">
-                                <input type="tel" placeholder="mobile number">
+                                <input type="tel" placeholder="mobile number" name="phone" required>
                             </div>
                             <div class="col-md-12">
-                                <input type="text" placeholder="email address">
+                                <input type="text" placeholder="email address" name="email">
                             </div>
                             <div class="col-md-12">
-                                <input type="text" placeholder="message">
+                                <input type="text" placeholder="message" name="message" required>
                             </div>
                             <button class="btn-style"> submit</button>
 
