@@ -335,11 +335,12 @@
                             </div>
                             <div class="col-lg-6 p-0 edit_ ">
                                 <select class="form-select" aria-label="Default select example">
-                                    <option selected>Stand With v
+                                    <option selected>Stand With
                                     </option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
+                                    <option value="Israel">Israel</option>
+                                    <option value="Palestine">Palestine</option>
+                                    <option value="Russia">Russia</option>
+                                    <option value="Ukraine">Ukraine</option>
                                 </select>
                                 <button>View Student Deals</button>
 
@@ -668,11 +669,12 @@
                     justice and <br>political biases to corrupt ethics and
                     manipulative perspectives</p>
                 <select class="form-select" aria-label="Default select example">
-                    <option selected="">Stand With v
+                    <option selected="">Stand With
                     </option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <option value="Israel">Israel</option>
+                    <option value="Palestine">Palestine</option>
+                    <option value="Russia">Russia</option>
+                    <option value="Ukraine">Ukraine</option>
                 </select>
 
 

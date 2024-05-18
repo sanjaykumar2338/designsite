@@ -74,9 +74,10 @@
                         <select class="form-select" aria-label="Default select example">
                             <option selected="">Stand With
                             </option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                            <option value="Israel">Israel</option>
+                            <option value="Palestine">Palestine</option>
+                            <option value="Russia">Russia</option>
+                            <option value="Ukraine">Ukraine</option>
                         </select>
                         <button> <a href=""></a>Join us</button>
 

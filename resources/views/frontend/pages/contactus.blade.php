@@ -30,7 +30,6 @@
                             </div>
                             <div class="text">
                                 <h4>CONTACT US</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, molestias?</p>
                             </div>
                         </div>
 
@@ -43,21 +42,21 @@
                         <li>
                             <i class="fa-solid fa-phone"></i>
                             <span>
-                                + 00 123 456 789</span>
+                            + 973-437-3877</span>
 
                         </li>
 
                         <li>
                             <i class="fa-solid fa-location-dot"></i>
-                            <span>Lorem  consectetur adipisicing elit.</span>
+                            <span>96 Meadow Road
+                                    Rutherford, NJ 07070</span>
 
                         </li>
 
                         <li>
                             <i class="fa-solid fa-envelope"></i>
                             <span>
-                                info@gmail.com
-
+                                info@causestand.com
                             </span>
 
                         </li>
@@ -70,9 +69,8 @@
                     <form action="">
                         <span>REACH US</span>
                         <h3>CONTACT FORM </h3>
-                        <p>Lorem, ipsum dolorecusandae excepturi quas in
-                            consequuntur aliquid?</p>
-
+                        
+                        @csrf
                         <div class="row">
                             <div class="col-md-6">
                                 <input type="text" placeholder="First name">
