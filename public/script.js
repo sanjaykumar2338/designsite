@@ -1124,6 +1124,7 @@ function saveOrder(data) {
 function setCost() {
     let price = +product.product_price + +product.commission;
     subtotal = price;
+
     Object.keys(canvases).forEach((k) => {
         let addPrice = false;
         canvases[k].getObjects().forEach((c) => {
@@ -1134,15 +1135,29 @@ function setCost() {
         if (!addPrice) return;
         if (k === "canvas_front") {
             // getEl("front").hidden = false;
+            product.front_image_price = 10;
             getEl("front").innerHTML = `Front: $${product.front_image_price}`;
-            // subtotal += +product.front_image_price;
+            var element = document.getElementById('front');
+            element.style.display = 'block';
+            subtotal += +product.front_image_price;
+        }else{
+            var element = document.getElementById('back');
+            element.style.display = 'none';
         }
+        
         if (k === "canvas_back") {
             // getEl("back").hidden = false;
+            product.back_image_price = 10;
             getEl("back").innerHTML = `Back: $${product.back_image_price}`;
-            // subtotal += +product.back_image_price;
+            var element = document.getElementById('back');
+            element.style.display = 'block';
+            subtotal += +product.back_image_price;
+        }else{
+            var element = document.getElementById('back');
+            element.style.display = 'none';
         }
     });
+
     let total = subtotal + shippingCost;
     getEl("price").innerHTML = `Price: $${price}`;
     getEl("subtotal").innerHTML = `Subtotal: $${subtotal}`;
