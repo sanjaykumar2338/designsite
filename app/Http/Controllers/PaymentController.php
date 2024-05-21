@@ -31,6 +31,12 @@ class PaymentController extends Controller
             $payment = new Payment();
             if (Auth::check()) {
                 $payment->user_id = auth()->user()->id;
+
+                $user = User::find(auth()->user()->id);
+
+                // Send order placed email
+                Mail::to(auth()->user()->email)->send(new OrderPlaced($payment, $user));
+                
             } else {
                 $payment->user_id = null;
             }
@@ -38,11 +44,6 @@ class PaymentController extends Controller
             $payment->amount = $request->total / 100;
             $payment->payment_intent_id = $paymentIntent->id;
             $payment->save();
-
-            $user = User::find(auth()->user()->id);
-
-            // Send order placed email
-            Mail::to(auth()->user()->email)->send(new OrderPlaced($payment, $user));
 
             return response()->json(['success' => true, 'message' => 'Payment successful','payment_id' => $payment->id]);
         } catch (\Exception $e) {
