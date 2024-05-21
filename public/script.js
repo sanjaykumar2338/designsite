@@ -1135,7 +1135,17 @@ function setCost() {
         if (!addPrice) return;
         if (k === "canvas_front") {
             // getEl("front").hidden = false;
-            product.front_image_price = 10;
+
+            product.front_image_price = 0;
+            canvases.canvas_front._objects.forEach(function(obj) {
+                // Check if the object type is 'image'
+                if (obj.type === 'image') {
+                    // If it is an image, increment the counter
+                    product.front_image_price +=10;
+                }
+            });
+
+            //product.front_image_price = 10;
             getEl("front").innerHTML = `Front: $${product.front_image_price}`;
             var element = document.getElementById('front');
             element.style.display = 'block';
@@ -1147,7 +1157,17 @@ function setCost() {
         
         if (k === "canvas_back") {
             // getEl("back").hidden = false;
-            product.back_image_price = 10;
+
+            product.back_image_price = 0;
+            canvases.canvas_back._objects.forEach(function(obj) {
+                // Check if the object type is 'image'
+                if (obj.type === 'image') {
+                    // If it is an image, increment the counter
+                    product.back_image_price +=10;
+                }
+            });
+
+            //product.back_image_price = 10;
             getEl("back").innerHTML = `Back: $${product.back_image_price}`;
             var element = document.getElementById('back');
             element.style.display = 'block';
