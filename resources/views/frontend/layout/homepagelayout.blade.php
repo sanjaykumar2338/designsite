@@ -29,6 +29,8 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="asset/frontend/images/new-logo.jpg">
 
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4830008298391201"
+     crossorigin="anonymous"></script>
 </head>
 <body>
 

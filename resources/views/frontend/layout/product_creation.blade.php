@@ -66,6 +66,9 @@
             }
         }
     </style>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4830008298391201"
+     crossorigin="anonymous"></script>
 </head>
 
 <body>
