@@ -45,7 +45,7 @@
                 </div>
                 <div class="col-lg-3 d-flex justify-content-end">
                     <div class="left-side">
-
+                       
                         @if (Auth::check())
                             <li>
                                 <span style="cursor: pointer;" class="add-border" onclick='location.href ="{{route('my_account')}}";'>

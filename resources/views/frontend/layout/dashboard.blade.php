@@ -65,7 +65,7 @@
               </p>
             </a>
 
-            <a href="{{url('/admin/order')}}" class="nav-link {{$activeLink=='orders'?'active':''}}">
+            <a href="{{url('/my_account')}}" class="nav-link {{$activeLink=='orders'?'active':''}}">
               <i class="nav-icon fas fa-shopping-bag"></i>
               <p>
                 My Orders

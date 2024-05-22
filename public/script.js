@@ -420,10 +420,6 @@ function setImages() {
         setImage(product.imageData.right_image, "canvas_sleeve_right");
 }
 
-function removeObject() {
-    canvas.remove(canvas.getActiveObject());
-}
-
 function setSelectedObject(obj) {
     selectedObject = obj;
     const el = getEl("editables");
@@ -677,64 +673,6 @@ function setIsLoading(bool) {
     const el = getEl("loader");
     el.hidden = !bool;
 }
-function submitImgUrl() {
-    const el = getEl("imgUrl");
-    console.log(el.value);
-    addImage(el.value);
-}
-
-function addImage(imgUrl) {
-    // const imgUrl =
-    //   "https://cloudfour.com/examples/img-currentsrc/images/kitten-small.png";
-
-    fabric.Image.fromURL(
-        imgUrl,
-        function (oImg) {
-            if (oImg._element == null) {
-                alert(
-                    "Cant access the file! Please download the image and upload it from local storage"
-                );
-                // Toastify({
-                //     text: "Please download the image and upload it from local storage",
-                //     style: {
-                //         background: "red",
-                //     },
-                // }).showToast();
-                return;
-            }
-            // oImg.scale(0.5);
-            const h = canvas.getHeight();
-            const w = canvas.getWidth();
-            // oImg.set("top", h / 4);
-            // oImg.set("left", w / 4);
-            oImg.scaleToHeight(h);
-            oImg.scaleToWidth(w);
-            canvas.add(oImg);
-        },
-        { crossOrigin: "Anonymous" }
-    );
-    setShowModal(false);
-}
-function addObjectImage(imgUrl) {
-    // const imgUrl =
-    //   "https://cloudfour.com/examples/img-currentsrc/images/kitten-small.png";
-
-    // let url = $("#site_url").val();
-    // imgUrl = url + "/objects/" + imgUrl;
-    fabric.loadSVGFromURL(
-        imgUrl,
-        function (objects, options) {
-            var svgData = fabric.util.groupSVGElements(objects, options);
-            svgData.top = 30;
-            svgData.left = 30;
-            svgData.scaleToWidth(100);
-            svgData.scaleToHeight(100);
-            canvas.add(svgData);
-        }
-        // { crossOrigin: "Anonymous" }
-    );
-    setShowModal(false);
-}
 
 function addText(text) {
     text = text ? text : "Sample_Text";
@@ -898,11 +836,14 @@ function htmltoCanvas(canvas) {
     // });
 }
 
+var totalPrice = parseFloat(document.querySelector('.product_price').getAttribute('data-price'));
+
 getEl("image-picker").onchange = function onImagePikked(e) {
     if (!e.target.files?.length) return;
     console.log(e.target.files[0]);
     addImageFromFile(e);
 };
+
 function addImageFromFile(e) {
     if (!e.target.files?.length) return;
     if (!fabric) return;
@@ -929,9 +870,129 @@ function addImageFromFile(e) {
             image.scaleToWidth(w);
             canvas.add(image);
             canvas.renderAll();
+
+            // Update price
+            totalPrice += 10;
+            updatePrice(totalPrice);
+            showImageAddedMessage();
         };
     };
     reader.readAsDataURL(e.target.files[0]);
+}
+
+function updatePrice(price) {
+    var priceElement = document.querySelector('.product_price');
+    priceElement.setAttribute('data-price', price.toFixed(2));
+    priceElement.textContent = 'Price: $' + price.toFixed(2);
+}
+
+function showImageAddedMessage() {
+    Toastify({
+        text: "Thank you for contributing! $10 has been donated for adding an image.",
+        className: "success",
+        duration: 5000, // Optional: Display duration in milliseconds
+        close: true, // Optional: Allow users to manually close the toast
+        gravity: "top", // Optional: Toast position
+        position: "right", // Optional: Toast position
+        stopOnFocus: true, // Optional: Stop timeout when the toast is hovered
+    }).showToast();
+}
+
+function removeObject() {
+    var activeObject = canvas.getActiveObject();
+    if (activeObject) {
+        canvas.remove(activeObject);
+        
+        // Update price
+        totalPrice -= 10;
+        updatePrice(totalPrice);
+        
+        // Show message
+        showMessage("$10 has been deducted for removing an object.");
+    } else {
+        showMessage("Please select an object to remove.");
+    }
+}
+
+function submitImgUrl() {
+    const el = getEl("imgUrl");
+    console.log(el.value);
+    addImage(el.value);
+
+    totalPrice += 10;
+    updatePrice(totalPrice);
+    showImageAddedMessage();
+}
+
+function addImage(imgUrl) {
+    // const imgUrl =
+    //   "https://cloudfour.com/examples/img-currentsrc/images/kitten-small.png";
+
+    fabric.Image.fromURL(
+        imgUrl,
+        function (oImg) {
+            if (oImg._element == null) {
+                alert(
+                    "Cant access the file! Please download the image and upload it from local storage"
+                );
+                // Toastify({
+                //     text: "Please download the image and upload it from local storage",
+                //     style: {
+                //         background: "red",
+                //     },
+                // }).showToast();
+                return;
+            }
+            // oImg.scale(0.5);
+            const h = canvas.getHeight();
+            const w = canvas.getWidth();
+            // oImg.set("top", h / 4);
+            // oImg.set("left", w / 4);
+            oImg.scaleToHeight(h);
+            oImg.scaleToWidth(w);
+            canvas.add(oImg);
+        },
+        { crossOrigin: "Anonymous" }
+    );
+    setShowModal(false);
+}
+
+function addObjectImage(imgUrl) {
+    // const imgUrl =
+    //   "https://cloudfour.com/examples/img-currentsrc/images/kitten-small.png";
+
+    // let url = $("#site_url").val();
+    // imgUrl = url + "/objects/" + imgUrl;
+    fabric.loadSVGFromURL(
+        imgUrl,
+        function (objects, options) {
+            var svgData = fabric.util.groupSVGElements(objects, options);
+            svgData.top = 30;
+            svgData.left = 30;
+            svgData.scaleToWidth(100);
+            svgData.scaleToHeight(100);
+            canvas.add(svgData);
+        }
+        // { crossOrigin: "Anonymous" }
+    );
+    setShowModal(false);
+}
+
+function showMessage(message) {
+    Toastify({
+        text: message,
+        className: "info",
+        duration: 3000,
+        close: true,
+        gravity: "top",
+        position: "right",
+        stopOnFocus: true,
+    }).showToast();
+}
+
+function addSample() {
+    var sampleUrl = "https://cloudfour.com/examples/img-currentsrc/images/kitten-small.png";
+    document.getElementById("imgUrl").value = sampleUrl;
 }
 
 function calculateShippingRate() {
@@ -1134,56 +1195,43 @@ function setCost() {
         });
         if (!addPrice) return;
         if (k === "canvas_front") {
-            // getEl("front").hidden = false;
-
             product.front_image_price = 0;
             canvases.canvas_front._objects.forEach(function(obj) {
-                // Check if the object type is 'image'
                 if (obj.type === 'image') {
-                    // If it is an image, increment the counter
                     product.front_image_price +=10;
                 }
             });
-
-            //product.front_image_price = 10;
             getEl("front").innerHTML = `Front: $${product.front_image_price}`;
             var element = document.getElementById('front');
             element.style.display = 'block';
             subtotal += +product.front_image_price;
-        }else{
+        } else {
             var element = document.getElementById('back');
             element.style.display = 'none';
         }
         
         if (k === "canvas_back") {
-            // getEl("back").hidden = false;
-
             product.back_image_price = 0;
             canvases.canvas_back._objects.forEach(function(obj) {
-                // Check if the object type is 'image'
                 if (obj.type === 'image') {
-                    // If it is an image, increment the counter
                     product.back_image_price +=10;
                 }
             });
-
-            //product.back_image_price = 10;
             getEl("back").innerHTML = `Back: $${product.back_image_price}`;
             var element = document.getElementById('back');
             element.style.display = 'block';
             subtotal += +product.back_image_price;
-        }else{
+        } else {
             var element = document.getElementById('back');
             element.style.display = 'none';
         }
     });
 
     let total = subtotal + shippingCost;
-    getEl("price").innerHTML = `Price: $${price}`;
-    getEl("subtotal").innerHTML = `Subtotal: $${subtotal}`;
-
-    getEl("shipping").innerHTML = `Shipping: $${shippingCost}`;
-    getEl("total").innerHTML = `Total: $${total}`;
+    getEl("price").innerHTML = `Price: $${price.toFixed(2)}`;
+    getEl("subtotal").innerHTML = `Subtotal: $${subtotal.toFixed(2)}`;
+    getEl("shipping").innerHTML = `Shipping: $${shippingCost.toFixed(2)}`;
+    getEl("total").innerHTML = `Total: $${total.toFixed(2)}`;
 }
 
 function setProductColour(colourCode) {

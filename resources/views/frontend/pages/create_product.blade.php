@@ -91,7 +91,9 @@
                     <h1 class="product_title">
                         {{ $product->website_product_name ? $product->website_product_name : $product->product_name }}</h1>
                     <br>
-                    <h1 class="">Price: ${{ number_format($totalPrice, 2) }}</h1>
+                    
+                    <h1 class="product_price" style="font-weight: 700;" data-price="{{ number_format($totalPrice, 2) }}">Price: ${{ number_format($totalPrice, 2) }}</h1>
+
                     <p class="desc">{{ $product->product_description }}</p>
                     <br>
 
@@ -141,7 +143,7 @@
                             </div>
                         </div>
                         <div>
-                            <button class="border prd-btn rounded-lg p-2 px-3" onclick="togglePreview()">
+                            <button style="display: none;" class="border prd-btn rounded-lg p-2 px-3" onclick="togglePreview()">
                                 Preview
                             </button>
                         </div>
@@ -317,22 +319,35 @@
                 </span>
                 <div class="inline-block align-center bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
                     role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+                    
                     <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                         <label class="font-medium text-gray-800">Image Url</label>
                         <input type="text" id="imgUrl"
                             class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3"
-                            value="https://cloudfour.com/examples/img-currentsrc/images/kitten-small.png" />
+                            value="" />
                     </div>
+
                     <div class="bg-gray-200 px-4 py-3 text-right">
-                        <button type="button" class="py-2 px-4 bg-gray-500 text-white rounded hover:bg-gray-700 mr-2"
-                            onclick="setShowModal(false)">
-                            Cancel
+
+                        <button type="button" class="py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-700 mr-2"
+                            type="submit" onclick="addSample()">
+                            Try Sample
                         </button>
+                        
                         <button type="button" class="py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-700 mr-2"
                             type="submit" onclick="submitImgUrl()">
                             Add
                         </button>
+
+                        <button type="button" class="py-2 px-4 bg-gray-500 text-white rounded hover:bg-gray-700 mr-2"
+                            onclick="setShowModal(false)">
+                            Cancel
+                        </button>
+
+                        
+                        
                     </div>
+
                 </div>
             </div>
         </div>
@@ -359,10 +374,12 @@
                         <input type="text" id="cd_name"
                             class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" name="cd_name" value=""
                             placeholder="Full Name" required />
+
                         <label class="font-medium text-gray-800">Email*</label>
                         <input type="text" id="cd_email"
-                            class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" value=""
-                            placeholder="email" name="cd_email" required />
+                            class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3"
+                            placeholder="email" value="{{ auth()->user()->email }}" name="cd_email" required />
+
                         <label class="font-medium text-gray-800">Phone Number*</label>
                         <input type="text" id="cd_number"
                             class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" value=""
@@ -433,6 +450,7 @@
                     </span>
                     <div class="inline-block align-center bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
                         role="dialog" style="max-width: 50rem;" aria-modal="true" aria-labelledby="modal-headline">
+                        
                         <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                             <label class="font-bold text-gray-800">Payment Details</label>
                             <br>
