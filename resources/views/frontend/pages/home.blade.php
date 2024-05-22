@@ -2,6 +2,19 @@
 
 @section('content')
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4830008298391201"
+        crossorigin="anonymous"></script>
+<!-- Causestand -->
+<ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-4830008298391201"
+    data-ad-slot="1696096485"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 <section class="slider-Product">
     <div class="container-fluid">
         <div class="row">
