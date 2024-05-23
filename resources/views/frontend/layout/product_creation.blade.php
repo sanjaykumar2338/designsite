@@ -65,6 +65,78 @@
                 transform: rotate(360deg);
             }
         }
+
+        #payment-modal form button.py-2:nth-of-type(2) {
+            background-color: #eb3e32;
+        }
+
+        #payment-modal form label {
+            font-size: 30px;
+            font-weight: 600;
+            border-bottom: 1px solid #d9d9d9;
+            width: 100%;
+            padding: 0 0 10px;
+            margin: 0 0 15px;
+        }
+
+        #payment-modal form br {
+            display: none;
+        }
+
+        #payment-modal form .form-group label {
+            font-size: 22px;
+        }
+
+        #payment-modal form .form-group {
+            margin-top: 20px;
+            border: 1px solid #eee;
+            background-color: #fff;
+            box-shadow: rgb(149 157 165 / 10%) 0px 4px 14px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        @media only screen and (max-width:767px){
+        #payment-modal form label {
+            font-size: 24px
+        }  
+        #payment-modal form .form-group label{
+            font-size: 18px;
+        }    
+        }
+
+        div#price {
+            font-weight: 400;
+        }
+
+        div#front {
+            font-weight: 400;
+        }
+
+        div#back {
+            font-weight: 400;
+        }
+
+        div#subtotal {
+            font-weight: 400;
+        }
+
+        div#total {
+            color: #eb3e32;
+            margin-top: 10px;
+            font-size: 20px;
+        }
+
+        #payment-modal form .bg-gray-200.px-4.py-3.text-right {
+            background-color: #F2F3F7;
+        }
+
+        .pricing_details {
+            border: 1px solid #eee;
+            background-color: #fff;
+            box-shadow: rgb(149 157 165 / 10%) 0px 4px 14px;
+            padding: 20px;
+            border-radius: 10px;
+        }
     </style>
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4830008298391201"
