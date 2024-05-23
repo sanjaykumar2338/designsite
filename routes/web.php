@@ -90,6 +90,9 @@ Route::post('/login', [App\Http\Controllers\UserController::class, 'login'])->na
 Route::get('/product_slug', [App\Http\Controllers\UserController::class, 'product_slug'])->name('product_slug');
 Route::post('/storeOrder', [App\Http\Controllers\UserController::class, 'storeOrder']);
 
+Route::get('/privacy-policy', [App\Http\Controllers\HomeController::class, 'privacy_policy'])->name('privacy_policy');
+Route::get('/terms-of-use', [App\Http\Controllers\HomeController::class, 'terms_of_use'])->name('terms_of_use');
+
 Route::post(
     'stripe/webhook',
     [WebhookController::class, 'handleWebhook']

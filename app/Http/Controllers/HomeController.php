@@ -148,6 +148,14 @@ class HomeController extends Controller
         return view('frontend.pages.wishlist');
     }
 
+    public function privacy_policy(Request $request){
+        return view('frontend.pages.privacy_policy');
+    }
+
+    public function terms_of_use(Request $request){
+        return view('frontend.pages.terms_of_use');
+    }
+
     public function my_account()
     {
         if (auth()->user()->email == 'admin@gmail.com') {
