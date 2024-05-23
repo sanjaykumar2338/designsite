@@ -457,12 +457,16 @@
                             <label class="font-bold text-gray-800">Payment Details</label>
                             <br>
                             <br>
-                            <div id="price" class="font-medium text-gray-800">Price:</div>
-                            <div id="front" class="font-medium text-gray-800">Front:</div>
-                            <div id="back" class="font-medium text-gray-800">Back:</div>
-                            <div id="subtotal" class="font-medium text-gray-800">Subtotal:</div>
-                            <div id="shipping" class="font-medium text-gray-800">Shipping:</div>
-                            <div id="total" class="font-bold text-gray-800">Total:</div>
+                            
+                            <div class="pricing_details">
+                                <div id="price" class="font-medium text-gray-800">Price:</div>
+                                <div id="front" class="font-medium text-gray-800">Front:</div>
+                                <div id="back" class="font-medium text-gray-800">Back:</div>
+                                <div id="subtotal" class="font-medium text-gray-800">Subtotal:</div>
+                                <div id="shipping" class="font-medium text-gray-800">Shipping:</div>
+                                <div id="total" class="font-bold text-gray-800">Total:</div>
+                            </div>
+
                             <br>
                             <br>
                             <label hidden class="font-medium text-gray-800">Name</label>
