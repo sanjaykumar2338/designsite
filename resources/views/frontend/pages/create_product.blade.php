@@ -376,9 +376,11 @@
                             placeholder="Full Name" required />
 
                         <label class="font-medium text-gray-800">Email*</label>
+                        
                         <input type="text" id="cd_email"
                             class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3"
-                            placeholder="email" value="{{ auth()->user()->email }}" name="cd_email" required />
+                            placeholder="email" value="{{ auth()->check() ? auth()->user()->email : '' }}"
+                            name="cd_email" required />
 
                         <label class="font-medium text-gray-800">Phone Number*</label>
                         <input type="text" id="cd_number"
