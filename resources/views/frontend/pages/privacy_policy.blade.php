@@ -23,7 +23,7 @@
 
             <div class="col-lg-12 col-md-12 d-flex align-items-center">
                 <div class="text-right">
-                    <h3>Privacy Policy</h3>
+                   
                     <p>Introduction</p>
                     <p>Cause Stand LLC is committed to protecting your privacy. This Privacy Policy describes how your personal information is collected, used, and shared when you visit or make a purchase from our website.</p>
                     <h3>1. Personal Information We Collect</h3>
