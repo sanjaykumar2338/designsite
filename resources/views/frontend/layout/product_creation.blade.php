@@ -288,6 +288,8 @@
                             <li><a href="{{route('blogs')}}"> Blog</a></li>
                             <li><a href="{{route('privacy_policy')}}"> Privacy Policy</a></li>
                             <li><a href="{{route('terms_of_use')}}"> Terms Of Use</a></li>
+                            <li><a href="{{route('privacy_policy')}}"> Privacy Policy</a></li>
+                            <li><a href="{{route('terms_of_use')}}"> Terms Of Use</a></li>
                         </ul>
                     </div>
                 </div>
