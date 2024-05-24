@@ -179,56 +179,7 @@
 </table>
 <!-- /Order Details -->
 
-<!-- Design Details -->
-<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="fullTable" bgcolor="#e1e1e1">
-    <tbody>
-        <tr>
-            <td>
-                <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="fullTable" bgcolor="#ffffff">
-                    <tbody>
-                        <tr>
-                        <tr class="hiddenMobile">
-                            <td height="60"></td>
-                        </tr>
-                        <tr class="visibleMobile">
-                            <td height="40"></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <table width="480" border="0" cellpadding="0" cellspacing="0" align="center" class="fullPadding">
-                                    <tbody>
-                                        <tr>
-                                            <th style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #5b5b5b; font-weight: normal; line-height: 1; vertical-align: top; padding: 0 10px 7px 0;" width="52%" align="left">
-                                                Design Images
-                                            </th>
-                                            
-                                            
-                                        </tr>
-                                        @foreach($data['items'] as $item)
-                                            @foreach($item['files'] as $file)
-                                                <tr>
-                                                    <td style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #1e2b33; font-weight: 700; line-height: 1.4; vertical-align: top; text-align: left; padding: 0 10px 7px 0;">
-                                                    <img src="{{ $file['url'] }}" alt="Design Image" style="width: 100px; height: auto;">
-                                                    </td>
-                                                </tr>
-                                            @endforeach
-                                        @endforeach
-                                    </tbody>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr class="hiddenMobile">
-                            <td height="30"></td>
-                        </tr>
-                        <tr class="visibleMobile">
-                            <td height="20"></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-        </tr>
-    </tbody>
-</table>
+
 
 <!-- Total -->
 <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="fullTable" bgcolor="#e1e1e1">
@@ -420,6 +371,66 @@
       </td>
     </tr>
   </tbody>
+</table>
+
+<!-- Design Details -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="fullTable" bgcolor="#e1e1e1">
+    <tbody>
+        <tr>
+            <td>
+                <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="fullTable" bgcolor="#ffffff">
+                    <tbody>
+                        <tr>
+                        <tr class="hiddenMobile">
+                            <td height="60"></td>
+                        </tr>
+                        <tr class="visibleMobile">
+                            <td height="40"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table width="480" border="0" cellpadding="0" cellspacing="0" align="center" class="fullPadding">
+                                    <tbody>
+                                        <tr>
+                                            <th style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #5b5b5b; font-weight: normal; line-height: 1; vertical-align: top; padding: 0 10px 7px 0;" width="52%" align="left">
+                                                Design Images
+                                            </th>
+
+                                            <th style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #5b5b5b; font-weight: normal; line-height: 1; vertical-align: top; padding: 0 10px 7px 0;" width="52%" align="left">
+                                                Type
+                                            </th>
+                                            
+                                            
+                                        </tr>
+                                        @foreach($data['items'] as $item)
+                                            @foreach($item['files'] as $file)
+                                                <tr>
+                                                    <td style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #1e2b33; font-weight: 700; line-height: 1.4; vertical-align: top; text-align: left; padding: 0 10px 7px 0;">
+                                                    <img src="{{ $file['url'] }}" alt="Design Image" style="width: 100px; height: auto;">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #1e2b33; font-weight: 700; line-height: 1.4; vertical-align: top; text-align: left; padding: 0 10px 7px 0;">
+                                                    {{ $file['type'] }}
+                                                    </td>
+                                                </tr>
+                                            @endforeach
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr class="hiddenMobile">
+                            <td height="30"></td>
+                        </tr>
+                        <tr class="visibleMobile">
+                            <td height="20"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
 </table>
 <!-- /Information -->
 <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="fullTable" bgcolor="#e1e1e1">
