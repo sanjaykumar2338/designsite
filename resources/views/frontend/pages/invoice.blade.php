@@ -408,12 +408,12 @@
                                                     <td style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #1e2b33; font-weight: 700; line-height: 1.4; vertical-align: top; text-align: left; padding: 0 10px 7px 0;">
                                                     <img src="{{ $file['url'] }}" alt="Design Image" style="width: 100px; height: auto;">
                                                     </td>
-                                                </tr>
-                                                <tr>
+
                                                     <td style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #1e2b33; font-weight: 700; line-height: 1.4; vertical-align: top; text-align: left; padding: 0 10px 7px 0;">
                                                     {{ $file['type'] }}
                                                     </td>
                                                 </tr>
+                                              
                                             @endforeach
                                         @endforeach
                                     </tbody>
