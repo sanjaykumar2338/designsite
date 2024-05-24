@@ -118,7 +118,7 @@
                                             <td class="col-sm-3 col-md-3" style="text-align: right">
                                               <a href="/admin/products/remove/{{$product->id}}" class="btn btn-danger">Remove</a>
                                               <a href="/admin/products/{{$product->id}}/edit" class="btn btn-primary">EDIT</a>
-                                              <a href="/admin/products/create_template/{{$product->id}}" class="btn btn-primary">Design Templates</a>
+                                              <a href="/admin/products/create_template/{{$product->id}}" class="btn btn-primary">Design Template</a>
                                             </td>
                                         </tr>
                                         </tbody>

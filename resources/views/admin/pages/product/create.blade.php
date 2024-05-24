@@ -44,7 +44,7 @@
 
                 <div class="mb-3 mt-3">
                   <label for="product_name">Website Product Name:</label>
-                  <input type="text" class="form-control" id="product_name" placeholder="Enter Website Product Name" name="product_name">
+                  <input readonly type="text" class="form-control" id="product_name" placeholder="Enter Website Product Name" name="product_name">
                 </div>
 
                 <div class="mb-3 mt-3">

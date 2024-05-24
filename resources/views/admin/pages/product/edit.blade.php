@@ -40,7 +40,7 @@
                 @csrf
                 <div class="mb-3 mt-3">
                   <label for="product_name">Printful Product Name:</label>
-                  <input type="text" value="{{$product->product_name}}" class="form-control" id="product_name" placeholder="Enter Printful Product Name" name="product_name">
+                  <input readonly type="text" value="{{$product->product_name}}" class="form-control" id="product_name" placeholder="Enter Printful Product Name" name="product_name">
                 </div>
 
                 <div class="mb-3 mt-3">
