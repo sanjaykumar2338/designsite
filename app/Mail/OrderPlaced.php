@@ -12,15 +12,18 @@ class OrderPlaced extends Mailable
     use Queueable, SerializesModels;
 
     public $order;
-    public $user; // Add the user property
+
+    public $user;
+    public $data; // Add the user property
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($order, User $user) // Accept the user as a parameter
+    public function __construct($order, User $user, $data) // Accept the user as a parameter
     {
+        $this->data = $data;
         $this->order = $order;
         $this->user = $user; // Assign the user to the property
     }
@@ -32,10 +35,11 @@ class OrderPlaced extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.orderPlaced')
+        return $this->view('frontend.pages.invoice')
                     ->with([
-                        'order' => $this->order,
-                        'user' => $this->user, // Pass the user to the view
+                        'data' => $this->data,
+                        'user' => $this->user,
+                        'payment' => $this->order
                     ]);
     }
 }
