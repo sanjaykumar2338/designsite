@@ -42,7 +42,8 @@
             <th scope="col">Donation</th>
             <th scope="col">Country</th>
             <th scope="col">Payment ID</th>
-            <th scope="col">View Product</th>
+            <th scope="col">Product</th>
+            <th scope="col">Invoice</th>
           </tr>
         </thead>
         <tbody>
@@ -65,6 +66,9 @@
                         <button type="button" class="btn btn-primary" onclick="window.open('{{ $url }}', '_blank')"><i class="far fa-eye"></i></button>
                         <button style="display:none;" type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
                         <button style="display:none;" type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-primary" onclick="window.open('{{ url('/invoice/' . $order->id) }}', '_blank')" style="cursor: pointer;"><i class="far fa-eye"></i></button>
                     </td>
                 </tr>
             @endforeach

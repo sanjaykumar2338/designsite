@@ -162,57 +162,18 @@ class HomeController extends Controller
             return redirect('admin');
         } else {
             $email = auth()->user()->email;
-            $orders = PrintfulOrder::join('users', 'users.email', '=', 'printful_orders.customer_email')->join('products', 'products.id', '=', 'printful_orders.product_id')->join('payments', 'payments.id', '=', 'printful_orders.payment_id')->select('products.*','printful_order_data','payment_intent_id','payments.amount as amt','products.supporting_country','products.product_for','products.product_type','printful_orders.total_amount','printful_orders.product_price')->where('printful_orders.customer_email',$email)->paginate(5);
+            $orders = PrintfulOrder::join('users', 'users.email', '=', 'printful_orders.customer_email')->join('products', 'products.id', '=', 'printful_orders.product_id')->join('payments', 'payments.id', '=', 'printful_orders.payment_id')->select('products.*','printful_order_data','payment_intent_id','payments.amount as amt','products.supporting_country','products.product_for','products.product_type','printful_orders.total_amount','printful_orders.product_price','printful_orders.id')->where('printful_orders.customer_email',$email)->paginate(5);
 
             return view('frontend.pages.my_account')->with('activeLink', 'orders')->with('orders', $orders);
         }
     }
 
-    public function invoice(Request $request){
-        $data = [
-            "id" => "INV-12345",
-            "date" => "2023-08-21",
-            "customer" => [
-                "first_name" => "John",
-                "last_name" => "Doe",
-                "billing_address" => [
-                    "line1" => "1234 Main Street",
-                    "line2" => "",
-                    "city" => "Anytown",
-                    "state" => "CA",
-                    "postal_code" => "12345",
-                    "country" => "USA"
-                ],
-                "shipping_address" => [
-                    "line1" => "1234 Main Street",
-                    "line2" => "",
-                    "city" => "Anytown",
-                    "state" => "CA",
-                    "postal_code" => "12345",
-                    "country" => "USA"
-                ]
-            ],
-            "items" => [
-                [
-                    "name" => "Product 1",
-                    "sku" => "PROD1",
-                    "quantity" => 2,
-                    "price" => 19.99
-                ],
-                [
-                    "name" => "Product 2",
-                    "sku" => "PROD2",
-                    "quantity" => 1,
-                    "price" => 9.99
-                ]
-            ],
-            "subtotal" => 49.97,
-            "tax" => 3.99,
-            "shipping" => 5.99,
-            "total" => 59.95
-        ];
-    
-        return view('frontend.pages.invoice', ['data' => $data]);
+    public function invoice(Request $request, $id){
+        $order = PrintfulOrder::where('id',$id)->first();
+        $data = json_decode($order->printful_order_data, true);
+        $payment = \DB::table('payments')->where('id',$order->payment_id)->first();
+
+        return view('frontend.pages.invoice', ['data' => $data,'payment' => $payment]);
     }
 
     public function order_history()

@@ -61,7 +61,7 @@
                                         <table width="220" border="0" cellpadding="0" cellspacing="0" align="left" class="col">
                                             <tbody>
                                                 <tr>
-                                                    <td align="left"> <img src="http://www.supah.it/dribbble/017/logo.png" width="32" height="32" alt="logo" border="0" /></td>
+                                                    <td align="left"> <img src="{{url('/asset/frontend/images/new-logo.jpg')}}" width="150" height="50" alt="logo" border="0" /></td>
                                                 </tr>
                                                 <tr class="hiddenMobile">
                                                     <td height="40"></td>
@@ -71,7 +71,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td style="font-size: 12px; color: #5b5b5b; font-family: 'Open Sans', sans-serif; line-height: 18px; vertical-align: top; text-align: left;">
-                                                        Hello, {{ $data['customer']['first_name'] }} {{ $data['customer']['last_name'] }}.
+                                                        Hello, {{ $data['recipient']['name'] }}.
                                                         <br> Thank you for shopping from our store and for your order.
                                                     </td>
                                                 </tr>
@@ -100,7 +100,7 @@
                                                 <tr>
                                                     <td style="font-size: 12px; color: #5b5b5b; font-family: 'Open Sans', sans-serif; line-height: 18px; vertical-align: top; text-align: right;">
                                                         <small>ORDER</small> {{ $data['id'] }}<br />
-                                                        <small>{{ $data['date'] }}</small>
+                                                        <small>{{ date('Y-m-d',$data['created']) }}</small>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -116,6 +116,7 @@
     </tr>
 </table>
 <!-- /Header -->
+
 <!-- Order Details -->
 <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="fullTable" bgcolor="#e1e1e1">
     <tbody>
@@ -138,9 +139,7 @@
                                             <th style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #5b5b5b; font-weight: normal; line-height: 1; vertical-align: top; padding: 0 10px 7px 0;" width="52%" align="left">
                                                 Item
                                             </th>
-                                            <th style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #5b5b5b; font-weight: normal; line-height: 1; vertical-align: top; padding: 0 0 7px;" align="left">
-                                                SKU
-                                            </th>
+                                            
                                             <th style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #5b5b5b; font-weight: normal; line-height: 1; vertical-align: top; padding: 0 0 7px;" align="center">
                                                 Quantity
                                             </th>
@@ -153,14 +152,12 @@
                                             <td style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #1e2b33; font-weight: 700; line-height: 1.4; vertical-align: top; text-align: left; padding: 0 10px 7px 0;">
                                                 {{ $item['name'] }}
                                             </td>
-                                            <td style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #5b5b5b; line-height: 1.6; vertical-align: top; text-align: left; padding: 0 0 7px;">
-                                                {{ $item['sku'] }}
-                                            </td>
+                                            
                                             <td style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #5b5b5b; line-height: 1.6; vertical-align: top; text-align: center; padding: 0 0 7px;">
                                                 {{ $item['quantity'] }}
                                             </td>
                                             <td style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #1e2b33; font-weight: 700; line-height: 1.4; vertical-align: top; text-align: right; padding: 0 0 7px;">
-                                                ${{ number_format($item['quantity'] * $item['price'], 2) }}
+                                                ${{ number_format($item['retail_price'], 2) }}
                                             </td>
                                         </tr>
                                         @endforeach
@@ -181,6 +178,58 @@
     </tbody>
 </table>
 <!-- /Order Details -->
+
+<!-- Design Details -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="fullTable" bgcolor="#e1e1e1">
+    <tbody>
+        <tr>
+            <td>
+                <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="fullTable" bgcolor="#ffffff">
+                    <tbody>
+                        <tr>
+                        <tr class="hiddenMobile">
+                            <td height="60"></td>
+                        </tr>
+                        <tr class="visibleMobile">
+                            <td height="40"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table width="480" border="0" cellpadding="0" cellspacing="0" align="center" class="fullPadding">
+                                    <tbody>
+                                        <tr>
+                                            <th style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #5b5b5b; font-weight: normal; line-height: 1; vertical-align: top; padding: 0 10px 7px 0;" width="52%" align="left">
+                                                Design Images
+                                            </th>
+                                            
+                                            
+                                        </tr>
+                                        @foreach($data['items'] as $item)
+                                            @foreach($item['files'] as $file)
+                                                <tr>
+                                                    <td style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #1e2b33; font-weight: 700; line-height: 1.4; vertical-align: top; text-align: left; padding: 0 10px 7px 0;">
+                                                    <img src="{{ $file['url'] }}" alt="Design Image" style="width: 100px; height: auto;">
+                                                    </td>
+                                                </tr>
+                                            @endforeach
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr class="hiddenMobile">
+                            <td height="30"></td>
+                        </tr>
+                        <tr class="visibleMobile">
+                            <td height="20"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
 <!-- Total -->
 <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="fullTable" bgcolor="#e1e1e1">
     <tbody>
@@ -198,22 +247,22 @@
                                                     <tbody>
                                                         <tr>
                                                             <td style="font-size: 12px; color: #1e2b33; font-family: 'Open Sans', sans-serif; font-weight: 700; line-height: 1.6; vertical-align: top; text-align: left;">
-                                                                Subtotal: ${{ number_format($data['subtotal'], 2) }}
+                                                                Subtotal: ${{ number_format($data['retail_costs']['subtotal'], 2) }}
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td style="font-size: 12px; color: #1e2b33; font-family: 'Open Sans', sans-serif; font-weight: 700; line-height: 1.6; vertical-align: top; text-align: left;">
-                                                                Tax: ${{ number_format($data['tax'], 2) }}
+                                                                Tax: ${{ number_format($data['retail_costs']['tax'], 2) }}
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td style="font-size: 12px; color: #1e2b33; font-family: 'Open Sans', sans-serif; font-weight: 700; line-height: 1.6; vertical-align: top; text-align: left;">
-                                                                Shipping: ${{ number_format($data['shipping'], 2) }}
+                                                                Shipping: ${{ number_format($data['retail_costs']['shipping'], 2) }}
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td style="font-size: 12px; color: #1e2b33; font-family: 'Open Sans', sans-serif; font-weight: 700; line-height: 1.6; vertical-align: top; text-align: left;">
-                                                                Total: ${{ number_format($data['total'], 2) }}
+                                                                Total: ${{ number_format($data['retail_costs']['total'], 2) }}
                                                             </td>
                                                         </tr>
                                                     </tbody>
@@ -234,5 +283,172 @@
     </tbody>
 </table>
 <!-- /Total -->
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="fullTable" bgcolor="#e1e1e1">
+  <tbody>
+    <tr>
+      <td>
+        <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="fullTable" bgcolor="#ffffff">
+          <tbody>
+            <tr>
+            <tr class="hiddenMobile">
+              <td height="60"></td>
+            </tr>
+            <tr class="visibleMobile">
+              <td height="40"></td>
+            </tr>
+            <tr>
+              <td>
+                <table width="480" border="0" cellpadding="0" cellspacing="0" align="center" class="fullPadding">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <table width="220" border="0" cellpadding="0" cellspacing="0" align="left" class="col">
+
+                          <tbody>
+                            <tr>
+                              <td style="font-size: 11px; font-family: 'Open Sans', sans-serif; color: #5b5b5b; line-height: 1; vertical-align: top; ">
+                                <strong>BILLING INFORMATION</strong>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td width="100%" height="10"></td>
+                            </tr>
+                            <tr>
+                              <td style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #5b5b5b; line-height: 20px; vertical-align: top; ">
+                              {{$data['recipient']['name']}}<br> {{$data['recipient']['address1']}}, {{$data['recipient']['city']}}<br> {{$data['recipient']['country_name']}}<br> {{$data['recipient']['zip']}}<br> T: {{$data['recipient']['phone']}}
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+
+                        <table width="220" border="0" cellpadding="0" cellspacing="0" align="right" class="col">
+                          <tbody>
+                            <tr class="visibleMobile">
+                              <td height="20"></td>
+                            </tr>
+                            <tr>
+                              <td style="font-size: 11px; font-family: 'Open Sans', sans-serif; color: #5b5b5b; line-height: 1; vertical-align: top; ">
+                                <strong>PAYMENT METHOD</strong>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td width="100%" height="10"></td>
+                            </tr>
+                            <tr>
+                              <td style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #5b5b5b; line-height: 20px; vertical-align: top; ">
+                                Stripe Transaction ID: <a href="#" style="color: #ff0000; text-decoration:underline;">{{$payment->payment_intent_id}}</a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <table width="480" border="0" cellpadding="0" cellspacing="0" align="center" class="fullPadding">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <table width="220" border="0" cellpadding="0" cellspacing="0" align="left" class="col">
+                          <tbody>
+                            <tr class="hiddenMobile">
+                              <td height="35"></td>
+                            </tr>
+                            <tr class="visibleMobile">
+                              <td height="20"></td>
+                            </tr>
+                            <tr>
+                              <td style="font-size: 11px; font-family: 'Open Sans', sans-serif; color: #5b5b5b; line-height: 1; vertical-align: top; ">
+                                <strong>SHIPPING INFORMATION</strong>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td width="100%" height="10"></td>
+                            </tr>
+                            <tr>
+                              <td style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #5b5b5b; line-height: 20px; vertical-align: top; ">
+                                {{$data['recipient']['name']}}<br> {{$data['recipient']['address1']}}, {{$data['recipient']['city']}}<br> {{$data['recipient']['country_name']}}<br> {{$data['recipient']['zip']}}<br> T: {{$data['recipient']['phone']}}
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+
+                        <table width="220" border="0" cellpadding="0" cellspacing="0" align="right" class="col">
+                          <tbody>
+                            <tr class="hiddenMobile">
+                              <td height="35"></td>
+                            </tr>
+                            <tr class="visibleMobile">
+                              <td height="20"></td>
+                            </tr>
+                            <tr>
+                              <td style="font-size: 11px; font-family: 'Open Sans', sans-serif; color: #5b5b5b; line-height: 1; vertical-align: top; ">
+                                <strong>SHIPPING METHOD</strong>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td width="100%" height="10"></td>
+                            </tr>
+                            <tr>
+                              <td style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #5b5b5b; line-height: 20px; vertical-align: top; ">
+                                {{$data['shipping']}}: {{$data['shipping_service_name']}}
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+            <tr class="hiddenMobile">
+              <td height="60"></td>
+            </tr>
+            <tr class="visibleMobile">
+              <td height="30"></td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!-- /Information -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="fullTable" bgcolor="#e1e1e1">
+
+  <tr>
+    <td>
+      <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="fullTable" bgcolor="#ffffff" style="border-radius: 0 0 10px 10px;">
+        <tr>
+          <td>
+            <table width="480" border="0" cellpadding="0" cellspacing="0" align="center" class="fullPadding">
+              <tbody>
+                <tr>
+                  <td style="font-size: 12px; color: #5b5b5b; font-family: 'Open Sans', sans-serif; line-height: 18px; vertical-align: top; text-align: left;">
+                    Have a nice day.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <tr class="spacer">
+          <td height="50"></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td height="20"></td>
+  </tr>
 </body>
 </html>
