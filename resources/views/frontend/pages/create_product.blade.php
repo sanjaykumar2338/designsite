@@ -88,6 +88,13 @@
                         $totalPrice = $product->product_price + $commissionAmount;
                     @endphp
 
+                    @if(Auth::check())
+                        @if(auth()->user()->email=='admin@gmail.com')
+                            <a class="place-btn" target="_blank" href="{{url('/')}}/admin/products/{{$product->id}}/edit">Update Product Info</a> <a class="place-btn"  target="_blank" href="{{url('/')}}/admin/products/create_template/20">Desgin Template</a>
+                            <br><br>
+                        @endif
+                    @endif
+
                     <h1 class="product_title">
                         {{ $product->website_product_name ? $product->website_product_name : $product->product_name }}</h1>
                     <br>
