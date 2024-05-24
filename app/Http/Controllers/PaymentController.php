@@ -54,10 +54,10 @@ class PaymentController extends Controller
 
                 $order = PrintfulOrder::where('id',$id)->first();
                 $data = json_decode($order->printful_order_data, true);
-                $payment2 = \DB::table('payments')->where('id',$order->payment_id)->first();
+                //$payment2 = \DB::table('payments')->where('id',$order->payment_id)->first();
 
                 // Send order placed email
-                Mail::to(auth()->user()->email)->send(new OrderPlaced($payment2, $user, $data));
+                Mail::to(auth()->user()->email)->send(new OrderPlaced($payment, $user, $data));
             }
 
             return response()->json(['success' => true, 'message' => 'Payment successful','payment_id' => $payment->id]);
