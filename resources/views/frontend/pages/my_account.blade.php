@@ -38,7 +38,9 @@
             <th scope="col">Printful #ID</th>
             <th scope="col">Product Name</th>
             <th scope="col">Status</th>
-            <th scope="col">Amount</th>
+            <th scope="col">Total Amount</th>
+            <th scope="col">Donation</th>
+            <th scope="col">Country</th>
             <th scope="col">Payment ID</th>
             <th scope="col">View Product</th>
           </tr>
@@ -46,6 +48,7 @@
         <tbody>
           @if($orders) 
             @foreach($orders as $order) 
+              
                 <tr>
                     @php
                         $data = json_decode($order->printful_order_data, true);
@@ -54,7 +57,9 @@
                     <th scope="row">{{$data['id']}}</th>
                     <td>{{$order->website_product_name}}</td>
                     <td>{{$data['status']}}</td>
-                    <td>${{$order->amt}}</td>
+                    <td>${{$data['retail_costs']['total']}}</td>
+                    <td>${{$order->total_amount - $order->product_price}}</td>
+                    <td>{{$order->supporting_country}}</td>
                     <td>{{$order->payment_intent_id}}</td>
                     <td>
                         <button type="button" class="btn btn-primary" onclick="window.open('{{ $url }}', '_blank')"><i class="far fa-eye"></i></button>

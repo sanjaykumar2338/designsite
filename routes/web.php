@@ -46,6 +46,7 @@ Route::group(['prefix' => 'admin','middleware' => 'check.auth'], function () {
 
 Route::group(['middleware' => 'check.auth'], function () {
     Route::get('/my_account', [App\Http\Controllers\HomeController::class, 'my_account'])->name('my_account');
+    Route::get('/invoice/{id}', [App\Http\Controllers\HomeController::class, 'invoice'])->name('invoice');
 });
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

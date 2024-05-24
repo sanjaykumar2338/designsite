@@ -112,6 +112,8 @@ class UserController extends Controller
             $order->printful_order_data = $_request->printful_order_data;
             $order->product_id = $_request->product_id;
             $order->payment_id = $request->payment_id;
+            $order->total_amount = $request->total;
+            $order->product_price = $request->product_price;
             $order->printful_order_id = json_decode($_request->printful_order_data,true)['id'];
             $order->customer_email = json_decode($_request->printful_order_data,true)['recipient']['email'];
 

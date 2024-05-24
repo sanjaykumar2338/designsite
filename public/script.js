@@ -1159,6 +1159,8 @@ function saveOrder(data) {
         printful_order_data: JSON.stringify(data),
         product_id: product.id,
         payment_id: localStorage.getItem("payment_id"),
+        total:totalPrice,
+        product_price: document.querySelector('.product_price').getAttribute('data-exact')
     });
 
     var requestOptions = {
