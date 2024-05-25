@@ -860,7 +860,7 @@ for misinformation.</p>
                     <h3>Total</h3>
 
                     <div class="inner_text">
-                        <p class="p">$3000
+                        <p class="p">${{\DB::table('printful_orders')->sum('donation_amount')}}
                         </p>
                     </div>
                 </div>
@@ -873,28 +873,28 @@ for misinformation.</p>
                     <div class="inner_text">
                         <div class="algin-span">
                             <span>Israeli</span>
-                            <span>$1000</span>
+                            <span>${{\DB::table('printful_orders')->where('donation_country','Israel')->sum('donation_amount')}}</span>
                         </div>
 
                         <div class="algin-span">
                             <span>Palestinian</span>
-                            <span>$1211</span>
+                            <span>${{\DB::table('printful_orders')->where('donation_country','Palestine')->sum('donation_amount')}}</span>
                         </div>
 
 
 
                         <div class="algin-span">
                             <span>Russiona</span>
-                            <span>$591</span>
+                            <span>${{\DB::table('printful_orders')->where('donation_country','Russia')->sum('donation_amount')}}</span>
                         </div>
                         <div class="algin-span">
                             <span>Ukraine</span>
-                            <span>$6000</span>
+                            <span>${{\DB::table('printful_orders')->where('donation_country','Ukraine')->sum('donation_amount')}}</span>
                         </div>
                         <div class="algin-span">
                             <span>Donate
                                 Make a Difference </span>
-                            <span>$6000</span>
+                            <span>${{\DB::table('printful_orders')->sum('donation_amount')}}</span>
                         </div>
                     </div>
                 </div>
