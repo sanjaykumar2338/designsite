@@ -63,6 +63,19 @@
                   {{ session('status') }}
                </div>
                @endif
+
+               @if (session('success'))
+                  <div class="alert alert-success">
+                     {{ session('success') }}
+                  </div>
+               @endif
+
+               @if (session('error'))
+                  <div class="alert alert-danger">
+                     {{ session('error') }}
+                  </div>
+               @endif
+
                @if(count($orders)>0)
                
                <div class="row">
@@ -74,11 +87,14 @@
                         <th scope="col">Product Name</th>
                         <th scope="col">Status</th>
                         <th scope="col">Total Amount</th>
-                        <th scope="col">Donation</th>
                         <th scope="col">Country</th>
-                        <th scope="col">Payment ID</th>
+                        <th style="display:none;" scope="col">Payment ID</th>
+
+                        <th scope="col">Donation</th>
+                        
                         <th scope="col">Product</th>
                         <th scope="col">Invoice</th>
+                        
                      </tr>
                      </thead>
                      <tbody>
@@ -126,9 +142,22 @@
                                  
                                  <td>{{$info['result']['status']}}</td>
                                  <td>${{$data['retail_costs']['total']}}</td>
-                                 <td>${{$order->total_amount - $order->product_price}}</td>
+                                 
                                  <td>{{$order->supporting_country}}</td>
-                                 <td>{{$order->payment_intent_id}}</td>
+                                 <td style="display:none;">{{$order->payment_intent_id}}</td>
+                                 
+                                 @php $donation = $order->total_amount - $order->product_price; @endphp
+
+                                 @if($donation && $donation!=0)
+                                    @if($order->donation_status=='paid')
+                                       <td><a style="color: white;background-color: green;" type="button" class="btn btn-primary" href="#">Sent ${{$donation}}</a></td>
+                                    @else
+                                       <td><a style="color: white;" onclick="return confirm('Are you sure?')" type="button" class="btn btn-primary" href="{{url('admin/sendpayment')}}/{{$donation}}/{{$order->supporting_country}}/{{$order->id}}">Send ${{$donation}}</a></td>
+                                    @endif
+                                 @else
+                                    <td><a style="color: white;" type="button" class="btn btn-primary" href="#">Send ${{$donation}}</a></td>
+                                 @endif
+
                                  <td>
                                        <button type="button" class="btn btn-primary" onclick="window.open('{{ $url }}', '_blank')"><i class="far fa-eye"></i></button>
                                        <button style="display:none;" type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
@@ -137,6 +166,8 @@
                                  <td>
                                        <button type="button" class="btn btn-primary" onclick="window.open('{{ url('/invoice/' . $order->id) }}', '_blank')" style="cursor: pointer;"><i class="far fa-eye"></i></button>
                                  </td>
+
+                                 
                               </tr>
                            @endforeach
                         @endif  
@@ -154,13 +185,28 @@
       </div>
    </div>
 </section>
-<div class="pagination">
-        @if ($orders->previousPageUrl())
-            << <a href="{{ $orders->previousPageUrl() }}">Previous</a>
+<nav>
+    <ul class="pagination justify-content-center">
+        @if ($orders->onFirstPage())
+            <li class="page-item disabled"><span class="page-link"><< Previous</span></li>
+        @else
+            <li class="page-item"><a class="page-link" href="{{ $orders->previousPageUrl() }}" rel="prev"><< Previous</a></li>
         @endif
-        
-        @if ($orders->nextPageUrl())
-            &nbsp;&nbsp;&nbsp;<a href="{{ $orders->nextPageUrl() }}">Next >></a>
+
+        @for ($i = 1; $i <= $orders->lastPage(); $i++)
+            @if ($i == $orders->currentPage())
+                <li class="page-item active"><span class="page-link">{{ $i }}</span></li>
+            @else
+                <li class="page-item"><a class="page-link" href="{{ $orders->url($i) }}">{{ $i }}</a></li>
+            @endif
+        @endfor
+
+        @if ($orders->hasMorePages())
+            <li class="page-item"><a class="page-link" href="{{ $orders->nextPageUrl() }}" rel="next">Next >></a></li>
+        @else
+            <li class="page-item disabled"><span class="page-link">Next >></span></li>
         @endif
-</div>
+    </ul>
+</nav>
+
 @endsection

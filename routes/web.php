@@ -31,6 +31,7 @@ Route::group(['prefix' => 'admin','middleware' => 'check.auth'], function () {
     Route::get('photos/create/{id}', 'PhotoController@create');
     Route::get('/order', [AdminController::class, 'order']);
     Route::get('/customer', [AdminController::class, 'customer']);
+    Route::get('/sendpayment/{amount}/{country}/{orderId}', [AdminController::class, 'sendpayment']);
 
     //blogs
     Route::get('blogs', [BlogsController::class, 'index']);
