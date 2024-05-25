@@ -383,6 +383,10 @@
 .one_col_2 .card_s button {
   border-radius: 0 !important;
   max-width: 100% !important;
+  font-size: 24px !important;
+  letter-spacing: 0.5px;
+  padding: 10px 25px !important;
+  line-height: normal !important;
 }
 
 .one_col_2 .card_s p {text-align: left;}
