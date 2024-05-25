@@ -7,8 +7,8 @@
     <meta name="description" content="{{ isset($metaDescription) ? $metaDescription : '' }}">
     <meta name="keywords" content="{{ isset($keywords) ? $keywords : '' }}">
    
-    <link rel="stylesheet" href="{{url('/')}}/asset/frontend/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{url('/')}}/asset/frontend/css/responsive.css">
+    <link rel="stylesheet" href="{{url('/')}}/asset/frontend/css/bootstrap.min.css?v={{time()}}">
+    <link rel="stylesheet" href="{{url('/')}}/asset/frontend/css/responsive.css?v={{time()}}">
     <link rel="stylesheet" href="{{url('/')}}/asset/frontend/css/stylesheet.css?v={{time()}}">
     <link rel="stylesheet" href="{{url('/')}}/asset/frontend/css/final-style.css?v={{time()}}">
     <link rel="stylesheet" href="{{url('/')}}/asset/frontend/css/final-responsive.css?v={{time()}}">
