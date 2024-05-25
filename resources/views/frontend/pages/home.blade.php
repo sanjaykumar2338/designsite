@@ -587,13 +587,50 @@
                         <div class="card_s">
                             <button> Boycott
                                 Movement</button>
-                            <h3>Shop the
+                            <h3>Shop the 
                                 Oversight Collection</h3>
-                            <p>Hold institutions accountable
-                                for biased influence. </p>
+                            <p>Hold institutions accountable for biased influence.</p>
 
                             <div class="p_pic">
-                                <img src="{{url('/')}}/storage/images/hjEdInOhTho7sjcTKq7TUSGLQAP47YHs8pSTb1mk.webp"
+                            <img src="{{url('/')}}/asset/frontend/images/hoodie.webp"
+                                    alt="" class="img-fluid">
+
+
+                            </div>
+                            <a href="">Learn more</a>
+
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3 ">
+                        <div class="card_s">
+                            <button>Integrity-reform Movement</button>
+                            <h3>Shop the Traitor Collection</h3>
+                            <p>Hold lawmakers accountable
+for double-loyalty.  </p>
+
+                            <div class="p_pic">
+                            <img src="{{url('/')}}/asset/frontend/images/hoodie.webp"
+                                    alt="" class="img-fluid">
+
+
+                            </div>
+                            <a href="">Learn more</a>
+
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3 ">
+                        <div class="card_s">
+                            <button> Ethic-reform
+Movement</button>
+                            <h3>Shop the
+Trader Collection</h3>
+                            <p>Hold politicians accountable
+for insider trading.</p>
+
+                            <div class="p_pic">
+                                <img src="{{url('/')}}/asset/frontend/images/hoodie.webp"
                                     alt="" class="img-fluid">
 
                             </div>
@@ -604,54 +641,17 @@
                     </div>
                     <div class="col-lg-3 ">
                         <div class="card_s">
-                            <button> Boycott
-                                Movement</button>
+                            <button>Fact-check
+Movement</button>
                             <h3>Shop the
-                                Oversight Collection</h3>
-                            <p>Hold institutions accountable
-                                for biased influence. </p>
+Propaganda Collection</h3>
+                            <p>Hold the media accountable
+for misinformation.</p>
 
                             <div class="p_pic">
-                                <img src="{{url('/')}}/storage/images/hjEdInOhTho7sjcTKq7TUSGLQAP47YHs8pSTb1mk.webp"
+                            <img src="{{url('/')}}/asset/frontend/images/hoodie.webp"
                                     alt="" class="img-fluid">
 
-                            </div>
-                            <a href="">Learn more</a>
-
-
-                        </div>
-                    </div>
-                    <div class="col-lg-3 ">
-                        <div class="card_s">
-                            <button> Boycott
-                                Movement</button>
-                            <h3>Shop the
-                                Oversight Collection</h3>
-                            <p>Hold institutions accountable
-                                for biased influence. </p>
-
-                            <div class="p_pic">
-                                <img src="{{url('/')}}/storage/images/hjEdInOhTho7sjcTKq7TUSGLQAP47YHs8pSTb1mk.webp"
-                                    alt="" class="img-fluid">
-
-                            </div>
-                            <a href="">Learn more</a>
-
-
-                        </div>
-                    </div>
-                    <div class="col-lg-3 ">
-                        <div class="card_s">
-                            <button> Boycott
-                                Movement</button>
-                            <h3>Shop the
-                                Oversight Collection</h3>
-                            <p>Hold institutions accountable
-                                for biased influence. </p>
-
-                            <div class="p_pic">
-                                <img src="{{url('/')}}/storage/images/hjEdInOhTho7sjcTKq7TUSGLQAP47YHs8pSTb1mk.webp"
-                                    alt="" class="img-fluid">
 
                             </div>
                             <a href="">Learn more</a>
