@@ -25,7 +25,7 @@
                                 <h5>DEFIANT TO <br>AGGRESSION!</h5>
                                 <p>Stand to Defend against Aggression,<br> Demolish Terrorism,<br> and Claim Ownership
                                     to Peace.</p>
-                                <button onclick='location.href ="{{route('donate_now')}}";' class=" donate"> shop and
+                                <button style="display:none;" onclick='location.href ="{{route('donate_now')}}";' class=" donate"> shop and
                                     donate</button>
                             </div>
                         </div>
@@ -36,7 +36,7 @@
                                 <h5>MOVED BY<br> IMAGES!</h5>
                                 <p>Stand in the Face of Oppression,<br> Challenge False Narratives,<br> and Demand
                                     Accountability.</p>
-                                <button onclick='location.href ="{{route('donate_now')}}";' class=" donate"> shop and
+                                <button style="display:none;" onclick='location.href ="{{route('donate_now')}}";' class=" donate"> shop and
                                     donate</button>
                             </div>
                         </div>
@@ -45,7 +45,7 @@
                             <div class="carousel-caption ">
                                 <h5>FUELED BY<br> RIGHTEOUSNESS!</h5>
                                 <p>Stand for Unification,<br> Resist Unwanted Narratives,<br> and Demand Loyalty.</p>
-                                <button onclick='location.href ="{{route('donate_now')}}";' class=" donate"> shop and
+                                <button style="display:none;" onclick='location.href ="{{route('donate_now')}}";' class=" donate"> shop and
                                     donate</button>
                             </div>
                         </div>
@@ -55,7 +55,7 @@
                             <div class="carousel-caption ">
                                 <h5>DRIVEN TO<br> BE FREE!</h5>
                                 <p>Stand for Sovereignty,<br> Reject Foreign Influence,<br> and Seek Independence.</p>
-                                <button onclick='location.href ="{{route('donate_now')}}";' class=" donate"> shop and
+                                <button style="display:none;" onclick='location.href ="{{route('donate_now')}}";' class=" donate"> shop and
                                     donate</button>
                             </div>
                         </div>
@@ -731,7 +731,7 @@
 
                     <div class="col-lg-6">
                         <div class="Question_2">
-                            <h4>Notional Poll - Public Standpoint Hall of Shame Poll - Political Ejection
+                            <h4>Hall of Shame Poll - Political Ejection
                             </h4>
                             <p>Assert your discontent with the establishment, empower
                                 your influence, and proclaim your voice.</p>

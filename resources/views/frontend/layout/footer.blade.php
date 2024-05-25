@@ -3,7 +3,7 @@
             <div class="row">
                 <div class="col-md-12 col-lg-3">
                     <div class="fo-one">
-                        <img src="{{url('/')}}/asset/frontend/images/logo-footer.png" alt="">
+                        <img src="{{url('/')}}/asset/frontend/images/new-logo.jpg" alt="">
                         
                         
                             <h5>
