@@ -1510,21 +1510,3 @@
         position: unset;
     }
 }
-
-.one_col_2 .card_s {
-    border-radius: 0 !important;
-    border: none !important;
-    box-shadow: none !important;
-}
-
-.one_col_2 .card_s button {
-    border-radius: 0;
-    max-width: 100%;
-}
-
-.one_col_2 .card_s p {text-align: left;}
-
-.p_pic img.img-fluid {
-    width: 100%;
-    display: block;
-}
