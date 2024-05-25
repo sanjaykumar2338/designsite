@@ -381,8 +381,8 @@
 }
 
 .one_col_2 .card_s button {
-    border-radius: 0;
-    max-width: 100%;
+  border-radius: 0 !important;
+  max-width: 100% !important;
 }
 
 .one_col_2 .card_s p {text-align: left;}
