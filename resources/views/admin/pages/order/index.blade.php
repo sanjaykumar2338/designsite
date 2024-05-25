@@ -70,6 +70,7 @@
                      <thead>
                      <tr>
                         <th scope="col">Printful #ID</th>
+                        <th scope="col">Customer Name</th>
                         <th scope="col">Product Name</th>
                         <th scope="col">Status</th>
                         <th scope="col">Total Amount</th>
@@ -120,7 +121,9 @@
                                  @endphp
 
                                  <th scope="row">{{$data['id']}}</th>
+                                 <td>{{$order->customer_name}}</td>
                                  <td>{{$order->website_product_name}}</td>
+                                 
                                  <td>{{$info['result']['status']}}</td>
                                  <td>${{$data['retail_costs']['total']}}</td>
                                  <td>${{$order->total_amount - $order->product_price}}</td>
