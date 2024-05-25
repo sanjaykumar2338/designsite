@@ -1510,3 +1510,37 @@
         position: unset;
     }
 }
+
+@media only screen and (max-width:767px){
+    .prd-image {
+        width: 100% !important;
+    }
+    
+    .lowre-canva div#div_front {
+        width: 30px !important;
+        height: 100px !important;
+    }
+    
+    .lowre-canva .frame-area canvas {
+        width: 30px !important;
+        height: 100px !important;
+    }
+    
+    .lowre-canva .frame-area .canvas-container {
+        width: 30px !important;
+        height: 110px !important;
+    }
+    .lowre-canva div#div_back {
+        width: 30px !important;
+        height: 100px !important;
+    }  
+    .lowre-canva div#div_sleeve_left {
+        width: 30px !important;
+        height: 100px !important;
+    }
+    
+    .lowre-canva div#div_sleeve_right {
+        width: 30px !important;
+        height: 100px !important;
+    }  
+}

@@ -8,7 +8,7 @@
         <div id="data" hidden>{{ $product }}</div>
         <div class="container">
             <div class="flex flex-wrap">
-                <div class="prd-left">
+                <div class="prd-left @php echo $product->product_type=='Bottoms' ? 'lowre-canva':''; @endphp">
                     {{-- <div class="flex flex-wrap prd-crs-img">
                         <button class="hover:bg-slate-200 h-[50px] w-[50px]" onclick="setSelected(1)">
                             <img src="https://files.cdn.printful.com/m/ec1000/medium/onman/front/05_ec1000_onman_front_base_whitebg.png?v=1675420344"
