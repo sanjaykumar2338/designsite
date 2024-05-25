@@ -60,7 +60,7 @@
                         curl_setopt_array(
                             $curl,
                             array(
-                                CURLOPT_URL => 'https://api.printful.com/orders/' . $id,
+                                CURLOPT_URL => 'https://api.printful.com/orders/' . $data['id'],
                                 CURLOPT_RETURNTRANSFER => true,
                                 CURLOPT_ENCODING => '',
                                 CURLOPT_MAXREDIRS => 10,
@@ -82,12 +82,12 @@
                         $response = curl_exec($curl);
 
                         curl_close($curl);
-                        return $response;
+                        $info = json_decode($response, true);
                     @endphp
-                    
+
                     <th scope="row">{{$data['id']}}</th>
                     <td>{{$order->website_product_name}}</td>
-                    <td>{{$data['status']}}</td>
+                    <td>{{$info['result']['status']}}</td>
                     <td>${{$data['retail_costs']['total']}}</td>
                     <td>${{$order->total_amount - $order->product_price}}</td>
                     <td>{{$order->supporting_country}}</td>
