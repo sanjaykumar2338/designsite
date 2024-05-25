@@ -1452,6 +1452,12 @@
     }
 }
 
+@media only screen and (max-width: 1199.98px){
+    .main-vioce .add-bg {
+        position: unset;
+    }
+}
+
 @media only screen and (max-width:767px){
     .prd-image {
         width: 100% !important;
@@ -1462,65 +1468,6 @@
         margin: 0 auto;
         display: block;
     }
-    div#div_front {
-        width: 90px !important;
-        height: 120px !important;
-        top: 29% !important;
-        left: 0 !important;
-        right: 0 !important;
-        margin: 0 auto;
-    }
-    div#div_back {
-        width: 90px !important;
-        height: 120px !important;
-        top: 20% !important;
-        left: 0 !important;
-        right: 0 !important;
-        margin: 0 auto;
-    }
-    div#div_sleeve_right {
-        width: 80px !important;
-        height: 50px !important;
-        top: 48% !important;
-        left: 0 !important;
-        right: 0 !important;
-        margin: 0 auto;
-    }
-    
-    .frame-area canvas {
-        width: 80px !important;
-        height: 50px !important;
-        top: 0% !important;
-        left: 0 !important;
-        right: 0 !important;
-    }
-    
-    div#div_sleeve_left {
-        width: 80px !important;
-        height: 50px !important;
-        top: 48% !important;
-        left: 0 !important;
-        right: 0 !important;
-        margin: 0 auto;
-    }
-}
-
-@media only screen and (max-width: 1199.98px){
-    .main-vioce .add-bg {
-        position: unset;
-    }
-}
-
-@media only screen and (max-width:767px){
-    .prd-image {
-        width: 100%;
-    }
-    #canvasBgImage img {
-        right: 0;
-        left: 0;
-        margin: 0 auto;
-        display: block;
-    }
     .t-shirt-canva div#div_front {
         width: 90px !important;
         height: 120px !important;
@@ -1532,7 +1479,7 @@
     .t-shirt-canva div#div_back {
         width: 90px !important;
         height: 120px !important;
-        top: 20% !important;
+        top: 23% !important;
         left: 0 !important;
         right: 0 !important;
         margin: 0 auto;
@@ -1545,74 +1492,53 @@
         right: 0 !important;
         margin: 0 auto;
     }
-    
     .t-shirt-canva .frame-area canvas {
-        width: 80px !important;
-        height: 50px !important;
-        top: 0% !important;
-        left: 0 !important;
-        right: 0 !important;
-    }
+		width: 90px !important;
+		height: 120px !important;
+	}
+    .t-shirt-canva #div_sleeve_left canvas {
+		width: 65px !important;
+		height: 60px !important;
+	}
+	.t-shirt-canva #div_sleeve_right canvas {
+		width: 80px !important;
+		height: 50px !important;
+	}
     
-    .t-shirt-canva div#div_sleeve_left {
-        width: 80px !important;
-        height: 50px !important;
-        top: 48% !important;
+        .t-shirt-canva div#div_sleeve_left {
+        width: 65px !important;
+        height: 60px !important;
+        top: 42% !important;
         left: 0 !important;
         right: 0 !important;
         margin: 0 auto;
     }
+	
+.lowre-canva div#div_front {
+    width: 30px !important;
+    height: 100px !important;
 }
 
-@media only screen and (max-width:767px){
-    .prd-image {
-        width: 100%;
-    }
-    #canvasBgImage img {
-        right: 0;
-        left: 0;
-        margin: 0 auto;
-        display: block;
-    }
-    .t-shirt-canva div#div_front {
-        width: 90px !important;
-        height: 120px !important;
-        top: 29% !important;
-        left: 0 !important;
-        right: 0 !important;
-        margin: 0 auto;
-    }
-    .t-shirt-canva div#div_back {
-        width: 90px !important;
-        height: 120px !important;
-        top: 20% !important;
-        left: 0 !important;
-        right: 0 !important;
-        margin: 0 auto;
-    }
-    .t-shirt-canva div#div_sleeve_right {
-        width: 80px !important;
-        height: 50px !important;
-        top: 48% !important;
-        left: 0 !important;
-        right: 0 !important;
-        margin: 0 auto;
-    }
-    
-    .t-shirt-canva .frame-area canvas {
-        width: 80px !important;
-        height: 50px !important;
-        top: 0% !important;
-        left: 0 !important;
-        right: 0 !important;
-    }
-    
-    .t-shirt-canva div#div_sleeve_left {
-        width: 80px !important;
-        height: 50px !important;
-        top: 48% !important;
-        left: 0 !important;
-        right: 0 !important;
-        margin: 0 auto;
-    }
+.lowre-canva .frame-area canvas {
+    width: 30px !important;
+    height: 100px !important;
+}
+
+.lowre-canva .frame-area .canvas-container {
+    width: 30px !important;
+    height: 110px !important;
+}
+.lowre-canva div#div_back {
+    width: 30px !important;
+    height: 100px !important;
+}  
+.lowre-canva div#div_sleeve_left {
+    width: 30px !important;
+    height: 100px !important;
+}
+
+.lowre-canva div#div_sleeve_right {
+    width: 30px !important;
+    height: 100px !important;
+} 	
 }
