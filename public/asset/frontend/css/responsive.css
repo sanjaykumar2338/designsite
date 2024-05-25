@@ -1454,7 +1454,7 @@
 
 @media only screen and (max-width:767px){
     .prd-image {
-        width: 100%;
+        width: 100% !important;
     }
     #canvasBgImage img {
         right: 0;
