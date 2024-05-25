@@ -67,6 +67,7 @@ class AdminController extends Controller{
         if ($order) {
             $order->donation_status = 'paid';
             $order->donation_amount = $amount;
+            $order->donation_country = $country;
             $order->save();
         }
 
