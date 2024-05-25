@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Models\PrintfulOrder;
 use App\Models\Payment;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\DonationSuccessful;
 class AdminController extends Controller{
     
     public function __construct()
@@ -71,7 +73,10 @@ class AdminController extends Controller{
             $order->save();
         }
 
-        return back()->with('success', 'Payment sent successfully!');
+        // Send the confirmation email
+        Mail::to($order->customer_email)->send(new DonationSuccessful($amountInCents, $country, $order->customer_email));
+
+        return back()->with('message', 'Donation successfully processed and email sent to customer.');
     }
     public function order(){
        
