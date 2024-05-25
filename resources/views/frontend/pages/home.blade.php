@@ -593,7 +593,7 @@
                                 for biased influence. </p>
 
                             <div class="p_pic">
-                                <img src="http://127.0.0.1:8000/storage/images/hjEdInOhTho7sjcTKq7TUSGLQAP47YHs8pSTb1mk.webp"
+                                <img src="{{url('/')}}/storage/images/hjEdInOhTho7sjcTKq7TUSGLQAP47YHs8pSTb1mk.webp"
                                     alt="" class="img-fluid">
 
                             </div>
@@ -612,7 +612,7 @@
                                 for biased influence. </p>
 
                             <div class="p_pic">
-                                <img src="http://127.0.0.1:8000/storage/images/hjEdInOhTho7sjcTKq7TUSGLQAP47YHs8pSTb1mk.webp"
+                                <img src="{{url('/')}}/storage/images/hjEdInOhTho7sjcTKq7TUSGLQAP47YHs8pSTb1mk.webp"
                                     alt="" class="img-fluid">
 
                             </div>
@@ -631,7 +631,7 @@
                                 for biased influence. </p>
 
                             <div class="p_pic">
-                                <img src="http://127.0.0.1:8000/storage/images/hjEdInOhTho7sjcTKq7TUSGLQAP47YHs8pSTb1mk.webp"
+                                <img src="{{url('/')}}/storage/images/hjEdInOhTho7sjcTKq7TUSGLQAP47YHs8pSTb1mk.webp"
                                     alt="" class="img-fluid">
 
                             </div>
@@ -650,7 +650,7 @@
                                 for biased influence. </p>
 
                             <div class="p_pic">
-                                <img src="http://127.0.0.1:8000/storage/images/hjEdInOhTho7sjcTKq7TUSGLQAP47YHs8pSTb1mk.webp"
+                                <img src="{{url('/')}}/storage/images/hjEdInOhTho7sjcTKq7TUSGLQAP47YHs8pSTb1mk.webp"
                                     alt="" class="img-fluid">
 
                             </div>
