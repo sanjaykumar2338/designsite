@@ -28,10 +28,10 @@ class AdminController extends Controller{
         ];
 
         $nonprofitNames = [
-            'Palestine' => 'Nonprofit for Palestine',
-            'Israel' => 'Nonprofit for Israel',
-            'Ukraine' => 'Nonprofit for Ukraine',
-            'Russia' => 'Nonprofit for Russia',
+            'Palestine' => 'Doctors Without Borders, USA Nonprofit for Palestine',
+            'Israel' => 'New Israel Fund Nonprofit for Israel',
+            'Ukraine' => 'Revived Soldiers Ukraine Nonprofit for Ukraine',
+            'Russia' => 'Free Russia Foundation Nonprofit for Russia',
         ];
 
         if (!isset($nonprofitIds[$country])) {
