@@ -19,13 +19,19 @@ class AdminController extends Controller{
     public function index(Request $request){
         return view('admin.pages.dashboard')->with('activeLink','dashboard');
     }
-    public function sendPayment($amount, $country, $orderId)
-    {
+    public function sendPayment($amount, $country, $orderId){
         $nonprofitIds = [
             'Palestine' => 'n_LVefvosmlNukcqYBTotxxar8',
             'Israel' => 'n_XbkfcVU8UluxtZhwsfZFKj0g',
             'Ukraine' => 'n_H9BXpn4xgi7TRexH1ZdOVVPS',
             'Russia' => 'n_KPyaUvrLgEZ7x194gbjwS7ZD',
+        ];
+
+        $nonprofitNames = [
+            'Palestine' => 'Nonprofit for Palestine',
+            'Israel' => 'Nonprofit for Israel',
+            'Ukraine' => 'Nonprofit for Ukraine',
+            'Russia' => 'Nonprofit for Russia',
         ];
 
         if (!isset($nonprofitIds[$country])) {
@@ -74,7 +80,7 @@ class AdminController extends Controller{
         }
 
         // Send the confirmation email
-        Mail::to($order->customer_email)->send(new DonationSuccessful($amountInCents, $country, $order->customer_email));
+        Mail::to($order->customer_email)->send(new DonationSuccessful($amountInCents, $country, $order->customer_email, $nonprofitNames[$country]));
 
         return back()->with('message', 'Donation successfully processed and email sent to customer.');
     }

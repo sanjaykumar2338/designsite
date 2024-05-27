@@ -13,16 +13,18 @@ class DonationSuccessful extends Mailable
     public $country;
     public $customerEmail;
 
+    public $nonprofit;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($amount, $country, $customerEmail)
+    public function __construct($amount, $country, $customerEmail, $nonprofit)
     {
         $this->amount = $amount;
         $this->country = $country;
         $this->customerEmail = $customerEmail;
+        $this->nonprofit = $nonprofit;
     }
 
     /**
@@ -33,6 +35,12 @@ class DonationSuccessful extends Mailable
     public function build()
     {
         return $this->subject('Donation Successful')
-                    ->view('emails.donation_successful');
+            ->view('emails.donation_successful')
+            ->with([
+                'amount' => $this->amount,
+                'country' => $this->country,
+                'nonprofit' => $this->nonprofit,
+                'customerEmail' => $this->nonprofit
+            ]);
     }
 }

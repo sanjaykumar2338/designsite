@@ -92,7 +92,7 @@
 
                         <th scope="col">Donation</th>
                         
-                        <th scope="col">Product</th>
+                        
                         <th scope="col">Invoice</th>
                         
                      </tr>
@@ -138,7 +138,14 @@
 
                                  <th scope="row">{{$data['id']}}</th>
                                  <td>{{$order->customer_name}}</td>
-                                 <td>{{$order->website_product_name}}</td>
+
+                                 <td>
+                                    @php
+                                       $words = explode(' ', $order->website_product_name);
+                                       $firstThreeWords = implode(' ', array_slice($words, 0, 3));
+                                    @endphp
+                                    <a href="{{ $url }}" href="_blank">View {{ $firstThreeWords }}...</a>
+                                 </td>
                                  
                                  <td>{{$info['result']['status']}}</td>
                                  <td>${{$data['retail_costs']['total']}}</td>
@@ -158,11 +165,7 @@
                                     <td><a style="color: white;" type="button" class="btn btn-primary" href="#">Send ${{$donation}}</a></td>
                                  @endif
 
-                                 <td>
-                                       <button type="button" class="btn btn-primary" onclick="window.open('{{ $url }}', '_blank')"><i class="far fa-eye"></i></button>
-                                       <button style="display:none;" type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                                       <button style="display:none;" type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
-                                 </td>
+                               
                                  <td>
                                        <button type="button" class="btn btn-primary" onclick="window.open('{{ url('/invoice/' . $order->id) }}', '_blank')" style="cursor: pointer;"><i class="far fa-eye"></i></button>
                                  </td>
