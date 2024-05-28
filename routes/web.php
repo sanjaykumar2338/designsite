@@ -83,7 +83,7 @@ Route::get('/create_product', [App\Http\Controllers\HomeController::class, 'crea
 
 Route::get('/product/list/{standwith}/{productfor}/{producttype}', [App\Http\Controllers\HomeController::class, 'product_list']);
 Route::get('/product/category/{category}', [App\Http\Controllers\HomeController::class, 'product_category']);
-Route::get('/{standwithtype}/shop/{productType}/{slug}', [App\Http\Controllers\HomeController::class, 'shop'])->name('shop');
+Route::get('/{standwithtype}/shop/{productfor}/{productType}/{slug}', [App\Http\Controllers\HomeController::class, 'shop'])->name('shop');
 Route::get('/country/product/{category}', [App\Http\Controllers\HomeController::class, 'country_product'])->name('country_product');
 
 Route::post('/register', [App\Http\Controllers\UserController::class, 'register'])->name('register');

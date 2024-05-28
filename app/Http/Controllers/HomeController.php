@@ -211,9 +211,9 @@ class HomeController extends Controller
         return view('frontend.pages.create_product');
     }
 
-    public function shop(Request $request, $slug)
-    {
-        $product = Products::where('product_slug', $request->slug)->first();
+    public function shop(Request $request, $slug, $product_for)
+    {   
+        $product = Products::where('product_slug', $request->slug)->where('product_for', ucfirst($product_for))->first();
         $product->front_image = fileToUrl($product->front_image);
         $product->back_image = fileToUrl($product->back_image);
         $product->left_image = fileToUrl($product->left_image);

@@ -662,7 +662,7 @@ for misinformation.</p>
 
                 </div>
             </div>
-            <div class="text_2">
+            <div class="text_2" style="display:none;">
                 <h5>We Want to Hear from You - What do you Think?
                 </h5>
                 <p>Choose a cause and share your thoughts on today's most critical issues, from social
