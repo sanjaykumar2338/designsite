@@ -103,7 +103,7 @@
             <a href="{{url('/admin/products')}}" class="nav-link {{$activeLink=='product'?'active':''}}">
               <i class="nav-icon fas fa-solid fa-box"></i>
               <p>
-                Products
+                Preset Products
               </p>
             </a>
 

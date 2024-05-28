@@ -31,10 +31,30 @@ class ProductsController extends Controller
         //}
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        $products = Products::whereIn('supporting_country', ['Israel', 'Palestine', 'Russia', 'Ukraine'])->paginate(5);
-        return view('admin.pages.product.index')->with('products', $products)->with('activeLink', 'product');
+        $query = Products::query();
+
+        // Filter by supporting country
+        if ($request->has('search_by_country') && !empty($request->search_by_country)) {
+            $query->where('supporting_country', $request->search_by_country);
+        }
+
+        // Filter by product for (case-insensitive)
+        if ($request->has('search_by_product_for') && !empty($request->search_by_product_for)) {
+            $productForLower = strtolower($request->search_by_product_for);
+            $query->whereRaw('LOWER(product_for) = ?', [$productForLower]);
+        }
+
+        // Add other filters if necessary
+
+        // Pagination
+        $products = $query->paginate(5);
+
+        // Return the view with products and activeLink
+        return view('admin.pages.product.index')
+            ->with('products', $products)
+            ->with('activeLink', 'product');
     }
 
     /**
