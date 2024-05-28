@@ -61,7 +61,7 @@
                 <h3 class="card-title"><a href="{{url('admin/products/create')}}">Add New Product</a></h3>
                 <div class="card-tools">
                   <form name="search_frm" method="get" action="{{ url('/admin/products') }}">
-                      <div class="input-group input-group-sm" style="gap: 7px;width: 359px;">
+                      <div class="input-group input-group-sm" style="gap: 7px;width:600px;">
                           <select class="form-control float-right" name="search_by_country">
                               <option value="">Filter By Country</option>
                               <option value="Israel" {{ old('search_by_country', request()->search_by_country) == 'Israel' ? 'selected' : '' }}>Israel</option>
@@ -74,6 +74,18 @@
                               <option value="">Filter By Product For</option>
                               <option value="Men" {{ old('search_by_product_for', request()->search_by_product_for) == 'Men' ? 'selected' : '' }}>Men</option>
                               <option value="Woman" {{ old('search_by_product_for', request()->search_by_product_for) == 'Woman' ? 'selected' : '' }}>Woman</option>
+                          </select>
+
+                          <select class="form-control float-right" name="search_by_product_type">
+                                <option value="">Filter By Product Type</option>
+                                <option value="Shirts" {{ old('search_by_product_type', request()->search_by_product_type) == 'Shirts' ? 'selected' : '' }}>Shirts</option>
+                                <option value="Hoodies" {{ old('search_by_product_type', request()->search_by_product_type) == 'Hoodies' ? 'selected' : '' }}>Hoodies</option>
+                                <option value="Sweatshirts" {{ old('search_by_product_type', request()->search_by_product_type) == 'Sweatshirts' ? 'selected' : '' }}>Sweatshirts</option>
+                                <option value="Bottoms" {{ old('search_by_product_type', request()->search_by_product_type) == 'Bottoms' ? 'selected' : '' }}>Bottoms</option>
+                                <option value="Bags" {{ old('search_by_product_type', request()->search_by_product_type) == 'Bags' ? 'selected' : '' }}>Bags</option>
+                                <option value="Footwear" {{ old('search_by_product_type', request()->search_by_product_type) == 'Footwear' ? 'selected' : '' }}>Footwear</option>
+                                <option value="Hats" {{ old('search_by_product_type', request()->search_by_product_type) == 'Hats' ? 'selected' : '' }}>Hats</option>
+                                <option value="Phone Cases" {{ old('search_by_product_type', request()->search_by_product_type) == 'Phone Cases' ? 'selected' : '' }}>Phone Cases</option>
                           </select>
 
                           <div class="input-group-append">
@@ -109,6 +121,8 @@
 
                                             <th class="col-sm-1 col-md-1">Product For</th>
 
+                                            <th class="col-sm-1 col-md-1">Product Type</th>
+
                                             <th class="col-sm-3 col-md-3"  style="text-align: right;">Action</th>
                                         </tr>
                                         </thead>
@@ -129,9 +143,10 @@
                                             </td>
 
                                             <th class="col-sm-2 col-md-1"> {{$product->commission}}$</th>
-                                            <td class="col-sm-1 col-md-1"><strong>  {{$product->product_price}}$</strong></td>
+                                            <td class="col-sm-1 col-md-1"><strong>  ${{$product->product_price}}</strong></td>
                                             <td class="col-sm-1 col-md-1"><strong>  {{$product->supporting_country}}</strong></td>
                                             <td class="col-sm-1 col-md-1"><strong>  {{$product->product_for}}</strong></td>
+                                            <td class="col-sm-1 col-md-1"><strong>  {{$product->product_type}}</strong></td>
                                             <td class="col-sm-3 col-md-3" style="text-align: right">
                                               <a href="/admin/products/remove/{{$product->id}}" class="btn btn-danger">Remove</a>
                                               <a href="/admin/products/{{$product->id}}/edit" class="btn btn-primary">EDIT</a>

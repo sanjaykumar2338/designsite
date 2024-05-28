@@ -46,6 +46,12 @@ class ProductsController extends Controller
             $query->whereRaw('LOWER(product_for) = ?', [$productForLower]);
         }
 
+        // Filter by product type (case-insensitive)
+        if ($request->has('search_by_product_type') && !empty($request->search_by_product_type)) {
+            $productTypeLower = strtolower($request->search_by_product_type);
+            $query->whereRaw('LOWER(product_type) = ?', [$productTypeLower]);
+        }
+
         // Add other filters if necessary
 
         // Pagination
