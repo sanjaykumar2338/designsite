@@ -1540,5 +1540,97 @@
 .lowre-canva div#div_sleeve_right {
     width: 30px !important;
     height: 100px !important;
-} 	
+} 
+
+.shoes-canva #div_front{
+    left: 0 !important;
+    right: 0 !important;
+    margin: 0 auto;
+    width: 280px !important;
+    height: 350px !important;
+    top: 7% !important;
+}
+
+.shoes-canva .frame-area canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.shoes-canva .frame-area .canvas-container {
+    width: 100% !important;
+    height: 100% !important;
+}	
+.shoes-canva div#div_back {
+    width: 80px !important;
+    height: 80px !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: 0 auto;
+}
+.shoes-canva div#div_sleeve_left {
+    width: 50px !important;
+    height: 50px !important;
+    left: 32% ! important;
+}
+.shoes-canva div#div_sleeve_right {
+    width: 60px !important;
+    height: 60px !important;
+    left: 29% !important;
+}
+.iphone-canva .frame-area {
+    width: 130px !important;
+    height: 190px !important;
+}
+}
+@media only screen and (max-width:420px){
+.shoes-canva #div_front {
+	left: 0 !important;
+	right: 0 !important;
+	margin: 0 auto;
+	width: 200px !important;
+	height: 230px !important;
+	top: 21% !important;
+}	
+.shoes-canva #canvasBgImage img {
+    max-width: 270px !important;
+    width: 100% !important;
+}
+.shoes-canva div#div_back {
+    width: 50px !important;
+    height: 50px !important;
+    top: 60% ! important;
+}
+.shoes-canva div#div_sleeve_left {
+    width: 35px !important;
+    height: 35px !important;
+    left: 32% !important;
+    top: 32% !important;
+}
+.shoes-canva div#div_sleeve_right {
+	width: 35px !important;
+	height: 35px !important;
+	left: 31% !important;
+	top: 57% ! important;
+}
+body .iphone-canva .frame-area {
+    width: 110px !important;
+    height: 170px !important;
+    top: 38% !important;
+}	
+}
+@media only screen and (max-width:360px){
+.shoes-canva div#div_sleeve_left {
+    left: 28% !important;
+}
+.shoes-canva div#div_sleeve_right {
+    width: 30px !important;
+    height: 30px !important;
+    left: 29% !important;
+    top: 58% ! IMPORTANT;
+}	
+body .iphone-canva .frame-area {
+    width: 85px !important;
+    height: 135px !important;
+    top: 40% !important;
+}
 }

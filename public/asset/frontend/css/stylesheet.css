@@ -2848,3 +2848,23 @@ margin: 5px 0px 5px 0px !important;
 max-width: 40rem;
 height: 100%;
 }
+.iphone-canva div#div_sleeve_left {
+    display: none;
+}
+.iphone-canva .frame-area {
+    width: 160px !important;
+    height: 230px !important;
+    margin: 0 auto;
+    left: 0 !important;
+    right: 0 !important;
+    top: 36% !important;
+}
+.iphone-canva .frame-area .canvas-container {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.iphone-canva .frame-area .canvas-container canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
