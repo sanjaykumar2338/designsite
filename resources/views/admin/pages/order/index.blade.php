@@ -147,8 +147,6 @@
                                        Confirm
                                     </button>
                                  </td>
-                                 @else
-                                    <td>{{$order['print_order_status']}}</td>
                                  @endif
                               </tr>
                            @endforeach
