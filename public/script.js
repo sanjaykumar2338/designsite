@@ -674,15 +674,6 @@ function setIsLoading(bool) {
     el.hidden = !bool;
 }
 
-function addText(text) {
-    text = text ? text : "Sample_Text";
-    var text = new fabric.Textbox(text, {
-        width: 50,
-        fontSize: 30,
-        fontFamily: "arial",
-    });
-    canvas.add(text);
-}
 function setTextColour() {
     if (selectedObject) {
         const c = getEl("colorpicker").value;
@@ -993,6 +984,19 @@ function showMessage(message) {
 function addSample() {
     var sampleUrl = "https://cloudfour.com/examples/img-currentsrc/images/kitten-small.png";
     document.getElementById("imgUrl").value = sampleUrl;
+}
+
+function addText(text) {
+    text = text ? text : "Sample_Text";
+    var text = new fabric.Textbox(text, {
+        width: 50,
+        fontSize: 30,
+        fontFamily: "arial",
+    });
+    canvas.add(text);
+    totalPrice += 10;
+    updatePrice(totalPrice);
+    showImageAddedMessage();
 }
 
 function calculateShippingRate() {

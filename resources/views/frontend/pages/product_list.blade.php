@@ -44,7 +44,7 @@
                                         @php
                                             $url = url('/').'/stand-with-'.strtolower($product->supporting_country).'/shop/'.strtolower($product->product_for).'/'.strtolower($product->product_type).'/'.$product->product_slug;
                                         @endphp
-                                        <a class="buy_now" href="{{$url}}"> buy now</a>
+                                        <a class="buy_now" href="{{$url}}">Personalize</a>
                                     </div>
                                 </div>
                             </div>

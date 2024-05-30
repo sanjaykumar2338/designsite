@@ -247,6 +247,49 @@ class HomeController extends Controller
          return redirect()->back();
     }
 
+    public function update_order_status(){        
+        $orders = PrintfulOrder::get();
+        //echo "<pre>"; print_r($orders); die;
+
+        if($orders){
+            foreach($orders as $order){
+                
+                $data = json_decode($order->printful_order_data, true);
+
+                if(isset($data['id'])){
+                    $curl = curl_init();
+                    curl_setopt_array(
+                    $curl,
+                    array(
+                        CURLOPT_URL => 'https://api.printful.com/orders/' . $data['id'],
+                        CURLOPT_RETURNTRANSFER => true,
+                        CURLOPT_ENCODING => '',
+                        CURLOPT_MAXREDIRS => 10,
+                        CURLOPT_TIMEOUT => 0,
+                        CURLOPT_FOLLOWLOCATION => true,
+                        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                        CURLOPT_CUSTOMREQUEST => 'GET',
+                        CURLOPT_HTTPHEADER => array(
+                                'X-PF-Store-Id: 12631976',
+                                'Content-Type: application/json',
+                                'Accept: application/json',
+                                'Authorization: Bearer te6lqpl4ju9anm3y0TWtWTLaAVDiQz6ddtAspwJc',
+                                'Cookie: __cf_bm=b_KF_QLD5hwAjdrI5D..II41J0suVQ6rDItqE3fGpiU-1700675108-0-AWJ8qrjc2rORqrGTIYe7pXKj/XaMG6zJ3iQM8WjXiDaVgUvKW48NY6wf3+kjlL/tafcmaYGux6DA4EnogAZEYC8=; dsr_setting=%7B%22region%22%3A1%2C%22requirement%22%3Anull%7D'
+                        ),
+                    )
+                    );
+
+                    $response = curl_exec($curl);
+
+                    curl_close($curl);
+                    $info = json_decode($response, true);
+                    $order_status = $info['result']['status'];
+                    PrintfulOrder::where('id',$order->id)->update(['print_order_status'=>$order_status]);
+                }
+            }
+        }
+    }
+
     public function product_list(Request $request, $standwith, $productfor, $producttype)
     {
         //echo "<pre>"; print_r(explode('-',$standwith)[2]); die;
