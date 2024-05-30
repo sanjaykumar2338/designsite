@@ -84,17 +84,14 @@
                      <tr>
                         <th scope="col">Printful #ID</th>
                         <th scope="col">Customer Name</th>
-                        <th scope="col">Product Name</th>
-                        <th scope="col">Status</th>
+                        <th scope="col">Product Name</th>                        
                         <th scope="col">Total Amount</th>
                         <th scope="col">Country</th>
+                        <th scope="col">Order Status</th>
                         <th style="display:none;" scope="col">Payment ID</th>
-
                         <th scope="col">Donation</th>
-                        
-                        
                         <th scope="col">Invoice</th>
-                        
+                        <th scope="col">Action</th>                        
                      </tr>
                      </thead>
                      <tbody>
@@ -119,21 +116,21 @@
                                        $firstThreeWords = implode(' ', array_slice($words, 0, 3));
                                     @endphp
                                     <a href="{{ $url }}" href="_blank">View {{ $firstThreeWords }}...</a>
-                                 </td>
+                                 </td>                                
                                  
-                                 <td>{{$order['print_order_status']}}</td>
                                  <td>${{$data['retail_costs']['total']}}</td>
                                  
                                  <td>{{$order->supporting_country}}</td>
+                                 <td>{{$order->print_order_status}}</td>
                                  <td style="display:none;">{{$order->payment_intent_id}}</td>
                                  
                                  @php $donation = $order->total_amount - $order->product_price; @endphp
 
                                  @if($donation && $donation!=0)
                                     @if($order->donation_status=='paid')
-                                       <td><a style="color: white;background-color: green;" type="button" class="btn btn-primary" href="#">Sent ${{$donation}}</a></td>
+                                       <td><a title="Donatation Sent" style="color: white;background-color: green;" type="button" class="btn btn-primary" href="#">Sent ${{$donation}}</a></td>
                                     @else
-                                       <td><a style="color: white;" onclick="return confirm('Are you sure?')" type="button" class="btn btn-primary" href="{{url('admin/sendpayment')}}/{{$donation}}/{{$order->supporting_country}}/{{$order->id}}">Send ${{$donation}}</a></td>
+                                       <td><a title="Click to Send Donatation" style="color: white;" onclick="return confirm('Are you sure?')" type="button" class="btn btn-primary" href="{{url('admin/sendpayment')}}/{{$donation}}/{{$order->supporting_country}}/{{$order->id}}">Send ${{$donation}}</a></td>
                                     @endif
                                  @else
                                     <td><a style="color: white;" type="button" class="btn btn-primary" href="#">Send ${{$donation}}</a></td>
@@ -143,8 +140,16 @@
                                  <td>
                                        <button type="button" class="btn btn-primary" onclick="window.open('{{ url('/invoice/' . $order->id) }}', '_blank')" style="cursor: pointer;"><i class="far fa-eye"></i></button>
                                  </td>
-
                                  
+                                 @if($order->print_order_status=='draft')
+                                 <td>
+                                    <button type="button" class="btn btn-primary" onclick="confirmAndOpenWindow('{{ url('/admin/confirm_order/' . $data['id']) }}')" style="cursor: pointer;">
+                                       Confirm
+                                    </button>
+                                 </td>
+                                 @else
+                                    <td>{{$order['print_order_status']}}</td>
+                                 @endif
                               </tr>
                            @endforeach
                         @endif  
@@ -185,5 +190,13 @@
         @endif
     </ul>
 </nav>
+
+<script>
+    function confirmAndOpenWindow(url) {
+        if (confirm('Are you sure you want to confirm this order?')) {
+            window.open(url);
+        }
+    }
+</script>
 
 @endsection

@@ -9,6 +9,7 @@ use App\Models\PrintfulOrder;
 use App\Models\Payment;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\DonationSuccessful;
+use GuzzleHttp\Client;
 class AdminController extends Controller{
     
     public function __construct()
@@ -93,5 +94,44 @@ class AdminController extends Controller{
     public function customer(){
         $customers = User::paginate(5);
         return view('admin.pages.user.index')->with('customers',$customers)->with('activeLink','customer');
+    }
+
+    public function confirm_order(Request $request, $order_id)
+    {       
+        // Create a new Guzzle client
+        $client = new Client();
+
+        // Define the URL and the token
+        $url = "https://api.printful.com/orders/{$order_id}/confirm";
+        $token = 'te6lqpl4ju9anm3y0TWtWTLaAVDiQz6ddtAspwJc';
+
+        try {
+            // Make the POST request to the Printful API
+            $response = $client->post($url, [
+                'headers' => [
+                    'Authorization' => 'Bearer ' . $token,
+                    'Content-Type' => 'application/json',
+                ],
+            ]);
+
+            // Check if the response status is 200
+            if ($response->getStatusCode() == 200) {
+                // Update the printful_order_status in the database
+                $order = PrintfulOrder::where('printful_order_id', $order_id)->first();
+                if ($order) {
+                    $order->printful_order_status = 'confirmed';
+                    $order->save();
+
+                    return redirect()->back()->with('success', 'Order confirmed successfully!');
+                } else {
+                    return redirect()->back()->with('error', 'Order not found in the database.');
+                }
+            } else {
+                return redirect()->back()->with('error', 'Failed to confirm the order with Printful.');
+            }
+        } catch (\Exception $e) {
+            // Catch and handle any errors
+            return redirect()->back()->with('error', $e->getMessage());
+        }
     }
 }
