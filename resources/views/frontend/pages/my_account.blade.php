@@ -58,7 +58,7 @@
 
                     <th scope="row">{{$data['id']}}</th>
                     <td>{{$order->website_product_name}}</td>
-                    <td>{{$data['printful_order_status']}}</td>
+                    <td>{{$order->printful_order_status}}</td>
                     <td>${{$data['retail_costs']['total']}}</td>
                     <td>${{$order->total_amount - $order->product_price}}</td>
                     <td>{{$order->supporting_country}}</td>
