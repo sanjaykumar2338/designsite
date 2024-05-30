@@ -34,6 +34,12 @@
         .visibleMobile { display: block !important; }
         .hiddenMobile { display: none !important; }
         }
+
+        @media only screen and (max-width:480px){
+          .visibleMobile td {
+              height: 15px;
+          }
+        }
     </style>
 </head>
 <body>
