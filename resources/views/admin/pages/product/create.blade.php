@@ -177,7 +177,7 @@
                   <input type="text" class="form-control" placeholder="Product X-axis" name="product_x_axis">&nbsp;&nbsp;<input type="text" class="form-control" placeholder="Product Y-axis" name="product_y_axis">&nbsp;&nbsp;<input type="text" class="form-control" placeholder="Product Width" name="product_width">&nbsp;&nbsp;<input type="text" class="form-control" placeholder="Product Height" name="product_height">
                 </div>
 
-                <div class="mb-3 mt-3">
+                <div class="mb-3 mt-3" style="display:none;">
                   <label for="title">Collection Type:</label>
                   <select class="form-control" id="collections_type" name="collections_type">
                     <option value="Collections">Collections</option>

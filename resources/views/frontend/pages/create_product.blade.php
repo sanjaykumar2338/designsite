@@ -479,7 +479,9 @@
                             <div class="pricing_details">
                                 <div id="price" class="font-medium text-gray-800">Price:</div>
                                 <div id="front" class="font-medium text-gray-800">Front:</div>
+                                <div id="front_text" class="font-medium text-gray-800">Front Text:</div>
                                 <div id="back" class="font-medium text-gray-800">Back:</div>
+                                <div id="back_text" class="font-medium text-gray-800">Back Text:</div>
                                 <div id="subtotal" class="font-medium text-gray-800">Subtotal:</div>
                                 <div id="shipping" class="font-medium text-gray-800">Shipping:</div>
                                 <div id="total" class="font-bold text-gray-800">Total:</div>

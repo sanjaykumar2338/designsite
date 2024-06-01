@@ -192,10 +192,11 @@
 
                 <div class="mb-3 mt-3">
                   <label for="title">Collection Type:</label>
-                  <select class="form-control" id="collections_type" name="collections_type">
-                    <option {{$product->collections_type=='Collections'?'selected':''}} value="Collections">Collections</option>
-                    <option {{$product->collections_type=='Cause Collection'?'selected':''}} value="Cause Collection">Cause Collection</option>
-                    <option {{$product->collections_type=='Advocacy Collection'?'selected':''}} value="Advocacy Collection">Advocacy Collection</option>
+                  <select class="form-control" id="collections_type" name="collections_type">                   
+                    <option {{$product->collections_type=='Oversight'?'selected':''}} value="Oversight">Oversight</option>
+                    <option {{$product->collections_type=='Traitor'?'selected':''}} value="Traitor">Traitor</option>
+                    <option {{$product->collections_type=='Trader'?'selected':''}} value="Trader">Trader</option>
+                    <option {{$product->collections_type=='Propaganda'?'selected':''}} value="Propaganda">Propaganda</option>
                   </select>
                 </div>
 

@@ -1190,6 +1190,8 @@ function saveOrder(data) {
 
 function setCost() {
     let price = +product.product_price + +product.commission;
+    product.front_textbox = 0;
+    product.back_textbox = 0;
     subtotal = price;
 
     Object.keys(canvases).forEach((k) => {
@@ -1206,11 +1208,18 @@ function setCost() {
                 if (obj.type === 'image') {
                     product.front_image_price +=10;
                 }
+
+                if (obj.type === 'textbox') {
+                    product.front_textbox +=10;
+                }
             });
+
             getEl("front").innerHTML = `Front: $${product.front_image_price}`;
             var element = document.getElementById('front');
             element.style.display = 'block';
+
             subtotal += +product.front_image_price;
+            subtotal += +product.front_textbox;
         } else {
             var element = document.getElementById('back');
             element.style.display = 'none';
@@ -1222,11 +1231,18 @@ function setCost() {
                 if (obj.type === 'image') {
                     product.back_image_price +=10;
                 }
+
+                if (obj.type === 'textbox') {
+                    product.back_textbox +=10;
+                }
             });
+            
             getEl("back").innerHTML = `Back: $${product.back_image_price}`;
             var element = document.getElementById('back');
             element.style.display = 'block';
+
             subtotal += +product.back_image_price;
+            subtotal += +product.back_textbox;
         } else {
             var element = document.getElementById('back');
             element.style.display = 'none';
@@ -1238,6 +1254,20 @@ function setCost() {
     getEl("subtotal").innerHTML = `Subtotal: $${subtotal.toFixed(2)}`;
     getEl("shipping").innerHTML = `Shipping: $${shippingCost.toFixed(2)}`;
     getEl("total").innerHTML = `Total: $${total.toFixed(2)}`;
+
+    if(product.front_textbox!=0){
+        getEl("front_text").innerHTML = `Front Text: $${product.front_textbox.toFixed(2)}`;
+    }else{
+        var element = document.getElementById('front_text');
+        element.style.display = 'none';
+    }
+
+    if(product.back_textbox!=0){
+        getEl("back_text").innerHTML = `Back Text: $${product.back_textbox.toFixed(2)}`;
+    }else{
+        var element = document.getElementById('back_text');
+        element.style.display = 'none';
+    }
 }
 
 function setProductColour(colourCode) {
