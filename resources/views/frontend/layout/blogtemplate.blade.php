@@ -116,7 +116,7 @@
                             <a class="nav-link" href="{{route('causes')}}">Causes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('shop')}}">Shop</a>
+                            <a class="nav-link" href="{{route('collections')}}">Shop</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('media')}}">Media</a>
