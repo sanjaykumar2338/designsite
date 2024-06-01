@@ -107,6 +107,13 @@
               </p>
             </a>
 
+            <a href="{{url('/admin/preproducts')}}" class="nav-link {{$activeLink=='preproducts'?'active':''}}">
+              <i class="nav-icon fas fa-solid fa-box"></i>
+              <p>
+                Pre-Design Products
+              </p>
+            </a>
+
             <a href="{{url('/admin/blogs')}}" class="nav-link {{$activeLink=='blogs'?'active':''}}">
               <i class="nav-icon fas fa-solid fa-box"></i>
               <p>

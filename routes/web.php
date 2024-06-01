@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\ProductsController;
+use App\Http\Controllers\Admin\PreProductsController;
 use App\Http\Controllers\Admin\BlogsController;
 use Laravel\Cashier\Http\Controllers\WebhookController;
 
@@ -20,14 +21,23 @@ use Laravel\Cashier\Http\Controllers\WebhookController;
 
 Route::group(['prefix' => 'admin','middleware' => 'check.auth'], function () {
     Route::get('', [AdminController::class, 'index']);
-    //Route::get('/',[ProductsController::class, 'product_show']);
-    //Route::get('/show/{product}',[ProductsController::class,'product_view']);
+    
+    //For Preset Products
     Route::get('products/create_template/{id}', [ProductsController::class, 'create_template']);
     Route::resource('/products', ProductsController::class);
     Route::post('/products', [ProductsController::class, 'store'])->name('admin.products.store');
     Route::post('/products/update/{id}', [ProductsController::class, 'update']);
     Route::get('/products/remove/{id}', [ProductsController::class, 'destroy']);
     Route::get('products/{product}', 'ProductsController@show');
+
+    //For Pre Design Products
+    Route::get('preproducts/create_template/{id}', [PreProductsController::class, 'create_template']);
+    Route::resource('/preproducts', PreProductsController::class);
+    Route::post('/preproducts', [PreProductsController::class, 'store'])->name('admin.products.store');
+    Route::post('/preproducts/update/{id}', [PreProductsController::class, 'update']);
+    Route::get('/preproducts/remove/{id}', [PreProductsController::class, 'destroy']);
+    Route::get('preproducts/{product}', 'PreProductsController@show');
+
     Route::get('photos/create/{id}', 'PhotoController@create');
     Route::get('/order', [AdminController::class, 'order']);
     Route::get('/customer', [AdminController::class, 'customer']);
