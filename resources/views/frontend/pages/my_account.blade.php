@@ -78,16 +78,28 @@
       </table>
     </div>
   </div>
-  <nav class="navbar navbar-light bg-light">
-    <div class="container-fluid">
-        @if ($orders->previousPageUrl())
-            <a href="{{ $orders->previousPageUrl() }}"><< Previous</a>
+<nav>
+    <ul class="pagination justify-content-center">
+        @if ($orders->onFirstPage())
+            <li class="page-item disabled"><span class="page-link"><< Previous</span></li>
+        @else
+            <li class="page-item"><a class="page-link" href="{{ $orders->previousPageUrl() }}" rel="prev"><< Previous</a></li>
         @endif
-        
-        @if ($orders->nextPageUrl())
-            <a href="{{ $orders->nextPageUrl() }}">Next >></a>
+
+        @for ($i = 1; $i <= $orders->lastPage(); $i++)
+            @if ($i == $orders->currentPage())
+                <li class="page-item active"><span class="page-link">{{ $i }}</span></li>
+            @else
+                <li class="page-item"><a class="page-link" href="{{ $orders->url($i) }}">{{ $i }}</a></li>
+            @endif
+        @endfor
+
+        @if ($orders->hasMorePages())
+            <li class="page-item"><a class="page-link" href="{{ $orders->nextPageUrl() }}" rel="next">Next >></a></li>
+        @else
+            <li class="page-item disabled"><span class="page-link">Next >></span></li>
         @endif
-    </div>
-  </nav>
+    </ul>
+</nav>
 </div>
 @endsection

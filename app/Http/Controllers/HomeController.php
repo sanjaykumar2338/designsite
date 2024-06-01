@@ -162,7 +162,7 @@ class HomeController extends Controller
             return redirect('admin');
         } else {
             $email = auth()->user()->email;
-            $orders = PrintfulOrder::join('users', 'users.email', '=', 'printful_orders.customer_email')->join('products', 'products.id', '=', 'printful_orders.product_id')->join('payments', 'payments.id', '=', 'printful_orders.payment_id')->select('products.*','printful_order_data','payment_intent_id','payments.amount as amt','products.supporting_country','products.product_for','products.product_type','printful_orders.total_amount','printful_orders.product_price','printful_orders.id','print_order_status')->where('printful_orders.customer_email',$email)->orderBy('printful_orders.id','desc')->paginate(5);
+            $orders = PrintfulOrder::join('users', 'users.email', '=', 'printful_orders.customer_email')->join('products', 'products.id', '=', 'printful_orders.product_id')->join('payments', 'payments.id', '=', 'printful_orders.payment_id')->select('products.*','printful_order_data','payment_intent_id','payments.amount as amt','products.supporting_country','products.product_for','products.product_type','printful_orders.total_amount','printful_orders.product_price','printful_orders.id','print_order_status')->where('printful_orders.customer_email',$email)->orderBy('printful_orders.created_at','desc')->paginate(7);
 
             return view('frontend.pages.my_account')->with('activeLink', 'orders')->with('orders', $orders);
         }
@@ -171,8 +171,9 @@ class HomeController extends Controller
     public function invoice(Request $request, $id){
         $order = PrintfulOrder::where('id',$id)->first();
         $data = json_decode($order->printful_order_data, true);
-        $payment = \DB::table('payments')->where('id',$order->payment_id)->first();
+        //echo "<pre>"; print_r($data); die;
 
+        $payment = \DB::table('payments')->where('id',$order->payment_id)->first();
         return view('frontend.pages.invoice', ['data' => $data,'payment' => $payment]);
     }
 

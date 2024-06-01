@@ -32,7 +32,7 @@ class UserController extends Controller
         // Redirect to a success page or login page
 
         auth()->login($user);
-        return redirect()->route('my_account')->with('success', 'Registration successful.');
+        return redirect()->route('home')->with('success', 'Registration successful.');
     }
 
     public function login(Request $request)
@@ -45,7 +45,7 @@ class UserController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            return redirect()->route('my_account')->with('success', 'Login successful.');
+            return redirect()->route('home')->with('success', 'Login successful.');
         }
 
         return back()->withErrors([
