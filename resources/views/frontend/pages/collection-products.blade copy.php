@@ -1,7 +1,8 @@
 @extends('frontend.layout.homepagelayout')
 
 @section('content')
- <!-- ========== Start products section ========== -->
+    
+    <!-- ========== Start products section ========== -->
     <section class="products-section">
         <div class="container">
             <div class="text">
@@ -10,12 +11,7 @@
         </div>
     </section>
     <!-- ========== End products section ========== -->
-
-
-
-
-
-
+    
     <!-- ========== Start products ========== -->
     <section class="Products">
         <div class="container">
@@ -216,15 +212,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
-
-
-
-
-
             </div>
         </div>
     </section>

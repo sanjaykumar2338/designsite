@@ -597,7 +597,7 @@
 
 
                             </div>
-                            <a href="">Learn more</a>
+                            <a href="{{url('/')}}/shop/oversight-collection">Learn more</a>
 
 
                         </div>
@@ -615,7 +615,7 @@ for double-loyalty.  </p>
 
 
                             </div>
-                            <a href="">Learn more</a>
+                            <a href="{{url('/')}}/shop/traitor-collection">Learn more</a>
 
 
                         </div>
@@ -634,7 +634,7 @@ for insider trading.</p>
                                     alt="" class="img-fluid">
 
                             </div>
-                            <a href="">Learn more</a>
+                            <a href="{{url('/')}}/shop/trader-collection">Learn more</a>
 
 
                         </div>
@@ -654,7 +654,7 @@ for misinformation.</p>
 
 
                             </div>
-                            <a href="">Learn more</a>
+                            <a href="{{url('/')}}/shop/propaganda-collection">Learn more</a>
 
 
                         </div>

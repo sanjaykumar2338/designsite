@@ -68,12 +68,14 @@ Route::get('/get_images', [App\Http\Controllers\HomeController::class, 'get_imag
 Route::get('/updateImageNames', [App\Http\Controllers\HomeController::class, 'updateImageNames'])->name('updateImageNames');
 Route::get('/updateEmptyImageColumns', [App\Http\Controllers\HomeController::class, 'updateEmptyImageColumns'])->name('updateEmptyImageColumns');
 
+//For Collection
+Route::get('/shop', [App\Http\Controllers\HomeController::class,'collections'])->name('collections');
+Route::get('/shop/{collection}', [App\Http\Controllers\HomeController::class,'collections_list'])->name('collections_list');
 
 Route::get('/contactus', [App\Http\Controllers\HomeController::class, 'contactus'])->name('contactus');
 Route::get('/aboutus', [App\Http\Controllers\HomeController::class, 'aboutus'])->name('aboutus');
 Route::get('/conflicts', [App\Http\Controllers\HomeController::class, 'conflicts'])->name('conflicts');
 Route::get('/causes', [App\Http\Controllers\HomeController::class, 'causes'])->name('causes');
-Route::get('/shop2', [App\Http\Controllers\HomeController::class, 'shop2'])->name('shop2');
 Route::get('/media', [App\Http\Controllers\HomeController::class, 'media'])->name('media');
 Route::get('/justice', [App\Http\Controllers\HomeController::class, 'justice'])->name('justice');
 Route::get('/blogs', [App\Http\Controllers\HomeController::class, 'blog'])->name('blogs');

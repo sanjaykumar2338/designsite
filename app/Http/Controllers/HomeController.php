@@ -81,9 +81,14 @@ class HomeController extends Controller
         return view('frontend.pages.causes');
     }
 
-    public function shop2()
+    public function collections()
     {
-        return view('frontend.pages.shop');
+        return view('frontend.pages.collections');
+    }
+
+    public function collections_list(Request $request, $slug)
+    {
+        return view('frontend.pages.collections_list')->with('slug',$slug);
     }
 
     public function media()

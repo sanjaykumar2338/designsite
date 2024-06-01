@@ -91,6 +91,7 @@
                         <th style="display:none;" scope="col">Payment ID</th>
                         <th scope="col">Donation</th>
                         <th scope="col">Invoice</th>
+                        <th scope="col">Printful</th>
                         <th scope="col">Action</th>                        
                      </tr>
                      </thead>
@@ -139,6 +140,10 @@
                                
                                  <td>
                                        <button type="button" class="btn btn-primary" onclick="window.open('{{ url('/invoice/' . $order->id) }}', '_blank')" style="cursor: pointer;"><i class="far fa-eye"></i></button>
+                                 </td>
+
+                                 <td>
+                                       <button type="button" class="btn btn-primary" onclick="window.open('{{ $data['dashboard_url'] }}', '_blank')" style="cursor: pointer;"><i class="far fa-eye"></i></button>
                                  </td>
                                  
                                  @if($order->print_order_status=='draft')
