@@ -35,7 +35,7 @@
 
 
           <div class="col-md-12">
-            <form method="post" enctype="multipart/form-data" action="{{ url('/admin/products/update/'.$product->id) }}">
+            <form method="post" enctype="multipart/form-data" action="{{ url('/admin/preproducts/update/'.$product->id) }}">
                 
                 @csrf
                 <div class="mb-3 mt-3">

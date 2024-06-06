@@ -302,7 +302,7 @@ class PreProductsController extends Controller
         // Save the product
         $product->product_slug = $slug;
         $product->update();
-        return redirect('/admin/preproduct')->with('success');
+        return redirect('/admin/preproducts')->with('success');
     }
 
 
@@ -326,7 +326,7 @@ class PreProductsController extends Controller
 
 
 
-        return redirect('/admin/preproduct')->with('delete', ' ');
+        return redirect('/admin/preproducts')->with('delete', ' ');
     }
 
     //FRONTEND CONTROL -  ANY PRODUCT SHOW LIST, AND  INDIVIDUAL PRODUCT VIEW

@@ -69,8 +69,9 @@ Route::get('/updateImageNames', [App\Http\Controllers\HomeController::class, 'up
 Route::get('/updateEmptyImageColumns', [App\Http\Controllers\HomeController::class, 'updateEmptyImageColumns'])->name('updateEmptyImageColumns');
 
 //For Collection
-Route::get('/shop', [App\Http\Controllers\HomeController::class,'collections'])->name('collections');
-Route::get('/shop/{collection}', [App\Http\Controllers\HomeController::class,'collections_list'])->name('collections_list');
+Route::get('/shop', [App\Http\Controllers\CollectionController::class,'collections'])->name('collections');
+Route::get('/shop/{collection}', [App\Http\Controllers\CollectionController::class,'collections_list'])->name('collections_list');
+Route::get('/{standwithtype}/collection/{productfor}/{productType}/{slug}', [App\Http\Controllers\CollectionController::class, 'collection'])->name('collection');
 
 Route::get('/contactus', [App\Http\Controllers\HomeController::class, 'contactus'])->name('contactus');
 Route::get('/aboutus', [App\Http\Controllers\HomeController::class, 'aboutus'])->name('aboutus');

@@ -13,203 +13,47 @@
     <!-- ========== End products section ========== -->
     
     <!-- ========== Start products ========== -->
-    <section class="Products">
-        <div class="container">           
+    <section class="Products-3 bg-img">
+        <div class="container">                     
             <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="img aos-init aos-animate" data-aos="zoom-in">
-                        <img src="{{url('/')}}/asset/frontend/images/p-1.jpg" alt="">
-                        <div class="text-one">
-                            <span>$ 13.40</span>
-                        </div>
-                        <div class="text-two">
-                            <h4>The Wolves</h4>
-                            <button class="buy_now"> buy now</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="img aos-init" data-aos="zoom-in">
-                        <img src="{{url('/')}}/asset/frontend/images/p-2.jpg" alt="">
-                        <div class="text-one">
-                            <span>$ 13.40</span>
-                        </div>
-                        <div class="text-two">
-                            <h4>The Wolves</h4>
-                            <button class="buy_now"> buy now</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="img aos-init" data-aos="zoom-in">
-                        <img src="{{url('/')}}/asset/frontend/images/p-3.jpg" alt="">
-                        <div class="text-one">
-                            <span>$ 13.40</span>
-                        </div>
-                        <div class="text-two">
-                            <h4>The Wolves</h4>
-                             <button class="buy_now"> buy now</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="img aos-init" data-aos="zoom-in">
-                        <img src="{{url('/')}}/asset/frontend/images/p-4.jpg" alt="">
-                        <div class="text-one">
-                            <span>$ 13.40</span>
-                             <button class="buy_now"> buy now</button>
-                        </div>
-                        <div class="text-two">
-                            <h4>The Wolves</h4>
-                             <button class="buy_now"> buy now</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="img aos-init" data-aos="zoom-in">
-                        <img src="{{url('/')}}/asset/frontend/images/p-5.jpg" alt="">
-                        <div class="text-one">
-                            <span>$ 13.40</span>
-                        </div>
-                        <div class="text-two">
-                            <h4>The Wolves</h4>
-                             <button class="buy_now"> buy now</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="shop-inf aos-init" data-aos="zoom-in">
-                        <div class="overlay-shop">
-                            <h2>SHOP INFO</h2>
-                            <p> Terms and Conditions</p>
-                            <p> Services and <span style="border-bottom: 2px solid #fff;"> Returns<span> </span></span>
-                            </p>
-                            <p> Solidarity Gifts</p>
-                        </div>
-                    </div>
-                </div>
+                
+                @php
+                   //echo "<pre>"; print_r($products);
+                @endphp
 
+                @if($products->count())
+                    @foreach($products as $product)
+                        
+                        <input type="hidden" name="product_ids" value="{{$product->id}}">
 
+                        @if($product->front_image!="")
+                            {{--Product ID: {{$product->id}}--}}
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <div class="img aos-init aos-animate" data-aos="zoom-in">
+                                    <img src="{{fileToUrl($product->front_image)}}" alt="">
+                                    
+                                    @php
+                                        $commissionAmount = ($product->commission / 100) * $product->product_price;
+                                        $totalPrice = $product->product_price + $commissionAmount;
+                                    @endphp
 
-                <div class="col-lg-4 col-md-6">
-                    <div class="img aos-init" data-aos="zoom-in">
-                        <img src="{{url('/')}}/asset/frontend/images/shop-1.jpg" alt="">
-                        <div class="text-one">
-                            <span>$ 13.40</span>
-                        </div>
-                        <div class="text-two">
-                            <h4>The Wolves</h4>
-                            <button class="buy_now"> buy now</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="img aos-init" data-aos="zoom-in">
-                        <img src="{{url('/')}}/asset/frontend/images/shop-2.jpg" alt="">
-                        <div class="text-one">
-                            <span>$ 13.40</span>
-                        </div>
-                        <div class="text-two">
-                            <h4>The Wolves</h4>
-                            <button class="buy_now"> buy now</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="img aos-init" data-aos="zoom-in">
-                        <img src="{{url('/')}}/asset/frontend/images/shop-3.jpg" alt="">
-                        <div class="text-one">
-                            <span>$ 13.40</span>
-                        </div>
-                        <div class="text-two">
-                            <h4>The Wolves</h4>
-                            <button class="buy_now"> buy now</button>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="img aos-init aos-animate" data-aos="zoom-in">
-                        <img src="{{url('/')}}/asset/frontend/images/p-1.jpg" alt="">
-                        <div class="text-one">
-                            <span>$ 13.40</span>
-                        </div>
-                        <div class="text-two">
-                            <h4>The Wolves</h4>
-                            <button class="buy_now"> buy now</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="img aos-init" data-aos="zoom-in">
-                        <img src="{{url('/')}}/asset/frontend/images/p-2.jpg" alt="">
-                        <div class="text-one">
-                            <span>$ 13.40</span>
-                        </div>
-                        <div class="text-two">
-                            <h4>The Wolves</h4>
-                            <button class="buy_now"> buy now</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="img aos-init aos-animate" data-aos="zoom-in">
-                        <img src="{{url('/')}}/asset/frontend/images/p-1.jpg" alt="">
-                        <div class="text-one">
-                            <span>$ 13.40</span>
-                        </div>
-                        <div class="text-two">
-                            <h4>The Wolves</h4>
-                            <button class="buy_now"> buy now</button>
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="img aos-init aos-animate" data-aos="zoom-in">
-                        <img src="{{url('/')}}/asset/frontend/images/p-1.jpg" alt="">
-                        <div class="text-one">
-                            <span>$ 13.40</span>
-                        </div>
-                        <div class="text-two">
-                            <h4>The Wolves</h4>
-                            <button class="buy_now"> buy now</button> 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="img aos-init" data-aos="zoom-in">
-                        <img src="{{url('/')}}/asset/frontend/images/p-2.jpg" alt="">
-                        <div class="text-one">
-                            <span>$ 13.40</span>
-                        </div>
-                        <div class="text-two">
-                            <h4>The Wolves</h4>
-                            <button class="buy_now"> buy now</button> 
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="img aos-init" data-aos="zoom-in">
-                        <img src="{{url('/')}}/asset/frontend/images/p-1.jpg" alt="">
-                        <div class="text-one">
-                            <span>$ 13.40</span>
-                        </div>
-                        <div class="text-two">
-                            <h4>The Wolves</h4>
-                            <button class="buy_now"> buy now</button>
-                        </div>
-                    </div>
-                </div>
+                                    <div class="text-one">
+                                        <span>${{number_format($totalPrice,2)}}</span>
+                                    </div>
+                                    <div class="text-two">
+                                        <h4>{{$product->product_name}}</h4>
+                                        @php
+                                            $url = url('/').'/stand-with-'.strtolower($product->supporting_country).'/collection/'.strtolower($product->product_for).'/'.strtolower($product->product_type).'/'.$product->product_slug;
+                                        @endphp
+                                        <a class="buy_now" href="{{$url}}">Personalize</a>
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
+                    @endforeach
+                @else
+                    <p>No Product Found!</p>
+                @endif
             </div>
         </div>
     </section>
