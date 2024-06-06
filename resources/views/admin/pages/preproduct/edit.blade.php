@@ -192,7 +192,8 @@
 
                 <div class="mb-3 mt-3">
                   <label for="title">Collection Type:</label>
-                  <select class="form-control" id="collections_type" name="collections_type">                   
+                  <select class="form-control" id="collections_type" name="collections_type">  
+                    <option value=""></option>                 
                     <option {{$product->collections_type=='Oversight'?'selected':''}} value="Oversight">Oversight</option>
                     <option {{$product->collections_type=='Traitor'?'selected':''}} value="Traitor">Traitor</option>
                     <option {{$product->collections_type=='Trader'?'selected':''}} value="Trader">Trader</option>

@@ -180,6 +180,7 @@
                 <div class="mb-3 mt-3">
                   <label for="title">Collection Type:</label>
                   <select class="form-control" id="collections_type" name="collections_type">
+                    <option value=""></option>
                     <option value="Oversight">Oversight</option>
                     <option value="Traitor">Traitor</option>
                     <option value="Trader">Trader</option>
