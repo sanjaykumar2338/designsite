@@ -132,9 +132,13 @@
 
                                             <td class="col-sm-2 col-md-2">
 
+                                                @php
+                                                    $url = url('/').'/stand-with-'.strtolower($product->supporting_country).'/collection/'.strtolower($product->product_for).'/'.strtolower($product->product_type).'/'.$product->product_slug;
+                                                @endphp
+
                                                 <div class="media">
                                                     <div class="media-body">
-                                                        <h4  class="product-title" ><a  href="/preproducts/{{$product->id}} ">{{$product->product_name}}</a></h4>
+                                                        <h4  class="product-title" ><a  target="_blank" href="{{$url}}">{{$product->product_name}}</a></h4>
 
                                                         <span>Created at :  </span><span class="text-success"><strong>{{$product->created_at}}</strong></span>
                                                     </div>

@@ -98,8 +98,7 @@
                     <option {{$product->product_type=='Hoodies'?'selected':''}}  value="Hoodies">Hoodies</option>
                     <option {{$product->product_type=='Sweatshirts'?'selected':''}}  value="Sweatshirts">Sweatshirts</option>
                     <option {{$product->product_type=='Bottoms'?'selected':''}}  value="Bottoms">Bottoms</option>
-                    <option {{$product->product_type=='Hats'?'selected':''}} value="Hats">Hats</option>
-                    <option {{$product->product_type=='Headwear'?'selected':''}} value="Headwear">Headwear</option>
+                    <option {{$product->product_type=='Hats'?'selected':''}} value="Hats">Hats</option>                    
                     <option {{$product->product_type=='Footwear'?'selected':''}} value="Footwear">Footwear</option>
                     <option {{$product->product_type=='Bags'?'selected':''}} value="Bags">Bags</option>
                     <option {{$product->product_type=='Phone Cases'?'selected':''}} value="Phone Cases">Phone Cases</option>
@@ -126,12 +125,12 @@
                   @endif
                 </div>
 
-                <div class="mb-3 mt-3">
+                <div class="mb-3 mt-3" style="display:none;">
                   <label for="title">Front Image Price:</label>
                   <input type="text" value="{{$product->front_image_price}}" class="form-control" name="front_image_price">
                 </div>
 
-                <div class="mb-3 mt-3">
+                <div class="mb-3 mt-3" style="display:none;">
                   <label for="title">Front Image Donation Description:</label>
                   <textarea class="form-control" name="front_image_donation">{{$product->front_image_donation}}</textarea>
                 </div>
@@ -144,13 +143,13 @@
                   @endif
                 </div>
                 
-                <div class="mb-3 mt-3">
+                <div class="mb-3 mt-3"  style="display:none;">
                   <label for="title">Back Image Price:</label>
                   <input type="text" value="{{$product->back_image_price}}" class="form-control" name="back_image_price">
                 </div>
 
-                <div class="mb-3 mt-3">
-                  <label for="title">Back Image Donation:</label>
+                <div class="mb-3 mt-3"  style="display:none;">
+                  <label for="title">Back Image Donation Description:</label>
                   <textarea class="form-control" name="back_image_donation">{{$product->back_image_price}}</textarea>
                 </div>
 
@@ -185,8 +184,8 @@
                   <textarea class="form-control" name="meta_keyword">{{$product->meta_keyword}}</textarea>
                 </div>
 
-                <label for="title">Product Diemsion:</label>
-                <div class="mb-3" style="display: flex;width: 1143px;">
+                <div class="mb-3" style="display: none;width: 1143px;">
+                  <label for="title">Product Diemsion:</label>
                   <input type="text" value="{{$product->product_x_axis}}" class="form-control" placeholder="Product X-axis" name="product_x_axis">&nbsp;&nbsp;<input type="text" value="{{$product->product_y_axis}}" class="form-control" placeholder="Product Y-axis" name="product_y_axis">&nbsp;&nbsp;<input type="text" value="{{$product->product_width}}" class="form-control" placeholder="Product Width" name="product_width">&nbsp;&nbsp;<input type="text" value="{{$product->product_height}}" class="form-control" placeholder="Product Height" name="product_height">
                 </div>
 
@@ -207,4 +206,29 @@
         <!-- /.row -->
       </div><!-- /.container-fluid -->
     </section>
+
+    <script>
+        document.getElementById('product_for').addEventListener('change', function() {
+            var productType = document.getElementById('product_type');
+            var selectedCategory = this.value;
+            var allOptions = {
+                Men: ["Shirts", "Hoodies", "Sweatshirts", "Bottoms"],
+                Woman: ["Shirts", "Hoodies", "Sweatshirts", "Bottoms"],
+                Accessories: ["Hats", "Footwear", "Bags", "Phone Cases"]
+            };
+
+            // Clear existing options
+            productType.innerHTML = '<option value="">Select</option>';
+
+            // Populate the product type options based on selected category
+            if (selectedCategory in allOptions) {
+                allOptions[selectedCategory].forEach(function(option) {
+                    var opt = document.createElement('option');
+                    opt.value = option;
+                    opt.textContent = option;
+                    productType.appendChild(opt);
+                });
+            }
+        });
+    </script>
 @endsection

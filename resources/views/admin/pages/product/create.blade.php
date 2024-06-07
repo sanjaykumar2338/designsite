@@ -57,7 +57,7 @@
                   <textarea class="form-control" id="product_description" rows="6" placeholder="Enter Product Description" name="product_description"></textarea>
                 </div>
 
-                <div class="mb-3 mt-3">
+                <div class="mb-3 mt-3" style="display:none;">
                   <label for="product_name">Commission (%):</label>
                   <input type="number" class="form-control" id="commission" placeholder="Enter Commission" name="commission">
                 </div>
@@ -97,8 +97,7 @@
                     <option value="Hoodies">Hoodies</option>
                     <option value="Sweatshirts">Sweatshirts</option>
                     <option value="Bottoms">Bottoms</option>
-                    <option value="Hats">Hats</option>
-                    <option value="Headwear">Headwear</option>
+                    <option value="Hats">Hats</option>                    
                     <option value="Footwear">Footwear</option>
                     <option value="Bags">Bags</option>
                     <option value="Phone Cases">Phone Cases</option>
@@ -122,12 +121,12 @@
                   <input type="file" class="form-control" name="front_image">
                 </div>
 
-                <div class="mb-3 mt-3">
+                <div class="mb-3 mt-3"  style="display:none;">
                   <label for="title">Front Image Price:</label>
                   <input type="number" class="form-control" name="front_image_price">
                 </div>
 
-                <div class="mb-3 mt-3">
+                <div class="mb-3 mt-3"  style="display:none;">
                   <label for="title">Front Image Donation Description:</label>
                   <textarea class="form-control" name="front_image_donation"></textarea>
                 </div>
@@ -137,12 +136,12 @@
                   <input type="file" class="form-control" name="back_image">
                 </div>
 
-                <div class="mb-3 mt-3">
+                <div class="mb-3 mt-3"  style="display:none;">
                   <label for="title">Back Image Price:</label>
                   <input type="number" class="form-control" name="back_image_price">
                 </div>
 
-                <div class="mb-3 mt-3">
+                <div class="mb-3 mt-3"  style="display:none;">
                   <label for="title">Back Image Donation:</label>
                   <textarea class="form-control" name="back_image_donation"></textarea>
                 </div>
@@ -172,8 +171,9 @@
                   <textarea class="form-control" name="meta_keyword"></textarea>
                 </div>
 
-                <label for="title">Product Diemsion:</label>
-                <div class="mb-3" style="display: flex;width: 1143px;">
+                
+                <div class="mb-3" style="display: none;width: 1143px;">
+                  <label for="title">Product Diemsion:</label>
                   <input type="text" class="form-control" placeholder="Product X-axis" name="product_x_axis">&nbsp;&nbsp;<input type="text" class="form-control" placeholder="Product Y-axis" name="product_y_axis">&nbsp;&nbsp;<input type="text" class="form-control" placeholder="Product Width" name="product_width">&nbsp;&nbsp;<input type="text" class="form-control" placeholder="Product Height" name="product_height">
                 </div>
 
@@ -194,4 +194,29 @@
         <!-- /.row -->
       </div><!-- /.container-fluid -->
     </section>
+
+    <script>
+        document.getElementById('product_for').addEventListener('change', function() {
+            var productType = document.getElementById('product_type');
+            var selectedCategory = this.value;
+            var allOptions = {
+                Men: ["Shirts", "Hoodies", "Sweatshirts", "Bottoms"],
+                Woman: ["Shirts", "Hoodies", "Sweatshirts", "Bottoms"],
+                Accessories: ["Hats", "Footwear", "Bags", "Phone Cases"]
+            };
+
+            // Clear existing options
+            productType.innerHTML = '<option value="">Select</option>';
+
+            // Populate the product type options based on selected category
+            if (selectedCategory in allOptions) {
+                allOptions[selectedCategory].forEach(function(option) {
+                    var opt = document.createElement('option');
+                    opt.value = option;
+                    opt.textContent = option;
+                    productType.appendChild(opt);
+                });
+            }
+        });
+    </script>
 @endsection

@@ -70,13 +70,14 @@
                               <option value="Ukraine" {{ old('search_by_country', request()->search_by_country) == 'Ukraine' ? 'selected' : '' }}>Ukraine</option>
                           </select>
 
-                          <select class="form-control float-right" name="search_by_product_for">
+                          <select class="form-control float-right" id="product_for" name="search_by_product_for">
                               <option value="">Filter By Product For</option>
                               <option value="Men" {{ old('search_by_product_for', request()->search_by_product_for) == 'Men' ? 'selected' : '' }}>Men</option>
                               <option value="Woman" {{ old('search_by_product_for', request()->search_by_product_for) == 'Woman' ? 'selected' : '' }}>Woman</option>
+                              <option value="Accessories" {{ old('search_by_product_for', request()->search_by_product_for) == 'Accessories' ? 'selected' : '' }}>Accessories</option>
                           </select>
 
-                          <select class="form-control float-right" name="search_by_product_type">
+                          <select class="form-control float-right" id="product_type" name="search_by_product_type">
                                 <option value="">Filter By Product Type</option>
                                 <option value="Shirts" {{ old('search_by_product_type', request()->search_by_product_type) == 'Shirts' ? 'selected' : '' }}>Shirts</option>
                                 <option value="Hoodies" {{ old('search_by_product_type', request()->search_by_product_type) == 'Hoodies' ? 'selected' : '' }}>Hoodies</option>
@@ -132,9 +133,13 @@
 
                                             <td class="col-sm-2 col-md-2">
 
+                                            @php
+                                                $url = url('/').'/stand-with-'.strtolower($product->supporting_country).'/shop/'.strtolower($product->product_for).'/'.strtolower($product->product_type).'/'.$product->product_slug;
+                                            @endphp
+
                                                 <div class="media">
                                                     <div class="media-body">
-                                                        <h4  class="product-title" ><a  href="/products/{{$product->id}} ">{{$product->product_name}}</a></h4>
+                                                        <h4  class="product-title" ><a target="_blank"  href="{{$url}}">{{$product->product_name}}</a></h4>
 
                                                         <span>Created at :  </span><span class="text-success"><strong>{{$product->created_at}}</strong></span>
                                                     </div>
@@ -225,5 +230,30 @@
         @endif
     </ul>
 </nav>
+
+<script>
+    document.getElementById('product_for').addEventListener('change', function() {
+        var productType = document.getElementById('product_type');
+        var selectedCategory = this.value;
+        var allOptions = {
+            Men: ["Shirts", "Hoodies", "Sweatshirts", "Bottoms"],
+            Woman: ["Shirts", "Hoodies", "Sweatshirts", "Bottoms"],
+            Accessories: ["Hats", "Footwear", "Bags", "Phone Cases"]
+        };
+
+        // Clear existing options
+        productType.innerHTML = '<option value="">Select</option>';
+
+        // Populate the product type options based on selected category
+        if (selectedCategory in allOptions) {
+            allOptions[selectedCategory].forEach(function(option) {
+                var opt = document.createElement('option');
+                opt.value = option;
+                opt.textContent = option;
+                productType.appendChild(opt);
+            });
+        }
+    });
+</script>
 
 @endsection
