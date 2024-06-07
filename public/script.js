@@ -967,6 +967,10 @@ function addObjectImage(imgUrl) {
         // { crossOrigin: "Anonymous" }
     );
     setShowModal(false);
+
+    totalPrice += 10;
+    updatePrice(totalPrice);
+    showImageAddedMessage();
 }
 
 function showMessage(message) {
