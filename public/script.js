@@ -203,7 +203,7 @@ function setProductColoursUI(variants) {
     });
     Object.values(t_shirtColours).forEach((v) => {
         if (v.code)
-            colourButtons += ` <button class="border rounded-lg" style="height: 30px; width: 30px; background-color: ${v.code}" onclick="setVariant('${v.code}', undefined)"></button>`;
+            colourButtons += ` <button class="border rounded-lg" style="height: 30px; width: 30px; background-color: ${v.code}" title="${v.name}" onclick="setVariant('${v.code}', undefined)"></button>`;
     });
     const productColoursDiv = getEl("product-colours");
     productColoursDiv.innerHTML = colourButtons;
@@ -1209,13 +1209,18 @@ function setCost() {
         if (k === "canvas_front") {
             product.front_image_price = 0;
             canvases.canvas_front._objects.forEach(function(obj) {
+
+                console.log('obj', obj.type);
+
                 if (obj.type === 'image') {
-                    product.front_image_price +=10;
+                    //product.front_image_price +=10;
                 }
 
                 if (obj.type === 'textbox') {
-                    product.front_textbox +=10;
+                    //product.front_textbox +=10;
                 }
+
+                product.front_image_price +=10;
             });
 
             getEl("front").innerHTML = `Front: $${product.front_image_price}`;
@@ -1233,12 +1238,14 @@ function setCost() {
             product.back_image_price = 0;
             canvases.canvas_back._objects.forEach(function(obj) {
                 if (obj.type === 'image') {
-                    product.back_image_price +=10;
+                    //product.back_image_price +=10;
                 }
 
                 if (obj.type === 'textbox') {
-                    product.back_textbox +=10;
+                    //product.back_textbox +=10;
                 }
+
+                product.back_textbox +=10;
             });
             
             getEl("back").innerHTML = `Back: $${product.back_image_price}`;
