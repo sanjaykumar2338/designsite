@@ -40,7 +40,7 @@
                                         <span>${{number_format($totalPrice,2)}}</span>
                                     </div>
                                     <div class="text-two">
-                                        <h4>{{$product->product_name}}</h4>
+                                        <h4>{{$product->website_product_name}}</h4>
                                         @php
                                             $url = url('/').'/stand-with-'.strtolower($product->supporting_country).'/shop/'.strtolower($product->product_for).'/'.strtolower($product->product_type).'/'.$product->product_slug;
                                         @endphp
