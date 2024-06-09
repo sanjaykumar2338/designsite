@@ -182,12 +182,12 @@
                                     
                                     @if($product->supporting_country=='Israel')
                                         <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                            onclick="addImage(`{{ url('/') }}/objects/israel/stand-for-israel-heart.png`)">
+                                            onclick="addCustomImage(`{{ url('/') }}/objects/israel/stand-for-israel-heart.png`)">
                                             <img src="{{ url('/') }}/objects/israel/stand-for-israel-heart.png" width="50px"
                                                 alt="" />
                                         </button>
                                         <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                            onclick="addImage(`{{ url('/') }}/objects/israel/stand-for-israel-flag.png`)">
+                                            onclick="addCustomImage(`{{ url('/') }}/objects/israel/stand-for-israel-flag.png`)">
                                             <img src="{{ url('/') }}/objects/israel/stand-for-israel-flag.png" width="50px"
                                                 alt="" />
                                         </button>
@@ -195,12 +195,12 @@
 
                                     @if($product->supporting_country=='Palestine')
                                         <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                            onclick="addImage(`{{ url('/') }}/objects/palestine/stand-for-palestine-flag.png`)">
+                                            onclick="addCustomImage(`{{ url('/') }}/objects/palestine/stand-for-palestine-flag.png`)">
                                             <img src="{{ url('/') }}/objects/palestine/stand-for-palestine-flag.png" width="50px"
                                                 alt="" />
                                         </button>
                                         <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                            onclick="addImage(`{{ url('/') }}/objects/palestine/stand-for-palestine-heart.png`)">
+                                            onclick="addCustomImage(`{{ url('/') }}/objects/palestine/stand-for-palestine-heart.png`)">
                                             <img src="{{ url('/') }}/objects/palestine/stand-for-palestine-heart.png" width="50px"
                                                 alt="" />
                                         </button>
@@ -208,12 +208,12 @@
 
                                     @if($product->supporting_country=='Russia')
                                         <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                            onclick="addImage(`{{ url('/') }}/objects/russia/stand-for-russia-flag.png`)">
+                                            onclick="addCustomImage(`{{ url('/') }}/objects/russia/stand-for-russia-flag.png`)">
                                             <img src="{{ url('/') }}/objects/russia/stand-for-russia-flag.png" width="50px"
                                                 alt="" />
                                         </button>
                                         <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                            onclick="addImage(`{{ url('/') }}/objects/russia/stand-for-russia-heart.png`)">
+                                            onclick="addCustomImage(`{{ url('/') }}/objects/russia/stand-for-russia-heart.png`)">
                                             <img src="{{ url('/') }}/objects/russia/stand-for-russia-heart.png" width="50px"
                                                 alt="" />
                                         </button>
@@ -221,12 +221,12 @@
 
                                     @if($product->supporting_country=='Ukraine')
                                         <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                            onclick="addImage(`{{ url('/') }}/objects/ukraine/stand-for-ukraine-flag.png`)">
+                                            onclick="addCustomImage(`{{ url('/') }}/objects/ukraine/stand-for-ukraine-flag.png`)">
                                             <img src="{{ url('/') }}/objects/ukraine/stand-for-ukraine-flag.png" width="50px"
                                                 alt="" />
                                         </button>
                                         <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                            onclick="addImage(`{{ url('/') }}/objects/ukraine/stand-for-ukraine-heart.png`)">
+                                            onclick="addCustomImage(`{{ url('/') }}/objects/ukraine/stand-for-ukraine-heart.png`)">
                                             <img src="{{ url('/') }}/objects/ukraine/stand-for-ukraine-heart.png" width="50px"
                                                 alt="" />
                                         </button>

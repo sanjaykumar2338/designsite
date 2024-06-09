@@ -915,6 +915,13 @@ function submitImgUrl() {
     showImageAddedMessage();
 }
 
+function addCustomImage(imgUrl) {
+    addImage(imgUrl);
+    totalPrice += 10;
+    updatePrice(totalPrice);
+    showImageAddedMessage();
+}
+
 function addImage(imgUrl) {
     // const imgUrl =
     //   "https://cloudfour.com/examples/img-currentsrc/images/kitten-small.png";
