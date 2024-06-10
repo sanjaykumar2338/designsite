@@ -177,7 +177,7 @@
                             @endif
 
                             <div class="prd-opt-four editable">
-                                <h4 class="expand_option" style="cursor:pointer">Click to Draw Shapes:</h4>
+                                <h4 class="expand_option" style="cursor:pointer">Popular Graphics:</h4>
                                 <div class="prd-objects flex flex-wrap" style="display:none;">
                                     
                                     @if($product->supporting_country=='Israel')
