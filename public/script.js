@@ -93,11 +93,13 @@ function objectSelectedUpdated(_obj) {
     const obj = _obj.selected[0];
     setSelectedObject(obj);
 }
+
 function setCanvasImage(url) {
     const img = `<img src='${url}' height='500px' style=' position: absolute; height: 500px; width: 500px' alt='' id='canvasBg' />`;
     const canvasBgImage = getEl("canvasBgImage");
     canvasBgImage.innerHTML = img;
 }
+
 function togglePreview() {
     const canvasBg = getEl("canvasBg");
     if (canvasBg.style.zIndex === "20") {
@@ -106,9 +108,11 @@ function togglePreview() {
         canvasBg.style.zIndex = 20;
     }
 }
+
 function addCanvas() {
     console.log(getEl(canvas_divs.canvas_front).clientWidth);
 }
+
 function addDynamicCanvas() {
     const data = product.imageData;
 
@@ -205,6 +209,7 @@ function setShowCanvas(name, bool, image_location) {
         }
     });
 }
+
 function setProductColoursUI(variants) {
     let colourButtons = "";
     t_shirtColours = {};
