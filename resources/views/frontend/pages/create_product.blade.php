@@ -119,24 +119,24 @@
                         <div id="product-thumbnails">
 
 
-                            <button class="border rounded-lg" onclick="setShowCanvas(`canvas_front`, true)">
+                            <button class="border rounded-lg" onclick="setShowCanvas(`canvas_front`, true, 'front')">
                                 <img width="50" height="50" id="thumbnail_front" src="" alt=""
                                     class="h-[50px] w-[50px]">
                                 {{-- front --}}
                             </button>
 
-                            <button class="border  rounded-lg" onclick="setShowCanvas(`canvas_back`, true)">
+                            <button class="border  rounded-lg" onclick="setShowCanvas(`canvas_back`, true, 'back')">
                                 <img width="50" height="50" id="thumbnail_back" src="" alt=""
                                     class="h-[50px] w-[50px]">
                                 {{-- back --}}
                             </button>
 
-                            <button class="border  rounded-lg" onclick="setShowCanvas(`canvas_sleeve_left`, true)">
+                            <button class="border  rounded-lg" onclick="setShowCanvas(`canvas_sleeve_left`, true, 'left')">
                                 <img width="50" height="50" id="thumbnail_sleeve_left" src="" alt=""
                                     {{-- sleeve_left --}}>
                             </button>
 
-                            <button class="border  rounded-lg" onclick="setShowCanvas(`canvas_sleeve_right`, true)">
+                            <button class="border  rounded-lg" onclick="setShowCanvas(`canvas_sleeve_right`, true, 'right')">
                                 <img width="50" height="50" id="thumbnail_sleeve_right" src="" alt=""
                                     class="h-[50px] w-[50px]">
                                 {{-- sleeve_right --}}
@@ -149,13 +149,13 @@
                         </div>
 
                         <div class="flex flex-wrap prd-opt-one align-items-center cmn-prd-opt editable">
-                            <button class="border prd-btn rounded-lg p-2 px-3" onclick="setShowModal(true)">
+                            <button class="border prd-btn rounded-lg p-2 px-3 hidden" onclick="setShowModal(true)">
                                 Add Image
                             </button>&nbsp;&nbsp;
                             <button class="border prd-btn rounded-lg p-2 px-3" onclick="addText()">
                                 Add Text
                             </button>
-                            <div class="img-add-opt">
+                            <div class="img-add-opt chooseImageFile">
                                 <input id="image-picker" type="file" accept="image/*" class="w-[200px]"
                                     onchange="onImagePikked()" />
                             </div>

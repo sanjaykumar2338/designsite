@@ -12,6 +12,8 @@ let product;
 let subtotal;
 let shippingCost;
 const product_print_images = {};
+var current_image ='front';
+
 let t_shirtColours = {
     Red: { name: "Red", code: "#d80019" },
     White: { name: "White", code: "#fffefa" },
@@ -175,15 +177,23 @@ function setPosValue() {
     height.value = `${posData.h}`;
     width.value = `${posData.w}`;
 }
-function setShowCanvas(name, bool) {
+function setShowCanvas(name, bool, image_location) {
     [
         elements.canvas_front,
         elements.canvas_back,
         elements.canvas_sleeve_left,
         elements.canvas_sleeve_right,
     ].forEach((_name, i) => {
-        const isHidden = name === _name ? !bool : true;
+        
+        if(image_location=='left' || image_location=='right'){
+            $('.chooseImageFile').hide();
+        }else{
+            $('.chooseImageFile').show();
+        }
 
+        current_image = image_location;    
+        
+        const isHidden = name === _name ? !bool : true;
         const el = getEl(_name);
         if (!el) return;
         el.hidden = isHidden;
@@ -830,6 +840,11 @@ function htmltoCanvas(canvas) {
 var totalPrice = parseFloat(document.querySelector('.product_price').getAttribute('data-price'));
 
 getEl("image-picker").onchange = function onImagePikked(e) {
+
+    if(current_image=='left' || current_image=='right'){
+        return;
+    }
+
     if (!e.target.files?.length) return;
     console.log(e.target.files[0]);
     addImageFromFile(e);
@@ -916,6 +931,11 @@ function submitImgUrl() {
 }
 
 function addCustomImage(imgUrl) {
+
+    if(current_image=='left' || current_image=='right'){
+        return;
+    }
+
     addImage(imgUrl);
     totalPrice += 10;
     updatePrice(totalPrice);
@@ -956,11 +976,11 @@ function addImage(imgUrl) {
 }
 
 function addObjectImage(imgUrl) {
-    // const imgUrl =
-    //   "https://cloudfour.com/examples/img-currentsrc/images/kitten-small.png";
+    
+    if(current_image=='left' || current_image=='right'){
+        return;
+    }
 
-    // let url = $("#site_url").val();
-    // imgUrl = url + "/objects/" + imgUrl;
     fabric.loadSVGFromURL(
         imgUrl,
         function (objects, options) {
@@ -998,6 +1018,11 @@ function addSample() {
 }
 
 function addText(text) {
+
+    if(current_image=='left' || current_image=='right'){
+        return;
+    }
+
     text = text ? text : "Sample_Text";
     var text = new fabric.Textbox(text, {
         width: 50,

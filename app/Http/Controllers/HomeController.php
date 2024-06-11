@@ -15,6 +15,7 @@ use App\Models\Payment;
 use App\Models\BlogReview;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactMail;
+use Illuminate\Support\Facades\Redirect;
 
 class HomeController extends Controller
 {
@@ -287,6 +288,22 @@ class HomeController extends Controller
     }
 
     public function product_list(Request $request, $standwith, $productfor, $producttype)
+    {
+        //echo "<pre>"; print_r(explode('-',$standwith)[2]); die;
+        $standwith = @ucfirst(explode('-', $standwith)[2]);
+        $productfor = @ucfirst($productfor);
+        $producttype = @ucfirst($producttype);
+
+        //echo $producttype; die;
+        $product = Products::where(['supporting_country' => $standwith, 'product_for' => $producttype, 'product_type' => $productfor])->limit(1)->first();
+
+        $url = url('/').'/stand-with-'.strtolower($product->supporting_country).'/shop/'.strtolower($product->product_for).'/'.strtolower($product->product_type).'/'.$product->product_slug;
+        return Redirect::to($url);
+        //return view('frontend.pages.product_list')->with('products', $products);
+    }
+
+
+    public function product_list2(Request $request, $standwith, $productfor, $producttype)
     {
         //echo "<pre>"; print_r(explode('-',$standwith)[2]); die;
         $standwith = @ucfirst(explode('-', $standwith)[2]);
