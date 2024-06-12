@@ -181,55 +181,55 @@
                                 <div class="prd-objects flex flex-wrap" style="display:none;">
                                     
                                     @if($product->supporting_country=='Israel')
-                                        <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                            onclick="addCustomImage(`{{ url('/') }}/objects/israel/stand-for-israel-heart.png`)">
-                                            <img src="{{ url('/') }}/objects/israel/stand-for-israel-heart.png" width="50px"
-                                                alt="" />
-                                        </button>
-                                        <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                            onclick="addCustomImage(`{{ url('/') }}/objects/israel/stand-for-israel-flag.png`)">
-                                            <img src="{{ url('/') }}/objects/israel/stand-for-israel-flag.png" width="50px"
-                                                alt="" />
-                                        </button>
+                                        <?php
+                                            $imagePath = public_path('objects/israel');
+                                            $images = File::files($imagePath);
+                                        ?>
+                                        @foreach($images as $image)
+                                            <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+                                                onclick="addCustomImage(`{{ asset('objects/israel/' . basename($image)) }}`)">
+                                                <img style="height: 50px;width:50px;" src="{{ asset('objects/israel/' . basename($image)) }}" alt="" />
+                                            </button>                                            
+                                        @endforeach
                                     @endif
 
                                     @if($product->supporting_country=='Palestine')
-                                        <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                            onclick="addCustomImage(`{{ url('/') }}/objects/palestine/stand-for-palestine-flag.png`)">
-                                            <img src="{{ url('/') }}/objects/palestine/stand-for-palestine-flag.png" width="50px"
-                                                alt="" />
-                                        </button>
-                                        <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                            onclick="addCustomImage(`{{ url('/') }}/objects/palestine/stand-for-palestine-heart.png`)">
-                                            <img src="{{ url('/') }}/objects/palestine/stand-for-palestine-heart.png" width="50px"
-                                                alt="" />
-                                        </button>
+                                        <?php
+                                            $imagePath = public_path('objects/palestine');
+                                            $images = File::files($imagePath);
+                                        ?>
+                                        @foreach($images as $image)
+                                            <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+                                                onclick="addCustomImage(`{{ asset('objects/palestine/' . basename($image)) }}`)">
+                                                <img style="height: 50px;width:50px;" src="{{ asset('objects/palestine/' . basename($image)) }}" alt="" />
+                                            </button>                                            
+                                        @endforeach
                                     @endif
 
                                     @if($product->supporting_country=='Russia')
-                                        <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                            onclick="addCustomImage(`{{ url('/') }}/objects/russia/stand-for-russia-flag.png`)">
-                                            <img src="{{ url('/') }}/objects/russia/stand-for-russia-flag.png" width="50px"
-                                                alt="" />
-                                        </button>
-                                        <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                            onclick="addCustomImage(`{{ url('/') }}/objects/russia/stand-for-russia-heart.png`)">
-                                            <img src="{{ url('/') }}/objects/russia/stand-for-russia-heart.png" width="50px"
-                                                alt="" />
-                                        </button>
+                                        <?php
+                                            $imagePath = public_path('objects/russia');
+                                            $images = File::files($imagePath);
+                                        ?>
+                                        @foreach($images as $image)
+                                            <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+                                                onclick="addCustomImage(`{{ asset('objects/russia/' . basename($image)) }}`)">
+                                                <img style="height: 50px;width:50px;" src="{{ asset('objects/russia/' . basename($image)) }}" alt="" />
+                                            </button>                                            
+                                        @endforeach
                                     @endif
 
                                     @if($product->supporting_country=='Ukraine')
-                                        <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                            onclick="addCustomImage(`{{ url('/') }}/objects/ukraine/stand-for-ukraine-flag.png`)">
-                                            <img src="{{ url('/') }}/objects/ukraine/stand-for-ukraine-flag.png" width="50px"
-                                                alt="" />
-                                        </button>
-                                        <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                            onclick="addCustomImage(`{{ url('/') }}/objects/ukraine/stand-for-ukraine-heart.png`)">
-                                            <img src="{{ url('/') }}/objects/ukraine/stand-for-ukraine-heart.png" width="50px"
-                                                alt="" />
-                                        </button>
+                                        <?php
+                                            $imagePath = public_path('objects/ukraine');
+                                            $images = File::files($imagePath);
+                                        ?>
+                                        @foreach($images as $image)
+                                            <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+                                                onclick="addCustomImage(`{{ asset('objects/ukraine/' . basename($image)) }}`)">
+                                                <img style="height: 50px;width:50px;" src="{{ asset('objects/ukraine/' . basename($image)) }}" alt="" />
+                                            </button>                                            
+                                        @endforeach
                                     @endif
 
                                     <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
