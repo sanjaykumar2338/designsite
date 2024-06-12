@@ -9,15 +9,15 @@
         <div class="container">
             <div class="flex flex-wrap">
                 
-                @if($product->product_type=='Bottoms')
-                    <div class="prd-left lowre-canva">
-                @elseif($product->product_type=='Footwear')
-                    <div class="prd-left shoes-canva">
-                @elseif($product->product_type=='Phone Cases')
-                    <div class="prd-left iphone-canva">
-                @else
-                    <div class="prd-left t-shirt-canva">
-                @endif
+                    @if($product->product_type=='Bottoms')
+                        <div class="prd-left lowre-canva">
+                    @elseif($product->product_type=='Footwear')
+                        <div class="prd-left shoes-canva">
+                    @elseif($product->product_type=='Phone Cases')
+                        <div class="prd-left iphone-canva">
+                    @else
+                        <div class="prd-left t-shirt-canva {{strtolower($product->product_for)}}-{{strtolower($product->product_type)}}">
+                    @endif
 
 
                     {{-- <div class="flex flex-wrap prd-crs-img">

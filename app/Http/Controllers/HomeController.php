@@ -208,9 +208,11 @@ class HomeController extends Controller
         return view('frontend.pages.create_product');
     }
 
-    public function shop(Request $request, $slug, $product_for)
-    {   
-        $product = Products::where('product_slug', $request->slug)->where('product_for', ucfirst($product_for))->first();
+    public function shop(Request $request, $standwithtype, $productfor, $productType, $slug)
+    {           
+        $country = explode('-',$standwithtype)[2];
+        $product = Products::where('product_slug', $slug)->where('product_for', ucfirst($productfor))->where('product_type', ucfirst($productType))->where('supporting_country', ucfirst($country))->first();
+
         $product->front_image = fileToUrl($product->front_image);
         $product->back_image = fileToUrl($product->back_image);
         $product->left_image = fileToUrl($product->left_image);
@@ -296,6 +298,8 @@ class HomeController extends Controller
 
         //echo $producttype; die;
         $product = Products::where(['supporting_country' => $standwith, 'product_for' => $producttype, 'product_type' => $productfor])->limit(1)->first();
+
+        //echo "<pre>"; print_r($product); die;
 
         $url = url('/').'/stand-with-'.strtolower($product->supporting_country).'/shop/'.strtolower($product->product_for).'/'.strtolower($product->product_type).'/'.$product->product_slug;
         return Redirect::to($url);
