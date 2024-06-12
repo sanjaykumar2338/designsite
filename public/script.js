@@ -283,13 +283,17 @@ function getCurrentVariant() {
     return product.variants.find((v) => v.id === selected_variant);
 }
 
+setTimeout(function(){
+    let color = $('#product-colours').find('button').first().attr('title');
+    $('#color_name').text(color);
+},2000);
+
 function setVariant(color_code, size, color_name) {
     const currentVariant = getCurrentVariant();
     let filtered = product.variants;
     let newVariant = product.variants[0];
-
     $('#color_name').text(color_name);
-    
+
     if (color_code) {
         filtered = product.variants.filter((v) => {
             if (color_code) return v.color_code === color_code;
