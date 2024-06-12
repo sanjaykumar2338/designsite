@@ -1581,6 +1581,195 @@
     width: 130px !important;
     height: 190px !important;
 }
+
+.men-hoodies div#div_back {
+    top: 29% !important;
+}
+
+.men-hoodies div#div_front {
+    top: 30% !IMPORTANT;
+}
+
+.men-hoodies div#div_sleeve_left {
+	width: 40px !important;
+	height: 70px !important;
+	left: -4% !important;
+}
+
+.men-hoodies div#div_sleeve_left .canvas-container {
+	width: 40px !important;
+	height: 70px !important;
+}
+
+.men-hoodies div#div_sleeve_left .canvas-container canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.men-hoodies div#div_sleeve_right {
+	width: 40px !important;
+	height: 70px !important;
+	top: 42% !important;
+	right: -3% !important;
+}
+
+.men-hoodies div#div_sleeve_right .canvas-container {
+	width: 40px !important;
+	height: 70px !important;
+}
+
+.men-hoodies div#div_sleeve_right .canvas-container canvas {
+    width: 100% !important;
+    height: 100% !IMPORTANT;
+}
+
+.men-sweatshirts div#div_front {
+    top: 26% !important;
+}
+
+.men-sweatshirts div#div_sleeve_left {
+	width: 40px !important;
+	height: 70px !important;
+	top: 38% !important;
+}
+
+.men-sweatshirts div#div_sleeve_left .canvas-container {
+	width: 40px ! important;
+	height: 70px !important;
+}
+
+.men-sweatshirts div#div_sleeve_left canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.men-sweatshirts div#div_sleeve_right {
+	width: 40px !important;
+	height: 70px !important;
+	right: -8% !important;
+	top: 38% !important;
+}
+
+.men-sweatshirts div#div_sleeve_right .canvas-container {
+	width: 40px !important;
+	height: 70px !important;
+}
+
+.men-sweatshirts div#div_sleeve_right .canvas-container canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.woman-shirts div#div_front {
+    width: 80px !important;
+    height: 110px !important;
+    top: 31% !important;
+}
+
+.woman-shirts div#div_back {
+    width: 80px !important;
+    height: 110px !important;
+    top: 28% !important;
+}
+
+.woman-shirts div#div_sleeve_left {
+    left: -25% !important;
+}
+
+.woman-shirts div#div_sleeve_left .canvas-container {
+    width: 65px !important;
+    height: 60px !important;
+}
+
+.woman-shirts div#div_sleeve_left .canvas-container canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+body .woman-shirts div#div_sleeve_right {
+	width: 65px !important;
+	height: 60px !important;
+	right: 18% !important;
+	left: auto !important;
+}
+body .woman-shirts div#div_sleeve_right .canvas-container {
+    width: 65px !important;
+    height: 60px !important;
+}
+.woman-hoodies div#div_front {
+    height: 110px !important;
+}
+
+.woman-hoodies div#div_back {
+    height: 110px !important;
+    top: 35% !important;
+}
+
+.woman-hoodies div#div_sleeve_left {
+    width: 40px !important;
+    height: 70px !important;
+}
+
+.woman-hoodies div#div_sleeve_left .canvas-container {
+    width: 40px !important;
+    height: 70px !important;
+}
+
+.woman-hoodies div#div_sleeve_left .canvas-container canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.woman-hoodies div#div_sleeve_right {
+    width: 40px !important;
+    height: 70px !important;
+    top: 42% !important;
+    right: -2% !important;
+}
+
+.woman-hoodies div#div_sleeve_right .canvas-container {
+    width: 40px !important;
+    height: 70px !important;
+}
+
+.woman-hoodies div#div_sleeve_right .canvas-container canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.woman-sweatshirts div#div_sleeve_left {
+    width: 40px !important;
+    height: 70px !important;
+    top: 38% !important;
+}
+
+.woman-sweatshirts div#div_sleeve_left .canvas-container {
+    width: 40px !important;
+    height: 60px !important;
+}
+
+.woman-sweatshirts div#div_sleeve_left .canvas-container canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.woman-sweatshirts div#div_sleeve_right {
+    width: 40px !important;
+    height: 70px !important;
+    top: 38% !important;
+    right: -8% !important;
+}
+
+.woman-sweatshirts div#div_sleeve_right .canvas-container {
+    width: 40px !important;
+    height: 70px !important;
+}
+
+.woman-sweatshirts div#div_sleeve_right .canvas-container canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
 }
 @media only screen and (max-width:420px){
 .shoes-canva #div_front {

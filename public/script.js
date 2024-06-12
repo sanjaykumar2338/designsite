@@ -218,7 +218,7 @@ function setProductColoursUI(variants) {
     });
     Object.values(t_shirtColours).forEach((v) => {
         if (v.code)
-            colourButtons += ` <button class="border rounded-lg" style="height: 30px; width: 30px; background-color: ${v.code}" title="${v.name}" onclick="setVariant('${v.code}', undefined)"></button>`;
+            colourButtons += ` <button class="border rounded-lg" style="height: 30px; width: 30px; background-color: ${v.code}" title="${v.name}" onclick="setVariant('${v.code}', undefined,'${v.name}')"></button>`;
     });
     const productColoursDiv = getEl("product-colours");
     productColoursDiv.innerHTML = colourButtons;
@@ -283,11 +283,13 @@ function getCurrentVariant() {
     return product.variants.find((v) => v.id === selected_variant);
 }
 
-function setVariant(color_code, size) {
+function setVariant(color_code, size, color_name) {
     const currentVariant = getCurrentVariant();
     let filtered = product.variants;
     let newVariant = product.variants[0];
 
+    $('#color_name').text(color_name);
+    
     if (color_code) {
         filtered = product.variants.filter((v) => {
             if (color_code) return v.color_code === color_code;

@@ -2869,3 +2869,21 @@ height: 100%;
     width: 100% !important;
     height: 100% !important;
 }
+
+.woman-shirts div#div_sleeve_right {
+    width: 115px !important;
+    height: 158px !important;
+    top: 38% !important;
+    right: 19% !important;
+    left: auto !important;
+}
+
+.woman-shirts div#div_sleeve_right .canvas-container {
+    width: 115px !important;
+    height: 158px !important;
+}
+
+.woman-shirts div#div_sleeve_right .canvas-container canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
