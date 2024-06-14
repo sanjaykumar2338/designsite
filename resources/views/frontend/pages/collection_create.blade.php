@@ -412,14 +412,15 @@
                         <select style="height: 40px; border: 1px solid #eee"
                             class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" name="country" id="country"
                             onchange="onCountrySelect()">
-                            <option value="select" disabled>select*</option>
+                            <option value="">Select</option>
                         </select>
+                        <label class="font-medium text-gray-800" id="state_label" hidden>State*</label><br>
                         <select style="height: 40px; border: 1px solid #eee"
                             class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" name="state" id="state"
                             hidden>
                             <option value="select" disabled>select</option>
                         </select>
-
+                        
                         {{-- <br>
                         <br>
                         <div id="price" class="font-medium text-gray-800">Price:</div>
