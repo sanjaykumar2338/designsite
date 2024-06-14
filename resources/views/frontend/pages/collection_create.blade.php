@@ -1,4 +1,4 @@
-@extends('frontend.layout.product_creation')
+@extends('frontend.layout.pre_product_creation')
 
 @section('content')
     
@@ -27,7 +27,7 @@
                                 id="canvasBgImage">
                             </div>
                             <div class="cmn-frame" style="height: 500px; width: 500px; position: relative">
-                                <div class="border-[1px] border-neutral-300 frame-area"
+                                <div class="border-neutral-300 frame-area"
                                     style="
 										position: absolute;
 										top: 52%;
@@ -39,7 +39,7 @@
                                     {{-- <canvas id="canvas_front" width="150" height="200"
                                         style="border: 1px; border-color: black"></canvas> --}}
                                 </div>
-                                <div class="border-[1px] border-neutral-300 frame-area"
+                                <div class="border-neutral-300 frame-area"
                                     style="
 										position: absolute;
 										top: 60%;
@@ -51,7 +51,7 @@
                                     {{-- <canvas id="canvas_back" width="150" height="250"
                                         style="border: 1px; border-color: black"></canvas> --}}
                                 </div>
-                                <div class="border-[1px] border-neutral-300 frame-area"
+                                <div class="border-neutral-300 frame-area"
                                     style="
 										position: absolute;
 										top: 60%;
@@ -63,7 +63,7 @@
                                     {{-- <canvas id="canvas_sleeve_left" width="140" height="140"
                                         style="border: 1px; border-color: black"></canvas> --}}
                                 </div>
-                                <div class="border-[1px] border-neutral-300 frame-area"
+                                <div class="border-neutral-300 frame-area"
                                     style="
 										position: absolute;
 										top: 60%;

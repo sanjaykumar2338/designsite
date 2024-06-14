@@ -678,11 +678,13 @@
                             text: "Payment Success!",
                             className: "info",
                         }).showToast();
+                        
+                        placeOrder(data.payment_id);
 
                     } else {
                         alert(data.error);
                     }
-                    placeOrder(data.payment_id)
+                    
                     // submitPayment()
                     // window.location.reload();
                 } catch (error) {
