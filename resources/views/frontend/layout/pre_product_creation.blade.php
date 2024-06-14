@@ -282,7 +282,7 @@
             owl.trigger('stop.owl.autoplay')
         })
     </script>    
-    <script src="{{url('/')}}/prescript.js?v={{time()}}"></script>
+    <script src="{{url('/')}}/script.js?v={{time()}}"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
