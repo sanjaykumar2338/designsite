@@ -1397,11 +1397,13 @@ function submitPayment() {
 function getCountries() {
     const country = getEl("country");
     countries.forEach((c) => {
-        const option = document.createElement("option");
-        option.value = c.code;
-        option.text = c.name;
-        option.onclick = `onCountrySelect('${option.code}')`;
-        country.appendChild(option);
+        if(c.code=='US'){
+            const option = document.createElement("option");
+            option.value = c.code;
+            option.text = c.name;
+            option.onclick = `onCountrySelect('${option.code}')`;
+            country.appendChild(option);
+        }
     });
     return;
     var myHeaders = new Headers();
@@ -1440,15 +1442,19 @@ function getCountries() {
 function onCountrySelect() {
     const countryEl = getEl("country");
     const stateEl = getEl("state");
+    const state_label = getEl("state_label");
+    
     console.log(countryEl.value);
     const country = countries.find((c) => c.code == countryEl.value);
     stateEl.innerHTML = '<option value="select" disabled>select</option>';
 
     if (!country.states) {
         stateEl.hidden = true;
+        state_label.hidden = true;
         return;
     }
     stateEl.hidden = false;
+    state_label.hidden = false;
     country.states.forEach((c) => {
         const option = document.createElement("option");
         option.value = c.code;

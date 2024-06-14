@@ -178,8 +178,7 @@
 
                             <div class="prd-opt-four editable">
                                 <h4 class="expand_option" style="cursor:pointer">Popular Graphics:</h4>
-                                <div class="prd-objects flex flex-wrap" style="display:none;">
-                                    
+                                <div class="prd-objects flex flex-wrap">                                    
                                     @if($product->supporting_country=='Israel')
                                         <?php
                                             $imagePath = public_path('objects/israel');
@@ -232,133 +231,135 @@
                                         @endforeach
                                     @endif
 
-                                    <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                        onclick="addObjectImage(`{{ url('/') }}/objects/1-circle-1.svg`)">
-                                        <img src="{{ url('/') }}/objects/1-circle-1.svg" width="50px"
-                                            alt="" />
-                                    </button>
-                                    <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                        onclick="addObjectImage(`{{ url('/') }}/objects/1-circle-2.svg`)">
-                                        <img src="{{ url('/') }}/objects/1-circle-2.svg" width="50px"
-                                            alt="" />
-                                    </button>
-                                    <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                        onclick="addObjectImage(`{{ url('/') }}/objects/1-circle-3.svg`)">
-                                        <img src="{{ url('/') }}/objects/1-circle-3.svg" width="50px"
-                                            alt="" />
-                                    </button>
+                                    <div style="display: none;">
+                                        <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+                                            onclick="addObjectImage(`{{ url('/') }}/objects/1-circle-1.svg`)">
+                                            <img src="{{ url('/') }}/objects/1-circle-1.svg" width="50px"
+                                                alt="" />
+                                        </button>
+                                        <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+                                            onclick="addObjectImage(`{{ url('/') }}/objects/1-circle-2.svg`)">
+                                            <img src="{{ url('/') }}/objects/1-circle-2.svg" width="50px"
+                                                alt="" />
+                                        </button>
+                                        <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+                                            onclick="addObjectImage(`{{ url('/') }}/objects/1-circle-3.svg`)">
+                                            <img src="{{ url('/') }}/objects/1-circle-3.svg" width="50px"
+                                                alt="" />
+                                        </button>
 
-                                    <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                        onclick="addObjectImage(`{{ url('/') }}/objects/2-rect-1.svg`)">
-                                        <img src="{{ url('/') }}/objects/2-rect-1.svg" width="50px"
-                                            alt="" />
-                                    </button>
-                                    <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                        onclick="addObjectImage(`{{ url('/') }}/objects/2-rect-2.svg`)">
-                                        <img src="{{ url('/') }}/objects/2-rect-2.svg" width="50px"
-                                            alt="" />
-                                    </button>
-                                    <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                        onclick="addObjectImage(`{{ url('/') }}/objects/2-rect-3.svg`)">
-                                        <img src="{{ url('/') }}/objects/2-rect-3.svg" width="50px"
-                                            alt="" />
-                                    </button>
+                                        <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+                                            onclick="addObjectImage(`{{ url('/') }}/objects/2-rect-1.svg`)">
+                                            <img src="{{ url('/') }}/objects/2-rect-1.svg" width="50px"
+                                                alt="" />
+                                        </button>
+                                        <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+                                            onclick="addObjectImage(`{{ url('/') }}/objects/2-rect-2.svg`)">
+                                            <img src="{{ url('/') }}/objects/2-rect-2.svg" width="50px"
+                                                alt="" />
+                                        </button>
+                                        <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+                                            onclick="addObjectImage(`{{ url('/') }}/objects/2-rect-3.svg`)">
+                                            <img src="{{ url('/') }}/objects/2-rect-3.svg" width="50px"
+                                                alt="" />
+                                        </button>
 
-                                    <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                        onclick="addObjectImage(`{{ url('/') }}/objects/3-triangle-1.svg`)">
-                                        <img src="{{ url('/') }}/objects/3-triangle-1.svg" width="50px"
-                                            alt="" />
-                                    </button>
-                                    <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                        onclick="addObjectImage(`{{ url('/') }}/objects/3-triangle-2.svg`)">
-                                        <img src="{{ url('/') }}/objects/3-triangle-2.svg" width="50px"
-                                            alt="" />
-                                    </button>
-                                    <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                        onclick="addObjectImage(`{{ url('/') }}/objects/3-triangle-3.svg`)">
-                                        <img src="{{ url('/') }}/objects/3-triangle-3.svg" width="50px"
-                                            alt="" />
-                                    </button>
+                                        <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+                                            onclick="addObjectImage(`{{ url('/') }}/objects/3-triangle-1.svg`)">
+                                            <img src="{{ url('/') }}/objects/3-triangle-1.svg" width="50px"
+                                                alt="" />
+                                        </button>
+                                        <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+                                            onclick="addObjectImage(`{{ url('/') }}/objects/3-triangle-2.svg`)">
+                                            <img src="{{ url('/') }}/objects/3-triangle-2.svg" width="50px"
+                                                alt="" />
+                                        </button>
+                                        <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+                                            onclick="addObjectImage(`{{ url('/') }}/objects/3-triangle-3.svg`)">
+                                            <img src="{{ url('/') }}/objects/3-triangle-3.svg" width="50px"
+                                                alt="" />
+                                        </button>
 
-                                    <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                        onclick="addObjectImage(`{{ url('/') }}/objects/5-poly-1.svg`)">
-                                        <img src="{{ url('/') }}/objects/5-poly-1.svg" width="50px"
-                                            alt="" />
-                                    </button>
-                                    <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                        onclick="addObjectImage(`{{ url('/') }}/objects/5-poly-2.svg`)">
-                                        <img src="{{ url('/') }}/objects/5-poly-2.svg" width="50px"
-                                            alt="" />
-                                    </button>
-                                    <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                        onclick="addObjectImage(`{{ url('/') }}/objects/5-poly-3.svg`)">
-                                        <img src="{{ url('/') }}/objects/5-poly-3.svg" width="50px"
-                                            alt="" />
-                                    </button>
-                                    <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                        onclick="addObjectImage(`{{ url('/') }}/objects/6-poly-1.svg`)">
-                                        <img src="{{ url('/') }}/objects/6-poly-1.svg" width="50px"
-                                            alt="" />
-                                    </button>
-                                    <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                        onclick="addObjectImage(`{{ url('/') }}/objects/6-poly-2.svg`)">
-                                        <img src="{{ url('/') }}/objects/6-poly-2.svg" width="50px"
-                                            alt="" />
-                                    </button>
-                                    <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                        onclick="addObjectImage(`{{ url('/') }}/objects/6-poly-3.svg`)">
-                                        <img src="{{ url('/') }}/objects/6-poly-3.svg" width="50px"
-                                            alt="" />
-                                    </button>
-                                    <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                        onclick="addObjectImage(`{{ url('/') }}/objects/7-arrow-1.svg`)">
-                                        <img src="{{ url('/') }}/objects/7-arrow-1.svg" width="50px"
-                                            alt="" />
-                                    </button>
-                                    <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                        onclick="addObjectImage(`{{ url('/') }}/objects/7-arrow-2.svg`)">
-                                        <img src="{{ url('/') }}/objects/7-arrow-2.svg" width="50px"
-                                            alt="" />
-                                    </button>
+                                        <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+                                            onclick="addObjectImage(`{{ url('/') }}/objects/5-poly-1.svg`)">
+                                            <img src="{{ url('/') }}/objects/5-poly-1.svg" width="50px"
+                                                alt="" />
+                                        </button>
+                                        <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+                                            onclick="addObjectImage(`{{ url('/') }}/objects/5-poly-2.svg`)">
+                                            <img src="{{ url('/') }}/objects/5-poly-2.svg" width="50px"
+                                                alt="" />
+                                        </button>
+                                        <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+                                            onclick="addObjectImage(`{{ url('/') }}/objects/5-poly-3.svg`)">
+                                            <img src="{{ url('/') }}/objects/5-poly-3.svg" width="50px"
+                                                alt="" />
+                                        </button>
+                                        <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+                                            onclick="addObjectImage(`{{ url('/') }}/objects/6-poly-1.svg`)">
+                                            <img src="{{ url('/') }}/objects/6-poly-1.svg" width="50px"
+                                                alt="" />
+                                        </button>
+                                        <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+                                            onclick="addObjectImage(`{{ url('/') }}/objects/6-poly-2.svg`)">
+                                            <img src="{{ url('/') }}/objects/6-poly-2.svg" width="50px"
+                                                alt="" />
+                                        </button>
+                                        <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+                                            onclick="addObjectImage(`{{ url('/') }}/objects/6-poly-3.svg`)">
+                                            <img src="{{ url('/') }}/objects/6-poly-3.svg" width="50px"
+                                                alt="" />
+                                        </button>
+                                        <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+                                            onclick="addObjectImage(`{{ url('/') }}/objects/7-arrow-1.svg`)">
+                                            <img src="{{ url('/') }}/objects/7-arrow-1.svg" width="50px"
+                                                alt="" />
+                                        </button>
+                                        <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+                                            onclick="addObjectImage(`{{ url('/') }}/objects/7-arrow-2.svg`)">
+                                            <img src="{{ url('/') }}/objects/7-arrow-2.svg" width="50px"
+                                                alt="" />
+                                        </button>
 
-                                    <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                        onclick="addObjectImage(`{{ url('/') }}/objects/7-arrow-3.svg`)">
-                                        <img src="{{ url('/') }}/objects/7-arrow-3.svg" width="50px"
-                                            alt="" />
-                                    </button>
-                                    <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                        onclick="addObjectImage(`{{ url('/') }}/objects/bookmark-shapes.svg`)">
-                                        <img src="{{ url('/') }}/objects/bookmark-shapes.svg" width="50px"
-                                            alt="" />
-                                    </button>
-                                    <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                        onclick="addObjectImage(`{{ url('/') }}/objects/circle.svg`)">
-                                        <img src="{{ url('/') }}/objects/circle.svg" width="50px"
-                                            alt="" />
-                                    </button>
-                                    <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                        onclick="addObjectImage(`{{ url('/') }}/objects/cloud.svg`)">
-                                        <img src="{{ url('/') }}/objects/cloud.svg" width="50px"
-                                            alt="" />
-                                    </button>
+                                        <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+                                            onclick="addObjectImage(`{{ url('/') }}/objects/7-arrow-3.svg`)">
+                                            <img src="{{ url('/') }}/objects/7-arrow-3.svg" width="50px"
+                                                alt="" />
+                                        </button>
+                                        <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+                                            onclick="addObjectImage(`{{ url('/') }}/objects/bookmark-shapes.svg`)">
+                                            <img src="{{ url('/') }}/objects/bookmark-shapes.svg" width="50px"
+                                                alt="" />
+                                        </button>
+                                        <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+                                            onclick="addObjectImage(`{{ url('/') }}/objects/circle.svg`)">
+                                            <img src="{{ url('/') }}/objects/circle.svg" width="50px"
+                                                alt="" />
+                                        </button>
+                                        <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+                                            onclick="addObjectImage(`{{ url('/') }}/objects/cloud.svg`)">
+                                            <img src="{{ url('/') }}/objects/cloud.svg" width="50px"
+                                                alt="" />
+                                        </button>
 
-                                    <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                        onclick="addObjectImage(`{{ url('/') }}/objects/cube.svg`)">
-                                        <img src="{{ url('/') }}/objects/cube.svg" width="50px" alt="" />
-                                    </button>
-                                    <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                        onclick="addObjectImage(`{{ url('/') }}/objects/heart.svg`)">
-                                        <img src="{{ url('/') }}/objects/heart.svg" width="50px"
-                                            alt="" />
-                                    </button>
-                                    <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                        onclick="addObjectImage(`{{ url('/') }}/objects/moon.svg`)">
-                                        <img src="{{ url('/') }}/objects/moon.svg" width="50px" alt="" />
-                                    </button>
-                                    <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
-                                        onclick="addObjectImage(`{{ url('/') }}/objects/star.svg`)">
-                                        <img src="{{ url('/') }}/objects/star.svg" width="50px" alt="" />
-                                    </button>
+                                        <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+                                            onclick="addObjectImage(`{{ url('/') }}/objects/cube.svg`)">
+                                            <img src="{{ url('/') }}/objects/cube.svg" width="50px" alt="" />
+                                        </button>
+                                        <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+                                            onclick="addObjectImage(`{{ url('/') }}/objects/heart.svg`)">
+                                            <img src="{{ url('/') }}/objects/heart.svg" width="50px"
+                                                alt="" />
+                                        </button>
+                                        <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+                                            onclick="addObjectImage(`{{ url('/') }}/objects/moon.svg`)">
+                                            <img src="{{ url('/') }}/objects/moon.svg" width="50px" alt="" />
+                                        </button>
+                                        <button class="border rounded-lg p-2 px-3 hover:bg-slate-200"
+                                            onclick="addObjectImage(`{{ url('/') }}/objects/star.svg`)">
+                                            <img src="{{ url('/') }}/objects/star.svg" width="50px" alt="" />
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -475,8 +476,9 @@
                         <select style="height: 40px; border: 1px solid #eee"
                             class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" name="country" id="country"
                             onchange="onCountrySelect()">
-                            <option value="select" disabled>select*</option>
+                            <option value="">Select</option>
                         </select>
+                        <label class="font-medium text-gray-800" id="state_label" hidden>State*</label><br>
                         <select style="height: 40px; border: 1px solid #eee"
                             class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" name="state" id="state"
                             hidden>
@@ -710,6 +712,7 @@
             return cents;
         }
 
+        /*
         const expand_option = document.querySelector('.expand_option');
         const prd_objects = document.querySelector('.prd-objects');
 
@@ -723,5 +726,6 @@
                 prd_objects.style.display = 'none';
             }
         });
+        */
     </script>
 @endsection
