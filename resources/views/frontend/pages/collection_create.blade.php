@@ -133,7 +133,7 @@
                         </div>
 
                         <br>
-                        <h4>Choose Color:</h4>
+                        <h4>Choose Color: <span id="color_name"></span></h4><br>
                         <div id="product-colours">
                         </div>
 
