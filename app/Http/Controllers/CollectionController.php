@@ -21,7 +21,12 @@ class CollectionController extends Controller
 {
     public function collections()
     {
-        return view('frontend.pages.collections');
+        $metaDescription = 'Explore Cause Stand`s activist streetwear and advocacy apparel shop; join a movement, shop our urban collections, and wear your convictions on your clothing.';
+        $keywords = 'activist streetwear,  advocacy apparel shop, urban collections';
+        $pageTitle = 'Advocacy Streetwear Collections - Shop Now and Join the Movement';
+        $metaTitle = ' Shop Advocacy Apparel - Activist Streetwear with a Movement';
+
+        return view('frontend.pages.collections')->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle);
     }
 
     public function collections_list(Request $request, $slug)
@@ -32,9 +37,12 @@ class CollectionController extends Controller
         return view('frontend.pages.collections_list')->with('slug',$slug)->with('products',$products);
     }
 
-    public function collection(Request $request, $slug, $product_for)
+    public function collection(Request $request, $collection, $slug)
     {   
-        $product = PreProducts::where('product_slug', $request->slug)->where('product_for', ucfirst($product_for))->first();
+        $collection = explode('-', $collection)[0];
+        $product = PreProducts::where('product_slug', $slug)->where('collections_type', ucfirst($collection))->first();
+        //echo "<pre>"; print_r($product); die;
+
         $product->front_image = fileToUrl($product->front_image);
         $product->back_image = fileToUrl($product->back_image);
         $product->left_image = fileToUrl($product->left_image);
@@ -45,7 +53,12 @@ class CollectionController extends Controller
         if (!auth()->check()) {
             //return redirect()->route('login')->with('message', 'Please login to access this page.');
         }
+        
+        $metaDescription = 'Explore Cause Stand`s activist streetwear and advocacy apparel shop; join a movement, shop our urban collections, and wear your convictions on your clothing.';
+        $keywords = 'activist streetwear,  advocacy apparel shop, urban collections';
+        $pageTitle = 'Advocacy Streetwear Collections - Shop Now and Join the Movement';
+        $metaTitle = ' Shop Advocacy Apparel - Activist Streetwear with a Movement';
 
-        return view('frontend.pages.collection_create')->with('product', $product);
+        return view('frontend.pages.collection_create')->with('product', $product)->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle);
     }
 }

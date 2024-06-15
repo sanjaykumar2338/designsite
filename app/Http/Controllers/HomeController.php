@@ -55,7 +55,12 @@ class HomeController extends Controller
             $blog->blog_image = fileToUrl($blog->blog_image);
         }
 
-        return view('frontend.pages.home')->with('products', $products)->with('accessories', $accessories)->with('blogs', $blogs);
+        $metaDescription = 'The definitive streetwear brand for activists to advocate, protest, and stand for a cause; join Cause Stand to make a statement with fashion activism.';
+        $keywords = 'streetwear brand, stand for a cause, fashion activism, cause stand';
+        $pageTitle = 'Welcome to Cause Stand - Where Fashion Meets Activism';
+        $metaTitle = 'Cause Stand - Streetwear Brand for Activists - Fashion Activism';
+
+        return view('frontend.pages.home')->with('products', $products)->with('accessories', $accessories)->with('blogs', $blogs)->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle);
     }
 
     public function contactus()
@@ -69,7 +74,7 @@ class HomeController extends Controller
         $keywords = 'activist streetwear clothing, political fashion, fashion activism, social justice apparel, progressive clothing brand';
         $pageTitle = 'Fashion with a Cause - Activist Streetwear Clothing Brand';
 
-        return view('frontend.pages.aboutus')->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords);;
+        return view('frontend.pages.aboutus')->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords);
     }
 
     public function conflicts()

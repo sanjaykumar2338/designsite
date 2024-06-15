@@ -43,7 +43,7 @@
                                     <div class="text-two">
                                         <h4>{{$product->product_name}}</h4>
                                         @php
-                                            $url = url('/').'/stand-with-'.strtolower($product->supporting_country).'/collection/'.strtolower($product->product_for).'/'.strtolower($product->product_type).'/'.$product->product_slug;
+                                            $url = url('/').'/shop/'.strtolower($product->collections_type.'-'.'collection').'/'.$product->product_slug;
                                         @endphp
                                         <a class="buy_now" href="{{$url}}">Personalize</a>
                                     </div>
