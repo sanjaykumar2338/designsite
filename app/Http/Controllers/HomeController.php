@@ -79,12 +79,22 @@ class HomeController extends Controller
 
     public function conflicts()
     {
-        return view('frontend.pages.conflicts');
+        $metaDescription = 'Notice Cause Stand`s insights on global conflicts, see how fashion activism highlights issues, promotes justice, and enlightens others about current atrocities.';
+        $keywords = 'fashion activism, advocacy clothing, global conflicts, political crises, social justice clothing, awareness fashion, activism apparel';
+        $pageTitle = 'Fashion Activism and Global Conflicts - Advocate with Cause Stand';
+        $metaTitle = 'Cause Stand: Fashion Activism and Global Conflicts';
+
+        return view('frontend.pages.conflicts')->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle);
     }
 
     public function causes()
     {
-        return view('frontend.pages.causes');
+        $metaDescription = 'Stand up for crucial causes with Cause Stand`s advocacy platform; wear the transformative power of fashion activism to promote change and bring justice.';
+        $keywords = 'advocacy causes, global causes, support movements, Cause Stand, political activism';
+        $pageTitle = 'Causes that Need You - Advocate with Apparel & Accessories';
+        $metaTitle = 'Advocacy Causes - Stand Up for Something, Don`t Stand By';
+
+        return view('frontend.pages.causes')->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle);
     }
 
     public function media()
