@@ -1,5 +1,11 @@
 <?php
 
+use Illuminate\Support\Facades\File;
+use Spatie\Sitemap\Sitemap;
+use Spatie\Sitemap\Tags\Url;
+use Carbon\Carbon;
+use App\Models\Blogs;
+
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Admin\AdminController;
@@ -7,6 +13,8 @@ use App\Http\Controllers\Admin\ProductsController;
 use App\Http\Controllers\Admin\PreProductsController;
 use App\Http\Controllers\Admin\BlogsController;
 use Laravel\Cashier\Http\Controllers\WebhookController;
+use App\Models\Products;
+use App\Models\PreProducts;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +26,80 @@ use Laravel\Cashier\Http\Controllers\WebhookController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::get('/generate-sitemap', function() {
+    $sitemap = Sitemap::create();
+
+    // Get all blade files in the directory
+    $files = File::allFiles(resource_path('views/frontend/pages'));
+
+    foreach ($files as $file) {
+        $filename = pathinfo($file)['filename'];
+
+        // Create a URL entry for the sitemap
+        $sitemap->add(Url::create("/$filename")
+            ->setLastModificationDate(Carbon::now()) // Optionally set the last modification date
+            ->setPriority(0.8) // Optionally set the priority
+            ->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY)); // Optionally set the change frequency
+    }
+
+    // Add blog posts from your database
+    $blogs = Blogs::all();
+    foreach ($blogs as $blog) {
+        $url = route('blog_detail', ['slug' => $blog->slug]);
+
+        $sitemap->add(Url::create($url)
+            ->setLastModificationDate($blog->updated_at) // Adjust this based on your field
+            ->setPriority(0.8)
+            ->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY));
+    }
+
+    // Add product URLs from your database
+    $products = Products::all();
+    foreach ($products as $product) {
+        $url = route('shop', [
+            'standwithtype' => 'stand-with-' . strtolower($product->supporting_country), // Assuming supporting_country is stored as "Israel", transform it to "stand-with-israel"
+            'productfor' => strtolower($product->product_for), // Assuming product_for is "Men", transform it to lowercase
+            'productType' => strtolower($product->product_type), // Assuming product_type is "Shirts", transform it to lowercase
+            'slug' => $product->product_slug
+        ]);
+
+        $sitemap->add(Url::create($url)
+            ->setLastModificationDate($product->updated_at) // Adjust this based on your field
+            ->setPriority(0.8)
+            ->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY));
+    }
+
+    $sitemap->add(Url::create('/shop'));
+    $sitemap->add(Url::create('/shop/oversight-collection'));
+    $sitemap->add(Url::create('/shop/traitor-collection'));
+    $sitemap->add(Url::create('/shop/trader-collection'));
+    $sitemap->add(Url::create('/shop/propaganda-collection'));
+
+    // Define the collection types
+    $collectionTypes = ['Oversight', 'Trader', 'Traitor', 'Propaganda'];
+
+    foreach ($collectionTypes as $collectionType) {
+        // Fetch pre-products for each collection type
+        $preProducts = PreProducts::where('collections_type', $collectionType)->get();
+
+        foreach ($preProducts as $preProduct) {
+            $url = route('collection', [
+                'collection' => strtolower($preProduct->collections_type) . '-collection', // Append '-collection' to the collection_type
+                'slug' => $preProduct->product_slug
+            ]);
+
+            $sitemap->add(Url::create($url)
+                ->setLastModificationDate($preProduct->updated_at) // Adjust this based on your field
+                ->setPriority(0.8)
+                ->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY));
+        }
+    }
+
+    // Save the sitemap to a file
+    $sitemap->writeToFile(public_path('sitemap.xml'));
+    return 'Sitemap generated and saved to sitemap.xml';
+});
 
 Route::group(['prefix' => 'admin','middleware' => 'check.auth'], function () {
     Route::get('', [AdminController::class, 'index']);
