@@ -54,6 +54,11 @@
                 </div>
 
                 <div class="mb-3 mt-3">
+                  <label for="product_name">Donation Price (%):</label>
+                  <input type="number" value="{{$product->donation_price}}" class="form-control" id="donation_price" placeholder="Enter Donation Price" name="donation_price">
+                </div>
+
+                <div class="mb-3 mt-3">
                   <label for="product_name">Product Description:</label>
                   <textarea class="form-control" id="product_description" rows="6" placeholder="Enter Product Description" name="product_description">{{$product->product_description}}</textarea>
                 </div>

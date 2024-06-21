@@ -6,7 +6,7 @@
     <section class="products-section">
         <div class="container">
             <div class="text">
-                <h4> buy {{$slug}} products </h4>
+                <h4> Shop {{$slug}} Designs </h4>
             </div>
         </div>
     </section>
@@ -45,7 +45,7 @@
                                         @php
                                             $url = url('/').'/shop/'.strtolower($product->collections_type.'-'.'collection').'/'.$product->product_slug;
                                         @endphp
-                                        <a class="buy_now" href="{{$url}}">Personalize</a>
+                                        <a class="buy_now" href="{{$url}}">Buy</a>
                                     </div>
                                 </div>
                             </div>
