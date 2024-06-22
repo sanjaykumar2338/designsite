@@ -32,14 +32,7 @@
                                 <div class="img aos-init aos-animate" data-aos="zoom-in">
                                     <img src="{{fileToUrl($product->front_image)}}" alt="">
                                     
-                                    @php
-                                        $commissionAmount = ($product->commission / 100) * $product->product_price;
-                                        $totalPrice = $product->product_price + $commissionAmount;
-                                    @endphp
-
-                                    <div class="text-one">
-                                        <span>${{number_format($totalPrice,2)}}</span>
-                                    </div>
+                                 
                                     <div class="text-two">
                                         <h4>{{$product->product_name}}</h4>
                                         @php
