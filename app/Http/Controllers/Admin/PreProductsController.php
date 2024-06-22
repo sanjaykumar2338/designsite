@@ -55,6 +55,10 @@ class PreProductsController extends Controller
         // Add other filters if necessary
 
         // Pagination
+        if ($request->has('design_type') && !empty($request->design_type)) {
+            $query->where('collection_design',$request->design_type);
+        }
+
         $products = $query->paginate(5);
 
         // Return the view with products and activeLink

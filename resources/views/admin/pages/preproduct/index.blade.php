@@ -88,6 +88,12 @@
                                 <option value="Phone Cases" {{ old('search_by_product_type', request()->search_by_product_type) == 'Phone Cases' ? 'selected' : '' }}>Phone Cases</option>
                           </select>
 
+                          <select class="form-control float-right" name="design_type">
+                              <option value="">Design Type</option>
+                              <option value="No" {{ old('design_type', request()->search_by_product_for) == 'No' ? 'selected' : '' }}>PreProducts</option>
+                              <option value="Yes" {{ old('design_type', request()->search_by_product_for) == 'Yes' ? 'selected' : '' }}>Collectin Design</option>
+                          </select>
+
                           <div class="input-group-append">
                               <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
                           </div>
