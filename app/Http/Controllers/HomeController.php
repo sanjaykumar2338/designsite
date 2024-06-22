@@ -126,8 +126,8 @@ class HomeController extends Controller
         $blog->blog_image = fileToUrl($blog->blog_image);
 
         $reviews = BlogReview::where('blog_id',$blog->id)->where('status',1)->get();
-        //echo "<pre>"; print_r($blog); die;
-        return view('frontend.layout.blogtemplate')->with('blog',$blog)->with('reviews',$reviews);
+        //echo "<pre>"; print_r($blog->page_title); die;
+        return view('frontend.layout.blogtemplate')->with('blog',$blog)->with('reviews',$reviews)->with('pageTitle' , $blog->page_title);
     }
 
     public function justice()
