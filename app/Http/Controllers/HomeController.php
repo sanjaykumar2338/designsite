@@ -110,7 +110,12 @@ class HomeController extends Controller
             $blog->blog_image = fileToUrl($blog->blog_image);
         }
 
-        return view('frontend.pages.blog')->with('blogs',$blogs);
+        $metaDescription = 'Analyze compelling perspectives on global conflicts and political strategies; learn, seek change, and stand up to advocate with Cause Stand`s insightful reads.';
+        $keywords = 'global issues, political ideologies, advocacy movements, Cause Stand blog, political bigotry, historical animosities';
+        $pageTitle = 'Political Insights and Causes for Advocacy - Cause Stand Blog';
+        $metaTitle = 'Insights and Advocacy - Explore Global Issues with Cause Stand';
+
+        return view('frontend.pages.blog')->with('blogs',$blogs)->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle);
     }
 
     public function blog_detail(Request $request)
