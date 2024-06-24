@@ -39,9 +39,9 @@ class CollectionController extends Controller
     }
 
     public function collections_design(Request $request){
-        echo "<pre>"; print_r($request->all()); die;
+        echo "<pre>"; print_r($request->collection); print_r($request->design_type); die;
     }
-    
+
     public function collection(Request $request, $collection, $slug)
     {   
         $collection = explode('-', $collection)[0];
