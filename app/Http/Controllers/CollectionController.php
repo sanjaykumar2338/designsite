@@ -38,6 +38,9 @@ class CollectionController extends Controller
         return view('frontend.pages.collections_list')->with('slug',$slug)->with('products',$products)->with('collection_desing',$collection_desing);
     }
 
+    public function collections_design(Request $request){
+        echo "<pre>"; print_r($request->all()); die;
+    }
     public function collection(Request $request, $collection, $slug)
     {   
         $collection = explode('-', $collection)[0];

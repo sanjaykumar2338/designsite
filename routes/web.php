@@ -153,6 +153,7 @@ Route::get('/updateEmptyImageColumns', [App\Http\Controllers\HomeController::cla
 //For Collection
 Route::get('/shop', [App\Http\Controllers\CollectionController::class,'collections'])->name('collections');
 Route::get('/shop/{collection}', [App\Http\Controllers\CollectionController::class,'collections_list'])->name('collections_list');
+Route::get('/collection/design/{collection}/{design_type}', [App\Http\Controllers\CollectionController::class,'collections_design'])->name('collections_list');
 Route::get('/shop/{collection}/{slug}', [App\Http\Controllers\CollectionController::class, 'collection'])->name('collection');
 
 Route::get('/contactus', [App\Http\Controllers\HomeController::class, 'contactus'])->name('contactus');

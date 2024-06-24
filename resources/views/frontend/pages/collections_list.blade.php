@@ -33,7 +33,7 @@
                                     <img src="{{fileToUrl($product->front_image)}}" alt="">
                                     <div class="text-two">
                                         @php
-                                            $url = url('/').'/shop/'.strtolower($product->collections_type.'-'.'collection').'/'.$product->product_slug;
+                                            $url = url('/').'/collection/design/'.strtolower($product->collections_type.'-'.'collection').'/'.$product->collection_design_name;
                                         @endphp
                                         <a class="buy_now" href="{{$url}}">Buy</a>
                                     </div>
