@@ -147,6 +147,7 @@ class PreProductsController extends Controller
         $product->product_width = $request->input('product_width');
         $product->product_height = $request->input('product_height');
         $product->collections_type = $request->input('collections_type');
+        $product->collection_design_id = $request->input('collection_design_id');
 
         $slug = Str::slug($request->input('product_name'));
         $existingSlug = PreProducts::where('product_slug', $slug)->exists();
@@ -269,6 +270,7 @@ class PreProductsController extends Controller
         $product->product_width = $request->input('product_width');
         $product->product_height = $request->input('product_height');
         $product->collections_type = $request->input('collections_type');
+        $product->collection_design_id = $request->input('collection_design_id');
         
         if ($request->file('front_image')) {
             $product->front_image = $frontImage;

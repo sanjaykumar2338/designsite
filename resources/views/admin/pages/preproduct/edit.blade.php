@@ -200,6 +200,17 @@
                   </select>
                 </div>
 
+                <div class="mb-3 mt-3">
+                    <label for="title">Collection Design:</label>
+                    <select class="form-control" id="collection_design_id" name="collection_design_id">
+                        <option value=""></option>
+                        <option value="189" @selected($product->collection_design_id == 189)>Boycott Bucks</option>
+                        <option value="190" @selected($product->collection_design_id == 190)>Boycott Donalds</option>
+                        <option value="191" @selected($product->collection_design_id == 191)>No to BlackRock</option>
+                        <option value="192" @selected($product->collection_design_id == 192)>Boycott Puna</option>
+                    </select>
+                </div>
+
                 <button type="submit" class="btn btn-primary">UPDATE</button>
               </form>
           </div>
