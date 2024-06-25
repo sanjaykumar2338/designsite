@@ -191,13 +191,13 @@
                   <label for="title">Collection Design:</label>
                   <select class="form-control" id="collection_design_id" name="collection_design_id">
                     <option value=""></option>
-                    <option value="189">Boycott Bucks</option>
-                    <option value="190">Boycott Donalds</option>
-                    <option value="191">No to BlackRock</option>
-                    <option value="192">Boycott Puna</option>
+
+                    @foreach($preproducts_type as $type)
+                      <option value="{{$type->id}}">{{$type->collection_design_name}}</option>
+                    @endforeach
+
                   </select>
                 </div>
-
                 <button type="submit" class="btn btn-primary">Create</button>
               </form>
           </div>

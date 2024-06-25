@@ -74,7 +74,8 @@ class PreProductsController extends Controller
      */
     public function create()
     {
-        return view('admin.pages.preproduct.create')->with('activeLink', 'preproducts');
+        $preproducts_type = PreProducts::where('collection_design', 'yes')->get();
+        return view('admin.pages.preproduct.create')->with('activeLink', 'preproducts')->with('preproducts_type', $preproducts_type);
     }
 
     /**
@@ -190,7 +191,8 @@ class PreProductsController extends Controller
     {   
 
         //echo "<pre>"; print_r($preproduct); die;
-        return view('admin.pages.preproduct.edit')->with('product', $preproduct)->with('activeLink', 'preproducts');
+        $preproducts_type = PreProducts::where('collection_design', 'yes')->get();
+        return view('admin.pages.preproduct.edit')->with('product', $preproduct)->with('activeLink', 'preproducts')->with('preproducts_type',$preproducts_type);
     }
 
     /**
