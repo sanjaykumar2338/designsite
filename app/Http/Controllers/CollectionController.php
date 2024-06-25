@@ -39,7 +39,9 @@ class CollectionController extends Controller
     }
 
     public function collections_design(Request $request){
-        echo "<pre>"; print_r($request->collection); print_r($request->design_type); die;
+        $collection = explode('-', $request->collection)[0];
+        $design_type = PreProducts::where('collections_type', ucfirst($collection))->get();
+        echo "<pre>"; print_r($collection); print_r($request->design_type); die;
     }
 
     public function collection(Request $request, $collection, $slug)
