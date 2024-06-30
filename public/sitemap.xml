@@ -1,1011 +1,1029 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
     <url>
-        <loc>http://127.0.0.1:8000/aboutus.blade</loc>
-        <lastmod>2024-06-18T08:34:21+00:00</lastmod>
+        <loc>https://causestand.com/aboutus.blade</loc>
+        <lastmod>2024-06-18T08:36:43+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/blog.blade</loc>
-        <lastmod>2024-06-18T08:34:21+00:00</lastmod>
+        <loc>https://causestand.com/blog.blade</loc>
+        <lastmod>2024-06-18T08:36:43+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/blog_detail.blade</loc>
-        <lastmod>2024-06-18T08:34:21+00:00</lastmod>
+        <loc>https://causestand.com/blog_detail.blade</loc>
+        <lastmod>2024-06-18T08:36:43+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/category-product.blade</loc>
-        <lastmod>2024-06-18T08:34:21+00:00</lastmod>
+        <loc>https://causestand.com/category-product.blade</loc>
+        <lastmod>2024-06-18T08:36:43+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/causes.blade</loc>
-        <lastmod>2024-06-18T08:34:21+00:00</lastmod>
+        <loc>https://causestand.com/causes.blade</loc>
+        <lastmod>2024-06-18T08:36:43+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/collection-products.blade copy</loc>
-        <lastmod>2024-06-18T08:34:21+00:00</lastmod>
+        <loc>https://causestand.com/collection-products.blade copy</loc>
+        <lastmod>2024-06-18T08:36:43+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/collection_create.blade</loc>
-        <lastmod>2024-06-18T08:34:21+00:00</lastmod>
+        <loc>https://causestand.com/collection_create.blade</loc>
+        <lastmod>2024-06-18T08:36:43+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/collections.blade</loc>
-        <lastmod>2024-06-18T08:34:21+00:00</lastmod>
+        <loc>https://causestand.com/collections.blade</loc>
+        <lastmod>2024-06-18T08:36:43+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/collections_list.blade</loc>
-        <lastmod>2024-06-18T08:34:21+00:00</lastmod>
+        <loc>https://causestand.com/collections_list.blade</loc>
+        <lastmod>2024-06-18T08:36:43+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/conflicts.blade</loc>
-        <lastmod>2024-06-18T08:34:21+00:00</lastmod>
+        <loc>https://causestand.com/conflicts.blade</loc>
+        <lastmod>2024-06-18T08:36:43+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/contactus.blade</loc>
-        <lastmod>2024-06-18T08:34:21+00:00</lastmod>
+        <loc>https://causestand.com/contactus.blade</loc>
+        <lastmod>2024-06-18T08:36:43+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/create_product.blade</loc>
-        <lastmod>2024-06-18T08:34:21+00:00</lastmod>
+        <loc>https://causestand.com/create_product.blade</loc>
+        <lastmod>2024-06-18T08:36:43+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/donate_now.blade</loc>
-        <lastmod>2024-06-18T08:34:21+00:00</lastmod>
+        <loc>https://causestand.com/donate_now.blade</loc>
+        <lastmod>2024-06-18T08:36:43+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/events.blade</loc>
-        <lastmod>2024-06-18T08:34:21+00:00</lastmod>
+        <loc>https://causestand.com/events.blade</loc>
+        <lastmod>2024-06-18T08:36:43+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/home.blade</loc>
-        <lastmod>2024-06-18T08:34:21+00:00</lastmod>
+        <loc>https://causestand.com/home.blade</loc>
+        <lastmod>2024-06-18T08:36:43+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/invoice.blade</loc>
-        <lastmod>2024-06-18T08:34:21+00:00</lastmod>
+        <loc>https://causestand.com/invoice.blade</loc>
+        <lastmod>2024-06-18T08:36:43+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/justice.blade</loc>
-        <lastmod>2024-06-18T08:34:21+00:00</lastmod>
+        <loc>https://causestand.com/justice.blade</loc>
+        <lastmod>2024-06-18T08:36:43+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/login.blade</loc>
-        <lastmod>2024-06-18T08:34:21+00:00</lastmod>
+        <loc>https://causestand.com/login.blade</loc>
+        <lastmod>2024-06-18T08:36:43+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/media.blade</loc>
-        <lastmod>2024-06-18T08:34:21+00:00</lastmod>
+        <loc>https://causestand.com/media.blade</loc>
+        <lastmod>2024-06-18T08:36:43+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/my_account.blade</loc>
-        <lastmod>2024-06-18T08:34:21+00:00</lastmod>
+        <loc>https://causestand.com/my_account.blade</loc>
+        <lastmod>2024-06-18T08:36:43+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/order_history.blade</loc>
-        <lastmod>2024-06-18T08:34:21+00:00</lastmod>
+        <loc>https://causestand.com/order_history.blade</loc>
+        <lastmod>2024-06-18T08:36:43+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/privacy_policy.blade</loc>
-        <lastmod>2024-06-18T08:34:21+00:00</lastmod>
+        <loc>https://causestand.com/privacy_policy.blade</loc>
+        <lastmod>2024-06-18T08:36:43+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/product_design.blade</loc>
-        <lastmod>2024-06-18T08:34:21+00:00</lastmod>
+        <loc>https://causestand.com/product_design.blade</loc>
+        <lastmod>2024-06-18T08:36:43+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/product_details.blade</loc>
-        <lastmod>2024-06-18T08:34:21+00:00</lastmod>
+        <loc>https://causestand.com/product_details.blade</loc>
+        <lastmod>2024-06-18T08:36:43+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/product_list.blade</loc>
-        <lastmod>2024-06-18T08:34:21+00:00</lastmod>
+        <loc>https://causestand.com/product_list.blade</loc>
+        <lastmod>2024-06-18T08:36:43+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/products.blade</loc>
-        <lastmod>2024-06-18T08:34:21+00:00</lastmod>
+        <loc>https://causestand.com/products.blade</loc>
+        <lastmod>2024-06-18T08:36:43+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/register.blade</loc>
-        <lastmod>2024-06-18T08:34:21+00:00</lastmod>
+        <loc>https://causestand.com/register.blade</loc>
+        <lastmod>2024-06-18T08:36:43+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/return_order.blade</loc>
-        <lastmod>2024-06-18T08:34:21+00:00</lastmod>
+        <loc>https://causestand.com/return_order.blade</loc>
+        <lastmod>2024-06-18T08:36:43+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/shipping.blade</loc>
-        <lastmod>2024-06-18T08:34:21+00:00</lastmod>
+        <loc>https://causestand.com/script</loc>
+        <lastmod>2024-06-18T08:36:43+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/supporting_list.blade</loc>
-        <lastmod>2024-06-18T08:34:21+00:00</lastmod>
+        <loc>https://causestand.com/shipping.blade</loc>
+        <lastmod>2024-06-18T08:36:43+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/terms_of_use.blade</loc>
-        <lastmod>2024-06-18T08:34:21+00:00</lastmod>
+        <loc>https://causestand.com/supporting_list.blade</loc>
+        <lastmod>2024-06-18T08:36:43+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/track_order.blade</loc>
-        <lastmod>2024-06-18T08:34:21+00:00</lastmod>
+        <loc>https://causestand.com/terms_of_use.blade</loc>
+        <lastmod>2024-06-18T08:36:43+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/wishlist.blade</loc>
-        <lastmod>2024-06-18T08:34:21+00:00</lastmod>
+        <loc>https://causestand.com/track_order.blade</loc>
+        <lastmod>2024-06-18T08:36:43+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/blog/no-one-is-innocent-theyre-all-combatants-or-one-day-theyll-be</loc>
+        <loc>https://causestand.com/wishlist.blade</loc>
+        <lastmod>2024-06-18T08:36:43+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+            </url>
+    <url>
+        <loc>https://causestand.com/blog/no-one-is-innocent-theyre-all-combatants-or-one-day-theyll-be</loc>
         <lastmod>2024-02-13T22:01:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/blog/trumping-all-real-estate-developers</loc>
+        <loc>https://causestand.com/blog/trumping-all-real-estate-developers</loc>
         <lastmod>2024-02-13T21:57:03+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-israel/shop/men/shirts/unisex-tri-blend-t-shirt-bella-canvas-3413</loc>
-        <lastmod>2024-06-11T19:03:44+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-israel/shop/men/shirts/unisex-tri-blend-t-shirt-bella-canvas-3413</loc>
+        <lastmod>2024-06-12T05:52:29+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-israel/shop/men/hoodies/unisex-heavy-blend-hoodie-gildan-18500</loc>
-        <lastmod>2024-04-24T21:46:40+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-israel/shop/men/hoodies/unisex-heavy-blend-hoodie-gildan-18500</loc>
+        <lastmod>2024-06-11T19:09:11+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-israel/shop/men/sweatshirts/unisex-premium-sweatshirt-cotton-heritage-m2480</loc>
-        <lastmod>2024-05-24T18:19:11+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-israel/shop/men/sweatshirts/unisex-premium-sweatshirt-cotton-heritage-m2480</loc>
+        <lastmod>2024-06-11T19:10:43+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-ukraine/shop/men/bottoms/unisex-fleece-sweatpants-cotton-heritage-m7580</loc>
-        <lastmod>2024-05-24T18:24:16+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-israel/shop/accessories/hats/classic-snapback-yupoong-6089m</loc>
+        <lastmod>2024-06-11T19:21:16+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-israel/shop/accessories/hats/classic-snapback-yupoong-6089m</loc>
-        <lastmod>2024-05-24T18:39:45+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-israel/shop/accessories/bags/all-over-print-tote</loc>
+        <lastmod>2024-01-01T12:58:58+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-israel/shop/accessories/bags/all-over-print-tote</loc>
-        <lastmod>2024-01-02T00:28:58+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-israel/shop/accessories/footwear/mens-high-top-canvas-shoes</loc>
+        <lastmod>2024-01-01T12:59:40+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-israel/shop/accessories/footwear/mens-high-top-canvas-shoes</loc>
-        <lastmod>2024-01-02T00:29:40+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-israel/shop/accessories/footwear/womens-high-top-canvas-shoes</loc>
+        <lastmod>2024-01-01T13:01:26+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-israel/shop/accessories/footwear/womens-high-top-canvas-shoes</loc>
-        <lastmod>2024-01-02T00:31:26+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-israel/shop/woman/shirts/womens-relaxed-t-shirt-bella-canvas-6400</loc>
+        <lastmod>2024-06-11T19:14:50+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-israel/shop/woman/shirts/womens-relaxed-t-shirt-bella-canvas-6400</loc>
-        <lastmod>2024-05-12T18:32:43+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-israel/shop/woman/hoodies/unisex-premium-hoodie-cotton-heritage-m2580</loc>
+        <lastmod>2024-04-28T06:49:47+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-israel/shop/woman/hoodies/unisex-premium-hoodie-cotton-heritage-m2580</loc>
-        <lastmod>2024-04-28T17:19:47+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-azerbaijan/shop/men/shirts/unisex-tri-blend-t-shirt-bella-canvas-3413-1</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-azerbaijan/shop/men/shirts/unisex-tri-blend-t-shirt-bella-canvas-3413-1</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-azerbaijan/shop/men/hoodies/unisex-heavy-blend-hoodie-gildan-18500-1</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-azerbaijan/shop/men/hoodies/unisex-heavy-blend-hoodie-gildan-18500-1</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-azerbaijan/shop/men/sweatshirts/unisex-premium-sweatshirt-cotton-heritage-m2480-1</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-azerbaijan/shop/men/sweatshirts/unisex-premium-sweatshirt-cotton-heritage-m2480-1</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-azerbaijan/shop/men/bottoms/unisex-fleece-sweatpants-cotton-heritage-m7580-1</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-azerbaijan/shop/men/bottoms/unisex-fleece-sweatpants-cotton-heritage-m7580-1</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-azerbaijan/shop/men/bottoms/classic-snapback-yupoong-6089m-1</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-azerbaijan/shop/men/bottoms/classic-snapback-yupoong-6089m-1</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-azerbaijan/shop/accessories/bags/all-over-print-tote-1</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-azerbaijan/shop/accessories/bags/all-over-print-tote-1</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-azerbaijan/shop/accessories/footwear/mens-high-top-canvas-shoes-1</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-azerbaijan/shop/accessories/footwear/mens-high-top-canvas-shoes-1</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-azerbaijan/shop/accessories/hats/womens-high-top-canvas-shoes-1</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-azerbaijan/shop/accessories/hats/womens-high-top-canvas-shoes-1</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-azerbaijan/shop/woman/shirts/womens-relaxed-t-shirt-bella-canvas-6400-1</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-azerbaijan/shop/woman/shirts/womens-relaxed-t-shirt-bella-canvas-6400-1</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-azerbaijan/shop/woman/hoodies/unisex-premium-hoodie-cotton-heritage-m2580-3</loc>
+        <lastmod>2024-01-04T10:49:47+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-azerbaijan/shop/woman/hoodies/unisex-premium-hoodie-cotton-heritage-m2580-3</loc>
-        <lastmod>2024-01-04T22:19:47+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-armenia/shop/men/shirts/unisex-tri-blend-t-shirt-bella-canvas-3413-2</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-armenia/shop/men/shirts/unisex-tri-blend-t-shirt-bella-canvas-3413-2</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-armenia/shop/men/hoodies/unisex-heavy-blend-hoodie-gildan-18500-2</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-armenia/shop/men/hoodies/unisex-heavy-blend-hoodie-gildan-18500-2</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-armenia/shop/men/sweatshirts/unisex-premium-sweatshirt-cotton-heritage-m2480-2</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-armenia/shop/men/sweatshirts/unisex-premium-sweatshirt-cotton-heritage-m2480-2</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-armenia/shop/men/bottoms/unisex-fleece-sweatpants-cotton-heritage-m7580-2</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-armenia/shop/men/bottoms/unisex-fleece-sweatpants-cotton-heritage-m7580-2</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-armenia/shop/men/bottoms/classic-snapback-yupoong-6089m-2</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-armenia/shop/men/bottoms/classic-snapback-yupoong-6089m-2</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-armenia/shop/accessories/bags/all-over-print-tote-2</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-armenia/shop/accessories/bags/all-over-print-tote-2</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-armenia/shop/accessories/footwear/mens-high-top-canvas-shoes-2</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-armenia/shop/accessories/footwear/mens-high-top-canvas-shoes-2</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-armenia/shop/accessories/hats/womens-high-top-canvas-shoes-2</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-armenia/shop/accessories/hats/womens-high-top-canvas-shoes-2</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-armenia/shop/woman/shirts/womens-relaxed-t-shirt-bella-canvas-6400-2</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-armenia/shop/woman/shirts/womens-relaxed-t-shirt-bella-canvas-6400-2</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-armenia/shop/woman/hoodies/unisex-premium-hoodie-cotton-heritage-m2580-10</loc>
+        <lastmod>2024-01-04T10:42:17+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-armenia/shop/woman/hoodies/unisex-premium-hoodie-cotton-heritage-m2580-10</loc>
-        <lastmod>2024-01-04T22:12:17+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-russia/shop/men/hoodies/unisex-heavy-blend-hoodie-gildan-18500-3</loc>
+        <lastmod>2024-06-12T07:13:35+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-russia/shop/men/hoodies/unisex-heavy-blend-hoodie-gildan-18500-3</loc>
-        <lastmod>2024-05-12T21:42:35+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-russia/shop/men/sweatshirts/unisex-premium-sweatshirt-cotton-heritage-m2480-3</loc>
+        <lastmod>2024-06-12T07:14:27+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-russia/shop/men/sweatshirts/unisex-premium-sweatshirt-cotton-heritage-m2480-3</loc>
-        <lastmod>2024-05-12T21:44:32+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-russia/shop/men/bottoms/unisex-fleece-sweatpants-cotton-heritage-m7580-3</loc>
+        <lastmod>2024-06-12T07:15:53+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-russia/shop/men/bottoms/unisex-fleece-sweatpants-cotton-heritage-m7580-3</loc>
-        <lastmod>2024-05-12T22:26:47+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-russia/shop/accessories/bags/all-over-print-tote-3</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-russia/shop/accessories/bags/all-over-print-tote-3</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-russia/shop/accessories/footwear/mens-high-top-canvas-shoes-3</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-russia/shop/accessories/footwear/mens-high-top-canvas-shoes-3</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-russia/shop/accessories/footwear/womens-high-top-canvas-shoes-3</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-russia/shop/accessories/footwear/womens-high-top-canvas-shoes-3</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-russia/shop/woman/shirts/womens-relaxed-t-shirt-bella-canvas-6400-9</loc>
+        <lastmod>2024-06-12T07:18:57+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-russia/shop/woman/shirts/womens-relaxed-t-shirt-bella-canvas-6400-9</loc>
-        <lastmod>2024-05-24T18:37:29+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-russia/shop/woman/hoodies/unisex-premium-hoodie-cotton-heritage-m2580-6</loc>
+        <lastmod>2024-06-12T07:20:02+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-russia/shop/woman/hoodies/unisex-premium-hoodie-cotton-heritage-m2580-6</loc>
-        <lastmod>2024-05-12T22:31:23+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-ukraine/shop/men/shirts/unisex-tri-blend-t-shirt-bella-canvas-3413-4</loc>
+        <lastmod>2024-06-12T07:24:15+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-ukraine/shop/men/shirts/unisex-tri-blend-t-shirt-bella-canvas-3413-4</loc>
-        <lastmod>2024-05-12T22:39:20+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-ukraine/shop/men/hoodies/unisex-heavy-blend-hoodie-gildan-18500-4</loc>
+        <lastmod>2024-06-12T07:25:05+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-ukraine/shop/men/hoodies/unisex-heavy-blend-hoodie-gildan-18500-4</loc>
-        <lastmod>2024-05-12T22:40:11+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-ukraine/shop/men/sweatshirts/unisex-premium-sweatshirt-cotton-heritage-m2480-4</loc>
+        <lastmod>2024-06-12T07:25:40+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-ukraine/shop/men/sweatshirts/unisex-premium-sweatshirt-cotton-heritage-m2480-4</loc>
-        <lastmod>2024-05-12T22:40:58+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-ukraine/shop/men/bottoms/unisex-fleece-sweatpants-cotton-heritage-m7580-4</loc>
+        <lastmod>2024-06-12T07:26:16+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-ukraine/shop/men/bottoms/unisex-fleece-sweatpants-cotton-heritage-m7580-4</loc>
-        <lastmod>2024-05-12T22:43:16+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-ukraine/shop/accessories/bags/all-over-print-tote-4</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-ukraine/shop/accessories/bags/all-over-print-tote-4</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-ukraine/shop/accessories/footwear/mens-high-top-canvas-shoes-4</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-ukraine/shop/accessories/footwear/mens-high-top-canvas-shoes-4</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-ukraine/shop/accessories/footwear/womens-high-top-canvas-shoes-4</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-ukraine/shop/accessories/footwear/womens-high-top-canvas-shoes-4</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-ukraine/shop/woman/shirts/womens-relaxed-t-shirt-bella-canvas-6400-3</loc>
+        <lastmod>2024-06-12T07:28:42+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-ukraine/shop/woman/shirts/womens-relaxed-t-shirt-bella-canvas-6400-3</loc>
-        <lastmod>2024-05-12T22:45:58+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-ukraine/shop/woman/hoodies/unisex-premium-hoodie-cotton-heritage-m2580-9</loc>
+        <lastmod>2024-06-12T07:29:30+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-ukraine/shop/woman/hoodies/unisex-premium-hoodie-cotton-heritage-m2580-9</loc>
-        <lastmod>2024-05-12T22:48:53+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-turkey/shop/men/shirts/unisex-tri-blend-t-shirt-bella-canvas-3413-5</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-turkey/shop/men/shirts/unisex-tri-blend-t-shirt-bella-canvas-3413-5</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-turkey/shop/men/hoodies/unisex-heavy-blend-hoodie-gildan-18500-5</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-turkey/shop/men/hoodies/unisex-heavy-blend-hoodie-gildan-18500-5</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-turkey/shop/men/sweatshirts/unisex-premium-sweatshirt-cotton-heritage-m2480-5</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-turkey/shop/men/sweatshirts/unisex-premium-sweatshirt-cotton-heritage-m2480-5</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-turkey/shop/men/bottoms/unisex-fleece-sweatpants-cotton-heritage-m7580-5</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-turkey/shop/men/bottoms/unisex-fleece-sweatpants-cotton-heritage-m7580-5</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-turkey/shop/men/bottoms/classic-snapback-yupoong-6089m-5</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-turkey/shop/men/bottoms/classic-snapback-yupoong-6089m-5</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-turkey/shop/accessories/bags/all-over-print-tote-5</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-turkey/shop/accessories/bags/all-over-print-tote-5</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-turkey/shop/accessories/footwear/mens-high-top-canvas-shoes-5</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-turkey/shop/accessories/footwear/mens-high-top-canvas-shoes-5</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-turkey/shop/accessories/hats/womens-high-top-canvas-shoes-5</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-turkey/shop/accessories/hats/womens-high-top-canvas-shoes-5</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-turkey/shop/woman/shirts/womens-relaxed-t-shirt-bella-canvas-6400-5</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-turkey/shop/woman/shirts/womens-relaxed-t-shirt-bella-canvas-6400-5</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-turkey/shop/woman/hoodies/unisex-premium-hoodie-cotton-heritage-m2580-5</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-turkey/shop/woman/hoodies/unisex-premium-hoodie-cotton-heritage-m2580-5</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-kurdistan/shop/men/shirts/unisex-tri-blend-t-shirt-bella-canvas-3413-6</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-kurdistan/shop/men/shirts/unisex-tri-blend-t-shirt-bella-canvas-3413-6</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-kurdistan/shop/men/hoodies/unisex-heavy-blend-hoodie-gildan-18500-6</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-kurdistan/shop/men/hoodies/unisex-heavy-blend-hoodie-gildan-18500-6</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-kurdistan/shop/men/sweatshirts/unisex-premium-sweatshirt-cotton-heritage-m2480-6</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-kurdistan/shop/men/sweatshirts/unisex-premium-sweatshirt-cotton-heritage-m2480-6</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-kurdistan/shop/men/bottoms/unisex-fleece-sweatpants-cotton-heritage-m7580-6</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-kurdistan/shop/men/bottoms/unisex-fleece-sweatpants-cotton-heritage-m7580-6</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-kurdistan/shop/men/bottoms/classic-snapback-yupoong-6089m-6</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-kurdistan/shop/men/bottoms/classic-snapback-yupoong-6089m-6</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-kurdistan/shop/accessories/bags/all-over-print-tote-6</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-kurdistan/shop/accessories/bags/all-over-print-tote-6</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-kurdistan/shop/accessories/footwear/mens-high-top-canvas-shoes-6</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-kurdistan/shop/accessories/footwear/mens-high-top-canvas-shoes-6</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-kurdistan/shop/accessories/hats/womens-high-top-canvas-shoes-6</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-kurdistan/shop/accessories/hats/womens-high-top-canvas-shoes-6</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-kurdistan/shop/woman/shirts/womens-relaxed-t-shirt-bella-canvas-6400-6</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-kurdistan/shop/woman/shirts/womens-relaxed-t-shirt-bella-canvas-6400-6</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-kurdistan/shop/woman/hoodies/unisex-premium-hoodie-cotton-heritage-m2580-7</loc>
+        <lastmod>2024-01-04T10:48:03+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-kurdistan/shop/woman/hoodies/unisex-premium-hoodie-cotton-heritage-m2580-7</loc>
-        <lastmod>2024-01-04T22:18:03+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-india/shop/men/shirts/unisex-tri-blend-t-shirt-bella-canvas-3413-7</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-india/shop/men/shirts/unisex-tri-blend-t-shirt-bella-canvas-3413-7</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-india/shop/men/hoodies/unisex-heavy-blend-hoodie-gildan-18500-7</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-india/shop/men/hoodies/unisex-heavy-blend-hoodie-gildan-18500-7</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-india/shop/men/sweatshirts/unisex-premium-sweatshirt-cotton-heritage-m2480-7</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-india/shop/men/sweatshirts/unisex-premium-sweatshirt-cotton-heritage-m2480-7</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-india/shop/men/bottoms/unisex-fleece-sweatpants-cotton-heritage-m7580-7</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-india/shop/men/bottoms/unisex-fleece-sweatpants-cotton-heritage-m7580-7</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-india/shop/men/bottoms/classic-snapback-yupoong-6089m-7</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-india/shop/men/bottoms/classic-snapback-yupoong-6089m-7</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-india/shop/accessories/bags/all-over-print-tote-7</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-india/shop/accessories/bags/all-over-print-tote-7</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-india/shop/accessories/footwear/mens-high-top-canvas-shoes-7</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-india/shop/accessories/footwear/mens-high-top-canvas-shoes-7</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-india/shop/accessories/hats/womens-high-top-canvas-shoes-7</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-india/shop/accessories/hats/womens-high-top-canvas-shoes-7</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-india/shop/woman/shirts/womens-relaxed-t-shirt-bella-canvas-6400-7</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-india/shop/woman/shirts/womens-relaxed-t-shirt-bella-canvas-6400-7</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-india/shop/woman/hoodies/unisex-premium-hoodie-cotton-heritage-m2580-2</loc>
+        <lastmod>2024-01-04T10:45:14+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-india/shop/woman/hoodies/unisex-premium-hoodie-cotton-heritage-m2580-2</loc>
-        <lastmod>2024-01-04T22:15:14+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-pakistan/shop/men/shirts/unisex-tri-blend-t-shirt-bella-canvas-3413-8</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-pakistan/shop/men/shirts/unisex-tri-blend-t-shirt-bella-canvas-3413-8</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-pakistan/shop/men/hoodies/unisex-heavy-blend-hoodie-gildan-18500-8</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-pakistan/shop/men/hoodies/unisex-heavy-blend-hoodie-gildan-18500-8</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-pakistan/shop/men/sweatshirts/unisex-premium-sweatshirt-cotton-heritage-m2480-8</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-pakistan/shop/men/sweatshirts/unisex-premium-sweatshirt-cotton-heritage-m2480-8</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-pakistan/shop/men/bottoms/unisex-fleece-sweatpants-cotton-heritage-m7580-8</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-pakistan/shop/men/bottoms/unisex-fleece-sweatpants-cotton-heritage-m7580-8</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-pakistan/shop/men/bottoms/classic-snapback-yupoong-6089m-8</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-pakistan/shop/men/bottoms/classic-snapback-yupoong-6089m-8</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-pakistan/shop/accessories/bags/all-over-print-tote-8</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-pakistan/shop/accessories/bags/all-over-print-tote-8</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-pakistan/shop/accessories/footwear/mens-high-top-canvas-shoes-8</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-pakistan/shop/accessories/footwear/mens-high-top-canvas-shoes-8</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-pakistan/shop/accessories/hats/womens-high-top-canvas-shoes-8</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-pakistan/shop/accessories/hats/womens-high-top-canvas-shoes-8</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-pakistan/shop/woman/shirts/womens-relaxed-t-shirt-bella-canvas-6400-8</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-pakistan/shop/woman/shirts/womens-relaxed-t-shirt-bella-canvas-6400-8</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-pakistan/shop/woman/hoodies/unisex-premium-hoodie-cotton-heritage-m2580-1</loc>
+        <lastmod>2024-01-04T10:50:57+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-pakistan/shop/woman/hoodies/unisex-premium-hoodie-cotton-heritage-m2580-1</loc>
-        <lastmod>2024-01-04T22:20:57+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-palestine/shop/men/shirts/unisex-tri-blend-t-shirt-bella-canvas-3413-9</loc>
+        <lastmod>2024-06-12T06:00:48+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-palestine/shop/men/shirts/unisex-tri-blend-t-shirt-bella-canvas-3413-9</loc>
-        <lastmod>2024-05-12T18:41:53+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-palestine/shop/men/hoodies/unisex-heavy-blend-hoodie-gildan-18500-9</loc>
+        <lastmod>2024-05-12T08:30:29+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-palestine/shop/men/hoodies/unisex-heavy-blend-hoodie-gildan-18500-9</loc>
-        <lastmod>2024-05-12T19:00:29+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-palestine/shop/men/sweatshirts/unisex-premium-sweatshirt-cotton-heritage-m2480-9</loc>
+        <lastmod>2024-05-12T08:31:40+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-palestine/shop/men/sweatshirts/unisex-premium-sweatshirt-cotton-heritage-m2480-9</loc>
-        <lastmod>2024-05-12T19:01:40+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-palestine/shop/men/bottoms/unisex-fleece-sweatpants-cotton-heritage-m7580-9</loc>
+        <lastmod>2024-05-12T08:33:36+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-palestine/shop/men/bottoms/unisex-fleece-sweatpants-cotton-heritage-m7580-9</loc>
-        <lastmod>2024-05-12T19:03:36+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-palestine/shop/accessories/hats/classic-snapback-yupoong-6089m-10</loc>
+        <lastmod>2024-05-14T06:50:34+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-palestine/shop/accessories/hats/classic-snapback-yupoong-6089m-10</loc>
-        <lastmod>2024-05-14T17:20:34+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-palestine/shop/accessories/bags/all-over-print-tote-9</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-palestine/shop/accessories/bags/all-over-print-tote-9</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-palestine/shop/accessories/footwear/mens-high-top-canvas-shoes-9</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-palestine/shop/accessories/footwear/mens-high-top-canvas-shoes-9</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-palestine/shop/accessories/footwear/womens-high-top-canvas-shoes-9</loc>
+        <lastmod>2024-01-01T13:13:08+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-palestine/shop/accessories/footwear/womens-high-top-canvas-shoes-9</loc>
-        <lastmod>2024-01-02T00:43:08+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-palestine/shop/woman/shirts/womens-relaxed-t-shirt-bella-canvas-6400-10</loc>
+        <lastmod>2024-06-12T06:07:24+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-palestine/shop/woman/shirts/womens-relaxed-t-shirt-bella-canvas-6400-10</loc>
-        <lastmod>2024-05-12T19:08:58+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-palestine/shop/woman/hoodies/unisex-premium-hoodie-cotton-heritage-m2580-8</loc>
+        <lastmod>2024-06-12T06:08:20+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-palestine/shop/woman/hoodies/unisex-premium-hoodie-cotton-heritage-m2580-8</loc>
-        <lastmod>2024-05-12T21:35:51+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-israel/shop/accessories/phone%20cases/tough-case-for-iphone</loc>
+        <lastmod>2024-05-09T11:46:18+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-israel/shop/accessories/phone%20cases/tough-case-for-iphone</loc>
-        <lastmod>2024-05-09T22:16:18+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-israel/shop/accessories/phone%20cases/clear-case-for-samsung</loc>
+        <lastmod>2024-05-09T11:48:41+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-israel/shop/accessories/phone%20cases/clear-case-for-samsung</loc>
-        <lastmod>2024-05-09T22:18:41+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-azerbaijan/shop/accessories/phone%20cases/tough-case-for-iphone-1</loc>
+        <lastmod>2024-01-02T13:30:36+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-azerbaijan/shop/accessories/phone%20cases/tough-case-for-iphone-1</loc>
-        <lastmod>2024-01-03T01:00:36+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-azerbaijan/shop/accessories/phone%20cases/clear-case-for-samsung-1</loc>
+        <lastmod>2024-01-02T13:30:36+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-azerbaijan/shop/accessories/phone%20cases/clear-case-for-samsung-1</loc>
-        <lastmod>2024-01-03T01:00:36+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-armenia/shop/accessories/phone%20cases/tough-case-for-iphone-2</loc>
+        <lastmod>2024-01-02T13:30:36+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-armenia/shop/accessories/phone%20cases/tough-case-for-iphone-2</loc>
-        <lastmod>2024-01-03T01:00:36+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-armenia/shop/accessories/phone%20cases/clear-case-for-samsung-2</loc>
+        <lastmod>2024-01-02T13:30:36+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-armenia/shop/accessories/phone%20cases/clear-case-for-samsung-2</loc>
-        <lastmod>2024-01-03T01:00:36+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-russia/shop/accessories/phone%20cases/tough-case-for-iphone-4</loc>
+        <lastmod>2024-05-10T07:52:00+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-russia/shop/accessories/phone%20cases/tough-case-for-iphone-4</loc>
-        <lastmod>2024-05-10T18:22:00+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-russia/shop/accessories/phone%20cases/clear-case-for-samsung-4</loc>
+        <lastmod>2024-05-10T06:52:34+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-russia/shop/accessories/phone%20cases/clear-case-for-samsung-4</loc>
-        <lastmod>2024-05-10T17:22:34+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-ukraine/shop/accessories/phone%20cases/tough-case-for-iphone-9</loc>
+        <lastmod>2024-05-10T06:50:37+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-ukraine/shop/accessories/phone%20cases/tough-case-for-iphone-9</loc>
-        <lastmod>2024-05-10T17:20:37+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-ukraine/shop/accessories/phone%20cases/clear-case-for-samsung-8</loc>
+        <lastmod>2024-05-10T06:51:04+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-ukraine/shop/accessories/phone%20cases/clear-case-for-samsung-8</loc>
-        <lastmod>2024-05-10T17:21:04+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-turkey/shop/accessories/phone%20cases/tough-case-for-iphone-5</loc>
+        <lastmod>2024-01-02T13:30:36+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-turkey/shop/accessories/phone%20cases/tough-case-for-iphone-5</loc>
-        <lastmod>2024-01-03T01:00:36+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-turkey/shop/accessories/phone%20cases/clear-case-for-samsung-5</loc>
+        <lastmod>2024-01-02T13:30:36+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-turkey/shop/accessories/phone%20cases/clear-case-for-samsung-5</loc>
-        <lastmod>2024-01-03T01:00:36+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-kurdistan/shop/accessories/phone%20cases/tough-case-for-iphone-6</loc>
+        <lastmod>2024-01-02T13:30:36+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-kurdistan/shop/accessories/phone%20cases/tough-case-for-iphone-6</loc>
-        <lastmod>2024-01-03T01:00:36+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-kurdistan/shop/accessories/phone%20cases/clear-case-for-samsung-6</loc>
+        <lastmod>2024-01-02T13:30:36+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-kurdistan/shop/accessories/phone%20cases/clear-case-for-samsung-6</loc>
-        <lastmod>2024-01-03T01:00:36+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-india/shop/accessories/phone%20cases/tough-case-for-iphone-7</loc>
+        <lastmod>2024-01-02T13:30:36+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-india/shop/accessories/phone%20cases/tough-case-for-iphone-7</loc>
-        <lastmod>2024-01-03T01:00:36+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-india/shop/accessories/phone%20cases/clear-case-for-samsung-7</loc>
+        <lastmod>2024-01-02T13:30:36+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-india/shop/accessories/phone%20cases/clear-case-for-samsung-7</loc>
-        <lastmod>2024-01-03T01:00:36+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-pakistan/shop/accessories/phone%20cases/tough-case-for-iphone-8</loc>
+        <lastmod>2024-01-02T13:30:36+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-pakistan/shop/accessories/phone%20cases/tough-case-for-iphone-8</loc>
-        <lastmod>2024-01-03T01:00:36+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-pakistan/shop/accessories/phone%20cases/clear-case-for-samsung-9</loc>
+        <lastmod>2024-01-02T16:17:45+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-pakistan/shop/accessories/phone%20cases/clear-case-for-samsung-9</loc>
-        <lastmod>2024-01-03T03:47:45+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-russia/shop/men/shirts/unisex-tri-blend-t-shirt-bella-canvas-3413</loc>
+        <lastmod>2024-06-12T07:03:56+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-russia/shop/men/shirts/unisex-tri-blend-t-shirt-bella-canvas-3413</loc>
-        <lastmod>2024-01-04T23:15:45+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-israel/shop/men/shirts/mens-classic-tee-gildan-5000-1</loc>
+        <lastmod>2024-06-06T15:17:10+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-israel/shop/men/shirts/mens-classic-tee-gildan-5000-2</loc>
-        <lastmod>2024-05-08T17:30:10+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-palestine/shop/men/shirts/mens-classic-tee-gildan-5000</loc>
+        <lastmod>2024-05-12T08:27:32+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-palestine/shop/men/shirts/mens-classic-tee-gildan-5000</loc>
-        <lastmod>2024-05-12T18:57:32+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-palestine/shop/accessories/phone%20cases/clear-case-for-samsung</loc>
+        <lastmod>2024-05-09T11:48:41+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-palestine/shop/accessories/phone%20cases/clear-case-for-samsung</loc>
-        <lastmod>2024-05-09T22:18:41+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-palestine/shop/accessories/phone%20cases/tough-case-for-iphone</loc>
+        <lastmod>2024-05-09T11:46:18+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-palestine/shop/accessories/phone%20cases/tough-case-for-iphone</loc>
-        <lastmod>2024-05-09T22:16:18+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-russia/shop/accessories/hats/classic-snapback-yupoong-6089m</loc>
+        <lastmod>2024-05-08T07:02:38+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-russia/shop/accessories/hats/classic-snapback-yupoong-6089m</loc>
-        <lastmod>2024-05-08T17:32:38+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-ukraine/shop/accessories/hats/classic-snapback-yupoong-6089m</loc>
+        <lastmod>2024-06-12T07:34:05+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-ukraine/shop/accessories/hats/classic-snapback-yupoong-6089m</loc>
-        <lastmod>2024-05-08T17:32:38+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-israel/shop/woman/bottoms/unisex-fleece-sweatpants-cotton-heritage-m7580</loc>
+        <lastmod>2024-06-12T06:33:09+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-israel/shop/woman/bottoms/unisex-fleece-sweatpants-cotton-heritage-m7580</loc>
-        <lastmod>2024-04-28T17:16:05+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-israel/shop/woman/sweatshirts/unisex-premium-sweatshirt-cotton-heritage-m2480</loc>
+        <lastmod>2024-06-12T06:13:30+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-israel/shop/woman/sweatshirts/unisex-premium-sweatshirt-cotton-heritage-m2480</loc>
-        <lastmod>2024-05-23T18:15:50+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-russia/shop/woman/sweatshirts/unisex-premium-sweatshirt-cotton-heritage-m2480</loc>
+        <lastmod>2024-06-12T07:21:54+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-russia/shop/woman/sweatshirts/unisex-premium-sweatshirt-cotton-heritage-m2480</loc>
-        <lastmod>2024-05-23T18:15:50+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-ukraine/shop/woman/sweatshirts/unisex-premium-sweatshirt-cotton-heritage-m2480</loc>
+        <lastmod>2024-06-12T07:30:37+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-ukraine/shop/woman/sweatshirts/unisex-premium-sweatshirt-cotton-heritage-m2480</loc>
-        <lastmod>2024-05-23T18:15:50+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-russia/shop/woman/bottoms/unisex-fleece-sweatpants-cotton-heritage-m7580</loc>
+        <lastmod>2024-06-12T07:23:03+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-russia/shop/woman/bottoms/unisex-fleece-sweatpants-cotton-heritage-m7580</loc>
-        <lastmod>2024-04-28T17:16:05+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-ukraine/shop/woman/bottoms/unisex-fleece-sweatpants-cotton-heritage-m7580</loc>
+        <lastmod>2024-06-12T07:31:38+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/stand-with-ukraine/shop/woman/bottoms/unisex-fleece-sweatpants-cotton-heritage-m7580</loc>
-        <lastmod>2024-04-28T17:16:05+00:00</lastmod>
+        <loc>https://causestand.com/stand-with-israel/shop/men/bottoms/unisex-fleece-sweatpants-cotton-heritage-m7580</loc>
+        <lastmod>2024-06-11T19:11:42+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/shop</loc>
+        <loc>https://causestand.com/stand-with-palestine/shop/woman/sweatshirts/unisex-premium-sweatshirt-cotton-heritage-m2480</loc>
+        <lastmod>2024-05-23T07:45:50+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+            </url>
+    <url>
+        <loc>https://causestand.com/stand-with-palestine/shop/woman/bottoms/unisex-fleece-sweatpants-cotton-heritage-m7580</loc>
+        <lastmod>2024-06-12T06:59:25+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+            </url>
+    <url>
+        <loc>https://causestand.com/shop</loc>
             <changefreq>daily</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/shop/oversight-collection</loc>
+        <loc>https://causestand.com/shop/oversight-collection</loc>
             <changefreq>daily</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/shop/traitor-collection</loc>
+        <loc>https://causestand.com/shop/traitor-collection</loc>
             <changefreq>daily</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/shop/trader-collection</loc>
+        <loc>https://causestand.com/shop/trader-collection</loc>
             <changefreq>daily</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/shop/propaganda-collection</loc>
+        <loc>https://causestand.com/shop/propaganda-collection</loc>
             <changefreq>daily</changefreq>
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>http://127.0.0.1:8000/shop/oversight-collection/unisex-tri-blend-t-shirt-bella-canvas-3413</loc>
-        <lastmod>2024-06-06T07:50:25+00:00</lastmod>
+        <loc>https://causestand.com/shop/oversight-collection/unisex-tri-blend-t-shirt-bella-canvas-3413</loc>
+        <lastmod>2024-06-15T08:10:49+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
             </url>

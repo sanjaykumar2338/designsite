@@ -1,59 +1,112 @@
-@extends('frontend.layout.homepagelayout')
+@extends('frontend.layout.pre_product_list_template')
 
 @section('content')
- <!-- ========== Start products section ========== -->
+
     <section class="products-section">
         <div class="container">
             <div class="text">
-                <h4> all products </h4>
+                <h4> Shop {{$collection}} Design Products </h4>
             </div>
         </div>
     </section>
-    <!-- ========== End products section ========== -->
-
     
-    <section class="Products-3 bg-img">
-        <div class="container">                     
-            <div class="row">
+    @if($products->count() > 0)
+        
+        <input type="hidden" name="product_front" id="product_front" value="{{$front}}">
+
+        <div class="crt-pre-list">
+        <div class="container">
+        <div class="flex flex-wrap crt-pre-row">
+        @php $key = 0; @endphp
+
+        @foreach($products as $product)                
                 
-                @php
-                   //echo "<pre>"; print_r($products);
-                @endphp
+                @php $key++; $product_class = ''; @endphp
+                
+                {{-- Product ID: {{$product->id}} --}}
 
-                @if($products->count())
-                    @foreach($products as $product)
-                        
-                        <input type="hidden" name="product_ids" value="{{$product->id}}">
+                @if($product->product_type=='Bottoms')
+                    @php $product_class= "lowre-canva"; @endphp
+                @elseif($product->product_type=='Footwear')
+                    @php $product_class= "shoes-canva"; @endphp                    
+                @elseif($product->product_type=='Phone Cases')
+                    @php $product_class= "iphone-canva"; @endphp                    
+                @else
+                    @php $product_class= "t-shirt-canva"; @endphp                    
+                @endif
 
-                        @if($product->front_image!="")
-                            {{--Product ID: {{$product->id}}--}}
-                            <div class="col-lg-3 col-md-6 col-sm-6">
-                                <div class="img aos-init aos-animate" data-aos="zoom-in">
-                                    <img src="{{fileToUrl($product->front_image)}}" alt="">
-                                    
-                                    @php
-                                        $commissionAmount = ($product->commission / 100) * $product->product_price;
-                                        $totalPrice = $product->product_price + $commissionAmount;
-                                    @endphp
+                <div class="crt-prd-main div_{{$key}} {{$product_class}}">
+                    
+                    <input type="hidden" name="product_ids_{{$key}}" value="{{$product->id}}">
 
-                                    <div class="text-one">
-                                        <span>${{number_format($totalPrice,2)}}</span>
-                                    </div>
-                                    <div class="text-two">
-                                        <h4>{{$product->website_product_name}}</h4>
-                                        @php
-                                            $url = url('/').'/stand-with-'.strtolower($product->supporting_country).'/shop/'.strtolower($product->product_for).'/'.strtolower($product->product_type).'/'.$product->product_slug;
-                                        @endphp
-                                        <a class="buy_now" href="{{$url}}">Buy</a>
-                                    </div>
+                    <div id="data_{{$key}}" hidden>{{ $product }}</div>
+                    
+                        @if($product->product_type=='Bottoms')
+                            <div class="prd-left lowre-canva">
+                        @elseif($product->product_type=='Footwear')
+                            <div class="prd-left shoes-canva">
+                        @elseif($product->product_type=='Phone Cases')
+                            <div class="prd-left iphone-canva">
+                        @else
+                            <div class="prd-left t-shirt-canva {{strtolower($product->product_for)}}-{{strtolower($product->product_type)}}">
+                        @endif
+
+
+                        {{-- <div class="flex flex-wrap prd-crs-img">
+                            <button class="hover:bg-slate-200 h-[50px] w-[50px]" onclick="setSelected(1)">
+                                <img src="https://files.cdn.printful.com/m/ec1000/medium/onman/front/05_ec1000_onman_front_base_whitebg.png?v=1675420344"
+                                    class="h-full" alt="" />
+                            </button>
+                            <button class="hover:bg-slate-200 h-[50px] w-[50px]" onclick="setSelected(2)">
+                                <img src="{{ url('/') }}/poster.jpg" class="h-full" alt="" />
+                            </button>
+                            <button class="hover:bg-slate-200 h-[50px] w-[50px]" onclick="setSelected(3)">
+                                <img src="{{ url('/') }}/signage.jpg" class="h-full" alt="" />
+                            </button>
+                        </div> --}}
+                        <div class="prd-image">
+                            <div style="position: relative" id="canvasParent">
+                                <div class="cmn-frame" style="height: 500px; width: 500px; position: absolute; backgorud"
+                                    id="canvasBgImage_{{$key}}">
+                                </div>
+                                <div class="cmn-frame" style="height: 500px; width: 500px; position: relative">
+                                    <div class="border-neutral-300 frame-area"
+                                        style="
+                                            position: absolute;
+                                            top: 52%;
+                                            left: 48%;                                                    
+                                            z-index: 10;
+                                        "
+                                        id="div_front_{{$key}}" hidden>
+                                    </div>                                            
                                 </div>
                             </div>
-                        @endif
-                    @endforeach
-                @else
-                    <p>No Product Found!</p>
-                @endif
-            </div>
-        </div>
-    </section>
+
+                             <div class="product-details">
+                                <h5><b>Product Name:</b> {{ $product->website_product_name }}</h5>
+                                <p><b>Price:</b> ${{ $product->product_price }}</p>
+                            </div>
+
+							<div class="buy-now">
+								<a href="{{ url('/collection/design') }}/{{strtolower($collection)}}/{{strtolower($design->collection_design_name)}}/{{strtolower($product->product_slug)}}">Buy Now</a>
+							</div>
+                        </div>
+                    </div>
+                </div> 
+        @endforeach
+		</div>
+		</div>
+		</div>
+    @else
+        <p>No Record found!</p>
+    @endif
+
+    <!-- SPINNER -->
+    <div id="loader" hidden wire:loading style="z-index: 2000;"
+        class="fixed top-0 left-0 right-0 bottom-0 w-full h-screen z-50 overflow-hidden bg-gray-700 opacity-75 flex flex-col items-center justify-center">
+        <div style="border-top-color: #3498db !important"
+            class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-12 w-12 mb-4"></div>
+        <h2 class="text-center text-white text-xl font-semibold">Loading...</h2>
+        <p class="w-1/3 text-center text-white">This may take a few seconds, please don't close this page.</p>
+    </div>    
 @endsection

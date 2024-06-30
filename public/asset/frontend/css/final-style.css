@@ -2502,3 +2502,61 @@
     color: red;
     font-weight: 600;
   }
+.crt-pre-list {
+    padding: 50px 0;
+}  
+.crt-pre-row .prd-left {
+    width: 100%;
+    padding: 0;
+}
+
+.crt-pre-row .crt-prd-main {
+    padding: 0 15px !important;
+    width: 33.3%;
+}  
+.crt-pre-row .t-shirt-canva .canvas-container canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+.buy-now {
+    text-align: center;
+    position: relative;
+    z-index: 99;
+    margin-top: 15px;
+}
+
+.buy-now a {
+    background-color: #eb3e32;
+    outline: none;
+    color: #fff;
+    padding: 12px 34px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: 2px solid #eb3e32;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.crt-pre-row .prd-image {
+    width: 100% !important;
+}
+
+.crt-pre-row .prd-image .cmn-frame img {
+    width: 100% !important;
+    height: auto !important;
+}
+
+.crt-pre-row .cmn-frame {
+    width: 100% !important;
+    height: 470px !important;
+}
+.crt-pre-row .men-hoodies div#div_front_2 {
+    width: 180px !important;
+    height: 200px !important;
+}
+/* .crt-pre-row .t-shirt-canva .canvas-container > .canvas-container {
+    width: 100% !important;
+    height: 100% !important;
+}*/

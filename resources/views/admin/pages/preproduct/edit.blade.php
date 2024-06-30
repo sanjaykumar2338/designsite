@@ -200,15 +200,17 @@
                   </select>
                 </div>
 
-                <div class="mb-3 mt-3">
-                    <label for="title">Collection Design:</label>
-                    <select class="form-control" id="collection_design_id" name="collection_design_id">
-                        <option value=""></option>
-                        @foreach($preproducts_type as $type)
-                          <option value="{{$type->id}}" @selected($product->collection_design_id == $type->id)>{{$type->collection_design_name}}</option>
-                        @endforeach
-                    </select>
-                </div>
+                @if($product->collection_design=="yes")
+                  <div class="mb-3 mt-3">
+                      <label for="title">Collection Design:</label>
+                      <select class="form-control" id="collection_design_id" name="collection_design_id">
+                          <option value=""></option>
+                          @foreach($preproducts_type as $type)
+                            <option value="{{$type->id}}" @selected($product->collection_design_id == $type->id)>{{$type->collection_design_name}}</option>
+                          @endforeach
+                      </select>
+                  </div>
+                @endif
 
                 <button type="submit" class="btn btn-primary">UPDATE</button>
               </form>

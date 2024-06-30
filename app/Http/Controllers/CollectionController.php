@@ -45,8 +45,45 @@ class CollectionController extends Controller
         $design = PreProducts::where('collection_design','yes')->where('collection_design_name', $request->design_type)->first();
         //echo $design->id; die;
         $products = PreProducts::where('collection_design_id',$design->id)->get();
+        
+        $main_url = url('/');
+        $front = $main_url."/collections/oversight/oversight-collection-boycott-bucks-front.png";
+        if($collection=='oversight'){
+            $front = $main_url."/collections/oversight/oversight-collection-boycott-bucks-front.png";
+        }   
 
-        return view('frontend.pages.pre_product_list')->with('products',$products);
+        if($collection=='traitor'){
+            $front = $main_url."/collections/traitor/traitor-collection-reject-aipac.png";
+        }
+
+        return view('frontend.pages.pre_product_list')->with('products',$products)->with('collection',$collection)->with('front',$front)->with('design',$design);
+        //echo "<pre>"; print_r($products); print_r($request->design_type); die;
+    }
+
+    public function collections_design_product_detail(Request $request){
+        $collection = explode('-', $request->collection)[0];
+        $design_type = PreProducts::where('collections_type', ucfirst($collection))->get();
+        //echo $request->design_type;
+        $design = PreProducts::where('collection_design','yes')->where('collection_design_name', $request->design_type)->first();
+        //echo $design->id; die;
+        $products = PreProducts::where('collection_design_id',$design->id)->get();
+        
+        $main_url = url('/');
+        $front = $main_url."/collections/oversight/oversight-collection-boycott-bucks-front.png";
+        if($collection=='oversight'){
+            $front = $main_url."/collections/oversight/oversight-collection-boycott-bucks-front.png";
+            $back = $main_url."/collections/oversight/oversight-collection-back.png";
+        }   
+
+        if($collection=='traitor'){
+            $front = $main_url."/collections/traitor/traitor-collection-reject-aipac.png";
+            $back = $main_url."/collections/traitor/traitor-collection-back.png";
+        }
+
+        $product = PreProducts::where('product_slug', $request->product_slug)->first();
+        //echo "<pre>"; print_r($product->id); die;
+
+        return view('frontend.pages.pre_create_product')->with('products',$products)->with('collection',$collection)->with('front',$front)->with('back',$back)->with('design',$design)->with('product',$product);
         //echo "<pre>"; print_r($products); print_r($request->design_type); die;
     }
 

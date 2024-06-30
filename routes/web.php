@@ -154,8 +154,9 @@ Route::get('/updateEmptyImageColumns', [App\Http\Controllers\HomeController::cla
 Route::get('/shop', [App\Http\Controllers\CollectionController::class,'collections'])->name('collections');
 Route::get('/shop/{collection}', [App\Http\Controllers\CollectionController::class,'collections_list'])->name('collections_list');
 Route::get('/collection/design/{collection}/{design_type}', [App\Http\Controllers\CollectionController::class,'collections_design'])->name('collections_design');
-Route::get('/shop/{collection}/{slug}', [App\Http\Controllers\CollectionController::class, 'collection'])->name('collection');
+Route::get('/collection/design/{collection}/{design_type}/{product_slug}', [App\Http\Controllers\CollectionController::class,'collections_design_product_detail'])->name('collections_design_product_detail');
 
+Route::get('/shop/{collection}/{slug}', [App\Http\Controllers\CollectionController::class, 'collection'])->name('collection');
 Route::get('/contactus', [App\Http\Controllers\HomeController::class, 'contactus'])->name('contactus');
 Route::get('/aboutus', [App\Http\Controllers\HomeController::class, 'aboutus'])->name('aboutus');
 Route::get('/conflicts', [App\Http\Controllers\HomeController::class, 'conflicts'])->name('conflicts');
