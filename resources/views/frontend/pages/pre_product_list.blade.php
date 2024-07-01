@@ -82,9 +82,9 @@
                                 </div>
                             </div>
 
-                             <div class="product-details">
+                             <div class="crt-pre-details">
                                 <h5><b>Product Name:</b> {{ $product->website_product_name }}</h5>
-                                <p><b>Price:</b> ${{ $product->product_price }}</p>
+                                <p class="prc-inf">Price: ${{ $product->product_price }}</p>
                             </div>
 
 							<div class="buy-now">

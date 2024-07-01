@@ -38,15 +38,32 @@
             <form method="post" enctype="multipart/form-data" action="{{ url('/admin/preproducts/update/'.$product->id) }}">
                 
                 @csrf
-                <div class="mb-3 mt-3">
-                  <label for="product_name">Printful Product Name:</label>
-                  <input readonly type="text" value="{{$product->product_name}}" class="form-control" id="product_name" placeholder="Enter Printful Product Name" name="product_name">
-                </div>
+                @if($product->collection_design!="yes")
 
-                <div class="mb-3 mt-3">
-                  <label for="product_name">Website Product Name:</label>
-                  <input type="text" value="{{$product->website_product_name}}" class="form-control" id="website_product_name" placeholder="Enter Webstie Product Name" name="website_product_name">
-                </div>
+                  <div class="mb-3 mt-3">
+                    <label for="product_name">Printful Product Name:</label>
+                    <input  readonly type="text" value="{{$product->product_name}}" class="form-control" id="product_name" placeholder="Enter Printful Product Name" name="product_name">
+                  </div>
+
+                  <div class="mb-3 mt-3">
+                    <label for="product_name">Website Product Name:</label>
+                    <input type="text" value="{{$product->website_product_name}}" class="form-control" id="website_product_name" placeholder="Enter Webstie Product Name" name="website_product_name">
+                  </div>
+
+                @else
+
+                  <div class="mb-3 mt-3">
+                    <label for="product_name">Collection Name:</label>
+                    <input  type="text" value="{{$product->product_name}}" class="form-control" id="product_name" placeholder="Enter Printful Product Name" name="product_name">
+                  </div>
+
+                  <div class="mb-3 mt-3" style="display:none;">
+                    <label for="product_name">Website Product Name:</label>
+                    <input type="text" value="{{$product->website_product_name}}" class="form-control" id="website_product_name" placeholder="Enter Webstie Product Name" name="website_product_name">
+                  </div>
+
+                @endif
+
 
                 <div class="mb-3 mt-3">
                   <label for="product_name">Product Price:</label>
@@ -190,7 +207,7 @@
                 </div>
 
                 <div class="mb-3 mt-3">
-                  <label for="title">Collection Type:</label>
+                  <label for="title">Product Collection Type:</label>
                   <select class="form-control" id="collections_type" name="collections_type">  
                     <option value=""></option>                 
                     <option {{$product->collections_type=='Oversight'?'selected':''}} value="Oversight">Oversight</option>
@@ -202,7 +219,7 @@
 
                 @if($product->collection_design=="yes")
                   <div class="mb-3 mt-3">
-                      <label for="title">Collection Design:</label>
+                      <label for="title">Collection Design: (Note: this is for the collection only)</label>
                       <select class="form-control" id="collection_design_id" name="collection_design_id">
                           <option value=""></option>
                           @foreach($preproducts_type as $type)

@@ -177,7 +177,7 @@
                 </div>
 
                 <div class="mb-3 mt-3">
-                  <label for="title">Collection Type:</label>
+                  <label for="title">Product Collection Type:</label>
                   <select class="form-control" id="collections_type" name="collections_type">
                     <option value=""></option>
                     <option value="Oversight">Oversight</option>
