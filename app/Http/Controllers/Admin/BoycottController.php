@@ -108,7 +108,7 @@ class BoycottController extends Controller
         // Save the blog
         $blog->slug = $slug;
         $blog->save();
-        return redirect('/admin/collection')->with('success');
+        return redirect('/admin/boycott/'.$id)->with('success');
     }
 
     /**
