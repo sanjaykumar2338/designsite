@@ -75,7 +75,10 @@ class BoycottController extends Controller
         ]);
 
         // Handle image uploads
-        $feature_image = $request->file('feature_image')->store('public/images');
+        $feature_image = '';
+        if($request->feature_imagefe){
+            $feature_image = $request->file('feature_image')->store('public/images');
+        }
         //$blog_image = $request->file('blog_image')->store('public/images');
 
         // Save data to the database
