@@ -115,7 +115,7 @@
                             </div>
                         @endforeach
                     @else
-                        <h6 class="display-8">THERE'S NO Collection<BR><a href="/admin/collection/add/new">ADD Collection </a>  </h6>
+                        <h6 class="display-8">THERE'S NO Collection<BR><a href="/admin/boycott/add/new">ADD Collection </a>  </h6>
 
                 @endif
                 </div>
