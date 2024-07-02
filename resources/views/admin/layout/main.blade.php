@@ -27,6 +27,11 @@
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
+  <link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet"/>
+
+
   <style>
     .ck-editor__editable_inline {
         min-height: 200px;
@@ -111,6 +116,13 @@
               <i class="nav-icon fas fa-solid fa-box"></i>
               <p>
                 Pre-Design Products
+              </p>
+            </a>
+
+            <a href="{{url('/admin/collection')}}" class="nav-link {{$activeLink=='collection'?'active':''}}">
+              <i class="nav-icon fas fa-solid fa-box"></i>
+              <p>
+                Collections
               </p>
             </a>
 

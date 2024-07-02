@@ -91,7 +91,7 @@
                           <select class="form-control float-right" name="design_type">
                               <option value="">Design Type</option>
                               <option value="No" {{ old('design_type', request()->search_by_product_for) == 'No' ? 'selected' : '' }}>PreProducts</option>
-                              <option value="Yes" {{ old('design_type', request()->search_by_product_for) == 'Yes' ? 'selected' : '' }}>Collectin Design</option>
+                              <option value="Yes" {{ old('design_type', request()->search_by_product_for) == 'Yes' ? 'selected' : '' }}>Collections</option>
                           </select>
 
                           <div class="input-group-append">

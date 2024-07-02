@@ -147,8 +147,18 @@ class PreProductsController extends Controller
         $product->product_y_axis = $request->input('product_y_axis');
         $product->product_width = $request->input('product_width');
         $product->product_height = $request->input('product_height');
-        $product->collections_type = $request->input('collections_type');
-        $product->collection_design_id = $request->input('collection_design_id');
+
+        if($request->input('collections_type')){
+            $collectionsTypeArray = $request->input('collections_type');
+            $collectionsTypeString = implode(', ', $collectionsTypeArray);
+            $product->collections_type = $collectionsTypeString;
+        }
+        
+        if($request->input('collection_design_id')){
+            $collectionDesignIdArray = $request->input('collection_design_id');
+            $collectionDesignIdString = implode(', ', $collectionDesignIdArray);
+            $product->collection_design_id = $collectionDesignIdString;
+        }
 
         $slug = Str::slug($request->input('product_name'));
         $existingSlug = PreProducts::where('product_slug', $slug)->exists();
@@ -271,9 +281,19 @@ class PreProductsController extends Controller
         $product->product_y_axis = $request->input('product_y_axis');
         $product->product_width = $request->input('product_width');
         $product->product_height = $request->input('product_height');
-        $product->collections_type = $request->input('collections_type');
-        $product->collection_design_id = $request->input('collection_design_id');
+
+        if($request->input('collections_type')){
+            $collectionsTypeArray = $request->input('collections_type');
+            $collectionsTypeString = implode(', ', $collectionsTypeArray);
+            $product->collections_type = $collectionsTypeString;
+        }
         
+        if($request->input('collection_design_id')){
+            $collectionDesignIdArray = $request->input('collection_design_id');
+            $collectionDesignIdString = implode(', ', $collectionDesignIdArray);
+            $product->collection_design_id = $collectionDesignIdString;
+        }
+
         if ($request->file('front_image')) {
             $product->front_image = $frontImage;
         }

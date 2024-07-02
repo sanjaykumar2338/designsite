@@ -12,9 +12,13 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\ProductsController;
 use App\Http\Controllers\Admin\PreProductsController;
 use App\Http\Controllers\Admin\BlogsController;
+use App\Http\Controllers\Admin\CollectionController;
+use App\Http\Controllers\Admin\BoycottController;;
 use Laravel\Cashier\Http\Controllers\WebhookController;
 use App\Models\Products;
 use App\Models\PreProducts;
+use App\Models\Collections;
+use App\Models\Boycotts;
 
 /*
 |--------------------------------------------------------------------------
@@ -136,6 +140,24 @@ Route::group(['prefix' => 'admin','middleware' => 'check.auth'], function () {
     Route::get('blogs/add/new', [BlogsController::class, 'create']);
     Route::get('blogs/moderate/{id}', [BlogsController::class, 'moderate']);
     Route::get('blogs/moderate/changestatus/{id}/{status}', [BlogsController::class, 'changestatus']);
+
+    //collections
+    Route::get('collection', [CollectionController::class, 'index']);
+    Route::post('/collection', [CollectionController::class, 'store'])->name('admin.collection.store');
+    Route::post('/collection/update/{id}', [CollectionController::class, 'update']);
+    Route::get('/collection/remove/{id}', [CollectionController::class, 'destroy']);
+    Route::get('/collection/edit/{id}', [CollectionController::class, 'edit']);
+    Route::get('collection/{product}', [CollectionController::class, 'show']);
+    Route::get('collection/add/new', [CollectionController::class, 'create']);
+
+    //boycott
+    Route::get('boycott/{collection}', [BoycottController::class, 'index']);
+    Route::post('/boycott/{collection}', [BoycottController::class, 'store'])->name('admin.boycott.store');
+    Route::post('/boycott/update/{id}/{collection}', [BoycottController::class, 'update']);
+    Route::get('/boycott/remove/{id}/{collection}', [BoycottController::class, 'destroy']);
+    Route::get('/boycott/edit/{id}/{collection}', [BoycottController::class, 'edit']);
+    Route::get('boycott/{product}', [BoycottController::class, 'show']);
+    Route::get('boycott/add/new/{collection}', [BoycottController::class, 'create']);
 });
 
 Route::group(['middleware' => 'check.auth'], function () {

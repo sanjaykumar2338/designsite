@@ -178,7 +178,7 @@
 
                 <div class="mb-3 mt-3">
                   <label for="title">Product Collection Type:</label>
-                  <select class="form-control" id="collections_type" name="collections_type">
+                  <select class="form-control" id="collections_type" name="collections_type[]">
                     <option value=""></option>
                     <option value="Oversight">Oversight</option>
                     <option value="Traitor">Traitor</option>
@@ -189,7 +189,7 @@
 
                 <div class="mb-3 mt-3">
                   <label for="title">Collection Design:</label>
-                  <select class="form-control" id="collection_design_id" name="collection_design_id">
+                  <select class="form-control" id="collection_design_id" name="collection_design_id[]" multiple>
                     <option value=""></option>
 
                     @foreach($preproducts_type as $type)
@@ -206,4 +206,14 @@
         <!-- /.row -->
       </div><!-- /.container-fluid -->
     </section>
+
+    <script>
+      $("#collections_type").chosen({
+        no_results_text: "Oops, nothing found!"
+      });
+
+      $("#collection_design_id").chosen({
+        no_results_text: "Oops, nothing found!"
+      })
+    </script>
 @endsection
