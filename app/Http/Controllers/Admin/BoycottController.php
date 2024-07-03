@@ -133,7 +133,7 @@ class BoycottController extends Controller
     {
         //echo "<pre>"; print_r($id); die;
         $blog = Boycotts::find($id);
-        $data_collection = Collections::find($id);
+        $data_collection = Collections::find($cid);
 
         return view('admin.pages.boycott.edit')->with('blog', $blog)->with('data_collection', $data_collection)->with('activeLink', 'collection');
     }
