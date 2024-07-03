@@ -58,6 +58,11 @@
                 </div>
 
                 <div class="mb-3 mt-3">
+                  <label for="meta_title">Text as Design:</label>
+                  <input class="form-control" value="" id="design_text" rows="6" placeholder="Enter Text as Design" name="design_text"></textarea>
+                </div>
+
+                <div class="mb-3 mt-3">
                   <label for="meta_title">Meta Title:</label>
                   <input class="form-control" id="meta_title" rows="6" placeholder="Enter Meta Title" name="meta_title"></textarea>
                 </div>

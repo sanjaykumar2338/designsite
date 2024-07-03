@@ -94,6 +94,7 @@ class BoycottController extends Controller
         $blog->feature_image = $feature_image;
         $blog->blog_image = $blog_image;
         $blog->meta_title = $request->input('meta_title');
+        $blog->design_text = $request->input('design_text');
         $blog->meta_description = $request->input('meta_description');
         $blog->meta_keywords = $request->input('meta_keywords');
 
@@ -183,6 +184,7 @@ class BoycottController extends Controller
         $blog->blog_image = $blog_image;
         $blog->feature_image = $feature_image;
         $blog->meta_title = $request->input('meta_title');
+        $blog->design_text = $request->input('design_text');
         $blog->meta_description = $request->input('meta_description');
         $blog->meta_keywords = $request->input('meta_keywords');
 
