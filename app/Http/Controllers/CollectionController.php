@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Products;
 use App\Models\PreProducts;
+use App\Models\Collections;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
@@ -13,7 +14,6 @@ use App\Models\Blogs;
 use App\Models\Contacts;
 use App\Models\PrintfulOrder;
 use App\Models\Payment;
-use App\Models\Collections;
 use App\Models\Boycotts;
 use App\Models\BlogReview;
 use Illuminate\Support\Facades\Mail;
@@ -43,25 +43,10 @@ class CollectionController extends Controller
     }
 
     public function collections_design(Request $request){
-        $collection = explode('-', $request->collection)[0];
-        $design_type = PreProducts::where('collections_type', ucfirst($collection))->get();
-        //echo $request->design_type;
-        $design = PreProducts::where('collection_design','yes')->where('collection_design_name', $request->design_type)->first();
-        //echo $design->id; die;
-        $products = PreProducts::where('collection_design_id',$design->id)->get();
-        
-        $main_url = url('/');
-        $front = $main_url."/collections/oversight/oversight-collection-boycott-bucks-front.png";
-        if($collection=='oversight'){
-            $front = $main_url."/collections/oversight/oversight-collection-boycott-bucks-front.png";
-        }   
-
-        if($collection=='traitor'){
-            $front = $main_url."/collections/traitor/traitor-collection-reject-aipac.png";
-        }
-
-        return view('frontend.pages.pre_product_list')->with('products',$products)->with('collection',$collection)->with('front',$front)->with('design',$design);
-        //echo "<pre>"; print_r($products); print_r($request->design_type); die;
+        $slug = explode('-', $request->collection)[0];
+        $collection = Collections::where('slug', $slug)->first();
+        $products = PreProducts::where('collection_design_id', $collection->id)->get();                
+        return view('frontend.pages.pre_product_list')->with('products',$products)->with('collection',$collection);
     }
 
     public function collections_design_product_detail(Request $request){

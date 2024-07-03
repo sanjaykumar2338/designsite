@@ -5,7 +5,7 @@
     <section class="products-section">
         <div class="container">
             <div class="text">
-                <h4> Shop {{$collection}} Design Products </h4>
+                <h4> Shop {{$collection->title}} Design Products </h4>
             </div>
         </div>
     </section>
@@ -17,8 +17,8 @@
         <div class="crt-pre-list">
         <div class="container">
         <div class="flex flex-wrap crt-pre-row">
-        @php $key = 0; @endphp
 
+        @php $key = 0; @endphp
         @foreach($products as $product)                
                 
                 @php $key++; $product_class = ''; @endphp
@@ -51,19 +51,6 @@
                             <div class="prd-left t-shirt-canva {{strtolower($product->product_for)}}-{{strtolower($product->product_type)}}">
                         @endif
 
-
-                        {{-- <div class="flex flex-wrap prd-crs-img">
-                            <button class="hover:bg-slate-200 h-[50px] w-[50px]" onclick="setSelected(1)">
-                                <img src="https://files.cdn.printful.com/m/ec1000/medium/onman/front/05_ec1000_onman_front_base_whitebg.png?v=1675420344"
-                                    class="h-full" alt="" />
-                            </button>
-                            <button class="hover:bg-slate-200 h-[50px] w-[50px]" onclick="setSelected(2)">
-                                <img src="{{ url('/') }}/poster.jpg" class="h-full" alt="" />
-                            </button>
-                            <button class="hover:bg-slate-200 h-[50px] w-[50px]" onclick="setSelected(3)">
-                                <img src="{{ url('/') }}/signage.jpg" class="h-full" alt="" />
-                            </button>
-                        </div> --}}
                         <div class="prd-image">
                             <div style="position: relative" id="canvasParent">
                                 <div class="cmn-frame" style="height: 500px; width: 500px; position: absolute; backgorud"
