@@ -26,7 +26,7 @@
                         
                         <input type="hidden" name="product_ids" value="{{$product->id}}">
 
-                        @if($product->front_image!="")
+                        @if($product->feature_image!="")
                             {{--Product ID: {{$product->id}}--}}
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <div class="img aos-init aos-animate" data-aos="zoom-in">
