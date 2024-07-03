@@ -21,8 +21,8 @@
                    //echo "<pre>"; print_r($products);
                 @endphp
 
-                @if($collection_desing->count())
-                    @foreach($collection_desing as $product)
+                @if($collection_design->count())
+                    @foreach($collection_design as $product)
                         
                         <input type="hidden" name="product_ids" value="{{$product->id}}">
 

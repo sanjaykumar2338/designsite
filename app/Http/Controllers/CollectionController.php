@@ -14,6 +14,7 @@ use App\Models\Contacts;
 use App\Models\PrintfulOrder;
 use App\Models\Payment;
 use App\Models\Collections;
+use App\Models\Boycotts;
 use App\Models\BlogReview;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactMail;
@@ -33,11 +34,12 @@ class CollectionController extends Controller
 
     public function collections_list(Request $request, $slug)
     {
-        $collection = explode('-',$slug)[0];
-        $products = PreProducts::where('collections_type', ucfirst($collection))->get();
-        $collection_desing = PreProducts::where('collection_design', 'yes')->where('collections_type', ucfirst($collection))->get();
-        echo "<pre>"; print_r($products); die;
-        return view('frontend.pages.collections_list')->with('slug',$slug)->with('products',$products)->with('collection_desing',$collection_desing);
+        $slug = explode('-',$slug)[0];
+        $collection = Collections::where('slug', $slug)->first();
+        $collection_design = Boycotts::where('collection', $collection->id)->get();
+
+        //echo "<pre>"; print_r($products); die;
+        return view('frontend.pages.collections_list')->with('slug',$slug)->with('collection',$collection)->with('collection_design',$collection_design);
     }
 
     public function collections_design(Request $request){
