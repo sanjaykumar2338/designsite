@@ -59,17 +59,14 @@ class CollectionController extends Controller
         $collection = Collections::where('slug', $slug)->first();     
 
         $design_type = $request->design_type;
-        $boycott = Boycotts::where('slug',$design_type)->where('collection',$collection->id)->first();
-
-        $design_type = PreProducts::where('collections_type', ucfirst($collection))->get();        
-        $design = PreProducts::where('collection_design','yes')->where('collection_design_name', $request->design_type)->first();
+        $boycott = Boycotts::where('slug',$design_type)->where('collection',$collection->id)->first();       
         
-        $front = "/collections/oversight/oversight-collection-boycott-bucks-front.png";
-        $back = "/collections/oversight/oversight-collection-back.png";
+        $front = fileToUrl($boycott->blog_image);
+        $back = fileToUrl($boycott->back_design_image);
 
         $product = PreProducts::where('product_slug', $request->product_slug)->first();
 
-        return view('frontend.pages.pre_create_product')->with('products',$products)->with('collection',$collection)->with('front',$front)->with('back',$back)->with('design',$design)->with('product',$product);
+        return view('frontend.pages.pre_create_product')->with('collection',$collection)->with('front',$front)->with('back',$back)->with('design',$collection)->with('product',$product);
         //echo "<pre>"; print_r($products); print_r($request->design_type); die;
     }
 
