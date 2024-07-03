@@ -36,7 +36,7 @@ class CollectionController extends Controller
         $collection = explode('-',$slug)[0];
         $products = PreProducts::where('collections_type', ucfirst($collection))->get();
         $collection_desing = PreProducts::where('collection_design', 'yes')->where('collections_type', ucfirst($collection))->get();
-        //echo "<pre>"; print_r($products); die;
+        echo "<pre>"; print_r($products); die;
         return view('frontend.pages.collections_list')->with('slug',$slug)->with('products',$products)->with('collection_desing',$collection_desing);
     }
 

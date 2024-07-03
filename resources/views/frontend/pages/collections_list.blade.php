@@ -30,7 +30,7 @@
                             {{--Product ID: {{$product->id}}--}}
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <div class="img aos-init aos-animate" data-aos="zoom-in">
-                                    <img src="{{fileToUrl($product->front_image)}}" alt="">
+                                    <img src="{{fileToUrl($product->front_image)}}" alt="">ddd
                                     <div class="text-two">
                                         @php
                                             $url = url('/').'/collection/design/'.strtolower($product->collections_type.'-'.'collection').'/'.$product->collection_design_name;
