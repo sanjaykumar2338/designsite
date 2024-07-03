@@ -85,7 +85,7 @@
 		</div>
 		</div>
     @else
-        <div class="crt-prd-main">
+        <div class="crt-prd-main" style="text-align: center;font-size: x-large;">
             <p>No Record found!</p>
         </div>
     @endif
