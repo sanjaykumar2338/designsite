@@ -209,12 +209,17 @@
                 <div class="mb-3 mt-3">
                   <label for="title">Select Collection(s):</label>
                   <select class="form-control" id="collections_type" name="collections_type[]" multiple>  
-                    <option value=""></option>                 
-                    @foreach($collections as $collection)
-                      <option {{$collection->id==$product->collection_design_id?'selected':''}} value="{{$collection->id}}">{{$collection->title}}</option>
-                    @endforeach
+                      <option value=""></option>
+                      @foreach($collections as $collection)
+                          <option 
+                              value="{{ $collection->id }}" 
+                              {{ in_array($collection->id, explode(',', $product->collection_design_id)) ? 'selected' : '' }}
+                          >
+                              {{ $collection->title }}
+                          </option>
+                      @endforeach
                   </select>
-                </div>                
+                </div>         
 
                 <button type="submit" class="btn btn-primary">UPDATE</button>
 
