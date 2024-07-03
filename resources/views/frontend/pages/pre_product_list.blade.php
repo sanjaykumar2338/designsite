@@ -85,7 +85,9 @@
 		</div>
 		</div>
     @else
-        <p>No Record found!</p>
+        <div class="crt-prd-main">
+            <p>No Record found!</p>
+        </div>
     @endif
 
     <!-- SPINNER -->
