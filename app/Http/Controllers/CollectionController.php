@@ -13,6 +13,7 @@ use App\Models\Blogs;
 use App\Models\Contacts;
 use App\Models\PrintfulOrder;
 use App\Models\Payment;
+use App\Models\Collections;
 use App\Models\BlogReview;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactMail;
@@ -26,7 +27,8 @@ class CollectionController extends Controller
         $pageTitle = 'Advocacy Streetwear Collections - Shop Now and Join the Movement';
         $metaTitle = ' Shop Advocacy Apparel - Activist Streetwear with a Movement';
 
-        return view('frontend.pages.collections')->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle);
+        $collections = Collections::all();
+        return view('frontend.pages.collections')->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle)->with('collections' , $collections);
     }
 
     public function collections_list(Request $request, $slug)

@@ -10,54 +10,20 @@
             voice and advocate for causes that matter</p>
 
             <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="img aos-init aos-animate" data-aos="zoom-in">
-                        <img src="asset/frontend/images/p-1.jpg" alt="">
-                        <div class="text-one" style="display:none;">
-                            <!-- <span></span> -->
+                
+                @if($collections)
+                    @foreach($collections as $collection)
+                        <div class="col-lg-3 col-md-6">
+                            <div class="img aos-init aos-animate" data-aos="zoom-in">
+                                <img src="{{fileToUrl($collection->feature_image)}}" alt="">
+                                <div class="text-two">
+                                    <h4>{{$collection->title}} Collection</h4>
+                                    <a class="buy_now" href="{{url('/')}}/shop/oversight-collection"> shop</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="text-two">
-                            <h4>Oversight Collection</h4>
-                            <a class="buy_now" href="{{url('/')}}/shop/oversight-collection"> shop</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="img aos-init" data-aos="zoom-in">
-                        <img src="asset/frontend/images/p-2.jpg" alt="">
-                        <div class="text-one" style="display:none;">
-                            <!-- <span></span> -->
-                        </div>
-                        <div class="text-two">
-                            <h4>Traitor Collection</h4>
-                            <a class="buy_now" href="{{url('/')}}/shop/traitor-collection"> shop</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="img aos-init" data-aos="zoom-in">
-                        <img src="asset/frontend/images/p-3.jpg" alt="">
-                        <div class="text-one" style="display:none;">
-                            <!-- <span></span> -->
-                        </div>
-                        <div class="text-two">
-                            <h4>Trader Collection</h4>
-                             <a class="buy_now" href="{{url('/')}}/shop/trader-collection"> shop</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="img aos-init" data-aos="zoom-in">
-                        <img src="asset/frontend/images/p-3.jpg" alt="">
-                        <div class="text-one" style="display:none;">
-                            <!-- <span></span> -->
-                        </div>
-                        <div class="text-two">
-                            <h4>Propaganda Collection</h4>
-                             <a class="buy_now" href="{{url('/')}}/shop/propaganda-collection"> shop</a>
-                        </div>
-                    </div>
-                </div>
+                    @endforeach
+                @endif
             </div>
 
             <h3>Shop the Oversight Collection - Join the Boycott Movement</h3>
