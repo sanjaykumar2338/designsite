@@ -18,7 +18,7 @@
                                 <img src="{{fileToUrl($collection->feature_image)}}" alt="">
                                 <div class="text-two">
                                     <h4>{{$collection->title}} Collection</h4>
-                                    <a class="buy_now" href="{{url('/')}}/shop/oversight-collection"> shop</a>
+                                    <a class="buy_now" href="{{url('/')}}/shop/{{$collection->slug}}-collection"> shop</a>
                                 </div>
                             </div>
                         </div>
