@@ -52,8 +52,8 @@
                   <input type="file" class="form-control" id="feature_image" name="feature_image">
                 </div>
 
-                <div class="mb-3 mt-3" style="display:none;">
-                  <label for="image">Blog Image:</label>
+                <div class="mb-3 mt-3" style="display:block;">
+                  <label for="image">Design Image:</label>
                   <input type="file" class="form-control" id="blog_image" name="blog_image">
                 </div>
 

@@ -76,10 +76,15 @@ class BoycottController extends Controller
 
         // Handle image uploads
         $feature_image = '';
-        if($request->feature_imagefe){
+        if($request->feature_image){
             $feature_image = $request->file('feature_image')->store('public/images');
         }
-        //$blog_image = $request->file('blog_image')->store('public/images');
+
+
+        $blog_image = '';
+        if($request->blog_image){
+            $blog_image = $request->file('blog_image')->store('public/images');
+        }
 
         // Save data to the database
         $blog = new Boycotts();
@@ -87,7 +92,7 @@ class BoycottController extends Controller
         $blog->collection = $id;
         $blog->description = $request->input('description');
         $blog->feature_image = $feature_image;
-        //$blog->blog_image = $blog_image;
+        $blog->blog_image = $blog_image;
         $blog->meta_title = $request->input('meta_title');
         $blog->meta_description = $request->input('meta_description');
         $blog->meta_keywords = $request->input('meta_keywords');
@@ -166,16 +171,16 @@ class BoycottController extends Controller
             $feature_image = $request->file('feature_image')->store('public/images');
         }
 
-        //$blog_image = $blog->blog_image;
-        //if ($request->file('blog_image')) {
-        //     $blog_image = $request->file('blog_image')->store('public/images');
-        //}
+        $blog_image = $blog->blog_image;
+        if ($request->file('blog_image')) {
+            $blog_image = $request->file('blog_image')->store('public/images');
+        }
 
         // Save data to the database          
         //$blog = new Blogs();
         $blog->title = $request->input('title');
         $blog->description = $request->input('description');
-        //$blog->blog_image = $blog_image;
+        $blog->blog_image = $blog_image;
         $blog->feature_image = $feature_image;
         $blog->meta_title = $request->input('meta_title');
         $blog->meta_description = $request->input('meta_description');

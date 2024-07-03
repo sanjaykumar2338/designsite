@@ -55,7 +55,7 @@
                 </div>
 
                 <div class="mb-3 mt-3" style="display:none;">
-                  <label for="image">Blog Image:</label>
+                  <label for="image">Design Image:</label>
                   <input type="file" class="form-control" id="blog_image" name="blog_image">
                   <a href="{{fileToUrl($blog->blog_image)}}" target="_blank">View Blog Image</a>
                 </div>
