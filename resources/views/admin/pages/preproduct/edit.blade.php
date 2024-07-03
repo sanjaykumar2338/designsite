@@ -208,7 +208,7 @@
 
                 <div class="mb-3 mt-3">
                   <label for="title">Select Collection(s):</label>
-                  <select class="form-control" id="collections_type" name="collections_type[]" multiple>  
+                  <select class="form-control" id="collection_design_id" name="collection_design_id[]" multiple>  
                       <option value=""></option>
                       @foreach($collections as $collection)
                           <option 
