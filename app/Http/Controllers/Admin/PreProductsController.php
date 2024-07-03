@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 use App\Models\PreProducts;
+use App\Models\Collections;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\Input;
@@ -75,7 +76,8 @@ class PreProductsController extends Controller
     public function create()
     {
         $preproducts_type = PreProducts::where('collection_design', 'yes')->get();
-        return view('admin.pages.preproduct.create')->with('activeLink', 'preproducts')->with('preproducts_type', $preproducts_type);
+        $collections = Collections::all();
+        return view('admin.pages.preproduct.create')->with('activeLink', 'preproducts')->with('collections', $collections);
     }
 
     /**
@@ -201,8 +203,8 @@ class PreProductsController extends Controller
     {   
 
         //echo "<pre>"; print_r($preproduct); die;
-        $preproducts_type = PreProducts::where('collection_design', 'yes')->get();
-        return view('admin.pages.preproduct.edit')->with('product', $preproduct)->with('activeLink', 'preproducts')->with('preproducts_type',$preproducts_type);
+        $collections = Collections::all();
+        return view('admin.pages.preproduct.edit')->with('product', $preproduct)->with('activeLink', 'preproducts')->with('collections',$collections);
     }
 
     /**

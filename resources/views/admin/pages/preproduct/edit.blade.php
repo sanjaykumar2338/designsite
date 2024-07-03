@@ -207,35 +207,17 @@
                 </div>
 
                 <div class="mb-3 mt-3">
-                  <label for="title">Product Collection Type:</label>
+                  <label for="title">Select Collection(s):</label>
                   <select class="form-control" id="collections_type" name="collections_type[]" multiple>  
                     <option value=""></option>                 
-                    <option {{$product->collections_type=='Oversight'?'selected':''}} value="Oversight">Oversight</option>
-                    <option {{$product->collections_type=='Traitor'?'selected':''}} value="Traitor">Traitor</option>
-                    <option {{$product->collections_type=='Trader'?'selected':''}} value="Trader">Trader</option>
-                    <option {{$product->collections_type=='Propaganda'?'selected':''}} value="Propaganda">Propaganda</option>
+                    @foreach($collections as $collection)
+                      <option {{$collection->id==$product->collection_design_id?'selected':''}} value="{{$collection->id}}">{{$collection->title}}</option>
+                    @endforeach
                   </select>
-                </div>
+                </div>                
 
-                @if($product->collection_design=="yes")
-                  <div class="mb-3 mt-3">
-                      <label for="title">Collection Design: (Note: this is for the collection only)</label>
-                      <select class="form-control" id="collection_design_id" name="collection_design_id[]" multiple>
-                          <option value=""></option>
-                          @php
-                              // Convert the comma-separated string into an array
-                              $selectedCollectionDesignIds = explode(',', $product->collection_design_id);
-                          @endphp
-                          @foreach($preproducts_type as $type)
-                              <option value="{{ $type->id }}" @if(in_array($type->id, $selectedCollectionDesignIds)) selected @endif>
-                                  {{ $type->collection_design_name }}
-                              </option>
-                          @endforeach
-                      </select>
-                  </div>
-              @endif
+                <button type="submit" class="btn btn-primary">UPDATE</button>
 
-              <button type="submit" class="btn btn-primary">UPDATE</button>
               </form>
           </div>
         </div>

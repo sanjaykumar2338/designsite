@@ -177,28 +177,17 @@
                 </div>
 
                 <div class="mb-3 mt-3">
-                  <label for="title">Product Collection Type:</label>
-                  <select class="form-control" id="collections_type" name="collections_type[]">
-                    <option value=""></option>
-                    <option value="Oversight">Oversight</option>
-                    <option value="Traitor">Traitor</option>
-                    <option value="Trader">Trader</option>
-                    <option value="Propaganda">Propaganda</option>
-                  </select>
-                </div>
-
-                <div class="mb-3 mt-3">
-                  <label for="title">Collection Design:</label>
-                  <select class="form-control" id="collection_design_id" name="collection_design_id[]" multiple>
-                    <option value=""></option>
-
-                    @foreach($preproducts_type as $type)
-                      <option value="{{$type->id}}">{{$type->collection_design_name}}</option>
+                  <label for="title">Select Collection(s):</label>
+                  <select class="form-control" id="collections_type" name="collections_type[]" multiple>  
+                    <option value=""></option>                 
+                    @foreach($collections as $collection)
+                      <option value="{{$collection->id}}">{{$collection->title}}</option>
                     @endforeach
-
                   </select>
-                </div>
+                </div>           
+                
                 <button type="submit" class="btn btn-primary">Create</button>
+
               </form>
           </div>
         </div>
