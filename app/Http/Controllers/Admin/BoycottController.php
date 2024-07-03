@@ -86,6 +86,11 @@ class BoycottController extends Controller
             $blog_image = $request->file('blog_image')->store('public/images');
         }
 
+        $back_design_image = '';
+        if($request->back_design_image){
+            $back_design_image = $request->file('back_design_image')->store('public/images');
+        }
+
         // Save data to the database
         $blog = new Boycotts();
         $blog->title = $request->input('title');
@@ -93,6 +98,7 @@ class BoycottController extends Controller
         $blog->description = $request->input('description');
         $blog->feature_image = $feature_image;
         $blog->blog_image = $blog_image;
+        $blog->back_design_image = $back_design_image;
         $blog->meta_title = $request->input('meta_title');
         $blog->design_text = $request->input('design_text');
         $blog->meta_description = $request->input('meta_description');
@@ -177,11 +183,17 @@ class BoycottController extends Controller
             $blog_image = $request->file('blog_image')->store('public/images');
         }
 
+        $back_design_image = $blog->back_design_image;
+        if($request->back_design_image){
+            $back_design_image = $request->file('back_design_image')->store('public/images');
+        }
+
         // Save data to the database          
         //$blog = new Blogs();
         $blog->title = $request->input('title');
         $blog->description = $request->input('description');
         $blog->blog_image = $blog_image;
+        $blog->back_design_image = $back_design_image;
         $blog->feature_image = $feature_image;
         $blog->meta_title = $request->input('meta_title');
         $blog->design_text = $request->input('design_text');
