@@ -46,9 +46,11 @@ class CollectionController extends Controller
         $slug = explode('-', $request->collection)[0];
         $collection = Collections::where('slug', $slug)->first();
         $front = $collection->blog_image;
+        $design_type = $request->design_type;
+        $boycott = Boycotts::where('slug',$design_type)->first();
 
         $products = PreProducts::whereRaw('FIND_IN_SET(?, collection_design_id)', [$collection->id])->get();              
-        return view('frontend.pages.pre_product_list')->with('products',$products)->with('collection',$collection)->with('front',$front);
+        return view('frontend.pages.pre_product_list')->with('products',$products)->with('collection',$collection)->with('front',$front)->with('boycott',$boycott);
     }
 
     public function collections_design_product_detail(Request $request){

@@ -75,7 +75,7 @@
                             </div>
 
 							<div class="buy-now">
-								<a href="{{ url('/collection/design') }}/{{strtolower($collection)}}/{{strtolower($design->collection_design_name)}}/{{strtolower($product->product_slug)}}">Buy Now</a>
+								<a href="{{ url('/collection/design') }}/{{strtolower($collection->slug)}}/{{strtolower($boycott->slug)}}/{{strtolower($product->product_slug)}}">Buy Now</a>
 							</div>
                         </div>
                     </div>
