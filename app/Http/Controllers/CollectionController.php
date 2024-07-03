@@ -45,7 +45,7 @@ class CollectionController extends Controller
     public function collections_design(Request $request){
         $slug = explode('-', $request->collection)[0];
         $collection = Collections::where('slug', $slug)->first();
-        $products = PreProducts::where('collection_design_id', $collection->id)->get();                
+        $products = PreProducts::whereRaw('FIND_IN_SET(?, collection_design_id)', [$collection->id])->get();              
         return view('frontend.pages.pre_product_list')->with('products',$products)->with('collection',$collection);
     }
 
