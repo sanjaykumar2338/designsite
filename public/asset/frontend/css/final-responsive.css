@@ -877,6 +877,25 @@
 }
 .crt-pre-row .men-hoodies .canvas-container {
     height: 110px !important;
+}
+.product_title {
+	font-size: 25px;
+	margin-top: 10px;
+}
+.prd-right .product_price {
+    font-size: 30px;
+}
+.tw-sz-one {
+    width: 100%;
+    margin: 0 0 10px !important;
+}
+
+.tw-sz-two {
+    width: 100%;
+}
+
+.prd-sze select {
+    max-width: 100%;
 }	
 }
 
@@ -1637,13 +1656,6 @@
     width: 100%;
     justify-content: center;
 }
-.product_title {
-    padding-bottom: 10px;
-    font-size: 25px;
-    border-bottom: 1px solid #d9d9d9;
-    font-weight: 600;
-}
-
 
 .crt-prd-main {
     padding: 10px 0;

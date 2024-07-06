@@ -1039,21 +1039,49 @@ function addSample() {
 }
 
 function addText(text) {
-
-    if(current_image=='left' || current_image=='right'){
+    if (current_image == 'left' || current_image == 'right') {
         return;
     }
 
     text = text ? text : "Sample_Text";
-    var text = new fabric.Textbox(text, {
-        width: 50,
+
+    // Create a textbox with a large width to ensure single line text
+    var textObject = new fabric.Textbox(text, {
+        width: canvas.getWidth(), // Set the width to the canvas width
         fontSize: 30,
         fontFamily: "arial",
+        textAlign: 'center', // Center align the text within the textbox
+        splitByGrapheme: false // Disable wrapping by treating each character as a separate grapheme
     });
-    canvas.add(text);
-    totalPrice += 10;
-    updatePrice(totalPrice);
-    showImageAddedMessage();
+
+    // Calculate the center position
+    var canvasCenterX = canvas.getWidth() / 2;
+    var canvasCenterY = canvas.getHeight() / 2;
+
+    // Ensure the text fits in one line by adjusting the width based on the text length
+    var textWidth = textObject.calcTextWidth();
+    textObject.set({
+        width: textWidth
+    });
+
+    // Set the text object position to the center, slightly shifted to the right by 3px
+    textObject.set({
+        left: canvasCenterX - (textObject.width / 2) + 3,
+        top: canvasCenterY - (textObject.height / 2)
+    });
+
+    canvas.add(textObject);
+    canvas.renderAll(); // Ensure canvas is updated
+
+    //totalPrice += 10;
+    //updatePrice(totalPrice);
+    //showImageAddedMessage();
+}
+
+if($('#text_object').length && $('#text_object').val()!=""){
+    setTimeout(function(){
+        addText($('#text_object').val());
+    },2000);    
 }
 
 function calculateShippingRate() {

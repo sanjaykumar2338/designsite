@@ -2267,16 +2267,16 @@
     padding: 0 15px;
   }
 
-  .prd-btn {
+.prd-btn {
     background-color: #f0f0f0;
     border: 1px solid #eee !important;
     border-radius: 4px !important;
-    font-size: 17px;
-    text-transform: capitalize;
-    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
     transition: 0.2s;
-    padding: 10px 45px !important;
-  }
+    padding: 12px 55px !important;
+}
 
   .prd-btn:hover {
     background-color: #eb3e32 !important;
@@ -2288,18 +2288,17 @@
     background-color: #eb3e32;
     border-radius: 4px !important;
     color: #fff;
-    font-size: 17px;
-    text-transform: capitalize;
-    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
     transition: 0.2s;
-    padding: 10px 75px !important;
+    padding: 12px 75px !important;
     border-color: #eb3e32 !important;
   }
 
-  .cmn-prd-opt {
-    border-bottom: 1px solid #f0f0f0;
-    padding: 15px 0;
-  }
+.cmn-prd-opt {
+    margin: 20px 0;
+}
 
   .img-add-opt {
     margin: 4px 15px;
@@ -2309,9 +2308,10 @@
     margin: 4px 0;
   }
 
-  .prd-opt-four {
-    margin-top: 15px;
-  }
+.prd-opt-four {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
   .prd-opt-four h4,
   .prd-sze h4 {
@@ -2353,12 +2353,20 @@
   .prd-image {
     width: calc(100% - 60px);
   }
-
-  .prd-objects button {
-    margin: 5px 10px 5px 0px;
-    border-radius: 4px !important;
-  }
-
+.prd-image-shadow {
+    box-shadow: 0 0 6px 0 rgb(0 0 0 / 20%);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.prd-objects button {
+    margin: 5px 5px 5px 0px;
+    border-radius: 0px !important;
+    padding: 5px 10px !important;
+}
+.prd-objects button img {
+    width: 40px !important;
+    height: 40px !important;
+}
   .crt-prd-main {
     padding: 50px 0;
   }
@@ -2476,18 +2484,36 @@
     align-items: center;
   }
 
-  .product_title {
-    padding-bottom: 15px;
-    font-size: 32px;
-    border-bottom: 1px solid #d9d9d9;
-  }
-
+.product_title {
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.prd-right .product_price {
+    font-size: 36px;
+}
   .desc {
-    margin-top: 25px;
+    margin-top: 20px;
     font-size: 16px;
     line-height: 1.6;
   }
+.prd-right div#product-thumbnails {
+    margin: 0 0 20px;
+}
 
+.prd-right div#product-thumbnails button {
+    border-radius: 0;
+}
+
+.prd-option h4 {
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.prd-option h4 span {
+    font-weight: 400;
+}
   .Donations-box:hover h3 {
     background-color: var(--btn-color);
   }
@@ -2575,4 +2601,29 @@
 
 .crt-pre-details {
     padding: 15px 0;
+}
+.tw-sz-one {
+    width: 170px;
+    margin: 0 !important;
+}
+
+.tw-sz-two {
+    width: calc(100% - 170px);
+}
+
+.prd-sze select {
+    width: 100%;
+    border: 1px solid #dee2e6;
+    padding: 8px 10px;
+    max-width: 200px;
+    font-size: 16px;
+}
+
+.tw-sz {
+    align-items: center;
+}
+
+.prd-objects button img {
+    width: 40px !important;
+    height: 40px !important;
 }

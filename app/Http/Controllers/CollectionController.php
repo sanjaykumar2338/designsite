@@ -66,7 +66,7 @@ class CollectionController extends Controller
 
         $product = PreProducts::where('product_slug', $request->product_slug)->first();
 
-        return view('frontend.pages.pre_create_product')->with('collection',$collection)->with('front',$front)->with('back',$back)->with('design',$collection)->with('product',$product);
+        return view('frontend.pages.pre_create_product')->with('collection',$collection)->with('front',$front)->with('back',$back)->with('design',$collection)->with('product',$product)->with('boycott',$boycott);
         //echo "<pre>"; print_r($products); print_r($request->design_type); die;
     }
 

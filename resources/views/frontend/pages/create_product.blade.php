@@ -33,6 +33,7 @@
                         </button>
                     </div> --}}
                     <div class="prd-image">
+						<div class="prd-image-shadow">
                         <div style="position: relative" id="canvasParent">
                             <div class="cmn-frame" style="height: 500px; width: 500px; position: absolute; backgorud"
                                 id="canvasBgImage">
@@ -88,6 +89,7 @@
                                 </div>
                             </div>
                         </div>
+                        </div>
                     </div>
                 </div>
 
@@ -106,15 +108,11 @@
                         @endif
                     @endif
 
-                    <h1 class="product_title">
-                        {{ $product->website_product_name ? $product->website_product_name : $product->product_name }}</h1>
-                    <br>
+                    <h1 class="product_title">{{ $product->website_product_name ? $product->website_product_name : $product->product_name }}</h1>
                     
-                    <h1 class="product_price" style="font-weight: 700;" data-exact="{{ number_format($totalPrice, 2) }}" data-price="{{ number_format($totalPrice, 2) }}">Price: ${{ number_format($totalPrice, 2) }}</h1>
+                    <h3 class="product_price" style="font-weight: 700;" data-exact="{{ number_format($totalPrice, 2) }}" data-price="{{ number_format($totalPrice, 2) }}"> ${{ number_format($totalPrice, 2) }}</h3>
 
                     <p class="desc">{{ $product->product_description }}</p>
-                    <br>
-
                     <div class="prd-option">
                         <div id="product-thumbnails">
 
@@ -143,16 +141,15 @@
                             </button>
                         </div>
 
-                        <br>
-                        <h4>Choose Color: <span id="color_name"></span></h4><br>
+                        <h4>Choose Color: <span id="color_name"></span></h4>
                         <div id="product-colours">
                         </div>
 
                         <div class="flex flex-wrap prd-opt-one align-items-center cmn-prd-opt editable">
                             <button class="border prd-btn rounded-lg p-2 px-3 hidden" onclick="setShowModal(true)">
                                 Add Image
-                            </button>&nbsp;&nbsp;
-                            <button class="border prd-btn rounded-lg p-2 px-3" onclick="addText()">
+                            </button>
+                            <button class="border prd-btn rounded-lg p-2 px-3 add-txt-btn" onclick="addText()">
                                 Add Text
                             </button>
                             <div class="img-add-opt chooseImageFile">
@@ -165,19 +162,23 @@
                                 Preview
                             </button>
                         </div>
-                        <div class="prd-opt-three cmn-prd-opt" id="text-controls-additional">
+                        <div class="prd-opt-three" id="text-controls-additional">
 
                             @if (in_array($product->product_type, ['Shirts', 'Hoodies', 'Sweatshirts', 'Hoodies']))
-                                <h4>Product Size :</h4>
-                                <div class="flex flex-wrap gap-2 prd-sze">
+                            <div class="flex flex-wrap tw-sz">    
+								<h4 class="tw-sz-one">Product Size :</h4>
+                                <div class="tw-sz-two prd-sze">
                                     <select name="product_size" id="product_size" onchange="setSizeChange()">
                                         <option value="select" disabled>select</option>
                                     </select>
-                                </div><br />
+                                </div>
+							</div>
                             @endif
 
                             <div class="prd-opt-four editable">
-                                <h4 class="expand_option" style="cursor:pointer">Popular Graphics:</h4>
+								<div class="flex flex-wrap tw-sz"> 
+                                <h4 class="tw-sz-one">Popular Graphics:</h4>
+								<div class="tw-sz-two">
                                 <div class="prd-objects flex flex-wrap">                                    
                                     @if($product->supporting_country=='Israel')
                                         <?php
@@ -361,10 +362,12 @@
                                         </button>
                                     </div>
                                 </div>
+                                </div>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="prd-opt-two cmn-prd-opt">
+                        <div class="prd-opt-two">
                             <button class="border rounded-lg p-2 px-3 place-btn" onclick="setShowDetailsModal(true)">
                                 Next
                             </button>
@@ -376,9 +379,6 @@
         </div>
     </div>
 
-    <div class="crt-prd-main">
-
-    </div>
 
     <div id="modal" hidden>
         <div class="fixed z-20 overflow-y-auto top-0 w-full left-0">

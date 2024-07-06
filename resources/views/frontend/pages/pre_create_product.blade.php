@@ -5,6 +5,12 @@
     <input type="hidden" name="product_ids" value="{{$product->id}}">
     <input type="hidden" name="front_image" id="front_image" value="{{$front}}">
     <input type="hidden" name="back_image" id="back_image" value="{{$back}}">
+    
+    @if($boycott->blog_image || $boycott->back_design_image)
+        <input type="hidden" name="text_object" id="text_object" value="">
+    @else
+        <input type="hidden" name="text_object" id="text_object" value="{{$boycott->design_text}}">
+    @endif
 
     <div class="crt-prd-main">
         <div id="data" hidden>{{ $product }}</div>
