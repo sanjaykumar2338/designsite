@@ -34,7 +34,6 @@
      crossorigin="anonymous"></script>
 </head>
 <body>
-    
     <!-- ========== Start top-bar ========== -->
     <div class="top-bar">
         <div class="container">

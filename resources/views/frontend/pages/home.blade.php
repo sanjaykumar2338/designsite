@@ -19,7 +19,7 @@
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="asset/frontend/images/banner/stand-with-Israel.jpg" class="d-block w-100"
+                            <img src="asset/frontend/images/banner-optimized/stand-with-Israel.jpg" class="d-block w-100"
                                 alt="...">
                             <div class="carousel-caption ">
                                 <h5>DEFIANT TO <br>AGGRESSION!</h5>
@@ -30,7 +30,7 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="asset/frontend/images/banner/stand-with-Palestine.jpg" class="d-block w-100"
+                            <img src="asset/frontend/images/banner-optimized/stand-with-Palestine.jpg" class="d-block w-100"
                                 alt="...">
                             <div class="carousel-caption ">
                                 <h5>MOVED BY<br> IMAGES!</h5>
@@ -41,7 +41,7 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="asset/frontend/images/banner/3.jpg" class="d-block w-100" alt="...">
+                            <img src="asset/frontend/images/banner-optimized/3.jpg" class="d-block w-100" alt="...">
                             <div class="carousel-caption ">
                                 <h5>FUELED BY<br> RIGHTEOUSNESS!</h5>
                                 <p>Stand for Unification,<br> Resist Unwanted Narratives,<br> and Demand Loyalty.</p>
@@ -50,7 +50,7 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="asset/frontend/images/banner/stand-with-Ukraine.jpg" class="d-block w-100"
+                            <img src="asset/frontend/images/banner-optimized/stand-with-Ukraine.jpg" class="d-block w-100"
                                 alt="...">
                             <div class="carousel-caption ">
                                 <h5>DRIVEN TO<br> BE FREE!</h5>
