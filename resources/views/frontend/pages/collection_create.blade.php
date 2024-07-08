@@ -90,7 +90,7 @@
 
                     @if(Auth::check())
                         @if(auth()->user()->email=='admin@gmail.com')
-                            <a class="place-btn" target="_blank" href="{{url('/')}}/admin/preproducts/{{$product->id}}/edit">Update Product Info</a> <a class="place-btn"  target="_blank" href="{{url('/')}}/admin/preproducts/create_template/{{$product->id}}">Desgin Template</a>
+                            <a class="place-btn" target="_blank" href="{{url('/')}}/admin/preproducts/{{$product->id}}/edit">Update Product Info</a> <a style="padding: 8px 19px !important;" class="place-btn"  target="_blank" href="{{url('/')}}/admin/preproducts/create_template/{{$product->id}}">Desgin Template</a>
                             <br><br>
                         @endif
                     @endif
