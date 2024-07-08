@@ -26,6 +26,7 @@ class AdminController extends Controller{
             'Israel' => 'n_XbkfcVU8UluxtZhwsfZFKj0g',
             'Ukraine' => 'n_H9BXpn4xgi7TRexH1ZdOVVPS',
             'Russia' => 'n_KPyaUvrLgEZ7x194gbjwS7ZD',
+            'Russia' => 'n_KPyaUvrLgEZ7x194gbjwS7ZD'
         ];
 
         $nonprofitNames = [
@@ -42,7 +43,7 @@ class AdminController extends Controller{
         $amountInCents = $amount * 100;
         $data = [
             'amount' => $amountInCents,
-            'nonprofit_id' => $nonprofitIds[$country],
+            'nonprofit_id' => 'n_LVefvosmlNukcqYBTotxxar8',
             'funds_collected' => true,
         ];
 

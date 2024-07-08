@@ -80,20 +80,11 @@
                   <input type="number" value="{{$product->commission}}" class="form-control" id="commission" placeholder="Enter Commission" name="commission">
                 </div>
 
-                <div class="mb-3">
+                <div class="mb-3" style="display:none;">
                   <label for="pwd">Supporting Country:</label>                  
                   <select class="form-control" id="supporting_country" name="supporting_country">
                     <option value="">Select</option>
-                    <option {{$product->supporting_country=='Israel'?'selected':''}} value="Israel">Israel</option>
-                    <option {{$product->supporting_country=='Palestine'?'selected':''}}  value="Palestine">Palestine</option>
-                    <option {{$product->supporting_country=='Azerbaijan'?'selected':''}}  value="Azerbaijan">Azerbaijan</option>
-                    <option {{$product->supporting_country=='Armenia'?'selected':''}}  value="Armenia">Armenia</option>
-                    <option {{$product->supporting_country=='Russia'?'selected':''}}  value="Russia">Russia</option>
-                    <option {{$product->supporting_country=='Ukraine'?'selected':''}}  value="Ukraine">Ukraine</option>
-                    <option {{$product->supporting_country=='Turkey'?'selected':''}}  value="Turkey">Turkey</option>
-                    <option {{$product->supporting_country=='Kurdistan'?'selected':''}}  value="Kurdistan">Kurdistan</option>
-                    <option {{$product->supporting_country=='India'?'selected':''}}  value="India">India</option>
-                    <option {{$product->supporting_country=='Pakistan'?'selected':''}}  value="Pakistan">Pakistan</option>
+                    <option selected value="Doctors Without Borders, USA">Doctors Without Borders, USA</option>                   
                   </select>
                 </div>
 

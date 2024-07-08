@@ -62,20 +62,11 @@
                   <input type="number" class="form-control" id="commission" placeholder="Enter Commission" name="commission">
                 </div>
 
-                <div class="mb-3">
+                <div class="mb-3" style="display:none;">
                   <label for="pwd">Supporting Country:</label>                  
                   <select class="form-control" id="supporting_country" name="supporting_country">
                     <option value="">Select</option>
-                    <option value="Israel">Israel</option>
-                    <option value="Palestine">Palestine</option>
-                    <option value="Azerbaijan">Azerbaijan</option>
-                    <option value="Armenia">Armenia</option>
-                    <option value="Russia">Russia</option>
-                    <option value="Ukraine">Ukraine</option>
-                    <option value="Turkey">Turkey</option>
-                    <option value="Kurdistan">Kurdistan</option>
-                    <option value="India">India</option>
-                    <option value="Pakistan">Pakistan</option>
+                    <option selected value="Doctors Without Borders, USA">Doctors Without Borders, USA</option>                   
                   </select>
                 </div>
 
