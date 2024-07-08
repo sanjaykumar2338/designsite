@@ -1,13 +1,33 @@
 @extends('frontend.layout.homepagelayout')
 @section('content')
 
+    <style>
+        .Products h3 {
+            text-align: left;
+            text-align: left;
+            font-size: 33px;
+            font-weight: 600;
+            padding-bottom: 8px;
+            text-transform: none;
+            line-height: 41px;
+        }
+
+        .Products p {
+            text-align: left;
+            font-size: 20px;
+            text-transform: none;
+            padding-bottom: 0;
+            line-height: 33px;
+        }
+    </style>
+
     <!-- ========== Start products ========== -->
     <section class="Products">
         <div class="container">            
             <h3>Advocacy Streetwear Collections - Shop Now and Join the Movement</h3>
             <p>Welcome to the shop at Cause Stand, where activism drives fashion. Explore our diverse range of activist streetwear and advocacy
             apparel, designed to make a statement that demands attention. At Cause Stand, we believe in the power of clothing to amplify your
-            voice and advocate for causes that matter</p>
+            voice and advocate for causes that matter.</p>
 
             <div class="row">
                 
