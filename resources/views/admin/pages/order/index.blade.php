@@ -138,7 +138,7 @@
                                        <td><a style="color: white;" type="button" class="btn btn-primary" href="#">Send ${{$donation}}</a></td>
                                     @endif
                                  @else
-                                    <td><a onclick="return confirm('Are you sure?')" type="button" class="btn btn-primary" href="{{url('admin/sendpayment2')}}/{{$order->id}}" title="Donatation Send" style="color: white;background-color: green;" type="button" class="btn btn-primary" href="#">Send $10.00</a></td>
+                                    <td><a title="Click to Send Donatation" style="color: white;" onclick="return confirm('Are you sure?')" type="button" class="btn btn-primary" href="{{url('admin/sendpayment2')}}/{{$order->id}}">Send ${{$donation}}</a></td>
                                  @endif
 
                                
