@@ -128,7 +128,7 @@ Route::group(['prefix' => 'admin','middleware' => 'check.auth'], function () {
     Route::get('/order', [AdminController::class, 'order']);
     Route::get('/customer', [AdminController::class, 'customer']);
     Route::get('/sendpayment/{amount}/{country}/{orderId}', [AdminController::class, 'sendpayment']);
-    Route::get('/sendpayment2/{orderId}', [AdminController::class, 'sendpaymen2']);
+    Route::get('/sendpayment2/{orderId}', [AdminController::class, 'sendpayment2']);
     Route::get('/confirm_order/{orderId}', [AdminController::class, 'confirm_order']);
 
     //blogs
