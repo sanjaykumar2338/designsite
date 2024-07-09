@@ -128,7 +128,7 @@
                                  @php $donation = $order->total_amount - $order->product_price; @endphp
 
                                  @if($order->predesign_order=='' && $order->predesign_order=='no')
-                                    @if($donation && $donation!=0 && )
+                                    @if($donation && $donation!=0)
                                        @if($order->donation_status=='paid')
                                           <td><a title="Donatation Sent" style="color: white;background-color: green;" type="button" class="btn btn-primary" href="#">Sent ${{$donation}}</a></td>
                                        @else
