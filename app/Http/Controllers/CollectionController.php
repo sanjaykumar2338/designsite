@@ -69,6 +69,7 @@ class CollectionController extends Controller
         return view('frontend.pages.pre_create_product')->with('collection',$collection)->with('front',$front)->with('back',$back)->with('design',$collection)->with('product',$product)->with('boycott',$boycott);
         //echo "<pre>"; print_r($products); print_r($request->design_type); die;
     }
+    
 
     public function collection(Request $request, $collection, $slug)
     {   
