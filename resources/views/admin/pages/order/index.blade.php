@@ -127,14 +127,18 @@
                                  
                                  @php $donation = $order->total_amount - $order->product_price; @endphp
 
-                                 @if($donation && $donation!=0)
-                                    @if($order->donation_status=='paid')
-                                       <td><a title="Donatation Sent" style="color: white;background-color: green;" type="button" class="btn btn-primary" href="#">Sent ${{$donation}}</a></td>
+                                 @if($order->predesign_order=='' && $order->predesign_order=='no')
+                                    @if($donation && $donation!=0 && )
+                                       @if($order->donation_status=='paid')
+                                          <td><a title="Donatation Sent" style="color: white;background-color: green;" type="button" class="btn btn-primary" href="#">Sent ${{$donation}}</a></td>
+                                       @else
+                                          <td><a title="Click to Send Donatation" style="color: white;" onclick="return confirm('Are you sure?')" type="button" class="btn btn-primary" href="{{url('admin/sendpayment')}}/{{$donation}}/{{$order->supporting_country}}/{{$order->id}}">Send ${{$donation}}</a></td>
+                                       @endif
                                     @else
-                                       <td><a title="Click to Send Donatation" style="color: white;" onclick="return confirm('Are you sure?')" type="button" class="btn btn-primary" href="{{url('admin/sendpayment')}}/{{$donation}}/{{$order->supporting_country}}/{{$order->id}}">Send ${{$donation}}</a></td>
+                                       <td><a style="color: white;" type="button" class="btn btn-primary" href="#">Send ${{$donation}}</a></td>
                                     @endif
                                  @else
-                                    <td><a style="color: white;" type="button" class="btn btn-primary" href="#">Send ${{$donation}}</a></td>
+                                    <td><a onclick="return confirm('Are you sure?')" type="button" class="btn btn-primary" href="{{url('admin/sendpayment2')}/{{$order->id}}" title="Donatation Send" style="color: white;background-color: green;" type="button" class="btn btn-primary" href="#">Send $10.00</a></td>
                                  @endif
 
                                

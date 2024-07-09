@@ -105,14 +105,18 @@ class UserController extends Controller
     }
     public function storeOrder(Request $request)
     {
-
         try {
+            $predesign_order = 'no';
+            if(isset($_request->predesign_order) && $_request->predesign_order!=""){
+                $predesign_order = $_request->predesign_orderl;
+            }
+
             $_request = json_decode($request->getContent());
             $order = new PrintfulOrder();
             $order->printful_order_data = $_request->printful_order_data;
             $order->product_id = $_request->product_id;
-            $order->payment_id = $request->payment_id;
-            $order->predesign_order = 'yes';
+            $order->payment_id = $_request->payment_id;
+            $order->predesign_order = $predesign_order;
             $order->total_amount = $request->total;
             $order->product_price = $request->product_price;
             $order->printful_order_id = json_decode($_request->printful_order_data,true)['id'];
