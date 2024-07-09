@@ -123,15 +123,16 @@ class AdminController extends Controller{
         }
 
         // Update order donation_status to 'paid'
+        $country = 'Doctors Without Borders, USA';
         if ($order) {
             $order->donation_status = 'paid';
             $order->donation_amount = $amount;
-            $order->donation_country = 'Doctors Without Borders, USA';
+            $order->donation_country = $country;
             $order->save();
         }
 
         // Send the confirmation email
-        Mail::to($order->customer_email)->send(new DonationSuccessful($amountInCents, $country, $order->customer_email, $nonprofitNames[$country]));
+        Mail::to($order->customer_email)->send(new DonationSuccessful($amountInCents, $country, $order->customer_email, $country));
 
         return back()->with('message', 'Donation successfully processed and email sent to customer.');
     }
