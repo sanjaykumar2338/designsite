@@ -123,10 +123,6 @@
 
                                             <th class="col-sm-1 col-md-1">Price</th>
 
-                                            <th class="col-sm-1 col-md-1">Country</th>
-
-                                            <th class="col-sm-1 col-md-1">Product For</th>
-
                                             <th class="col-sm-1 col-md-1">Product Type</th>
 
                                             <th class="col-sm-3 col-md-3"  style="text-align: right;">Action</th>
@@ -152,10 +148,10 @@
                                                 </div>
                                             </td>
 
-                                            <th class="col-sm-2 col-md-1"> {{$product->commission}}$</th>
+                                            <th class="col-sm-2 col-md-1"> {{$product->commission}}%</th>
                                             <td class="col-sm-1 col-md-1"><strong>  ${{$product->product_price}}</strong></td>
-                                            <td class="col-sm-1 col-md-1"><strong>  {{$product->supporting_country}}</strong></td>
-                                            <td class="col-sm-1 col-md-1"><strong>  {{$product->product_for}}</strong></td>
+                                           
+                                         
                                             <td class="col-sm-1 col-md-1"><strong>  {{$product->product_type}}</strong></td>
                                             <td class="col-sm-3 col-md-3" style="text-align: right">
                                               <a href="/admin/preproducts/remove/{{$product->id}}" class="btn btn-danger">Remove</a>
