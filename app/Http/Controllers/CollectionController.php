@@ -50,7 +50,9 @@ class CollectionController extends Controller
         $front = fileToUrl($boycott->blog_image);
         //echo $front; die;
 
-        $products = PreProducts::whereRaw('FIND_IN_SET(?, collection_design_id)', [$collection->id])->get();              
+        $collectionId = $collection->id;
+        $products = PreProducts::whereRaw('FIND_IN_SET(?, REPLACE(collection_design_id, " ", ""))', [$collectionId])->get();
+
         return view('frontend.pages.pre_product_list')->with('products',$products)->with('collection',$collection)->with('front',$front)->with('boycott',$boycott);
     }
 
