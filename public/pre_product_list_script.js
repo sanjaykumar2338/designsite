@@ -83,9 +83,9 @@ function setImage(url, position, number) {
 
             // Center the image
             oImg.scaleToHeight(200);
-            oImg.scaleToWidth(150);
+            oImg.scaleToWidth(300);
             oImg.set({
-                left: w / 3,
+                left: w / 2,
                 top: h / 2,
                 originX: 'center',
                 originY: 'center',
