@@ -39,7 +39,7 @@ class BoycottController extends Controller
         $data_collection = Collections::find($id);
         //echo "<pre>"; print_r($data_collection); die;
 
-        $blogs = Boycotts::paginate(5);
+        $blogs = Boycotts::where('collection', $id)->paginate(5);
         return view('admin.pages.boycott.index')->with('blogs', $blogs)->with('data_collection', $data_collection)->with('activeLink', 'collection');
     }
 
@@ -199,6 +199,7 @@ class BoycottController extends Controller
         $blog->design_text = $request->input('design_text');
         $blog->meta_description = $request->input('meta_description');
         $blog->meta_keywords = $request->input('meta_keywords');
+        $blog->collection = $cid;
 
         $slug = Str::slug($request->input('title'));
         $existingSlug = Boycotts::where('slug', $slug)->where('id','!=',$id)->exists();

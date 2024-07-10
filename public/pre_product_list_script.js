@@ -82,11 +82,11 @@ function setImage(url, position, number) {
             const w = canvas.getWidth();
 
             // Center the image
-            oImg.scaleToHeight(100);
-            oImg.scaleToWidth(100);
+            oImg.scaleToHeight(200);
+            oImg.scaleToWidth(150);
             oImg.set({
                 left: w / 3,
-                top: h / 3,
+                top: h / 2,
                 originX: 'center',
                 originY: 'center',
                 selectable: false

@@ -35,7 +35,7 @@
                     @foreach($collections as $collection)
                         <div class="col-lg-3 col-md-6">
                             <div class="img aos-init aos-animate" data-aos="zoom-in">
-                                <img src="{{fileToUrl($collection->feature_image)}}" alt="">
+                                <img src="{{fileToUrl($collection->feature_image)}}" alt="" style="height: 300px;">
                                 <div class="text-two">
                                     <h4>{{$collection->title}} Collection</h4>
                                     <a class="buy_now" href="{{url('/')}}/shop/{{$collection->slug}}-collection"> shop</a>

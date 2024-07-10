@@ -85,6 +85,8 @@
                                     <table class="table table-hover">
                                         <thead>
                                         <tr>
+                                            <th class="col-sm-2 col-md-2">#ID</th>
+
                                             <th class="col-sm-2 col-md-2">Title</th>
 
                                             <th class="col-sm-3 col-md-3"  style="text-align: right;">Action</th>
@@ -93,6 +95,16 @@
                                         <tbody>
 
                                         <tr>
+
+                                        <td class="col-sm-2 col-md-2">
+
+                                            <div class="media">
+                                                <div class="media-body">
+                                                    <h4  class="product-title" ><a href="#">{{$blog->id}}</a></h4>
+                                                </div>
+
+                                            </div>
+                                            </td>
 
                                             <td class="col-sm-2 col-md-2">
 
