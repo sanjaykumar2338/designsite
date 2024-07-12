@@ -61,37 +61,13 @@
                 <h3 class="card-title"><a href="{{url('admin/preproducts/create')}}">Add New Product</a></h3>
                 <div class="card-tools">
                   <form name="search_frm" method="get" action="{{ url('/admin/preproducts') }}">
-                      <div class="input-group input-group-sm" style="gap: 7px;width:600px;">
-                          <select class="form-control float-right" name="search_by_country">
-                              <option value="">Filter By Country</option>
-                              <option value="Israel" {{ old('search_by_country', request()->search_by_country) == 'Israel' ? 'selected' : '' }}>Israel</option>
-                              <option value="Palestine" {{ old('search_by_country', request()->search_by_country) == 'Palestine' ? 'selected' : '' }}>Palestine</option>
-                              <option value="Russia" {{ old('search_by_country', request()->search_by_country) == 'Russia' ? 'selected' : '' }}>Russia</option>
-                              <option value="Ukraine" {{ old('search_by_country', request()->search_by_country) == 'Ukraine' ? 'selected' : '' }}>Ukraine</option>
-                          </select>
+                      <div class="input-group input-group-sm" style="gap: 7px;width:200px;">
 
-                          <select class="form-control float-right" name="search_by_product_for">
-                              <option value="">Filter By Product For</option>
-                              <option value="Men" {{ old('search_by_product_for', request()->search_by_product_for) == 'Men' ? 'selected' : '' }}>Men</option>
-                              <option value="Woman" {{ old('search_by_product_for', request()->search_by_product_for) == 'Woman' ? 'selected' : '' }}>Woman</option>
-                          </select>
-
-                          <select class="form-control float-right" name="search_by_product_type">
-                                <option value="">Filter By Product Type</option>
-                                <option value="Shirts" {{ old('search_by_product_type', request()->search_by_product_type) == 'Shirts' ? 'selected' : '' }}>Shirts</option>
-                                <option value="Hoodies" {{ old('search_by_product_type', request()->search_by_product_type) == 'Hoodies' ? 'selected' : '' }}>Hoodies</option>
-                                <option value="Sweatshirts" {{ old('search_by_product_type', request()->search_by_product_type) == 'Sweatshirts' ? 'selected' : '' }}>Sweatshirts</option>
-                                <option value="Bottoms" {{ old('search_by_product_type', request()->search_by_product_type) == 'Bottoms' ? 'selected' : '' }}>Bottoms</option>
-                                <option value="Bags" {{ old('search_by_product_type', request()->search_by_product_type) == 'Bags' ? 'selected' : '' }}>Bags</option>
-                                <option value="Footwear" {{ old('search_by_product_type', request()->search_by_product_type) == 'Footwear' ? 'selected' : '' }}>Footwear</option>
-                                <option value="Hats" {{ old('search_by_product_type', request()->search_by_product_type) == 'Hats' ? 'selected' : '' }}>Hats</option>
-                                <option value="Phone Cases" {{ old('search_by_product_type', request()->search_by_product_type) == 'Phone Cases' ? 'selected' : '' }}>Phone Cases</option>
-                          </select>
-
-                          <select class="form-control float-right" name="design_type">
-                              <option value="">Design Type</option>
-                              <option value="No" {{ old('design_type', request()->search_by_product_for) == 'No' ? 'selected' : '' }}>PreProducts</option>
-                              <option value="Yes" {{ old('design_type', request()->search_by_product_for) == 'Yes' ? 'selected' : '' }}>Collections</option>
+                          <select class="form-control float-right" name="search_by_collection">
+                              <option value="">Filter By Collection</option>
+                              @foreach($collections as $collection)
+                                <option value="{{$collection->id}}" {{ old('search_by_collection', request()->search_by_collection) == $collection->id ? 'selected' : '' }}>{{$collection->title}}</option>                             
+                              @endforeach
                           </select>
 
                           <div class="input-group-append">

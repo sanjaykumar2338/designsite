@@ -34,38 +34,27 @@ class PreProductsController extends Controller
 
     public function index(Request $request)
     {
+        // Initialize query on PreProducts
         $query = PreProducts::query();
 
-        // Filter by supporting country
-        if ($request->has('search_by_country') && !empty($request->search_by_country)) {
-            $query->where('supporting_country', $request->search_by_country);
+        // Check if 'search_by_collection' parameter exists and is not empty
+        if ($request->has('search_by_collection') && !empty($request->search_by_collection)) {
+            // Filter by collection_design_id containing the specific value
+            $searchValue = $request->search_by_collection;
+            $query->where('collection_design_id', 'LIKE', "%$searchValue%");
         }
 
-        // Filter by product for (case-insensitive)
-        if ($request->has('search_by_product_for') && !empty($request->search_by_product_for)) {
-            $productForLower = strtolower($request->search_by_product_for);
-            $query->whereRaw('LOWER(product_for) = ?', [$productForLower]);
-        }
-
-        // Filter by product type (case-insensitive)
-        if ($request->has('search_by_product_type') && !empty($request->search_by_product_type)) {
-            $productTypeLower = strtolower($request->search_by_product_type);
-            $query->whereRaw('LOWER(product_type) = ?', [$productTypeLower]);
-        }
-
-        // Add other filters if necessary
-
-        // Pagination
-        if ($request->has('design_type') && !empty($request->design_type)) {
-            $query->where('collection_design',$request->design_type);
-        }
-
+        // Paginate the results, 5 items per page
         $products = $query->paginate(5);
+
+        // Get all collections
+        $collections = Collections::all();
 
         // Return the view with products and activeLink
         return view('admin.pages.preproduct.index')
             ->with('products', $products)
-            ->with('activeLink', 'preproducts');
+            ->with('activeLink', 'preproducts')
+            ->with('collections', $collections);
     }
 
     /**
