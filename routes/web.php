@@ -184,7 +184,10 @@ Route::get('/contactus', [App\Http\Controllers\HomeController::class, 'contactus
 Route::get('/aboutus', [App\Http\Controllers\HomeController::class, 'aboutus'])->name('aboutus');
 Route::get('/conflicts', [App\Http\Controllers\HomeController::class, 'conflicts'])->name('conflicts');
 Route::get('/causes', [App\Http\Controllers\HomeController::class, 'causes'])->name('causes');
+
 Route::get('/media', [App\Http\Controllers\HomeController::class, 'media'])->name('media');
+Route::get('/media/explore', [App\Http\Controllers\HomeController::class, 'media_explore'])->name('media.explore');
+
 Route::get('/justice', [App\Http\Controllers\HomeController::class, 'justice'])->name('justice');
 Route::get('/blogs', [App\Http\Controllers\HomeController::class, 'blog'])->name('blogs');
 Route::get('/blog/{slug}', [App\Http\Controllers\HomeController::class, 'blog_detail'])->name('blog_detail');

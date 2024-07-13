@@ -2627,3 +2627,35 @@
     width: 40px !important;
     height: 40px !important;
 }
+.mem-content-n ul.cmt-list {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+.mem-content-n ul.cmt-list li {
+    font-size: 16px;
+}
+
+.mem-content-n ul.cmt-list li strong {
+    margin-right: 5px;
+}
+
+.mem-content-n {
+    padding: 15px 15px;
+}
+.mem-content-n button {
+    background: #eb3e32;
+    border: 1px solid #eb3e32;
+    color: #fff;
+    padding: 10px 40px;
+    line-height: normal;
+    display: inline-block;
+    margin: 0 0 10px;
+    font-weight: 700;
+    border-radius: 50px;
+}
+.mem-content-n h3 {
+    padding-bottom: 0 !important;
+    font-size: 26px !important;
+}

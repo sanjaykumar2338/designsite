@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="{{url('/')}}/asset/frontend/css/stylesheet.css?v={{time()}}">
     <link rel="stylesheet" href="{{url('/')}}/asset/frontend/css/final-style.css?v={{time()}}">
     <link rel="stylesheet" href="{{url('/')}}/asset/frontend/css/final-responsive.css?v={{time()}}">
+    <link rel="stylesheet" href="{{url('/')}}/asset/frontend/css/media-explore.css?v={{time()}}">
 
 
     <!-- font-awesome -->
@@ -28,10 +29,15 @@
         integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="asset/frontend/images/new-logo.jpg">
+    <link rel="icon" type="image/x-icon" href="{{url('asset/frontend/images/new-logo.jpg')}}">
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4830008298391201"
      crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <!-- ========== Start top-bar ========== -->

@@ -1,0 +1,276 @@
+body {
+	margin:0;
+	padding:0;
+	font-family: "Roboto", sans-serif;
+}
+* {
+    box-sizing: border-box;
+}
+
+.community-head {
+    background-color: #f7f7f7;
+    padding: 40px 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    display: block;
+    padding: 0 12px;
+}
+
+.row-flx {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.cl-md-6 {
+    width: 50%;
+    padding: 0 15px;
+}
+
+.cmt-head-left {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.cmt-head-img {
+    width: 180px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #eee;
+}
+
+.cmt-head-cont {
+    width: calc(100% - 180px);
+    padding: 0 30px;
+}
+ul.cmt-list {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+.cmt-list li {
+    font-size: 16px;
+    margin: 0px 0 10px;
+}
+
+.cmt-head-right {
+    background-color: #fff;
+    border: 1px solid #eee;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 370px;
+    margin-left: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: rgba(149, 157, 165, 0.1) 0px 1px 15px;
+}
+
+.cmt-list li:last-child {
+    margin-bottom: 0;
+}
+
+.cmt-head-img img {
+    display: block;
+    width: 100%;
+}
+
+.cmt-list li strong {
+    font-size: 18px;
+    margin-right: 5px;
+}
+.left-bred ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.left-bred ul li a {
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+.breadcreum-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.right-bred a {
+    background-color: #fff;
+    border-radius: 4px !important;
+    color: #eb3e32;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: 0.2s;
+    padding: 12px 25px !important;
+    border-color: #eb3e32 !important;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.cm-breadcreum {
+    background-color: #eb3e32;
+}
+.member-area-rep {
+    margin: 0 0 20px;
+}
+.member-area-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.member-area-head h2 {
+    font-size: 30px;
+    margin: 10px 0;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.member-area {
+    padding: 40px 0;
+}
+
+.member-area-head a {
+    background-color: #eb3e32;
+    border-radius: 4px !important;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: 0.2s;
+    padding: 12px 25px !important;
+    border-color: #eb3e32 !important;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.mem-data {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+
+.mem-wd {
+    width: 20%;
+    padding: 0 10px;
+    margin: 10px 0;
+}
+
+.mem-img img {
+    display: block;
+    width: 100%;
+}
+
+.mem-content {
+    padding: 25px 20px;
+}
+
+.mem-inner {
+    border: 1px solid #eee;
+    box-shadow: rgba(149, 157, 165, 0.1) 0px 1px 15px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.mem-content h3 {
+    font-weight: 700;
+    font-size: 22px;
+    margin: 0 0 10px;
+}
+
+.mem-content .cmt-list li {
+    font-size: 14px;
+    margin: 0 0 5px;
+}
+
+.mem-content .cmt-list li strong {
+    font-size: 15px;
+}
+
+.mem-content .cmt-list li:last-child {
+    margin: 0;
+}
+
+@media only screen and (max-width:767px){
+.mem-wd {
+    width: 100%;
+}	
+.cl-md-6 {
+    width: 100%;
+}
+
+.cmt-head-right {
+    max-width: 100%;
+    margin-top: 20px;
+}
+
+.cmt-head-img {
+    width: 130px;
+}
+
+.cmt-head-cont {
+    width: calc(100% - 130px);
+    padding: 0 0 0 20px;
+}
+
+.cmt-list li strong {
+    font-size: 16px;
+}
+
+.cmt-list li {
+    font-size: 14px;
+    margin: 0 0 5px;
+}
+
+.member-area-head h2 {
+    font-size: 24px;
+}
+
+.member-area-head a {
+    font-size: 14px;
+    padding: 10px 15px !important;
+}
+
+.left-bred {
+    width: 100%;
+    margin: 0 0 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.breadcreum-flex {
+    padding: 20px 10px;
+    justify-content: center;
+}
+
+.right-bred a {
+    font-size: 14px;
+}
+
+.right-bred {
+    width: 100%;
+    text-align: center;
+}	
+}
+
+.cmt-list{
+    text-align: left;
+}
