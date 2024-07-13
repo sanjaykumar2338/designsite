@@ -30,22 +30,22 @@
         <div class="row">
             <div class="col-lg-3 col-md-6">
                 <div class="img aos-init aos-animate" data-aos="zoom-in">
-                    <img src="{{url('/mediaimages/pic1.png')}}" alt="" style="height: 300px;">                        
+                    <img src="{{url('/mediaimages/boycott-movement-media.png')}}" alt="" style="height: 300px;">                        
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
                 <div class="img aos-init aos-animate" data-aos="zoom-in">
-                    <img src="{{url('/mediaimages/pic1.png')}}" alt="" style="height: 300px;">                        
+                    <img src="{{url('/mediaimages/integrity-reform-movement-media.png')}}" alt="" style="height: 300px;">                        
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
                 <div class="img aos-init aos-animate" data-aos="zoom-in">
-                    <img src="{{url('/mediaimages/pic1.png')}}" alt="" style="height: 300px;">                        
+                    <img src="{{url('/mediaimages/ethic-reform-movement-media.png')}}" alt="" style="height: 300px;">                        
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
                 <div class="img aos-init aos-animate" data-aos="zoom-in">
-                    <img src="{{url('/mediaimages/pic1.png')}}" alt="" style="height: 300px;">                        
+                    <img src="{{url('/mediaimages/fact-check-movement-media.png')}}" alt="" style="height: 300px;">                        
                 </div>
             </div>
         </div>
