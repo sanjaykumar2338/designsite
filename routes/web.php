@@ -185,6 +185,7 @@ Route::get('/aboutus', [App\Http\Controllers\HomeController::class, 'aboutus'])-
 Route::get('/conflicts', [App\Http\Controllers\HomeController::class, 'conflicts'])->name('conflicts');
 Route::get('/causes', [App\Http\Controllers\HomeController::class, 'causes'])->name('causes');
 
+Route::get('/userdashboard', [App\Http\Controllers\HomeController::class, 'userdashboard'])->name('userdashboard');
 Route::get('/media', [App\Http\Controllers\HomeController::class, 'media'])->name('media');
 Route::get('/media/explore', [App\Http\Controllers\HomeController::class, 'media_explore'])->name('media.explore');
 

@@ -48,7 +48,7 @@
 						<button onclick="window.location.href='{{ route('media.explore') }}'">Explore</button>
 						<ul class="cmt-list">
 							<li><strong>Movement:</strong>Boycott</li>
-							<li><strong>Collection:</strong>Oversight</li>
+							<li><strong>Collection:</strong>Traitor</li>
 							<li><strong>Mission:</strong>Hold institutions accountable for biased influence.</li>
 						</ul>
 					</div>
@@ -61,7 +61,7 @@
 						<button onclick="window.location.href='{{ route('media.explore') }}'">Explore</button>
 						<ul class="cmt-list">
 							<li><strong>Movement:</strong>Boycott</li>
-							<li><strong>Collection:</strong>Oversight</li>
+							<li><strong>Collection:</strong>Trader</li>
 							<li><strong>Mission:</strong>Hold institutions accountable for biased influence.</li>
 						</ul>
 					</div>
@@ -74,7 +74,7 @@
 						<button onclick="window.location.href='{{ route('media.explore') }}'">Explore</button>
 						<ul class="cmt-list">
 							<li><strong>Movement:</strong>Boycott</li>
-							<li><strong>Collection:</strong>Oversight</li>
+							<li><strong>Collection:</strong>Propaganda</li>
 							<li><strong>Mission:</strong>Hold institutions accountable for biased influence.</li>
 						</ul>
 					</div>
