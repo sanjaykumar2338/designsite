@@ -44,46 +44,6 @@
                     </div>
                 </div>
             @endforeach
-
-            <div class="col-lg-3 col-md-6">
-                <div class="img aos-init aos-animate" data-aos="zoom-in">
-                    <img src="{{url('/mediaimages/integrity-reform-movement-media.png')}}" alt="" style="height: 300px;"> 
-					<div class="mem-content-n">
-						<button onclick="window.location.href='{{ route('media.explore') }}'">Explore</button>
-						<ul class="cmt-list">
-							<li><strong>Movement:</strong>Boycott</li>
-							<li><strong>Collection:</strong>Traitor</li>
-							<li><strong>Mission:</strong>Hold institutions accountable for biased influence.</li>
-						</ul>
-					</div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="img aos-init aos-animate" data-aos="zoom-in">
-                    <img src="{{url('/mediaimages/ethic-reform-movement-media.png')}}" alt="" style="height: 300px;">     
-					<div class="mem-content-n">
-						<button onclick="window.location.href='{{ route('media.explore') }}'">Explore</button>
-						<ul class="cmt-list">
-							<li><strong>Movement:</strong>Boycott</li>
-							<li><strong>Collection:</strong>Trader</li>
-							<li><strong>Mission:</strong>Hold institutions accountable for biased influence.</li>
-						</ul>
-					</div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="img aos-init aos-animate" data-aos="zoom-in">
-                    <img src="{{url('/mediaimages/fact-check-movement-media.png')}}" alt="" style="height: 300px;"> 
-					<div class="mem-content-n">
-						<button onclick="window.location.href='{{ route('media.explore') }}'">Explore</button>
-						<ul class="cmt-list">
-							<li><strong>Movement:</strong>Boycott</li>
-							<li><strong>Collection:</strong>Propaganda</li>
-							<li><strong>Mission:</strong>Hold institutions accountable for biased influence.</li>
-						</ul>
-					</div>
-                </div>
-            </div>
         </div>
 
     <h3>US Policy Change - Political Expulsion on Fashion of Conscience</h3>
