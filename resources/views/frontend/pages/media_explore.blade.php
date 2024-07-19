@@ -8,12 +8,12 @@
 				<div class="cl-md-6">
 					<div class="cmt-head-left">
 						<div class="cmt-head-img">
-							<img src="{{url('/mediaimages/boycott-movement-media.png')}}"/>
+							<img src="{{fileToUrl($collection->blog_image)}}"/>
 						</div>
 						<div class="cmt-head-cont">
 							<ul class="cmt-list">
 								<li><strong>Movement:</strong>Boycott</li>
-								<li><strong>Collection:</strong>Oversight</li>
+								<li><strong>Collection:</strong>{{$collection->title}}</li>
 								<li><strong>Mission:</strong>Hold institutions accountable for biased influence.</li>
 							</ul>
 						</div> 

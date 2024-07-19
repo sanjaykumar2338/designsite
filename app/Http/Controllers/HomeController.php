@@ -120,14 +120,17 @@ class HomeController extends Controller
         return view('frontend.pages.userdashboard')->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle);
     }
 
-    public function media_explore()
+    public function media_explore(Request $request)
     {
+       
         $metaDescription = 'Join the Cause Stand community of activists to challenge U.S. policies, expose corruption, advocate for justice, and print your voice on clothing.';
         $keywords = 'activist community, U.S. policy change, advocacy apparel, expose corruption, social justice, open source media sharing platform';
         $pageTitle = 'Activist Community Feeds - Empowered Political Justice Merch';
         $metaTitle = 'Clothing Media Sharing Platform for Political Justice - Cause Stand';
 
-        return view('frontend.pages.media_explore')->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle);
+        $collection = Collections::where('slug', $request->collection)->first();
+        
+        return view('frontend.pages.media_explore')->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle)->with('collection' , $collection);
     }    
 
     public function blog()
