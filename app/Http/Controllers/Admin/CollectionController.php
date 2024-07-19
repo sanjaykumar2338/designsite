@@ -92,6 +92,10 @@ class CollectionController extends Controller
         $blog->meta_description = $request->input('meta_description');
         $blog->meta_keywords = $request->input('meta_keywords');
 
+        $blog->movement = $request->input('movement');
+        $blog->mission = $request->input('mission');
+        $blog->donations_to = $request->input('donations_to');
+
         $slug = Str::slug($request->input('title'));
         $existingSlug = Collections::where('slug', $slug)->exists();
 
@@ -179,6 +183,10 @@ class CollectionController extends Controller
         $blog->meta_title = $request->input('meta_title');
         $blog->meta_description = $request->input('meta_description');
         $blog->meta_keywords = $request->input('meta_keywords');
+
+        $blog->movement = $request->input('movement');
+        $blog->mission = $request->input('mission');
+        $blog->donations_to = $request->input('donations_to');
 
         $slug = Str::slug($request->input('title'));
         $existingSlug = Collections::where('slug', $slug)->where('id','!=',$id)->exists();

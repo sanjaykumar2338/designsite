@@ -44,6 +44,21 @@
                 </div>
 
                 <div class="mb-3 mt-3">
+                  <label for="product_name">Movement:</label>
+                  <input type="text" class="form-control" id="movement" placeholder="Enter Movement" name="movement">
+                </div>
+
+                <div class="mb-3 mt-3">
+                  <label for="product_name">Mission:</label>
+                  <input type="text" class="form-control" id="mission" placeholder="Enter Mission" name="mission">
+                </div>
+
+                <div class="mb-3 mt-3">
+                  <label for="product_name">Donations to:</label>
+                  <input type="text" class="form-control" id="title" placeholder="Enter Title" name="donations_to">
+                </div>
+
+                <div class="mb-3 mt-3">
                   <label for="product_name">Description:</label>
                   <textarea name="description" cols="5" id="description" class="form-control">{{$blog->description}}</textarea>
                 </div>
