@@ -54,10 +54,10 @@
                   <a href="{{fileToUrl($blog->feature_image)}}" target="_blank">View Feature Image</a>
                 </div>
 
-                <div class="mb-3 mt-3" style="display:none;">
-                  <label for="image">Blog Image:</label>
+                <div class="mb-3 mt-3" style="">
+                  <label for="image">Media Image:</label>
                   <input type="file" class="form-control" id="blog_image" name="blog_image">
-                  <a href="{{fileToUrl($blog->blog_image)}}" target="_blank">View Blog Image</a>
+                  <a href="{{fileToUrl($blog->blog_image)}}" target="_blank">View Media Image</a>
                 </div>
 
                 <div class="mb-3 mt-3">

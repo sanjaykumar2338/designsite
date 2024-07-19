@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
 use App\Models\User;
 use App\Models\Blogs;
+use App\Models\Collections;
 use App\Models\Contacts;
 use App\Models\PrintfulOrder;
 use App\Models\Payment;
@@ -103,8 +104,9 @@ class HomeController extends Controller
         $keywords = 'activist community, U.S. policy change, advocacy apparel, expose corruption, social justice, open source media sharing platform';
         $pageTitle = 'Activist Community Feeds - Empowered Political Justice Merch';
         $metaTitle = 'Clothing Media Sharing Platform for Political Justice - Cause Stand';
+        $collections = Collections::all();
 
-        return view('frontend.pages.media')->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle);
+        return view('frontend.pages.media')->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle)->with('collections' , $collections);
     }
 
     public function userdashboard()
@@ -114,6 +116,7 @@ class HomeController extends Controller
         $pageTitle = 'Activist Community Feeds - Empowered Political Justice Merch';
         $metaTitle = 'Clothing Media Sharing Platform for Political Justice - Cause Stand';
 
+        
         return view('frontend.pages.userdashboard')->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle);
     }
 

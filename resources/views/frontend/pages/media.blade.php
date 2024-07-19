@@ -28,19 +28,23 @@
         <p>Claiming to defend civil values, U.S. policies have often caused international conflicts, binding the will of the free. Through our voices stamped on our clothing, we seek legal reforms, policy changes, and institutional improvements. We advocate for fairness and accountability in governance and take a fashionable approach to combat political corruption, advocate for human rights, and ensure equal ideological representation.</p>
 
         <div class="row">
-            <div class="col-lg-3 col-md-6">
-                <div class="img aos-init aos-animate" data-aos="zoom-in">
-                    <img src="{{url('/mediaimages/boycott-movement-media.png')}}" alt="" style="height: 300px;"> 
-					<div class="mem-content-n">
-						<button onclick="window.location.href='{{ route('media.explore') }}'">Explore</button>
-						<ul class="cmt-list">
-							<li><strong>Movement:</strong>Boycott</li>
-							<li><strong>Collection:</strong>Oversight</li>
-							<li><strong>Mission:</strong>Hold institutions accountable for biased influence.</li>
-						</ul>
-					</div>
+            
+            @foreach($collections as $collection)
+                <div class="col-lg-3 col-md-6">
+                    <div class="img aos-init aos-animate" data-aos="zoom-in">
+                        <img src="{{fileToUrl($collection->blog_image)}}" alt="" style="height: 300px;"> 
+                        <div class="mem-content-n">
+                            <button onclick="window.location.href='{{ route('media.explore', $collection->slug) }}'">Explore</button>
+                            <ul class="cmt-list">
+                                <li><strong>Movement:</strong>Boycott</li>
+                                <li><strong>Collection:</strong>{{$collection->title}}</li>
+                                <li><strong>Mission:</strong>Hold institutions accountable for biased influence.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            @endforeach
+
             <div class="col-lg-3 col-md-6">
                 <div class="img aos-init aos-animate" data-aos="zoom-in">
                     <img src="{{url('/mediaimages/integrity-reform-movement-media.png')}}" alt="" style="height: 300px;"> 
@@ -82,7 +86,7 @@
             </div>
         </div>
 
-        <h3>US Policy Change - Political Expulsion on Fashion of Conscience</h3>
+    <h3>US Policy Change - Political Expulsion on Fashion of Conscience</h3>
     <p>We seek to change U.S. international policies, loosen the grip of foreign influence, and stand loudly for just causes. Our collections aim to shed light on and eject corrupt lawmakers from the offices they disgrace. Our designs highlight American political corruption that caused global injustices.</p>
 
     <h3>Shining Light on Injustice through Fashion Collections</h3>
