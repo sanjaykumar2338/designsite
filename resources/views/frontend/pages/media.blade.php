@@ -32,7 +32,7 @@
             @foreach($collections as $collection)
                 <div class="col-lg-3 col-md-6">
                     <div class="img aos-init aos-animate" data-aos="zoom-in">
-                        <img src="{{fileToUrl($collection->blog_image)}}" alt="" style="height: 300px;"> 
+                        <img src="{{fileToUrl($collection->blog_image)}}" alt=""> 
                         <div class="mem-content-n">
                             <button onclick="window.location.href='{{ route('media.explore', $collection->slug) }}'">Explore</button>
                             <ul class="cmt-list">

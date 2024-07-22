@@ -2659,3 +2659,195 @@
     padding-bottom: 0 !important;
     font-size: 26px !important;
 }
+/* User dashborad */
+.us-dashborad {
+    padding: 30px 0;
+}
+
+.user-sidebar {
+    width: 25%;
+}
+
+.user-content {
+    width: 75%;
+}
+
+.user-img img {
+    width: 100%;
+    max-width: 150px;
+    margin: 0 auto;
+    display: block;
+    border: 2px solid #eb3e32;
+    border-radius: 50%;
+    padding: 5px;
+    height: 150px;
+    object-fit: cover;
+}
+.user-img h4 {
+    text-align: center;
+    margin: 10px 0 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+.user-sidebar-inner {
+    padding: 35px 20px;
+    border-radius: 5px;
+    border: 1px solid #eee;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    height: 100%;
+}
+
+.user-content-inner {
+    border-radius: 5px;
+    background: #f7f7f7;
+    padding: 20px;
+    border: 1px solid #eee;
+}
+
+.us-menu-main ul {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.user-img {
+    margin: 0 0 30px;
+}
+
+.us-menu-main ul li a {
+    color: #434343;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    display: block;
+}
+.us-menu-main ul li a i {
+    font-size: 14px;
+    margin-right: 5px;
+}
+ul.us-menu-sub {
+    padding: 8px 15px;
+    background-color: #f9f9f9;
+}
+.us-menu-sub li a {
+    font-size: 16px !important;
+}
+
+.us-menu-main ul li {
+    padding: 6px 0;
+}
+
+.us-menu-main ul li a:hover, .us-menu-main ul li a.active  {
+    color: #eb3e32;
+}
+
+.us-head {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 0 20px;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.us-head-menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+.us-head-menu ul li a {
+    font-size: 15px;
+    text-decoration: none;
+    color: #666;
+}
+
+.us-head-menu ul li {
+    line-height: normal;
+    margin: 5px 15px 5px 0px;
+}
+
+.us-head-menu ul li a:hover, .us-head-menu ul li.active a {
+    color: #eb3e32;
+}
+
+.us-head-social ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+.us-head-social ul li {
+    margin: 0 0 0 5px;
+}
+
+.us-head-social ul li a {
+    background-color: #fff;
+    padding: 6px 6px;
+    width: 35px;
+    display: inline-block;
+    height: 35px;
+    line-height: 24px;
+    font-size: 14px;
+    color: #000;
+    border-radius: 5px;
+    transition: all 0.3s;
+    border: 1px solid #f5f5f5;
+}
+
+.us-head-social ul li a:hover {
+    background-color: #eb3e32;
+    color: #fff;
+}
+
+.us-order-main h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 20px;
+}
+
+.bought-img img {
+    width: 100%;
+    display: block;
+}
+
+.bought-content h3 {
+    font-size: 16px;
+    margin: 0 0 15px;
+}
+
+.bought-content {
+    padding: 15px 0 0;
+}
+
+.bought-content a {
+    background: #eb3e32;
+    border: 1px solid #eb3e32;
+    color: #fff;
+    padding: 10px 30px;
+    line-height: normal;
+    display: inline-block;
+    margin: 0 0 10px;
+    font-weight: 500;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.bought-bs {
+    border-radius: 10px;
+    background: #FFF;
+    padding: 10px;
+    border: 1px solid #eee;
+    margin: 0 0 20px;
+    transition: all 0.3s;
+}
+
+.bought-bs:hover {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 6px 20px;
+}
+/* End User dashborad */

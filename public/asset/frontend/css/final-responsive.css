@@ -915,6 +915,57 @@
 .prd-sze select {
     max-width: 100%;
 }	
+
+/* User dashborad */
+.us-head-menu {
+    width: 100%;
+}
+
+.us-head-menu ul {
+    justify-content: center;
+}
+
+.us-head-social ul {
+    justify-content: center;
+}
+
+.us-head-social {
+    width: 100%;
+    margin: 8px 0 0;
+}
+
+.us-head-social ul li {
+    margin: 0 4px;
+}
+
+.us-head-menu ul li {
+    margin: 5px 5px;
+}
+.user-sidebar {
+    width: 100%;
+    margin: 0 0 30px;
+}
+
+.user-content {
+    width: 100%;
+}
+
+.us-menu-main ul li a {
+    font-size: 16px;
+}
+
+.us-head-menu ul li a {
+    font-size: 12px;
+}
+
+.us-order-main h2 {
+    font-size: 26px;
+    margin: 0 0 15px;
+}
+.us-menu-sub li a {
+    font-size: 14px !important;
+}
+/* End User dashborad */
 }
 
 
