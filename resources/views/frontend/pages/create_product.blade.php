@@ -103,7 +103,7 @@
 
                     @if(Auth::check())
                         @if(auth()->user()->email=='admin@gmail.com')
-                            <a class="place-btn" target="_blank" href="{{url('/')}}/admin/products/{{$product->id}}/edit">Update Product Info</a> <a class="place-btn"  target="_blank" href="{{url('/')}}/admin/products/create_template/{{$product->id}}">Desgin Template</a>
+                            <a class="place-btn" style="font-size:8px;" target="_blank" href="{{url('/')}}/admin/products/{{$product->id}}/edit">Update Product Info</a> <a style="font-size:8px;" class="place-btn"  target="_blank" href="{{url('/')}}/admin/products/create_template/{{$product->id}}">Desgin Template</a>
                             <br><br>
                         @endif
                     @endif
@@ -472,7 +472,7 @@
                         <input type="text" id="cd_zip"
                             class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" value=""
                             placeholder="Zip code" name="cd_zip" required />
-                        <label class="font-medium text-gray-800">Country*</label><br>
+                        <label class="font-medium text-gray-800 country_label">Country*</label><br>
                         <select style="height: 40px; border: 1px solid #eee"
                             class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" name="country" id="country"
                             onchange="onCountrySelect()">
@@ -729,5 +729,24 @@
             }
         });
         */
+    </script>
+
+    <script>
+        window.addEventListener('load', function() {
+            // Get the country dropdown element
+            var countryDropdown = document.getElementById('country');
+            var country_label = document.querySelector('.country_label');
+
+            // Select the second option
+            if (countryDropdown.options.length > 1) {
+                countryDropdown.selectedIndex = 1;
+
+                // Trigger the change event
+                var event = new Event('change');
+                countryDropdown.dispatchEvent(event);
+                countryDropdown.style.display = 'none';
+                country_label.style.display = 'none';
+            }
+        });
     </script>
 @endsection

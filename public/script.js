@@ -954,9 +954,6 @@ function addCustomImage(imgUrl) {
 }
 
 function addImage(imgUrl) {
-    // const imgUrl =
-    //   "https://cloudfour.com/examples/img-currentsrc/images/kitten-small.png";
-
     fabric.Image.fromURL(
         imgUrl,
         function (oImg) {
@@ -970,25 +967,41 @@ function addImage(imgUrl) {
             const canvasWidth = canvas.getWidth();
             const canvasHeight = canvas.getHeight();
 
-            // Scale the image to fit the canvas while maintaining aspect ratio
-            oImg.scaleToWidth(canvasWidth - 120);
-            oImg.scaleToHeight(canvasHeight - 120);
+            // Calculate the aspect ratio of the image and the canvas
+            const imgAspectRatio = oImg.width / oImg.height;
+            const canvasAspectRatio = canvasWidth / canvasHeight;
 
-            // Center the image on the canvas
-            oImg.set({
-                left: canvasWidth / 2,
-                top: canvasHeight / 2,
-                originX: 'center',
-                originY: 'center',
-                selectable: true,  // Make the image selectable and resizable
-                hasControls: true,
-                hasBorders: true
-            });
+            // Scale the image to fit within the canvas, maintaining the aspect ratio
+            if (imgAspectRatio > canvasAspectRatio) {
+                // Image is wider than the canvas
+                oImg.scaleToWidth(canvasWidth-20);
+                oImg.set({
+                    left: canvasWidth / 2,
+                    top: canvasHeight / 2,
+                    originX: 'center',
+                    originY: 'center',
+                    selectable: true,
+                    hasControls: true,
+                    hasBorders: true
+                });
+            } else {
+                // Image is taller than the canvas or the same aspect ratio
+                oImg.scaleToHeight(canvasHeight-20);
+                oImg.set({
+                    left: canvasWidth / 2,
+                    top: canvasHeight / 2,
+                    originX: 'center',
+                    originY: 'center',
+                    selectable: true,
+                    hasControls: true,
+                    hasBorders: true
+                });
+            }
 
             // Add the image to the canvas
             canvas.add(oImg);
 
-            // Bring the image to the front if necessary
+            // Bring the image to the front
             canvas.bringToFront(oImg);
         },
         { crossOrigin: "Anonymous" }
@@ -996,6 +1009,7 @@ function addImage(imgUrl) {
 
     setShowModal(false);
 }
+
 
 function addObjectImage(imgUrl) {
     
