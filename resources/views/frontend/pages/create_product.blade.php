@@ -103,6 +103,7 @@
 
                     @if(Auth::check())
                         @if(auth()->user()->email=='admin@gmail.com')
+                            <br> <br>
                             <a class="place-btn" style="font-size:8px;" target="_blank" href="{{url('/')}}/admin/products/{{$product->id}}/edit">Update Product Info</a> <a style="font-size:8px;" class="place-btn"  target="_blank" href="{{url('/')}}/admin/products/create_template/{{$product->id}}">Desgin Template</a>
                             <br><br>
                         @endif
