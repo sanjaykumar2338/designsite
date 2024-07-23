@@ -962,27 +962,38 @@ function addImage(imgUrl) {
         function (oImg) {
             if (oImg._element == null) {
                 alert(
-                    "Cant access the file! Please download the image and upload it from local storage"
+                    "Can't access the file! Please download the image and upload it from local storage"
                 );
-                // Toastify({
-                //     text: "Please download the image and upload it from local storage",
-                //     style: {
-                //         background: "red",
-                //     },
-                // }).showToast();
                 return;
             }
-            // oImg.scale(0.5);
-            const h = canvas.getHeight();
-            const w = canvas.getWidth();
-            // oImg.set("top", h / 4);
-            // oImg.set("left", w / 4);
-            oImg.scaleToHeight(h);
-            oImg.scaleToWidth(w);
+
+            const canvasWidth = canvas.getWidth();
+            const canvasHeight = canvas.getHeight();
+
+            // Scale the image to fit the canvas while maintaining aspect ratio
+            oImg.scaleToWidth(canvasWidth - 120);
+            oImg.scaleToHeight(canvasHeight - 120);
+
+            // Center the image on the canvas
+            oImg.set({
+                left: canvasWidth / 2,
+                top: canvasHeight / 2,
+                originX: 'center',
+                originY: 'center',
+                selectable: true,  // Make the image selectable and resizable
+                hasControls: true,
+                hasBorders: true
+            });
+
+            // Add the image to the canvas
             canvas.add(oImg);
+
+            // Bring the image to the front if necessary
+            canvas.bringToFront(oImg);
         },
         { crossOrigin: "Anonymous" }
     );
+
     setShowModal(false);
 }
 
