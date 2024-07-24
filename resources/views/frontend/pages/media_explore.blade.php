@@ -18,6 +18,7 @@
 							</ul>
 						</div> 
 					</div>
+					
 				</div>
 				<div class="cl-md-6">
 					<div class="cmt-head-right">

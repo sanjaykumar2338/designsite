@@ -123,6 +123,7 @@ class HomeController extends Controller
     public function media_explore(Request $request)
     {
        
+        
         $metaDescription = 'Join the Cause Stand community of activists to challenge U.S. policies, expose corruption, advocate for justice, and print your voice on clothing.';
         $keywords = 'activist community, U.S. policy change, advocacy apparel, expose corruption, social justice, open source media sharing platform';
         $pageTitle = 'Activist Community Feeds - Empowered Political Justice Merch';
