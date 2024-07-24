@@ -22,9 +22,9 @@
 				<div class="cl-md-6">
 					<div class="cmt-head-right">
 						<ul class="cmt-list">
-								<li><strong>Members:</strong>1511</li>
-								<li><strong>Donations:</strong>$2587</li>
-								<li><strong>Donations to:</strong>non-profit name</li>
+								<li><strong>Members:</strong>{{$total_member}}</li>
+								<li><strong>Donations:</strong>{{$donation}}</li>
+								<li><strong>Donations to:</strong>Doctors Without Borders, USA</li>
 							</ul>
 					</div>
 				</div>

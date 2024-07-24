@@ -129,8 +129,10 @@ class HomeController extends Controller
         $metaTitle = 'Clothing Media Sharing Platform for Political Justice - Cause Stand';
 
         $collection = Collections::where('slug', $request->collection)->first();
+        $donation = PrintfulOrder::where('predesign_order','yes')->sum('donation_amount');
+        $total_member = PrintfulOrder::where('predesign_order','yes')->count();
         
-        return view('frontend.pages.media_explore')->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle)->with('collection' , $collection);
+        return view('frontend.pages.media_explore')->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle)->with('collection' , $collection)->with('donation' , $donation)->with('total_member' , $total_member);
     }    
 
     public function blog()
