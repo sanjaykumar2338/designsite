@@ -108,10 +108,12 @@ class UserController extends Controller
         try {
             $predesign_order = 'no';
             $collection = '';
+            $donation = 0;
 
             if(isset($request->predesign_order) && $request->predesign_order!=""){
                 $predesign_order = $request->predesign_order;
                 $collection = $request->collection;
+                $donation = 10;
             }
 
             $_request = json_decode($request->getContent());
@@ -121,6 +123,7 @@ class UserController extends Controller
             $order->payment_id = $_request->payment_id;
             $order->predesign_order = $predesign_order;
             $order->collection = $collection;
+            $order->donation_amount = $donation;
             $order->total_amount = $request->total;
             $order->product_price = $request->product_price;
             $order->printful_order_id = json_decode($_request->printful_order_data,true)['id'];
