@@ -110,7 +110,7 @@ class UserController extends Controller
             $collection = '';
 
             if(isset($request->predesign_order) && $request->predesign_order!=""){
-                $predesign_order = $request->predesign_orderl;
+                $predesign_order = $request->predesign_order;
                 $collection = $request->collection;
             }
 
