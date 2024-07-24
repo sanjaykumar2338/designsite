@@ -1262,7 +1262,8 @@ function saveOrder(data) {
         payment_id: localStorage.getItem("payment_id"),
         total:totalPrice,
         predesign_order:'yes',
-        product_price: document.querySelector('.product_price').getAttribute('data-exact')
+        product_price: document.querySelector('.product_price').getAttribute('data-exact'),
+        collection: document.getElementById('collection').value
     });
 
     var requestOptions = {

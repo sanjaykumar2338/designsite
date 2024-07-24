@@ -5,6 +5,8 @@
     <input type="hidden" name="product_ids" value="{{$product->id}}">
     <input type="hidden" name="front_image" id="front_image" value="{{$front}}">
     <input type="hidden" name="back_image" id="back_image" value="{{$back}}">
+    <input type="hidden" name="collection" id="collection" value="{{$collection->id}}">
+
     
     @if($boycott->blog_image || $boycott->back_design_image)
         <input type="hidden" name="text_object" id="text_object" value="">
