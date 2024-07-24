@@ -109,9 +109,9 @@ class UserController extends Controller
             $predesign_order = 'no';
             $collection = '';
 
-            if(isset($_request->predesign_order) && $_request->predesign_order!=""){
-                $predesign_order = $_request->predesign_orderl;
-                $collection = $_request->collection;
+            if(isset($request->predesign_order) && $request->predesign_order!=""){
+                $predesign_order = $request->predesign_orderl;
+                $collection = $request->collection;
             }
 
             $_request = json_decode($request->getContent());
