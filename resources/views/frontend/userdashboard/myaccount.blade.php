@@ -4,34 +4,9 @@
 <div class="us-dashborad">
 	<div class="container">
 		<div class="row">
-			<div class="user-sidebar">
-				<div class="user-sidebar-inner">
-					<div class="user-img">
-						<img src="https://causestand.com/storage/images/ysbJQNOkIsc3Nhks5tOH4eaBU95B8R9AsLAZ5kSw.png"/>
-						<h4>Wecome xyz</h4>
-					</div>
-					<div class="us-menu-main">
-						<ul class="us-menu">
-							<li><a href="#">My Account</a></li>
-							<li>
-								<a class="active" href="#">Order</a>
-								<ul class="us-menu-sub">
-									<li><a href="#"><i class="fa-solid fa-angle-right"></i> Histroy</a></li>
-									<li><a href="#"><i class="fa-solid fa-angle-right"></i> Designed Used</a></li>
-								</ul>
-							</li>
-							<li><a href="#">Community Subscriptions</a></li>
-							<li><a href="#">Coupons</a></li>
-							<li>
-								<a href="#">Dontation</a>
-								<ul class="us-menu-sub">
-									<li><a href="#"><i class="fa-solid fa-angle-right"></i> Report & Receipts</a></li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
+			
+			@include('frontend.userdashboard.sidebar')
+
 			<div class="user-content">
 				<div class="user-content-inner">
 					<div class="us-head">

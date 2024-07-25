@@ -166,6 +166,13 @@ Route::group(['middleware' => 'check.auth'], function () {
     Route::get('/invoice/{id}', [App\Http\Controllers\HomeController::class, 'invoice'])->name('invoice');
 });
 
+Route::group(['prefix' => 'dashboard','middleware' => 'check.auth'], function () {
+    //new user dashboard
+    Route::get('/', [App\Http\Controllers\UserDashboardController::class, 'index'])->name('index');
+    Route::get('/myaccount', [App\Http\Controllers\UserDashboardController::class, 'myaccount'])->name('myaccount');
+    Route::post('/updateprofile', [App\Http\Controllers\UserDashboardController::class, 'updateprofile'])->name('updateprofile');
+});
+
 Route::get('/update_order_status', [App\Http\Controllers\HomeController::class, 'update_order_status'])->name('update_order_status');
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::post('/save_review', [App\Http\Controllers\HomeController::class, 'save_review'])->name('save_review');
@@ -185,7 +192,6 @@ Route::get('/aboutus', [App\Http\Controllers\HomeController::class, 'aboutus'])-
 Route::get('/conflicts', [App\Http\Controllers\HomeController::class, 'conflicts'])->name('conflicts');
 Route::get('/causes', [App\Http\Controllers\HomeController::class, 'causes'])->name('causes');
 
-Route::get('/userdashboard', [App\Http\Controllers\HomeController::class, 'userdashboard'])->name('userdashboard');
 Route::get('/media', [App\Http\Controllers\HomeController::class, 'media'])->name('media');
 Route::get('/media/explore/{collection}', [App\Http\Controllers\HomeController::class, 'media_explore'])->name('media.explore');
 
