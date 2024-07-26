@@ -170,6 +170,8 @@ Route::group(['prefix' => 'dashboard','middleware' => 'check.auth'], function ()
     //new user dashboard
     Route::get('/', [App\Http\Controllers\UserDashboardController::class, 'index'])->name('index');
     Route::get('/myaccount', [App\Http\Controllers\UserDashboardController::class, 'myaccount'])->name('myaccount');
+    Route::get('/history', [App\Http\Controllers\UserDashboardController::class, 'myaccount'])->name('history');
+    Route::get('/designed_used', [App\Http\Controllers\UserDashboardController::class, 'myaccount'])->name('designed_used');
     Route::post('/updateprofile', [App\Http\Controllers\UserDashboardController::class, 'updateprofile'])->name('updateprofile');
 });
 

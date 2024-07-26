@@ -12,9 +12,8 @@
 					<div class="us-head">
 						<div class="us-head-menu">
 							<ul>
-								<li class="active"><a href="#">Dummy 1</a></li>
-								<li><a href="#">Dummy 2</a></li>
-								<li><a href="#">Dummy 3</a></li>
+								<li><a href="#">Order</a></li>
+								<li class="active"><a href="#">History</a></li>
 							</ul>
 						</div>
 						<div class="us-head-social">
@@ -27,108 +26,32 @@
 						</div>
 					</div>
 					<div class="us-order-main">
-						<h2>User Bought Products</h2>
+						<h2></h2>
 						<div class="us-bought">
 							<div class="row">
-								<div class="col-lg-4 col-md-6">
-									<div class="bought-bs">
-										<div class="bought-img">
-											<img src="https://causestand.com/storage/images/YHiWwjDTr1S8yejUsA6tKpifJ0qAfoiElN9kEedk.webp"/>
-										</div>
-										<div class="bought-content">
-											<h3>Unisex Tri-Blend T-Shirt | Bella</h3>
-											<a href="#">Learn More</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-4 col-md-6">
-									<div class="bought-bs">
-										<div class="bought-img">
-											<img src="https://causestand.com/storage/images/YHiWwjDTr1S8yejUsA6tKpifJ0qAfoiElN9kEedk.webp"/>
-										</div>
-										<div class="bought-content">
-											<h3>Unisex Tri-Blend T-Shirt | Bella</h3>
-											<a href="#">Learn More</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-4 col-md-6">
-									<div class="bought-bs">
-										<div class="bought-img">
-											<img src="https://causestand.com/storage/images/YHiWwjDTr1S8yejUsA6tKpifJ0qAfoiElN9kEedk.webp"/>
-										</div>
-										<div class="bought-content">
-											<h3>Unisex Tri-Blend T-Shirt | Bella</h3>
-											<a href="#">Learn More</a>
+								
+							@if($orders) 
+            					@foreach($orders as $order) 
+									<div class="col-lg-4 col-md-6">
+										<div class="bought-bs">
+											<div class="bought-img">
+												<img src="https://causestand.com/storage/images/YHiWwjDTr1S8yejUsA6tKpifJ0qAfoiElN9kEedk.webp"/>
+											</div>
+
+											@php
+												$data = json_decode($order->printful_order_data, true);
+												$url = url('/').'/stand-with-'.strtolower($order->supporting_country).'/shop/'.strtolower($order->product_for).'/'.strtolower($order->product_type).'/'.$order->product_slug;                        
+											@endphp
+
+											<div class="bought-content">
+												<h3>{{$order->website_product_name}}</h3>
+												<a href="{{$url}}" target="_blank">Buy Again</a>
+											</div>
 										</div>
 									</div>
-								</div>
-								<div class="col-lg-4 col-md-6">
-									<div class="bought-bs">
-										<div class="bought-img">
-											<img src="https://causestand.com/storage/images/YHiWwjDTr1S8yejUsA6tKpifJ0qAfoiElN9kEedk.webp"/>
-										</div>
-										<div class="bought-content">
-											<h3>Unisex Tri-Blend T-Shirt | Bella</h3>
-											<a href="#">Learn More</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-4 col-md-6">
-									<div class="bought-bs">
-										<div class="bought-img">
-											<img src="https://causestand.com/storage/images/YHiWwjDTr1S8yejUsA6tKpifJ0qAfoiElN9kEedk.webp"/>
-										</div>
-										<div class="bought-content">
-											<h3>Unisex Tri-Blend T-Shirt | Bella</h3>
-											<a href="#">Learn More</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-4 col-md-6">
-									<div class="bought-bs">
-										<div class="bought-img">
-											<img src="https://causestand.com/storage/images/YHiWwjDTr1S8yejUsA6tKpifJ0qAfoiElN9kEedk.webp"/>
-										</div>
-										<div class="bought-content">
-											<h3>Unisex Tri-Blend T-Shirt | Bella</h3>
-											<a href="#">Learn More</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-4 col-md-6">
-									<div class="bought-bs">
-										<div class="bought-img">
-											<img src="https://causestand.com/storage/images/YHiWwjDTr1S8yejUsA6tKpifJ0qAfoiElN9kEedk.webp"/>
-										</div>
-										<div class="bought-content">
-											<h3>Unisex Tri-Blend T-Shirt | Bella</h3>
-											<a href="#">Learn More</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-4 col-md-6">
-									<div class="bought-bs">
-										<div class="bought-img">
-											<img src="https://causestand.com/storage/images/YHiWwjDTr1S8yejUsA6tKpifJ0qAfoiElN9kEedk.webp"/>
-										</div>
-										<div class="bought-content">
-											<h3>Unisex Tri-Blend T-Shirt | Bella</h3>
-											<a href="#">Learn More</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-4 col-md-6">
-									<div class="bought-bs">
-										<div class="bought-img">
-											<img src="https://causestand.com/storage/images/YHiWwjDTr1S8yejUsA6tKpifJ0qAfoiElN9kEedk.webp"/>
-										</div>
-										<div class="bought-content">
-											<h3>Unisex Tri-Blend T-Shirt | Bella</h3>
-											<a href="#">Learn More</a>
-										</div>
-									</div>
-								</div>
+								@endforeach
+							@endif 
+
 							</div>
 						</div>
 					</div>

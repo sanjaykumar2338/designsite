@@ -13,10 +13,10 @@
                 
                 <li><a class="{{\Request::route()->getName()=='index' ? 'active': ''}}" href="{{route('index')}}">My Account</a></li>
                 <li>
-                    <a class="{{\Request::route()->getName()=='myaccount' ? 'active': ''}}" href="{{route('myaccount')}}">Order</a>
+                    <a class="{{\Request::route()->getName()=='myaccount' || \Request::route()->getName()=='history' || \Request::route()->getName()=='designed_used' ? 'active': ''}}" href="{{route('myaccount')}}">Order</a>
                     <ul class="us-menu-sub">
-                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> Histroy</a></li>
-                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> Designed Used</a></li>
+                        <li><a href="{{route('history')}}"><i class="fa-solid fa-angle-right {{\Request::route()->getName()=='history' ? 'active': ''}}"></i> Histroy</a></li>
+                        <li><a href="{{route('designed_used')}}"><i class="fa-solid fa-angle-right"></i> Designed Used</a></li>
                     </ul>
                 </li>
                 <li><a href="#">Community Subscriptions</a></li>
