@@ -211,8 +211,15 @@ class HomeController extends Controller
         if (auth()->user()->email == 'admin@gmail.com') {
             return redirect('admin');
         } else {
-            $email = auth()->user()->email;
-            $orders = PrintfulOrder::join('users', 'users.email', '=', 'printful_orders.customer_email')->join('products', 'products.id', '=', 'printful_orders.product_id')->join('payments', 'payments.id', '=', 'printful_orders.payment_id')->select('products.*','printful_order_data','payment_intent_id','payments.amount as amt','products.supporting_country','products.product_for','products.product_type','printful_orders.total_amount','printful_orders.product_price','printful_orders.id','print_order_status')->where('printful_orders.customer_email',$email)->orderBy('printful_orders.created_at','desc')->paginate(7);
+            
+
+            $id = auth()->user()->id;
+            $orders = PrintfulOrder::join('users', 'users.email', '=', 'printful_orders.customer_email')->join('products', 'products.id', '=', 'printful_orders.product_id')->join('payments', 'payments.id', '=', 'printful_orders.payment_id')->select('products.*','printful_order_data','payment_intent_id','payments.amount as amt','products.supporting_country','products.product_for','products.product_type','printful_orders.total_amount','printful_orders.product_price','printful_orders.id','print_order_status')->where('printful_orders.user_id',$id)->orderBy('printful_orders.created_at','desc')->paginate(7);
+
+            if($orders->count()==0){
+                $email = auth()->user()->email;
+                $orders = PrintfulOrder::join('users', 'users.email', '=', 'printful_orders.customer_email')->join('products', 'products.id', '=', 'printful_orders.product_id')->join('payments', 'payments.id', '=', 'printful_orders.payment_id')->select('products.*','printful_order_data','payment_intent_id','payments.amount as amt','products.supporting_country','products.product_for','products.product_type','printful_orders.total_amount','printful_orders.product_price','printful_orders.id','print_order_status')->where('printful_orders.customer_email',$email)->orderBy('printful_orders.created_at','desc')->paginate(7);
+            }
 
             return view('frontend.pages.my_account')->with('activeLink', 'orders')->with('orders', $orders);
         }

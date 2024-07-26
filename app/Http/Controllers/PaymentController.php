@@ -46,18 +46,18 @@ class PaymentController extends Controller
 
             if (Auth::check()) {
                 $payment->user_id = auth()->user()->id;
-
                 $user = User::find(auth()->user()->id);
-
                 $latestOrder = PrintfulOrder::where('user_id', auth()->user()->id)->orderBy('created_at', 'desc')->first();
-                $id = $latestOrder->id;
+                if($latestOrder){
+                    $id = $latestOrder->id;
 
-                $order = PrintfulOrder::where('id',$id)->first();
-                $data = json_decode($order->printful_order_data, true);
-                //$payment2 = \DB::table('payments')->where('id',$order->payment_id)->first();
+                    $order = PrintfulOrder::where('id',$id)->first();
+                    $data = json_decode($order->printful_order_data, true);
+                    //$payment2 = \DB::table('payments')->where('id',$order->payment_id)->first();
 
-                // Send order placed email
-                Mail::to(auth()->user()->email)->send(new OrderPlaced($payment, $user, $data));
+                    // Send order placed email
+                    Mail::to(auth()->user()->email)->send(new OrderPlaced($payment, $user, $data));
+                }
             }
 
             return response()->json(['success' => true, 'message' => 'Payment successful','payment_id' => $payment->id]);
