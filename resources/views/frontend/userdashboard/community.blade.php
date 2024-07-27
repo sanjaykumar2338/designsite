@@ -16,14 +16,7 @@
 								<li class="active"><a href="#">History</a></li>
 							</ul>
 						</div>
-						<div class="us-head-social">
-							<ul>
-								<li><a href="https://www.facebook.com/causestand" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
-								<li><a href="https://www.instagram.com/standcause" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-								<li><a href="https://www.tiktok.com/@cause.stand" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
-								<li><a href="https://www.youtube.com/@CauseStand" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
-							</ul>
-						</div>
+						
 					</div>
 					<div class="us-order-main">
 						<h2></h2>
