@@ -13,7 +13,7 @@
 						<div class="us-head-menu">
 							<ul>
 								<li><a href="#">Order</a></li>
-								<li class="active"><a href="#">History</a></li>
+								<li class="active"><a href="#">Community</a></li>
 							</ul>
 						</div>
 						
