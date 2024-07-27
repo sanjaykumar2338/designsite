@@ -48,7 +48,18 @@
 
 											<div class="bought-content">
 												<h3>{{$order->website_product_name}}</h3>
-												<a href="{{$url}}" target="_blank">Buy Again</a>
+
+												@if($order->predesign_order!='yes')
+													<a href="{{$url}}" target="_blank">Buy Again</a>
+												@else
+													@php
+														$product = \DB::table('pre_products')->where('id', $order->product_id)->first();
+														$collection = \DB::table('collections')->where('id', $order->collection)->first();
+
+														$url = url('/shop').$collection->slug;
+													@endphp
+													<a href="{{$url}}" target="_blank">Buy Again</a>
+												@endif
 											</div>
 										</div>
 									</div>
