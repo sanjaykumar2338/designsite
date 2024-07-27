@@ -15,11 +15,18 @@ class UserDashboardController extends Controller
         return view('frontend.userdashboard.index');
     }
 
+    public function community(Request $request){
+        $users = PrintfulOrder::join('users','users.id','=','printful_orders.user_id')->select('users.*')->where('printful_orders..predesign_order','yes')->paginate(5);
+
+        //echo "<pre>"; print_r($users); die;
+        return view('frontend.userdashboard.community')->with('users', $users);
+    }
+
     public function myaccount(Request $request)
     {
         $id = auth()->user()->id;
         $email = auth()->user()->email;
-        
+
         $orders = PrintfulOrder::join('users', 'users.email', '=', 'printful_orders.customer_email')->join('products', 'products.id', '=', 'printful_orders.product_id')->join('payments', 'payments.id', '=', 'printful_orders.payment_id')->select('products.*','printful_order_data','payment_intent_id','payments.amount as amt','products.supporting_country','products.product_for','products.product_type','printful_orders.total_amount','printful_orders.product_price','printful_orders.id','print_order_status')->where('printful_orders.user_id',$id)->orwhere('printful_orders.customer_email', $email)->orderBy('printful_orders.created_at','desc')->paginate(7);
 
         if($orders->count()==0){

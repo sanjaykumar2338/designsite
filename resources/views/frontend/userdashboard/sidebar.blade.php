@@ -19,7 +19,7 @@
                         <li><a href="{{route('designed_used')}}" class="{{\Request::route()->getName()=='history' ? 'active': ''}}"><i class="fa-solid fa-angle-right"></i> Designed Used</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Community Subscriptions</a></li>
+                <li><a class="{{\Request::route()->getName()=='community' ? 'active': ''}}" href="{{route('community')}}">Community Subscriptions</a></li>
                 <li><a href="#">Coupons</a></li>
                 <li>
                     <a class="{{\Request::route()->getName()=='donation' ? 'active': ''}}" href="{{route('donation')}}">Dontation</a>
