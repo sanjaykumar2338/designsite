@@ -21,7 +21,7 @@ class UserController extends Controller
 
         // Create a new user instance
         $user = User::create([
-            'name' => $validatedData['name'],
+            'first_name' => $validatedData['name'],
             'email' => $validatedData['email'],
             'password' => Hash::make($validatedData['password']),
         ]);
