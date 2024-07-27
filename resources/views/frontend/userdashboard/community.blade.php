@@ -1,14 +1,6 @@
 @extends('frontend.layout.homepagelayout')
 @section('content')
 
-<style>
-    .bought-img img {
-        height: 200px; /* Set the desired height */
-        object-fit: cover; /* Ensures the image covers the area while maintaining aspect ratio */
-        width: 100%; /* Ensures the image takes the full width of the parent */
-    }
-</style>
-
 <div class="us-dashborad">
 	<div class="container">
 		<div class="row">
