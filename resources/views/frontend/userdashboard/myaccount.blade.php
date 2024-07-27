@@ -33,15 +33,18 @@
 							@if($orders) 
             					@foreach($orders as $order) 
 									<div class="col-lg-4 col-md-6">
+
+										@php
+											$data = json_decode($order->printful_order_data, true);
+											$url = url('/').'/stand-with-'.strtolower($order->supporting_country).'/shop/'.strtolower($order->product_for).'/'.strtolower($order->product_type).'/'.$order->product_slug;   
+											
+											$file = $data['items'][0];
+										@endphp
+
 										<div class="bought-bs">
 											<div class="bought-img">
-												<img src="https://causestand.com/storage/images/YHiWwjDTr1S8yejUsA6tKpifJ0qAfoiElN9kEedk.webp"/>
+												<img src="{{$file['url']}}"/>
 											</div>
-
-											@php
-												$data = json_decode($order->printful_order_data, true);
-												$url = url('/').'/stand-with-'.strtolower($order->supporting_country).'/shop/'.strtolower($order->product_for).'/'.strtolower($order->product_type).'/'.$order->product_slug;                        
-											@endphp
 
 											<div class="bought-content">
 												<h3>{{$order->website_product_name}}</h3>
