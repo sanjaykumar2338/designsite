@@ -6,7 +6,7 @@
             @else
                 <img src="https://causestand.com/storage/images/ysbJQNOkIsc3Nhks5tOH4eaBU95B8R9AsLAZ5kSw.png"/>
             @endif
-            <h4>Wecome {{auth()->user()->first_name}},</h4>
+            <h4>Wecome {{auth()->user()->first_name}}</h4>
         </div>
         <div class="us-menu-main">
             <ul class="us-menu">
