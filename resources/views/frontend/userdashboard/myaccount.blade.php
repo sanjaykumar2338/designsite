@@ -38,7 +38,7 @@
 											$data = json_decode($order->printful_order_data, true);
 											$url = url('/').'/stand-with-'.strtolower($order->supporting_country).'/shop/'.strtolower($order->product_for).'/'.strtolower($order->product_type).'/'.$order->product_slug;   
 											
-											$file = $data['items'][0];
+											$file = $data['items'][0]['files'][0];
 										@endphp
 
 										<div class="bought-bs">
