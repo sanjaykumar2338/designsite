@@ -19,48 +19,46 @@
 						
 					</div>
 					<div class="us-order-main">
-						<h2></h2>
 						<div class="us-bought">
-							<div class="row">
-								
-							@if($users) 
-            					@foreach($users as $user) 
-									<div class="col-lg-4 col-md-4">
-										
-										<div class="bought-img">
-										@if($user->profile_image!="")
-											<img src="{{ asset('/images/profile/'.$user->profile_image) }}"/>
-										@else
-											<img src="https://causestand.com/storage/images/ysbJQNOkIsc3Nhks5tOH4eaBU95B8R9AsLAZ5kSw.png"/>
-										@endif
-										</div>
+						<div class="row">
+    @if($users) 
+        @foreach($users as $index => $user)
+            @if($index % 3 == 0 && $index != 0)
+                </div>
+                <div class="row">
+            @endif
+            <div class="col-lg-4 col-md-4">
+                <div class="bought-img">
+                    @if($user->profile_image != "")
+                        <img src="{{ asset('/images/profile/'.$user->profile_image) }}"/>
+                    @else
+                        <img src="https://causestand.com/storage/images/ysbJQNOkIsc3Nhks5tOH4eaBU95B8R9AsLAZ5kSw.png"/>
+                    @endif
+                </div>
+                <div class="bought-content">
+                    <h3 style="text-align:center">{{$user->first_name}} {{$user->last_name}}</h3>
+                    <div class="us-head-social" style="padding-left:50px">
+                        <ul>
+                            @if($user->facebook)
+                                <li><a href="{{$user->facebook}}" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            @endif
+                            @if($user->instagram)
+                                <li><a href="{{$user->instagram}}" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                            @endif
+                            @if($user->tiktok)
+                                <li><a href="{{$user->tiktok}}" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
+                            @endif
+                            @if($user->youtube)
+                                <li><a href="{{$user->youtube}}" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+                            @endif
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        @endforeach
+    @endif
+</div>
 
-										<div class="bought-content">
-											<h3 style="text-align:center">{{$user->first_name}} {{$user->last_name}}</h3>
-											<div class="us-head-social" style="padding-left:50px">
-												<ul>
-													@if($user->facebook)
-														<li><a href="{{$user->facebook}}" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
-													@endif
-
-													@if($user->instagram)
-														<li><a href="{{$user->instagram}}" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-													@endif
-
-													@if($user->tiktok)
-														<li><a href="{{$user->tiktok}}" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
-													@endif
-
-													@if($user->youtube)
-														<li><a href="{{$user->tiktok}}" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
-													@endif
-												</ul>
-											</div>
-										</div>
-								@endforeach
-							@endif 
-
-							</div>
 						</div>
 
 						<nav>
