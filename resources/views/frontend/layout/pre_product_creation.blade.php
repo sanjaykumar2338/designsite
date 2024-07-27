@@ -160,7 +160,7 @@
 
                         @if (Auth::check())
                             <li>
-                                <span style="cursor: pointer;" class="add-border" onclick='location.href ="{{route('dashboard')}}";'>
+                                <span style="cursor: pointer;" class="add-border" onclick='location.href ="{{route('myaccount')}}";'>
                                     My Account
                                 </span>
                             </li>
