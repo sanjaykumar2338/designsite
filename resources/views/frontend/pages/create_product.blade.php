@@ -540,7 +540,7 @@
                                 <div id="back_text" class="font-medium text-gray-800">Back Text:</div>
                                 <div id="subtotal" class="font-medium text-gray-800">Subtotal:</div>
                                 <div id="shipping" class="font-medium text-gray-800">Shipping:</div>
-                                <div id="total" class="font-bold text-gray-800">Total: 22</div>
+                                <div id="total" class="font-bold text-gray-800">Total:</div>
                             </div>
 
                             <br>
@@ -728,7 +728,7 @@
             }
         });
     </script>
-    
+
     <script src="https://js.stripe.com/v3/"></script>
     <script>
         const stripe = Stripe('{{ env('STRIPE_KEY') }}');
