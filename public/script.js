@@ -1437,12 +1437,12 @@ function setCost() {
                             throw new Error('Discounted price calculation failed.');
                         }
 
-                        totalElement.innerText = `$${discountedPrice.toFixed(2)}`;
+                        totalElement.innerText = `Total: $${discountedPrice.toFixed(2)}`;
                         //checkoutSubmitBtn.innerText = `Pay $${discountedPrice.toFixed(2)}`;
 
                     } else {
                         // No discount applied, display original price
-                        totalElement.innerText = `$${originalTotal.toFixed(2)}`;
+                        totalElement.innerText = `Total: $${originalTotal.toFixed(2)}`;
                         //checkoutSubmitBtn.innerText = `Pay $${originalTotal.toFixed(2)}`;
                     }
 
