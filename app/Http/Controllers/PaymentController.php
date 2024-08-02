@@ -119,7 +119,7 @@ class PaymentController extends Controller
             // Determine the discount amount and type
             if (!empty($coupon->amount_off)) {
                 // Coupon provides a fixed amount discount
-                $discountAmount = $coupon->amount_off;
+                $discountAmount = $coupon->amount_off / 100;
                 $discountType = 'fixed_amount';
             } elseif (!empty($coupon->percent_off)) {
                 // Coupon provides a percentage discount
