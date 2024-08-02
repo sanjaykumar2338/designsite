@@ -23,27 +23,22 @@ class PaymentController extends Controller
             // Step 1: Validate and apply the coupon
             $discount = 0;
             $totalAmount = $request->total; // Assuming the total amount is in cents
-            $couponCode = $request->coupon;
-            $validCoupon = false;
 
             if ($request->has('coupon')) {
-                try {
-                    // Retrieve the coupon from Stripe
-                    $coupon = StripeCoupon::retrieve($couponCode);
-
-                    if ($coupon && $coupon->valid) {
-                        $validCoupon = true;
-                        if (!empty($coupon->amount_off)) {
-                            // Fixed amount discount
-                            $discount = $coupon->amount_off;
-                        } elseif (!empty($coupon->percent_off)) {
-                            // Percentage discount
-                            $discount = ($coupon->percent_off / 100) * $totalAmount;
-                        }
+                $couponCode = $request->coupon;
+                // Retrieve the coupon from Stripe
+                $coupon = StripeCoupon::retrieve($couponCode);
+                
+                if ($coupon && $coupon->valid) {
+                    if (!empty($coupon->amount_off)) {
+                        // Fixed amount discount
+                        $discount = $coupon->amount_off;
+                    } elseif (!empty($coupon->percent_off)) {
+                        // Percentage discount
+                        $discount = ($coupon->percent_off / 100) * $totalAmount;
                     }
-                } catch (\Exception $e) {
-                    // Handle invalid coupon case, but proceed with the payment
-                    $validCoupon = false;
+                } else {
+                    //return response()->json(['success' => false, 'message' => 'Invalid coupon code']);
                 }
             }
 
@@ -51,21 +46,14 @@ class PaymentController extends Controller
             $finalAmount = $totalAmount - $discount;
 
             // Step 3: Create the payment intent with the final amount
-            $paymentIntentData = [
+            $paymentIntent = PaymentIntent::create([
                 'amount' => $finalAmount,
                 'currency' => 'usd',
                 'payment_method' => $request->payment_method_id,
                 'confirmation_method' => 'manual',
                 'confirm' => true,
                 'return_url' => 'https://causestand.com/return', // Specify your return URL here
-            ];
-
-            // Apply the coupon to the payment intent if it is valid
-            if ($validCoupon) {
-                $paymentIntentData['coupon'] = $couponCode;
-            }
-
-            $paymentIntent = PaymentIntent::create($paymentIntentData);
+            ]);
 
             // Step 4: Save payment data to your database
             $payment = new Payment();
