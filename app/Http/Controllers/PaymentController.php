@@ -11,33 +11,43 @@ use App\Models\User;
 use App\Models\PrintfulOrder;
 use Auth;
 use Mail;
-use Stripe\Coupon;
+use Stripe\Coupon as StripeCoupon;
 
 class PaymentController extends Controller
 {
-    public function processPayment(Request $request) {
+    public function processPayment(Request $request)
+    {
         Stripe::setApiKey(config('services.stripe.secret'));
 
         try {
             // Step 1: Validate and apply the coupon
             $discount = 0;
+            $totalAmount = $request->total; // Assuming the total amount is in cents
+
             if ($request->has('coupon')) {
                 $couponCode = $request->coupon;
-                // Assuming you have a Coupon model to check the validity
-                $coupon = Coupon::where('code', $couponCode)->first();
-                if ($coupon && $coupon->is_valid) {
-                    $discount = $coupon->discount_amount; // Apply discount amount
+                // Retrieve the coupon from Stripe
+                $coupon = StripeCoupon::retrieve($couponCode);
+                
+                if ($coupon && $coupon->valid) {
+                    if (!empty($coupon->amount_off)) {
+                        // Fixed amount discount
+                        $discount = $coupon->amount_off;
+                    } elseif (!empty($coupon->percent_off)) {
+                        // Percentage discount
+                        $discount = ($coupon->percent_off / 100) * $totalAmount;
+                    }
                 } else {
                     return response()->json(['success' => false, 'message' => 'Invalid coupon code']);
                 }
             }
 
             // Step 2: Calculate the final amount after applying the discount
-            $totalAmount = $request->total - ($discount * 100); // Assuming discount is in dollars, convert to cents
+            $finalAmount = $totalAmount - $discount;
 
             // Step 3: Create the payment intent with the final amount
             $paymentIntent = PaymentIntent::create([
-                'amount' => $totalAmount,
+                'amount' => $finalAmount,
                 'currency' => 'usd',
                 'payment_method' => $request->payment_method_id,
                 'confirmation_method' => 'manual',
@@ -54,7 +64,7 @@ class PaymentController extends Controller
                 $payment->user_id = null;
             }
 
-            $payment->amount = $totalAmount / 100;
+            $payment->amount = $finalAmount / 100; // Convert to dollars
             $payment->payment_intent_id = $paymentIntent->id;
             $payment->save();
 
