@@ -691,6 +691,10 @@
                                     discountedPrice = originalTotal * (1 - (parseFloat(data.discount) / 100)); // Adjusted price after discount
                                 }
 
+                                if (isNaN(discountedPrice)) {
+                                    throw new Error('Discounted price calculation failed.');
+                                }
+
                                 totalElement.innerText = `$${discountedPrice.toFixed(2)}`;
                                 checkoutSubmitBtn.innerText = `Pay $${discountedPrice.toFixed(2)}`;
 
@@ -727,6 +731,7 @@
                 checkoutSubmitBtn.innerText = `Pay $${originalTotal.toFixed(2)}`;
             }
         });
+
     </script>
     
     <script src="https://js.stripe.com/v3/"></script>
