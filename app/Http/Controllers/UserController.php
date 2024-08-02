@@ -45,7 +45,11 @@ class UserController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            return redirect()->route('home')->with('success', 'Login successful.');
+            if (auth()->user()->email == 'admin@gmail.com') {
+                return redirect('admin');
+            } else {
+                return redirect()->route('home')->with('success', 'Login successful.');
+            }
         }
 
         return back()->withErrors([
