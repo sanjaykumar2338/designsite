@@ -618,17 +618,18 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            let typingTimer;
             const doneTypingInterval = 1000; // milliseconds (1 second)
 
-            // Event listener for click event on checkout button
+            // Elements
             const checkCouponBtn = document.getElementById('check-coupon-btn');
             const couponInput = document.getElementById('example5-coupon');
             const couponErrors = document.getElementById('coupon-errors');
             const totalElement = document.getElementById('total');
             const checkoutSubmitBtn = document.getElementById('checkout-submit-btn');
             const removeCouponBtn = document.getElementById('remove-coupon-btn');
-            var originalTotal = parseFloat(totalElement.innerText.replace(/[^0-9.]/g, ''));
+
+            let originalTotal = parseFloat(totalElement.innerText.replace(/[^0-9.]/g, ''));
+            let typingTimer;
 
             if (checkCouponBtn) {
                 checkCouponBtn.addEventListener('click', async (event) => {
@@ -680,32 +681,27 @@
 
                             // Update the displayed price if a discount is applied
                             if (data.valid && data.discount > 0) {
-                                const originalPriceString = totalElement.innerText.replace(/[^0-9.]/g, '');
-                                const originalPrice = parseFloat(originalPriceString);
-
-                                if (isNaN(originalPrice)) {
-                                    throw new Error('Failed to parse the original price.');
-                                }
-
                                 let discountedPrice;
 
                                 if (data.discount_type === 'fixed_amount') {
                                     // If the discount is a fixed amount
-                                    discountedPrice = originalPrice - parseFloat(data.discount); // Adjusted price after discount
+                                    discountedPrice = originalTotal - parseFloat(data.discount); // Adjusted price after discount
                                 } else {
                                     // If the discount is a percentage
-                                    discountedPrice = originalPrice * (1 - (parseFloat(data.discount) / 100)); // Adjusted price after discount
+                                    discountedPrice = originalTotal * (1 - (parseFloat(data.discount) / 100)); // Adjusted price after discount
                                 }
 
+                                totalElement.innerText = `$${discountedPrice.toFixed(2)}`;
                                 checkoutSubmitBtn.innerText = `Pay $${discountedPrice.toFixed(2)}`;
 
                             } else {
                                 // No discount applied, display original price
+                                totalElement.innerText = `$${originalTotal.toFixed(2)}`;
                                 checkoutSubmitBtn.innerText = `Pay $${originalTotal.toFixed(2)}`;
                             }
 
                             if (!data.valid) {
-                                // couponInput.value = '';
+                                couponInput.value = '';
                             }
                         } else {
                             // Coupon validation failed, display error message
@@ -727,12 +723,12 @@
             function removeCoupon() {
                 couponInput.value = '';
                 couponErrors.innerText = '';
-                totalElement.innerText = originalTotal.toFixed(2);
+                totalElement.innerText = `$${originalTotal.toFixed(2)}`;
                 checkoutSubmitBtn.innerText = `Pay $${originalTotal.toFixed(2)}`;
             }
         });
     </script>
-
+    
     <script src="https://js.stripe.com/v3/"></script>
     <script>
         const stripe = Stripe('{{ env('STRIPE_KEY') }}');
