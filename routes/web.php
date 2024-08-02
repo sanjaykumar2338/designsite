@@ -184,6 +184,7 @@ Route::group(['prefix' => 'dashboard','middleware' => 'check.auth'], function ()
     Route::post('/updateprofile', [App\Http\Controllers\UserDashboardController::class, 'updateprofile'])->name('updateprofile');
     Route::get('/donation', [App\Http\Controllers\UserDashboardController::class, 'donation'])->name('donation');
     Route::get('/community', [App\Http\Controllers\UserDashboardController::class, 'community'])->name('community');
+    Route::get('/coupon', [App\Http\Controllers\UserDashboardController::class, 'getActiveCoupons'])->name('coupon');
 });
 
 Route::post('/check_coupon', [App\Http\Controllers\PaymentController::class, 'check_coupon'])->name('check_coupon');

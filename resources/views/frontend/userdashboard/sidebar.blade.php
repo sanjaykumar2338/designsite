@@ -20,7 +20,15 @@
                     </ul>
                 </li>
                 <li><a class="{{\Request::route()->getName()=='community' ? 'active': ''}}" href="{{route('community')}}">Community Subscriptions</a></li>
-                <li><a href="#">Coupons</a></li>
+
+                <li>
+                    @if(session()->has('redirected_to_coupon') && session('redirected_to_coupon'))
+                        <a class="{{ \Request::route()->getName() == 'coupon' ? 'active' : '' }}" href="{{ route('coupon') }}">Coupons</a>
+                    @else
+                        <a href="#" onclick="return confirmRedirect()">Coupons</a>
+                    @endif
+                </li>
+
                 <li>
                     <a class="{{\Request::route()->getName()=='donation' ? 'active': ''}}" href="{{route('donation')}}">Dontation</a>
                     <ul class="us-menu-sub">
@@ -31,3 +39,12 @@
         </div>
     </div>
 </div>
+
+<script>
+    function confirmRedirect() {
+        if (confirm('Are you a student?')) {
+            window.location.href = "{{ route('coupon') }}";
+        }
+        return false; // Prevent the default action of the link
+    }
+</script>

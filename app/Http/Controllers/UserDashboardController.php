@@ -6,7 +6,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Auth;
 use App\Models\PrintfulOrder;
-
+use Stripe\Stripe;
+use Stripe\Coupon;
+use Illuminate\Support\Facades\Session;
 
 class UserDashboardController extends Controller
 {
@@ -22,6 +24,39 @@ class UserDashboardController extends Controller
         return view('frontend.userdashboard.community')->with('users', $users);
     }
 
+    public function getActiveCoupons()
+    {
+        // Set the Stripe API key
+        Stripe::setApiKey(config('services.stripe.secret'));
+        Session::put('redirected_to_coupon', true);
+
+        try {
+            // Retrieve all coupons
+            $coupons = Coupon::all();
+
+            // Filter active coupons and prepare data for the view
+            $activeCoupons = array_filter($coupons->data, function ($coupon) {
+                return !$coupon->deleted;
+            });
+
+            // Prepare data for the view
+            $couponData = [];
+            foreach ($activeCoupons as $coupon) {
+                $couponData[] = [
+                    'name' => $coupon->name,
+                    'code' => $coupon->id,
+                    'duration' => $coupon->duration,
+                    'discount' => $coupon->amount_off ? '$' . ($coupon->amount_off / 100) : $coupon->percent_off . '%'
+                ];
+            }
+
+            return view('frontend.userdashboard.coupon', ['coupons' => $couponData]);
+        } catch (\Exception $e) {
+            // Return an empty view if an error occurs
+            return view('frontend.userdashboard..coupon', ['coupons' => []]);
+        }
+    }
+
     public function myaccount(Request $request)
     {
         $id = auth()->user()->id;
@@ -35,6 +70,10 @@ class UserDashboardController extends Controller
         }
 
         return view('frontend.userdashboard.myaccount')->with('orders',$orders);
+    }
+
+    public function coupon(){
+
     }
 
     public function donation(Request $request)
