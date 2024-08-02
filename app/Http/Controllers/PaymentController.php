@@ -124,7 +124,7 @@ class PaymentController extends Controller
             // Perform coupon validation logic here
             // For example, using Stripe
             Stripe::setApiKey(config('services.stripe.secret'));
-            $coupon = Coupon::retrieve($request->coupon);
+            $coupon = StripeCoupon::retrieve($request->coupon);
     
             // Determine the discount amount and type
             if (!empty($coupon->amount_off)) {
