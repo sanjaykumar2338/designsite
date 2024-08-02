@@ -628,8 +628,9 @@
             const checkoutSubmitBtn = document.getElementById('checkout-submit-btn');
             const removeCouponBtn = document.getElementById('remove-coupon-btn');
 
-            let originalTotal,ot2 = parseFloat(totalElement.innerText.replace(/[^0-9.]/g, ''));
-            let typingTimer;
+            var originalTotal = parseFloat(totalElement.innerText.replace(/[^0-9.]/g, ''));
+            var ot2 = totalElement.innerText;
+            var typingTimer;
 
             if (checkCouponBtn) {
                 checkCouponBtn.addEventListener('click', async (event) => {
@@ -692,12 +693,12 @@
                                 }
 
                                 totalElement.innerText = `$${discountedPrice.toFixed(2)}`;
-                                checkoutSubmitBtn.innerText = `Pay $${discountedPrice.toFixed(2)}`;
+                                //checkoutSubmitBtn.innerText = `Pay $${discountedPrice.toFixed(2)}`;
 
                             } else {
                                 // No discount applied, display original price
                                 totalElement.innerText = `$${originalTotal.toFixed(2)}`;
-                                checkoutSubmitBtn.innerText = `Pay $${originalTotal.toFixed(2)}`;
+                                //checkoutSubmitBtn.innerText = `Pay $${originalTotal.toFixed(2)}`;
                             }
 
                             if (!data.valid) {
@@ -723,8 +724,8 @@
             function removeCoupon() {
                 couponInput.value = '';
                 couponErrors.innerText = '';
-                totalElement.innerText = `$${ot2.toFixed(2)}`;
-                checkoutSubmitBtn.innerText = `Pay $${ot2.toFixed(2)}`;
+                totalElement.innerText = ot2;
+                //checkoutSubmitBtn.innerText = `Pay $${ot2.toFixed(2)}`;
             }
         });
     </script>
