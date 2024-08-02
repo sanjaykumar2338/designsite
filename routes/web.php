@@ -9,12 +9,15 @@ use App\Models\Blogs;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\ProductsController;
 use App\Http\Controllers\Admin\PreProductsController;
 use App\Http\Controllers\Admin\BlogsController;
 use App\Http\Controllers\Admin\CollectionController;
 use App\Http\Controllers\Admin\BoycottController;;
 use Laravel\Cashier\Http\Controllers\WebhookController;
+use App\Http\Controllers\Auth\ForgotPasswordController;
+use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Models\Products;
 use App\Models\PreProducts;
 use App\Models\Collections;
@@ -105,6 +108,12 @@ Route::get('/generate-sitemap', function() {
     return 'Sitemap generated and saved to sitemap.xml';
 });
 
+Route::get('forget', [LoginController::class, 'forget'])->name('forget');
+Route::get('password/reset', [ForgotPasswordController::class, 'showLinkRequestForm'])->name('password.request');
+Route::post('password/email', [ForgotPasswordController::class,'sendResetLinkEmail'])->name('password.email');
+Route::get('password/reset/{token}', [ResetPasswordController::class, 'showResetForm'])->name('password.reset');
+Route::post('password/reset', [ResetPasswordController::class, 'reset'])->name('password.update');
+
 Route::group(['prefix' => 'admin','middleware' => 'check.auth'], function () {
     Route::get('', [AdminController::class, 'index']);
     
@@ -177,6 +186,7 @@ Route::group(['prefix' => 'dashboard','middleware' => 'check.auth'], function ()
     Route::get('/community', [App\Http\Controllers\UserDashboardController::class, 'community'])->name('community');
 });
 
+Route::post('/check_coupon', [App\Http\Controllers\PaymentController::class, 'check_coupon'])->name('check_coupon');
 Route::get('/update_order_status', [App\Http\Controllers\HomeController::class, 'update_order_status'])->name('update_order_status');
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::post('/save_review', [App\Http\Controllers\HomeController::class, 'save_review'])->name('save_review');

@@ -527,7 +527,7 @@
                     <div class="inline-block align-center bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
                         role="dialog" style="max-width: 50rem;" aria-modal="true" aria-labelledby="modal-headline">
                         
-                        <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                        <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4" style="overflow-y: auto;height: 650px;">
                             <label class="font-bold text-gray-800">Payment Details</label>
                             <br>
                             <br>
@@ -540,7 +540,7 @@
                                 <div id="back_text" class="font-medium text-gray-800">Back Text:</div>
                                 <div id="subtotal" class="font-medium text-gray-800">Subtotal:</div>
                                 <div id="shipping" class="font-medium text-gray-800">Shipping:</div>
-                                <div id="total" class="font-bold text-gray-800">Total:</div>
+                                <div id="total" class="font-bold text-gray-800">Total: 22</div>
                             </div>
 
                             <br>
@@ -571,6 +571,17 @@
                                 <!-- Used to display form errors. -->
                                 <div id="card-errors" role="alert"></div>
                             </div>
+
+                            <div class="form-group">
+                                <label>Coupon Code</label>
+                                <input type="text" name="coupon" id="example5-coupon" style="margin-bottom: 6px;" placeholder="Enter a coupon code" class="form-control">
+                                <br><br>
+                                <button type="button" id="check-coupon-btn"
+                                class="py-2 px-4 bg-gray-500 text-white rounded">Apply Coupon</button>
+                                <button type="button" id="remove-coupon-btn" class="py-2 px-4 bg-gray-500 text-white rounded hover:bg-gray-700 mr-2">Remove Coupon</button>
+
+                                <div id="coupon-errors" class="text-danger mt-1"></div> 
+                            </div>
                         </div>
 
                         <div class="bg-gray-200 px-4 py-3 text-right">
@@ -579,7 +590,7 @@
                                 Cancel
                             </button>
 
-                            <button type="submit"
+                            <button type="submit" id="checkout-submit-btn"
                                 class="py-2 px-4 bg-gray-500 text-white rounded hover:bg-gray-700 mr-2">Submit
                                 Payment</button>
 
@@ -604,6 +615,123 @@
         <h2 class="text-center text-white text-xl font-semibold">Loading...</h2>
         <p class="w-1/3 text-center text-white">This may take a few seconds, please don't close this page.</p>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let typingTimer;
+            const doneTypingInterval = 1000; // milliseconds (1 second)
+
+            // Event listener for click event on checkout button
+            const checkCouponBtn = document.getElementById('check-coupon-btn');
+            const couponInput = document.getElementById('example5-coupon');
+            const couponErrors = document.getElementById('coupon-errors');
+            const totalElement = document.getElementById('total');
+            const checkoutSubmitBtn = document.getElementById('checkout-submit-btn');
+            const removeCouponBtn = document.getElementById('remove-coupon-btn');
+            var originalTotal = parseFloat(totalElement.innerText.replace(/[^0-9.]/g, ''));
+
+            if (checkCouponBtn) {
+                checkCouponBtn.addEventListener('click', async (event) => {
+                    event.preventDefault(); // Prevent form submission
+                    await validateCoupon();
+                });
+            }
+
+            if (removeCouponBtn) {
+                removeCouponBtn.addEventListener('click', (event) => {
+                    event.preventDefault(); // Prevent form submission
+                    removeCoupon();
+                });
+            }
+
+            // Function to validate coupon
+            async function validateCoupon() {
+                const couponValue = couponInput.value.trim();
+
+                if (couponValue === "") {
+                    // Clear any previous error messages
+                    couponErrors.innerText = '';
+                    return false;
+                }
+
+                // Disable the coupon input field
+                couponInput.disabled = true;
+
+                // Display a message indicating coupon validation is in progress
+                couponErrors.innerText = 'Please wait, checking coupon...';
+
+                typingTimer = setTimeout(async () => {
+                    try {
+                        const response = await fetch('/check_coupon', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'X-CSRF-TOKEN': '{{ csrf_token() }}' // Include CSRF token if you're using it
+                            },
+                            body: JSON.stringify({ coupon: couponValue })
+                        });
+
+                        const data = await response.json();
+
+                        if (response.ok) {
+                            // Coupon validation succeeded, update UI accordingly
+                            console.log('Coupon is valid:', data);
+                            couponErrors.innerText = data.message;
+
+                            // Update the displayed price if a discount is applied
+                            if (data.valid && data.discount > 0) {
+                                const originalPriceString = totalElement.innerText.replace(/[^0-9.]/g, '');
+                                const originalPrice = parseFloat(originalPriceString);
+
+                                if (isNaN(originalPrice)) {
+                                    throw new Error('Failed to parse the original price.');
+                                }
+
+                                let discountedPrice;
+
+                                if (data.discount_type === 'fixed_amount') {
+                                    // If the discount is a fixed amount
+                                    discountedPrice = originalPrice - parseFloat(data.discount); // Adjusted price after discount
+                                } else {
+                                    // If the discount is a percentage
+                                    discountedPrice = originalPrice * (1 - (parseFloat(data.discount) / 100)); // Adjusted price after discount
+                                }
+
+                                checkoutSubmitBtn.innerText = `Pay $${discountedPrice.toFixed(2)}`;
+
+                            } else {
+                                // No discount applied, display original price
+                                checkoutSubmitBtn.innerText = `Pay $${originalTotal.toFixed(2)}`;
+                            }
+
+                            if (!data.valid) {
+                                // couponInput.value = '';
+                            }
+                        } else {
+                            // Coupon validation failed, display error message
+                            console.error('Coupon validation failed:', data.error);
+                            couponErrors.innerText = data.message;
+                        }
+                    } catch (error) {
+                        // Handle network error
+                        console.error('Network error:', error);
+                        couponErrors.innerText = error.message;
+                    } finally {
+                        // Re-enable the coupon input field after validation is complete
+                        couponInput.disabled = false;
+                    }
+                }, doneTypingInterval);
+            }
+
+            // Function to remove coupon
+            function removeCoupon() {
+                couponInput.value = '';
+                couponErrors.innerText = '';
+                totalElement.innerText = originalTotal.toFixed(2);
+                checkoutSubmitBtn.innerText = `Pay $${originalTotal.toFixed(2)}`;
+            }
+        });
+    </script>
 
     <script src="https://js.stripe.com/v3/"></script>
     <script>
@@ -654,11 +782,13 @@
             if (extractedDecimal !== null) {
                 const decimalValue = parseFloat(extractedDecimal);
                 const centsValue = convertToCents(decimalValue);
+                const coupon = document.getElementById('example5-coupon').value.trim();;
 
                 const formData = new FormData();
                 formData.append('_token', '{{ csrf_token() }}');
                 formData.append('payment_method_id', token);
                 formData.append('total', centsValue);
+                formData.append('coupon', coupon);
 
                 try {
                     setIsLoading(true)

@@ -95,7 +95,7 @@
                         <ul>
                             <li class="men">Men's Apparel</li>
                             <li class="woman">Weman's Apparel</li>
-                            <li class="accessories">Accessories</li>
+                            <li class="accessories" style="display:none">Accessories</li>
                         </ul>
                     </div>
 

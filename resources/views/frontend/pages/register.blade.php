@@ -92,7 +92,10 @@
       @enderror
     </div>
 
-    <button type="submit" class="btn btn-primary">Submit</button>   
+    <button type="submit" class="btn btn-primary">Submit</button>  
+    <a class="btn btn-primary" href="{{ route('forget') }}">
+        <small>Forgot Password?</small>
+    </a>  
   </div>
 </form>
 @endsection

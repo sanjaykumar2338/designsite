@@ -72,6 +72,12 @@
     </div>
   @endif
 
+  @if(session('status'))
+    <div class="alert alert-info">
+        {{ session('status') }}
+    </div>
+  @endif
+
   <div class="container">
     <label for="uname"><b>Email</b></label>
     <input type="text" placeholder="Enter Username" name="email" required>
@@ -79,7 +85,10 @@
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="password" required>
         
-    <button type="submit" class="btn btn-primary">Submit</button>   
+    <button type="submit" class="btn btn-primary">Submit</button> 
+    <a class="btn btn-primary" href="{{ route('forget') }}">
+        <small>Forgot Password?</small>
+    </a> 
   </div>
 </form>
 @endsection
