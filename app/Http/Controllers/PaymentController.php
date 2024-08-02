@@ -109,17 +109,17 @@ class PaymentController extends Controller
         }
     }
 
-    public function check_coupon(Request $request)
-    {
+    public function check_coupon(Request $request){
         try {
             // Perform coupon validation logic here
+            // For example, using Stripe
             Stripe::setApiKey(config('services.stripe.secret'));
             $coupon = Coupon::retrieve($request->coupon);
-
+    
             // Determine the discount amount and type
             if (!empty($coupon->amount_off)) {
                 // Coupon provides a fixed amount discount
-                $discountAmount = $coupon->amount_off; // Convert from cents to dollars
+                $discountAmount = $coupon->amount_off / 100;
                 $discountType = 'fixed_amount';
             } elseif (!empty($coupon->percent_off)) {
                 // Coupon provides a percentage discount
@@ -135,15 +135,17 @@ class PaymentController extends Controller
                 'valid' => true,
                 'discount' => $discountAmount,
                 'discount_type' => $discountType,
-                'message' => 'Coupon is valid. Discount: ' . ($discountType === 'fixed_amount' ? '$' . $discountAmount . ' USD' : $discountAmount . '%'),
+                'message' => 'Coupon is valid. Discount: ' . ($discountType === 'fixed_amount' ? ($discountAmount / 100) . ' USD' : $discountAmount . '%'),
+                //'message' => 'Coupon is valid.',
                 'coupon' => $coupon
             ];
-
+            
+    
             // Return success response with coupon details
             return response()->json($responseData);
         } catch (\Exception $e) {
             // If coupon is not valid, return error response
             return response()->json(['valid' => false, 'message' => $e->getMessage()]);
         }
-    }  
+    }   
 }
