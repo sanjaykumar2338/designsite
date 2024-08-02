@@ -21,8 +21,8 @@ class PaymentController extends Controller
         try {
             // Step 1: Validate and apply the coupon
             $discount = 0;
-            if ($request->has('coupon_code')) {
-                $couponCode = $request->coupon_code;
+            if ($request->has('coupon')) {
+                $couponCode = $request->coupon;
                 // Assuming you have a Coupon model to check the validity
                 $coupon = Coupon::where('code', $couponCode)->first();
                 if ($coupon && $coupon->is_valid) {
