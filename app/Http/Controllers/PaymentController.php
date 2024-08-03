@@ -62,7 +62,7 @@ class PaymentController extends Controller
 
             // Apply the coupon to the payment intent if it is valid
             if ($validCoupon) {
-                $paymentIntentData['coupon'] = $couponCode;
+                //$paymentIntentData['coupon'] = $couponCode;
             }
 
             $paymentIntent = PaymentIntent::create($paymentIntentData);
