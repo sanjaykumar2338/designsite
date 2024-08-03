@@ -24,6 +24,7 @@ class PaymentController extends Controller
             $discount = 0;
             $totalAmount = $request->total; // Assuming the total amount is in cents
             $validCoupon = false;
+            $dicount_type = '';
 
             if ($request->has('coupon')) {
                 $couponCode = $request->coupon;
@@ -36,9 +37,11 @@ class PaymentController extends Controller
                         if (!empty($coupon->amount_off)) {
                             // Fixed amount discount (amount_off is in cents)
                             $discount = $coupon->amount_off;
+                            $dicount_type = 'fixed';
                         } elseif (!empty($coupon->percent_off)) {
                             // Percentage discount
                             $discount = ($coupon->percent_off / 100) * $totalAmount;
+                            $dicount_type = 'percent';
                         }
                     }
                 } catch (\Exception $e) {
@@ -48,7 +51,11 @@ class PaymentController extends Controller
             }
 
             // Step 2: Calculate the final amount after applying the discount
-            $finalAmount = max(0, $totalAmount - $discount); // Ensure final amount is not negative
+            if($dicount_type=='fixed'){
+                $finalAmount = $totalAmount; 
+            }else{
+                $finalAmount = max(0, $totalAmount - $discount); 
+            }
 
             // Step 3: Create the payment intent with the final amount
             $paymentIntentData = [
