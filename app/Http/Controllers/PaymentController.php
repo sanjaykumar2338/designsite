@@ -25,6 +25,7 @@ class PaymentController extends Controller
             $totalAmount = $request->total; // Assuming the total amount is in cents
             $validCoupon = false;
             $dicount_type = '';
+            $couponCode = '';
 
             if ($request->has('coupon')) {
                 $couponCode = $request->coupon;
@@ -51,11 +52,20 @@ class PaymentController extends Controller
             }
 
             // Step 2: Calculate the final amount after applying the discount
+            /*
             if($dicount_type=='fixed'){
                 $finalAmount = $totalAmount; 
             }else{
                 $finalAmount = max(0, $totalAmount - $discount); 
             }
+            */
+
+            $description = '';
+            if($couponCode!=""){
+                $description = 'Coupon used: '.$couponCode;
+            }
+
+            $finalAmount = $totalAmount; 
 
             // Step 3: Create the payment intent with the final amount
             $paymentIntentData = [
@@ -65,6 +75,7 @@ class PaymentController extends Controller
                 'confirmation_method' => 'manual',
                 'confirm' => true,
                 'return_url' => 'https://causestand.com/return', // Specify your return URL here
+                'description' => $description
             ];
 
             // Apply the coupon to the payment intent if it is valid
