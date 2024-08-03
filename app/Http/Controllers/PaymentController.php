@@ -11,7 +11,7 @@ use App\Models\User;
 use App\Models\PrintfulOrder;
 use Auth;
 use Mail;
-use Stripe\Coupon as StripeCoupon;
+use Stripe\Coupon;
 
 class PaymentController extends Controller
 {
@@ -23,37 +23,49 @@ class PaymentController extends Controller
             // Step 1: Validate and apply the coupon
             $discount = 0;
             $totalAmount = $request->total; // Assuming the total amount is in cents
+            $validCoupon = false;
 
             if ($request->has('coupon')) {
                 $couponCode = $request->coupon;
-                // Retrieve the coupon from Stripe
-                $coupon = StripeCoupon::retrieve($couponCode);
-                
-                if ($coupon && $coupon->valid) {
-                    if (!empty($coupon->amount_off)) {
-                        // Fixed amount discount
-                        $discount = $coupon->amount_off;
-                    } elseif (!empty($coupon->percent_off)) {
-                        // Percentage discount
-                        $discount = ($coupon->percent_off / 100) * $totalAmount;
+                try {
+                    // Retrieve the coupon from Stripe
+                    $coupon = Coupon::retrieve($couponCode);
+
+                    if ($coupon && $coupon->valid) {
+                        $validCoupon = true;
+                        if (!empty($coupon->amount_off)) {
+                            // Fixed amount discount (amount_off is in cents)
+                            $discount = $coupon->amount_off;
+                        } elseif (!empty($coupon->percent_off)) {
+                            // Percentage discount
+                            $discount = ($coupon->percent_off / 100) * $totalAmount;
+                        }
                     }
-                } else {
-                    //return response()->json(['success' => false, 'message' => 'Invalid coupon code']);
+                } catch (\Exception $e) {
+                    // Handle invalid coupon case, but proceed with the payment
+                    $validCoupon = false;
                 }
             }
 
             // Step 2: Calculate the final amount after applying the discount
-            $finalAmount = $totalAmount - $discount;
+            $finalAmount = max(0, $totalAmount - $discount); // Ensure final amount is not negative
 
             // Step 3: Create the payment intent with the final amount
-            $paymentIntent = PaymentIntent::create([
+            $paymentIntentData = [
                 'amount' => $finalAmount,
                 'currency' => 'usd',
                 'payment_method' => $request->payment_method_id,
                 'confirmation_method' => 'manual',
                 'confirm' => true,
                 'return_url' => 'https://causestand.com/return', // Specify your return URL here
-            ]);
+            ];
+
+            // Apply the coupon to the payment intent if it is valid
+            if ($validCoupon) {
+                $paymentIntentData['coupon'] = $couponCode;
+            }
+
+            $paymentIntent = PaymentIntent::create($paymentIntentData);
 
             // Step 4: Save payment data to your database
             $payment = new Payment();
@@ -124,7 +136,7 @@ class PaymentController extends Controller
             // Perform coupon validation logic here
             // For example, using Stripe
             Stripe::setApiKey(config('services.stripe.secret'));
-            $coupon = StripeCoupon::retrieve($request->coupon);
+            $coupon = Coupon::retrieve($request->coupon);
     
             // Determine the discount amount and type
             if (!empty($coupon->amount_off)) {
