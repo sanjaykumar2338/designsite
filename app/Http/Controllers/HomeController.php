@@ -131,7 +131,7 @@ class HomeController extends Controller
         $donation = PrintfulOrder::where('predesign_order','yes')->sum('donation_amount');
         $total_member = PrintfulOrder::where('predesign_order','yes')->count();
 
-        $users = PrintfulOrder::join('users','users.id','=','printful_orders.user_id')->select('users.*')->where('printful_orders.predesign_order','yes')->where('printful_orders.collection',$collection->id)->get();
+        $users = PrintfulOrder::left('users','users.id','=','printful_orders.user_id')->select('users.*')->where('printful_orders.predesign_order','yes')->where('printful_orders.collection',$collection->id)->get();
 
         print_r($users); die;
         
