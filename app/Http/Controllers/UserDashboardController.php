@@ -18,7 +18,7 @@ class UserDashboardController extends Controller
     }
 
     public function community(Request $request){
-        $users = PrintfulOrder::join('users','users.id','=','printful_orders.user_id')->select('users.*')->where('printful_orders..predesign_order','yes')->where('users.id','!=',auth()->user()->id)->paginate(5);
+        $users = PrintfulOrder::join('users','users.id','=','printful_orders.user_id')->select('users.*')->where('printful_orders.predesign_order','yes')->where('users.id','!=',auth()->user()->id)->paginate(5);
 
         //echo "<pre>"; print_r($users); die;
         return view('frontend.userdashboard.community')->with('users', $users);

@@ -122,8 +122,6 @@ class HomeController extends Controller
 
     public function media_explore(Request $request)
     {
-       
-        
         $metaDescription = 'Join the Cause Stand community of activists to challenge U.S. policies, expose corruption, advocate for justice, and print your voice on clothing.';
         $keywords = 'activist community, U.S. policy change, advocacy apparel, expose corruption, social justice, open source media sharing platform';
         $pageTitle = 'Activist Community Feeds - Empowered Political Justice Merch';
@@ -132,6 +130,10 @@ class HomeController extends Controller
         $collection = Collections::where('slug', $request->collection)->first();
         $donation = PrintfulOrder::where('predesign_order','yes')->sum('donation_amount');
         $total_member = PrintfulOrder::where('predesign_order','yes')->count();
+
+        $users = PrintfulOrder::join('users','users.id','=','printful_orders.user_id')->select('users.*')->where('printful_orders.predesign_order','yes')->where('printful_orders.collection',$collection->id)->get();
+
+        print_r($users); die;
         
         return view('frontend.pages.media_explore')->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle)->with('collection' , $collection)->with('donation' , $donation)->with('total_member' , $total_member);
     }    
