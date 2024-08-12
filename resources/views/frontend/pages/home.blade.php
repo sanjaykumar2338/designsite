@@ -334,16 +334,17 @@
                                     political justice</li>
                             </div>
                             <div class="col-lg-6 p-0 edit_ ">
-                                <select class="form-select" aria-label="Default select example">
-                                    <option selected>Stand With
+                            <form action="{{route('student.index')}}" method="get" class="Adv_ocacy">    
+                                <select name="country" class="form-select" aria-label="Default select example">
+                                    <option selected value="">Stand With
                                     </option>
                                     <option value="Israel">Israel</option>
                                     <option value="Palestine">Palestine</option>
                                     <option value="Russia">Russia</option>
                                     <option value="Ukraine">Ukraine</option>
-                                </select>
-                                <button>View Student Deals</button>
-
+                                </select><br>
+                                <button style="width:113%">View Student Deals</button>
+                            </form>
                             </div>
                         </div>
 

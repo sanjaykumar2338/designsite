@@ -9,6 +9,8 @@ use App\Models\Blogs;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\StudentController;
+
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\ProductsController;
 use App\Http\Controllers\Admin\PreProductsController;
@@ -185,6 +187,11 @@ Route::group(['prefix' => 'dashboard','middleware' => 'check.auth'], function ()
     Route::get('/donation', [App\Http\Controllers\UserDashboardController::class, 'donation'])->name('donation');
     Route::get('/community', [App\Http\Controllers\UserDashboardController::class, 'community'])->name('community');
     Route::get('/coupon', [App\Http\Controllers\UserDashboardController::class, 'getActiveCoupons'])->name('coupon');
+});
+
+Route::group(['prefix' => 'student'], function () {
+    //new user dashboard
+    Route::get('/{country?}', [StudentController::class, 'index'])->name('student.index');
 });
 
 Route::post('/check_coupon', [App\Http\Controllers\PaymentController::class, 'check_coupon'])->name('check_coupon');
