@@ -349,13 +349,20 @@
                                 document.getElementById('studentForm').addEventListener('submit', function(e) {
                                     e.preventDefault(); // Prevent the default form submission
                                     var selectedCountry = document.getElementById('countrySelect').value;
-                                    var url = "{{ url('students') }}"; // Default URL
+
                                     if (selectedCountry) {
-                                        url += "/" + selectedCountry; // Append the selected country if any
+                                        // Generate the URL for the selected country
+                                        var url = "{{ url('students') }}/" + selectedCountry;
+                                    } else {
+                                        // If no country is selected, just use the base URL
+                                        var url = "{{ route('students.all') }}";
                                     }
+
+                                    // Redirect to the generated URL
                                     window.location.href = url;
                                 });
                             </script>
+
                             </div>
                         </div>
 

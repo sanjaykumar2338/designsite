@@ -190,10 +190,7 @@ Route::group(['prefix' => 'dashboard','middleware' => 'check.auth'], function ()
 });
 
 Route::group(['prefix' => 'students'], function () {
-    // This handles the base /students route
-    Route::get('/', [StudentController::class, 'index'])->name('students.index');
-
-    // This handles the /students/{country} routes
+    Route::get('/all', [StudentController::class, 'index'])->name('students.all');
     Route::get('/{country}', [StudentController::class, 'show'])->name('students.show');
 });
 

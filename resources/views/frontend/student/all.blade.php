@@ -9,7 +9,7 @@
                 <div id="carouselExampleCaptions" class="carousel slide">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="{{asset('asset/frontend/images/banner-optimized/stand-with-Israel.jpg')}}" class="d-block w-100"
+                            <img src="{{$background_image}}" class="d-block w-100"
                                 alt="...">
                             <div class="carousel-caption ">
                                 <h5>Commitment Coupon 30% OFF!</h5>

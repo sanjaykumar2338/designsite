@@ -29,8 +29,10 @@ class StudentController extends Controller
         $metaTitle = 'Empowerment Clothing for Students with Voices - College Protest Fashion';
         $page_content = $this->page_content('all'); 
 
+        $background_image = url('/').'/students/students-stand-with-a-cause.png';
+        
         Storage::put('coupon_code', 'commitment');
-        return view('frontend.student.all')->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle)->with('page_content', $page_content);
+        return view('frontend.student.all')->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle)->with('page_content', $page_content)->with('background_image', $background_image);
     }
 
     public function show($country)
@@ -45,13 +47,15 @@ class StudentController extends Controller
             $pageTitle = 'Stand with Israel - Student Clothing to Free Land';
             $metaTitle = 'Stand with Israel Clothing - Anti Terror Brands for Freedom Fighters';
             $page_content = $this->page_content($country);
+            $background_image = url('/').'/students/students-stand-with-israel.png';
 
             return view('frontend.student.all')
                 ->with('pageTitle', $pageTitle)
                 ->with('metaDescription', $metaDescription)
                 ->with('keywords', $keywords)
                 ->with('metaTitle', $metaTitle)
-                ->with('page_content', $page_content);
+                ->with('page_content', $page_content)
+                ->with('background_image', $background_image);
         }
 
         if($country=='stand-with-palestine'){
@@ -61,14 +65,15 @@ class StudentController extends Controller
             $pageTitle = 'Students Stand with Palestine - Advocacy Empowered Clothing';
             $metaTitle = 'Stand with Palestine - Advocacy Clothing for Students of History';
             $page_content = $this->page_content($country);
+            $background_image = url('/').'/students/students-stand-with-palestine.png';
 
             return view('frontend.student.all')
                 ->with('pageTitle', $pageTitle)
                 ->with('metaDescription', $metaDescription)
                 ->with('keywords', $keywords)
                 ->with('metaTitle', $metaTitle)
-                ->with('page_content', $page_content);
-
+                ->with('page_content', $page_content)
+                ->with('background_image', $background_image);
         }
 
         if($country=='stand-with-russia'){
@@ -78,13 +83,15 @@ class StudentController extends Controller
             $pageTitle = 'Stand with Russia - Student Voices on Urban Wear';
             $metaTitle = 'Stand with Russia Clothing - Student Advocacy College Apparel';
             $page_content = $this->page_content($country);
+            $background_image = url('/').'/students/students-stand-with-russia.png';
 
             return view('frontend.student.all')
                 ->with('pageTitle', $pageTitle)
                 ->with('metaDescription', $metaDescription)
                 ->with('keywords', $keywords)
                 ->with('metaTitle', $metaTitle)
-                ->with('page_content', $page_content);
+                ->with('page_content', $page_content)
+                ->with('background_image', $background_image);
         }
 
         if($country=='stand-with-ukraine'){
@@ -94,13 +101,15 @@ class StudentController extends Controller
             $pageTitle = 'Stand with Ukraine - Custom Fashion by Student Advocates';
             $metaTitle = 'Stand with Ukraine - Power Fashion for Students';
             $page_content = $this->page_content($country);
+            $background_image = url('/').'/students/students-stand-with-ukraine.png';
 
             return view('frontend.student.all')
                 ->with('pageTitle', $pageTitle)
                 ->with('metaDescription', $metaDescription)
                 ->with('keywords', $keywords)
                 ->with('metaTitle', $metaTitle)
-                ->with('page_content', $page_content);
+                ->with('page_content', $page_content)
+                ->with('background_image', $background_image);
         }
     }
 
