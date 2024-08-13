@@ -286,7 +286,9 @@ class HomeController extends Controller
             //return redirect()->route('login')->with('message', 'Please login to access this page.');
         }
 
-        return view('frontend.pages.create_product')->with('product', $product);
+        $coupon = Storage::get('coupon_code') ? Storage::get('coupon_code') : '';
+        Storage::delete('coupon_code','');
+        return view('frontend.pages.create_product')->with('product', $product)->with('coupon', $coupon);
     }
 
     public function contact_save(Request $request){

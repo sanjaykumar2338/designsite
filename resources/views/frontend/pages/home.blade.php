@@ -334,17 +334,28 @@
                                     political justice</li>
                             </div>
                             <div class="col-lg-6 p-0 edit_ ">
-                            <form action="{{route('student.index')}}" method="get" class="Adv_ocacy">    
-                                <select name="country" class="form-select" aria-label="Default select example">
-                                    <option selected value="">Stand With
-                                    </option>
-                                    <option value="Israel">Israel</option>
-                                    <option value="Palestine">Palestine</option>
-                                    <option value="Russia">Russia</option>
-                                    <option value="Ukraine">Ukraine</option>
+                            <form id="studentForm">    
+                                <select name="country" class="form-select" aria-label="Default select example" id="countrySelect">
+                                    <option selected value="">Stand With</option>
+                                    <option value="student-with-israel">Israel</option>
+                                    <option value="student-with-palestine">Palestine</option>
+                                    <option value="student-with-russia">Russia</option>
+                                    <option value="student-with-ukraine">Ukraine</option>
                                 </select><br>
-                                <button style="width:113%">View Student Deals</button>
+                                <button type="submit" style="width:113%">View Student Deals</button>
                             </form>
+
+                            <script>
+                                document.getElementById('studentForm').addEventListener('submit', function(e) {
+                                    e.preventDefault(); // Prevent the default form submission
+                                    var selectedCountry = document.getElementById('countrySelect').value;
+                                    var url = "{{ url('students') }}"; // Default URL
+                                    if (selectedCountry) {
+                                        url += "/" + selectedCountry; // Append the selected country if any
+                                    }
+                                    window.location.href = url;
+                                });
+                            </script>
                             </div>
                         </div>
 

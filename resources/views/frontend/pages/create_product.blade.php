@@ -574,7 +574,7 @@
 
                             <div class="form-group">
                                 <label>Coupon Code</label>
-                                <input type="text" name="coupon" id="example5-coupon" style="margin-bottom: 6px;" placeholder="Enter a coupon code" class="form-control">
+                                <input type="text" value="{{$coupon}}" name="coupon" id="example5-coupon" style="margin-bottom: 6px;" placeholder="Enter a coupon code" class="form-control">
                                 <br><br>
                                 <button type="button" id="check-coupon-btn"
                                 class="py-2 px-4 bg-gray-500 text-white rounded">Apply Coupon</button>

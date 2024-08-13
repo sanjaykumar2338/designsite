@@ -1272,6 +1272,24 @@ function saveOrder(data) {
         .catch((error) => console.log("error", error));
 }
 
+//apply coupon auto
+document.addEventListener('DOMContentLoaded', function() {
+    var couponField = document.getElementById('example5-coupon');
+    var applyButton = document.getElementById('check-coupon-btn');
+    var modal = document.getElementById('payment-modal');
+
+    // Check every 500 milliseconds if the modal is visible
+    var interval = setInterval(function() {
+        // Check if modal is visible (assuming display: block or visibility: visible is used to show it)
+        if (window.getComputedStyle(modal).display !== 'none') {
+            if (couponField.value) {
+                applyButton.click(); // Trigger the button click
+            }
+            clearInterval(interval); // Stop checking after the modal is visible and action is taken
+        }
+    }, 500); // Interval set to 500 milliseconds (can be adjusted as needed)
+});
+
 function setCost() {
     let price = +product.product_price + +product.commission;
     product.front_textbox = 0;

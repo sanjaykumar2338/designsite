@@ -189,9 +189,12 @@ Route::group(['prefix' => 'dashboard','middleware' => 'check.auth'], function ()
     Route::get('/coupon', [App\Http\Controllers\UserDashboardController::class, 'getActiveCoupons'])->name('coupon');
 });
 
-Route::group(['prefix' => 'student'], function () {
-    //new user dashboard
-    Route::get('/{country?}', [StudentController::class, 'index'])->name('student.index');
+Route::group(['prefix' => 'students'], function () {
+    // This handles the base /students route
+    Route::get('/', [StudentController::class, 'index'])->name('students.index');
+
+    // This handles the /students/{country} routes
+    Route::get('/{country}', [StudentController::class, 'show'])->name('students.show');
 });
 
 Route::post('/check_coupon', [App\Http\Controllers\PaymentController::class, 'check_coupon'])->name('check_coupon');
