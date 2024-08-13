@@ -118,13 +118,14 @@
         {!! $page_content !!}
 
         @if($click_index=="")
-            <div class="container">
+            <div class="container" style="float: left;
+    margin-left: -14px;    padding-top: 20px;">
                 <div class="accordion" id="causeStandAccordion">
 
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                How to Receive Your Commitment Coupon as a Student
+                                <b>How to Receive Your Commitment Coupon as a Student</b>
                             </button>
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#causeStandAccordion">
@@ -139,7 +140,7 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingTwo">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                When Students Advocate, The Impact is Real
+                                <b>When Students Advocate, The Impact is Real</b>
                             </button>
                         </h2>
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#causeStandAccordion">
@@ -152,7 +153,7 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingThree">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Advocate for a Cause and Protest as a Student
+                                <b>Advocate for a Cause and Protest as a Student</b>
                             </button>
                         </h2>
                         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#causeStandAccordion">
@@ -166,6 +167,7 @@
             </div>
 
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <br><br><br><br>
         @endif
     </div>
 </section>
