@@ -116,6 +116,57 @@
 <section class="Products">
     <div class="container">            
         {!! $page_content !!}
+
+        @if($click_index=="")
+            <div class="container">
+                <div class="accordion" id="causeStandAccordion">
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                How to Receive Your Commitment Coupon as a Student
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#causeStandAccordion">
+                            <div class="accordion-body">
+                                After making your first purchase with Cause Stand, you'll be prompted to create an account if you haven't already. During the account setup, navigate to your user dashboard settings and select the "I am a student" option. Once you confirm your student status, a 30% Commitment Coupon will be automatically placed in your dashboard.
+                                <br><br>
+                                You will also receive an email notification confirming that the coupon has been activated. This coupon can be applied to all future purchases, allowing you to continue supporting your chosen cause at a discounted rate. Your activism is important, and this coupon is our way of recognizing and supporting your commitment to making a difference. Your activism doesn’t stop at the checkout—your voice continues to be heard as you get rewarded for standing up for what you believe in.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                When Students Advocate, The Impact is Real
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#causeStandAccordion">
+                            <div class="accordion-body">
+                                Supporting a cause is more than just wearing your beliefs; it’s about making a tangible impact. For every addition you customize on your garment, $10 is directly donated to a non-profit dedicated to the cause. By personalizing your apparel, you’re not just advocating for change—you’re funding it, ensuring that your contribution reaches the communities and causes that need it most.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Advocate for a Cause and Protest as a Student
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#causeStandAccordion">
+                            <div class="accordion-body">
+                                Advocating for a cause doesn’t have to be confrontational; it can be peaceful, creative, and impactful. Customize your clothing with messages that reflect your values, encouraging dialogue and understanding. Wear your activism with pride, and inspire others to join the conversation for justice, freedom, and democracy. Your apparel becomes a canvas for peaceful protest, fostering awareness and change without ever raising your voice.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        @endif
     </div>
 </section>
 
