@@ -38,7 +38,7 @@ class StudentController extends Controller
         // Logic for displaying deals for a specific country
 
         Storage::put('coupon_code', 'commitment');
-        if($country=='student-with-israel'){
+        if($country=='stand-with-israel'){
 
             $metaDescription = 'Support Israel with custom student clothing advocating for freedom and anti-terrorism. Stand with Israel in style and purpose.';
             $keywords = 'Stand with Israel apparel, Israel advocacy clothing, anti terror clothing';
@@ -54,7 +54,7 @@ class StudentController extends Controller
                 ->with('page_content', $page_content);
         }
 
-        if($country=='student-with-palestine'){
+        if($country=='stand-with-palestine'){
 
             $metaDescription = 'Advocate for Palestine with stylish student clothing that lets you wear your support boldly; personalize your apparel to show facts and stand for accountability.';
             $keywords = 'Stand with Palestine clothing, Palestine advocacy clothing, students for Palestine, advocacy student clothing';
@@ -71,7 +71,7 @@ class StudentController extends Controller
 
         }
 
-        if($country=='student-with-russia'){
+        if($country=='stand-with-russia'){
 
             $metaDescription = 'Express your views on Russia\'s global role with custom student apparel; advocate for dialogue and understanding through personalized clothing that speaks for peace.';
             $keywords = 'Stand with Russia Clothing, Russian advocacy apparel, student support Russia';
@@ -87,7 +87,7 @@ class StudentController extends Controller
                 ->with('page_content', $page_content);
         }
 
-        if($country=='student-with-ukraine'){
+        if($country=='stand-with-ukraine'){
 
             $metaDescription = 'Support Ukraine\'s sovereignty with custom student apparel; advocate for democracy and freedom by wearing personalized clothing that champions a just cause.';
             $keywords = 'stand with Ukraine clothing, Ukraine advocacy apparel, support Ukraine merchandise';
@@ -135,7 +135,7 @@ class StudentController extends Controller
                 <p>Stand with the people, and use your fashion to make a statement. Don't stand by, stand up and be a history maker, voice your ideology, and let your apparel be a testament to the times.</p>";
         }
     
-        if($country == 'student-with-israel'){
+        if($country == 'stand-with-israel'){
             return "<h3>Stand with Israel - Student Clothing to Free Land</h3>
                 <p>At Cause Stand, we offer a platform for you to design and wear clothing that advocates for Israel’s right to peace and security. Our anti-terrorism clothing brand is crafted for freedom fighters who want to make their voices heard on campus and beyond.</p>
                 
@@ -157,7 +157,7 @@ class StudentController extends Controller
                 <p>Use your apparel to challenge misconceptions, spread awareness, and show solidarity for the people in the land of Israel. Claim the brand of hope and strength, and let your fashion make a statement for accountability, justice, and peace.</p>";
         }
     
-        if($country == 'student-with-palestine'){
+        if($country == 'stand-with-palestine'){
             return "<h3>Students Stand with Palestine - Advocacy Empowered Clothing</h3>
                 <p>Cause Stand provides a platform for you to design and wear clothing that supports Palestinian rights and calls for equality and justice. Our advocacy clothing line empowers students to make a courageous statement on behalf of the Palestinian people.</p>
                 
@@ -179,7 +179,7 @@ class StudentController extends Controller
                 <p>Use your clothing to spread awareness, challenge oppression, and stand up for what is right. Be a force for political change and let your fashion speak out about the atrocities committed in the land of Palestine.</p>";
         }
     
-        if($country == 'student-with-russia'){
+        if($country == 'stand-with-russia'){
             return "<h3>Stand with Russia - Student Voices on Urban Wear</h3>
                 <p>Stand with Russia and express your perspective through customized student apparel. Cause Stand offers a platform for you to design and wear clothing that advocates for a balanced view of Russia’s global role. Our advocacy apparel empowers students to engage in meaningful dialogue and promote understanding.</p>
                 
@@ -201,7 +201,7 @@ class StudentController extends Controller
                 <p>Use your clothing to promote dialogue, encourage critical thinking, and stand for a comprehensive understanding of Russia’s role in the world. Be a voice for balanced perspectives and let your fashion make a difference.</p>";
         }
     
-        if($country == 'student-with-ukraine'){
+        if($country == 'stand-with-ukraine'){
             return "<h3>Stand with Ukraine - Custom Fashion by Student Advocates</h3>
                 <p>Stand with Ukraine and support its sovereignty through customized student fashion. At Cause Stand, we offer a platform for you to design and wear clothing that champions Ukraine’s fight for democracy and freedom. Our advocacy apparel empowers students to stand up for Ukraine’s right to self-determination.</p>
                 
