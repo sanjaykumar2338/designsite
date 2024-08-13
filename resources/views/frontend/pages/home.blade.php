@@ -337,10 +337,10 @@
                             <form id="studentForm">    
                                 <select name="country" class="form-select" aria-label="Default select example" id="countrySelect">
                                     <option selected value="">Stand With</option>
-                                    <option value="student-with-israel">Israel</option>
-                                    <option value="student-with-palestine">Palestine</option>
-                                    <option value="student-with-russia">Russia</option>
-                                    <option value="student-with-ukraine">Ukraine</option>
+                                    <option value="stand-with-israel">Israel</option>
+                                    <option value="stand-with-palestine">Palestine</option>
+                                    <option value="stand-with-russia">Russia</option>
+                                    <option value="stand-with-ukraine">Ukraine</option>
                                 </select><br>
                                 <button type="submit" style="width:113%">View Student Deals</button>
                             </form>
