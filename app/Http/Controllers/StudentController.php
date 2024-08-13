@@ -32,7 +32,10 @@ class StudentController extends Controller
         $background_image = url('/').'/students/students-stand-with-a-cause.png';
         
         Storage::put('coupon_code', 'commitment');
-        return view('frontend.student.all')->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle)->with('page_content', $page_content)->with('background_image', $background_image);
+        $tag_line = 'Enabling student to, stand in solidarity, with a cause.';
+
+        return view('frontend.student.all')->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle)->with('page_content', $page_content)->with('background_image', $background_image)->with('click_index', '')
+        ->with('click_index1', '')->with('tag_line', $tag_line);
     }
 
     public function show($country)
@@ -48,6 +51,7 @@ class StudentController extends Controller
             $metaTitle = 'Stand with Israel Clothing - Anti Terror Brands for Freedom Fighters';
             $page_content = $this->page_content($country);
             $background_image = url('/').'/students/students-stand-with-israel.png';
+            $tag_line = 'Enabling student to stand and support the people of Israel.';
 
             return view('frontend.student.all')
                 ->with('pageTitle', $pageTitle)
@@ -55,7 +59,10 @@ class StudentController extends Controller
                 ->with('keywords', $keywords)
                 ->with('metaTitle', $metaTitle)
                 ->with('page_content', $page_content)
-                ->with('background_image', $background_image);
+                ->with('background_image', $background_image)
+                ->with('click_index', 0)
+                ->with('click_index1', 0)
+                ->with('tag_line', $tag_line);
         }
 
         if($country=='stand-with-palestine'){
@@ -66,6 +73,7 @@ class StudentController extends Controller
             $metaTitle = 'Stand with Palestine - Advocacy Clothing for Students of History';
             $page_content = $this->page_content($country);
             $background_image = url('/').'/students/students-stand-with-palestine.png';
+            $tag_line = 'Enabling student to stand in solidarity with the people of Palestine.';
 
             return view('frontend.student.all')
                 ->with('pageTitle', $pageTitle)
@@ -73,7 +81,10 @@ class StudentController extends Controller
                 ->with('keywords', $keywords)
                 ->with('metaTitle', $metaTitle)
                 ->with('page_content', $page_content)
-                ->with('background_image', $background_image);
+                ->with('background_image', $background_image)
+                ->with('click_index', 0)
+                ->with('click_index1', 1)
+                ->with('tag_line', $tag_line);
         }
 
         if($country=='stand-with-russia'){
@@ -84,6 +95,7 @@ class StudentController extends Controller
             $metaTitle = 'Stand with Russia Clothing - Student Advocacy College Apparel';
             $page_content = $this->page_content($country);
             $background_image = url('/').'/students/students-stand-with-russia.png';
+            $tag_line = 'Elevating student fashion to express the views of the Russian people.';
 
             return view('frontend.student.all')
                 ->with('pageTitle', $pageTitle)
@@ -91,7 +103,10 @@ class StudentController extends Controller
                 ->with('keywords', $keywords)
                 ->with('metaTitle', $metaTitle)
                 ->with('page_content', $page_content)
-                ->with('background_image', $background_image);
+                ->with('background_image', $background_image)
+                ->with('click_index', 1)
+                ->with('click_index1', 0)
+                ->with('tag_line', $tag_line);
         }
 
         if($country=='stand-with-ukraine'){
@@ -102,6 +117,7 @@ class StudentController extends Controller
             $metaTitle = 'Stand with Ukraine - Power Fashion for Students';
             $page_content = $this->page_content($country);
             $background_image = url('/').'/students/students-stand-with-ukraine.png';
+            $tag_line = 'Enabling student to stand and advocate for Ukraine’s Sovereignty.';
 
             return view('frontend.student.all')
                 ->with('pageTitle', $pageTitle)
@@ -109,7 +125,10 @@ class StudentController extends Controller
                 ->with('keywords', $keywords)
                 ->with('metaTitle', $metaTitle)
                 ->with('page_content', $page_content)
-                ->with('background_image', $background_image);
+                ->with('background_image', $background_image)
+                ->with('click_index', 1)
+                ->with('click_index1', 1)
+                ->with('tag_line', $tag_line);
         }
     }
 

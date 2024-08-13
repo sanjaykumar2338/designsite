@@ -13,7 +13,8 @@
                                 alt="...">
                             <div class="carousel-caption ">
                                 <h5>Commitment Coupon 30% OFF!</h5>
-                                <p>Enabling student to, stand in solidarity,<br> with a cause.</p>
+                                <p>on all orders after your first.</p>
+                                <p>{!! $tag_line !!}</p>
                             </div>
                         </div>
                     </div>
@@ -32,10 +33,7 @@
                         <h4>Choose a Conflict</h4>
                         <ul>
                             <li class="israel-1 option-conflict">Israel & Palestine</li>
-                            <li style="display:none" class="israel-1 option-conflict">Azerbaijan & Armenia</li>
                             <li class="option-conflict">Russia & Ukraine</li>
-                            <li style="display:none" class="option-conflict">Turkey & Kurdistan </li>
-                            <li style="display:none" class="option-conflict">India & Pakistan</li>
                         </ul>
                     </div>
 
@@ -120,4 +118,23 @@
         {!! $page_content !!}
     </div>
 </section>
+
+<script>
+    //$(document).ready(function(){
+        setTimeout(() => {
+            var options = document.querySelectorAll('.option-conflict');
+            var index = "{{$click_index}}"; // Change this index as needed (0-based index)
+            
+            if (options.length > index) {
+                options[index].click(); // Simulate a click on the element at the specified index
+
+                options = document.querySelectorAll('.standwith');
+                index = "{{$click_index1}}"; // Change this index as needed (0-based index)
+                options[index].click();
+            } else {
+                console.error('Index out of range');
+            }
+        }, 100);
+    //});
+</script>
 @endsection
