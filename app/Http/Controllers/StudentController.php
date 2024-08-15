@@ -35,7 +35,7 @@ class StudentController extends Controller
         $tag_line = 'Enabling student to, stand in solidarity, with a cause.';
 
         return view('frontend.student.all')->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle)->with('page_content', $page_content)->with('background_image', $background_image)->with('click_index', '')
-        ->with('click_index1', '')->with('tag_line', $tag_line);
+        ->with('click_index1', '')->with('tag_line', $tag_line)->with('country','all');
     }
 
     public function show($country)
@@ -62,7 +62,8 @@ class StudentController extends Controller
                 ->with('background_image', $background_image)
                 ->with('click_index', 0)
                 ->with('click_index1', 0)
-                ->with('tag_line', $tag_line);
+                ->with('tag_line', $tag_line)
+                ->with('country','israel');
         }
 
         if($country=='stand-with-palestine'){
@@ -84,7 +85,8 @@ class StudentController extends Controller
                 ->with('background_image', $background_image)
                 ->with('click_index', 0)
                 ->with('click_index1', 1)
-                ->with('tag_line', $tag_line);
+                ->with('tag_line', $tag_line)
+                ->with('country','palestine');
         }
 
         if($country=='stand-with-russia'){
@@ -106,7 +108,8 @@ class StudentController extends Controller
                 ->with('background_image', $background_image)
                 ->with('click_index', 1)
                 ->with('click_index1', 0)
-                ->with('tag_line', $tag_line);
+                ->with('tag_line', $tag_line)
+                ->with('country','russia');
         }
 
         if($country=='stand-with-ukraine'){
@@ -128,7 +131,8 @@ class StudentController extends Controller
                 ->with('background_image', $background_image)
                 ->with('click_index', 1)
                 ->with('click_index1', 1)
-                ->with('tag_line', $tag_line);
+                ->with('tag_line', $tag_line)
+                ->with('country','ukraine');
         }
     }
 

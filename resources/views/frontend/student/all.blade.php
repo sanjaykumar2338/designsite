@@ -112,16 +112,154 @@
     }
 </style>
 
+<style>
+    .custom-box {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .custom-box:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .custom-box h5 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+    .custom-box p {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+    .custom-box .btn {
+        background-color: #007bff;
+        color: white;
+        border-radius: 50px;
+        padding: 10px 20px;
+        transition: background-color 0.3s ease;
+    }
+    .custom-box .btn:hover {
+        background-color: #0056b3;
+    }
+    .row {
+        margin: 0 auto;
+    }
+</style>
+
 <!-- ========== Start products ========== -->
 <section class="Products">
-    <div class="container">            
+    <div class="container"> 
+        
+        @if($country=="all")
+            <div class="row">
+                <!-- Box 1 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="custom-box">
+                    <h5>Stand with Israel</h5>
+                    <p>Donations: ${{ number_format(\DB::table('printful_orders')->where('donation_country', 'Israel')->sum('donation_amount'), 2) }}</p>
+                    <p>Supporters: {{ \DB::table('printful_orders')->where('donation_country', 'Israel')->count() }}</p>
+                    <a href="{{url('/')}}/students/stand-with-israel" class="btn btn-primary">EXPLORE</a>
+                    </div>
+                </div>
+
+                <!-- Box 2 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="custom-box">
+                        <h5>Stand with Palestine</h5>
+                        <p>Donations: ${{ number_format(\DB::table('printful_orders')->where('donation_country', 'Palestine')->sum('donation_amount'), 2) }}</p>
+                        <p>Supporters: {{ \DB::table('printful_orders')->where('donation_country', 'Palestine')->count() }}</p>
+                        <a href="{{url('/')}}/students/stand-with-palestine" class="btn btn-primary">EXPLORE</a>
+                    </div>
+                </div>
+
+                <!-- Box 3 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="custom-box">
+                        <h5>Stand with Russia</h5>
+                        <p>Donations: ${{ number_format(\DB::table('printful_orders')->where('donation_country', 'Russia')->sum('donation_amount'), 2) }}</p>
+                        <p>Supporters: {{ \DB::table('printful_orders')->where('donation_country', 'Russia')->count() }}</p>
+                        <a href="{{url('/')}}/students/stand-with-russia" class="btn btn-primary">EXPLORE</a>
+                    </div>
+                </div>
+
+                <!-- Box 4 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="custom-box">
+                        <h5>Stand with Ukraine</h5>
+                        <p>Donations: ${{ number_format(\DB::table('printful_orders')->where('donation_country', 'Ukraine')->sum('donation_amount'), 2) }}</p>
+                        <p>Supporters: {{ \DB::table('printful_orders')->where('donation_country', 'Ukraine')->count() }}</p>
+                        <a href="{{url('/')}}/students/stand-with-ukraine" class="btn btn-primary">EXPLORE</a>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+        @endif
+
+        @if($country=="israel")
+            <div class="row">
+                <!-- Box 1 -->
+                <div class="col-lg-12 col-md-6 mb-4">
+                    <div class="custom-box">
+                    <h5>Stand with Israel</h5>
+                    <p style="text-align:center;">Donations: ${{ number_format(\DB::table('printful_orders')->where('donation_country', 'Israel')->sum('donation_amount'), 2) }}</p>
+                    <p style="text-align:center;">Supporters: {{ \DB::table('printful_orders')->where('donation_country', 'Israel')->count() }}</p>
+                    <a href="javascript:void(0);" class="btn btn-primary" onclick="scrollToTop()">PERSONALIZE & DONATE</a> <a href="{{url('/')}}/shop" class="btn btn-primary">SHOP COLLECTIONS</a>
+                    </div>
+                </div>
+            </div>
+        @endif
+
+        @if($country=="palestine")
+            <div class="row">
+                <!-- Box 1 -->
+                <div class="col-lg-12 col-md-6 mb-4">
+                    <div class="custom-box">
+                    <h5>Stand with Palestine</h5>
+                    <p style="text-align:center;">Donations: ${{ number_format(\DB::table('printful_orders')->where('donation_country', 'Palestine')->sum('donation_amount'), 2) }}</p>
+                    <p style="text-align:center;">Supporters: {{ \DB::table('printful_orders')->where('donation_country', 'Palestine')->count() }}</p>
+                    <a href="javascript:void(0);" class="btn btn-primary" onclick="scrollToTop()">PERSONALIZE & DONATE</a> <a href="{{url('/')}}/shop" class="btn btn-primary">SHOP COLLECTIONS</a>
+                    </div>
+                </div>
+            </div>
+        @endif
+
+        @if($country=="russia")
+            <div class="row">
+                <!-- Box 1 -->
+                <div class="col-lg-12 col-md-6 mb-4">
+                    <div class="custom-box">
+                    <h5>Stand with Russia</h5>
+                    <p style="text-align:center;">Donations: ${{ number_format(\DB::table('printful_orders')->where('donation_country', 'Russia')->sum('donation_amount'), 2) }}</p>
+                    <p style="text-align:center;">Supporters: {{ \DB::table('printful_orders')->where('donation_country', 'Russia')->count() }}</p>
+                    <a href="javascript:void(0);" class="btn btn-primary" onclick="scrollToTop()">PERSONALIZE & DONATE</a> <a href="{{url('/')}}/shop" class="btn btn-primary">SHOP COLLECTIONS</a>
+                    </div>
+                </div>
+            </div>
+        @endif
+
+        @if($country=="ukraine")
+            <div class="row">
+                <!-- Box 1 -->
+                <div class="col-lg-12 col-md-6 mb-4">
+                    <div class="custom-box">
+                    <h5>Stand with Ukraine</h5>
+                    <p style="text-align:center;">Donations: ${{ number_format(\DB::table('printful_orders')->where('donation_country', 'Ukraine')->sum('donation_amount'), 2) }}</p>
+                    <p style="text-align:center;">Supporters: {{ \DB::table('printful_orders')->where('donation_country', 'Ukraine')->count() }}</p>
+                    <a href="javascript:void(0);" class="btn btn-primary" onclick="scrollToTop()">PERSONALIZE & DONATE</a> <a href="{{url('/')}}/shop" class="btn btn-primary">SHOP COLLECTIONS</a>
+                    </div>
+                </div>
+            </div>
+        @endif
+
         {!! $page_content !!}
 
-        @if($click_index=="")
-            <div class="container" style="float: left;
-    margin-left: -14px;    padding-top: 20px;">
+        @if($country=="country")
+            <div class="container" style="float: left;margin-left: -14px;    padding-top: 20px;">
                 <div class="accordion" id="causeStandAccordion">
-
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -189,5 +327,12 @@
             }
         }, 100);
     //});
+
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
 </script>
 @endsection
