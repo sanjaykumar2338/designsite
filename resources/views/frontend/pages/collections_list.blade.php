@@ -1,6 +1,26 @@
 @extends('frontend.layout.homepagelayout')
 
 @section('content')
+
+    <style>
+        .Products h3 {
+            text-align: left;
+            text-align: left;
+            font-size: 33px;
+            font-weight: 600;
+            padding-bottom: 8px;
+            text-transform: none;
+            line-height: 41px;
+        }
+
+        .Products p {
+            text-align: left;
+            font-size: 20px;
+            text-transform: none;
+            padding-bottom: 0;
+            line-height: 33px;
+        }
+    </style>
     
     <!-- ========== Start products section ========== -->
     <section class="Products">
