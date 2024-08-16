@@ -252,12 +252,30 @@ class HomeController extends Controller
 
     public function login()
     {
-        return view('frontend.pages.login');
+        $pageTitle = 'Login to Advocate to - Shop to Subscribe to Cause Stand';
+        $keywords = 'Cause Stand registration, join Cause Stand, join a cause';
+        $metaTitle = 'Login to Your Cause Stand Account - Advocate and Access Your Dashboard';
+        $metaDescription = 'Log in to your Cause Stand account to advocate for global causes, access your dashboard, and manage your orders. Log in to your advocacy hub now.';
+
+        return view('frontend.pages.login')
+                ->with('pageTitle', $pageTitle)
+                ->with('metaTitle', $metaTitle)
+                ->with('keywords', $keywords)
+                ->with('metaDescription', $metaDescription);
     }
 
     public function register()
     {
-        return view('frontend.pages.register');
+        $pageTitle = 'Shop to Join, Advocate, and Donate to a Cause';
+        $metaTitle = 'Join Cause Stand - Advocate for a Cause with Every Purchase';
+        $keywords = 'Cause Stand registration, join Cause Stand, join a cause';
+        $metaDescription = 'Become a member with a cause, by making your first purchase, and gain access to your personalized user dashboard to manage orders and track donations.';
+
+        return view('frontend.pages.register')
+                ->with('pageTitle', $pageTitle)
+                ->with('metaDescription', $metaDescription)
+                ->with('keywords', $keywords)
+                ->with('metaTitle', $metaTitle);
     }
 
     public function product_design()
