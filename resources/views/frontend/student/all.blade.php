@@ -257,7 +257,7 @@
 
         {!! $page_content !!}
 
-        @if($country=="country")
+        @if($country=="all")
             <div class="container" style="float: left;margin-left: -14px;    padding-top: 20px;">
                 <div class="accordion" id="causeStandAccordion">
                     <div class="accordion-item">
