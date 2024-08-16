@@ -38,8 +38,14 @@ class CollectionController extends Controller
         $collection = Collections::where('slug', $slug)->first();
         $collection_design = Boycotts::where('collection', $collection->id)->get();
 
+        $metaDescription = $collection->meta_description;
+        $keywords = $collection->meta_keywords;
+        $pageTitle = $collection->page_title;
+        $metaTitle = $collection->meta_title;
+        $page_content = $collection->description;
+
         //echo "<pre>"; print_r($products); die;
-        return view('frontend.pages.collections_list')->with('slug',$slug)->with('collection',$collection)->with('collection_design',$collection_design);
+        return view('frontend.pages.collections_list')->with('slug',$slug)->with('collection',$collection)->with('collection_design',$collection_design)->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle)->with('page_content' , $page_content);
     }
 
     public function collections_design(Request $request){
