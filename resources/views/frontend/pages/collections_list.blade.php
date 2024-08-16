@@ -2,22 +2,12 @@
 
 @section('content')
     
-    <!-- ========== Start products section ========== -->
-    <section class="products-section">
-        <div class="container">
-            <div class="text">
-                <h4> Shop {{$slug}} Designs </h4>
-            </div>
-        </div>
-    </section>
-    <!-- ========== End products section ========== -->
-    
     <!-- ========== Start products ========== -->
     <section class="Products-3 bg-img">
         <div class="container">    
         <div class="row">
             <!-- Left Content Section -->
-            <div class="col-lg-12 col-md-12 mb-5">
+            <div class="col-lg-12 col-md-12 mb-5" style="text-align:left;">
                 {!! $page_content !!}
             </div>
         </div>
