@@ -7,13 +7,8 @@
         <div class="container">    
         <div class="row">
             <!-- Left Content Section -->
-            <style>
-                p{
-                    text-align:left;
-                }
-            </style>
 
-            <div class="col-lg-12 col-md-12 mb-5" style="text-align:left;">
+            <div class="col-lg-12 col-md-12 mb-5">
                 {!! $page_content !!}
             </div>
         </div>
