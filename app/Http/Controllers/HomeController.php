@@ -247,7 +247,12 @@ class HomeController extends Controller
 
     public function return_order()
     {
-        return view('frontend.pages.return_order');
+        $metaDescription = 'Easily return items within 30 days with our streamlined process. Log in to start your return and get support from our team.';
+        $keywords = 'Cause Stand returns, return items online, easy returns';
+        $pageTitle = 'Easy Order Returns for Cause Stand Advocates';
+        $metaTitle = 'Hassle-Free Order Returns - Cause Stand';
+
+        return view('frontend.pages.return_order')->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords);
     }
 
     public function donate_now()
