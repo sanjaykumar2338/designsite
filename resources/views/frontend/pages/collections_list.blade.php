@@ -2,18 +2,19 @@
 
 @section('content')
     
+    <!-- ========== Start products section ========== -->
+    <section class="Products">
+        <div class="container">     
+            {!! $page_content !!}
+        </div>
+    </section>
+
+    <!-- ========== End products section ========== -->
+    
     <!-- ========== Start products ========== -->
     <section class="Products-3 bg-img">
-        <div class="container">    
-        <div class="row">
-            <!-- Left Content Section -->
-
-            <div class="col-lg-12 col-md-12 mb-5">
-                {!! $page_content !!}
-            </div>
-        </div>
-        
-        <div class="row">
+        <div class="container">                     
+            <div class="row">
                 
                 @php
                    //echo "<pre>"; print_r($products);
