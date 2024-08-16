@@ -66,7 +66,12 @@ class HomeController extends Controller
 
     public function contactus()
     {
-        return view('frontend.pages.contactus');
+        $metaDescription = 'Get in touch with Cause Stand for support, inquiries, or feedback. We are here to assist you with your orders, advocacy, and account management.';
+        $keywords = 'cause stand';
+        $pageTitle = 'Get in touch with Cause Stand for support';
+        $metaTitle = 'Contact Us - Reach Out to Cause Stand for Support and Inquiries';
+        
+        return view('frontend.pages.contactus')->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle);
     }
 
     public function aboutus()

@@ -3,8 +3,8 @@
 @section('content')
 
 <style>
-    /* Custom styles for the form */
-    form {
+       /* Custom styles for the form */
+       form {
         border: 3px solid #f1f1f1;
         padding: 20px;
     }
@@ -42,6 +42,13 @@
         margin-top: 10px;
     }
 
+    .bullet-list {
+        list-style-type: inherit;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        text-align: justify;
+    }
+
     /* Responsive design */
     @media screen and (max-width: 768px) {
         .left-content, .right-content {
@@ -63,6 +70,17 @@
         <div class="col-md-6 left-content">
             <h2>Login to Advocate to - Shop to Subscribe to Cause Stand</h2>
             <p>Welcome Back, Advocate! Log in to your Cause Stand account to continue your journey of advocacy and activism. By accessing your personalized dashboard, you can manage your orders, customize your apparel, and stay connected with the causes you support. Whether you’re standing with Israel, Palestine, Russia, or Ukraine, your voice matters here.</p>
+
+            <h2>Manage Your Advocacy and Orders</h2>
+            <p>With your login, you can:</p>
+            <ul class="bullet-list">
+                <li>Track your orders and view purchase history</li>
+                <li>Customize and manage your personal advocacy apparel</li>
+                <li>Access exclusive member-only content and updates</li>
+                <li>Stay informed and engaged with the causes you support</li>
+            </ul>
+            <p><strong>Not a Member Yet?</strong> If you’re new to Cause Stand, you’ll need to make your first purchase to create an account. Shop to join the movement today, and start advocating for change through your voice and fashion.</p>
+            <p><strong>Forgot Your Password?</strong> No worries! Click on the “Forgot Password” link, and we’ll help you reset it quickly so you can get back to your advocacy.</p>
             <a href="{{url('/shop')}}" class="btn btn-primary">Shop</a> 
         </div>
 
