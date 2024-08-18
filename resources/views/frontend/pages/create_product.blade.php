@@ -839,5 +839,6 @@
 
         // Event listener for ZIP code input
         $('#cd_zip').on('blur', validateZipCode);
+        $('#state').on('change', validateZipCode);
     </script>
 @endsection
