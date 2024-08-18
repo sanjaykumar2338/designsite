@@ -810,7 +810,7 @@
         };
 
         function validateZipCode() {
-            const selectedState = $('#state').val();
+            const selectedState = $('#state option:selected').text();
             const zipCode = $('#cd_zip').val().trim();
 
             if (!zipCode || !selectedState) {
