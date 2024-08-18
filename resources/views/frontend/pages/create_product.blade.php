@@ -762,5 +762,34 @@
                 country_label.style.display = 'none';
             }
         });
+
+        // List of valid states provided by the client
+        const validStates = [
+            "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", 
+            "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", 
+            "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", 
+            "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", 
+            "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", 
+            "New Hampshire", "New Jersey", "New Mexico", "New York", 
+            "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", 
+            "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", 
+            "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", 
+            "West Virginia", "Wisconsin", "Wyoming"
+        ];
+
+
+        // Get the select element by ID
+        setInterval(() => {
+            const stateSelect = document.getElementById('state');
+
+            // Iterate over the select options
+            for (let i = stateSelect.options.length - 1; i >= 0; i--) {
+                const option = stateSelect.options[i];
+                // If the option value is not in the valid states list, remove it
+                if (!validStates.includes(option.text)) {
+                    stateSelect.remove(i);
+                }
+            }
+        }, 5000);
     </script>
 @endsection
