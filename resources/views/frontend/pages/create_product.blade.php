@@ -745,6 +745,7 @@
         */
     </script>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         window.addEventListener('load', function() {
             // Get the country dropdown element
@@ -791,5 +792,52 @@
                 }
             }
         }, 5000);
+
+        const stateAbbr = {
+            "Alabama": "AL", "Alaska": "AK", "Arizona": "AZ", "Arkansas": "AR",
+            "California": "CA", "Colorado": "CO", "Connecticut": "CT", "Delaware": "DE",
+            "Florida": "FL", "Georgia": "GA", "Hawaii": "HI", "Idaho": "ID",
+            "Illinois": "IL", "Indiana": "IN", "Iowa": "IA", "Kansas": "KS",
+            "Kentucky": "KY", "Louisiana": "LA", "Maine": "ME", "Maryland": "MD",
+            "Massachusetts": "MA", "Michigan": "MI", "Minnesota": "MN", "Mississippi": "MS",
+            "Missouri": "MO", "Montana": "MT", "Nebraska": "NE", "Nevada": "NV",
+            "New Hampshire": "NH", "New Jersey": "NJ", "New Mexico": "NM", "New York": "NY",
+            "North Carolina": "NC", "North Dakota": "ND", "Ohio": "OH", "Oklahoma": "OK",
+            "Oregon": "OR", "Pennsylvania": "PA", "Rhode Island": "RI", "South Carolina": "SC",
+            "South Dakota": "SD", "Tennessee": "TN", "Texas": "TX", "Utah": "UT",
+            "Vermont": "VT", "Virginia": "VA", "Washington": "WA", "West Virginia": "WV",
+            "Wisconsin": "WI", "Wyoming": "WY"
+        };
+
+        function validateZipCode() {
+            const selectedState = $('#state').val();
+            const zipCode = $('#cd_zip').val().trim();
+
+            if (!zipCode || !selectedState) {
+                return;
+            }
+
+            $.ajax({
+                url: `https://api.zippopotam.us/us/${zipCode}`,
+                method: 'GET',
+                success: function(data) {
+                    const stateNameFromApi = data.places[0]['state'];
+
+                    if (stateNameFromApi !== selectedState) {
+                        alert('The ZIP code does not match the selected state.');
+                        $('#cd_zip').val('');  // Clear the invalid ZIP code
+                    } else {
+                        console.log('ZIP code validated successfully.');
+                    }
+                },
+                error: function() {
+                    alert('Invalid ZIP code.');
+                    $('#cd_zip').val('');  // Clear the invalid ZIP code
+                }
+            });
+        }
+
+        // Event listener for ZIP code input
+        $('#cd_zip').on('blur', validateZipCode);
     </script>
 @endsection
