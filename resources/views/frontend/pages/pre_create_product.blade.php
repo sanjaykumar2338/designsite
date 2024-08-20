@@ -649,5 +649,23 @@
         // Event listener for ZIP code input
         $('#cd_zip').on('blur', validateZipCode);
         $('#state').on('change', validateZipCode);
+
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                var selectElement = document.getElementById("product_size");
+                if (selectElement) {
+                    // Create a new option element
+                    var newOption = document.createElement("option");
+                    newOption.value = ""; // Set the value for the new option
+                    newOption.text = "Select Size";  // Set the display text for the new option
+
+                    // Insert the new option as the first option
+                    selectElement.insertBefore(newOption, selectElement.firstChild);
+
+                    // Optionally, select the newly added option
+                    selectElement.value = "";
+                }
+            }, 2000); // 2000 milliseconds = 2 seconds
+        });
     </script>
 @endsection

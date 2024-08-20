@@ -170,7 +170,7 @@
 								<h4 class="tw-sz-one">Product Size :</h4>
                                 <div class="tw-sz-two prd-sze">
                                     <select name="product_size" id="product_size" onchange="setSizeChange()">
-                                        <option value="select" disabled>select</option>
+                                        <option value="">Select Size</option>
                                     </select>
                                 </div>
 							</div>
@@ -840,5 +840,23 @@
         // Event listener for ZIP code input
         $('#cd_zip').on('blur', validateZipCode);
         $('#state').on('change', validateZipCode);
+
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                var selectElement = document.getElementById("product_size");
+                if (selectElement) {
+                    // Create a new option element
+                    var newOption = document.createElement("option");
+                    newOption.value = ""; // Set the value for the new option
+                    newOption.text = "Select Size";  // Set the display text for the new option
+
+                    // Insert the new option as the first option
+                    selectElement.insertBefore(newOption, selectElement.firstChild);
+
+                    // Optionally, select the newly added option
+                    selectElement.value = "";
+                }
+            }, 2000); // 2000 milliseconds = 2 seconds
+        });
     </script>
 @endsection
