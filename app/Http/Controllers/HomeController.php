@@ -38,13 +38,15 @@ class HomeController extends Controller
     public function index()
     {
         $products = Products::select('product_type', \DB::raw('MAX(id) as max_id'), \DB::raw('MAX(front_image) as max_front_image'))
-            ->whereIn('product_type', ['Shirts', 'Hoodies', 'Sweatshirts','Bottoms'])
+            ->whereIn('product_type', ['no need to display'])
+            //->whereIn('product_type', ['Shirts', 'Hoodies', 'Sweatshirts','Bottoms'])
             //->whereIn('supporting_country', ['Israel', 'Palestine', 'Russia', 'Ukraine'])
             ->groupBy('product_type')
             ->get();
 
         $accessories = Products::select('product_type', \DB::raw('MAX(id) as max_id'), \DB::raw('MAX(front_image) as max_front_image'))
-            ->whereIn('product_type', ['Hats', 'Footwear', 'Bags', 'Phone Cases'])
+            ->whereIn('product_type', ['no need to display'])
+            //->whereIn('product_type', ['Hats', 'Footwear', 'Bags', 'Phone Cases'])
             //->whereIn('supporting_country', ['Israel', 'Palestine', 'Russia', 'Ukraine'])
             ->groupBy('product_type')
             ->get();

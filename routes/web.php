@@ -239,7 +239,7 @@ Route::get('/product/list/{standwith}/{productfor}/{producttype}', [App\Http\Con
 Route::get('/{standwithtype}/shop/{productfor}/{productType}/{slug}', [App\Http\Controllers\HomeController::class, 'shop'])->name('shop');
 
 Route::get('/product/category/{category}', [App\Http\Controllers\HomeController::class, 'product_category']);
-Route::get('/country/product/{category}', [App\Http\Controllers\HomeController::class, 'country_product'])->name('country_product');
+//Route::get('/country/product/{category}', [App\Http\Controllers\HomeController::class, 'country_product'])->name('country_product');
 
 Route::post('/register', [App\Http\Controllers\UserController::class, 'register'])->name('register');
 Route::get('/logout', [App\Http\Controllers\UserController::class, 'logout'])->name('logout');

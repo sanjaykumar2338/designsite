@@ -606,8 +606,7 @@
                         <div class="card_s">
                             <button> Boycott
                                 Movement</button>
-                            <h3>Shop the 
-                                Oversight Collection</h3>
+                            <h3>Shop the Oversight Collection</h3>
                             <p>Hold institutions accountable for biased influence.</p>
 
                             <div class="p_pic">
@@ -624,11 +623,11 @@
                     <div class="col-lg-3 ">
                         <div class="card_s">
                             <button>Integrity-reform Movement</button>
-                            <h3>Shop the Traitor Collection</h3>
+                            <h3>Shop the Traitor Collection<</h3>
                             <p>Hold lawmakers accountable
 for double-loyalty.  </p>
 
-                            <div class="p_pic">
+                            <div class="p_pic"><br>
                             <img src="{{url('/')}}/asset/frontend/images/hoodie.webp"
                                     alt="" class="img-fluid">
 
@@ -648,7 +647,7 @@ Trader Collection</h3>
                             <p>Hold politicians accountable
 for insider trading.</p>
 
-                            <div class="p_pic">
+                            <div class="p_pic"><br>
                                 <img src="{{url('/')}}/asset/frontend/images/hoodie.webp"
                                     alt="" class="img-fluid">
 
@@ -820,6 +819,7 @@ for misinformation.</p>
 @endif
 
 <!-- ========== End Apparel ========== -->
+@if(count($accessories) > 0)
 <section class="Products-3 bg-img">
     <div class="container">
         <h3> Accessories </h3>
@@ -847,6 +847,7 @@ for misinformation.</p>
         </div>
     </div>
 </section>
+@endif
 
 
 <!-- ========== Start Donations ========== -->

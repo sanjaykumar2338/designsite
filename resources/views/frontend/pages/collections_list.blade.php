@@ -22,15 +22,6 @@
         }
     </style>
     
-    <!-- ========== Start products section ========== -->
-    <section class="Products">
-        <div class="container">     
-            {!! $page_content !!}
-        </div>
-    </section>
-
-    <!-- ========== End products section ========== -->
-    
     <!-- ========== Start products ========== -->
     <section class="Products-3 bg-img">
         <div class="container">                     
@@ -66,5 +57,14 @@
             </div>
         </div>
     </section>
+
+    <!-- ========== Start products section ========== -->
+    <section class="Products" style="background-image:url('')">
+        <div class="container">     
+            {!! $page_content !!}
+        </div>
+    </section>
+
+    <!-- ========== End products section ========== -->
     <!-- ========== End products ========== -->
 @endsection
