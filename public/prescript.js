@@ -687,16 +687,6 @@ async function setShowDetailsModal(bool) {
         }
     }
 
-    var selectElement = document.getElementById("product_size");
-    // Check if the "Select Size" option is still selected
-    if (selectElement && selectElement.value === "") {
-        Toastify({
-            text: "Please select a valid size.",
-            className: "warn",
-        }).showToast();
-        return;
-    }
-    
     const el = getEl("customer-modal");
     el.style.display = bool ? "" : "none";
     el.hidden = !bool;
