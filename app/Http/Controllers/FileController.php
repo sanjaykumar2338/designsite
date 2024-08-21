@@ -141,13 +141,14 @@ class FileController extends Controller
                 'email' => $email,
                 'password' => Hash::make($password),
             ]);
-            Auth::login($user);
+
+            if (!Auth::check()) {
+                Auth::login($user);
+            }
         } else {
             // If the user exists, check the password and login
-            if (Hash::check($password, $user->password)) {
+            if (!Auth::check()) {
                 Auth::login($user);
-            } else {
-                //return response()->json(['error' => 'Invalid credentials'], 401);
             }
         }
 
