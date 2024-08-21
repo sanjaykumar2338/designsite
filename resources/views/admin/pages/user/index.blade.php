@@ -77,7 +77,7 @@
                         
                         @foreach($customers as $customer)
                             <tr>
-                                <td>{{$customer->name}}</td>
+                                <td>{{$customer->first_name}} {{$customer->first_name}}</td>
                                 <td>{{$customer->email}}</td>
                                 <td>{{$customer->created_at}}</td>
                             </tr>
