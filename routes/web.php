@@ -110,6 +110,7 @@ Route::get('/generate-sitemap', function() {
     return 'Sitemap generated and saved to sitemap.xml';
 });
 
+Route::get('/check-email', [LoginController::class, 'checkEmail']);
 Route::get('forget', [LoginController::class, 'forget'])->name('forget');
 Route::get('password/reset', [ForgotPasswordController::class, 'showLinkRequestForm'])->name('password.request');
 Route::post('password/email', [ForgotPasswordController::class,'sendResetLinkEmail'])->name('password.email');

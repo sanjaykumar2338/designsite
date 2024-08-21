@@ -455,6 +455,13 @@
                             placeholder="email" value="{{ auth()->check() ? auth()->user()->email : '' }}"
                             name="cd_email" required />
 
+                        <label class="password_field font-medium text-gray-800" style="display: none;">Password*</label>
+                        <input type="password" min="8" id="cd_password"
+                            class="password_field w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3"
+                            placeholder="Enter Password" name="cd_password" required
+                            style="display: none;">
+  
+
                         <label class="font-medium text-gray-800">Phone Number*</label>
                         <input type="text" id="cd_number"
                             class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" value=""
@@ -845,18 +852,74 @@
             setTimeout(function() {
                 var selectElement = document.getElementById("product_size");
                 if (selectElement) {
-                    // Create a new option element
-                    var newOption = document.createElement("option");
-                    newOption.value = ""; // Set the value for the new option
-                    newOption.text = "Select Size";  // Set the display text for the new option
+                    // Check if "Select Size" option already exists
+                    var optionExists = Array.from(selectElement.options).some(function(option) {
+                        return option.text === "Select Size";
+                    });
 
-                    // Insert the new option as the first option
-                    selectElement.insertBefore(newOption, selectElement.firstChild);
+                    // If "Select Size" does not exist, add it
+                    if (!optionExists) {
+                        // Create a new option element
+                        var newOption = document.createElement("option");
+                        newOption.value = ""; // Set the value for the new option
+                        newOption.text = "Select Size";  // Set the display text for the new option
 
-                    // Optionally, select the newly added option
-                    selectElement.value = "";
+                        // Insert the new option as the first option
+                        selectElement.insertBefore(newOption, selectElement.firstChild);
+
+                        // Optionally, select the newly added option
+                        selectElement.value = "";
+                    }
                 }
             }, 2000); // 2000 milliseconds = 2 seconds
         });
+
+        $(document).ready(function() {
+            let typingTimer;                
+            let doneTypingInterval = 100;   
+
+            $('#cd_email').on('keyup', function() {
+                clearTimeout(typingTimer);
+                typingTimer = setTimeout(doneTyping, doneTypingInterval);
+            });
+
+            $('#cd_email').on('keydown', function() {
+                clearTimeout(typingTimer);
+            });
+
+            $('#cd_email').on('mouseover', function() {
+                doneTyping(); 
+            });
+
+            function doneTyping() {
+                var email = $('#cd_email').val();
+
+                if (email.length > 0) {  
+                    $.ajax({
+                        url: '/check-email', 
+                        type: 'GET', 
+                        data: {
+                            email: email
+                        },
+                        success: function(response) {
+                            if (response.logged_in || response.exists) {
+                                // User is logged in, no need to show the password field
+                                $('.password_field').hide().removeAttr('required');
+                            } else if (response.valid && !response.exists) {
+                                // Show the password field if the email does not exist
+                                $('.password_field').show().attr('required', true);
+                            } else {
+                                // Hide the password field if the email exists or is invalid
+                                $('.password_field').hide().removeAttr('required');
+                            }
+                        },
+                        error: function(xhr, status, error) {
+                            console.error('AJAX error:', error);
+                        }
+                    });
+                }
+            }
+        });
+
     </script>
 @endsection

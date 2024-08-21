@@ -193,12 +193,22 @@ class HomeController extends Controller
 
     public function track_order()
     {
-        return view('frontend.pages.track_order');
+        $metaDescription = 'Easily track your Cause Stand order with our real-time tracking tool. Enter your order number and email to check the status and expected delivery date.';
+        $keywords = 'track order, order status, Cause Stand tracking, order tracking tool, check order status, order tracking info';
+        $pageTitle = 'Track Your Order - Cause Stand';
+        $metaTitle = 'Track Your Cause Stand Order - Real-Time Order Tracking';
+
+        return view('frontend.pages.track_order')->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords);
     }
 
     public function shipping()
     {
-        return view('frontend.pages.shipping');
+        $metaDescription = "Discover Cause Stand&rsquo;s shipping options, delivery times, and costs. We offer fast and reliable shipping to all 50 states with clear and transparent policies.";
+        $keywords = 'shipping information, Cause Stand shipping, delivery options, shipping costs, fast delivery, reliable shipping';
+        $pageTitle = 'Shipping Information - Cause Stand';
+        $metaTitle = 'Cause Stand Shipping - Fast and Reliable Delivery Options';
+
+        return view('frontend.pages.shipping')->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords);
     }
 
     public function wishlist()

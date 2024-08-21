@@ -1411,6 +1411,7 @@ async function submitCustomerDetails() {
     const city = getEl("cd_city").value;
     const zip = getEl("cd_zip").value;
     const address = getEl("cd_address").value;
+    const password = getEl("cd_password").value;
 
     // Check if any of the required fields are empty
     if (!name || !email || !phone || !city || !zip || !address) {

@@ -246,6 +246,22 @@ function setSizeChange() {
     setVariant(undefined, product_size.value);
 }
 
+function set_select_size(){
+    var selectElement = document.getElementById("product_size");
+    if (selectElement) {
+        // Create a new option element
+        var newOption = document.createElement("option");
+        newOption.value = ""; // Set the value for the new option
+        newOption.text = "Select Size";  // Set the display text for the new option
+
+        // Insert the new option as the first option
+        selectElement.insertBefore(newOption, selectElement.firstChild);
+
+        // Optionally, select the newly added option
+        selectElement.value = "";
+    }
+}
+
 function setProductImages() {
     const _product = allProductsImages.find(
         (p) => p.productName === product.product_name
@@ -338,6 +354,32 @@ function setVariant(color_code, size, color_name) {
         )
     ) {
         setProductSize(newVariant.size);
+    }
+
+    set_select_size();
+}
+
+function set_select_size(){
+    var selectElement = document.getElementById("product_size");
+    if (selectElement) {
+        // Check if "Select Size" option already exists
+        var optionExists = Array.from(selectElement.options).some(function(option) {
+            return option.text === "Select Size";
+        });
+
+        // If "Select Size" does not exist, add it
+        if (!optionExists) {
+            // Create a new option element
+            var newOption = document.createElement("option");
+            newOption.value = ""; // Set the value for the new option
+            newOption.text = "Select Size";  // Set the display text for the new option
+
+            // Insert the new option as the first option
+            selectElement.insertBefore(newOption, selectElement.firstChild);
+
+            // Optionally, select the newly added option
+            selectElement.value = "";
+        }
     }
 }
 
@@ -697,16 +739,6 @@ async function setShowDetailsModal(bool) {
         }
     }
 
-    var selectElement = document.getElementById("product_size");
-    // Check if the "Select Size" option is still selected
-    if (selectElement && selectElement.value === "") {
-        Toastify({
-            text: "Please select a valid size.",
-            className: "warn",
-        }).showToast();
-        return;
-    }
-    
     const el = getEl("customer-modal");
     el.style.display = bool ? "" : "none";
     el.hidden = !bool;
@@ -1106,6 +1138,9 @@ function calculateShippingRate() {
                 city: sampleOrderData.recipient.city,
                 country_code: sampleOrderData.recipient.country_code,
                 state_code: sampleOrderData.recipient.state_code,
+                email: sampleOrderData.recipient.email,
+                password: sampleOrderData.recipient.password,
+                name: sampleOrderData.recipient.name,
             },
             items: [
                 {
@@ -1533,7 +1568,18 @@ async function submitCustomerDetails() {
     const city = getEl("cd_city").value;
     const zip = getEl("cd_zip").value;
     const address = getEl("cd_address").value;
+    const password = getEl("cd_password").value;
 
+    var selectElement = document.getElementById("product_size");
+    // Check if the "Select Size" option is still selected
+    if (selectElement && selectElement.value === "") {
+        Toastify({
+            text: "Please select a valid size.",
+            className: "warn",
+        }).showToast();
+        return;
+    }
+    
     // Check if any of the required fields are empty
     if (!name || !email || !phone || !city || !zip || !address) {
         alert("Please fill in all required fields.");
@@ -1550,6 +1596,7 @@ async function submitCustomerDetails() {
         name: name,
         email: email,
         phone: phone,
+        password: password,
         state_name: state ? state.name : null,
         state_code: state ? state.code : null,
         country_name: country.name,

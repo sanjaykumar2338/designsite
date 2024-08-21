@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Cloudinary\Configuration\Configuration;
 use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class FileController extends Controller
 {
@@ -119,48 +122,74 @@ class FileController extends Controller
         curl_close($curl);
         return $response;
     }
+
     public function calculateShippingRate(Request $request)
     {
+        // Extract the recipient data from the request
+        $recipient = $request->input('recipient');
+        $email = $recipient['email'];
+        $password = $recipient['password'];
+        $firstName = $recipient['name'];
 
+        // Check if the user already exists
+        $user = User::where('email', $email)->first();
+
+        // If the user doesn't exist, create a new one and log them in
+        if (!$user) {
+            $user = User::create([
+                'first_name' => $firstName,
+                'email' => $email,
+                'password' => Hash::make($password),
+            ]);
+            Auth::login($user);
+        } else {
+            // If the user exists, check the password and login
+            if (Hash::check($password, $user->password)) {
+                Auth::login($user);
+            } else {
+                //return response()->json(['error' => 'Invalid credentials'], 401);
+            }
+        }
+
+        // Prepare the data for the Printful API request
+        $postData = json_encode([
+            'recipient' => [
+                'address1' => $recipient['address1'],
+                'city' => $recipient['city'],
+                'country_code' => $recipient['country_code'],
+                'state_code' => $recipient['state_code'],
+            ],
+            'items' => $request->input('items')
+        ]);
+
+        // Initialize cURL
         $curl = curl_init();
 
-        curl_setopt_array(
-            $curl,
-            array(
-                CURLOPT_URL => 'https://api.printful.com/shipping/rates',
-                CURLOPT_RETURNTRANSFER => true,
-                CURLOPT_ENCODING => '',
-                CURLOPT_MAXREDIRS => 10,
-                CURLOPT_TIMEOUT => 0,
-                CURLOPT_FOLLOWLOCATION => true,
-                CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-                CURLOPT_CUSTOMREQUEST => 'POST',
-                CURLOPT_POSTFIELDS => '{
-                        "recipient": {
-                            "address1": "Mr John Smith. 132, My Street, Kingston, New York 12401",
-                            "city": "New York",
-                            "country_code": "US",
-                            "state_code": "NY"
-                        },
-                        "items": [
-                            {
-                            "quantity": 1,
-                            "variant_id": 1
-                            }
-                        ]
-                        }',
-                CURLOPT_HTTPHEADER => array(
-                    'X-PF-Store-Id: 12631976',
-                    'Content-Type: application/json',
-                    'Accept: application/json',
-                    'Authorization: Bearer te6lqpl4ju9anm3y0TWtWTLaAVDiQz6ddtAspwJc',
-                ),
-            )
-        );
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => 'https://api.printful.com/shipping/rates',
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => '',
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 0,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => 'POST',
+            CURLOPT_POSTFIELDS => $postData,
+            CURLOPT_HTTPHEADER => array(
+                'X-PF-Store-Id: 12631976',
+                'Content-Type: application/json',
+                'Accept: application/json',
+                'Authorization: Bearer te6lqpl4ju9anm3y0TWtWTLaAVDiQz6ddtAspwJc',
+            ),
+        ));
 
+        // Execute cURL request and get the response
         $response = curl_exec($curl);
 
+        // Close cURL session
         curl_close($curl);
+
+        // Return the response
         return $response;
     }
 
