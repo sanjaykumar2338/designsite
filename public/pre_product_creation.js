@@ -702,6 +702,18 @@ function setShowPaymentModal(bool) {
 }
 async function setShowDetailsModal(bool) {
     if (bool) {
+        var selectElement = document.getElementById("product_size");
+        // Check if the "Select Size" option is still selected
+        if (selectElement && selectElement.value === "") {
+            Toastify({
+                text: "Please select a valid size.",
+                className: "warn",
+            }).showToast();
+            return false;
+        }
+    }
+
+    if (bool) {
         product_print_images.canvas_front = canvases.canvas_front.getObjects()
             .length
             ? await htmltoCanvas(canvases.canvas_front)

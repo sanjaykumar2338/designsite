@@ -676,6 +676,18 @@ function setShowPaymentModal(bool) {
 }
 async function setShowDetailsModal(bool) {
     if (bool) {
+        var selectElement = document.getElementById("product_size");
+        // Check if the "Select Size" option is still selected
+        if (selectElement && selectElement.value === "") {
+            Toastify({
+                text: "Please select a valid size.",
+                className: "warn",
+            }).showToast();
+            return false;
+        }
+    }
+
+    if (bool) {
         product_print_images.canvas_front = canvases.canvas_front.getObjects()
             .length
             ? await htmltoCanvas(canvases.canvas_front)
@@ -876,6 +888,7 @@ function htmltoCanvas(canvas) {
 }
 
 var totalPrice = parseFloat(document.querySelector('.product_price').getAttribute('data-price'));
+var donation_price = 0;
 
 getEl("image-picker").onchange = function onImagePikked(e) {
 
@@ -918,6 +931,10 @@ function addImageFromFile(e) {
             // Update price
             totalPrice += 10;
             updatePrice(totalPrice);
+
+            donation_price +=10;
+            console.log('donation_price',donation_price);
+            
             showImageAddedMessage();
         };
     };
@@ -950,6 +967,9 @@ function removeObject() {
         // Update price
         totalPrice -= 10;
         updatePrice(totalPrice);
+
+        donation_price -=10;
+        console.log('donation_price',donation_price);
         
         // Show message
         showMessage("$10 has been deducted for removing an object.");
@@ -965,6 +985,9 @@ function submitImgUrl() {
 
     totalPrice += 10;
     updatePrice(totalPrice);
+    donation_price +=10;
+    console.log('donation_price',donation_price);
+
     showImageAddedMessage();
 }
 
@@ -977,6 +1000,9 @@ function addCustomImage(imgUrl) {
     addImage(imgUrl);
     totalPrice += 10;
     updatePrice(totalPrice);
+    
+    donation_price +=10;
+    console.log('donation_price',donation_price);
     showImageAddedMessage();
 }
 
@@ -1060,6 +1086,10 @@ function addObjectImage(imgUrl) {
 
     totalPrice += 10;
     updatePrice(totalPrice);
+
+    donation_price +=10;
+    console.log('donation_price',donation_price);
+
     showImageAddedMessage();
 }
 
@@ -1095,6 +1125,9 @@ function addText(text) {
     canvas.add(text);
     totalPrice += 10;
     updatePrice(totalPrice);
+    donation_price +=10;
+    console.log('donation_price',donation_price);
+
     showImageAddedMessage();
 }
 
@@ -1353,13 +1386,13 @@ function setCost() {
 
             getEl("front").innerHTML = `Front: $${product.front_image_price}`;
             var element = document.getElementById('front');
-            element.style.display = 'block';
+            //element.style.display = 'block';
 
             subtotal += +product.front_image_price;
             subtotal += +product.front_textbox;
         } else {
             var element = document.getElementById('back');
-            element.style.display = 'none';
+            //element.style.display = 'none';
         }
         
         if (k === "canvas_back") {
@@ -1378,34 +1411,41 @@ function setCost() {
             
             getEl("back").innerHTML = `Back: $${product.back_image_price}`;
             var element = document.getElementById('back');
-            element.style.display = 'block';
+            //element.style.display = 'block';
 
             subtotal += +product.back_image_price;
             subtotal += +product.back_textbox;
         } else {
             var element = document.getElementById('back');
-            element.style.display = 'none';
+            //element.style.display = 'none';
         }
     });
 
     let total = subtotal + shippingCost;
     getEl("price").innerHTML = `Price: $${price.toFixed(2)}`;
+    getEl("donation_amount").innerHTML = `Donation Amount: $${donation_price.toFixed(2)}`;
     getEl("subtotal").innerHTML = `Subtotal: $${subtotal.toFixed(2)}`;
     getEl("shipping").innerHTML = `Shipping: $${shippingCost.toFixed(2)}`;
     getEl("total").innerHTML = `Total: $${total.toFixed(2)}`;
 
+    document.getElementById('front').style.display = 'none';
+    document.getElementById('front_text').style.display = 'none';
+    document.getElementById('back').style.display = 'none';
+    document.getElementById('back_text').style.display = 'none';
+
+
     if(product.front_textbox!=0){
-        getEl("front_text").innerHTML = `Front Text: $${product.front_textbox.toFixed(2)}`;
+        //getEl("front_text").innerHTML = `Front Text: $${product.front_textbox.toFixed(2)}`;
     }else{
         var element = document.getElementById('front_text');
-        element.style.display = 'none';
+        //element.style.display = 'none';
     }
 
     if(product.back_textbox!=0){
-        getEl("back_text").innerHTML = `Back Text: $${product.back_textbox.toFixed(2)}`;
+        //getEl("back_text").innerHTML = `Back Text: $${product.back_textbox.toFixed(2)}`;
     }else{
         var element = document.getElementById('back_text');
-        element.style.display = 'none';
+        //element.style.display = 'none';
     }
 
     const doneTypingInterval = 1000; // milliseconds (1 second)

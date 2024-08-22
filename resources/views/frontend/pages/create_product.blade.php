@@ -476,10 +476,7 @@
                         <input type="text" id="cd_city"
                             class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" value=""
                             placeholder="City" name="cd_city" required />
-                        <label class="font-medium text-gray-800">Zip Code*</label>
-                        <input type="text" id="cd_zip"
-                            class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" value=""
-                            placeholder="Zip code" name="cd_zip" required />
+                        
                         <label class="font-medium text-gray-800 country_label">Country*</label><br>
                         <select style="height: 40px; border: 1px solid #eee"
                             class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" name="country" id="country"
@@ -492,10 +489,16 @@
                             hidden>
                             <option value="select" disabled>select</option>
                         </select>
+                        <label class="font-medium text-gray-800">Zip Code*</label>
+                        <input type="text" id="cd_zip"
+                            class="w-full outline-none rounded bg-gray-100 p-2 mt-2 mb-3" value=""
+                            placeholder="Zip code" name="cd_zip" required />
 
                         {{-- <br>
                         <br>
                         <div id="price" class="font-medium text-gray-800">Price:</div>
+                        <div id="donation_to">Donation To: {{$product->supporting_country}}</div>
+                        <div id="donation_amount">Donation Amount:</div>
                         <div id="front" class="font-medium text-gray-800" hidden>Front:</div>
                         <div id="back" class="font-medium text-gray-800" hidden>Back:</div>
                         <div id="subtotal" class="font-medium text-gray-800">Subtotal:</div>
@@ -539,8 +542,19 @@
                             <br>
                             <br>
                             
+                            @php
+                                $nonprofitNames = [
+                                    'Palestine' => 'Doctors Without Borders, USA Nonprofit for Palestine',
+                                    'Israel' => 'New Israel Fund Nonprofit for Israel',
+                                    'Ukraine' => 'Revived Soldiers Ukraine Nonprofit for Ukraine',
+                                    'Russia' => 'Free Russia Foundation Nonprofit for Russia',
+                                ];
+                            @endphp
+                            
                             <div class="pricing_details">
                                 <div id="price" class="font-medium text-gray-800">Price:</div>
+                                <div id="donation_to">Donation To: {{$nonprofitNames[$product->supporting_country]}}</div>
+                                <div id="donation_amount">Donation Amount:</div>
                                 <div id="front" class="font-medium text-gray-800">Front:</div>
                                 <div id="front_text" class="font-medium text-gray-800">Front Text:</div>
                                 <div id="back" class="font-medium text-gray-800">Back:</div>
@@ -785,20 +799,37 @@
             "West Virginia", "Wisconsin", "Wyoming"
         ];
 
-
-        // Get the select element by ID
-        setInterval(() => {
+        // Set an interval to run every 5 seconds
+        setTimeout(() => {
             const stateSelect = document.getElementById('state');
 
-            // Iterate over the select options
-            for (let i = stateSelect.options.length - 1; i >= 0; i--) {
-                const option = stateSelect.options[i];
-                // If the option value is not in the valid states list, remove it
-                if (!validStates.includes(option.text)) {
-                    stateSelect.remove(i);
+            if (stateSelect) {
+                // Remove invalid state options
+                for (let i = stateSelect.options.length - 1; i >= 0; i--) {
+                    const option = stateSelect.options[i];
+                    if (!validStates.includes(option.text)) {
+                        stateSelect.remove(i);
+                    }
                 }
+
+                // Check if "Select State" option already exists
+                let selectStateExists = Array.from(stateSelect.options).some(option => option.text === "Select State");
+
+                // If "Select State" option doesn't exist, add it
+                if (!selectStateExists) {
+                    const newOption = document.createElement("option");
+                    newOption.value = ""; // Set the value for the new option to blank
+                    newOption.text = "Select State"; // Set the display text for the new option
+
+                    // Insert the "Select State" option as the first option
+                    stateSelect.insertBefore(newOption, stateSelect.firstChild);
+                }
+
+                // Set the "Select State" option as the default selected option
+                stateSelect.value = "";
             }
         }, 5000);
+
 
         const stateAbbr = {
             "Alabama": "AL", "Alaska": "AK", "Arizona": "AZ", "Arkansas": "AR",
