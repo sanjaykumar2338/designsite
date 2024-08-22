@@ -142,10 +142,14 @@ class FileController extends Controller
                 'password' => Hash::make($password),
             ]);
 
-            Auth::login($user);
+            if (!Auth::check()) {
+                Auth::login($user);
+            }
         } else {
             // If the user exists, check the password and login
-            Auth::login($user);
+            if (!Auth::check()) {
+                Auth::login($user);
+            }
         }
 
         // Prepare the data for the Printful API request
