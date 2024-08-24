@@ -41,25 +41,9 @@
                     <div class="row">
                         <div class="col-lg-3">
                             <div class="sub_">
-                                <button> <a href="">Subscribe</a></button>
+                                <button> <a href="{{url('/')}}/shop/oversight-collection">Shop the Collection</a></button>
                             </div>
                         </div>
-                        <div class="col-lg-3">
-                            <div class="sub_">
-                                <button> <a href="">Shop the Collection</a></button>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="sub_">
-                                <button> <a href="">Hall of Shame</a></button>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="sub_">
-                                <button> <a href="">Learn more</a></button>
-                            </div>
-                        </div>
-
                     </div>
 
 
@@ -82,26 +66,13 @@
                                 double loyalty of lawmakers, shop the Traitor Collection!</p>
 
                             <div class="row">
+                               
                                 <div class="col-lg-3">
                                     <div class="sub_">
-                                        <button> <a href="">Subscribe</a></button>
+                                        <button> <a href="{{url('/')}}/shop/traitor-collection">Shop the Collection</a></button>
                                     </div>
                                 </div>
-                                <div class="col-lg-3">
-                                    <div class="sub_">
-                                        <button> <a href="">Shop the Collection</a></button>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="sub_">
-                                        <button> <a href="">Hall of Shame</a></button>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="sub_">
-                                        <button> <a href="">Learn more</a></button>
-                                    </div>
-                                </div>
+                               
 
                             </div>
 
@@ -115,26 +86,13 @@
                                         stock trading for government officials, shop the Trader Collection!</p>
 
                                     <div class="row">
+                                        
                                         <div class="col-lg-3">
                                             <div class="sub_">
-                                                <button> <a href="">Subscribe</a></button>
+                                                <button> <a href="{{url('/')}}/shop/trader-collection">Shop the Collection</a></button>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3">
-                                            <div class="sub_">
-                                                <button> <a href="">Shop the Collection</a></button>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3">
-                                            <div class="sub_">
-                                                <button> <a href="">Hall of Shame</a></button>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3">
-                                            <div class="sub_">
-                                                <button> <a href="">Learn more</a></button>
-                                            </div>
-                                        </div>
+                                        
 
                                     </div>
 
@@ -172,24 +130,10 @@
                                                 of propaganda.</p>
                                            
                                                     <div class="row">
+                                                      
                                                         <div class="col-lg-3">
                                                             <div class="sub_">
-                                                                <button> <a href="">Subscribe</a></button>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-3">
-                                                            <div class="sub_">
-                                                                <button> <a href="">Shop the Collection</a></button>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-3">
-                                                            <div class="sub_">
-                                                                <button> <a href="">Hall of Shame</a></button>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-3">
-                                                            <div class="sub_">
-                                                                <button> <a href="">Learn more</a></button>
+                                                                <button> <a href="{{url('/')}}/shop/propaganda-collection">Shop the Collection</a></button>
                                                             </div>
                                                         </div>
 

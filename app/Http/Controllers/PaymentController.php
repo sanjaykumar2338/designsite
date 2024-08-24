@@ -113,6 +113,8 @@ class PaymentController extends Controller
                 }
             }
 
+            //Mail::to(auth()->user()->email)->send(new OrderPlaced($payment, $user, $data));
+
             return response()->json(['success' => true, 'message' => 'Payment successful', 'payment_id' => $payment->id]);
         } catch (\Exception $e) {
             return response()->json(['success' => false, 'error' => $e->getMessage()]);

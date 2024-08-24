@@ -62,8 +62,9 @@ class HomeController extends Controller
         $keywords = 'streetwear brand, stand for a cause, fashion activism, cause stand';
         $pageTitle = 'Welcome to Cause Stand - Where Fashion Meets Activism';
         $metaTitle = 'Cause Stand - Streetwear Brand for Activists - Fashion Activism';
+        $collections = Collections::all();
 
-        return view('frontend.pages.home')->with('products', $products)->with('accessories', $accessories)->with('blogs', $blogs)->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle);
+        return view('frontend.pages.home')->with('products', $products)->with('accessories', $accessories)->with('blogs', $blogs)->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle)->with('collections' , $collections);
     }
 
     public function contactus()
@@ -221,7 +222,12 @@ class HomeController extends Controller
     }
 
     public function terms_of_use(Request $request){
-        return view('frontend.pages.terms_of_use');
+        $metaDescription = "Usage of Cause Stand’s website requires adherence to terms and policies that hold user privacy and safety at the helm of every transaction, so proceed by accepting the terms.   ";
+        $keywords = 'Website policies, cause stand website terms';
+        $pageTitle = 'Terms and conditions of Cause Stand’s Website usage';
+        $metaTitle = 'Cause Stand Website Terms of Use';
+
+        return view('frontend.pages.terms_of_use')->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords);
     }
 
     public function my_account()

@@ -929,13 +929,22 @@ for misinformation.</p>
                     <h3 class="add-style">Donate
                         Make a Difference</h3>
                     <div class="inner_text">
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Choose your Cause
-                            </option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
+                    <select class="form-select choose_your_cause" aria-label="Default select example">
+                        <option selected disabled>Choose your Cause</option>
+                        @foreach($collections as $collection)
+                            <option value="{{url('/')}}/shop/{{$collection->slug}}">{{$collection->title}}</option>
+                        @endforeach
+                    </select>
+
+                    <script>
+                        document.querySelector('.choose_your_cause').addEventListener('change', function() {
+                            var selectedValue = this.value;
+                            if (selectedValue) {
+                                window.location.href = selectedValue;
+                            }
+                        });
+                    </script>
+
                     </div>
                 </div>
             </div>
@@ -1029,10 +1038,8 @@ for misinformation.</p>
 
             <div class="col-md-12 col-lg-6">
                 <div class="text">
-                    <h5 class="Hall">Hall Of Shame
-                        Advocate: Sign a List</h5>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Explore
-                        and advocate for prosecution</p>
+                    <h4 class="Hall" style="padding-left:0px;">Conflict Conscious Apparel for the Advocate</h4>
+                    <p>Welcome are the people who pick up the call and stand and advocate through clothing. Shop our online clothing store for conflict conscious streetwear, order an outfit that fits the moment, and then stand, dressed as an advocate, to influence your peers.</p>
                 </div>
             </div>
         </div>
