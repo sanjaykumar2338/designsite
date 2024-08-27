@@ -610,7 +610,7 @@
                             <p>Hold institutions accountable for biased influence.</p>
 
                             <div class="p_pic">
-                            <img src="{{url('/')}}/asset/frontend/images/hoodie.webp"
+                            <img src="{{url('/')}}/storage/images/1QtqAWjhVAPRSy6jK2XsZkeUl96jIA2qgSM8m8PF.png"
                                     alt="" class="img-fluid">
 
 
@@ -623,7 +623,7 @@
                     <div class="col-lg-3 ">
                         <div class="card_s">
                             <button>Integrity-reform Movement</button>
-                            <h3>Shop the Traitor Collection<</h3>
+                            <h3>Shop the Traitor Collection</h3>
                             <p>Hold lawmakers accountable
 for double-loyalty.  </p>
 
