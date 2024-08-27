@@ -610,7 +610,7 @@
                             <p>Hold institutions accountable for biased influence.</p>
 
                             <div class="p_pic">
-                            <img src="{{url('/')}}/storage/images/1QtqAWjhVAPRSy6jK2XsZkeUl96jIA2qgSM8m8PF.png"
+                            <img src="{{url('/')}}/collections/hoodies/boycott-apparel.png"
                                     alt="" class="img-fluid">
 
 
@@ -628,7 +628,7 @@
 for double-loyalty.  </p>
 
                             <div class="p_pic"><br>
-                            <img src="{{url('/')}}/storage/images/bswSxKEMJsJ7bBk7vQzLlVh5K62Mtl9UKsYuAl8z.png"
+                            <img src="{{url('/')}}/collections/hoodies/integrity-reform-apparel.png"
                                     alt="" class="img-fluid">
 
 
@@ -648,7 +648,7 @@ Trader Collection</h3>
 for insider trading.</p>
 
                             <div class="p_pic"><br>
-                                <img src="{{url('/')}}/storage/images/T0aSD0MP9uKtAnZoIO94kn5p22InVtzEp6cXcG86.png"
+                                <img src="{{url('/')}}/collections/hoodies/ethic-reform-apparel.png"
                                     alt="" class="img-fluid">
 
                             </div>
@@ -667,7 +667,7 @@ Propaganda Collection</h3>
 for misinformation.</p>
 
                             <div class="p_pic">
-                            <img src="{{url('/')}}/storage/images/iy7D25N0brlQ7MHPvWDZ7MSowwk7zEk3OfW6fGt3.png"
+                            <img src="{{url('/')}}/collections/hoodies/fact-check-apparel.png"
                                     alt="" class="img-fluid">
 
 
