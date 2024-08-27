@@ -655,6 +655,7 @@ for insider trading.</p>
                             <a href="{{url('/')}}/shop/trader-collection">Learn more</a>
 
 
+                            
                         </div>
                     </div>
                     <div class="col-lg-3 ">
