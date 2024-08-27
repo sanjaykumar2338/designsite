@@ -111,6 +111,24 @@ class PaymentController extends Controller
                     // Send order placed email
                     Mail::to(auth()->user()->email)->send(new OrderPlaced($payment, $user, $data));
                 }
+            }else{
+                $current_order_email = $request->email;
+                $user = User::where('email', $current_order_email)->first();
+
+                if($user){
+                    $payment->user_id = $user->id;
+                    $user = User::find($user->id);
+
+                    $latestOrder = PrintfulOrder::where('user_id', $user->id)->orderBy('created_at', 'desc')->first();
+                    if ($latestOrder) {
+                        $id = $latestOrder->id;
+                        $order = PrintfulOrder::where('id', $id)->first();
+                        $data = json_decode($order->printful_order_data, true);
+
+                        // Send order placed email
+                        Mail::to($user->email)->send(new OrderPlaced($payment, $user, $data));
+                    }
+                }
             }
 
             //Mail::to(auth()->user()->email)->send(new OrderPlaced($payment, $user, $data));

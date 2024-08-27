@@ -222,7 +222,7 @@ Route::get('/justice', [App\Http\Controllers\HomeController::class, 'justice'])-
 Route::get('/blogs', [App\Http\Controllers\HomeController::class, 'blog'])->name('blogs');
 Route::get('/blog/{slug}', [App\Http\Controllers\HomeController::class, 'blog_detail'])->name('blog_detail');
 Route::get('/products', [App\Http\Controllers\HomeController::class, 'products'])->name('products');
-Route::get('/events', [App\Http\Controllers\HomeController::class, 'events'])->name('events');
+//Route::get('/events', [App\Http\Controllers\HomeController::class, 'events'])->name('events');
 Route::get('/track_order', [App\Http\Controllers\HomeController::class, 'track_order'])->name('track_order');
 Route::get('/shipping', [App\Http\Controllers\HomeController::class, 'shipping'])->name('shipping');
 Route::get('/wishlist', [App\Http\Controllers\HomeController::class, 'wishlist'])->name('wishlist');

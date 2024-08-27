@@ -42,7 +42,8 @@
                         <ul>
                             <li><a href="{{route('products')}}">Products
                                 </a></li>
-                            <li><a href="{{route('events')}}">Events</a></li>
+                            <!--    
+                            <li><a href="">Events</a></li> -->
                             <li><a href="{{route('blogs')}}">Conflicts</a></li>
                             <li><a href="{{route('aboutus')}}">About Us</a></li>
                             <li><a href="{{route('contactus')}}">Contact Us </a></li>

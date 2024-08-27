@@ -19,7 +19,6 @@
                         <div class="prd-left t-shirt-canva {{strtolower($product->product_for)}}-{{strtolower($product->product_type)}}">
                     @endif
 
-
                     {{-- <div class="flex flex-wrap prd-crs-img">
                         <button class="hover:bg-slate-200 h-[50px] w-[50px]" onclick="setSelected(1)">
                             <img src="https://files.cdn.printful.com/m/ec1000/medium/onman/front/05_ec1000_onman_front_base_whitebg.png?v=1675420344"
@@ -693,6 +692,7 @@
                 formData.append('payment_method_id', token);
                 formData.append('total', centsValue);
                 formData.append('coupon', coupon);
+                formData.append('email', $('#cd_email').val());
 
                 try {
                     setIsLoading(true)

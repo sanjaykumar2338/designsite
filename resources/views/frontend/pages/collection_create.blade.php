@@ -594,6 +594,7 @@
                 formData.append('_token', '{{ csrf_token() }}');
                 formData.append('payment_method_id', token);
                 formData.append('total', centsValue);
+                formData.append('email', $('#cd_email').val());
 
                 try {
                     setIsLoading(true)

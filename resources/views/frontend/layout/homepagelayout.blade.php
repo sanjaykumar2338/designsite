@@ -64,7 +64,7 @@
                                 </span>
                             </li>
                         @else                            
-                            <li>
+                            <li style="display:none">
                                 <span style="cursor: pointer;" class="add-border" onclick='location.href ="{{route('register')}}";'>
                                     sign up
                                 </span>

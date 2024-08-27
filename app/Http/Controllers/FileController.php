@@ -130,8 +130,6 @@ class FileController extends Controller
         $email = $recipient['email'];
         $password = $recipient['password'];
         $firstName = $recipient['name'];
-
-        // Check if the user already exists
         $user = User::where('email', $email)->first();
 
         // If the user doesn't exist, create a new one and log them in
