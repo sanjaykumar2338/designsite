@@ -50,11 +50,10 @@
 	</div>
 	<div class="member-area">
 		<div class="container">
-			@if($users->count() > 0) 
+			@if($users->count() > 0 && $type=='members') 
 				<div class="member-area-rep">
 					<div class="member-area-head">
 						<h2>New Members</h2>
-						<a href="{{url('/media/explore/all/')}}/{{$collection->id}}/members">View All</a>
 					</div>
 					<div class="mem-data">
 						
@@ -83,11 +82,11 @@
 				</div>
 			@endif
 			
-			@if($orders->count() > 0) 
+			@if($orders->count() > 0 && $type=='purchases')  
 				<div class="member-area-rep">
 					<div class="member-area-head">
 						<h2>Member Purchases</h2>
-						<a href="{{url('/media/explore/all/')}}/{{$collection->id}}/purchases">View All</a>
+						<a href="#">View All</a>
 					</div>
 					<div class="mem-data">
 						@foreach($orders as $order) 
@@ -121,7 +120,6 @@
 			<div class="member-area-rep" style="display:none">
 				<div class="member-area-head">
 					<h2>Member Feeds</h2>
-					<a href="#">View All</a>
 				</div>
 				<div class="mem-data">
 					<div class="mem-wd">

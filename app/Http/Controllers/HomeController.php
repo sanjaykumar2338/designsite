@@ -145,7 +145,26 @@ class HomeController extends Controller
 
         //print_r($users); die;
         return view('frontend.pages.media_explore')->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle)->with('collection' , $collection)->with('donation' , $donation)->with('total_member' , $total_member)->with('users' , $users)->with('orders' , $orders);
-    }    
+    } 
+    
+    public function media_explore_all(Request $request,$id, $type)
+    {
+        $metaDescription = 'Join the Cause Stand community of activists to challenge U.S. policies, expose corruption, advocate for justice, and print your voice on clothing.';
+        $keywords = 'activist community, U.S. policy change, advocacy apparel, expose corruption, social justice, open source media sharing platform';
+        $pageTitle = 'Activist Community Feeds - Empowered Political Justice Merch';
+        $metaTitle = 'Clothing Media Sharing Platform for Political Justice - Cause Stand';
+
+        $collection = Collections::where('id', $id)->first();
+        $donation = PrintfulOrder::where('predesign_order','yes')->where('printful_orders.collection',$collection->id)->sum('donation_amount');
+        $total_member = PrintfulOrder::where('predesign_order','yes')->where('printful_orders.collection',$collection->id)->count();
+
+        $users = PrintfulOrder::join('users','users.id','=','printful_orders.user_id')->select('users.*')->where('printful_orders.predesign_order','yes')->where('printful_orders.collection',$collection->id)->get();
+
+        $orders = PrintfulOrder::join('users', 'users.email', '=', 'printful_orders.customer_email')->join('products', 'products.id', '=', 'printful_orders.product_id')->join('payments', 'payments.id', '=', 'printful_orders.payment_id')->select('products.*','printful_order_data','payment_intent_id','payments.amount as amt','products.supporting_country','products.product_for','products.product_type','printful_orders.total_amount','printful_orders.product_price','printful_orders.id','print_order_status')->where('printful_orders.collection',$collection->id)->orderBy('printful_orders.created_at','desc')->get();
+
+        //print_r($users); die;
+        return view('frontend.pages.media_explore_all')->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle)->with('collection' , $collection)->with('donation' , $donation)->with('total_member' , $total_member)->with('users' , $users)->with('orders' , $orders)->with('type' , $type);
+    } 
 
     public function blog()
     {

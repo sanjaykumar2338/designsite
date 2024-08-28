@@ -217,6 +217,7 @@ Route::get('/causes', [App\Http\Controllers\HomeController::class, 'causes'])->n
 
 Route::get('/media', [App\Http\Controllers\HomeController::class, 'media'])->name('media');
 Route::get('/media/explore/{collection}', [App\Http\Controllers\HomeController::class, 'media_explore'])->name('media.explore');
+Route::get('/media/explore/all/{id}/{type}', [App\Http\Controllers\HomeController::class, 'media_explore_all']);
 
 Route::get('/justice', [App\Http\Controllers\HomeController::class, 'justice'])->name('justice');
 Route::get('/blogs', [App\Http\Controllers\HomeController::class, 'blog'])->name('blogs');
