@@ -14,7 +14,7 @@
 							<ul class="cmt-list">
 								<li><strong>Movement:</strong>{{$collection->movement}}</li>
 								<li><strong>Collection:</strong>{{$collection->title}}</li>
-								<li><strong>Mission:</strong>Hold institutions accountable for biased influence.</li>
+								<li><strong>Mission:</strong>{{$collection->mission}}</li>
 							</ul>
 						</div> 
 					</div>
@@ -25,7 +25,7 @@
 						<ul class="cmt-list">
 								<li><strong>Members:</strong>{{$total_member}}</li>
 								<li><strong>Donations:</strong>{{$donation}}</li>
-								<li><strong>Donations to:</strong>{{$collection->title}}</li>
+								<li><strong>Donations to:</strong>{{$collection->donations_to}}</li>
 							</ul>
 					</div>
 				</div>
