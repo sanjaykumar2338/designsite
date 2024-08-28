@@ -25,7 +25,7 @@
 						<ul class="cmt-list">
 								<li><strong>Members:</strong>{{$total_member}}</li>
 								<li><strong>Donations:</strong>{{$donation}}</li>
-								<li><strong>Donations to:</strong>{{$collection->donations_to}}</li>
+								<li><strong>Donations to:</strong>{{$collection->title}}</li>
 							</ul>
 					</div>
 				</div>
