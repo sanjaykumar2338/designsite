@@ -136,8 +136,8 @@ class HomeController extends Controller
         $metaTitle = 'Clothing Media Sharing Platform for Political Justice - Cause Stand';
 
         $collection = Collections::where('slug', $request->collection)->first();
-        $donation = PrintfulOrder::where('predesign_order','yes')->sum('donation_amount');
-        $total_member = PrintfulOrder::where('predesign_order','yes')->count();
+        $donation = PrintfulOrder::where('predesign_order','yes')->where('printful_orders.collection',$collection->id)->sum('donation_amount');
+        $total_member = PrintfulOrder::where('predesign_order','yes')->where('printful_orders.collection',$collection->id)->count();
 
         $users = PrintfulOrder::join('users','users.id','=','printful_orders.user_id')->select('users.*')->where('printful_orders.predesign_order','yes')->where('printful_orders.collection',$collection->id)->limit(5)->get();
 
