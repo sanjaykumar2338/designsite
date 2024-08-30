@@ -2,6 +2,28 @@
 
 @section('content')
 
+    <style>
+       
+        h1, h2 {
+            color: #0c9e98;
+        }
+        p {
+            margin: 10px 0;
+        }
+        ul {
+            margin: 10px 0 20px 20px;
+            text-align: justify;
+            list-style: inside;
+        }
+        ul li {
+            margin-bottom: 5px;
+        }
+        .extra_content{
+            text-align: left;
+            padding-left: 40px;
+        }
+    </style>
+
     <section class="products-section">
         <div class="container">
             <div class="text">
@@ -89,6 +111,77 @@
             <p>No Record found!</p>
         </div>
     @endif
+
+    @php
+    //echo $slug;
+
+    if ($slug == 'oversight') {
+            echo <<<HTML
+            <div class="extra_content">
+                <h1>Boycott Bucks Protest Wear - Stand against Unethical Corporations</h1>
+                <p>In a world where corporate practices often go unchecked, the "Boycott Bucks" design from the Oversight Collection empowers advocates to make their voices heard. Available in t-shirts, hoodies, and sweatshirts, this design is a call to action for those who demand accountability from businesses that support unethical practices. Wear this design to protests, on the streets, or in your daily life to show that you stand against corporate bias. Each piece is crafted to be both a fashion statement and a tool for advocacy, ensuring that your message resonates loud and clear.</p>
+
+                <h2>Boycott Bucks Apparel List Options - Shop the Oversight Collection</h2>
+                <ul>
+                    <li><strong>T-Shirt:</strong> Comfortable, casual, and perfect for everyday wear.</li>
+                    <li><strong>Hoodie:</strong> Stay warm and stylish while making a statement.</li>
+                    <li><strong>Sweatshirt:</strong> A versatile piece that combines comfort with advocacy.</li>
+                </ul>
+            </div>
+    HTML;
+        }
+
+        if ($slug == 'traitor') {
+            echo <<<HTML
+            <div class="extra_content">
+                <h1>Reject AIPAC for Peace - Political Accountability Clothing</h1>
+                <p>The "Reject AIPAC" design from the Traitor Collection is a bold statement against the influence of lobbying groups in politics. This design challenges the double-loyalty of lawmakers and calls for political integrity that produces peace. Available in t-shirts, hoodies, and sweatshirts, each piece is crafted to make an impact.</p>
+                <p>Whether worn at protests or in daily life, this design serves as a reminder of the need for transparency and accountability in governance. Peacefully stand against the undue influence of AIPAC and other lobbying groups by wearing this powerful design.</p>
+
+                <h2>Reject AIPAC Clothing Options - Shop the Traitor Collection</h2>
+                <ul>
+                    <li><strong>T-Shirt:</strong> Lightweight and comfortable, perfect for raising awareness.</li>
+                    <li><strong>Hoodie:</strong> Stay warm and vocal with this protest-ready piece.</li>
+                    <li><strong>Sweatshirt:</strong> Ideal for layering, combining comfort with a strong message.</li>
+                </ul>
+            </div>
+    HTML;
+        }
+
+        if ($slug == 'trader') {
+            echo <<<HTML
+            <div class="extra_content">
+                <h1>Lawmakers Making Laws and Trades - Conflict and Greed Clothes</h1>
+                <p>The "Law Making and Insider Trading" design from the Trader Collection addresses the unethical practice of insider trading by lawmakers. This design calls for transparency and ethical conduct in governance, challenging those who use their positions for personal gain. Available in t-shirts, hoodies, and sweatshirts, this design is perfect for those who demand fairness and integrity from their elected officials. Wear this design to show that you stand against corruption and for the ethical making of laws.</p>
+
+                <h2>Insider Trading Clothes Styles - Shop the Trader Collection</h2>
+                <ul>
+                    <li><strong>T-Shirt:</strong> A classic fit, perfect for making a statement.</li>
+                    <li><strong>Hoodie:</strong> Comfortable and bold, ideal for any protest or rally.</li>
+                    <li><strong>Sweatshirt:</strong> Cozy and impactful, a great way to stay warm while advocating for change.</li>
+                </ul>
+            </div>
+    HTML;
+        }
+
+        if ($slug == 'propaganda') {
+            echo <<<HTML
+            <div class="extra_content">
+                <h1>Biased Influence Apparel - Media Accountability Clothing</h1>
+                <p>The "Biased Influence" design from the Propaganda Collection is a powerful critique of media misinformation. This design calls out the media's role in shaping public opinion through biased reporting and propaganda. Available in t-shirts, hoodies, and sweatshirts, this design empowers advocates to demand truth and accountability from the press.</p>
+                <p>Wear this design to protests, in everyday life, or on social media to show that you are part of the fight against misinformation and propaganda.</p>
+
+                <h2>No Fake News Clothing Options - Shop the Propaganda Collection</h2>
+                <ul>
+                    <li><strong>T-Shirt:</strong> Ideal for daily wear, helping to spread awareness.</li>
+                    <li><strong>Hoodie:</strong> Warm, comfortable, and perfect for making a public statement.</li>
+                    <li><strong>Sweatshirt:</strong> A versatile piece that combines comfort with a message for media accountability.</li>
+                </ul>
+            </div>
+    HTML;
+        }
+    @endphp
+
 
     <!-- SPINNER -->
     <div id="loader" hidden wire:loading style="z-index: 2000;"

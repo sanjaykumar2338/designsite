@@ -88,7 +88,7 @@
                         <th scope="col">Total Amount</th>
                         <th scope="col">Country</th>
                         <th scope="col">Order Status</th>
-                        <th style="display:none;" scope="col">Payment ID</th>
+                        <th scope="col">Payment Statue</th>
                         <th scope="col">Donation</th>
                         <th scope="col">Invoice</th>
                         <th scope="col">Printful</th>
@@ -123,7 +123,15 @@
                                  
                                  <td>{{$order->supporting_country}}</td>
                                  <td>{{$order->print_order_status}}</td>
-                                 <td style="display:none;">{{$order->payment_intent_id}}</td>
+                                 <td style="">
+                                    @if($order->payment_intent_id)
+                                       <!-- Green check icon for successful payment -->
+                                       <i class="fa fa-check-circle" style="color: green;"></i>
+                                    @else
+                                       <!-- Red times icon for failed or missing payment -->
+                                       <i class="fa fa-times-circle" style="color: red;"></i>
+                                    @endif
+                                 </td>
                                  
                                  @php $donation = $order->total_amount - $order->product_price; @endphp
 

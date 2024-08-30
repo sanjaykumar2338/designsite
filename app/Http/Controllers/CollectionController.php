@@ -56,10 +56,44 @@ class CollectionController extends Controller
         $front = fileToUrl($boycott->blog_image);
         //echo $front; die;
 
+        //echo $slug; die;
+        $metaDescription = 'Shop the Boycott design from the Oversight Collection by the Cause Stand brand. Choose from t-shirts, hoodies, or sweatshirts and stand against unethical corporate practices.';
+        $keywords = 'boycott apparel, boycott corporate practices, boycott bucks';
+        $pageTitle = 'Boycott Bucks Protest Wear - Stand against Unethical Corporations';
+        $metaTitle = 'Boycott Bucks Apparel | T-Shirts, Hoodies and Sweatshirts';
+
+        if($slug=='oversight'){
+            $metaDescription = 'Shop the Boycott design from the Oversight Collection by the Cause Stand brand. Choose from t-shirts, hoodies, or sweatshirts and stand against unethical corporate practices.';
+            $keywords = 'boycott apparel, boycott corporate practices, boycott bucks';
+            $pageTitle = 'Boycott Bucks Protest Wear - Stand against Unethical Corporations';
+            $metaTitle = 'Boycott Bucks Apparel | T-Shirts, Hoodies and Sweatshirts';
+        }
+
+        if($slug=='traitor'){
+            $metaDescription = 'Explore Cause Stand`s activist streetwear and advocacy apparel shop; join a movement, shop our urban collections, and wear your convictions on your clothing.';
+            $keywords = 'activist streetwear,  advocacy apparel shop, urban collections';
+            $pageTitle = 'Advocacy Streetwear Collections - Shop Now and Join the Movement';
+            $metaTitle = ' Shop Advocacy Apparel - Activist Streetwear with a Movement';
+        }
+
+        if($slug=='trader'){
+            $metaDescription = 'Explore Cause Stand`s activist streetwear and advocacy apparel shop; join a movement, shop our urban collections, and wear your convictions on your clothing.';
+            $keywords = 'activist streetwear,  advocacy apparel shop, urban collections';
+            $pageTitle = 'Advocacy Streetwear Collections - Shop Now and Join the Movement';
+            $metaTitle = ' Shop Advocacy Apparel - Activist Streetwear with a Movement';
+        }
+
+        if($slug=='propaganda'){
+            $metaDescription = 'Explore Cause Stand`s activist streetwear and advocacy apparel shop; join a movement, shop our urban collections, and wear your convictions on your clothing.';
+            $keywords = 'activist streetwear,  advocacy apparel shop, urban collections';
+            $pageTitle = 'Advocacy Streetwear Collections - Shop Now and Join the Movement';
+            $metaTitle = ' Shop Advocacy Apparel - Activist Streetwear with a Movement';
+        }
+
         $collectionId = $collection->id;
         $products = PreProducts::whereRaw('FIND_IN_SET(?, REPLACE(collection_design_id, " ", ""))', [$collectionId])->get();
 
-        return view('frontend.pages.pre_product_list')->with('products',$products)->with('collection',$collection)->with('front',$front)->with('boycott',$boycott);
+        return view('frontend.pages.pre_product_list')->with('products',$products)->with('collection',$collection)->with('front',$front)->with('boycott',$boycott)->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle)->with('slug' , $slug);
     }
 
     public function collections_design_product_detail(Request $request){
