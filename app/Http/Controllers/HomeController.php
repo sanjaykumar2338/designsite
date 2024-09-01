@@ -383,45 +383,64 @@ class HomeController extends Controller
          return redirect()->back();
     }
 
-    public function update_order_status(){        
-        $orders = PrintfulOrder::get();
-        //echo "<pre>"; print_r($orders); die;
+    public function update_order_status()
+    {
+        // Fetch all orders
+        $orders = PrintfulOrder::all();
 
-        if($orders){
-            foreach($orders as $order){
-                
-                $data = json_decode($order->printful_order_data, true);
+        // Check if there are any orders to process
+        if ($orders->isEmpty()) {
+            return; // No orders to process
+        }
 
-                if(isset($data['id'])){
-                    $curl = curl_init();
-                    curl_setopt_array(
-                    $curl,
-                    array(
-                        CURLOPT_URL => 'https://api.printful.com/orders/' . $data['id'],
-                        CURLOPT_RETURNTRANSFER => true,
-                        CURLOPT_ENCODING => '',
-                        CURLOPT_MAXREDIRS => 10,
-                        CURLOPT_TIMEOUT => 0,
-                        CURLOPT_FOLLOWLOCATION => true,
-                        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-                        CURLOPT_CUSTOMREQUEST => 'GET',
-                        CURLOPT_HTTPHEADER => array(
-                                'X-PF-Store-Id: 12631976',
-                                'Content-Type: application/json',
-                                'Accept: application/json',
-                                'Authorization: Bearer te6lqpl4ju9anm3y0TWtWTLaAVDiQz6ddtAspwJc',
-                                'Cookie: __cf_bm=b_KF_QLD5hwAjdrI5D..II41J0suVQ6rDItqE3fGpiU-1700675108-0-AWJ8qrjc2rORqrGTIYe7pXKj/XaMG6zJ3iQM8WjXiDaVgUvKW48NY6wf3+kjlL/tafcmaYGux6DA4EnogAZEYC8=; dsr_setting=%7B%22region%22%3A1%2C%22requirement%22%3Anull%7D'
-                        ),
-                    )
-                    );
+        // Loop through each order
+        foreach ($orders as $order) {
+            $data = json_decode($order->printful_order_data, true);
 
-                    $response = curl_exec($curl);
+            if (!isset($data['id'])) {
+                continue; // Skip if no order ID is found
+            }
 
-                    curl_close($curl);
-                    $info = json_decode($response, true);
-                    $order_status = $info['result']['status'];
-                    PrintfulOrder::where('id',$order->id)->update(['print_order_status'=>$order_status]);
-                }
+            $curl = curl_init();
+            curl_setopt_array($curl, [
+                CURLOPT_URL => 'https://api.printful.com/orders/' . $data['id'],
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_ENCODING => '',
+                CURLOPT_MAXREDIRS => 10,
+                CURLOPT_TIMEOUT => 0,
+                CURLOPT_FOLLOWLOCATION => true,
+                CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                CURLOPT_CUSTOMREQUEST => 'GET',
+                CURLOPT_HTTPHEADER => [
+                    'X-PF-Store-Id: 12631976',
+                    'Content-Type: application/json',
+                    'Accept: application/json',
+                    'Authorization: Bearer te6lqpl4ju9anm3y0TWtWTLaAVDiQz6ddtAspwJc',
+                ],
+            ]);
+
+            $response = curl_exec($curl);
+
+            // Check for CURL errors
+            if (curl_errno($curl)) {
+                // Log or handle CURL error
+                error_log('CURL error: ' . curl_error($curl));
+                curl_close($curl);
+                continue; // Skip to the next order
+            }
+
+            curl_close($curl);
+
+            // Decode the API response
+            $info = json_decode($response, true);
+
+            // Check if the API request was successful
+            if (isset($info['result']['status'])) {
+                $order_status = $info['result']['status'];
+                PrintfulOrder::where('id', $order->id)->update(['print_order_status' => $order_status]);
+            } else {
+                // Handle case where status is not found in the response
+                error_log('Order ID ' . $order->id . ': Status not found in the API response.');
             }
         }
     }

@@ -28,7 +28,7 @@
                                 <tr>
                                     <th scope="col">Printful #ID</th>
                                     <th scope="col">Product Name</th>
-                                    <th scope="col">Status</th>
+                                    <th scope="col">Order Status</th>
                                     <th scope="col">Total Amount</th>
                                     <th scope="col">Donation</th>
                                     <th scope="col">Country</th>
