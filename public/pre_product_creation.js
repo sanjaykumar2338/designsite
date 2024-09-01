@@ -1350,7 +1350,9 @@ function setCost() {
     product.front_textbox = 0;
     product.back_textbox = 0;
     subtotal = price;
+    subtotal += 20;
 
+    /*
     Object.keys(canvases).forEach((k) => {
         let addPrice = false;
         canvases[k].getObjects().forEach((c) => {
@@ -1412,6 +1414,7 @@ function setCost() {
             element.style.display = 'none';
         }
     });
+    */
 
     let total = subtotal + shippingCost;
     getEl("price").innerHTML = `Price: $${price.toFixed(2)}`;
