@@ -1350,7 +1350,7 @@ function setCost() {
     product.front_textbox = 0;
     product.back_textbox = 0;
     subtotal = price;
-    subtotal += 20;
+    //subtotal += 20;
 
     /*
     Object.keys(canvases).forEach((k) => {

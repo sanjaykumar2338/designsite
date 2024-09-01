@@ -108,7 +108,7 @@ class CollectionController extends Controller
 
         $product = PreProducts::where('product_slug', $request->product_slug)->first();
         $commissionAmount = $product->product_price * ($product->commission / 100);
-        $product->product_price = $product->product_price + $commissionAmount;
+        $product->product_price = $product->product_price + $commissionAmount + 20;
         
 
         return view('frontend.pages.pre_create_product')->with('collection',$collection)->with('front',$front)->with('back',$back)->with('design',$collection)->with('product',$product)->with('boycott',$boycott);
