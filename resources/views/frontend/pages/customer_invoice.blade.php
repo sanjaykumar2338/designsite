@@ -149,9 +149,6 @@
                                             <th style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #5b5b5b; font-weight: normal; line-height: 1; vertical-align: top; padding: 0 0 7px;" align="center">
                                                 Quantity
                                             </th>
-                                            <th style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #5b5b5b; font-weight: normal; line-height: 1; vertical-align: top; padding: 0 0 7px;" align="right">
-                                                Subtotal
-                                            </th>
                                         </tr>
                                         @foreach($data['items'] as $item)
                                         <tr>
@@ -161,9 +158,6 @@
                                             
                                             <td style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #5b5b5b; line-height: 1.6; vertical-align: top; text-align: center; padding: 0 0 7px;">
                                                 {{ $item['quantity'] }}
-                                            </td>
-                                            <td style="font-size: 12px; font-family: 'Open Sans', sans-serif; color: #1e2b33; font-weight: 700; line-height: 1.4; vertical-align: top; text-align: right; padding: 0 0 7px;">
-                                                ${{ number_format($item['retail_price'], 2) }}
                                             </td>
                                         </tr>
                                         @endforeach
@@ -202,21 +196,6 @@
                                             <td>
                                                 <table width="100%" border="0" cellpadding="0" cellspacing="0" align="left" class="col">
                                                     <tbody>
-                                                        <tr>
-                                                            <td style="font-size: 12px; color: #1e2b33; font-family: 'Open Sans', sans-serif; font-weight: 700; line-height: 1.6; vertical-align: top; text-align: left;">
-                                                                Subtotal: ${{ number_format($data['retail_costs']['subtotal'], 2) }}
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td style="font-size: 12px; color: #1e2b33; font-family: 'Open Sans', sans-serif; font-weight: 700; line-height: 1.6; vertical-align: top; text-align: left;">
-                                                                Tax: ${{ number_format($data['retail_costs']['tax'], 2) }}
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td style="font-size: 12px; color: #1e2b33; font-family: 'Open Sans', sans-serif; font-weight: 700; line-height: 1.6; vertical-align: top; text-align: left;">
-                                                                Shipping: ${{ number_format($data['costs']['shipping'], 2) }}
-                                                            </td>
-                                                        </tr>
                                                         <tr>
                                                             <td style="font-size: 12px; color: #1e2b33; font-family: 'Open Sans', sans-serif; font-weight: 700; line-height: 1.6; vertical-align: top; text-align: left;">
                                                                 Total: ${{ number_format($payment->amount, 2) }}

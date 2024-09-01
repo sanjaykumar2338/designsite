@@ -1354,7 +1354,11 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function setCost() {
-    let price = +product.product_price + +product.commission;
+    //let commissionAmount = product.product_price * (product.commission / 100);
+    //let price = +product.product_price + commissionAmount;
+    let price = +product.product_price;
+    console.log(product,'product');
+
     product.front_textbox = 0;
     product.back_textbox = 0;
     subtotal = price;

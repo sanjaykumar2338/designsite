@@ -276,7 +276,8 @@ class HomeController extends Controller
         //echo "<pre>"; print_r($data); die;
 
         $payment = \DB::table('payments')->where('id',$order->payment_id)->first();
-        return view('frontend.pages.invoice', ['data' => $data,'payment' => $payment]);
+        //echo "<pre>"; print_r($payment); die;
+        return view('frontend.pages.invoice', ['data' => $data,'payment' => $payment,'order' => $order]);
     }
 
     public function order_history()
@@ -352,6 +353,11 @@ class HomeController extends Controller
         if (!auth()->check()) {
             //return redirect()->route('login')->with('message', 'Please login to access this page.');
         }
+
+        //echo "<pre>"; print_r($product);
+
+        $commissionAmount = $product->product_price * ($product->commission / 100);
+        $product->product_price = $product->product_price + $commissionAmount;
 
         $coupon = Storage::get('coupon_code') ? Storage::get('coupon_code') : '';
         Storage::delete('coupon_code','');

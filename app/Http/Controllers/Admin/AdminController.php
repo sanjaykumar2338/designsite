@@ -138,8 +138,9 @@ class AdminController extends Controller{
     }
 
     public function order(){       
-        $orders = PrintfulOrder::join('users', 'users.email', '=', 'printful_orders.customer_email')->join('products', 'products.id', '=', 'printful_orders.product_id')->join('payments', 'payments.id', '=', 'printful_orders.payment_id')->select('products.*','printful_order_data','payment_intent_id','payments.amount as amt','products.supporting_country','products.product_for','products.product_type','printful_orders.total_amount','printful_orders.product_price','printful_orders.id','users.first_name as customer_name','users.id as user_id','donation_status','print_order_status')->orderBy('printful_orders.id','desc')->paginate(7);
-        
+        $orders = PrintfulOrder::join('users', 'users.email', '=', 'printful_orders.customer_email')->join('products', 'products.id', '=', 'printful_orders.product_id')->join('payments', 'payments.id', '=', 'printful_orders.payment_id')->select('products.*','printful_order_data','payment_intent_id','payments.amount as amt','products.supporting_country','products.product_for','products.product_type','printful_orders.total_amount','products.product_price','printful_orders.id','users.first_name as customer_name','users.id as user_id','donation_status','print_order_status','products.commission')->orderBy('printful_orders.id','desc')->paginate(7);
+
+        //echo "<pre>"; print_r($orders); die;
         return view('admin.pages.order.index')->with('activeLink', 'orders')->with('orders', $orders);
     }
 

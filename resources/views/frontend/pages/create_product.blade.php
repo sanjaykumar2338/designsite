@@ -96,8 +96,8 @@
                     <div class="flex flex-col gap-2" id="editables"></div>
 
                     @php
-                        $commissionAmount = ($product->commission / 100) * $product->product_price;
-                        $totalPrice = $product->product_price + $commissionAmount;
+                        //$commissionAmount = ($product->commission / 100) * $product->product_price;
+                        $totalPrice = $product->product_price; // + $commissionAmount;
                     @endphp
 
                     @if(Auth::check())

@@ -35,7 +35,7 @@ class OrderPlaced extends Mailable
      */
     public function build()
     {
-        return $this->view('frontend.pages.invoice')
+        return $this->view('frontend.pages.customer_invoice')
                     ->with([
                         'data' => $this->data,
                         'user' => $this->user,

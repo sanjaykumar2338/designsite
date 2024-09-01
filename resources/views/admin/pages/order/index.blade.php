@@ -117,9 +117,15 @@
                                        $firstThreeWords = implode(' ', array_slice($words, 0, 3));
                                     @endphp
                                     <a href="{{ $url }}" href="_blank">View {{ $firstThreeWords }}...</a>
-                                 </td>                                
+                                 </td> 
                                  
-                                 <td>${{$data['retail_costs']['total']}}</td>
+                                 @php
+                                    $commissionAmount = ($order->product_price / 100) * $order->commission;
+                                    $totalPrice = $data['retail_costs']['total'] + $commissionAmount;
+                                    $formatted_total_price = number_format($totalPrice, 2);
+                                 @endphp
+                                 
+                                 <td>${{$order->amt}}</td>
                                  
                                  <td>{{$order->supporting_country}}</td>
                                  <td>{{$order->print_order_status}}</td>
