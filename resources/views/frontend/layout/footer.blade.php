@@ -26,8 +26,8 @@
                             <li><a href="{{route('track_order')}}">Track Orders</a></li>
                             <li><a href="{{route('shipping')}}"> Shipping</a></li>
                             <li style="display:none;"><a href="{{route('wishlist')}}">Wishlist</a></li>
-                            <li><a href="{{route('my_account')}}">My Account</a></li>
-                            <li><a href="{{route('order_history')}}">Order History</a></li>
+                            <li><a href="{{route('dashboard')}}">My Account</a></li>
+                            <li><a href="{{route('dashboard')}}">Order History</a></li>
                             <li><a href="{{route('return_order')}}">Returns</a></li>
                         </ul>
                     </div>
@@ -45,7 +45,7 @@
                                 </a></li>
                            
                             <li><a href="">Events</a></li> -->
-                            <li><a href="{{route('blogs')}}">Conflicts</a></li>
+                            <li><a href="{{route('conflicts')}}">Conflicts</a></li>
                             <li><a href="{{route('aboutus')}}">About Us</a></li>
                             <li><a href="{{route('contactus')}}">Contact Us </a></li>
                             <li><a href="{{route('media')}}"> Media</a></li>
