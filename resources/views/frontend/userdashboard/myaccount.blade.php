@@ -40,10 +40,13 @@
 											</div>
 
 											<div class="bought-content">
+												<h3>Order no. {{$order->id}}</h3>
+
 												<h3>{{$order->website_product_name}}</h3>
 
 												@if($order->predesign_order!='yes')
 													<a href="{{$url}}" target="_blank">Buy Again</a>
+													<a href="{{url('/')}}/invoice/{{$order->id}}" class="" target="_blank">Invoice</a>
 												@else
 													@php
 														$product = \DB::table('pre_products')->where('id', $order->product_id)->first();
@@ -52,6 +55,7 @@
 														$url = url('/shop').$collection->slug;
 													@endphp
 													<a href="{{$url}}" target="_blank">Buy Again</a>
+													<a href="{{url('/')}}/invoice/{{$order->id}}" class="" target="_blank">Invoice</a>
 												@endif
 											</div>
 										</div>

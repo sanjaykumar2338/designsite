@@ -437,13 +437,47 @@ class HomeController extends Controller
             // Check if the API request was successful
             if (isset($info['result']['status'])) {
                 $order_status = $info['result']['status'];
-                PrintfulOrder::where('id', $order->id)->update(['print_order_status' => $order_status]);
+
+                // Check if the new status is different from the last status
+                if ($order_status !== $order->last_order_status) {
+                    // Update the print_order_status and last_order_status fields
+                    PrintfulOrder::where('id', $order->id)->update([
+                        'print_order_status' => $order_status,
+                        'last_order_status' => $order_status
+                    ]);
+
+                    // Send the order status email to the customer
+                    $this->sendOrderStatusEmail($order->customer_email, $order->id, $order_status);
+                }
             } else {
                 // Handle case where status is not found in the response
                 error_log('Order ID ' . $order->id . ': Status not found in the API response.');
             }
         }
     }
+
+    protected function sendOrderStatusEmail($customerEmail, $orderId, $orderStatus)
+    {
+        // Check if the customer email exists
+        if (!$customerEmail) {
+            error_log('Order ID ' . $orderId . ': No customer email found.');
+            return;
+        }
+
+        // Define the email subject and message
+        $subject = 'Order Status Update for Order #' . $orderId;
+        $message = "Dear Customer,\n\nYour order with ID #{$orderId} has been updated. The current status of your order is: {$orderStatus}.\n\nThank you for shopping with us.";
+
+        // Send the email
+        Mail::raw($message, function ($mail) use ($customerEmail, $subject) {
+            $mail->to($customerEmail)
+                ->subject($subject);
+        });
+
+        // Log that the email has been sent
+        error_log('Order ID ' . $orderId . ': Status email sent to ' . $customerEmail);
+    }
+
 
     public function product_list(Request $request, $standwith, $productfor, $producttype)
     {

@@ -40,9 +40,10 @@
                     <div class="fo-one">
                         <h3>Infomation</h3>
                         <ul>
+                            <!--   
                             <li><a href="{{route('products')}}">Products
                                 </a></li>
-                            <!--    
+                           
                             <li><a href="">Events</a></li> -->
                             <li><a href="{{route('blogs')}}">Conflicts</a></li>
                             <li><a href="{{route('aboutus')}}">About Us</a></li>
