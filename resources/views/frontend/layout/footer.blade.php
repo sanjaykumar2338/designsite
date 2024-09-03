@@ -26,8 +26,8 @@
                             <li><a href="{{route('track_order')}}">Track Orders</a></li>
                             <li><a href="{{route('shipping')}}"> Shipping</a></li>
                             <li style="display:none;"><a href="{{route('wishlist')}}">Wishlist</a></li>
-                            <li><a href="{{route('dashboard')}}">My Account</a></li>
-                            <li><a href="{{route('dashboard')}}">Order History</a></li>
+                            <li><a href="{{route('myaccount')}}">My Account</a></li>
+                            <li><a href="{{route('myaccount')}}">Order History</a></li>
                             <li><a href="{{route('return_order')}}">Returns</a></li>
                         </ul>
                     </div>
