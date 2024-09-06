@@ -98,10 +98,10 @@
                     <option {{$product->product_type=='Hoodies'?'selected':''}}  value="Hoodies">Hoodies</option>
                     <option {{$product->product_type=='Sweatshirts'?'selected':''}}  value="Sweatshirts">Sweatshirts</option>
                     <option {{$product->product_type=='Bottoms'?'selected':''}}  value="Bottoms">Bottoms</option>
-                    <option {{$product->product_type=='Hats'?'selected':''}} value="Hats">Hats</option>                    
-                    <option {{$product->product_type=='Footwear'?'selected':''}} value="Footwear">Footwear</option>
-                    <option {{$product->product_type=='Bags'?'selected':''}} value="Bags">Bags</option>
-                    <option {{$product->product_type=='Phone Cases'?'selected':''}} value="Phone Cases">Phone Cases</option>
+                    <option style="display:none;" {{$product->product_type=='Hats'?'selected':''}} value="Hats">Hats</option>                    
+                    <option style="display:none;" {{$product->product_type=='Footwear'?'selected':''}} value="Footwear">Footwear</option>
+                    <option style="display:none;" {{$product->product_type=='Bags'?'selected':''}} value="Bags">Bags</option>
+                    <option style="display:none;" {{$product->product_type=='Phone Cases'?'selected':''}} value="Phone Cases">Phone Cases</option>
                   </select>
                 </div>
 

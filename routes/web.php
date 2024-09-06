@@ -45,11 +45,12 @@ Route::get('/generate-sitemap', function() {
     foreach ($files as $file) {
         $filename = pathinfo($file)['filename'];
 
-        // Create a URL entry for the sitemap
+        /*
         $sitemap->add(Url::create("/$filename")
-            ->setLastModificationDate(Carbon::now()) // Optionally set the last modification date
-            ->setPriority(0.8) // Optionally set the priority
-            ->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY)); // Optionally set the change frequency
+            ->setLastModificationDate(Carbon::now()) 
+            ->setPriority(0.8)
+            ->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY)); 
+        */
     }
 
     // Add blog posts from your database

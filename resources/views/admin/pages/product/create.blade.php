@@ -97,10 +97,10 @@
                     <option value="Hoodies">Hoodies</option>
                     <option value="Sweatshirts">Sweatshirts</option>
                     <option value="Bottoms">Bottoms</option>
-                    <option value="Hats">Hats</option>                    
-                    <option value="Footwear">Footwear</option>
-                    <option value="Bags">Bags</option>
-                    <option value="Phone Cases">Phone Cases</option>
+                    <option value="Hats" style="display:none;">Hats</option>                    
+                    <option value="Footwear" style="display:none;">Footwear</option>
+                    <option value="Bags" style="display:none;">Bags</option>
+                    <option value="Phone Cases" style="display:none;">Phone Cases</option>
                   </select>
                 </div>
 

@@ -354,14 +354,26 @@ class HomeController extends Controller
             //return redirect()->route('login')->with('message', 'Please login to access this page.');
         }
 
-        //echo "<pre>"; print_r($product);
+        $product_type = \DB::table('product_type')->where('country',$product->supporting_country)->where('product_type',$product->product_type)->first();
+        //echo "<pre>"; print_r($product_type); die;
 
+        $pageTitle = $product_type->title;
+        $metaTitle = $product_type->meta_title;
+        $keywords = $product_type->meta_keywords;
+        $metaDescription = $product_type->meta_description;
+        $description = $product_type->description;
+
+        $product->product_description = $description;
         $commissionAmount = $product->product_price * ($product->commission / 100);
         $product->product_price = $product->product_price + $commissionAmount;
 
         $coupon = Storage::get('coupon_code') ? Storage::get('coupon_code') : '';
         Storage::delete('coupon_code','');
-        return view('frontend.pages.create_product')->with('product', $product)->with('coupon', $coupon);
+        return view('frontend.pages.create_product')->with('product', $product)->with('coupon', $coupon)->with('pageTitle', $pageTitle)
+        ->with('metaDescription', $metaDescription)
+        ->with('keywords', $keywords)
+        ->with('metaTitle', $metaTitle)
+        ->with('description', $description);
     }
 
     public function contact_save(Request $request){

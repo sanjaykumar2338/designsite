@@ -112,7 +112,7 @@
                     
                     <h3 class="product_price" style="font-weight: 700;" data-exact="{{ number_format($totalPrice, 2) }}" data-price="{{ number_format($totalPrice, 2) }}"> ${{ number_format($totalPrice, 2) }}</h3>
 
-                    <p class="desc">{{ $product->product_description }}</p>
+                    <p class="desc">{{ $product->product_description }}</p><br>
                     <div class="prd-option">
                         <div id="product-thumbnails">
 
@@ -372,7 +372,6 @@
                                 Next
                             </button>
                         </div>
-
                     </div>
                 </div>
             </div>

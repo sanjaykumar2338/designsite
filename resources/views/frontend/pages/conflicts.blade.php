@@ -28,7 +28,7 @@
                         <div class="text-box">
                             <h4>Israel & Palestine</h4>
                             <p>The assault by Hamas against Israel on October 7, 2023, resulted in the death of around 1,300 people. Israel then announced war, resulting in the deaths of tens of thousands of  Palestinian civilians, claiming the right to defend itself. We empathize with all victims and aim to highlight the human cost of these conflicts.</p>
-                            <button class="Read"> Read more</button>
+                            <button class="Read" style="display:none;"> Read more</button>
                         </div>
                     </div>
                 </div>
@@ -43,7 +43,7 @@
                         <div class="text-box">
                             <h4>Russia & Ukraine</h4>
                             <p>Russia annexed Crimea from Ukraine to prevent it from joining the European Union. Supporting the pro-Russian movement, Russia launched a full-scale invasion of Ukraine on February 24, 2022, terrorizing civilians and causing thousands of deaths and injuries. Our clothing serves as a reminder of the resilience and bravery of those affected.</p>
-                                <button class="Read"> Read more</button>
+                            <button class="Read" style="display:none;"> Read more</button>
                         </div>
                     </div>
                 </div>
