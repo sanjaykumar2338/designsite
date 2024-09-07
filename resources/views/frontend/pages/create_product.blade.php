@@ -62,7 +62,7 @@
                                     {{-- <canvas id="canvas_back" width="150" height="250"
                                         style="border: 1px; border-color: black"></canvas> --}}
                                 </div>
-                                <div class="border-[1px] border-neutral-300 frame-area"
+                                <div class="border-neutral-300 frame-area"
                                     style="
 										position: absolute;
 										top: 60%;
@@ -74,7 +74,7 @@
                                     {{-- <canvas id="canvas_sleeve_left" width="140" height="140"
                                         style="border: 1px; border-color: black"></canvas> --}}
                                 </div>
-                                <div class="border-[1px] border-neutral-300 frame-area"
+                                <div class=" border-neutral-300 frame-area"
                                     style="
 										position: absolute;
 										top: 60%;
