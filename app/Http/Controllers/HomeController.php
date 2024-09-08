@@ -364,6 +364,15 @@ class HomeController extends Controller
         $description = $product_type->description;
 
         $slug = strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $pageTitle)));
+        
+        // Check if slug exists
+        $originalSlug = $slug;
+        $counter = 1;
+        while (Products::where('product_slug', $slug)->exists()) {
+            $slug = $originalSlug . '-' . $counter;
+            $counter++;
+        }
+
         $product->product_description = $description;
         $product->product_slug = $slug;
         $product->website_product_name = $pageTitle;
