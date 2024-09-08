@@ -119,6 +119,9 @@ button:hover {
 										<label for="email"><b>Last Name</b></label>
 										<input type="text" value="{{old('last_name', auth()->user()->last_name)}}" placeholder="Enter Last Name" name="last_name" required>
 
+										<label for="nick_name"><b>Nick Name</b></label>
+										<input type="text" value="{{old('nick_name', auth()->user()->nick_name)}}" placeholder="Enter Nick Name" name="nick_name" required>
+
 										<label for="email"><b>Email</b></label>
 										<input type="text" value="{{old('email', auth()->user()->email)}}" placeholder="Enter Email" name="email" required>
 

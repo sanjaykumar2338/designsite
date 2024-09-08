@@ -105,7 +105,8 @@ class UserDashboardController extends Controller
             'instagram' => 'nullable|url',
             'tiktok' => 'nullable|url',
             'youtube' => 'nullable|url',
-            'profile_image' => 'nullable'
+            'profile_image' => 'nullable',
+            'nick_name' => ''
         ]);
 
         // Update the user
@@ -117,6 +118,7 @@ class UserDashboardController extends Controller
             $user->password = Hash::make($request->password);
         }
 
+        $user->nick_name = $request->nick_name;
         $user->facebook = $request->facebook;
         $user->instagram = $request->instagram;
         $user->tiktok = $request->tiktok;
