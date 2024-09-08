@@ -72,6 +72,7 @@
 											<p style="
 											text-align: center;
 											margin-top: 12px;
+											font-family: cursive;
 											">{{$user->nick_name}}</p>
 										@else
 											<p style="
@@ -121,6 +122,7 @@
 										<p style="
 										text-align: center;
 										margin-top: 12px;
+										font-family: cursive;
 										">{{$order->nick_name}}</p>
 									@else
 										<p style="
