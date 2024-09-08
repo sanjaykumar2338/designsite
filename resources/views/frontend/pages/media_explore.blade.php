@@ -68,10 +68,21 @@
 												<img src="https://causestand.com/storage/images/ysbJQNOkIsc3Nhks5tOH4eaBU95B8R9AsLAZ5kSw.png"/>
 											@endif
 										</div>
-										<p style="
+										@if($user->nick_name!='')
+											<p style="
 											text-align: center;
 											margin-top: 12px;
-										">{{$user->nick_name}}</p>
+											">{{$user->nick_name}}</p>
+										@else
+											<p style="
+											text-align: center;
+											margin-top: 12px;
+											">&nbsp;</p>
+											<p style="
+											text-align: center;
+											margin-top: 12px;
+											">&nbsp;</p>
+										@endif
 										<div class="mem-content">
 											<h3>Explore</h3>
 											<ul class="cmt-list">
@@ -107,10 +118,23 @@
 									<div class="mem-img">
 										<img src="{{$file['url']}}"/>
 									</div>
-									<p style="
+
+									@if($order->nick_name!='')
+										<p style="
 										text-align: center;
 										margin-top: 12px;
-									">{{$order->nick_name}}</p>
+										">{{$order->nick_name}}</p>
+									@else
+										<p style="
+										text-align: center;
+										margin-top: 12px;
+										">&nbsp;</p>
+										<p style="
+										text-align: center;
+										margin-top: 12px;
+										">&nbsp;</p>
+									@endif
+
 									<div class="mem-content">
 										<h3>Explore</h3>
 										<ul class="cmt-list">
