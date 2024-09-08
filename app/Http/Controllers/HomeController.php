@@ -379,7 +379,7 @@ class HomeController extends Controller
         $product->seo_title = $metaTitle;
         $product->meta_description = $metaDescription;
         $product->meta_keyword = $keywords;
-        $product->save();
+        //$product->save();
 
         $commissionAmount = $product->product_price * ($product->commission / 100);
         $product->product_price = $product->product_price + $commissionAmount;
