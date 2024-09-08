@@ -386,11 +386,11 @@ class HomeController extends Controller
 
         $coupon = Storage::get('coupon_code') ? Storage::get('coupon_code') : '';
         Storage::delete('coupon_code','');
-        return view('frontend.pages.create_product')->with('product', $product)->with('coupon', $coupon)->with('pageTitle', $pageTitle)
-        ->with('metaDescription', $metaDescription)
-        ->with('keywords', $keywords)
-        ->with('metaTitle', $metaTitle)
-        ->with('description', $description);
+        return view('frontend.pages.create_product')->with('product', $product)->with('coupon', $coupon)->with('pageTitle', $product->website_product_name)
+        ->with('metaDescription', $product->meta_description)
+        ->with('keywords', $product->meta_keyword)
+        ->with('metaTitle', $product->seo_title)
+        ->with('description', $product->product_description);
     }
 
     public function contact_save(Request $request){
