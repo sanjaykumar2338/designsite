@@ -363,7 +363,15 @@ class HomeController extends Controller
         $metaDescription = $product_type->meta_description;
         $description = $product_type->description;
 
+        $slug = strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $pageTitle)));
         $product->product_description = $description;
+        $product->product_slug = $slug;
+        $product->website_product_name = $pageTitle;
+        $product->seo_title = $metaTitle;
+        $product->meta_description = $metaDescription;
+        $product->meta_keyword = $keywords;
+        $product->save();
+
         $commissionAmount = $product->product_price * ($product->commission / 100);
         $product->product_price = $product->product_price + $commissionAmount;
 
