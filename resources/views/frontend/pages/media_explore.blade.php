@@ -76,11 +76,9 @@
 										@else
 											<p style="
 											text-align: center;
-											margin-top: 12px;
 											">&nbsp;</p>
 											<p style="
 											text-align: center;
-											margin-top: 12px;
 											">&nbsp;</p>
 										@endif
 										<div class="mem-content">
