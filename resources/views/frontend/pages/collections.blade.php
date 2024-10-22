@@ -99,7 +99,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6 d-flex align-items-center">
+        <div class="col-md-6 d-flex">
             <div>
                 <h3>Shop the Oversight collection</h3>
                 <p>Join the Boycott Movement with our Oversight Collection, where you can hold institutions accountable for biased influence. Each piece in this collection is designed to spark conversations and shine a spotlight on companies that contradict moral values.</p>
@@ -130,7 +130,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6 d-flex align-items-center">
+        <div class="col-md-6 d-flex">
             <div>
                 <h3>Shop the Traitor collection</h3>
                 <p>Shop the Traitor Collection - Join the Integrity-reform Movement. The Integrity-reform Movement is all about holding lawmakers accountable for their actions.</p>
@@ -162,7 +162,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6 d-flex align-items-center">
+        <div class="col-md-6 d-flex">
             <div>
                 <h3>Shop the Trader collection</h3>
                 <p>Shop the Trader Collection - Join the Ethic-reform Movement. Our Ethic-reform Movement focuses on holding politicians accountable for insider trading.</p>
@@ -193,7 +193,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6 d-flex align-items-center">
+        <div class="col-md-6 d-flex">
             <div>
                 <h3>Shop the Propaganda collection</h3>
                 <p>Shop the Trader Collection - Join the Ethic-reform Movement. Our Ethic-reform Movement focuses on holding politicians accountable for insider trading.</p>
