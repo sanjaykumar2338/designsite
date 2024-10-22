@@ -24,13 +24,21 @@
     <!-- ========== Start products ========== -->
     <section class="Products">
         <div class="container">            
-            <h3>Advocacy Streetwear Collections - Shop Now and Join the Movement</h3>
-            <p>Welcome to the shop at Cause Stand, where activism drives fashion. Explore our diverse range of activist streetwear and advocacy
-            apparel, designed to make a statement that demands attention. At Cause Stand, we believe in the power of clothing to amplify your
-            voice and advocate for causes that matter.</p>
-
             <div class="row">
-                
+                @php
+                    $oversight = '';
+                    $oversight_href = '';
+
+                    $traitor = '';
+                    $traitor_href = '';
+
+                    $trader = '';
+                    $traderhref = '';
+
+                    $propaganda = '';
+                    $propaganda_href = '';
+                @endphp
+
                 @if($collections)
                     @foreach($collections as $collection)
                         <div class="col-lg-3 col-md-6">
@@ -42,22 +50,171 @@
                                 </div>
                             </div>
                         </div>
+
+                        @if($collection->title=='Oversight')
+                            @php 
+                                $oversight = fileToUrl($collection->feature_image); 
+                                $oversight_href = url('/')."/shop/".$collection->slug."-collection";
+                            @endphp
+                        @endif
+
+                        @if($collection->title=='Traitor')
+                            @php 
+                                $traitor = fileToUrl($collection->feature_image); 
+                                $traitor_href = url('/')."/shop/".$collection->slug."-collection";
+                            @endphp
+                        @endif
+
+                        @if($collection->title=='Trader')
+                            @php 
+                                $trader = fileToUrl($collection->feature_image); 
+                                $trader_href = url('/')."/shop/".$collection->slug."-collection";
+                            @endphp
+                        @endif
+
+                        @if($collection->title=='Propaganda')
+                            @php 
+                                $propaganda = fileToUrl($collection->feature_image);
+                                $propaganda_href = url('/')."/shop/".$collection->slug."-collection";
+                            @endphp
+                        @endif
+
                     @endforeach
                 @endif
+
+                <h3>Advocacy Streetwear Collections - Shop Now and Join the Movement</h3>
+                <p>Welcome to the shop at Cause Stand, where activism drives fashion. Explore our diverse range of activist streetwear and advocacy
+                apparel, designed to make a statement that demands attention. At Cause Stand, we believe in the power of clothing to amplify your
+                voice and advocate for causes that matter.</p>
             </div>
+        </div>
+    </section>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <img src="{{$oversight}}" class="card-img-top" alt="Oversight Collection">
+                <div class="card-body text-center">
+                    <button class="btn btn-dark" onclick="window.location.href = '<?= $oversight_href ?>'">SHOP NOW</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 d-flex align-items-center">
+            <div>
+                <h3>Shop the Oversight collection</h3>
+                <p>Join the Boycott Movement with our Oversight Collection, where you can hold institutions accountable for biased influence. Each piece in this collection is designed to spark conversations and shine a spotlight on companies that contradict moral values.</p>
+                <p>The Oversight Collection empowers you to make a meaningful impact through your fashion choices.</p>
+                <button class="btn btn-outline-dark" onclick="window.location.href = '<?= $oversight_href ?>'">OVERSIGHT COLLECTION</button>
+            </div>
+        </div>
+    </div>
+</div>
 
-            <h3>Shop the Oversight Collection - Join the Boycott Movement</h3>
-            <p>Join the Boycott Movement with our Oversight Collection, where you can hold institutions accountable for biased influence. Each piece in this collection is designed to spark conversations and shine a spotlight on companies that contradict moral values. The Oversight Collection empowers you to make a meaningful impact through your fashion choices.</p>
+<!-- Section 2: Join the Boycott Movement -->
+<div class="container mt-4">
+    <div class="row">
+        <div class="col text-center">
+            <h4 class="bg-secondary text-white py-2">JOIN THE BOYCOTT MOVEMENT</h4>
+        </div>
+    </div>
+</div>
 
-            <h3>Shop the Traitor Collection - Join the Integrity-reform Movement</h3>
-            <p>The Integrity-reform Movement is all about holding lawmakers accountable for their actions. Explore our Traitor Collection, which allows you to advocate against double-loyalty, raise awareness about the impact of institutional lobbying, and demand integrity from public officials.</p>
+<!-- Section 3: Traitor Collection -->
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <img src="{{$traitor}}" class="card-img-top" alt="Traitor Collection">
+                <div class="card-body text-center">
+                    <button class="btn btn-dark" onclick="window.location.href = '<?= $traitor_href ?>'">SHOP NOW</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 d-flex align-items-center">
+            <div>
+                <h3>Shop the Traitor collection</h3>
+                <p>Shop the Traitor Collection - Join the Integrity-reform Movement. The Integrity-reform Movement is all about holding lawmakers accountable for their actions.</p>
+                <p>Explore our Traitor Collection, which allows you to advocate against double-loyalty, raise awareness about institutional lobbying, and demand integrity from public officials.</p>
+                <button class="btn btn-outline-dark" onclick="window.location.href = '<?= $traitor_href ?>'">TRAITOR COLLECTION</button>
+            </div>
+        </div>
+    </div>
+</div>
 
-            <h3>Shop the Trader Collection - Join the Ethic-reform Movement</h3>
-            <p>Our Ethic-reform Movement focuses on holding politicians accountable for insider trading. Browse the Trader Collection to support ethical reform and promote transparency in governance.</p>
+<!-- Section 4: Join the Integrity-Reform Movement -->
+<div class="container mt-4">
+    <div class="row">
+        <div class="col text-center">
+            <h4 class="bg-secondary text-white py-2">JOIN THE INTEGRITY-REFORM MOVEMENT</h4>
+        </div>
+    </div>
+</div>
+<!-- ========== End products ========== -->
 
-            <h3>Shop the Propaganda Collection - Join the Fact-check Movement</h3>
-            <p>The Fact-check Movement is dedicated to holding the media accountable for misinformation. Shop the Propaganda Collection to demand factual reporting and combat biased narratives.</p>
+<!-- Section 1: Trader Collection -->
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <img src="{{$trader}}" class="card-img-top" alt="Trader Collection">
+                <div class="card-body text-center">
+                    <button class="btn btn-dark" onclick="window.location.href = '<?= $trader_href ?>'">SHOP NOW</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 d-flex align-items-center">
+            <div>
+                <h3>Shop the Trader collection</h3>
+                <p>Shop the Trader Collection - Join the Ethic-reform Movement. Our Ethic-reform Movement focuses on holding politicians accountable for insider trading.</p>
+                <p>Browse the Trader Collection to support ethical reform and promote transparency in governance.</p>
+                <button class="btn btn-outline-dark" onclick="window.location.href = '<?= $trader_href ?>'">TRADER COLLECTION</button>
+            </div>
+        </div>
+    </div>
+</div>
 
+<!-- Section 2: Join the Ethic-Reform Movement -->
+<div class="container mt-4">
+    <div class="row">
+        <div class="col text-center">
+            <h4 class="bg-secondary text-white py-2">JOIN THE ETHIC-REFORM MOVEMENT</h4>
+        </div>
+    </div>
+</div>
+
+<!-- Section 3: Propaganda Collection -->
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <img src="{{$propaganda}}" class="card-img-top" alt="Propaganda Collection">
+                <div class="card-body text-center">
+                    <button class="btn btn-dark" onclick="window.location.href = '<?= $propaganda_href ?>'">SHOP NOW</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 d-flex align-items-center">
+            <div>
+                <h3>Shop the Propaganda collection</h3>
+                <p>Shop the Trader Collection - Join the Ethic-reform Movement. Our Ethic-reform Movement focuses on holding politicians accountable for insider trading.</p>
+                <p>Browse the Trader Collection to support ethical reform and promote transparency in governance.</p>
+                <button class="btn btn-outline-dark" onclick="window.location.href = '<?= $propaganda_href ?>'">PROPAGANDA COLLECTION</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Section 4: Join the Ethic-Reform Movement (again) -->
+<div class="container mt-4">
+    <div class="row">
+        <div class="col text-center">
+            <h4 class="bg-secondary text-white py-2">JOIN THE ETHIC-REFORM MOVEMENT</h4>
+        </div>
+    </div>
+</div>
+
+<section class="Products">
+    <div class="container">   
             <h3>Advocate with Your Fashion Choices</h3>
             <p>Each collection at Cause Stand is more than just clothing; it's a tool for advocacy and activism. When you shop with us, you're not only expressing your convictions but also contributing to a larger movement for justice and accountability.</p>
 
@@ -73,7 +230,6 @@
             <p>Shop now and join the movement for change. Every purchase you make at Cause Stand supports our advocacy efforts and helps us continue our mission to empower the public and brighten the world through fashion activism.</p>
 
             <h3><i>Explore our collections and shop with purpose at Cause Stand now.</i></h3>
-        </div>
-    </section>
-    <!-- ========== End products ========== -->
+    </div>
+</section>
 @endsection
