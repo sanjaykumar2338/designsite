@@ -2,7 +2,7 @@
 @section('content')
 <section class="slider-Product">
    <div class="container-fluid">
-      <div class="row">
+      <div class="row" style="--bs-gutter-x: 3.0rem;">
          <div class="col-md-12 p-0 affter">
             <div id="carouselExampleCaptions" class="carousel slide">
                <div class="carousel-indicators">

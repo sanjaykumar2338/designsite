@@ -37,6 +37,44 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+	 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<style>
+.position-sticky {
+    z-index: 9999;
+}
+li.nav-item {
+    position: relative;
+}
+
+.open>.dropdown-menu {
+    display: block;
+}
+.navbar .dropdown-menu>li>a {
+    display: block;
+    padding: 6px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #434343;
+    text-decoration: none;
+    font-size: 16px;
+}
+div#navbarSupportedContent .dropdown-menu>li>a:hover {
+    background-color: #eee;
+    color: #eb3e32 !important;
+}
+@media only screen and (min-width: 767px) {
+.navbar .dropdown-menu .dropdown-toggle::after {
+    transform: rotate(-90deg);
+}
+}
+@media only screen and (max-width: 991.98px) {
+.dropdown-menu {
+    background-color: #000;
+}
+}
+</style>
+
 
 </head>
 <body>
@@ -95,7 +133,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <ul class="nav navbar-nav mx-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
                         </li>
@@ -105,9 +143,137 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('causes')}}">Causes</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('collections')}}">Shop</a>
+						<li class="nav-item">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Shop <b class="caret"></b></a>
+
+                            <ul class="dropdown-menu">
+                                <li class="nav-item">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Shop by Collection <b class="caret"></b></a>
+
+                                    <ul class="dropdown-menu" style="">
+                                        <li>
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Oversight Collection  <b class="caret"></b></a>
+
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">T-Shirts</a></li>
+												<li><a href="#">Hoodies</a></li>
+												<li><a href="#">Sweatshirts</a></li>
+                                            </ul>
+                                        </li>
+										<li>
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Traitor Collection   <b class="caret"></b></a>
+
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">T-Shirts</a></li>
+												<li><a href="#">Hoodies</a></li>
+												<li><a href="#">Sweatshirts</a></li>
+                                            </ul>
+                                        </li>
+										<li>
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Trader Collection   <b class="caret"></b></a>
+
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">T-Shirts</a></li>
+												<li><a href="#">Hoodies</a></li>
+												<li><a href="#">Sweatshirts</a></li>
+                                            </ul>
+                                        </li>
+										<li>
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Propaganda Collection   <b class="caret"></b></a>
+
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">T-Shirts</a></li>
+												<li><a href="#">Hoodies</a></li>
+												<li><a href="#">Sweatshirts</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+								<li class="nav-item">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Shop by Product Type <b class="caret"></b></a>
+
+                                    <ul class="dropdown-menu" style="">
+                                        <li>
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">T-Shirts  <b class="caret"></b></a>
+
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Oversight Collection</a></li>
+												<li><a href="#">Traitor Collection</a></li>
+												<li><a href="#">Trader Collection</a></li>
+												<li><a href="#">Propaganda Collection</a></li>
+                                            </ul>
+                                        </li>
+										<li>
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hoodies    <b class="caret"></b></a>
+
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Oversight Collection</a></li>
+												<li><a href="#">Traitor Collection</a></li>
+												<li><a href="#">Trader Collection</a></li>
+												<li><a href="#">Propaganda Collection</a></li>
+                                            </ul>
+                                        </li>
+										<li>
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sweatshirts  <b class="caret"></b></a>
+
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Oversight Collection</a></li>
+												<li><a href="#">Traitor Collection</a></li>
+												<li><a href="#">Trader Collection</a></li>
+												<li><a href="#">Propaganda Collection</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+								<li class="nav-item">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Shop by Design <b class="caret"></b></a>
+
+                                    <ul class="dropdown-menu" style="">
+                                        <li>
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Oversight Collection   <b class="caret"></b></a>
+
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Shop the T-shirt (Men, Women, Unisex)</a></li>
+												<li><a href="#">Shop the Hoodie (Men, Women, Unisex)</a></li>
+												<li><a href="#">Shop the Sweatshirt (Men, Women, Unisex)</a></li>
+                                            </ul>
+                                        </li>
+										<li>
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Traitor  Collection   <b class="caret"></b></a>
+
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Shop the T-shirt (Men, Women, Unisex)</a></li>
+												<li><a href="#">Shop the Hoodie (Men, Women, Unisex)</a></li>
+												<li><a href="#">Shop the Sweatshirt (Men, Women, Unisex)</a></li>
+                                            </ul>
+                                        </li>
+										<li>
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Trader  Collection   <b class="caret"></b></a>
+
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Shop the T-shirt (Men, Women, Unisex)</a></li>
+												<li><a href="#">Shop the Hoodie (Men, Women, Unisex)</a></li>
+												<li><a href="#">Shop the Sweatshirt (Men, Women, Unisex)</a></li>
+                                            </ul>
+                                        </li>
+										<li>
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Propaganda   Collection   <b class="caret"></b></a>
+
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Shop the T-shirt (Men, Women, Unisex)</a></li>
+												<li><a href="#">Shop the Hoodie (Men, Women, Unisex)</a></li>
+												<li><a href="#">Shop the Sweatshirt (Men, Women, Unisex)</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
                         </li>
+
+
+                        <!--<li class="nav-item">
+                            <a class="nav-link" href="{{route('collections')}}">Shop</a>
+                        </li>-->
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('media')}}">Media</a>
                         </li>
@@ -250,7 +416,23 @@
             //window.location.href = "{{ url('/') }}/product_list";
         }
     </script>
+<script>
+$(document).ready(function() {
+    $('.navbar a.dropdown-toggle').on('click', function(e) {
+        var $el = $(this);
+        var $parent = $(this).offsetParent(".dropdown-menu");
+        $(this).parent("li").toggleClass('open');
 
+        if(!$parent.parent().hasClass('nav')) {
+            $el.next().css({"top": $el[0].offsetTop, "left": $parent.outerWidth() - 4});
+        }
+
+        $('.nav li.open').not($(this).parents("li")).removeClass("open");
+
+        return false;
+    });
+});
+</script>
     <script>
         $(document).ready(function(){
             var owl = $('.owl-carousel');
@@ -307,5 +489,24 @@
     </script>
 
     <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-WHL9MP7892"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-WHL9MP7892'); </script>
+	<!--<script>
+(function($){
+		$('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
+		  if (!$(this).next().hasClass('show')) {
+			$(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+		  }
+		  var $subMenu = $(this).next(".dropdown-menu");
+		  $subMenu.toggleClass('show');
+
+		  $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+			$('.dropdown-submenu .show').removeClass("show");
+		  });
+
+		  return false;
+		});
+	})(jQuery);
+</script>-->
+
+
 </body>
 </html>
