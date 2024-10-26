@@ -143,7 +143,7 @@ div#navbarSupportedContent .dropdown-menu>li>a:hover {
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('causes')}}">Causes</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" style="display:none;">
                             <a class="nav-link" href="{{route('collections')}}">Shop</a>
                         </li>
 						<li class="nav-item">
@@ -219,7 +219,7 @@ div#navbarSupportedContent .dropdown-menu>li>a:hover {
             </div>
         </nav>
     </header>
-    
+
 
     @yield('content')
 

@@ -21,7 +21,43 @@
             line-height: 33px;
         }
     </style>
+
+    <style>
+        .col {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+            color: #333;
+            transition: all 0.3s;
+        }
+
+        .col:hover {
+            background-color: #007bff;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .container-fluid {
+            margin-top: 20px;
+        }
+
+        .row {
+            gap: 10px; /* Add some spacing between columns */
+        }
+    </style>
     
+
+    <div class="container-fluid">
+        <div class="row">
+            @foreach(\App\Models\Collections::all() as $collection)
+                <div class="col" onclick="window.location.href='{{ url('/shop/' . $collection->slug . '-collection') }}'"
+                >{{$collection->title}} Collection</div>
+            @endforeach
+        </div>
+    </div>
+
     <!-- ========== Start products ========== -->
     <section class="Products-3 bg-img">
         <div class="container">                     
