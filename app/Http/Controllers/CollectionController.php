@@ -54,7 +54,7 @@ class CollectionController extends Controller
         $design_type = $request->design_type;
         $boycott = Boycotts::where('slug',$design_type)->where('collection',$collection->id)->first();
         $front = '';
-        if($boycott->blog_image){
+        if($boycott->blog_image!=""){
             $front = @fileToUrl($boycott->blog_image);
         }
         
