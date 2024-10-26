@@ -219,6 +219,7 @@ div#navbarSupportedContent .dropdown-menu>li>a:hover {
             </div>
         </nav>
     </header>
+    
 
     @yield('content')
 
