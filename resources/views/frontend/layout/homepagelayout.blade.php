@@ -143,6 +143,9 @@ div#navbarSupportedContent .dropdown-menu>li>a:hover {
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('causes')}}">Causes</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('collections')}}">Shop</a>
+                        </li>
 						<li class="nav-item">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Shop <b class="caret"></b></a>
 
@@ -151,42 +154,11 @@ div#navbarSupportedContent .dropdown-menu>li>a:hover {
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Shop by Collection <b class="caret"></b></a>
 
                                     <ul class="dropdown-menu" style="">
+                                        @foreach(\App\Models\Collections::all() as $collection)
                                         <li>
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Oversight Collection  <b class="caret"></b></a>
-
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#">T-Shirts</a></li>
-												<li><a href="#">Hoodies</a></li>
-												<li><a href="#">Sweatshirts</a></li>
-                                            </ul>
+                                            <a href="{{url('/')}}/shop/{{$collection->slug}}-collection" class="" data-toggle="dropdown">{{$collection->title}} Collection</a>
                                         </li>
-										<li>
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Traitor Collection   <b class="caret"></b></a>
-
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#">T-Shirts</a></li>
-												<li><a href="#">Hoodies</a></li>
-												<li><a href="#">Sweatshirts</a></li>
-                                            </ul>
-                                        </li>
-										<li>
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Trader Collection   <b class="caret"></b></a>
-
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#">T-Shirts</a></li>
-												<li><a href="#">Hoodies</a></li>
-												<li><a href="#">Sweatshirts</a></li>
-                                            </ul>
-                                        </li>
-										<li>
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Propaganda Collection   <b class="caret"></b></a>
-
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#">T-Shirts</a></li>
-												<li><a href="#">Hoodies</a></li>
-												<li><a href="#">Sweatshirts</a></li>
-                                            </ul>
-                                        </li>
+                                        @endforeach
                                     </ul>
                                 </li>
 								<li class="nav-item">
@@ -194,34 +166,13 @@ div#navbarSupportedContent .dropdown-menu>li>a:hover {
 
                                     <ul class="dropdown-menu" style="">
                                         <li>
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">T-Shirts  <b class="caret"></b></a>
-
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#">Oversight Collection</a></li>
-												<li><a href="#">Traitor Collection</a></li>
-												<li><a href="#">Trader Collection</a></li>
-												<li><a href="#">Propaganda Collection</a></li>
-                                            </ul>
+                                            <a href="#" class="" data-toggle="dropdown">T-Shirts  <b class="caret"></b></a>
                                         </li>
 										<li>
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hoodies    <b class="caret"></b></a>
-
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#">Oversight Collection</a></li>
-												<li><a href="#">Traitor Collection</a></li>
-												<li><a href="#">Trader Collection</a></li>
-												<li><a href="#">Propaganda Collection</a></li>
-                                            </ul>
+                                            <a href="#" class="" data-toggle="dropdown">Hoodies    <b class="caret"></b></a>
                                         </li>
 										<li>
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sweatshirts  <b class="caret"></b></a>
-
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#">Oversight Collection</a></li>
-												<li><a href="#">Traitor Collection</a></li>
-												<li><a href="#">Trader Collection</a></li>
-												<li><a href="#">Propaganda Collection</a></li>
-                                            </ul>
+                                            <a href="#" class="" data-toggle="dropdown">Sweatshirts  <b class="caret"></b></a>
                                         </li>
                                     </ul>
                                 </li>
@@ -230,40 +181,16 @@ div#navbarSupportedContent .dropdown-menu>li>a:hover {
 
                                     <ul class="dropdown-menu" style="">
                                         <li>
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Oversight Collection   <b class="caret"></b></a>
-
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#">Shop the T-shirt (Men, Women, Unisex)</a></li>
-												<li><a href="#">Shop the Hoodie (Men, Women, Unisex)</a></li>
-												<li><a href="#">Shop the Sweatshirt (Men, Women, Unisex)</a></li>
-                                            </ul>
+                                            <a href="#" class="" data-toggle="dropdown">Oversight Collection   <b class="caret"></b></a>
                                         </li>
 										<li>
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Traitor  Collection   <b class="caret"></b></a>
-
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#">Shop the T-shirt (Men, Women, Unisex)</a></li>
-												<li><a href="#">Shop the Hoodie (Men, Women, Unisex)</a></li>
-												<li><a href="#">Shop the Sweatshirt (Men, Women, Unisex)</a></li>
-                                            </ul>
+                                            <a href="#" class="" data-toggle="dropdown">Traitor  Collection   <b class="caret"></b></a>
                                         </li>
 										<li>
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Trader  Collection   <b class="caret"></b></a>
-
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#">Shop the T-shirt (Men, Women, Unisex)</a></li>
-												<li><a href="#">Shop the Hoodie (Men, Women, Unisex)</a></li>
-												<li><a href="#">Shop the Sweatshirt (Men, Women, Unisex)</a></li>
-                                            </ul>
+                                            <a href="#" class="" data-toggle="dropdown">Trader  Collection   <b class="caret"></b></a>
                                         </li>
 										<li>
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Propaganda   Collection   <b class="caret"></b></a>
-
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#">Shop the T-shirt (Men, Women, Unisex)</a></li>
-												<li><a href="#">Shop the Hoodie (Men, Women, Unisex)</a></li>
-												<li><a href="#">Shop the Sweatshirt (Men, Women, Unisex)</a></li>
-                                            </ul>
+                                            <a href="#" class="" data-toggle="dropdown">Propaganda   Collection   <b class="caret"></b></a>
                                         </li>
                                     </ul>
                                 </li>
