@@ -34,9 +34,10 @@
         }
 
         .col:hover {
-            background-color: #007bff;
+            background-color: #eb3e32;
             color: white;
             transform: scale(1.05);
+            cursor: pointer;
         }
 
         .container-fluid {
