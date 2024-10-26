@@ -53,7 +53,7 @@ class CollectionController extends Controller
         $collection = Collections::where('slug', $slug)->first();        
         $design_type = $request->design_type;
         $boycott = Boycotts::where('slug',$design_type)->where('collection',$collection->id)->first();
-        
+        //echo "<pre>"; print_r($design_type); die;
         $front = '';
         if ($boycott && $boycott->blog_image != "") {
             $front = @fileToUrl($boycott->blog_image);
@@ -97,7 +97,7 @@ class CollectionController extends Controller
 
         $collectionId = $collection->id;
         $products = PreProducts::whereRaw('FIND_IN_SET(?, REPLACE(collection_design_id, " ", ""))', [$collectionId])->get();
-
+        //echo "<pre>"; print_r($boycott); die;
         return view('frontend.pages.pre_product_list')->with('products',$products)->with('collection',$collection)->with('front',$front)->with('boycott',$boycott)->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle)->with('slug' , $slug);
     }
 
@@ -108,8 +108,19 @@ class CollectionController extends Controller
         $design_type = $request->design_type;
         $boycott = Boycotts::where('slug',$design_type)->where('collection',$collection->id)->first();       
         
-        $front = fileToUrl($boycott->blog_image);
-        $back = fileToUrl($boycott->back_design_image);
+        $front = '';
+        $back = '';
+        
+        if (isset($boycott)) {
+            if (!empty($boycott->blog_image)) {
+                $front = fileToUrl($boycott->blog_image);
+            }
+        
+            if (!empty($boycott->back_design_image)) {
+                $back = fileToUrl($boycott->back_design_image);
+            }
+        }
+        
 
         $product = PreProducts::where('product_slug', $request->product_slug)->first();
         $commissionAmount = $product->product_price * ($product->commission / 100);

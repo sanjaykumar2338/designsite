@@ -203,33 +203,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('conflicts')}}">Conflicts</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('causes')}}">Causes</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('collections')}}">Shop</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('media')}}">Media</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('justice')}}">Justice</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('blogs')}}">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('aboutus')}}">About Us</a>
-                        </li>
-                        <button hidden class="donate" onclick='location.href ="{{route('donate_now')}}";'>DONATE NOW</button>
-                    </ul>
+                    @include('frontend.layout.menu')
                 </div>
             </div>
         </nav>
