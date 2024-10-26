@@ -37,7 +37,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-	 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 
 </head>
@@ -227,23 +227,7 @@
             //window.location.href = "{{ url('/') }}/product_list";
         }
     </script>
-<script>
-$(document).ready(function() {
-    $('.navbar a.dropdown-toggle').on('click', function(e) {
-        var $el = $(this);
-        var $parent = $(this).offsetParent(".dropdown-menu");
-        $(this).parent("li").toggleClass('open');
 
-        if(!$parent.parent().hasClass('nav')) {
-            $el.next().css({"top": $el[0].offsetTop, "left": $parent.outerWidth() - 4});
-        }
-
-        $('.nav li.open').not($(this).parents("li")).removeClass("open");
-
-        return false;
-    });
-});
-</script>
     <script>
         $(document).ready(function(){
             var owl = $('.owl-carousel');
@@ -317,7 +301,6 @@ $(document).ready(function() {
 		});
 	})(jQuery);
 </script>-->
-
-
+@include('frontend.layout.menuscript')
 </body>
 </html>

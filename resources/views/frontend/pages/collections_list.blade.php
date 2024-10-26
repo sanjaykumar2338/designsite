@@ -23,7 +23,7 @@
     </style>
 
     <style>
-        .col {
+        .container-fluid .col {
             background-color: #f8f9fa;
             border: 1px solid #dee2e6;
             padding: 20px;
@@ -33,18 +33,18 @@
             transition: all 0.3s;
         }
 
-        .col:hover {
+        .container-fluid .col:hover {
             background-color: #eb3e32;
             color: white;
             transform: scale(1.05);
             cursor: pointer;
         }
 
-        .container-fluid {
+        .container-fluid .container-fluid {
             margin-top: 20px;
         }
 
-        .row {
+        .container-fluid .row {
             gap: 10px; /* Add some spacing between columns */
         }
     </style>
@@ -52,9 +52,9 @@
 
     <div class="container-fluid">
         <div class="row">
-            @foreach(\App\Models\Collections::all() as $collection)
-                <div class="col" onclick="window.location.href='{{ url('/shop/' . $collection->slug . '-collection') }}'"
-                >{{$collection->title}} Collection</div>
+            @foreach(\App\Models\Collections::all() as $coll)
+                <div class="col" onclick="window.location.href='{{ url('/shop/' . $coll->slug . '-collection') }}'"
+                >{{$coll->title}} Collection</div>
             @endforeach
         </div>
     </div>
