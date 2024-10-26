@@ -52,10 +52,12 @@
 
     <div class="container-fluid">
         <div class="row">
-            @foreach(\App\Models\Collections::all() as $coll)
-                <div class="col" onclick="window.location.href='{{ url('/shop/' . $coll->slug . '-collection') }}'"
-                >{{$coll->title}} Collection</div>
-            @endforeach
+            <div class="col" onclick="window.location.href='{{ url('shop/shop-by-product-type/shirts') }}'"
+            >T-Shirts</div>
+            <div class="col" onclick="window.location.href='{{ url('shop/shop-by-product-type/hoodies') }}'"
+            >Hoodies</div>
+            <div class="col" onclick="window.location.href='{{ url('shop/shop-by-product-type/sweatshirts') }}'"
+            >Sweatshirts</div>
         </div>
     </div>
 
