@@ -64,13 +64,13 @@ div#navbarSupportedContent .dropdown-menu>li>a:hover {
 
                 <ul class="dropdown-menu" style="">
                     <li>
-                        <a href="#" class="" data-toggle="dropdown">T-Shirts  <b class="caret"></b></a>
+                        <a href="{{route('shop_by_product_type_tshirts','shirts')}}" class="" data-toggle="dropdown">T-Shirts  <b class="caret"></b></a>
                     </li>
                     <li>
-                        <a href="#" class="" data-toggle="dropdown">Hoodies    <b class="caret"></b></a>
+                        <a href="{{route('shop_by_product_type_tshirts','hoodies')}}" class="" data-toggle="dropdown">Hoodies    <b class="caret"></b></a>
                     </li>
                     <li>
-                        <a href="#" class="" data-toggle="dropdown">Sweatshirts  <b class="caret"></b></a>
+                        <a href="{{route('shop_by_product_type_tshirts','sweatshirts')}}" class="" data-toggle="dropdown">Sweatshirts  <b class="caret"></b></a>
                     </li>
                 </ul>
             </li>

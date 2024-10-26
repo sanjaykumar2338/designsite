@@ -156,4 +156,19 @@ class CollectionController extends Controller
 
         return view('frontend.pages.collection_create')->with('product', $product)->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle);
     }
+
+    public function shop_by_product_type_tshirts(Request $request){
+        $slug = 'oversight';
+        $collection = Collections::where('slug', $slug)->first();
+        $collection_design = Boycotts::where('collection', $collection->id)->get();
+
+        $metaDescription = $collection->meta_description;
+        $keywords = $collection->meta_keywords;
+        $pageTitle = $collection->page_title;
+        $metaTitle = $collection->meta_title;
+        $page_content = $collection->description;
+
+        //echo "<pre>"; print_r($products); die;
+        return view('frontend.pages.pre_product_list_product_type')->with('slug',$slug)->with('collection',$collection)->with('collection_design',$collection_design)->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle)->with('page_content' , $page_content);
+    }
 }
