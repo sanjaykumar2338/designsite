@@ -96,7 +96,12 @@ class CollectionController extends Controller
         }
 
         $collectionId = $collection->id;
-        $products = PreProducts::whereRaw('FIND_IN_SET(?, REPLACE(collection_design_id, " ", ""))', [$collectionId])->get();
+        if($request->type){
+            $products = PreProducts::whereRaw('FIND_IN_SET(?, REPLACE(collection_design_id, " ", ""))', [$collectionId])->where('product_type',ucfirst($request->type))->get();
+        }else{
+            $products = PreProducts::whereRaw('FIND_IN_SET(?, REPLACE(collection_design_id, " ", ""))', [$collectionId])->get();
+        }
+        
         //echo "<pre>"; print_r($boycott); die;
         return view('frontend.pages.pre_product_list')->with('products',$products)->with('collection',$collection)->with('front',$front)->with('boycott',$boycott)->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle)->with('slug' , $slug);
     }
@@ -169,6 +174,6 @@ class CollectionController extends Controller
         $page_content = $collection->description;
 
         //echo "<pre>"; print_r($products); die;
-        return view('frontend.pages.pre_product_list_product_type')->with('slug',$slug)->with('collection',$collection)->with('collection_design',$collection_design)->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle)->with('page_content' , $page_content);
+        return view('frontend.pages.pre_product_list_product_type')->with('slug',$slug)->with('collection',$collection)->with('collection_design',$collection_design)->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle)->with('page_content' , $page_content)->with('product_type' , $request->type);
     }
 }
