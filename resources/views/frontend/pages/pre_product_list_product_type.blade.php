@@ -85,7 +85,7 @@
                                         <img style="height: 300px;" src="{{ fileToUrl($product->feature_image) }}" alt="">
                                         <div class="text-two">
                                             @php
-                                                $url = url('/collection/design/'.strtolower($coll->slug.'-collection').'/'.$product->slug.'/'.$product_type);
+                                                $url = url('/collection/design/type/'.strtolower($coll->slug.'-collection').'/'.$product->slug.'/'.$product_type);
                                             @endphp
                                             <a class="buy_now" href="{{ $url }}">Buy</a>
                                         </div>

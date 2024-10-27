@@ -98,9 +98,9 @@
 
 							<div class="buy-now">
                                 @if(isset($collection) && isset($boycott) && isset($product))
-                                    <a href="{{ url('/collection/design') }}/{{ strtolower($collection->slug) }}/{{ strtolower($boycott->slug) }}/{{ strtolower($product->product_slug) }}">Buy Now</a>
+                                <a href="{{ url('/collection/design') }}/{{ strtolower($collection->slug) }}/{{ strtolower($boycott->slug) }}/{{ strtolower($product->product_slug) }}">Buy Now</a>
                                 @else
-                                <a href="{{ url('/collection/design') }}/{{ strtolower($collection->slug) }}/boycott/{{ strtolower($product->product_slug) }}">Buy Now</a>
+                                    <a href="{{ url('/collection/design') }}/{{ strtolower($collection->slug) }}/boycott/{{ strtolower($product->product_slug) }}">Buy Now</a>
                                 @endif
                             </div>
 
