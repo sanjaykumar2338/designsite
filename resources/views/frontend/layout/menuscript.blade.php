@@ -1,6 +1,8 @@
 <script>
     $(document).ready(function() {
         $('.navbar a.dropdown-toggle').on('click', function(e) {
+            $('.dropdown-menu').children().removeClass('open');
+
             var $el = $(this);
             var $parent = $(this).offsetParent(".dropdown-menu");
             $(this).parent("li").toggleClass('open');

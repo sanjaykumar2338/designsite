@@ -48,7 +48,7 @@ div#navbarSupportedContent .dropdown-menu>li>a:hover {
         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Shop <b class="caret"></b></a>
 
         <ul class="dropdown-menu">
-            <li class="nav-item">
+            <li class="nav-item child">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Shop by Collection <b class="caret"></b></a>
 
                 <ul class="dropdown-menu" style="">
@@ -62,7 +62,7 @@ div#navbarSupportedContent .dropdown-menu>li>a:hover {
             <li class="nav-item">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Shop by Product Type <b class="caret"></b></a>
 
-                <ul class="dropdown-menu" style="">
+                <ul class="dropdown-menu child" style="">
                     <li>
                         <a href="{{route('shop_by_product_type_tshirts','shirts')}}" class="" data-toggle="dropdown">T-Shirts  <b class="caret"></b></a>
                     </li>
@@ -74,7 +74,7 @@ div#navbarSupportedContent .dropdown-menu>li>a:hover {
                     </li>
                 </ul>
             </li>
-            <li class="nav-item">
+            <li class="nav-item child">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Shop by Design <b class="caret"></b></a>
 
                 <ul class="dropdown-menu" style="">
