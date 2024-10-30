@@ -50,7 +50,7 @@ class CollectionController extends Controller
 
     public function collections_list_all_design(Request $request)
     {
-        $collection = Collections::first();
+        $collection = Collections::all()->shuffle()->first();
         $collection_design = Boycotts::where('collection', $collection->id)->get();
 
         $metaDescription = $collection->meta_description;

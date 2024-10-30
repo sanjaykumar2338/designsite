@@ -24,7 +24,6 @@
 
     <style>
         .container-fluid .col {
-            border: 1px solid #dee2e6;
             padding: 20px;
             text-align: center;
             font-weight: bold;
