@@ -64,7 +64,7 @@
                     foreach($collection_design as $cll) {
                         $collection_design = \App\Models\Boycotts::where('collection', $cll->id)->get();
                 @endphp
-
+                {{$collection_design->count()}}
                 @if($collection_design->count())
                     @foreach($collection_design as $product)
                         
