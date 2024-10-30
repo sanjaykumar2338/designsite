@@ -64,7 +64,6 @@
                     foreach($collections as $cll) {
                         $collection_design = \App\Models\Boycotts::where('collection', $cll->id)->get();
                 @endphp
-                {{$collection_design->count()}}
                 @if($collection_design->count())
                     @foreach($collection_design as $product)
                         
@@ -72,7 +71,7 @@
 
                         @if($product->feature_image!="")
                             {{--Product ID: {{$product->id}}--}}
-                            <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="col-lg-3 col-md-3 col-sm-6">
                                 <div class="img aos-init aos-animate" data-aos="zoom-in">
                                     <img style="height: 300px;" src="{{fileToUrl($product->feature_image)}}" alt="">
                                     <div class="text-two">
