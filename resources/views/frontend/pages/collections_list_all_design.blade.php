@@ -39,13 +39,6 @@
             gap: 10px; /* Add some spacing between columns */
         }
     </style>
-    
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col">Shop By Design</div>
-        </div>
-    </div>
 
     <!-- ========== Start products ========== -->
     <section class="Products-3 bg-img">
