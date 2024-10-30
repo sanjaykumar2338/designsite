@@ -207,13 +207,13 @@ Route::get('/updateEmptyImageColumns', [App\Http\Controllers\HomeController::cla
 //For Collection
 Route::get('/shop', [App\Http\Controllers\CollectionController::class,'collections'])->name('collections');
 Route::get('/shop/{collection}', [App\Http\Controllers\CollectionController::class,'collections_list'])->name('collections_list');
+Route::get('/shop-by-design', [App\Http\Controllers\CollectionController::class,'collections_list_all_design'])->name('collections_list_all_design');
 Route::get('/collection/design/{collection}/{design_type}', [App\Http\Controllers\CollectionController::class,'collections_design'])->name('collections_design');
 Route::get('/collection/design/type/{collection}/{design_type}/{type}', [App\Http\Controllers\CollectionController::class,'collections_design_type'])->name('collections_design_type');
 Route::get('/collection/design/{collection}/{design_type}/{product_slug}', [App\Http\Controllers\CollectionController::class,'collections_design_product_detail'])->name('collections_design_product_detail');
 
 //Shop By Product Type
 Route::get('/shop/shop-by-product-type/{type}', [App\Http\Controllers\CollectionController::class,'shop_by_product_type_tshirts'])->name('shop_by_product_type_tshirts');
-
 Route::get('/shop/{collection}/{slug}', [App\Http\Controllers\CollectionController::class, 'collection'])->name('collection');
 Route::get('/contactus', [App\Http\Controllers\HomeController::class, 'contactus'])->name('contactus');
 Route::get('/aboutus', [App\Http\Controllers\HomeController::class, 'aboutus'])->name('aboutus');

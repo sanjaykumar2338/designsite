@@ -58,7 +58,7 @@ div#navbarSupportedContent .dropdown-menu>li>a:hover {
                 <a href="{{url('/')}}/shop/shop-by-product-type/shirts">Shop by Product Type</a>
             </li>
             <li class="nav-item">
-                <a href="{{url('/')}}/shop" class="">Shop by Design</a>
+                <a href="{{route('collections_list_all_design')}}" class="">Shop by Design</a>
             </li>
         </ul>
     </li>

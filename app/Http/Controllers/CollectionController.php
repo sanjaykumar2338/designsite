@@ -48,6 +48,21 @@ class CollectionController extends Controller
         return view('frontend.pages.collections_list')->with('slug',$slug)->with('collection',$collection)->with('collection_design',$collection_design)->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle)->with('page_content' , $page_content);
     }
 
+    public function collections_list_all_design(Request $request)
+    {
+        $collection = Collections::first();
+        $collection_design = Boycotts::where('collection', $collection->id)->get();
+
+        $metaDescription = $collection->meta_description;
+        $keywords = $collection->meta_keywords;
+        $pageTitle = $collection->page_title;
+        $metaTitle = $collection->meta_title;
+        $page_content = $collection->description;
+
+        //echo "<pre>"; print_r($products); die;
+        return view('frontend.pages.collections_list_all_design')->with('slug',$collection->slug)->with('collection',$collection)->with('collection_design',$collection_design)->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle)->with('page_content' , $page_content);
+    }
+
     public function collections_design(Request $request){
         $slug = explode('-', $request->collection)[0];
         $collection = Collections::where('slug', $slug)->first();        
