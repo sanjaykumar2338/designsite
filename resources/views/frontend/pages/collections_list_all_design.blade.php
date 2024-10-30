@@ -61,7 +61,7 @@
                 
                 @php
                     $collection = \App\Models\Collections::all();
-                    foreach($collection_design as $cll) {
+                    foreach($collection as $cll) {
                         $collection_design = \App\Models\Boycotts::where('collection', $cll->id)->get();
                 @endphp
                 {{$collection_design->count()}}
