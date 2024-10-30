@@ -60,8 +60,8 @@
             <div class="row">
                 
                 @php
-                    $collection = \App\Models\Collections::all();
-                    foreach($collection as $cll) {
+                    $collections = \App\Models\Collections::all();
+                    foreach($collections as $cll) {
                         $collection_design = \App\Models\Boycotts::where('collection', $cll->id)->get();
                 @endphp
                 {{$collection_design->count()}}
