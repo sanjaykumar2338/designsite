@@ -32,12 +32,6 @@
             transition: all 0.3s;
         }
 
-        .container-fluid .col:hover {
-            color: white;
-            transform: scale(1.05);
-            cursor: pointer;
-        }
-
         .container-fluid .container-fluid {
             margin-top: 20px;
         }
