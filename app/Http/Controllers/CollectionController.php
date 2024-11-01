@@ -44,7 +44,7 @@ class CollectionController extends Controller
         $metaTitle = $collection->meta_title;
         $page_content = $collection->description;
 
-        //echo "<pre>"; print_r($products); die;
+        //echo "<pre>"; print_r($collection); die;
         return view('frontend.pages.collections_list')->with('slug',$slug)->with('collection',$collection)->with('collection_design',$collection_design)->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle)->with('page_content' , $page_content);
     }
 

@@ -49,10 +49,18 @@ div#navbarSupportedContent .dropdown-menu>li>a:hover {
     </li>
     <li class="nav-item">
         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Shop <b class="caret"></b></a>
+        
+        @foreach(\App\Models\Collections::all() as $coll)
+            @php
+                $boycott = \App\Models\Boycotts::where('collection',$coll->id)->first();
+                $url = url('collection/design/' . $coll->slug . '-collection/'. $boycott->slug);
+                //echo "<pre>";  print_r($boycott);
+            @endphp
+        @endforeach
 
         <ul class="dropdown-menu">
             <li class="nav-item">
-                <a href="{{url('/')}}/shop/oversight-collection">Shop by Collection</a>
+                <a href="{{$url}}">Shop by Collection</a>
             </li>
             <li class="nav-item">
                 <a href="{{url('/')}}/shop/shop-by-product-type/shirts">Shop by Product Type</a>

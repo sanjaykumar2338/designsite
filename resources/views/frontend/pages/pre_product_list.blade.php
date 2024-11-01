@@ -24,6 +24,47 @@
         }
     </style>
 
+<style>
+        .container-fluid .col {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+            color: #333;
+            transition: all 0.3s;
+        }
+
+        .container-fluid .col:hover {
+            background-color: #eb3e32;
+            color: white;
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+
+        .container-fluid .container-fluid {
+            margin-top: 20px;
+        }
+
+        .container-fluid .row {
+            gap: 10px; /* Add some spacing between columns */
+        }
+    </style>
+    
+
+    <div class="container-fluid">
+        <div class="row">
+            @foreach(\App\Models\Collections::all() as $coll)
+                @php
+                    $boycott = \App\Models\Boycotts::where('collection',$coll->id)->first();
+                    //echo "<pre>";  print_r($boycott);
+                @endphp
+                <div class="col" onclick="window.location.href='{{ url('collection/design/' . $coll->slug . '-collection/'. $boycott->slug) }}'"
+                >{{$coll->title}} Collection</div>
+            @endforeach
+        </div>
+    </div>
+
     <section class="products-section">
         <div class="container">
             <div class="text">

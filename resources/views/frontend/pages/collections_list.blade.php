@@ -53,7 +53,11 @@
     <div class="container-fluid">
         <div class="row">
             @foreach(\App\Models\Collections::all() as $coll)
-                <div class="col" onclick="window.location.href='{{ url('/shop/' . $coll->slug . '-collection') }}'"
+                @php
+                    $boycott = \App\Models\Boycotts::where('collection',$coll->id)->first();
+                    //echo "<pre>";  print_r($boycott);
+                @endphp
+                <div class="col" onclick="window.location.href='{{ url('collection/design/' . $coll->slug . '-collection/'. $boycott->slug) }}'"
                 >{{$coll->title}} Collection</div>
             @endforeach
         </div>
