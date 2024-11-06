@@ -106,9 +106,9 @@
                     @if(isset($bt->blog_image) && isset($bt->title))
                         <div class="col">
                             <div class="card h-100">
-                                <img src="{{ fileToUrl($b->blog_image) }}" class="card-img-top" alt="{{ $b->title }}">
+                                <img src="{{ fileToUrl($bt->blog_image) }}" class="card-img-top" alt="{{ $bt->title }}">
                                 <div class="card-body text-center">
-                                    <h5 class="card-title">{{ $b->title }}</h5>
+                                    <h5 class="card-title">{{ $bt->title }}</h5>
                                     <div class="buy-now">
                                         <button class="btn btn-primary">Buy</button>
                                     </div>
