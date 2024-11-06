@@ -42,6 +42,13 @@
             cursor: pointer;
         }
 
+        .container-fluid .selected {
+            background-color: #eb3e32;
+            color: white;
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+
         .container-fluid .container-fluid {
             margin-top: 20px;
         }
@@ -59,10 +66,29 @@
                     $boycott = \App\Models\Boycotts::where('collection',$coll->id)->first();
                     //echo "<pre>";  print_r($boycott);
                 @endphp
-                <div class="col" onclick="window.location.href='{{ url('collection/design/' . $coll->slug . '-collection/'. $boycott->slug) }}'"
-                >{{$coll->title}} Collection</div>
+
+                @if($collection->slug==$coll->slug)
+                    <div class="col selected" onclick="window.location.href='{{ url('collection/design/' . $coll->slug . '-collection/'. $design_type) }}'">{{$coll->title}} Collection</div>
+                @else
+                    <div class="col" onclick="window.location.href='{{ url('collection/design/' . $coll->slug . '-collection/'. $design_type) }}'">{{$coll->title}} Collection</div>
+                @endif
             @endforeach
         </div>
+
+        <br>
+        <div class="row">
+            @foreach(['tshirts'=>'T-Shirts','hoodies'=>'Hoodies','sweatshirts'=>'Sweatshirts'] as $key=>$coll)
+                @if($key==$design_type)
+                <div onclick="window.location.href='{{ url('collection/design/' . $collection->slug . '-collection/'. $key) }}'" class="col selected"
+                >{{$coll}}</div>
+                @else
+                <div onclick="window.location.href='{{ url('collection/design/' . $collection->slug . '-collection/'. $key) }}'" class="col"
+                >{{$coll}}</div>
+                @endif
+            @endforeach
+        </div>
+        <br>
+
     </div>
 
     <section class="products-section">
@@ -72,8 +98,34 @@
             </div>
         </div>
     </section>
+
+    <div class="container my-4">
+        @if($boycott->count() > 0)
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                @foreach($boycott as $bt) 
+                    @if(isset($bt->blog_image) && isset($bt->title))
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="{{ fileToUrl($b->blog_image) }}" class="card-img-top" alt="{{ $b->title }}">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">{{ $b->title }}</h5>
+                                    <div class="buy-now">
+                                        <button class="btn btn-primary">Buy</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endif
+                @endforeach
+            </div>
+        @else
+            <div class="crt-prd-main" style="text-align: center;font-size: x-large;">
+                <p>No Record found!ss</p>
+            </div>
+        @endif
+    </div>
     
-    @if($products->count() > 0)
+    @if($products->count() > 0 && false)
         
         <input type="hidden" name="product_front" id="product_front" value="{{$front}}">
 
@@ -139,7 +191,7 @@
 
 							<div class="buy-now">
                                 @if(isset($collection) && isset($boycott) && isset($product))
-                                <a href="{{ url('/collection/design') }}/{{ strtolower($collection->slug) }}/{{ strtolower($boycott->slug) }}/{{ strtolower($product->product_slug) }}">Buy Now</a>
+                                    <a href="{{ url('/collection/design') }}/{{ strtolower($collection->slug) }}/{{ strtolower($boycott->slug) }}/{{ strtolower($product->product_slug) }}">Buy Now</a>
                                 @else
                                     <a href="{{ url('/collection/design') }}/{{ strtolower($collection->slug) }}/boycott/{{ strtolower($product->product_slug) }}">Buy Now</a>
                                 @endif
@@ -153,9 +205,7 @@
 		</div>
 		</div>
     @else
-        <div class="crt-prd-main" style="text-align: center;font-size: x-large;">
-            <p>No Record found!</p>
-        </div>
+        
     @endif
 
     @php

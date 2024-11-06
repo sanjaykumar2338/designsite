@@ -67,11 +67,16 @@ class CollectionController extends Controller
         $slug = explode('-', $request->collection)[0];
         $collection = Collections::where('slug', $slug)->first();        
         $design_type = $request->design_type;
-        $boycott = Boycotts::where('slug',$design_type)->where('collection',$collection->id)->first();
+        $boycott = Boycotts::where('collection',$collection->id)->get();
+        $boycottf = Boycotts::where('collection',$collection->id)->first();
+
+        //$boycott = Boycotts::where('slug',$design_type)->where('collection',$collection->id)->first();
         //echo "<pre>"; print_r($design_type); die;
+        //echo "<pre>"; print_r($boycott); die;
+
         $front = '';
-        if ($boycott && $boycott->blog_image != "") {
-            $front = @fileToUrl($boycott->blog_image);
+        if ($boycottf && $boycottf->blog_image != "") {
+            $front = @fileToUrl($boycottf->blog_image);
         }
         
         //echo $front; die;
@@ -118,7 +123,7 @@ class CollectionController extends Controller
         }
         
         //echo "<pre>"; print_r($boycott); die;
-        return view('frontend.pages.pre_product_list')->with('products',$products)->with('collection',$collection)->with('front',$front)->with('boycott',$boycott)->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle)->with('slug' , $slug);
+        return view('frontend.pages.pre_product_list')->with('products',$products)->with('collection',$collection)->with('front',$front)->with('boycott',$boycott)->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle)->with('slug' , $slug)->with('design_type', $design_type);
     }
 
     public function collections_design_type(Request $request){

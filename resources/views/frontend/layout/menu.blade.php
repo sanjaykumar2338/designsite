@@ -50,10 +50,10 @@ div#navbarSupportedContent .dropdown-menu>li>a:hover {
     <li class="nav-item">
         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Shop <b class="caret"></b></a>
         
-        @foreach(\App\Models\Collections::all() as $coll)
+        @foreach(\App\Models\Collections::where('slug','oversight')->get() as $coll)
             @php
                 $boycott = \App\Models\Boycotts::where('collection',$coll->id)->first();
-                $url = url('collection/design/' . $coll->slug . '-collection/'. $boycott->slug);
+                $url = url('collection/design/' . $coll->slug . '-collection/tshirts');
                 //echo "<pre>";  print_r($boycott);
             @endphp
         @endforeach
@@ -65,7 +65,7 @@ div#navbarSupportedContent .dropdown-menu>li>a:hover {
             <li class="nav-item">
                 <a href="{{url('/')}}/shop/shop-by-product-type/shirts">Shop by Product Type</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" style="display:none;">
                 <a href="{{route('collections_list_all_design')}}" class="">Shop by Design</a>
             </li>
         </ul>
