@@ -63,7 +63,7 @@
         <div class="row">
             @foreach(\App\Models\Collections::all() as $coll)
                 @php
-                    $boycott = \App\Models\Boycotts::where('collection',$coll->id)->first();
+                    //$boycott = \App\Models\Boycotts::where('collection',$coll->id)->first();
                     //echo "<pre>";  print_r($boycott);
                 @endphp
 
@@ -103,7 +103,6 @@
         @if($boycott->count() > 0)
             <div class="row row-cols-1 row-cols-md-3 g-4">
                 @foreach($boycott as $bt) 
-                    @php echo "<pre>"; print_r($bt); @endphp
                     @if(isset($bt->blog_image) && isset($bt->title))
                         <div class="col">
                             <div class="card h-100">
