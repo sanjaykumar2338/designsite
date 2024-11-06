@@ -72,7 +72,7 @@ class CollectionController extends Controller
 
         //$boycott = Boycotts::where('slug',$design_type)->where('collection',$collection->id)->first();
         //echo "<pre>"; print_r($design_type); die;
-        echo "<pre>"; print_r($boycott); die;
+        //echo "<pre>"; print_r($boycott); die;
 
         $front = '';
         if ($boycottf && $boycottf->blog_image != "") {
