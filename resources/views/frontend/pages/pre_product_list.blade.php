@@ -103,7 +103,7 @@
         @if($boycott->count() > 0)
             <div class="row row-cols-1 row-cols-md-3 g-4">
                 @foreach($boycott as $bt) 
-                    {{$bt->blog_image}} | {{$bt->title}}
+                    @php echo "<pre>"; print_r($bt); @endphp
                     @if(isset($bt->blog_image) && isset($bt->title))
                         <div class="col">
                             <div class="card h-100">
