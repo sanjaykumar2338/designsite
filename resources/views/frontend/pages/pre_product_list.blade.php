@@ -103,7 +103,7 @@
         @if($boycott->count() > 0)
             <div class="row row-cols-1 row-cols-md-3 g-4">
                 @foreach($boycott as $bt) 
-                    @if(file_exists(fileToUrl($bt->blog_image)))
+                    @if(isset($bt->blog_image) && isset($bt->title))
                         <div class="col">
                             <div class="card h-100">
                                 <img src="{{ fileToUrl($bt->blog_image) }}" class="card-img-top" alt="{{ $bt->title }}">
