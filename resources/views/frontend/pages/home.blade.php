@@ -133,7 +133,7 @@
                      <h3>Shop the Oversight Collection</h3>
                      <p>Hold institutions accountable for biased influence.</p>
                      <div class="p_pic">
-                        <img src="{{url('/')}}/collections/hoodies/boycott-apparel.png"
+                        <img src="{{url('/')}}/homepageimages/oversight-streetwear-causestand-boycott-apparel.png"
                            alt="" class="img-fluid">
                      </div>
                      <a href="{{url('/')}}/shop/oversight-collection">Learn more</a>
@@ -147,7 +147,7 @@
                         for double-loyalty.  
                      </p>
                      <div class="p_pic"><br>
-                        <img src="{{url('/')}}/collections/hoodies/integrity-reform-apparel.png"
+                        <img src="{{url('/')}}/homepageimages/traitor-streetwear-causestand-advocacy-apparel.png"
                            alt="" class="img-fluid">
                      </div>
                      <a href="{{url('/')}}/shop/traitor-collection">Learn more</a>
@@ -164,7 +164,7 @@
                         for insider trading.
                      </p>
                      <div class="p_pic"><br>
-                        <img src="{{url('/')}}/collections/hoodies/ethic-reform-apparel.png"
+                        <img src="{{url('/')}}/homepageimages/trader-urbanwear-causestand-protest-clothing.png"
                            alt="" class="img-fluid">
                      </div>
                      <a href="{{url('/')}}/shop/trader-collection">Learn more</a>
@@ -181,7 +181,7 @@
                         for misinformation.
                      </p>
                      <div class="p_pic">
-                        <img src="{{url('/')}}/collections/hoodies/fact-check-apparel.png"
+                        <img src="{{url('/')}}/homepageimages/propaganda-merch-causestand-advocate-clothes.png"
                            alt="" class="img-fluid">
                      </div>
                      <a href="{{url('/')}}/shop/propaganda-collection">Learn more</a>

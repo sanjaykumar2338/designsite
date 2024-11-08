@@ -91,9 +91,9 @@
     </section>
 <div class="container mt-5">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-4">
             <div class="card">
-                <img src="{{$oversight}}" class="card-img-top" alt="Oversight Collection">
+                <img src="{{url('/')}}/collectiontwo/student-movement-boycott-brand.png" class="card-img-top" alt="Oversight Collection">
                 <div class="card-body text-center">
                     <button class="btn btn-dark" onclick="window.location.href = '<?= $oversight_href ?>'">SHOP NOW</button>
                 </div>
@@ -122,9 +122,9 @@
 <!-- Section 3: Traitor Collection -->
 <div class="container mt-4">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-4">
             <div class="card">
-                <img src="{{$traitor}}" class="card-img-top" alt="Traitor Collection">
+                <img src="{{url('/')}}/collectiontwo/student-advocacy-streetwear-aipac-brand.png" class="card-img-top" alt="Traitor Collection">
                 <div class="card-body text-center">
                     <button class="btn btn-dark" onclick="window.location.href = '<?= $traitor_href ?>'">SHOP NOW</button>
                 </div>
@@ -154,9 +154,9 @@
 <!-- Section 1: Trader Collection -->
 <div class="container mt-5">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-4">
             <div class="card">
-                <img src="{{$trader}}" class="card-img-top" alt="Trader Collection">
+                <img src="{{url('/')}}/collectiontwo/ethical-reform-brand-insider-trading-in-congress.png" class="card-img-top" alt="Trader Collection">
                 <div class="card-body text-center">
                     <button class="btn btn-dark" onclick="window.location.href = '<?= $trader_href ?>'">SHOP NOW</button>
                 </div>
@@ -185,9 +185,9 @@
 <!-- Section 3: Propaganda Collection -->
 <div class="container mt-4">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-4">
             <div class="card">
-                <img src="{{$propaganda}}" class="card-img-top" alt="Propaganda Collection">
+                <img src="{{url('/')}}/collectiontwo/propaganda-advocacy-clothing-brand.png" class="card-img-top" alt="Propaganda Collection">
                 <div class="card-body text-center">
                     <button class="btn btn-dark" onclick="window.location.href = '<?= $propaganda_href ?>'">SHOP NOW</button>
                 </div>
