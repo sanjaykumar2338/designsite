@@ -166,7 +166,7 @@
                                     // Load the overlay image from the loop
                                     fabric.Image.fromURL('{{ fileToUrl($bt->blog_image) }}', function(overlayImg) {
                                         overlayImg.set({
-                                            left: canvas.width / 2.5,
+                                            left: canvas.width / 2,
                                             top: canvas.height / 2.5,
                                             originX: 'center',
                                             originY: 'center'
