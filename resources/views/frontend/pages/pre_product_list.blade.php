@@ -162,7 +162,8 @@
                                         originY: 'center',
                                         left: canvas.width / 2,
                                         top: canvas.height / 2,
-                                        selectable: false
+                                        lockRotation: true,
+                                        selectable: true
                                     });
                                     bgImg.scaleToWidth(canvas.width);
                                     bgImg.scaleToHeight(canvas.height);
