@@ -175,7 +175,9 @@
                                             left: canvas.width / 2,
                                             top: canvas.height / 2.3,
                                             originX: 'center',
-                                            originY: 'center'
+                                            originY: 'center',
+                                            lockRotation: false,
+                                            selectable: false
                                         });
 
                                         // Adjust scaling to keep proportions and padding
