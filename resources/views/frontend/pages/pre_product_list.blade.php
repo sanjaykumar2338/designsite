@@ -177,18 +177,10 @@
                                             originY: 'center'
                                         });
 
-                                        // Calculate the scaling factor based on the canvas size and overlay image dimensions
-                                        var maxWidth = canvas.width * 0.7;  // Set max width to 70% of canvas width
-                                        var maxHeight = canvas.height * 0.7; // Set max height to 70% of canvas height
-
-                                        // Check if the overlay image needs to be scaled down to fit within maxWidth and maxHeight
-                                        if (overlayImg.width > maxWidth || overlayImg.height > maxHeight) {
-                                            var scaleWidth = maxWidth / overlayImg.width;
-                                            var scaleHeight = maxHeight / overlayImg.height;
-                                            var scaleFactor = Math.min(scaleWidth, scaleHeight); // Choose the smallest scale factor
-
-                                            overlayImg.scale(scaleFactor);
-                                        }
+                                        // Adjust scaling to keep proportions and padding
+                                        var scaleFactor = 0.4; // Adjust this value as needed
+                                        overlayImg.scaleToWidth(canvas.width * scaleFactor);
+                                        overlayImg.scaleToHeight(canvas.height * scaleFactor);
 
                                         canvas.add(overlayImg);
                                         canvas.renderAll();
