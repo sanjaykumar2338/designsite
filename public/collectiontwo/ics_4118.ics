@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//hacksw/handcal//NONSGML v1.0//EN
+BEGIN:VEVENT
+UID:4118-2024-11-09-01-04-01-https://kkl.org.mx
+LOCATION:No olvides llevar tu identificaci&oacute;n el d&iacute;a del evento
+DTSTAMP:20241109T070401
+DTSTART;VALUE=DATE:20241203
+SUMMARY:SHAI DAVIDAI EN MÉXICO
+DESCRIPTION:
+ https://kkl.org.mx/product/evtoshdav/
+X-ALT-DESC;FMTTYPE=text/html:<br>https://kkl.org.mx/product/evtoshdav/
+URL:https://kkl.org.mx/product/evtoshdav/
+END:VEVENT
+END:VCALENDAR

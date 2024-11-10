@@ -100,6 +100,17 @@
     </section>
 
     <div class="container my-4">
+        <style>
+            .card-img-top {
+                height: 200px; /* Set a fixed height */
+                object-fit: cover; /* Ensures images fill the space without distortion */
+            }
+            .buy-now .btn {
+                background-color: #eb3e32; /* Custom button color */
+                font-size: 1.1em; /* Make button text slightly larger */
+            }
+        </style>
+
         @if($boycott->count() > 0)
             <div class="row row-cols-1 row-cols-md-3 g-4">
                 @foreach($boycott as $bt) 
@@ -120,11 +131,11 @@
             </div>
         @else
             <div class="crt-prd-main" style="text-align: center;font-size: x-large;">
-                <p>No Record found!ss</p>
+                <p>No Record found!</p>
             </div>
         @endif
     </div>
-    
+
     @if($products->count() > 0 && false)
         
         <input type="hidden" name="product_front" id="product_front" value="{{$front}}">

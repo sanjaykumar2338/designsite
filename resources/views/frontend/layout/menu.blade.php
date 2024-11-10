@@ -62,7 +62,7 @@ div#navbarSupportedContent .dropdown-menu>li>a:hover {
             <li class="nav-item">
                 <a href="{{$url}}">Shop by Collection</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" style="display:none;">
                 <a href="{{url('/')}}/shop/shop-by-product-type/shirts">Shop by Product Type</a>
             </li>
             <li class="nav-item" style="display:none;">
