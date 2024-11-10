@@ -172,7 +172,7 @@
                                             originY: 'center'
                                         });
                                         overlayImg.scaleToWidth(canvas.width * 0.3);
-                                        overlayImg.scaleToHeight(canvas.height * 0.3);
+                                        overlayImg.scaleToHeight(canvas.height * 0.4);
                                         canvas.add(overlayImg);
                                     });
                                 });
