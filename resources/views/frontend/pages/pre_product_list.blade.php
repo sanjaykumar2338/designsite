@@ -103,7 +103,6 @@
         </div>
     </section>
 
-    <div class="container my-4">
     <style>
         .card-img-top {
             height: 200px; /* Set a fixed height */
@@ -128,32 +127,66 @@
         }
     </style>
 
-    @if($boycott->count() > 0)
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            @foreach($boycott as $bt) 
-                @if(isset($bt->blog_image) && isset($bt->title) && fileToUrl($bt->blog_image)!='https://causestand.com/storage/')
-                    <div class="col">
-                        <div class="card h-100">
-                            <a href="{{ fileToUrl($bt->blog_image) }}" data-lightbox="gallery" data-title="{{ $bt->title }}">
-                                <img src="{{ fileToUrl($bt->blog_image) }}" class="card-img-top" alt="{{ $bt->title }}">
-                            </a>
-                            <div class="card-body text-center">
-                                <h5 class="card-title">{{ $bt->title }}</h5>
-                                <div class="buy-now">
-                                    <button class="btn btn-primary">Buy</button>
+    <div class="container my-4">
+        @if($boycott->count() > 0)
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                @foreach($boycott as $bt) 
+                    @if(isset($bt->blog_image) && isset($bt->title) && fileToUrl($bt->blog_image)!='https://causestand.com/storage/')
+                        <div class="col">
+                            <div class="card h-100">
+                                <div class="canvas-container">
+                                    <canvas id="canvas-{{ $loop->index }}" width="324" height="340"></canvas>
+                                </div>
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">{{ $bt->title }}</h5>
+                                    <div class="buy-now">
+                                        <button class="btn btn-primary">Buy</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                @endif
-            @endforeach
-        </div>
-    @else
-        <div class="crt-prd-main" style="text-align: center;font-size: x-large;">
-            <p>No Record found!</p>
-        </div>
-    @endif
-</div>
+
+                        <script>
+                            document.addEventListener("DOMContentLoaded", function() {
+                                var canvas = new fabric.Canvas('canvas-{{ $loop->index }}');
+
+                                // Load the background image
+                                fabric.Image.fromURL('https://files.cdn.printful.com/m/56-bella-canvas-3413/medium/ghost/front/05_BC_3413_XL_Ghost_base_whitebg.png?v=1702297406', function(bgImg) {
+                                    bgImg.set({
+                                        originX: 'center',
+                                        originY: 'center',
+                                        left: canvas.width / 2,
+                                        top: canvas.height / 2,
+                                        selectable: false
+                                    });
+                                    bgImg.scaleToWidth(canvas.width);
+                                    bgImg.scaleToHeight(canvas.height);
+                                    canvas.setBackgroundImage(bgImg, canvas.renderAll.bind(canvas));
+
+                                    // Load the overlay image from the loop
+                                    fabric.Image.fromURL('{{ fileToUrl($bt->blog_image) }}', function(overlayImg) {
+                                        overlayImg.set({
+                                            left: canvas.width / 2,
+                                            top: canvas.height / 2,
+                                            originX: 'center',
+                                            originY: 'center'
+                                        });
+                                        overlayImg.scaleToWidth(canvas.width * 0.5);
+                                        overlayImg.scaleToHeight(canvas.height * 0.5);
+                                        canvas.add(overlayImg);
+                                    });
+                                });
+                            });
+                        </script>
+                    @endif
+                @endforeach
+            </div>
+        @else
+            <div class="crt-prd-main" style="text-align: center;font-size: x-large;">
+                <p>No Record found!</p>
+            </div>
+        @endif
+    </div>
 
 
     @if($products->count() > 0 && false)
