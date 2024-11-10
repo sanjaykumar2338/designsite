@@ -156,7 +156,7 @@
                                 var canvas = new fabric.Canvas('canvas-{{ $loop->index }}');
 
                                 // Load the background image
-                                fabric.Image.fromURL('https://files.cdn.printful.com/m/56-bella-canvas-3413/medium/ghost/front/05_BC_3413_XL_Ghost_base_whitebg.png?v=1702297406', function(bgImg) {
+                                fabric.Image.fromURL('{{$background_image}}', function(bgImg) {
                                     bgImg.set({
                                         originX: 'center',
                                         originY: 'center',

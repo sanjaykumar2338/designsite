@@ -123,7 +123,20 @@ class CollectionController extends Controller
         }
         
         //echo "<pre>"; print_r($boycott); die;
-        return view('frontend.pages.pre_product_list')->with('products',$products)->with('collection',$collection)->with('front',$front)->with('boycott',$boycott)->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle)->with('slug' , $slug)->with('design_type', $design_type);
+        $background_image = '';
+        if($design_type=='hoodies'){
+            $background_image = 'https://files.cdn.printful.com/m/g18500/medium/ghost/front/05_gildan18500_ghost_front_base_whitebg.png?v=1700731048';
+        }
+
+        if($design_type=='tshirts'){
+            $background_image = 'https://files.cdn.printful.com/m/56-bella-canvas-3413/medium/ghost/front/05_BC_3413_XL_Ghost_base_whitebg.png?v=1702297406';
+        }
+
+        if($design_type=='sweatshirts'){
+            $background_image = 'https://files.cdn.printful.com/m/fleece_pullover/medium/ghost/front/05_ghost_front_base_whitebg.png?v=1702459598';
+        }
+
+        return view('frontend.pages.pre_product_list')->with('products',$products)->with('collection',$collection)->with('front',$front)->with('boycott',$boycott)->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle)->with('slug' , $slug)->with('design_type', $design_type)->with('background_image',$background_image );
     }
 
     public function collections_design_type(Request $request){
