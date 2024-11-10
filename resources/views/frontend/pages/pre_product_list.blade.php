@@ -125,13 +125,18 @@
             background-color: #eb3e32; /* Custom button color */
             font-size: 1.1em; /* Make button text slightly larger */
         }
+
+        .canvas-container {
+            margin: 20px;
+            text-align: center;
+        }
     </style>
 
     <div class="container my-4">
         @if($boycott->count() > 0)
             <div class="row row-cols-1 row-cols-md-3 g-4">
-                @foreach($boycott as $bt) 
-                    @if(isset($bt->blog_image) && isset($bt->title) && fileToUrl($bt->blog_image)!='https://causestand.com/storage/')
+                @foreach($boycott as $bt)
+                    @if(isset($bt->blog_image) && isset($bt->title) && fileToUrl($bt->blog_image) != 'https://causestand.com/storage/')
                         <div class="col">
                             <div class="card h-100">
                                 <div class="canvas-container">
@@ -140,7 +145,7 @@
                                 <div class="card-body text-center">
                                     <h5 class="card-title">{{ $bt->title }}</h5>
                                     <div class="buy-now">
-                                        <button class="btn btn-primary">Buy</button>
+                                        <button class="btn btn-primary" style="background-color: #eb3e32; font-size: 1.1rem;">Buy</button>
                                     </div>
                                 </div>
                             </div>
@@ -166,14 +171,19 @@
                                     // Load the overlay image from the loop
                                     fabric.Image.fromURL('{{ fileToUrl($bt->blog_image) }}', function(overlayImg) {
                                         overlayImg.set({
-                                            left: canvas.width / 2.1,
+                                            left: canvas.width / 2,
                                             top: canvas.height / 2.5,
                                             originX: 'center',
                                             originY: 'center'
                                         });
-                                        overlayImg.scaleToWidth(canvas.width * 0.3);
-                                        overlayImg.scaleToHeight(canvas.height * 0.4);
+
+                                        // Adjust scaling to keep proportions and padding
+                                        var scaleFactor = 0.4; // Adjust this value as needed
+                                        overlayImg.scaleToWidth(canvas.width * scaleFactor);
+                                        overlayImg.scaleToHeight(canvas.height * scaleFactor);
+
                                         canvas.add(overlayImg);
+                                        canvas.renderAll();
                                     });
                                 });
                             });
@@ -182,7 +192,7 @@
                 @endforeach
             </div>
         @else
-            <div class="crt-prd-main" style="text-align: center;font-size: x-large;">
+            <div class="crt-prd-main" style="text-align: center; font-size: x-large;">
                 <p>No Record found!</p>
             </div>
         @endif
