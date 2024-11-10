@@ -171,8 +171,8 @@
                                             originX: 'center',
                                             originY: 'center'
                                         });
-                                        overlayImg.scaleToWidth(canvas.width * 0.2);
-                                        overlayImg.scaleToHeight(canvas.height * 0.2);
+                                        overlayImg.scaleToWidth(canvas.width * 0.3);
+                                        overlayImg.scaleToHeight(canvas.height * 0.3);
                                         canvas.add(overlayImg);
                                     });
                                 });
