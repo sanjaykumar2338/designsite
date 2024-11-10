@@ -104,56 +104,56 @@
     </section>
 
     <div class="container my-4">
-        <style>
-            .card-img-top {
-                height: 200px; /* Set a fixed height */
-                object-fit: cover; /* Ensures images fill the space without distortion */
-                position: relative;
-            }
-            .card-img-top:hover::after {
-                content: 'Click to view full image';
-                position: absolute;
-                bottom: 10px;
-                left: 50%;
-                transform: translateX(-50%);
-                background-color: rgba(0, 0, 0, 0.6);
-                color: #fff;
-                padding: 5px 10px;
-                font-size: 0.9em;
-                border-radius: 5px;
-            }
-            .buy-now .btn {
-                background-color: #eb3e32; /* Custom button color */
-                font-size: 1.1em; /* Make button text slightly larger */
-            }
-        </style>
+    <style>
+        .card-img-top {
+            height: 200px; /* Set a fixed height */
+            object-fit: cover; /* Ensures images fill the space without distortion */
+            position: relative;
+        }
+        .card-img-top:hover::after {
+            content: 'Click to view full image';
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 5px 10px;
+            font-size: 0.9em;
+            border-radius: 5px;
+        }
+        .buy-now .btn {
+            background-color: #eb3e32; /* Custom button color */
+            font-size: 1.1em; /* Make button text slightly larger */
+        }
+    </style>
 
-        @if($boycott->count() > 0)
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                @foreach($boycott as $bt) 
-                    @if(isset($bt->blog_image) && isset($bt->title) && fileToUrl($bt->blog_image)!='https://causestand.com/storage/')
-                        <div class="col">
-                            <div class="card h-100">
-                                <a href="{{ fileToUrl($bt->blog_image) }}" data-lightbox="gallery" data-title="{{ $bt->title }}">
-                                    <img src="{{ fileToUrl($bt->blog_image) }}" class="card-img-top" alt="{{ $bt->title }}">
-                                </a>
-                                <div class="card-body text-center">
-                                    <h5 class="card-title">{{ $bt->title }}</h5>
-                                    <div class="buy-now">
-                                        <button class="btn btn-primary">Buy</button>
-                                    </div>
+    @if($boycott->count() > 0)
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            @foreach($boycott as $bt) 
+                @if(isset($bt->blog_image) && isset($bt->title) && fileToUrl($bt->blog_image)!='https://causestand.com/storage/')
+                    <div class="col">
+                        <div class="card h-100">
+                            <a href="{{ fileToUrl($bt->blog_image) }}" data-lightbox="gallery" data-title="{{ $bt->title }}">
+                                <img src="{{ fileToUrl($bt->blog_image) }}" class="card-img-top" alt="{{ $bt->title }}">
+                            </a>
+                            <div class="card-body text-center">
+                                <h5 class="card-title">{{ $bt->title }}</h5>
+                                <div class="buy-now">
+                                    <button class="btn btn-primary">Buy</button>
                                 </div>
                             </div>
                         </div>
-                    @endif
-                @endforeach
-            </div>
-        @else
-            <div class="crt-prd-main" style="text-align: center;font-size: x-large;">
-                <p>No Record found!</p>
-            </div>
-        @endif
-    </div>
+                    </div>
+                @endif
+            @endforeach
+        </div>
+    @else
+        <div class="crt-prd-main" style="text-align: center;font-size: x-large;">
+            <p>No Record found!</p>
+        </div>
+    @endif
+</div>
 
 
     @if($products->count() > 0 && false)
