@@ -151,9 +151,59 @@
                             </div>
                         </div>
 
+                        <style>
+                            /* Loader styles */
+                            .loader {
+                                border: 4px solid #f3f3f3;
+                                border-top: 4px solid #3498db;
+                                border-radius: 50%;
+                                width: 30px;
+                                height: 30px;
+                                animation: spin 1s linear infinite;
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                            }
+
+                            @keyframes spin {
+                                0% { transform: translate(-50%, -50%) rotate(0deg); }
+                                100% { transform: translate(-50%, -50%) rotate(360deg); }
+                            }
+
+                            .canvas-container {
+                                position: relative;
+                                display: inline-block;
+                            }
+
+                            .loading-overlay {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                background: rgba(255, 255, 255, 0.8);
+                                z-index: 2;
+                            }
+                        </style>
+
+                        <div class="canvas-container">
+                            <div class="loading-overlay" id="loading-{{ $loop->index }}">
+                                <div class="loader"></div>
+                                <span>Loading design...</span>
+                            </div>
+                            <canvas id="canvas-{{ $loop->index }}" width="500" height="500"></canvas>
+                        </div>
+
                         <script>
                             document.addEventListener("DOMContentLoaded", function() {
-                                var canvas = new fabric.Canvas('canvas-{{ $loop->index }}');
+                                var canvasId = 'canvas-{{ $loop->index }}';
+                                var loadingOverlayId = 'loading-{{ $loop->index }}';
+                                var canvas = new fabric.Canvas(canvasId);
+                                var loadingOverlay = document.getElementById(loadingOverlayId);
 
                                 // Load the background image
                                 fabric.Image.fromURL('{{$background_image}}', function(bgImg) {
@@ -185,9 +235,15 @@
                                         overlayImg.scaleToWidth(canvas.width * scaleFactor);
                                         overlayImg.scaleToHeight(canvas.height * scaleFactor);
 
+                                        // Add overlay image to canvas and hide the loader
                                         canvas.add(overlayImg);
                                         canvas.renderAll();
+                                        loadingOverlay.style.display = 'none'; // Hide the loading overlay
+                                    }, {
+                                        crossOrigin: 'anonymous' // Ensures CORS issues are handled
                                     });
+                                }, {
+                                    crossOrigin: 'anonymous' // Ensures CORS issues are handled
                                 });
                             });
                         </script>
