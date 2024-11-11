@@ -127,6 +127,22 @@
         font-size: 0.9em;
         border-radius: 5px;
     }
+    .loader {
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #eb3e32;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        animation: spin 1s linear infinite;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    @keyframes spin {
+        0% { transform: translate(-50%, -50%) rotate(0deg); }
+        100% { transform: translate(-50%, -50%) rotate(360deg); }
+    }
     .buy-now .btn {
         background-color: #eb3e32; /* Custom button color */
         font-size: 1.1em; /* Make button text slightly larger */
@@ -140,8 +156,9 @@
                 @if(isset($bt->blog_image) && isset($bt->title) && fileToUrl($bt->blog_image) != 'https://causestand.com/storage/')
                     <div class="col">
                         <div class="card h-100">
-                            <div class="canvas-container">
-                                <canvas id="canvas-{{ $loop->index }}" width="324" height="340"></canvas>
+                            <div class="canvas-container" id="canvas-container-{{ $loop->index }}">
+                                <div class="loader" id="loader-{{ $loop->index }}"></div>
+                                <canvas id="canvas-{{ $loop->index }}" width="324" height="340" style="display:none;"></canvas>
                             </div>
                             <div class="card-body text-center">
                                 <h5 class="card-title">{{ $bt->title }}</h5>
@@ -154,6 +171,8 @@
                         <script>
                             document.addEventListener("DOMContentLoaded", function() {
                                 var canvas = new fabric.Canvas('canvas-{{ $loop->index }}');
+                                var loader = document.getElementById('loader-{{ $loop->index }}');
+                                var canvasElement = document.getElementById('canvas-{{ $loop->index }}');
 
                                 // Load the background image
                                 fabric.Image.fromURL('{{$background_image}}', function(bgImg) {
@@ -185,6 +204,10 @@
 
                                         canvas.add(overlayImg);
                                         canvas.renderAll();
+
+                                        // Hide the loader and show the canvas once loading is complete
+                                        loader.style.display = 'none';
+                                        canvasElement.style.display = 'block';
                                     });
                                 });
                             });
@@ -199,6 +222,7 @@
         </div>
     @endif
 </div>
+
 
 
     @if($products->count() > 0 && false)
