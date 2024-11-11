@@ -116,7 +116,6 @@
         margin: auto;
     }
     .canvas-container:hover::after {
-        content: 'Click to view full image';
         position: absolute;
         bottom: 10px;
         left: 50%;
