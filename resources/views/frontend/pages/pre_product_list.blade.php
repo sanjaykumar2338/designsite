@@ -104,49 +104,49 @@
     </section>
 
     <style>
-        .card-img-top {
-            height: 200px; /* Set a fixed height */
-            object-fit: cover; /* Ensures images fill the space without distortion */
-            position: relative;
-        }
-        .card-img-top:hover::after {
-            content: 'Click to view full image';
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: rgba(0, 0, 0, 0.6);
-            color: #fff;
-            padding: 5px 10px;
-            font-size: 0.9em;
-            border-radius: 5px;
-        }
-        .buy-now .btn {
-            background-color: #eb3e32; /* Custom button color */
-            font-size: 1.1em; /* Make button text slightly larger */
-        }
+    .card-img-top {
+        height: 200px; /* Set a fixed height */
+        object-fit: cover; /* Ensures images fill the space without distortion */
+        position: relative;
+    }
+    .canvas-container {
+        position: relative;
+        height: 340px;
+        width: 324px;
+        margin: auto;
+    }
+    .canvas-container:hover::after {
+        content: 'Click to view full image';
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        padding: 5px 10px;
+        font-size: 0.9em;
+        border-radius: 5px;
+    }
+    .buy-now .btn {
+        background-color: #eb3e32; /* Custom button color */
+        font-size: 1.1em; /* Make button text slightly larger */
+    }
+</style>
 
-        .canvas-container {
-            margin: 20px;
-            text-align: center;
-        }
-    </style>
-
-    <div class="container my-4">
-        @if($boycott->count() > 0)
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                @foreach($boycott as $bt)
-                    @if(isset($bt->blog_image) && isset($bt->title) && fileToUrl($bt->blog_image) != 'https://causestand.com/storage/')
-                        <div class="col">
-                            <div class="card h-100">
-                                <div class="canvas-container">
-                                    <canvas id="canvas-{{ $loop->index }}" width="324" height="340"></canvas>
-                                </div>
-                                <div class="card-body text-center">
-                                    <h5 class="card-title">{{ $bt->title }}</h5>
-                                    <div class="buy-now">
-                                        <button class="btn btn-primary" style="background-color: #eb3e32; font-size: 1.1rem;">Buy</button>
-                                    </div>
+<div class="container my-4">
+    @if($boycott->count() > 0)
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            @foreach($boycott as $bt)
+                @if(isset($bt->blog_image) && isset($bt->title) && fileToUrl($bt->blog_image) != 'https://causestand.com/storage/')
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="canvas-container">
+                                <canvas id="canvas-{{ $loop->index }}" width="324" height="340"></canvas>
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title">{{ $bt->title }}</h5>
+                                <div class="buy-now">
+                                    <button class="btn btn-primary">Buy</button>
                                 </div>
                             </div>
                         </div>
@@ -162,26 +162,24 @@
                                         originY: 'center',
                                         left: canvas.width / 2,
                                         top: canvas.height / 2,
-                                        lockRotation: false,
                                         selectable: false
                                     });
                                     bgImg.scaleToWidth(canvas.width);
                                     bgImg.scaleToHeight(canvas.height);
                                     canvas.setBackgroundImage(bgImg, canvas.renderAll.bind(canvas));
 
-                                    // Load the overlay image from the loop
+                                    // Load the overlay image
                                     fabric.Image.fromURL('{{ fileToUrl($bt->blog_image) }}', function(overlayImg) {
                                         overlayImg.set({
                                             left: canvas.width / 2,
-                                            top: canvas.height / 2.3,
+                                            top: canvas.height / 2,
                                             originX: 'center',
                                             originY: 'center',
-                                            lockRotation: false,
                                             selectable: false
                                         });
 
-                                        // Adjust scaling to keep proportions and padding
-                                        var scaleFactor = 0.4; // Adjust this value as needed
+                                        // Adjust scaling
+                                        var scaleFactor = 0.4; // Adjust scaling as needed
                                         overlayImg.scaleToWidth(canvas.width * scaleFactor);
                                         overlayImg.scaleToHeight(canvas.height * scaleFactor);
 
@@ -191,15 +189,16 @@
                                 });
                             });
                         </script>
-                    @endif
-                @endforeach
-            </div>
-        @else
-            <div class="crt-prd-main" style="text-align: center; font-size: x-large;">
-                <p>No Record found!</p>
-            </div>
-        @endif
-    </div>
+                    </div>
+                @endif
+            @endforeach
+        </div>
+    @else
+        <div class="crt-prd-main" style="text-align: center; font-size: x-large;">
+            <p>No Record found!</p>
+        </div>
+    @endif
+</div>
 
 
     @if($products->count() > 0 && false)
