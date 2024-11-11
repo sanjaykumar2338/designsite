@@ -156,7 +156,7 @@
                             </div>
                             <div class="card-body text-center">
                                 <h5 class="card-title" style="">{{ $bt->title }}</h5>
-                                <p class="prc-inf">{{ $product->description }}</p>
+                                <p class="prc-inf">{{ $bt->description }}</p>
                                 <div class="buy-now">
                                     <button class="btn btn-primary">Buy</button>
                                 </div>
