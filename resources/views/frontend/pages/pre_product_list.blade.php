@@ -155,7 +155,8 @@
                                 <canvas id="canvas-{{ $loop->index }}" width="324" height="340" style="display:none;"></canvas>
                             </div>
                             <div class="card-body text-center">
-                                <h5 class="card-title" style="display:none;">{{ $bt->title }}</h5>
+                                <h5 class="card-title" style="">{{ $bt->title }}</h5>
+                                <p class="prc-inf">{{ $product->description }}</p>
                                 <div class="buy-now">
                                     <button class="btn btn-primary">Buy</button>
                                 </div>
