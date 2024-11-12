@@ -250,11 +250,11 @@
                                             });
 
                                             var widthScaleFactor = 0.1; // Adjusted width scale factor
-                                            var heightScaleFactor = 0.4; // Keep the height consistent
+                                            var heightScaleFactor = 0.1; // Keep the height consistent
 
                                             // Apply separate scaling factors
                                             overlayImg.scaleToWidth(canvas.width * widthScaleFactor);
-                                            overlayImg.scaleToHeight(canvas.height);
+                                            overlayImg.scaleToHeight(canvas.height * heightScaleFactor);
 
                                             canvas.add(overlayImg);
                                             canvas.renderAll();
