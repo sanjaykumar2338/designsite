@@ -97,7 +97,6 @@
             </div>
         </div>
     </section>
-
     <style>
     .card-img-top {
         height: 200px;
@@ -130,6 +129,15 @@
         margin: 0 5px;
         padding: 5px 15px;
         font-size: 0.9em;
+        border: none;
+        background-color: #eb3e32;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+    .view-buttons button:hover {
+        background-color: #c72d27;
     }
     @keyframes spin {
         0% { transform: translate(-50%, -50%) rotate(0deg); }
@@ -138,6 +146,7 @@
     .buy-now .btn {
         background-color: #eb3e32;
         font-size: 1.1em;
+        margin-top: 10px;
     }
 </style>
 
@@ -170,6 +179,8 @@
                                 var canvas = new fabric.Canvas('canvas-{{ $loop->index }}');
                                 var loader = document.getElementById('loader-{{ $loop->index }}');
                                 var canvasElement = document.getElementById('canvas-{{ $loop->index }}');
+
+                                // Front and back images
                                 var frontImage = '{{ fileToUrl($bt->blog_image) }}';
                                 var frontBackground = 'https://files.cdn.printful.com/m/56-bella-canvas-3413/medium/ghost/front/05_BC_3413_XL_Ghost_base_whitebg.png?v=1702297406';
                                 var backImage = '{{ asset("collectionback/tshirt.png") }}';
@@ -204,6 +215,7 @@
                                             overlayImg.scaleToHeight(canvas.height * 0.4);
                                             canvas.add(overlayImg);
                                             canvas.renderAll();
+
                                             loader.style.display = 'none';
                                             canvasElement.style.display = 'block';
                                         });
@@ -236,6 +248,7 @@
         </div>
     @endif
 </div>
+
 
     @if($products->count() > 0 && false)
         
