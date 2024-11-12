@@ -100,8 +100,8 @@
 
     <style>
     .card-img-top {
-        height: 200px; /* Set a fixed height */
-        object-fit: cover; /* Ensures images fill the space without distortion */
+        height: 200px;
+        object-fit: cover;
         position: relative;
     }
     .canvas-container {
@@ -109,17 +109,6 @@
         height: 340px;
         width: 324px;
         margin: auto;
-    }
-    .canvas-container:hover::after {
-        position: absolute;
-        bottom: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: rgba(0, 0, 0, 0.6);
-        color: #fff;
-        padding: 5px 10px;
-        font-size: 0.9em;
-        border-radius: 5px;
     }
     .loader {
         border: 4px solid #f3f3f3;
@@ -133,13 +122,22 @@
         left: 50%;
         transform: translate(-50%, -50%);
     }
+    .view-buttons {
+        margin-top: 10px;
+        text-align: center;
+    }
+    .view-buttons button {
+        margin: 0 5px;
+        padding: 5px 15px;
+        font-size: 0.9em;
+    }
     @keyframes spin {
         0% { transform: translate(-50%, -50%) rotate(0deg); }
         100% { transform: translate(-50%, -50%) rotate(360deg); }
     }
     .buy-now .btn {
-        background-color: #eb3e32; /* Custom button color */
-        font-size: 1.1em; /* Make button text slightly larger */
+        background-color: #eb3e32;
+        font-size: 1.1em;
     }
 </style>
 
@@ -154,9 +152,13 @@
                                 <div class="loader" id="loader-{{ $loop->index }}"></div>
                                 <canvas id="canvas-{{ $loop->index }}" width="324" height="340" style="display:none;"></canvas>
                             </div>
+                            <div class="view-buttons">
+                                <button onclick="showFront({{ $loop->index }})">Front</button>
+                                <button onclick="showBack({{ $loop->index }})">Back</button>
+                            </div>
                             <div class="card-body text-center">
-                                <h5 class="card-title" style="">{{ $bt->title }}</h5>
-                                <p class="prc-inf">{!!  $bt->description !!}</p>
+                                <h5 class="card-title">{{ $bt->title }}</h5>
+                                <p class="prc-inf">{!! $bt->description !!}</p>
                                 <div class="buy-now">
                                     <button class="btn btn-primary">Buy</button>
                                 </div>
@@ -168,43 +170,60 @@
                                 var canvas = new fabric.Canvas('canvas-{{ $loop->index }}');
                                 var loader = document.getElementById('loader-{{ $loop->index }}');
                                 var canvasElement = document.getElementById('canvas-{{ $loop->index }}');
+                                var frontImage = '{{ fileToUrl($bt->blog_image) }}';
+                                var frontBackground = 'https://files.cdn.printful.com/m/56-bella-canvas-3413/medium/ghost/front/05_BC_3413_XL_Ghost_base_whitebg.png?v=1702297406';
+                                var backImage = '{{ asset("collectionback/tshirt.png") }}';
+                                var backBackground = 'https://files.cdn.printful.com/m/56-bella-canvas-3413/medium/ghost/back/05_BC_3413_XL_Ghost_back_base_whitebg.png?v=1702297406';
 
-                                // Load the background image
-                                fabric.Image.fromURL('{{$background_image}}', function(bgImg) {
-                                    bgImg.set({
-                                        originX: 'center',
-                                        originY: 'center',
-                                        left: canvas.width / 2,
-                                        top: canvas.height / 2,
-                                        selectable: false
-                                    });
-                                    bgImg.scaleToWidth(canvas.width);
-                                    bgImg.scaleToHeight(canvas.height);
-                                    canvas.setBackgroundImage(bgImg, canvas.renderAll.bind(canvas));
+                                function loadCanvas(background, overlay) {
+                                    canvas.clear();
+                                    loader.style.display = 'block';
+                                    canvasElement.style.display = 'none';
 
-                                    // Load the overlay image
-                                    fabric.Image.fromURL('{{ fileToUrl($bt->blog_image) }}', function(overlayImg) {
-                                        overlayImg.set({
-                                            left: canvas.width / 2,
-                                            top: canvas.height / 2,
+                                    fabric.Image.fromURL(background, function(bgImg) {
+                                        bgImg.set({
                                             originX: 'center',
                                             originY: 'center',
+                                            left: canvas.width / 2,
+                                            top: canvas.height / 2,
                                             selectable: false
                                         });
+                                        bgImg.scaleToWidth(canvas.width);
+                                        bgImg.scaleToHeight(canvas.height);
+                                        canvas.setBackgroundImage(bgImg, canvas.renderAll.bind(canvas));
 
-                                        // Adjust scaling
-                                        var scaleFactor = 0.4; // Adjust scaling as needed
-                                        overlayImg.scaleToWidth(canvas.width * scaleFactor);
-                                        overlayImg.scaleToHeight(canvas.height * scaleFactor);
-
-                                        canvas.add(overlayImg);
-                                        canvas.renderAll();
-
-                                        // Hide the loader and show the canvas once loading is complete
-                                        loader.style.display = 'none';
-                                        canvasElement.style.display = 'block';
+                                        fabric.Image.fromURL(overlay, function(overlayImg) {
+                                            overlayImg.set({
+                                                left: canvas.width / 2,
+                                                top: canvas.height / 2,
+                                                originX: 'center',
+                                                originY: 'center',
+                                                selectable: false
+                                            });
+                                            overlayImg.scaleToWidth(canvas.width * 0.4);
+                                            overlayImg.scaleToHeight(canvas.height * 0.4);
+                                            canvas.add(overlayImg);
+                                            canvas.renderAll();
+                                            loader.style.display = 'none';
+                                            canvasElement.style.display = 'block';
+                                        });
                                     });
-                                });
+                                }
+
+                                // Load front view by default
+                                loadCanvas(frontBackground, frontImage);
+
+                                // Functions to toggle views
+                                window.showFront = function(index) {
+                                    if (index === {{ $loop->index }}) {
+                                        loadCanvas(frontBackground, frontImage);
+                                    }
+                                };
+                                window.showBack = function(index) {
+                                    if (index === {{ $loop->index }}) {
+                                        loadCanvas(backBackground, backImage);
+                                    }
+                                };
                             });
                         </script>
                     </div>
@@ -217,8 +236,6 @@
         </div>
     @endif
 </div>
-
-
 
     @if($products->count() > 0 && false)
         
