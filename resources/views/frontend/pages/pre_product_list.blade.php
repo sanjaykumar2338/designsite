@@ -163,14 +163,18 @@
                                 <canvas id="canvas-{{ $loop->index }}" width="324" height="340" style="display:none;"></canvas>
                             </div>
                             <div class="view-buttons">
-                                <button onclick="showView('{{ $loop->index }}', 'front')">Front</button>
-                                <button onclick="showView('{{ $loop->index }}', 'back')">Back</button>
+                                <button style="border-radius:25px;" onclick="showView('{{ $loop->index }}', 'front')">Front</button>
+                                <button style="border-radius:25px;" onclick="showView('{{ $loop->index }}', 'back')">Back</button>
                             </div>
                             <div class="card-body text-center">
                                 <h5 class="card-title">{{ $bt->title }}</h5>
                                 <p class="prc-inf">{!! $bt->description !!}</p>
                                 <div class="buy-now">
-                                    <a class="btn btn-primary">Buy</a>
+                                    <a class="btn btn-primary" style="background-color: #eb3e32;
+    font-size: 11px;
+    margin-top: 10px;
+    width: 170px;
+    text-decoration: underline;">Buy</a>
                                 </div>
                             </div>
                         </div>
