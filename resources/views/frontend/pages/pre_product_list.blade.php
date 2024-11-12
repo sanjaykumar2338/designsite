@@ -97,6 +97,7 @@
             </div>
         </div>
     </section>
+   
     <style>
     .card-img-top {
         height: 200px;
@@ -162,8 +163,8 @@
                                 <canvas id="canvas-{{ $loop->index }}" width="324" height="340" style="display:none;"></canvas>
                             </div>
                             <div class="view-buttons">
-                                <button onclick="showFront({{ $loop->index }})">Front</button>
-                                <button onclick="showBack({{ $loop->index }})">Back</button>
+                                <button onclick="showView({{ $loop->index }}, 'front')">Front</button>
+                                <button onclick="showView({{ $loop->index }}, 'back')">Back</button>
                             </div>
                             <div class="card-body text-center">
                                 <h5 class="card-title">{{ $bt->title }}</h5>
@@ -175,21 +176,19 @@
                         </div>
 
                         <script>
-                            document.addEventListener("DOMContentLoaded", function() {
-                                var canvas = new fabric.Canvas('canvas-{{ $loop->index }}');
-                                var loader = document.getElementById('loader-{{ $loop->index }}');
-                                var canvasElement = document.getElementById('canvas-{{ $loop->index }}');
+                            (function(index) {
+                                var canvas = new fabric.Canvas('canvas-' + index);
+                                var loader = document.getElementById('loader-' + index);
+                                var canvasElement = document.getElementById('canvas-' + index);
 
-                                // Front and back images
-                                var frontImage = '{{ fileToUrl($bt->blog_image) }}';
                                 var frontBackground = 'https://files.cdn.printful.com/m/56-bella-canvas-3413/medium/ghost/front/05_BC_3413_XL_Ghost_base_whitebg.png?v=1702297406';
-                                var backImage = '{{ asset("collectionback/tshirt.png") }}';
                                 var backBackground = 'https://files.cdn.printful.com/m/56-bella-canvas-3413/medium/ghost/back/05_BC_3413_XL_Ghost_back_base_whitebg.png?v=1702297406';
+                                var frontImage = '{{ fileToUrl($bt->blog_image) }}';
+                                var backImage = '{{ asset("collectionback/tshirt.png") }}';
 
                                 function loadCanvas(background, overlay) {
                                     canvas.clear();
                                     loader.style.display = 'block';
-                                    canvasElement.style.display = 'none';
 
                                     fabric.Image.fromURL(background, function(bgImg) {
                                         bgImg.set({
@@ -211,8 +210,9 @@
                                                 originY: 'center',
                                                 selectable: false
                                             });
-                                            overlayImg.scaleToWidth(canvas.width * 0.4);
-                                            overlayImg.scaleToHeight(canvas.height * 0.4);
+                                            var scaleFactor = 0.4;
+                                            overlayImg.scaleToWidth(canvas.width * scaleFactor);
+                                            overlayImg.scaleToHeight(canvas.height * scaleFactor);
                                             canvas.add(overlayImg);
                                             canvas.renderAll();
 
@@ -222,21 +222,19 @@
                                     });
                                 }
 
-                                // Load front view by default
                                 loadCanvas(frontBackground, frontImage);
 
-                                // Functions to toggle views
-                                window.showFront = function(index) {
-                                    if (index === {{ $loop->index }}) {
+                                window.showView = function(idx, view) {
+                                    if (idx !== index) return;
+
+                                    console.log("Switching to", view, "view for canvas", idx);
+                                    if (view === 'front') {
                                         loadCanvas(frontBackground, frontImage);
-                                    }
-                                };
-                                window.showBack = function(index) {
-                                    if (index === {{ $loop->index }}) {
+                                    } else {
                                         loadCanvas(backBackground, backImage);
                                     }
                                 };
-                            });
+                            })({{ $loop->index }});
                         </script>
                     </div>
                 @endif
