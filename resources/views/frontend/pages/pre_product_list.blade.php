@@ -254,7 +254,7 @@
 
                                             // Apply separate scaling factors
                                             overlayImg.scaleToWidth(canvas.width * widthScaleFactor);
-                                            overlayImg.scaleToHeight(canvas.height * heightScaleFactor);
+                                            overlayImg.scaleToHeight(canvas.height);
 
                                             canvas.add(overlayImg);
                                             canvas.renderAll();
