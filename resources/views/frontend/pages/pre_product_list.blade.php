@@ -166,22 +166,25 @@
                                 <button style="border-radius:25px;" onclick="showView('{{ $loop->index }}', 'front')">Front</button>
                                 <button style="border-radius:25px;" onclick="showView('{{ $loop->index }}', 'back')">Back</button>
                             </div>
-                            <div class="card-body text-center">
-                                <h5 class="card-title">{{ $bt->title }}</h5>
+                            <div class="card-body text-left">
+                            <h5 class="card-title" style="float: left; width: 100%; font-weight: bold;">{{ $bt->title }}</h5>
+    
                                 @if(!empty($bt->design_number))
-                                    <p class="design-number">Design Number: {{ $bt->design_number }}</p>
+                                    <p class="design-number" style="float: left; width: 50%; margin: 0;">Design Number: {{ $bt->design_number }}</p>
                                 @endif
 
                                 @if(!empty($bt->price))
-                                    <p class="price">Price: ${{ number_format($bt->price, 2) }}</p>
+                                    <p class="price" style="float: right; width: 50%; text-align: right; margin: 0;">Price: ${{ number_format($bt->price, 2) }}</p>
                                 @endif
-                                <p class="prc-inf">{!! $bt->description !!}</p>
+
+                                <p class="prc-inf" style="clear: both; margin-top: 10px;">{!! $bt->description !!}</p>
+
                                 <div class="buy-now">
-                                    <a class="btn btn-primary" style="background-color: #eb3e32;
-    font-size: 11px;
-    margin-top: 10px;
-    width: 170px;
-    text-decoration: underline;" href="{{url('/')}}/collection/{{$collection->slug}}/{{$design_type}}/{{$bt->slug}}">Buy</a>
+                                <a class="btn btn-primary" style="background-color: #eb3e32;
+                                    font-size: 11px;
+                                    margin-top: 10px;
+                                    width: 170px;
+                                    text-decoration: underline;" href="{{url('/')}}/collection/{{$collection->slug}}/{{$design_type}}/{{$bt->slug}}">Buy</a>
                                 </div>
                             </div>
                         </div>
