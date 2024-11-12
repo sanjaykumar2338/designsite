@@ -174,7 +174,7 @@
     font-size: 11px;
     margin-top: 10px;
     width: 170px;
-    text-decoration: underline;">Buy</a>
+    text-decoration: underline;" href="{{url('/')}}/collection/{{$collection->slug}}/{{$design_type}}{{$bt->slug}}">Buy</a>
                                 </div>
                             </div>
                         </div>
