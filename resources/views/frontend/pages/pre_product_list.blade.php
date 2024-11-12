@@ -188,7 +188,7 @@
 
                                 var frontImage = '{{ fileToUrl($bt->blog_image) }}';
                                 var backImage = '{{ asset("collectionback/T1000.png") }}';
-                                
+
                                 if('{{$collection->slug}}'=='oversight'){
                                     backImage = '{{ asset("collectionback/oversight.png") }}';
                                 }
@@ -203,6 +203,11 @@
 
                                 if('{{$collection->slug}}'=='propaganda'){
                                     backImage = '{{ asset("collectionback/propaganda.png") }}';
+                                }
+
+                                if ('{{ $design_type }}' === 'hoodies') {
+                                    // Swap the images
+                                    [frontImage, backImage] = [backImage, frontImage];
                                 }
 
                                 // Function to load canvas with a specific background and overlay
