@@ -186,7 +186,7 @@
                                 var frontBackground = 'https://files.cdn.printful.com/m/56-bella-canvas-3413/medium/ghost/front/05_BC_3413_XL_Ghost_base_whitebg.png?v=1702297406';
                                 var backBackground = 'https://files.cdn.printful.com/m/56-bella-canvas-3413/medium/ghost/back/05_BC_3413_XL_Ghost_back_base_whitebg.png?v=1702297406';
                                 var frontImage = '{{ fileToUrl($bt->blog_image) }}';
-                                var backImage = '{{ asset("collectionback/tshirt.png") }}';
+                                var backImage = '{{ asset("collectionback/T1000.png") }}';
 
                                 // Function to load canvas with a specific background and overlay
                                 function loadCanvas(background, overlay) {
