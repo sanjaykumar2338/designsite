@@ -175,7 +175,7 @@
                                 @endif
 
                                 @if(!empty($bt->design_number))
-                                    <p class="design-number">Design Number: {{ $bt->design_number }}</p>
+                                    <p class="design-number">Design : #{{ $bt->design_number }}</p>
                                 @endif
                                 <p class="prc-inf">{!! $bt->description !!}</p>
                                 <div class="buy-now">
