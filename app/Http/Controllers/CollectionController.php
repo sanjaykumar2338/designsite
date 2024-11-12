@@ -228,6 +228,8 @@ class CollectionController extends Controller
     }
 
     public function collections_design_boycott_slug(Request $request){
+        echo "working..."; die;
+        
         $slug = $request->collection;
         $collection = Collections::where('slug', $slug)->first();     
 
