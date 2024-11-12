@@ -166,13 +166,13 @@
                                 <button style="border-radius:25px;" onclick="showView('{{ $loop->index }}', 'front')">Front</button>
                                 <button style="border-radius:25px;" onclick="showView('{{ $loop->index }}', 'back')">Back</button>
                             </div>
-                            <div class="card-body text-left">
+                            <div class="card-body text-centre">
                                 <h5 class="card-title">{{ $bt->title }}</h5>
 
                                 @if(!empty($bt->price))
                                     <p class="price">Price: ${{ number_format($bt->price, 2) }}</p>
                                 @endif
-                                
+
                                 @if(!empty($bt->design_number))
                                     <p class="design-number">Design Number: {{ $bt->design_number }}</p>
                                 @endif
