@@ -249,12 +249,19 @@
                                                 selectable: false
                                             });
 
-                                            var widthScaleFactor = 0.1; // Adjusted width scale factor
-                                            var heightScaleFactor = 4; // Keep the height consistent
+                                            // Get the original dimensions of the overlay image
+                                            var originalWidth = overlayImg.width;
+                                            var originalHeight = overlayImg.height;
 
-                                            // Apply separate scaling factors
-                                            overlayImg.scaleToWidth(canvas.width * widthScaleFactor);
-                                            overlayImg.scaleToHeight(canvas.height * heightScaleFactor);
+                                            // Calculate scale factors to fit the overlay image within the canvas
+                                            var widthScaleFactor = canvas.width / originalWidth;
+                                            var heightScaleFactor = canvas.height / originalHeight;
+
+                                            // Choose the smaller scale factor to fit within canvas boundaries
+                                            var scaleFactor = Math.min(widthScaleFactor, heightScaleFactor) * 0.8; // 0.8 leaves some padding
+
+                                            // Apply scaling factor to keep aspect ratio
+                                            overlayImg.scale(scaleFactor);
 
                                             canvas.add(overlayImg);
                                             canvas.renderAll();
