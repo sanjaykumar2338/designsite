@@ -197,7 +197,7 @@
                                     backImage = '{{ asset("collectionback/traitor.png") }}';
                                 }
 
-                                if('{{$collection->slug}}'=='traitor'){
+                                if('{{$collection->slug}}'=='trader'){
                                     backImage = '{{ asset("collectionback/traitor.png") }}';
                                 }
 
