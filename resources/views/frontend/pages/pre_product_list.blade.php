@@ -170,7 +170,7 @@
                                 <h5 class="card-title">{{ $bt->title }}</h5>
                                 <p class="prc-inf">{!! $bt->description !!}</p>
                                 <div class="buy-now">
-                                    <button class="btn btn-primary">Buy</button>
+                                    <a class="btn btn-primary">Buy</a>
                                 </div>
                             </div>
                         </div>

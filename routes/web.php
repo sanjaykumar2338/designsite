@@ -215,6 +215,8 @@ Route::get('/collection/design/type/{collection}/{design_type}/{type}', [App\Htt
 
 Route::get('/collection/design/{collection}/{design_type}/{product_slug}', [App\Http\Controllers\CollectionController::class,'collections_design_product_detail'])->name('collections_design_product_detail');
 
+Route::get('/collection/{collection}/{product_type}/{boycott_slug}', [App\Http\Controllers\CollectionController::class,'collections_design_boycott_slug'])->name('collections_design_boycott_slug');
+
 //Shop By Product Type
 Route::get('/shop/shop-by-product-type/{type}', [App\Http\Controllers\CollectionController::class,'shop_by_product_type_tshirts'])->name('shop_by_product_type_tshirts');
 Route::get('/shop/{collection}/{slug}', [App\Http\Controllers\CollectionController::class, 'collection'])->name('collection');
