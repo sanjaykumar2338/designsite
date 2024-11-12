@@ -66,6 +66,8 @@ class BoycottController extends Controller
     {
         $this->validate($request, [
             'title' => 'required|string|max:255',
+            'price' => 'required',
+            'design_number' => 'required',
             'description' => 'required',
             'feature_image' => '',
             'blog_image' => '',
@@ -96,6 +98,8 @@ class BoycottController extends Controller
         $blog->title = $request->input('title');
         $blog->collection = $id;
         $blog->description = $request->input('description');
+        $blog->price = $request->input('price');
+        $blog->design_number = $request->input('design_number');
         $blog->feature_image = $feature_image;
         $blog->blog_image = $blog_image;
         $blog->back_design_image = $back_design_image;
@@ -163,6 +167,8 @@ class BoycottController extends Controller
         $blog = Boycotts::find($id);
         $this->validate($request, [
             'title' => 'required|string|max:255',
+            'price' => 'required',
+            'design_number' => 'required',
             'description' => 'required',
             'feature_image' => '',
             'blog_image' => '',
@@ -192,6 +198,8 @@ class BoycottController extends Controller
         //$blog = new Blogs();
         $blog->title = $request->input('title');
         $blog->description = $request->input('description');
+        $blog->price = $request->input('price');
+        $blog->design_number = $request->input('design_number');
         $blog->blog_image = $blog_image;
         $blog->back_design_image = $back_design_image;
         $blog->feature_image = $feature_image;

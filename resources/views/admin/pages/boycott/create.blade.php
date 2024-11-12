@@ -43,6 +43,21 @@
                 </div>
 
                 <div class="mb-3 mt-3">
+                  <label for="meta_title">Design #No:</label>
+                  <input class="form-control" id="design_number" rows="6" placeholder="Enter Design Number" name="design_number">
+                </div>
+
+                <div class="mb-3 mt-3">
+                  <label for="meta_title">Price:</label>
+                  <input type="number" class="form-control" id="price" rows="6" placeholder="Enter Price" name="price">
+                </div>
+
+                <div class="mb-3 mt-3">
+                  <label for="meta_title">Meta Keywords:</label>
+                  <input class="form-control" id="meta_keywords" rows="6" placeholder="Enter Meta Keywords" name="meta_keywords"></textarea>
+                </div>
+
+                <div class="mb-3 mt-3">
                   <label for="product_name">Description:</label>
                   <textarea name="description" cols="2" id="description" class="form-control"></textarea>
                 </div>

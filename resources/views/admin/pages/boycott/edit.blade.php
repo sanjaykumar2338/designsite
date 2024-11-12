@@ -44,6 +44,16 @@
                 </div>
 
                 <div class="mb-3 mt-3">
+                  <label for="meta_title">Design #No:</label>
+                  <input class="form-control" id="design_number" rows="6" placeholder="Enter Design Number" name="design_number" value="{{$blog->design_number}}">
+                </div>
+
+                <div class="mb-3 mt-3">
+                  <label for="meta_title">Price:</label>
+                  <input type="number" class="form-control" id="price" rows="6" placeholder="Enter Price" name="price" value="{{$blog->price}}">
+                </div>
+
+                <div class="mb-3 mt-3">
                   <label for="product_name">Description:</label>
                   <textarea name="description" cols="5" id="description" class="form-control">{{$blog->description}}</textarea>
                 </div>
