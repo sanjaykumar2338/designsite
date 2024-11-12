@@ -54,28 +54,28 @@
                         @if($collection->title=='Oversight')
                             @php 
                                 $oversight = fileToUrl($collection->feature_image); 
-                                $oversight_href = url('collection/design/' . $collection->slug . '-collection).'/tshirts';
+                                $oversight_href = url('collection/design/' . $collection->slug . '-collection').'/tshirts';
                             @endphp
                         @endif
 
                         @if($collection->title=='Traitor')
                             @php 
                                 $traitor = fileToUrl($collection->feature_image); 
-                                $traitor_href = url('collection/design/' . $collection->slug . '-collection).'/tshirts';
+                                $traitor_href = url('collection/design/' . $collection->slug . '-collection').'/tshirts';
                             @endphp
                         @endif
 
                         @if($collection->title=='Trader')
                             @php 
                                 $trader = fileToUrl($collection->feature_image); 
-                                $trader_href = url('collection/design/' . $collection->slug . '-collection).'/tshirts';
+                                $trader_href = url('collection/design/' . $collection->slug . '-collection').'/tshirts';
                             @endphp
                         @endif
 
                         @if($collection->title=='Propaganda')
                             @php 
                                 $propaganda = fileToUrl($collection->feature_image);
-                                $propaganda_href = url('collection/design/' . $collection->slug . '-collection).'/tshirts';
+                                $propaganda_href = url('collection/design/' . $collection->slug . '-collection').'/tshirts';
                             @endphp
                         @endif
 
