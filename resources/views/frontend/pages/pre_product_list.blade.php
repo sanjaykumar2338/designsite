@@ -163,8 +163,8 @@
                                 <canvas id="canvas-{{ $loop->index }}" width="324" height="340" style="display:none;"></canvas>
                             </div>
                             <div class="view-buttons">
-                                <button onclick="showView('{{ $loop->index }}', 'front')">Front</button>
-                                <button onclick="showView('{{ $loop->index }}', 'back')">Back</button>
+                                <button onclick="window['showView']({{ $loop->index }}, 'front')">Front</button>
+                                <button onclick="window['showView']({{ $loop->index }}, 'back')">Back</button>
                             </div>
                             <div class="card-body text-center">
                                 <h5 class="card-title">{{ $bt->title }}</h5>
@@ -186,7 +186,7 @@
                                 var frontBackground = 'https://files.cdn.printful.com/m/56-bella-canvas-3413/medium/ghost/front/05_BC_3413_XL_Ghost_base_whitebg.png?v=1702297406';
                                 var backBackground = 'https://files.cdn.printful.com/m/56-bella-canvas-3413/medium/ghost/back/05_BC_3413_XL_Ghost_back_base_whitebg.png?v=1702297406';
                                 var frontImage = '{{ fileToUrl($bt->blog_image) }}';
-                                var backImage = '{{ asset("collectionback/T1000.png") }}';
+                                var backImage = '{{ asset("collectionback/tshirt.png") }}';
 
                                 // Function to load canvas with a specific background and overlay
                                 function loadCanvas(background, overlay) {
@@ -213,9 +213,8 @@
                                                 originY: 'center',
                                                 selectable: false
                                             });
-                                            var scaleFactor = 0.4;
-                                            overlayImg.scaleToWidth(canvas.width * scaleFactor);
-                                            overlayImg.scaleToHeight(canvas.height * scaleFactor);
+                                            overlayImg.scaleToWidth(canvas.width * 0.6);
+                                            overlayImg.scaleToHeight(canvas.height * 0.6);
                                             canvas.add(overlayImg);
                                             canvas.renderAll();
 
@@ -229,21 +228,15 @@
                                 loadCanvas(frontBackground, frontImage);
 
                                 // Define the showView function dynamically for each product
-                                window['showView' + index] = function(view) {
+                                window.showView = function(idx, view) {
+                                    if (idx !== index) return; // Ensure this applies to the correct canvas
                                     console.log("Switching to", view, "view for canvas", index);
+
                                     if (view === 'front') {
                                         loadCanvas(frontBackground, frontImage);
                                     } else {
                                         loadCanvas(backBackground, backImage);
                                     }
-                                };
-
-                                // Bind event listeners for each product's buttons
-                                document.querySelector(`button[onclick="showView('{{ $loop->index }}', 'front')"]`).onclick = function() {
-                                    window['showView' + index]('front');
-                                };
-                                document.querySelector(`button[onclick="showView('{{ $loop->index }}', 'back')"]`).onclick = function() {
-                                    window['showView' + index]('back');
                                 };
                             })({{ $loop->index }});
                         </script>
@@ -257,6 +250,7 @@
         </div>
     @endif
 </div>
+
 
 
     @if($products->count() > 0 && false)
