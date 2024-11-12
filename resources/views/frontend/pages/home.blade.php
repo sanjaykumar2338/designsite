@@ -136,7 +136,7 @@
                         <img src="{{url('/')}}/homepageimages/oversight-streetwear-causestand-boycott-apparel.png"
                            alt="" class="img-fluid">
                      </div>
-                     <a href="{{url('/')}}/shop/oversight-collection">Learn more</a>
+                     <a href="{{url('/')}}/collection/design/oversight-collection/tshirts">Learn more</a>
                   </div>
                </div>
                <div class="col-lg-3 ">
@@ -150,7 +150,7 @@
                         <img src="{{url('/')}}/homepageimages/traitor-streetwear-causestand-advocacy-apparel.png"
                            alt="" class="img-fluid">
                      </div>
-                     <a href="{{url('/')}}/shop/traitor-collection">Learn more</a>
+                     <a href="{{url('/')}}/collection/design/traitor-collection/tshirts">Learn more</a>
                   </div>
                </div>
                <div class="col-lg-3 ">
@@ -167,7 +167,7 @@
                         <img src="{{url('/')}}/homepageimages/trader-urbanwear-causestand-protest-clothing.png"
                            alt="" class="img-fluid">
                      </div>
-                     <a href="{{url('/')}}/shop/trader-collection">Learn more</a>
+                     <a href="{{url('/')}}/collection/design/trader-collection/tshirts">Learn more</a>
                   </div>
                </div>
                <div class="col-lg-3 ">
@@ -184,7 +184,7 @@
                         <img src="{{url('/')}}/homepageimages/propaganda-merch-causestand-advocate-clothes.png"
                            alt="" class="img-fluid">
                      </div>
-                     <a href="{{url('/')}}/shop/propaganda-collection">Learn more</a>
+                     <a href="{{url('/')}}/collection/design/propaganda-collection/tshirts">Learn more</a>
                   </div>
                </div>
             </div>
