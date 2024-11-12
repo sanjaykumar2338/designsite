@@ -243,7 +243,7 @@
                                         fabric.Image.fromURL(overlay, function(overlayImg) {
                                             overlayImg.set({
                                                 left: canvas.width / 2,
-                                                top: canvas.height / 2, // Center the overlay image vertically
+                                                top: canvas.height / 2.5, // Center the overlay image vertically
                                                 originX: 'center',
                                                 originY: 'center',
                                                 selectable: false
