@@ -208,14 +208,14 @@
                                         fabric.Image.fromURL(overlay, function(overlayImg) {
                                             overlayImg.set({
                                                 left: canvas.width / 2,
-                                                top: canvas.height / 2.5,
+                                                top: canvas.height / 2.5, // Adjust this as necessary to center vertically
                                                 originX: 'center',
                                                 originY: 'center',
                                                 selectable: false
                                             });
 
-                                            var widthScaleFactor = 0.1; // Set a smaller scale factor for width
-                                            var heightScaleFactor = 0.4; // Keep height scale factor as desired
+                                            var widthScaleFactor = 0.35; // Adjusted width scale factor
+                                            var heightScaleFactor = 0.4; // Keep the height consistent
 
                                             // Apply separate scaling factors
                                             overlayImg.scaleToWidth(canvas.width * widthScaleFactor);
