@@ -258,7 +258,7 @@
                                             var heightScaleFactor = canvas.height / originalHeight;
 
                                             // Choose the smaller scale factor to fit within canvas boundaries
-                                            var scaleFactor = Math.min(widthScaleFactor, heightScaleFactor) * 0.6; // 0.8 leaves some padding
+                                            var scaleFactor = Math.min(widthScaleFactor, heightScaleFactor) * 1; // 0.8 leaves some padding
 
                                             // Apply scaling factor to keep aspect ratio
                                             overlayImg.scale(scaleFactor);
