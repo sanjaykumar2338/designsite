@@ -140,14 +140,14 @@
     .view-buttons button:hover {
         background-color: #c72d27;
     }
-    @keyframes spin {
-        0% { transform: translate(-50%, -50%) rotate(0deg); }
-        100% { transform: translate(-50%, -50%) rotate(360deg); }
-    }
     .buy-now .btn {
         background-color: #eb3e32;
         font-size: 1.1em;
         margin-top: 10px;
+    }
+    @keyframes spin {
+        0% { transform: translate(-50%, -50%) rotate(0deg); }
+        100% { transform: translate(-50%, -50%) rotate(360deg); }
     }
 </style>
 
@@ -163,8 +163,8 @@
                                 <canvas id="canvas-{{ $loop->index }}" width="324" height="340" style="display:none;"></canvas>
                             </div>
                             <div class="view-buttons">
-                                <button onclick="showView({{ $loop->index }}, 'front')">Front</button>
-                                <button onclick="showView({{ $loop->index }}, 'back')">Back</button>
+                                <button onclick="showView('{{ $loop->index }}', 'front')">Front</button>
+                                <button onclick="showView('{{ $loop->index }}', 'back')">Back</button>
                             </div>
                             <div class="card-body text-center">
                                 <h5 class="card-title">{{ $bt->title }}</h5>
@@ -177,15 +177,18 @@
 
                         <script>
                             (function(index) {
+                                // Select canvas and loader elements based on the unique index
                                 var canvas = new fabric.Canvas('canvas-' + index);
                                 var loader = document.getElementById('loader-' + index);
                                 var canvasElement = document.getElementById('canvas-' + index);
 
+                                // Define image URLs for front and back views
                                 var frontBackground = 'https://files.cdn.printful.com/m/56-bella-canvas-3413/medium/ghost/front/05_BC_3413_XL_Ghost_base_whitebg.png?v=1702297406';
                                 var backBackground = 'https://files.cdn.printful.com/m/56-bella-canvas-3413/medium/ghost/back/05_BC_3413_XL_Ghost_back_base_whitebg.png?v=1702297406';
                                 var frontImage = '{{ fileToUrl($bt->blog_image) }}';
                                 var backImage = '{{ asset("collectionback/tshirt.png") }}';
 
+                                // Function to load canvas with a specific background and overlay
                                 function loadCanvas(background, overlay) {
                                     canvas.clear();
                                     loader.style.display = 'block';
@@ -222,17 +225,25 @@
                                     });
                                 }
 
+                                // Initial load with the front view
                                 loadCanvas(frontBackground, frontImage);
 
-                                window.showView = function(idx, view) {
-                                    if (idx !== index) return;
-
-                                    console.log("Switching to", view, "view for canvas", idx);
+                                // Define the showView function dynamically for each product
+                                window['showView' + index] = function(view) {
+                                    console.log("Switching to", view, "view for canvas", index);
                                     if (view === 'front') {
                                         loadCanvas(frontBackground, frontImage);
                                     } else {
                                         loadCanvas(backBackground, backImage);
                                     }
+                                };
+
+                                // Bind event listeners for each product's buttons
+                                document.querySelector(`button[onclick="showView('{{ $loop->index }}', 'front')"]`).onclick = function() {
+                                    window['showView' + index]('front');
+                                };
+                                document.querySelector(`button[onclick="showView('{{ $loop->index }}', 'back')"]`).onclick = function() {
+                                    window['showView' + index]('back');
                                 };
                             })({{ $loop->index }});
                         </script>
