@@ -197,7 +197,7 @@
                                         bgImg.set({
                                             originX: 'center',
                                             originY: 'center',
-                                            left: canvas.width / 3,
+                                            left: canvas.width / 2,
                                             top: canvas.height / 2,
                                             selectable: false
                                         });
@@ -207,7 +207,7 @@
 
                                         fabric.Image.fromURL(overlay, function(overlayImg) {
                                             overlayImg.set({
-                                                left: canvas.width / 7,
+                                                left: canvas.width / 2,
                                                 top: canvas.height / 2.5, // Adjust this as necessary to center vertically
                                                 originX: 'center',
                                                 originY: 'center',
