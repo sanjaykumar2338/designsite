@@ -46,7 +46,7 @@
                                 <img src="{{fileToUrl($collection->feature_image)}}" alt="" style="height: 300px;">
                                 <div class="text-two">
                                     <h4>{{$collection->title}} Collection</h4>
-                                    <a class="buy_now" href="{{url('/')}}/shop/{{$collection->slug}}-collection"> shop</a>
+                                    <a class="buy_now" href="{{ url('collection/design/' . $collection->slug . '-collection/') }}/tshirts"> shop</a>
                                 </div>
                             </div>
                         </div>
@@ -54,28 +54,28 @@
                         @if($collection->title=='Oversight')
                             @php 
                                 $oversight = fileToUrl($collection->feature_image); 
-                                $oversight_href = url('/')."/shop/".$collection->slug."-collection";
+                                $oversight_href = url('collection/design/' . $collection->slug . '-collection).'/tshirts';
                             @endphp
                         @endif
 
                         @if($collection->title=='Traitor')
                             @php 
                                 $traitor = fileToUrl($collection->feature_image); 
-                                $traitor_href = url('/')."/shop/".$collection->slug."-collection";
+                                $traitor_href = url('collection/design/' . $collection->slug . '-collection).'/tshirts';
                             @endphp
                         @endif
 
                         @if($collection->title=='Trader')
                             @php 
                                 $trader = fileToUrl($collection->feature_image); 
-                                $trader_href = url('/')."/shop/".$collection->slug."-collection";
+                                $trader_href = url('collection/design/' . $collection->slug . '-collection).'/tshirts';
                             @endphp
                         @endif
 
                         @if($collection->title=='Propaganda')
                             @php 
                                 $propaganda = fileToUrl($collection->feature_image);
-                                $propaganda_href = url('/')."/shop/".$collection->slug."-collection";
+                                $propaganda_href = url('collection/design/' . $collection->slug . '-collection).'/tshirts';
                             @endphp
                         @endif
 
