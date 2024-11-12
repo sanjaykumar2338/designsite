@@ -232,8 +232,8 @@
                                         bgImg.set({
                                             originX: 'center',
                                             originY: 'center',
-                                            left: canvas.width / 1,
-                                            top: canvas.height / 1,
+                                            left: canvas.width / 2,
+                                            top: canvas.height / 2,
                                             selectable: false
                                         });
                                         bgImg.scaleToWidth(canvas.width);
@@ -243,7 +243,7 @@
                                         fabric.Image.fromURL(overlay, function(overlayImg) {
                                             overlayImg.set({
                                                 left: canvas.width / 2,
-                                                top: canvas.height / 2, // Adjust this as necessary to center vertically
+                                                top: canvas.height / 2, // Center the overlay image vertically
                                                 originX: 'center',
                                                 originY: 'center',
                                                 selectable: false
@@ -257,18 +257,20 @@
                                             var widthScaleFactor = canvas.width / originalWidth;
                                             var heightScaleFactor = canvas.height / originalHeight;
 
-                                            // Choose the smaller scale factor to fit within canvas boundaries
-                                            var scaleFactor = Math.min(widthScaleFactor, heightScaleFactor) * 0.6; // 0.8 leaves some padding
+                                            // Choose the smaller scale factor and apply a padding adjustment
+                                            var scaleFactor = Math.min(widthScaleFactor, heightScaleFactor) * 0.5; // Adjust 0.5 as needed for more padding
 
-                                            // Apply scaling factor to keep aspect ratio
+                                            // Apply scaling factor to maintain the aspect ratio
                                             overlayImg.scale(scaleFactor);
 
                                             canvas.add(overlayImg);
                                             canvas.renderAll();
 
+                                            // Hide the loader and display the canvas element after rendering
                                             loader.style.display = 'none';
                                             canvasElement.style.display = 'block';
                                         });
+
                                     });
                                 }
 
