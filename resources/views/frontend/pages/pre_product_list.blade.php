@@ -214,7 +214,7 @@
                                                 selectable: false
                                             });
 
-                                            var widthScaleFactor = 0.4; // Set a smaller scale factor for width
+                                            var widthScaleFactor = 0.2; // Set a smaller scale factor for width
                                             var heightScaleFactor = 0.4; // Keep height scale factor as desired
 
                                             // Apply separate scaling factors
