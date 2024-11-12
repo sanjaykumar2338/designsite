@@ -214,7 +214,7 @@
                                                 selectable: false
                                             });
 
-                                            var widthScaleFactor = 0.35; // Adjusted width scale factor
+                                            var widthScaleFactor = 0.1; // Adjusted width scale factor
                                             var heightScaleFactor = 0.4; // Keep the height consistent
 
                                             // Apply separate scaling factors
