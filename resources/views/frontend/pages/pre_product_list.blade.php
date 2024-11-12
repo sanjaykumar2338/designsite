@@ -197,7 +197,7 @@
                                         bgImg.set({
                                             originX: 'center',
                                             originY: 'center',
-                                            left: canvas.width / 2,
+                                            left: canvas.width / 3,
                                             top: canvas.height / 2,
                                             selectable: false
                                         });
