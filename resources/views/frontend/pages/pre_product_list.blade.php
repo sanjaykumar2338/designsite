@@ -213,9 +213,14 @@
                                                 originY: 'center',
                                                 selectable: false
                                             });
-                                            var scaleFactor = 0.4;
-                                            overlayImg.scaleToWidth(canvas.width * scaleFactor);
-                                            overlayImg.scaleToHeight(canvas.height * scaleFactor);
+
+                                            var widthScaleFactor = 0.3; // Set a smaller scale factor for width
+                                            var heightScaleFactor = 0.4; // Keep height scale factor as desired
+
+                                            // Apply separate scaling factors
+                                            overlayImg.scaleToWidth(canvas.width * widthScaleFactor);
+                                            overlayImg.scaleToHeight(canvas.height * heightScaleFactor);
+
                                             canvas.add(overlayImg);
                                             canvas.renderAll();
 
