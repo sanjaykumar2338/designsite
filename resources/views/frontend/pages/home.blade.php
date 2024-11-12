@@ -24,7 +24,7 @@
                         <p>Stand to Defend against Aggression,<br> Demolish Terrorism,<br> and Claim Ownership
                            to Peace.
                         </p>
-                        <button style="display:block;" onclick='location.href ="{{route('shop')}}";' class=" donate"> shop </button>
+                        <button style="display:block;" onclick='location.href ="{{route('collections')}}";' class=" donate"> shop </button>
                      </div>
                   </div>
                   <div class="carousel-item">
@@ -35,7 +35,7 @@
                         <p>Stand in the Face of Oppression,<br> Challenge False Narratives,<br> and Demand
                            Accountability.
                         </p>
-                        <button style="display:block;" onclick='location.href ="{{route('shop')}}";' class=" donate"> shop </button>
+                        <button style="display:block;" onclick='location.href ="{{route('collections')}}";' class=" donate"> shop </button>
                      </div>
                   </div>
                   <div class="carousel-item">
@@ -43,7 +43,7 @@
                      <div class="carousel-caption ">
                         <h5>FUELED BY<br> RIGHTEOUSNESS!</h5>
                         <p>Stand for Unification,<br> Resist Unwanted Narratives,<br> and Demand Loyalty.</p>
-                        <button style="display:block;" onclick='location.href ="{{route('shop')}}";' class=" donate"> shop </button>
+                        <button style="display:block;" onclick='location.href ="{{route('collections')}}";' class=" donate"> shop </button>
                      </div>
                   </div>
                   <div class="carousel-item">
@@ -52,7 +52,7 @@
                      <div class="carousel-caption ">
                         <h5>DRIVEN TO<br> BE FREE!</h5>
                         <p>Stand for Sovereignty,<br> Reject Foreign Influence,<br> and Seek Independence.</p>
-                        <button style="display:block;" onclick='location.href ="{{route('shop')}}";' class=" donate"> shop </button>
+                        <button style="display:block;" onclick='location.href ="{{route('collections')}}";' class=" donate"> shop </button>
                      </div>
                   </div>
                </div>
