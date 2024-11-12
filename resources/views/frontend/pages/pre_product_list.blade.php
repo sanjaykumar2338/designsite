@@ -168,6 +168,13 @@
                             </div>
                             <div class="card-body text-center">
                                 <h5 class="card-title">{{ $bt->title }}</h5>
+                                @if(!empty($bt->design_number))
+                                    <p class="design-number">Design Number: {{ $bt->design_number }}</p>
+                                @endif
+
+                                @if(!empty($bt->price))
+                                    <p class="price">Price: ${{ number_format($bt->price, 2) }}</p>
+                                @endif
                                 <p class="prc-inf">{!! $bt->description !!}</p>
                                 <div class="buy-now">
                                     <a class="btn btn-primary" style="background-color: #eb3e32;
