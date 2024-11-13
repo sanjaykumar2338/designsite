@@ -272,10 +272,29 @@ class CollectionController extends Controller
             if (!empty($boycott->blog_image)) {
                 $front = fileToUrl($boycott->blog_image);
             }
-        
-            if (!empty($boycott->back_design_image)) {
-                $back = fileToUrl($boycott->back_design_image);
-            }
+        }
+
+        $back = '';
+        // Determine the back image based on the collection slug
+        if ($collection->slug === 'oversight') {
+            $back = asset('collectionback/oversight.png');
+        } elseif ($collection->slug === 'traitor') {
+            $back = asset('collectionback/traitor.png');
+        } elseif ($collection->slug === 'trader') {
+            $back = asset('collectionback/traitor.png');
+        } elseif ($collection->slug === 'propaganda') {
+            $back = asset('collectionback/propaganda.png');
+        }
+
+        // Swap images if the design type is 'hoodies'
+        if ($design_type === 'hoodies') {
+            // Define the front image if not already defined
+            $frontImage = isset($front) ? $front : '';
+
+            // Swap frontImage and backImage
+            $temp = $frontImage;
+            $front = $backImage;
+            $back = $temp;
         }
         
         //echo $front; die;
