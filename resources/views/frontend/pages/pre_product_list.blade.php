@@ -196,17 +196,17 @@
                                 var loader = document.getElementById('loader-' + index);
                                 var canvasElement = document.getElementById('canvas-' + index);
 
-                                if('{{$design_type'=='tshirts'){
+                                if('{{$design_type}}'=='tshirts'){
                                     var frontBackground = 'https://files.cdn.printful.com/m/56-bella-canvas-3413/medium/ghost/front/05_BC_3413_XL_Ghost_base_whitebg.png?v=1702297406';
                                     var backBackground = 'https://files.cdn.printful.com/m/56-bella-canvas-3413/medium/ghost/back/05_BC_3413_XL_Ghost_back_base_whitebg.png?v=1702297406';
                                 }
 
-                                if('{{$design_type'=='hoodies'){
+                                if('{{$design_type}}'=='hoodies'){
                                     var frontBackground = 'https://files.cdn.printful.com/m/g18500/medium/ghost/front/05_gildan18500_ghost_front_base_whitebg.png?v=1700731048';
                                     var backBackground = 'https://files.cdn.printful.com/m/g18500/medium/ghost/back/05_gildan18500_ghost_back_base_whitebg.png?v=1700731048';
                                 }
 
-                                if('{{$design_type'=='sweatshirts'){
+                                if('{{$design_type}}'=='sweatshirts'){
                                     var frontBackground = 'https://files.cdn.printful.com/m/fleece_pullover/medium/ghost/front/05_ghost_front_base_whitebg.png?v=1702459598';
                                     var backBackground = 'https://files.cdn.printful.com/m/fleece_pullover/medium/ghost/back/05_ghost_back_base_whitebg.png?v=1702459598';
                                 }
