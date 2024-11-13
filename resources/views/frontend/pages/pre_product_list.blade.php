@@ -167,7 +167,7 @@
                         <div class="card h-100">
                             <div class="canvas-container" id="canvas-container-{{ $loop->index }}">
                                 <div class="loader" id="loader-{{ $loop->index }}"></div>
-                                <canvas id="canvas-{{ $loop->index }}" width="324" height="340" style="display:none;"></canvas>
+                                <canvas id="canvas-{{ $loop->index }}" width="400" height="340" style="display:none;"></canvas>
                             </div>
                             <div class="view-buttons">
                                 <button style="border-radius:25px;" onclick="showView('{{ $loop->index }}', 'front')">Front</button>
