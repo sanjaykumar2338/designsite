@@ -293,7 +293,7 @@ class CollectionController extends Controller
 
             // Swap frontImage and backImage
             $temp = $frontImage;
-            $front = $backImage;
+            $front = $back;
             $back = $temp;
         }
         
