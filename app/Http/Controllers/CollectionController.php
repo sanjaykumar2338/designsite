@@ -259,7 +259,7 @@ class CollectionController extends Controller
         $product->front_image = $boycott->blog_image;
         $product->save();
         */
-        
+
         //echo "<pre>"; print_r($product); die;
         $slug = $request->collection;
         $collection = Collections::where('slug', $slug)->first();     
@@ -279,6 +279,8 @@ class CollectionController extends Controller
                 $back = fileToUrl($boycott->back_design_image);
             }
         }
+        
+        echo $front; die;
         
         $commissionAmount = $product->product_price * ($product->commission / 100);
         $product->product_price = $product->product_price + $commissionAmount + 20;
