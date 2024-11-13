@@ -608,7 +608,10 @@ those who intentionally propagate bigoted narratives.</p>
 <div class="col-md-12 col-lg-6">
 <div class="text">
 <h4 class="Hall" style="padding-left:0px;">Conflict Conscious Apparel for the Advocate</h4>
-<p>Welcome are the people who pick up the call and stand and advocate through clothing. Shop our online clothing store for conflict conscious streetwear, order an outfit that fits the moment, and then stand, dressed as an advocate, to influence your peers.</p>
+<p style="    font-size: 16px;
+    text-transform: capitalize;
+    padding-bottom: 10px;
+    line-height: 29px;">Welcome are the people who pick up the call and stand and advocate through clothing. Shop our online clothing store for conflict conscious streetwear, order an outfit that fits the moment, and then stand, dressed as an advocate, to influence your peers.</p>
 </div>
 </div>
 </div>
