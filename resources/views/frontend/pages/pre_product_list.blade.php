@@ -18,7 +18,7 @@
         .product_list_data ul li {
             margin-bottom: 5px;
         }
-        .product_list_data .extra_content{
+        .extra_content{
             text-align: left;
             padding-left: 40px;
         }
