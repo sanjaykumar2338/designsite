@@ -122,7 +122,7 @@
                     
                     <h1 class="product_price" style="font-weight: 700;" data-exact="{{ number_format($totalPrice, 2) }}" data-price="{{ number_format($totalPrice, 2) }}">Price: ${{ number_format($totalPrice, 2) }}</h1>
 
-                    <p class="desc">{{ $boycott->description }}</p>
+                    <p class="desc">{!! $boycott->description !!}</p>
                     <br>
 
                     <div class="prd-option">
