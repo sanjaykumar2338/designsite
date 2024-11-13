@@ -249,17 +249,15 @@ class CollectionController extends Controller
             return redirect()->back()->with('error', 'Requested resource not found.');
         }
         
-        /*
+        
         $product->product_name = $boycott->title;
         $product->product_description = $boycott->description;
         $product->product_price = $boycott->price;
         $product->meta_keyword = $boycott->meta_keywords;
         $product->meta_description = $boycott->meta_description;
         $product->seo_title = $boycott->meta_title;
-        $product->front_image = $boycott->blog_image;
         $product->save();
-        */
-
+    
         //echo "<pre>"; print_r($product); die;
         $slug = $request->collection;
         $collection = Collections::where('slug', $slug)->first();     
