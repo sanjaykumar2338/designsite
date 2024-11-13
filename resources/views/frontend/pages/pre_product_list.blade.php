@@ -253,7 +253,7 @@
                                                 selectable: false
                                             });
 
-                                            var scaleFactor = Math.min(canvas.width / overlayImg.width, canvas.height / overlayImg.height) * 0.3; // Adjusted for more padding
+                                            var scaleFactor = Math.min(canvas.width / overlayImg.width, canvas.height / overlayImg.height) * 0.4; // Adjusted for more padding
                                             overlayImg.scale(scaleFactor);
 
                                             canvas.add(overlayImg);
