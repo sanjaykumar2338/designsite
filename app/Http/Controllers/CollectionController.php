@@ -265,8 +265,6 @@ class CollectionController extends Controller
         $collection = Collections::where('slug', $slug)->first();     
 
         $design_type = $request->design_type;
-        $boycott = Boycotts::where('slug',$design_type)->where('collection',$collection->id)->first();       
-        
         $front = '';
         $back = '';
         
@@ -281,7 +279,7 @@ class CollectionController extends Controller
         }
         
         echo $front; die;
-        
+
         $commissionAmount = $product->product_price * ($product->commission / 100);
         $product->product_price = $product->product_price + $commissionAmount + 20;
         return view('frontend.pages.pre_create_product')->with('collection',$collection)->with('front',$front)->with('back',$back)->with('design',$collection)->with('product',$product)->with('boycott',$boycott);
