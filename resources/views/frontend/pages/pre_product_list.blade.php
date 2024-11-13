@@ -237,7 +237,7 @@
                                             originX: 'center',
                                             originY: 'center',
                                             left: canvas.width / 2,
-                                            top: canvas.height / 2,
+                                            top: canvas.height / 2.7,
                                             selectable: false
                                         });
                                         bgImg.scaleToWidth(canvas.width);
