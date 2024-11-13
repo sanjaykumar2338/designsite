@@ -106,7 +106,7 @@
                     <div class="flex flex-col gap-2" id="editables"></div>
 
                     @php
-                        $totalPrice = $product->product_price;
+                        $totalPrice = $boycott->price;
                     @endphp
 
                     @if(Auth::check())
@@ -117,12 +117,12 @@
                     @endif
 
                     <h1 class="product_title">
-                        {{ $product->website_product_name ? $product->website_product_name : $product->product_name }}</h1>
+                        {{ $boycott->title ? $boycott->title : $product->product_name }}</h1>
                     <br>
                     
                     <h1 class="product_price" style="font-weight: 700;" data-exact="{{ number_format($totalPrice, 2) }}" data-price="{{ number_format($totalPrice, 2) }}">Price: ${{ number_format($totalPrice, 2) }}</h1>
 
-                    <p class="desc">{{ $product->product_description }}</p>
+                    <p class="desc">{{ $boycott->description }}</p>
                     <br>
 
                     <div class="prd-option">
