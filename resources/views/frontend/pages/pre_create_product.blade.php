@@ -141,12 +141,12 @@
                                 {{-- back --}}
                             </button>
 
-                            <button class="border  rounded-lg" onclick="setShowCanvas(`canvas_sleeve_left`, true, 'left')">
+                            <button style="display:none;" class="border  rounded-lg" onclick="setShowCanvas(`canvas_sleeve_left`, true, 'left')">
                                 <img width="50" height="50" id="thumbnail_sleeve_left" src="" alt=""
                                     {{-- sleeve_left --}}>
                             </button>
 
-                            <button class="border  rounded-lg" onclick="setShowCanvas(`canvas_sleeve_right`, true, 'right')">
+                            <button style="display:none;" class="border  rounded-lg" onclick="setShowCanvas(`canvas_sleeve_right`, true, 'right')">
                                 <img width="50" height="50" id="thumbnail_sleeve_right" src="" alt=""
                                     class="h-[50px] w-[50px]">
                                 {{-- sleeve_right --}}
