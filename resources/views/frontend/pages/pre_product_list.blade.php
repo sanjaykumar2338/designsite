@@ -107,14 +107,14 @@
    
     <style>
     .card-img-top {
-        height: 200px;
+        height: 220px; /* Increased height */
         object-fit: cover;
         position: relative;
     }
     .canvas-container {
         position: relative;
-        height: 340px;
-        width: 324px;
+        height: 440px; /* Adjusted height for better aspect ratio */
+        width: 400px; /* Increased width */
         margin: auto;
     }
     .loader {
@@ -167,7 +167,7 @@
                         <div class="card h-100">
                             <div class="canvas-container" id="canvas-container-{{ $loop->index }}">
                                 <div class="loader" id="loader-{{ $loop->index }}"></div>
-                                <canvas id="canvas-{{ $loop->index }}" width="400" height="340" style="display:none;"></canvas>
+                                <canvas id="canvas-{{ $loop->index }}" width="400" height="440" style="display:none;"></canvas>
                             </div>
                             <div class="view-buttons">
                                 <button style="border-radius:25px;" onclick="showView('{{ $loop->index }}', 'front')">Front</button>
@@ -175,7 +175,6 @@
                             </div>
                             <div class="card-body text-center">
                                 <h5 class="card-title">{{ $bt->title }}</h5>
-                               
 
                                 @if(!empty($bt->price))
                                     <p class="price">Price: ${{ number_format($bt->price, 2) }}</p>
@@ -186,30 +185,23 @@
                                 @endif
                                 <p class="prc-inf">{!! $bt->description !!}</p>
                                 <div class="buy-now">
-                                    <a class="btn btn-primary" style="background-color: #eb3e32;
-    font-size: 11px;
-    margin-top: 10px;
-    width: 170px;
-    text-decoration: underline;" href="{{url('/')}}/collections/{{$collection->slug}}/{{$design_type}}/{{$bt->slug}}">Buy</a>
+                                    <a class="btn btn-primary" style="background-color: #eb3e32; font-size: 11px; margin-top: 10px; width: 170px; text-decoration: underline;" href="{{url('/')}}/collections/{{$collection->slug}}/{{$design_type}}/{{$bt->slug}}">Buy</a>
                                 </div>
                             </div>
                         </div>
 
                         <script>
                             (function(index) {
-                                // Select canvas and loader elements based on the unique index
                                 var canvas = new fabric.Canvas('canvas-' + index);
                                 var loader = document.getElementById('loader-' + index);
                                 var canvasElement = document.getElementById('canvas-' + index);
 
-                                // Define image URLs for front and back views
                                 var frontBackground = 'https://files.cdn.printful.com/m/56-bella-canvas-3413/medium/ghost/front/05_BC_3413_XL_Ghost_base_whitebg.png?v=1702297406';
                                 var backBackground = 'https://files.cdn.printful.com/m/56-bella-canvas-3413/medium/ghost/back/05_BC_3413_XL_Ghost_back_base_whitebg.png?v=1702297406';
 
                                 var frontImage = '{{ fileToUrl($bt->blog_image) }}';
                                 var backImage = '{{ asset("collectionback/T1000.png") }}';
 
-                                // Update backImage based on collection slug
                                 if ('{{$collection->slug}}' === 'oversight') {
                                     backImage = '{{ asset("collectionback/oversight.png") }}';
                                 } else if ('{{$collection->slug}}' === 'traitor') {
@@ -220,12 +212,10 @@
                                     backImage = '{{ asset("collectionback/propaganda.png") }}';
                                 }
 
-                                // Swap front and back images if design_type is hoodies
                                 if ('{{ $design_type }}' === 'hoodies') {
                                     [frontImage, backImage] = [backImage, frontImage];
                                 }
 
-                                // Preload images to improve performance
                                 var imagesCache = {};
                                 function preloadImage(url, callback) {
                                     if (imagesCache[url]) {
@@ -238,7 +228,6 @@
                                     }
                                 }
 
-                                // Load canvas with preloaded images
                                 function loadCanvas(background, overlay) {
                                     canvas.clear();
                                     loader.style.display = 'block';
@@ -258,32 +247,27 @@
                                         preloadImage(overlay, function(overlayImg) {
                                             overlayImg.set({
                                                 left: canvas.width / 2,
-                                                top: canvas.height / 2.2, // Center the overlay image vertically
+                                                top: canvas.height / 2.2,
                                                 originX: 'center',
                                                 originY: 'center',
                                                 selectable: false
                                             });
 
-                                            // Calculate scaling factors
-                                            var scaleFactor = Math.min(canvas.width / overlayImg.width, canvas.height / overlayImg.height) * 0.5; 
+                                            var scaleFactor = Math.min(canvas.width / overlayImg.width, canvas.height / overlayImg.height) * 0.6; // Adjusted for more padding
                                             overlayImg.scale(scaleFactor);
 
                                             canvas.add(overlayImg);
                                             canvas.renderAll();
 
-                                            // Hide loader and show canvas
                                             loader.style.display = 'none';
                                             canvasElement.style.display = 'block';
                                         });
                                     });
                                 }
 
-                                // Initial load with the front view
                                 loadCanvas(frontBackground, frontImage);
 
-                                // Function to switch views
                                 window['showView' + index] = function(view) {
-                                    console.log("Switching to", view, "view for canvas", index);
                                     if (view === 'front') {
                                         loadCanvas(frontBackground, frontImage);
                                     } else {
@@ -291,14 +275,12 @@
                                     }
                                 };
 
-                                // Bind event listeners for each product's buttons
                                 document.querySelector(`button[onclick="showView('{{ $loop->index }}', 'front')"]`).onclick = function() {
                                     window['showView' + index]('front');
                                 };
                                 document.querySelector(`button[onclick="showView('{{ $loop->index }}', 'back')"]`).onclick = function() {
                                     window['showView' + index]('back');
                                 };
-
                             })({{ $loop->index }});
                         </script>
 
