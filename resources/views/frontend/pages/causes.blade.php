@@ -18,7 +18,7 @@
                     <div class="box-text">
                         <h4>Stand with israel</h4>
                         <p>Hamas brutally carried out an unprecedented terrorist attack on the Jewish state of Israel. Pro-Israel advocates around the world are fighting Antisemitism and supporting Israel.</p>
-                        <button onclick="redirectTo('{{ url('/stand-with-israel/shop/men/shirts/unisex-tri-blend-t-shirt-bella-canvas-3413') }}')" class="shop"> shop and donate</button>
+                        <button onclick="redirectTo('{{ url('/stand-with-israel/shop/men/shirts/stand-with-israel-shirt---advocate-for-peace') }}')" class="shop"> shop and donate</button>
                     </div>
                 </div>
 
@@ -26,7 +26,7 @@
                     <div class="box-text">
                         <h4>Stand with Palestine</h4>
                         <p>Stand up for the rights of an oppressed people. Palestinians have been forcibly displaced from their territories by Israel.</p>
-                        <button onclick="redirectTo('{{ url('/stand-with-palestine/shop/men/shirts/unisex-tri-blend-t-shirt-bella-canvas-3413-9') }}')" class="shop"> shop and donate</button>
+                        <button onclick="redirectTo('{{ url('/stand-with-palestine/shop/men/shirts/stand-with-palestine-shirt---advocate-for-justice') }}')" class="shop"> shop and donate</button>
                     </div>
                 </div>
 
@@ -34,7 +34,7 @@
                     <div class="box-text">
                         <h4>Stand with Russia</h4>
                         <p>Russia has deep cultural, economic, and political bonds with Ukraine. The Russian Federation invaded and annexed Ukrainian territories under the pretense of denazification, seeking to keep Ukraine neutral and prevent it from joining the European Union.</p>
-                        <button onclick="redirectTo('{{ url('/stand-with-russia/shop/men/shirts/unisex-tri-blend-t-shirt-bella-canvas-3413') }}')" class="shop"> shop and donate</button>
+                        <button onclick="redirectTo('{{ url('/stand-with-russia/shop/men/shirts/stand-with-russia-shirt---wear-your-beliefs') }}')" class="shop"> shop and donate</button>
                     </div>
                 </div>
 
@@ -42,7 +42,7 @@
                     <div class="box-text">
                         <h4>Stand with Ukraine</h4>
                         <p>After the collapse of the Soviet Union, Ukraine declared full independence on August 24, 1991. Russia annexed Crimea and supported pro-Russian separatists fighting the Ukrainian military. Ukraine continues to fight for its independence.</p>
-                        <button onclick="redirectTo('{{ url('/stand-with-ukraine/shop/men/shirts/unisex-tri-blend-t-shirt-bella-canvas-3413-4') }}')" class="shop"> shop and donate</button>
+                        <button onclick="redirectTo('{{ url('/stand-with-ukraine/shop/men/shirts/stand-with-ukraine-t-shirt---defend-sovereignty') }}')" class="shop"> shop and donate</button>
                     </div>
                 </div>
             </div>
