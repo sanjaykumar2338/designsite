@@ -245,7 +245,7 @@ class CollectionController extends Controller
         $productType = $request->route('product_type') == 'tshirts' ? 'Shirts' : ucfirst(strtolower($request->route('product_type')));
 
         $product = PreProducts::where('product_type', $productType)->first();
-        echo "<pre>"; print_r($product); die;
+        //echo "<pre>"; print_r($product); die;
         
         // Redirect back if any of the resources are not found
         if (!$collection || !$boycott || !$product) {
