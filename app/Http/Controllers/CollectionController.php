@@ -287,7 +287,7 @@ class CollectionController extends Controller
         }
 
         // Swap images if the design type is 'hoodies'
-        if ($design_type === 'hoodies') {
+        if (strtolower($request->route('product_type')) == 'hoodies') {
             // Define the front image if not already defined
             $frontImage = isset($front) ? $front : '';
 
