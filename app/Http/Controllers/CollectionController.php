@@ -228,8 +228,39 @@ class CollectionController extends Controller
     }
 
     public function collections_design_boycott_slug(Request $request){
-        echo "working..."; die;
+        //echo "working..."; die;
+        //echo "<pre>"; print_r($request->collection); die;
+        //Validate required parameters
+        $requiredParams = ['collection', 'product_type', 'boycott_slug'];
+        foreach ($requiredParams as $param) {
+            if (!$request->route($param)) {
+                return redirect()->back()->with('error', ucfirst($param) . ' is required.');
+            }
+        }
+
+        // Fetch the collection, boycott, and product
+        $collection = Collections::where('slug', $request->route('collection'))->first();
+        $boycott = Boycotts::where('slug', $request->route('boycott_slug'))->first();
+        $productType = $request->route('product_type') == 'tshirts' ? 'Shirts' : ucfirst(strtolower($request->route('product_type')));
+        $product = PreProducts::where('product_type', $productType)->first();
+
+        // Redirect back if any of the resources are not found
+        if (!$collection || !$boycott || !$product) {
+            return redirect()->back()->with('error', 'Requested resource not found.');
+        }
         
+        /*
+        $product->product_name = $boycott->title;
+        $product->product_description = $boycott->description;
+        $product->product_price = $boycott->price;
+        $product->meta_keyword = $boycott->meta_keywords;
+        $product->meta_description = $boycott->meta_description;
+        $product->seo_title = $boycott->meta_title;
+        $product->front_image = $boycott->blog_image;
+        $product->save();
+        */
+        
+        //echo "<pre>"; print_r($product); die;
         $slug = $request->collection;
         $collection = Collections::where('slug', $slug)->first();     
 
@@ -249,12 +280,8 @@ class CollectionController extends Controller
             }
         }
         
-
-        $product = PreProducts::where('product_slug', $request->product_slug)->first();
         $commissionAmount = $product->product_price * ($product->commission / 100);
         $product->product_price = $product->product_price + $commissionAmount + 20;
-        
-
         return view('frontend.pages.pre_create_product')->with('collection',$collection)->with('front',$front)->with('back',$back)->with('design',$collection)->with('product',$product)->with('boycott',$boycott);
         //echo "<pre>"; print_r($products); print_r($request->design_type); die;
     }

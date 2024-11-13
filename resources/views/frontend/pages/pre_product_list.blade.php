@@ -58,6 +58,13 @@
         }
     </style>
 
+    @if(session('error'))
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            {{ session('error') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    @endif
+
     <div class="container-fluid">
         <div class="row">
             @foreach(\App\Models\Collections::all() as $coll)
@@ -183,7 +190,7 @@
     font-size: 11px;
     margin-top: 10px;
     width: 170px;
-    text-decoration: underline;" href="{{url('/')}}/collection/{{$collection->slug}}/{{$design_type}}/{{$bt->slug}}">Buy</a>
+    text-decoration: underline;" href="{{url('/')}}/collections/{{$collection->slug}}/{{$design_type}}/{{$bt->slug}}">Buy</a>
                                 </div>
                             </div>
                         </div>
