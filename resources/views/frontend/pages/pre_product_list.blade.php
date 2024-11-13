@@ -4,21 +4,21 @@
 
     <style>
        
-        h1, h2 {
+        .product_list_data h1, h2 {
             color: #0c9e98;
         }
-        p {
+        .product_list_data p {
             margin: 10px 0;
         }
-        ul {
+        .product_list_data ul {
             margin: 10px 0 20px 20px;
             text-align: justify;
             list-style: inside;
         }
-        ul li {
+        .product_list_data ul li {
             margin-bottom: 5px;
         }
-        .extra_content{
+        .product_list_data .extra_content{
             text-align: left;
             padding-left: 40px;
         }
@@ -158,7 +158,7 @@
     }
 </style>
 
-<div class="container my-4">
+<div class="container my-4 product_list_data">
     @if($boycott->count() > 0)
         <div class="row row-cols-1 row-cols-md-3 g-4">
             @foreach($boycott as $bt)
