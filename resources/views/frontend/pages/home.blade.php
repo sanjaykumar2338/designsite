@@ -607,7 +607,7 @@ those who intentionally propagate bigoted narratives.</p>
 </div>
 <div class="col-md-12 col-lg-6">
 <div class="text">
-<h4 class="Hall" style="padding-left:0px;">Conflict Conscious Apparel for the Advocate</h4>
+<h4 class="Hall" style="padding-left:0px;    padding-top: 0px;">Conflict Conscious Apparel for the Advocate</h4>
 <p style="    font-size: 16px;
     text-transform: capitalize;
     padding-bottom: 10px;
