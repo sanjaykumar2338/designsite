@@ -278,7 +278,7 @@ class CollectionController extends Controller
             }
         }
         
-        echo $front; die;
+        //echo $front; die;
 
         $commissionAmount = $product->product_price * ($product->commission / 100);
         $product->product_price = $product->product_price + $commissionAmount + 20;
