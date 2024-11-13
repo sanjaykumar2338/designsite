@@ -209,33 +209,41 @@
                                 var frontImage = '{{ fileToUrl($bt->blog_image) }}';
                                 var backImage = '{{ asset("collectionback/T1000.png") }}';
 
-                                if('{{$collection->slug}}'=='oversight'){
+                                // Update backImage based on collection slug
+                                if ('{{$collection->slug}}' === 'oversight') {
                                     backImage = '{{ asset("collectionback/oversight.png") }}';
-                                }
-
-                                if('{{$collection->slug}}'=='traitor'){
+                                } else if ('{{$collection->slug}}' === 'traitor') {
                                     backImage = '{{ asset("collectionback/traitor.png") }}';
-                                }
-
-                                if('{{$collection->slug}}'=='trader'){
+                                } else if ('{{$collection->slug}}' === 'trader') {
                                     backImage = '{{ asset("collectionback/traitor.png") }}';
-                                }
-
-                                if('{{$collection->slug}}'=='propaganda'){
+                                } else if ('{{$collection->slug}}' === 'propaganda') {
                                     backImage = '{{ asset("collectionback/propaganda.png") }}';
                                 }
 
+                                // Swap front and back images if design_type is hoodies
                                 if ('{{ $design_type }}' === 'hoodies') {
-                                    // Swap the images
                                     [frontImage, backImage] = [backImage, frontImage];
                                 }
 
-                                // Function to load canvas with a specific background and overlay
+                                // Preload images to improve performance
+                                var imagesCache = {};
+                                function preloadImage(url, callback) {
+                                    if (imagesCache[url]) {
+                                        callback(imagesCache[url]);
+                                    } else {
+                                        fabric.Image.fromURL(url, function(img) {
+                                            imagesCache[url] = img;
+                                            callback(img);
+                                        });
+                                    }
+                                }
+
+                                // Load canvas with preloaded images
                                 function loadCanvas(background, overlay) {
                                     canvas.clear();
                                     loader.style.display = 'block';
 
-                                    fabric.Image.fromURL(background, function(bgImg) {
+                                    preloadImage(background, function(bgImg) {
                                         bgImg.set({
                                             originX: 'center',
                                             originY: 'center',
@@ -247,7 +255,7 @@
                                         bgImg.scaleToHeight(canvas.height);
                                         canvas.setBackgroundImage(bgImg, canvas.renderAll.bind(canvas));
 
-                                        fabric.Image.fromURL(overlay, function(overlayImg) {
+                                        preloadImage(overlay, function(overlayImg) {
                                             overlayImg.set({
                                                 left: canvas.width / 2,
                                                 top: canvas.height / 2.2, // Center the overlay image vertically
@@ -256,35 +264,24 @@
                                                 selectable: false
                                             });
 
-                                            // Get the original dimensions of the overlay image
-                                            var originalWidth = overlayImg.width;
-                                            var originalHeight = overlayImg.height;
-
-                                            // Calculate scale factors to fit the overlay image within the canvas
-                                            var widthScaleFactor = canvas.width / originalWidth;
-                                            var heightScaleFactor = canvas.height / originalHeight;
-
-                                            // Choose the smaller scale factor and apply a padding adjustment
-                                            var scaleFactor = Math.min(widthScaleFactor, heightScaleFactor) * 0.5; // Adjust 0.5 as needed for more padding
-
-                                            // Apply scaling factor to maintain the aspect ratio
+                                            // Calculate scaling factors
+                                            var scaleFactor = Math.min(canvas.width / overlayImg.width, canvas.height / overlayImg.height) * 0.5; 
                                             overlayImg.scale(scaleFactor);
 
                                             canvas.add(overlayImg);
                                             canvas.renderAll();
 
-                                            // Hide the loader and display the canvas element after rendering
+                                            // Hide loader and show canvas
                                             loader.style.display = 'none';
                                             canvasElement.style.display = 'block';
                                         });
-
                                     });
                                 }
 
                                 // Initial load with the front view
                                 loadCanvas(frontBackground, frontImage);
 
-                                // Define the showView function dynamically for each product
+                                // Function to switch views
                                 window['showView' + index] = function(view) {
                                     console.log("Switching to", view, "view for canvas", index);
                                     if (view === 'front') {
@@ -301,8 +298,10 @@
                                 document.querySelector(`button[onclick="showView('{{ $loop->index }}', 'back')"]`).onclick = function() {
                                     window['showView' + index]('back');
                                 };
+
                             })({{ $loop->index }});
                         </script>
+
                     </div>
                 @endif
             @endforeach
