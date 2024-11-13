@@ -136,7 +136,8 @@ class CollectionController extends Controller
             $background_image = 'https://files.cdn.printful.com/m/fleece_pullover/medium/ghost/front/05_ghost_front_base_whitebg.png?v=1702459598';
         }
 
-        return view('frontend.pages.pre_product_list')->with('products',$products)->with('collection',$collection)->with('front',$front)->with('boycott',$boycott)->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle)->with('slug' , $slug)->with('design_type', $design_type)->with('background_image',$background_image );
+        $product = PreProducts::where('product_type', $design_type)->first();
+        return view('frontend.pages.pre_product_list')->with('products',$products)->with('collection',$collection)->with('front',$front)->with('boycott',$boycott)->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle)->with('slug' , $slug)->with('design_type', $design_type)->with('background_image',$background_image )->with('product',$product );
     }
 
     public function collections_design_type(Request $request){

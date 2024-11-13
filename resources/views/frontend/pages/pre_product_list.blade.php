@@ -196,8 +196,8 @@
                                 var loader = document.getElementById('loader-' + index);
                                 var canvasElement = document.getElementById('canvas-' + index);
 
-                                var frontBackground = 'https://files.cdn.printful.com/m/56-bella-canvas-3413/medium/ghost/front/05_BC_3413_XL_Ghost_base_whitebg.png?v=1702297406';
-                                var backBackground = 'https://files.cdn.printful.com/m/56-bella-canvas-3413/medium/ghost/back/05_BC_3413_XL_Ghost_back_base_whitebg.png?v=1702297406';
+                                var frontBackground = '{{fileToUrl($product->front_image)}}';
+                                var backBackground = '{{fileToUrl($product->back_image)}}';
 
                                 var frontImage = '{{ fileToUrl($bt->blog_image) }}';
                                 var backImage = '{{ asset("collectionback/T1000.png") }}';
