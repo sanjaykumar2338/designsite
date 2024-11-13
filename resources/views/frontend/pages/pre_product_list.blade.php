@@ -65,37 +65,65 @@
         </div>
     @endif
 
+    <style>
+        .collection-container .col {
+            text-align: center;
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .collection-container .col:hover {
+            background-color: #f5f5f5;
+        }
+        .collection-container .selected {
+            font-weight: bold;
+            background-color: #eb3e32;
+            color: white;
+            border-radius: 5px;
+        }
+        .collection-type-container .col {
+            text-align: center;
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .collection-type-container .col:hover {
+            background-color: #f5f5f5;
+        }
+        .collection-type-container .selected {
+            font-weight: bold;
+            background-color: #eb3e32;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+
     <div class="container-fluid">
-        <div class="row">
+        <!-- Collection Selection Row -->
+        <div class="row collection-container justify-content-center">
             @foreach(\App\Models\Collections::all() as $coll)
-                @php
-                    //$boycott = \App\Models\Boycotts::where('collection',$coll->id)->first();
-                    //echo "<pre>";  print_r($boycott);
-                @endphp
-
-                @if($collection->slug==$coll->slug)
-                    <div class="col selected" onclick="window.location.href='{{ url('collection/design/' . $coll->slug . '-collection/'. $design_type) }}'">{{$coll->title}} Collection</div>
-                @else
-                    <div class="col" onclick="window.location.href='{{ url('collection/design/' . $coll->slug . '-collection/'. $design_type) }}'">{{$coll->title}} Collection</div>
-                @endif
+                <div class="col-6 col-md-3 mb-2 {{ $collection->slug == $coll->slug ? 'selected' : '' }}"
+                    onclick="window.location.href='{{ url('collection/design/' . $coll->slug . '-collection/'. $design_type) }}'">
+                    {{ $coll->title }} Collection
+                </div>
             @endforeach
         </div>
 
         <br>
-        <div class="row">
-            @foreach(['tshirts'=>'T-Shirts','hoodies'=>'Hoodies','sweatshirts'=>'Sweatshirts'] as $key=>$coll)
-                @if($key==$design_type)
-                <div onclick="window.location.href='{{ url('collection/design/' . $collection->slug . '-collection/'. $key) }}'" class="col selected"
-                >{{$coll}}</div>
-                @else
-                <div onclick="window.location.href='{{ url('collection/design/' . $collection->slug . '-collection/'. $key) }}'" class="col"
-                >{{$coll}}</div>
-                @endif
+
+        <!-- Design Type Selection Row -->
+        <div class="row collection-type-container justify-content-center">
+            @foreach(['tshirts' => 'T-Shirts', 'hoodies' => 'Hoodies', 'sweatshirts' => 'Sweatshirts'] as $key => $coll)
+                <div class="col-6 col-md-3 mb-2 {{ $key == $design_type ? 'selected' : '' }}"
+                    onclick="window.location.href='{{ url('collection/design/' . $collection->slug . '-collection/'. $key) }}'">
+                    {{ $coll }}
+                </div>
             @endforeach
         </div>
-        <br>
 
+        <br>
     </div>
+
 
     <section class="products-section">
         <div class="container">
