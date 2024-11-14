@@ -296,13 +296,13 @@
                                         preloadImage(overlay, function(overlayImg) {
                                             overlayImg.set({
                                                 left: canvas.width / 2,
-                                                top: canvas.height / 2.9,
+                                                top: canvas.height / 3,
                                                 originX: 'center',
                                                 originY: 'center',
                                                 selectable: false
                                             });
 
-                                            var scaleFactor = Math.min(canvas.width / overlayImg.width, canvas.height / overlayImg.height) * 0.45; // Adjusted for more padding
+                                            var scaleFactor = Math.min(canvas.width / overlayImg.width, canvas.height / overlayImg.height) * 0.60; // Adjusted for more padding
                                             overlayImg.scale(scaleFactor);
 
                                             canvas.add(overlayImg);
