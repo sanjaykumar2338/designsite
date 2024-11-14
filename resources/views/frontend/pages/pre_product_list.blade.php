@@ -259,7 +259,7 @@
                                         preloadImage(overlay, function(overlayImg) {
                                             overlayImg.set({
                                                 left: canvas.width / 2,
-                                                top: canvas.height / 5,
+                                                top: canvas.height / 1,
                                                 originX: 'center',
                                                 originY: 'center',
                                                 selectable: false
