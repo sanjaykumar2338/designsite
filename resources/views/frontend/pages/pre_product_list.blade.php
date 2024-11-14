@@ -277,13 +277,50 @@
                                     });
                                 }
 
+                                function loadCanvasBack(background, overlay) {
+                                    canvas.clear();
+                                    loader.style.display = 'block';
+
+                                    preloadImage(background, function(bgImg) {
+                                        bgImg.set({
+                                            originX: 'center',
+                                            originY: 'center',
+                                            left: canvas.width / 2,
+                                            top: canvas.height / 2,
+                                            selectable: false
+                                        });
+                                        bgImg.scaleToWidth(canvas.width);
+                                        bgImg.scaleToHeight(canvas.height);
+                                        canvas.setBackgroundImage(bgImg, canvas.renderAll.bind(canvas));
+
+                                        preloadImage(overlay, function(overlayImg) {
+                                            overlayImg.set({
+                                                left: canvas.width / 2,
+                                                top: canvas.height / 2.9,
+                                                originX: 'center',
+                                                originY: 'center',
+                                                selectable: false
+                                            });
+
+                                            var scaleFactor = Math.min(canvas.width / overlayImg.width, canvas.height / overlayImg.height) * 0.45; // Adjusted for more padding
+                                            overlayImg.scale(scaleFactor);
+
+                                            canvas.add(overlayImg);
+                                            canvas.renderAll();
+
+                                            loader.style.display = 'none';
+                                            canvasElement.style.display = 'block';
+                                        });
+                                    });
+                                }
+
                                 loadCanvas(frontBackground, frontImage);
 
                                 window['showView' + index] = function(view) {
                                     if (view === 'front') {
                                         loadCanvas(frontBackground, frontImage);
                                     } else {
-                                        loadCanvas(backBackground, backImage);
+                                        loadCanvasBack(backBackground, backImage);
                                     }
                                 };
 
