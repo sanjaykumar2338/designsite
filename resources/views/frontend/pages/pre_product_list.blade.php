@@ -302,7 +302,7 @@
                                                 selectable: false
                                             });
 
-                                            var scaleFactor = Math.min(canvas.width / overlayImg.width, canvas.height / overlayImg.height) * 0.60; // Adjusted for more padding
+                                            var scaleFactor = Math.min(canvas.width / overlayImg.width, canvas.height / overlayImg.height) * 0.20; // Adjusted for more padding
                                             overlayImg.scale(scaleFactor);
 
                                             canvas.add(overlayImg);
