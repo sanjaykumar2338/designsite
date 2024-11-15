@@ -62,7 +62,50 @@ class UserDashboardController extends Controller
         $id = auth()->user()->id;
         $email = auth()->user()->email;
 
-        $orders = PrintfulOrder::join('users', 'users.email', '=', 'printful_orders.customer_email')->join('products', 'products.id', '=', 'printful_orders.product_id')->join('payments', 'payments.id', '=', 'printful_orders.payment_id')->select('products.*','printful_order_data','payment_intent_id','payments.amount as amt','products.supporting_country','products.product_for','products.product_type','printful_orders.total_amount','printful_orders.product_price','printful_orders.id','print_order_status')->where('printful_orders.user_id',$id)->orwhere('printful_orders.customer_email', $email)->orderBy('printful_orders.created_at','desc')->paginate(7);
+        // Query for the `products` table
+        $productsQuery = DB::table('products')
+        ->join('users', 'users.email', '=', 'products.customer_email')
+        ->join('payments', 'payments.id', '=', 'products.payment_id')
+        ->select(
+            'products.*',
+            'payments.amount as amt',
+            'products.supporting_country',
+            'products.product_for',
+            'products.product_type',
+            'products.total_amount',
+            'products.product_price',
+            'products.id as product_id',
+            'products.order_status'
+        )
+        ->where('products.user_id', $id)
+        ->orWhere('products.customer_email', $email);
+
+        // Query for the `pre_products` table
+        $preProductsQuery = DB::table('pre_products')
+        ->join('users', 'users.email', '=', 'pre_products.customer_email')
+        ->join('payments', 'payments.id', '=', 'pre_products.payment_id')
+        ->select(
+            'pre_products.*',
+            'payments.amount as amt',
+            'pre_products.supporting_country',
+            'pre_products.product_for',
+            'pre_products.product_type',
+            'pre_products.total_amount',
+            'pre_products.product_price',
+            'pre_products.id as product_id',
+            'pre_products.order_status'
+        )
+        ->where('pre_products.user_id', $id)
+        ->orWhere('pre_products.customer_email', $email);
+
+        // Combine both queries using `union()`
+        $combinedQuery = $productsQuery->union($preProductsQuery);
+
+        // Add ordering and pagination
+        $orders = DB::table(DB::raw("({$combinedQuery->toSql()}) as combined"))
+        ->mergeBindings($combinedQuery) // Merge bindings from the union query
+        ->orderBy('created_at', 'desc')
+        ->paginate(9);
 
         if($orders->count()==0){
             //$email = auth()->user()->email;
