@@ -119,7 +119,7 @@ class PaymentController extends Controller
                     $payment->user_id = $user->id;
                     $user = User::find($user->id);
 
-                    $latestOrder = PrintfulOrder::orderBy('id', 'desc')->first();
+                    $latestOrder = PrintfulOrder::where('user_id', $user->id)->orderBy('id', 'desc')->first();
                     if ($latestOrder) {
                         $id = $latestOrder->id;
                         $order = PrintfulOrder::where('id', $id)->first();
