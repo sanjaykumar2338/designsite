@@ -132,7 +132,7 @@
                                          
                                             <td class="col-sm-1 col-md-1"><strong>  {{$product->product_type}}</strong></td>
 
-                                            <td class="col-sm-1 col-md-1"><strong>  {{$product->main_product}}</strong></td>
+                                            <td class="col-sm-1 col-md-1"><strong>  {{$product->main_template}}</strong></td>
 
                                             <td class="col-sm-3 col-md-3" style="text-align: right">
                                               <a href="/admin/preproducts/remove/{{$product->id}}" class="btn btn-danger">Remove</a>
