@@ -73,7 +73,6 @@ class UserDashboardController extends Controller
             'products.supporting_country',
             'products.product_for',
             'products.product_type',
-            'products.total_amount',
             'products.product_price',
             'products.id as product_id',
             'products.order_status'
@@ -91,7 +90,6 @@ class UserDashboardController extends Controller
             'pre_products.supporting_country',
             'pre_products.product_for',
             'pre_products.product_type',
-            'pre_products.total_amount',
             'pre_products.product_price',
             'pre_products.id as product_id',
             'pre_products.order_status'
