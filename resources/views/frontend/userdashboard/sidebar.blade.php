@@ -17,6 +17,7 @@
                     <ul class="us-menu-sub">
                         <li><a href="{{route('history')}}" class="{{\Request::route()->getName()=='history' ? 'active': ''}}"><i class="fa-solid fa-angle-right"></i> Histroy</a></li>
                         <li><a href="{{route('designed_used')}}" class="{{\Request::route()->getName()=='history' ? 'active': ''}}"><i class="fa-solid fa-angle-right"></i> Designed Used</a></li>
+                        <li><a href="{{route('collection_orders')}}" class="{{\Request::route()->getName()=='history' ? 'active': ''}}"><i class="fa-solid fa-angle-right"></i> Collection Order</a></li>
                     </ul>
                 </li>
                 <li><a class="{{\Request::route()->getName()=='community' ? 'active': ''}}" href="{{route('community')}}">Community Subscriptions</a></li>

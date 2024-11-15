@@ -184,6 +184,7 @@ Route::group(['prefix' => 'dashboard','middleware' => 'check.auth'], function ()
     Route::get('/', [App\Http\Controllers\UserDashboardController::class, 'index'])->name('index');
     Route::get('/myaccount', [App\Http\Controllers\UserDashboardController::class, 'myaccount'])->name('myaccount');
     Route::get('/history', [App\Http\Controllers\UserDashboardController::class, 'myaccount'])->name('history');
+    Route::get('/collection_orders', [App\Http\Controllers\UserDashboardController::class, 'collection_orders'])->name('collection_orders');
     Route::get('/designed_used', [App\Http\Controllers\UserDashboardController::class, 'myaccount'])->name('designed_used');
     Route::post('/updateprofile', [App\Http\Controllers\UserDashboardController::class, 'updateprofile'])->name('updateprofile');
     Route::get('/donation', [App\Http\Controllers\UserDashboardController::class, 'donation'])->name('donation');

@@ -74,6 +74,21 @@ class UserDashboardController extends Controller
         return view('frontend.userdashboard.myaccount')->with('orders',$orders);
     }
 
+    public function collection_orders(Request $request)
+    {
+        $id = auth()->user()->id;
+        $email = auth()->user()->email;
+
+        $orders = PrintfulOrder::join('users', 'users.email', '=', 'printful_orders.customer_email')->join('pre_products', 'pre_products.id', '=', 'printful_orders.product_id')->join('payments', 'payments.id', '=', 'printful_orders.payment_id')->select('pre_products.*','printful_order_data','payment_intent_id','payments.amount as amt','pre_products.supporting_country','pre_products.product_for','pre_products.product_type','printful_orders.total_amount','printful_orders.product_price','printful_orders.id','print_order_status')->where('printful_orders.user_id',$id)->orwhere('printful_orders.customer_email', $email)->orderBy('printful_orders.created_at','desc')->paginate(9);
+
+        if($orders->count()==0){
+            //$email = auth()->user()->email;
+            //$orders = PrintfulOrder::join('users', 'users.email', '=', 'printful_orders.customer_email')->join('products', 'products.id', '=', 'printful_orders.product_id')->join('payments', 'payments.id', '=', 'printful_orders.payment_id')->select('products.*','printful_order_data','payment_intent_id','payments.amount as amt','products.supporting_country','products.product_for','products.product_type','printful_orders.total_amount','printful_orders.product_price','printful_orders.id','print_order_status')->where('printful_orders.customer_email',$email)->orderBy('printful_orders.created_at','desc')->paginate(7);
+        }
+
+        return view('frontend.userdashboard.collection_orders')->with('orders',$orders);
+    }
+
     public function coupon(){
 
     }
