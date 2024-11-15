@@ -68,7 +68,7 @@
                                     @if ($orders->onFirstPage())
                                         <li class="page-item disabled"><span class="page-link"><< Previous</span></li>
                                     @else
-                                        <li class="page-item"><a class="page-link" href="{{ $orordersders->previousPageUrl() }}" rel="prev"><< Previous</a></li>
+                                        <li class="page-item"><a class="page-link" href="{{ $orders->previousPageUrl() }}" rel="prev"><< Previous</a></li>
                                     @endif
 
                                     @for ($i = 1; $i <= $orders->lastPage(); $i++)
