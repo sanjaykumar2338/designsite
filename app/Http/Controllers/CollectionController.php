@@ -244,7 +244,7 @@ class CollectionController extends Controller
         $boycott = Boycotts::where('slug', $request->route('boycott_slug'))->first();
         $productType = $request->route('product_type') == 'tshirts' ? 'Shirts' : ucfirst(strtolower($request->route('product_type')));
 
-        $product = PreProducts::where('product_type', $productType)->first();
+        $product = PreProducts::where('product_type', $productType)->where('main_template','yes')->first();
         //echo "<pre>"; print_r($product); die;
         
         // Redirect back if any of the resources are not found
@@ -252,16 +252,31 @@ class CollectionController extends Controller
             return redirect()->back()->with('error', 'Requested resource not found.');
         }
         
-        /*
-            $product->product_name = $boycott->title;
-            $product->product_description = $boycott->description;
-            $product->product_price = $boycott->price;
-            $product->meta_keyword = $boycott->meta_keywords;
-            $product->meta_description = $boycott->meta_description;
-            $product->seo_title = $boycott->meta_title;
-            $product->front_image = $boycott->blog_image;
-            $product->save();
-        */
+        if ($product) {
+            // Clone the product
+            $clonedProduct = $product->replicate();
+        
+            // Set the clone as a non-main template if needed
+            $clonedProduct->main_template = 'no';
+        
+            // Update cloned product's fields based on $boycott data
+            $clonedProduct->website_product_name = $boycott->title;
+            $clonedProduct->product_description = $boycott->description;
+            $clonedProduct->product_price = $boycott->price;
+            $clonedProduct->meta_keyword = $boycott->meta_keywords;
+            $clonedProduct->meta_description = $boycott->meta_description;
+            $clonedProduct->seo_title = $boycott->meta_title;
+            $clonedProduct->front_image = $boycott->blog_image;
+        
+            // Save the cloned product in the database
+            $clonedProduct->save();
+        
+            // Reassign $product to refer to the cloned product
+            $product = $clonedProduct;
+            //echo "Cloned Product ID: " . $product->id . " created and attributes updated successfully!";
+        } else {
+            //echo "Original product not found!";
+        }
 
         //echo "<pre>"; print_r($product); die;
         $slug = $request->collection;
