@@ -71,7 +71,7 @@ class UserDashboardController extends Controller
             ->select(
                 'products.*',
                 'printful_orders.total_amount',
-                'printful_orders.order_status',
+                'printful_orders.print_order_status',
                 'payments.amount as amt',
                 'printful_orders.supporting_country',
                 'printful_orders.product_for',
@@ -90,7 +90,7 @@ class UserDashboardController extends Controller
             ->select(
                 'pre_products.*',
                 'printful_orders.total_amount',
-                'printful_orders.order_status',
+                'printful_orders.print_order_status',
                 'payments.amount as amt',
                 'printful_orders.supporting_country',
                 'printful_orders.product_for',
