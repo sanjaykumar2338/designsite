@@ -74,8 +74,7 @@ class UserDashboardController extends Controller
             'products.product_for',
             'products.product_type',
             'products.product_price',
-            'products.id as product_id',
-            'products.order_status'
+            'products.id as product_id'
         )
         ->where('products.user_id', $id)
         ->orWhere('products.customer_email', $email);
@@ -91,8 +90,7 @@ class UserDashboardController extends Controller
             'pre_products.product_for',
             'pre_products.product_type',
             'pre_products.product_price',
-            'pre_products.id as product_id',
-            'pre_products.order_status'
+            'pre_products.id as product_id'
         )
         ->where('pre_products.user_id', $id)
         ->orWhere('pre_products.customer_email', $email);
