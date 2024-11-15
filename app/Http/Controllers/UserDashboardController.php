@@ -73,8 +73,6 @@ class UserDashboardController extends Controller
                 'printful_orders.total_amount',
                 'printful_orders.print_order_status',
                 'payments.amount as amt',
-                'products.supporting_country',
-                'products.product_for',
                 'printful_orders.id as order_id',
                 'printful_orders.created_at'
             )
