@@ -65,41 +65,41 @@ class UserDashboardController extends Controller
 
         // Query for the `products` table
         $productsQuery = DB::table('products')
-            ->join('orders', 'orders.product_id', '=', 'products.id') // Join with the orders table
-            ->join('users', 'users.email', '=', 'orders.customer_email') // Join users using orders table
-            ->join('payments', 'payments.id', '=', 'orders.payment_id') // Join payments using orders table
+            ->join('printful_orders', 'printful_orders.product_id', '=', 'products.id') // Join with the orders table
+            ->join('users', 'users.email', '=', 'printful_orders.customer_email') // Join users using orders table
+            ->join('payments', 'payments.id', '=', 'printful_orders.payment_id') // Join payments using orders table
             ->select(
                 'products.*',
-                'orders.total_amount',
-                'orders.order_status',
+                'printful_orders.total_amount',
+                'printful_orders.order_status',
                 'payments.amount as amt',
-                'orders.supporting_country',
-                'orders.product_for',
-                'orders.product_type',
-                'orders.id as order_id',
-                'orders.created_at'
+                'printful_orders.supporting_country',
+                'printful_orders.product_for',
+                'printful_orders.product_type',
+                'printful_orders.id as order_id',
+                'printful_orders.created_at'
             )
-            ->where('orders.user_id', $id)
-            ->orWhere('orders.customer_email', $email);
+            ->where('printful_orders.user_id', $id)
+            ->orWhere('printful_orders.customer_email', $email);
 
         // Query for the `pre_products` table
         $preProductsQuery = DB::table('pre_products')
-            ->join('orders', 'orders.product_id', '=', 'pre_products.id') // Join with the orders table
-            ->join('users', 'users.email', '=', 'orders.customer_email') // Join users using orders table
-            ->join('payments', 'payments.id', '=', 'orders.payment_id') // Join payments using orders table
+            ->join('printful_orders', 'printful_orders.product_id', '=', 'pre_products.id') // Join with the orders table
+            ->join('users', 'users.email', '=', 'printful_orders.customer_email') // Join users using orders table
+            ->join('payments', 'payments.id', '=', 'printful_orders.payment_id') // Join payments using orders table
             ->select(
                 'pre_products.*',
-                'orders.total_amount',
-                'orders.order_status',
+                'printful_orders.total_amount',
+                'printful_orders.order_status',
                 'payments.amount as amt',
-                'orders.supporting_country',
-                'orders.product_for',
-                'orders.product_type',
-                'orders.id as order_id',
-                'orders.created_at'
+                'printful_orders.supporting_country',
+                'printful_orders.product_for',
+                'printful_orders.product_type',
+                'printful_orders.id as order_id',
+                'printful_orders.created_at'
             )
-            ->where('orders.user_id', $id)
-            ->orWhere('orders.customer_email', $email);
+            ->where('printful_orders.user_id', $id)
+            ->orWhere('printful_orders.customer_email', $email);
 
         // Combine both queries using `union()`
         $combinedQuery = $productsQuery->union($preProductsQuery);
