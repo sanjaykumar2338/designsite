@@ -101,6 +101,8 @@
 
                                             <th class="col-sm-1 col-md-1">Product Type</th>
 
+                                            <th class="col-sm-1 col-md-1">Main Product</th>
+
                                             <th class="col-sm-3 col-md-3"  style="text-align: right;">Action</th>
                                         </tr>
                                         </thead>
@@ -129,6 +131,9 @@
                                            
                                          
                                             <td class="col-sm-1 col-md-1"><strong>  {{$product->product_type}}</strong></td>
+
+                                            <td class="col-sm-1 col-md-1"><strong>  {{$product->main_product}}</strong></td>
+
                                             <td class="col-sm-3 col-md-3" style="text-align: right">
                                               <a href="/admin/preproducts/remove/{{$product->id}}" class="btn btn-danger">Remove</a>
                                               <a href="/admin/preproducts/{{$product->id}}/edit" class="btn btn-primary">EDIT</a>
