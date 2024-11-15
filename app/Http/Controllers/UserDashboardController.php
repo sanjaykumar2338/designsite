@@ -9,6 +9,7 @@ use App\Models\PrintfulOrder;
 use Stripe\Stripe;
 use Stripe\Coupon;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\DB;
 
 class UserDashboardController extends Controller
 {
