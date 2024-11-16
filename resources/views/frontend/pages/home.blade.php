@@ -1,5 +1,11 @@
 @extends('frontend.layout.homepagelayout')
 @section('content')
+<style>
+button.donate{
+   margin-left:109px;
+}
+
+</style>
 <section class="slider-Product">
    <div class="container-fluid">
       <div class="row" style="--bs-gutter-x: 3.0rem;">
@@ -120,110 +126,74 @@
    <div class="one_col_2">
          
          <div class="text_">
-            <h4>Shop a Fashion Collection and Join an Advocacy Movement</h4>
-            <div class="row mt-4">
-               <div class="col-lg-3 ">
-                  <div class="card_s">
-                     <button> Boycott
-                     Movement</button>
-                     <h3>Shop the Oversight Collection</h3>
-                     <p>Hold institutions accountable for biased influence.</p>
-                     <div class="p_pic">
-                        <img src="{{url('/')}}/homepageimages/oversight-streetwear-causestand-boycott-apparel.png"
-                           alt="" class="img-fluid">
-                     </div>
-                     <a href="{{url('/')}}/collection/design/oversight-collection/tshirts">Learn more</a>
-                  </div>
-               </div>
-               <div class="col-lg-3 ">
-                  <div class="card_s">
-                     <button>Integrity-reform Movement</button>
-                     <h3>Shop the Traitor Collection</h3>
-                     <p>Hold lawmakers accountable
-                        for double-loyalty.  
-                     </p>
-                     <div class="p_pic"><br>
-                        <img src="{{url('/')}}/homepageimages/traitor-streetwear-causestand-advocacy-apparel.png"
-                           alt="" class="img-fluid">
-                     </div>
-                     <a href="{{url('/')}}/collection/design/traitor-collection/tshirts">Learn more</a>
-                  </div>
-               </div>
-               <div class="col-lg-3 ">
-                  <div class="card_s">
-                     <button> Ethic-reform
-                     Movement</button>
-                     <h3>Shop the
-                        Trader Collection
-                     </h3>
-                     <p>Hold politicians accountable
-                        for insider trading.
-                     </p>
-                     <div class="p_pic"><br>
-                        <img src="{{url('/')}}/homepageimages/trader-urbanwear-causestand-protest-clothing.png"
-                           alt="" class="img-fluid">
-                     </div>
-                     <a href="{{url('/')}}/collection/design/trader-collection/tshirts">Learn more</a>
-                  </div>
-               </div>
-               <div class="col-lg-3 ">
-                  <div class="card_s">
-                     <button>Fact-check
-                     Movement</button>
-                     <h3>Shop the
-                        Propaganda Collection
-                     </h3>
-                     <p>Hold the media accountable
-                        for misinformation.
-                     </p>
-                     <div class="p_pic">
-                        <img src="{{url('/')}}/homepageimages/propaganda-merch-causestand-advocate-clothes.png"
-                           alt="" class="img-fluid">
-                     </div>
-                     <a href="{{url('/')}}/collection/design/propaganda-collection/tshirts">Learn more</a>
-                  </div>
-               </div>
+    <h4>Shop a Fashion Collection and Join an Advocacy Movement</h4>
+    <div class="row mt-4">
+        <div class="col-lg-3 ">
+            <div class="card_s">
+                <button> Boycott Movement</button>
+                <h3>Shop the Oversight Collection</h3>
+                <p>Hold institutions accountable for biased influence.</p>
+                <div class="p_pic">
+                    <img src="{{url('/')}}/homepageimages/oversight-streetwear-causestand-boycott-apparel.png"
+                         alt="" class="img-fluid clickable-image" 
+                         data-url="{{url('/')}}/collection/design/oversight-collection/tshirts">
+                </div>
+                <a href="{{url('/')}}/collection/design/oversight-collection/tshirts">Learn more</a>
             </div>
+        </div>
+        <div class="col-lg-3 ">
+            <div class="card_s">
+                <button>Integrity-reform Movement</button>
+                <h3>Shop the Traitor Collection</h3>
+                <p>Hold lawmakers accountable for double-loyalty.</p><br>
+                <div class="p_pic">
+                    <img src="{{url('/')}}/homepageimages/traitor-streetwear-causestand-advocacy-apparel.png"
+                         alt="" class="img-fluid clickable-image" 
+                         data-url="{{url('/')}}/collection/design/traitor-collection/tshirts">
+                </div>
+                <a href="{{url('/')}}/collection/design/traitor-collection/tshirts">Learn more</a>
+            </div>
+        </div>
+        <div class="col-lg-3 ">
+            <div class="card_s">
+                <button>Ethic-reform Movement</button>
+                <h3>Shop the Trader Collection</h3>
+                <p>Hold politicians accountable for insider trading.</p><br>
+                <div class="p_pic">
+                    <img src="{{url('/')}}/homepageimages/trader-urbanwear-causestand-protest-clothing.png"
+                         alt="" class="img-fluid clickable-image" 
+                         data-url="{{url('/')}}/collection/design/trader-collection/tshirts">
+                </div>
+                <a href="{{url('/')}}/collection/design/trader-collection/tshirts">Learn more</a>
+            </div>
+        </div>
+        <div class="col-lg-3 ">
+            <div class="card_s">
+                <button>Fact-check Movement</button>
+                <h3>Shop the Propaganda Collection</h3>
+                <p>Hold the media accountable for misinformation.</p><br>
+                <div class="p_pic">
+                    <img src="{{url('/')}}/homepageimages/propaganda-merch-causestand-advocate-clothes.png"
+                         alt="" class="img-fluid clickable-image" 
+                         data-url="{{url('/')}}/collection/design/propaganda-collection/tshirts">
+                </div>
+                <a href="{{url('/')}}/collection/design/propaganda-collection/tshirts">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
 
-            <div class="accordion accordion-flush" id="accordionFlushExample">
-            <div class="accordion-item">
-               <h2 class="accordion-header" id="flush-headingtwo">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                     data-bs-target="#flush-collapsetwo" aria-expanded="false" aria-controls="flush-collapsetwo">
-                  Protest Clothing for the Advocate Student 
-                  </button>
-               </h2>
-               <div id="flush-collapsetwo" class="accordion-collapse collapse" aria-labelledby="flush-headingtwo"
-                  data-bs-parent="#accordionFlushExample">
-                  <h5><strong>Protest Clothing for the Advocate Student
-                     </strong>
-                  </h5>
-                  <p>Our mission for the advocate student is simple, to provide resources to empower college
-                     students to express their beliefs and champion the causes they
-                     care about, all while looking effortlessly stylish. At Cause Stand, we believe that what you
-                     wear should be trending and express a powerful statement.
-                     That's why we're offering a unique collection of apparel and accessories designed to inspire
-                     action, ignite conversations, and promote advocacy.
-                  </p>
-                  <h5> </strong> Social Justice Clothing for the Advocate College Student
-                  </h5>
-                  </h5>
-                  <p>For students seeking ethical and political justice, finding the right apparel to express
-                     their beliefs can be a powerful tool to advocate for ethical reform and political justice.
-                     At Cause Stand, we specialize in creating clothing and accessories that resonate with the
-                     passion and values of college students. From graphic advocacy
-                     shirts, demonstration hoodies and ethnic scarves to fashion bags, stylish shoes and
-                     awareness accessories with bold messages that
-                     stand out in a crowd, our products are made with quality and humanity in mind. Plus, a
-                     portion of every purchase goes directly to support non-profits and
-                     initiatives that align with your core values.
-                     Ready to wear your heart on your sleeve—literally!
-                     Wear your conviction proudly and be ready to turn heads and spark change, one outfit at a
-                     time!
-                  </p>
-               </div>
-            </div>
-         </div>
+<script>
+    // Attach click event to all images with the 'clickable-image' class
+    document.querySelectorAll('.clickable-image').forEach(img => {
+        img.style.cursor = 'pointer'; // Add pointer cursor
+        img.addEventListener('click', () => {
+            const url = img.getAttribute('data-url'); // Get the URL from the data attribute
+            window.location.href = url; // Redirect to the URL
+        });
+    });
+</script>
+
         </div> 
 
       <div class="one_col">

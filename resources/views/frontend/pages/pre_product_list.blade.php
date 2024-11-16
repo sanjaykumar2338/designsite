@@ -164,37 +164,41 @@
             @foreach($boycott as $bt)
                 @if(isset($bt->blog_image) && isset($bt->title) && fileToUrl($bt->blog_image) != 'https://causestand.com/storage/')
                     <div class="col">
-                        <div class="card h-100">
-                            <div class="canvas-container" id="canvas-container-{{ $loop->index }}">
-                                <div class="loader" id="loader-{{ $loop->index }}"></div>
-                                <canvas id="canvas-{{ $loop->index }}" width="400" height="440" style="display:none;"></canvas>
-                            </div>
-                            <div class="view-buttons">
-                                <button style="border-radius:25px;" onclick="showView('{{ $loop->index }}', 'front')">Front</button>
-                                <button style="border-radius:25px;" onclick="showView('{{ $loop->index }}', 'back')">Back</button>
-                            </div>
-                            <div class="card-body text-center">
-                                <h5 class="card-title">{{ $bt->title }}</h5>
+                    <div class="card h-100">
+                        <div class="canvas-container clickable-canvas" 
+                            id="canvas-container-{{ $loop->index }}" 
+                            data-url="{{url('/')}}/collections/{{$collection->slug}}/{{$design_type}}/{{$bt->slug}}">
+                            <div class="loader" id="loader-{{ $loop->index }}"></div>
+                            <canvas id="canvas-{{ $loop->index }}" width="400" height="440" style="display:none; cursor: pointer;"></canvas>
+                        </div>
+                        <div class="view-buttons">
+                            <button style="border-radius:25px;" onclick="showView('{{ $loop->index }}', 'front')">Front</button>
+                            <button style="border-radius:25px;" onclick="showView('{{ $loop->index }}', 'back')">Back</button>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">{{ $bt->title }}</h5>
 
-                                @if(!empty($bt->price))
-                                    <p class="price">Price: ${{ number_format($bt->price, 2) }}</p>
-                                @endif
+                            @if(!empty($bt->price))
+                                <p class="price">Price: ${{ number_format($bt->price, 2) }}</p>
+                            @endif
 
-                                @if(!empty($bt->design_number))
-                                    <p class="design-number">Design No: {{ $bt->design_number }}</p>
-                                @endif
-                                <p class="prc-inf">{!! $bt->description !!}</p>
-                                <div class="buy-now">
-                                    <a class="btn btn-primary" style="background-color: #eb3e32; font-size: 11px; margin-top: 10px; width: 170px; text-decoration: underline;" href="{{url('/')}}/collections/{{$collection->slug}}/{{$design_type}}/{{$bt->slug}}">Shop</a>
-                                </div>
+                            @if(!empty($bt->design_number))
+                                <p class="design-number">Design No: {{ $bt->design_number }}</p>
+                            @endif
+                            <p class="prc-inf">{!! $bt->description !!}</p>
+                            <div class="buy-now">
+                                <a class="btn btn-primary" style="background-color: #eb3e32; font-size: 11px; margin-top: 10px; width: 170px; text-decoration: underline;" href="{{url('/')}}/collections/{{$collection->slug}}/{{$design_type}}/{{$bt->slug}}">Shop</a>
                             </div>
                         </div>
+                    </div>
 
                         <script>
                             (function(index) {
                                 var canvas = new fabric.Canvas('canvas-' + index);
                                 var loader = document.getElementById('loader-' + index);
                                 var canvasElement = document.getElementById('canvas-' + index);
+                                var back_image_size = 3.5;
+                                var width = 0.45;
 
                                 if('{{$design_type}}'=='tshirts'){
                                     var frontBackground = 'https://files.cdn.printful.com/m/56-bella-canvas-3413/medium/ghost/front/05_BC_3413_XL_Ghost_base_whitebg.png?v=1702297406';
@@ -202,6 +206,8 @@
                                 }
 
                                 if('{{$design_type}}'=='hoodies'){
+                                    back_image_size = 2.8;
+                                    width = 0.35;
                                     var frontBackground = 'https://files.cdn.printful.com/m/g18500/medium/ghost/front/05_gildan18500_ghost_front_base_whitebg.png?v=1700731048';
                                     var backBackground = 'https://files.cdn.printful.com/m/g18500/medium/ghost/back/05_gildan18500_ghost_back_base_whitebg.png?v=1700731048';
                                 }
@@ -259,13 +265,13 @@
                                         preloadImage(overlay, function(overlayImg) {
                                             overlayImg.set({
                                                 left: canvas.width / 2,
-                                                top: canvas.height / 2,
+                                                top: canvas.height / 2.5,
                                                 originX: 'center',
                                                 originY: 'center',
                                                 selectable: false
                                             });
 
-                                            var scaleFactor = Math.min(canvas.width / overlayImg.width, canvas.height / overlayImg.height) * 0.45; // Adjusted for more padding
+                                            var scaleFactor = Math.min(canvas.width / overlayImg.width, canvas.height / overlayImg.height) * width; // Adjusted for more padding
                                             overlayImg.scale(scaleFactor);
 
                                             canvas.add(overlayImg);
@@ -286,7 +292,7 @@
                                             originX: 'center',
                                             originY: 'center',
                                             left: canvas.width / 2,
-                                            top: canvas.height / 2,
+                                            top: canvas.height / 1.8,
                                             selectable: false
                                         });
                                         bgImg.scaleToWidth(canvas.width);
@@ -296,13 +302,13 @@
                                         preloadImage(overlay, function(overlayImg) {
                                             overlayImg.set({
                                                 left: canvas.width / 2,
-                                                top: canvas.height / 3,
+                                                top: canvas.height / back_image_size,
                                                 originX: 'center',
                                                 originY: 'center',
                                                 selectable: false
                                             });
 
-                                            var scaleFactor = Math.min(canvas.width / overlayImg.width, canvas.height / overlayImg.height) * 0.35; // Adjusted for more padding
+                                            var scaleFactor = Math.min(canvas.width / overlayImg.width, canvas.height / overlayImg.height) * 0.20; // Adjusted for more padding
                                             overlayImg.scale(scaleFactor);
 
                                             canvas.add(overlayImg);
@@ -314,8 +320,11 @@
                                     });
                                 }
 
-                                loadCanvas(frontBackground, frontImage);
-
+                                if('{{$design_type}}'=='hoodies'){
+                                    loadCanvasBack(backBackground, backImage);
+                                }else{
+                                    loadCanvas(frontBackground, frontImage);
+                                }
                                 window['showView' + index] = function(view) {
                                     if (view === 'front') {
                                         loadCanvas(frontBackground, frontImage);
@@ -344,6 +353,18 @@
     @endif
 </div>
 
+<script>
+    // Add click event listener to canvas-container elements
+    document.querySelectorAll('.clickable-canvas').forEach(container => {
+        container.style.cursor = 'pointer'; // Add pointer cursor for the canvas-container
+        container.addEventListener('click', () => {
+            const url = container.getAttribute('data-url');
+            if (url) {
+                window.location.href = url; // Redirect to the specified URL
+            }
+        });
+    });
+</script>
 
     @if($products->count() > 0 && false)
         

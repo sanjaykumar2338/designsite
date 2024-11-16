@@ -446,10 +446,7 @@ function init() {
 }
 
 function setImage(url, position) {
-    // url =
-    //     (window.location.hostname.includes("127.0.0.1")
-    //         ? "http://127.0.0.1:8000/"
-    //         : `https://+${window.location.hostname}/`) + url;
+    
     fabric.Image.fromURL(
         url,
         function (oImg) {
@@ -464,11 +461,19 @@ function setImage(url, position) {
             oImg.set("selectable", false);
             // oImg.set("top", h / 4);
             // oImg.set("left", w / 4);
+            
+            var width = w;
+            var top = 2.5;
+            if(position=='canvas_back'){
+                width = w/2;
+                top = 4;
+            } 
+
             oImg.scaleToHeight(h);
-            oImg.scaleToWidth(w);
+            oImg.scaleToWidth(width);
             oImg.set({
                 left: w / 2,
-                top: h / 2,
+                top: h / top,
                 originX: 'center',
                 originY: 'center',
                 selectable: false
