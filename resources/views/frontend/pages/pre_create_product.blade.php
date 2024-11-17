@@ -132,7 +132,7 @@
                         {{ $truncatedDescription }}
                         @if($wordCount > 50)
                             <span class="more-text" style="display:none;">{{ implode(' ', array_slice($words, 50)) }}</span>
-                            <a href="javascript:void(0);" class="read-more" onclick="toggleDescription(this)">Read More</a>
+                            <a href="javascript:void(0);" style="color: #cf6f6f;" class="read-more" onclick="toggleDescription(this)">Read More...</a>
                         @endif
                     </p>
                     <br>
