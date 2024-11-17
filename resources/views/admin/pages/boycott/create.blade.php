@@ -2,106 +2,100 @@
 
 @section('content')
 
-    <section class="content-header">
-      <div class="container-fluid">
+<section class="content-header">
+    <div class="container-fluid">
         <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>Create New Boycott</h1>
-          </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Boycott</li>
-            </ol>
-          </div>
+            <div class="col-sm-6">
+                <h1>Create New Boycott</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active">Boycott</li>
+                </ol>
+            </div>
         </div>
-      </div><!-- /.container-fluid -->
-    </section>
+    </div><!-- /.container-fluid -->
+</section>
 
-    <!-- Main content -->
-    <section class="content">
-      <div class="container-fluid">
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
         <div class="row">
-          
-          @if ($errors->any())
-              <div class="alert alert-danger">
-                  <ul>
-                      @foreach ($errors->all() as $error)
-                          <li>{{ $error }}</li>
-                      @endforeach
-                  </ul>
-              </div>
-          @endif
+            @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+            @endif
 
+            <div class="col-md-12">
+                <ul class="nav nav-tabs" id="productTabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="tshirt-tab" data-bs-toggle="tab" href="#tshirt" role="tab"
+                            aria-controls="tshirt" aria-selected="true">T-Shirts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="hoodie-tab" data-bs-toggle="tab" href="#hoodie" role="tab"
+                            aria-controls="hoodie" aria-selected="false">Hoodies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="sweatshirt-tab" data-bs-toggle="tab" href="#sweatshirt" role="tab"
+                            aria-controls="sweatshirt" aria-selected="false">Sweatshirts</a>
+                    </li>
+                </ul>
 
-          <div class="col-md-12">
-            <form method="post" enctype="multipart/form-data" action="{{ route('admin.boycott.store', $data_collection->id) }}">
-                @csrf
-                <div class="mb-3 mt-3">
-                  <label for="product_name">Title:</label>
-                  <input type="text" class="form-control" id="title" placeholder="Enter Title" name="title">
-                </div>
+                <form id="unifiedForm" method="post" enctype="multipart/form-data"
+                    action="{{ route('admin.boycott.store', $data_collection->id) }}">
+                    @csrf
+                    <div class="tab-content mt-4" id="productTabContent">
+                        <!-- Tab 1: T-Shirts -->
+                        <div class="tab-pane fade show active" id="tshirt" role="tabpanel" aria-labelledby="tshirt-tab">
+                            @include('admin.pages.boycott.product_form')
+                        </div>
 
-                <div class="mb-3 mt-3">
-                  <label for="meta_title">Design #No:</label>
-                  <input class="form-control" id="design_number" rows="6" placeholder="Enter Design Number" name="design_number">
-                </div>
+                        <!-- Tab 2: Hoodies -->
+                        <div class="tab-pane fade" id="hoodie" role="tabpanel" aria-labelledby="hoodie-tab">
+                            @include('admin.pages.boycott.product_form_2')
+                            <input type="hidden" name="product_types[]" value="hoodies">
+                        </div>
 
-                <div class="mb-3 mt-3">
-                  <label for="meta_title">Price:</label>
-                  <input type="number" class="form-control" id="price" rows="6" placeholder="Enter Price" name="price">
-                </div>
+                        <!-- Tab 3: Sweatshirts -->
+                        <div class="tab-pane fade" id="sweatshirt" role="tabpanel" aria-labelledby="sweatshirt-tab">
+                            @include('admin.pages.boycott.product_form_2')
+                            <input type="hidden" name="product_types[]" value="sweatshirts">
+                        </div>
+                    </div>
 
-                <div class="mb-3 mt-3">
-                  <label for="meta_title">Meta Keywords:</label>
-                  <input class="form-control" id="meta_keywords" rows="6" placeholder="Enter Meta Keywords" name="meta_keywords"></textarea>
-                </div>
-
-                <div class="mb-3 mt-3">
-                  <label for="product_name">Description:</label>
-                  <textarea name="description" cols="2" id="description" class="form-control"></textarea>
-                </div>
-
-                <div class="mb-3 mt-3">
-                  <label for="image">Feature Image:</label>
-                  <input type="file" class="form-control" id="feature_image" name="feature_image">
-                </div>
-
-                <div class="mb-3 mt-3">
-                  <label for="image">Front Design Image:</label>
-                  <input type="file" class="form-control" id="blog_image" name="blog_image">
-                </div>
-
-                <div class="mb-3 mt-3">
-                  <label for="image">Back Design Image:</label>
-                  <input type="file" class="form-control" id="back_design_image" name="back_design_image">
-                </div>
-
-                <div class="mb-3 mt-3">
-                  <label for="meta_title">Text as Design:</label>
-                  <input class="form-control" value="" id="design_text" rows="6" placeholder="Enter Text as Design" name="design_text"></textarea>
-                </div>
-
-                <div class="mb-3 mt-3">
-                  <label for="meta_title">Meta Title:</label>
-                  <input class="form-control" id="meta_title" rows="6" placeholder="Enter Meta Title" name="meta_title"></textarea>
-                </div>
-
-                <div class="mb-3 mt-3">
-                  <label for="meta_title">Meta Keywords:</label>
-                  <input class="form-control" id="meta_keywords" rows="6" placeholder="Enter Meta Keywords" name="meta_keywords"></textarea>
-                </div>
-
-                <div class="mb-3 mt-3">
-                  <label for="meta_title">Meta Description:</label>
-                  <textarea name="meta_description" class="form-control"></textarea>
-                </div>              
-                <button type="submit" class="btn btn-primary">Create</button>
-              </form>
-          </div>
+                    <button type="submit" class="btn btn-primary mt-3">Create</button>
+                </form>
+            </div>
         </div>
-        <br>
-        <!-- /.row -->
-      </div><!-- /.container-fluid -->
-  </section>
+    </div>
+</section>
+
+<script>
+    
+</script>
+
+<script>
+    document.querySelectorAll('#productTabs .nav-link').forEach(tab => {
+        tab.addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent the default link behavior
+
+            // Remove active class from all tabs
+            document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+            document.querySelectorAll('.tab-pane').forEach(tabPane => tabPane.classList.remove('show', 'active'));
+
+            // Add active class to the clicked tab and its content
+            const target = this.getAttribute('href');
+            this.classList.add('active');
+            document.querySelector(target).classList.add('show', 'active');
+        });
+    });
+</script>
+
 @endsection

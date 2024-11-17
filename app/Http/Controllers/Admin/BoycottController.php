@@ -124,6 +124,21 @@ class BoycottController extends Controller
         // Save the blog
         $blog->slug = $slug;
         $blog->save();
+
+
+        $allData = [
+            'titles' => $request->input('title2'),
+            'prices' => $request->input('price2'),
+            'design_numbers' => $request->input('design_number2'),
+            'descriptions' => $request->input('description2'),
+            'meta_titles' => $request->input('meta_title2'),
+            'meta_keywords' => $request->input('meta_keywords2'),
+            'meta_descriptions' => $request->input('meta_description2'),
+            'product_types' => $request->input('product_types'),
+        ];
+
+        $blog->all_data = json_encode($allData); // Save the collected data as JSON
+        $blog->save();
         return redirect('/admin/boycott/'.$id)->with('success');
     }
 
@@ -224,7 +239,20 @@ class BoycottController extends Controller
 
         // Save the product
         $blog->slug = $slug;
+        $allData = [
+            'titles' => $request->input('title2'),
+            'prices' => $request->input('price2'),
+            'design_numbers' => $request->input('design_number2'),
+            'descriptions' => $request->input('description2'),
+            'meta_titles' => $request->input('meta_title2'),
+            'meta_keywords' => $request->input('meta_keywords2'),
+            'meta_descriptions' => $request->input('meta_description2'),
+            'product_types' => $request->input('product_types'),
+        ];
+
+        $blog->all_data = json_encode($allData); // Save the collected data as JSON
         $blog->update();
+
         return redirect('/admin/boycott/'.$cid)->with('success');
     }
 

@@ -66,8 +66,32 @@ class CollectionController extends Controller
     public function collections_design(Request $request){
         $slug = explode('-', $request->collection)[0];
         $collection = Collections::where('slug', $slug)->first();        
-        $design_type = $request->design_type;
-        $boycott = Boycotts::where('collection',$collection->id)->get();
+        $design_type = $request->design_type;       
+        $boycott = Boycotts::where('collection', $collection->id)->get();
+
+        if (in_array($design_type, ['hoodies', 'sweatshirts'])) {
+            $boycott = $boycott->map(function ($item) use ($design_type) {
+                $allData = json_decode($item->all_data, true); // Decode JSON from all_data field
+
+                // Check if all_data and product_types exist
+                if (!empty($allData['product_types']) && in_array($design_type, $allData['product_types'])) {
+                    // Get the index of the design_type in product_types
+                    $index = array_search($design_type, $allData['product_types']);
+                    
+                    // Update fields based on index
+                    $item->title = $allData['titles'][$index] ?? $item->title;
+                    $item->price = $allData['prices'][$index] ?? $item->price;
+                    $item->design_number = $allData['design_numbers'][$index] ?? $item->design_number;
+                    $item->description = $allData['descriptions'][$index] ?? $item->description;
+                    $item->meta_title = $allData['meta_titles'][$index] ?? $item->meta_title;
+                    $item->meta_keywords = $allData['meta_keywords'][$index] ?? $item->meta_keywords;
+                    $item->meta_description = $allData['meta_descriptions'][$index] ?? $item->meta_description;
+                }
+
+                return $item;
+            });
+        }
+
         $boycottf = Boycotts::where('collection',$collection->id)->first();
 
         //$boycott = Boycotts::where('slug',$design_type)->where('collection',$collection->id)->first();
@@ -242,6 +266,29 @@ class CollectionController extends Controller
         // Fetch the collection, boycott, and product
         $collection = Collections::where('slug', $request->route('collection'))->first();
         $boycott = Boycotts::where('slug', $request->route('boycott_slug'))->first();
+
+        if ($boycott && in_array($request->route('product_type'), ['hoodies', 'sweatshirts'])) {
+            $productType = $request->route('product_type'); // Extract the product type from the route
+            $allData = json_decode($boycott->all_data, true); // Decode JSON from all_data field
+
+            // Check if product_types exist and contain the current product type
+            if (!empty($allData['product_types']) && in_array($productType, $allData['product_types'])) {
+                $index = array_search($productType, $allData['product_types']); // Find the index of the product type
+
+                // Update boycott fields based on the index
+                $boycott->title = $allData['titles'][$index] ?? $boycott->title;
+                $boycott->price = $allData['prices'][$index] ?? $boycott->price;
+                $boycott->design_number = $allData['design_numbers'][$index] ?? $boycott->design_number;
+                $boycott->description = $allData['descriptions'][$index] ?? $boycott->description;
+                $boycott->meta_title = $allData['meta_titles'][$index] ?? $boycott->meta_title;
+                $boycott->meta_keywords = $allData['meta_keywords'][$index] ?? $boycott->meta_keywords;
+                $boycott->meta_description = $allData['meta_descriptions'][$index] ?? $boycott->meta_description;
+            }
+        }
+
+
+
+
         $productType = $request->route('product_type') == 'tshirts' ? 'Shirts' : ucfirst(strtolower($request->route('product_type')));
 
         $product = PreProducts::where('product_type', $productType)->where('main_template','yes')->first();

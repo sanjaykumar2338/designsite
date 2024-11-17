@@ -20,88 +20,105 @@
 
     <!-- Main content -->
     <section class="content">
-      <div class="container-fluid">
+    <div class="container-fluid">
         <div class="row">
-          
-          @if ($errors->any())
-              <div class="alert alert-danger">
-                  <ul>
-                      @foreach ($errors->all() as $error)
-                          <li>{{ $error }}</li>
-                      @endforeach
-                  </ul>
-              </div>
-          @endif
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
 
+            <div class="col-md-12">
+                <ul class="nav nav-tabs" id="productTabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="tshirt-tab" data-bs-toggle="tab" href="#tshirt" role="tab" aria-controls="tshirt" aria-selected="true">T-Shirts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="hoodie-tab" data-bs-toggle="tab" href="#hoodie" role="tab" aria-controls="hoodie" aria-selected="false">Hoodies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="sweatshirt-tab" data-bs-toggle="tab" href="#sweatshirt" role="tab" aria-controls="sweatshirt" aria-selected="false">Sweatshirts</a>
+                    </li>
+                </ul>
 
-          <div class="col-md-12">
-            <form method="post" enctype="multipart/form-data" action="{{ url('/admin/boycott/update/'.$blog->id).'/'.$data_collection->id }}">
-                
+              @php
+                  // Decode the JSON stored in $blog->all_data
+                  $allData = json_decode($blog->all_data, true);
+
+                  // Default values in case keys are missing in the JSON
+                  $titles = $allData['titles'] ?? [];
+                  $prices = $allData['prices'] ?? [];
+                  $designNumbers = $allData['design_numbers'] ?? [];
+                  $descriptions = $allData['descriptions'] ?? [];
+                  $metaTitles = $allData['meta_titles'] ?? [];
+                  $metaKeywords = $allData['meta_keywords'] ?? [];
+                  $metaDescriptions = $allData['meta_descriptions'] ?? [];
+                  $productTypes = $allData['product_types'] ?? [];
+              @endphp
+
+              <form method="post" enctype="multipart/form-data" action="{{ url('/admin/boycott/update/'.$blog->id).'/'.$data_collection->id }}">
                 @csrf
-                <div class="mb-3 mt-3">
-                  <label for="product_name">Title:</label>
-                  <input type="text" value="{{$blog->title}}" class="form-control" id="title" placeholder="Enter Title" name="title">
+                <div class="tab-content mt-4" id="productTabContent">
+                    <!-- Tab 1: T-Shirts -->
+                    <div class="tab-pane fade show active" id="tshirt" role="tabpanel" aria-labelledby="tshirt-tab">
+                        @include('admin.pages.boycott.product_edit_form', ['type' => 'tshirt'])
+                    </div>
+
+                    <!-- Tab 2: Hoodies -->
+                    <div class="tab-pane fade" id="hoodie" role="tabpanel" aria-labelledby="hoodie-tab">
+                      @include('admin.pages.boycott.product_edit_form2', [
+                          'type' => 'hoodies',
+                          'data' => [
+                              'title' => $titles[0] ?? '',
+                              'price' => $prices[0] ?? '',
+                              'design_number' => $designNumbers[0] ?? '',
+                              'description' => $descriptions[0] ?? '',
+                              'meta_title' => $metaTitles[0] ?? '',
+                              'meta_keywords' => $metaKeywords[0] ?? '',
+                              'meta_description' => $metaDescriptions[0] ?? '',
+                          ]
+                      ])
+                    </div>
+
+                    <!-- Tab 3: Sweatshirts -->
+                    <div class="tab-pane fade" id="sweatshirt" role="tabpanel" aria-labelledby="sweatshirt-tab">
+                    @include('admin.pages.boycott.product_edit_form2', [
+                        'type' => 'sweatshirts',
+                        'data' => [
+                            'title' => $titles[1] ?? '',
+                            'price' => $prices[1] ?? '',
+                            'design_number' => $designNumbers[1] ?? '',
+                            'description' => $descriptions[1] ?? '',
+                            'meta_title' => $metaTitles[1] ?? '',
+                            'meta_keywords' => $metaKeywords[1] ?? '',
+                            'meta_description' => $metaDescriptions[1] ?? '',
+                        ]
+                    ])
+                    </div>
                 </div>
 
-                <div class="mb-3 mt-3">
-                  <label for="meta_title">Design #No:</label>
-                  <input class="form-control" id="design_number" rows="6" placeholder="Enter Design Number" name="design_number" value="{{$blog->design_number}}">
-                </div>
-
-                <div class="mb-3 mt-3">
-                  <label for="meta_title">Price:</label>
-                  <input type="number" class="form-control" id="price" rows="6" placeholder="Enter Price" name="price" value="{{$blog->price}}">
-                </div>
-
-                <div class="mb-3 mt-3">
-                  <label for="product_name">Description:</label>
-                  <textarea name="description" cols="5" id="description" class="form-control">{{$blog->description}}</textarea>
-                </div>
-
-                <div class="mb-3 mt-3">
-                  <label for="image">Feature Image:</label>
-                  <input type="file" class="form-control" id="feature_image" name="feature_image">
-                  <a href="{{fileToUrl($blog->feature_image)}}" target="_blank">View Feature Image</a>
-                </div>
-
-                <div class="mb-3 mt-3">
-                  <label for="image">Front Design Image:</label>
-                  <input type="file" class="form-control" id="blog_image" name="blog_image">
-                  <a href="{{fileToUrl($blog->blog_image)}}" target="_blank">View Front Design Image</a>
-                </div>
-
-                <div class="mb-3 mt-3">
-                  <label for="image">Back Design Image:</label>
-                  <input type="file" class="form-control" id="back_design_image" name="back_design_image">
-                  <a href="{{fileToUrl($blog->back_design_image)}}" target="_blank">View Back Design Image</a>
-                </div>
-
-                <div class="mb-3 mt-3">
-                  <label for="meta_title">Text as Design:</label>
-                  <input class="form-control" value="{{$blog->design_text}}" id="design_text" rows="6" placeholder="Enter Text as Design" name="design_text"></textarea>
-                </div>
-
-                <div class="mb-3 mt-3">
-                  <label for="meta_title">Meta Title:</label>
-                  <input class="form-control" value="{{$blog->meta_title}}" id="meta_title" rows="6" placeholder="Enter Meta Title" name="meta_title"></textarea>
-                </div>
-
-                <div class="mb-3 mt-3">
-                  <label for="meta_title">Meta Keywords:</label>
-                  <input class="form-control" value="{{$blog->meta_keywords}}" id="meta_keywords" rows="6" placeholder="Enter Meta Keywords" name="meta_keywords"></textarea>
-                </div>
-
-                <div class="mb-3 mt-3">
-                  <label for="meta_title">Meta Description:</label>
-                  <textarea name="meta_description" class="form-control">{{$blog->meta_description}}</textarea>
-                </div>
-
-                <button type="submit" class="btn btn-primary">UPDATE</button>
+                <button type="submit" class="btn btn-primary mt-3" id="saveAllTabs">Update All</button>
               </form>
-          </div>
+            </div>
         </div>
-        <br>
-        <!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </section>
+    </div>
+</section>
+
+<script>
+  document.querySelectorAll('#productTabs .nav-link').forEach(tab => {
+        tab.addEventListener('click', function (event) {
+            event.preventDefault();
+            document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+            document.querySelectorAll('.tab-pane').forEach(tabPane => tabPane.classList.remove('show', 'active'));
+
+            const target = this.getAttribute('href');
+            this.classList.add('active');
+            document.querySelector(target).classList.add('show', 'active');
+        });
+  });
+</script>
 @endsection
