@@ -185,7 +185,7 @@
                             @if(!empty($bt->design_number))
                                 <p class="design-number">Design No: {{ $bt->design_number }}</p>
                             @endif
-                            <p class="prc-inf">{!! $bt->description !!}</p>
+                            
                             <div class="buy-now">
                                 <a class="btn btn-primary" style="background-color: #eb3e32; font-size: 11px; margin-top: 10px; width: 170px; text-decoration: underline;" href="{{url('/')}}/collections/{{$collection->slug}}/{{$design_type}}/{{$bt->slug}}">Shop</a>
                             </div>

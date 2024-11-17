@@ -122,7 +122,19 @@
                     
                     <h1 class="product_price" style="font-weight: 700;" data-exact="{{ number_format($totalPrice, 2) }}" data-price="{{ number_format($totalPrice, 2) }}">Price: ${{ number_format($totalPrice, 2) }}</h1>
 
-                    <p class="desc">{!! $boycott->description !!}</p>
+                    @php
+                        $words = explode(' ', strip_tags($boycott->description));
+                        $wordCount = count($words);
+                        $truncatedDescription = implode(' ', array_slice($words, 0, 50));
+                    @endphp
+
+                    <p class="desc">
+                        {{ $truncatedDescription }}
+                        @if($wordCount > 50)
+                            <span class="more-text" style="display:none;">{{ implode(' ', array_slice($words, 50)) }}</span>
+                            <a href="javascript:void(0);" class="read-more" onclick="toggleDescription(this)">Read More</a>
+                        @endif
+                    </p>
                     <br>
 
                     <div class="prd-option">
@@ -747,4 +759,17 @@
             }
         });
     </script>
+
+<script>
+    function toggleDescription(link) {
+        const moreText = link.previousElementSibling;
+        if (moreText.style.display === 'none') {
+            moreText.style.display = 'inline';
+            link.textContent = 'Read Less';
+        } else {
+            moreText.style.display = 'none';
+            link.textContent = 'Read More';
+        }
+    }
+</script>
 @endsection

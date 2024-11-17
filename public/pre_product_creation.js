@@ -463,7 +463,7 @@ function setImage(url, position) {
             // oImg.set("left", w / 4);
             
             var width = w;
-            var top = 2.5;
+            var top = 1.8;
             if(position=='canvas_back'){
                 width = w/2;
                 top = 4;
