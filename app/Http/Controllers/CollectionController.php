@@ -286,9 +286,6 @@ class CollectionController extends Controller
             }
         }
 
-
-
-
         $productType = $request->route('product_type') == 'tshirts' ? 'Shirts' : ucfirst(strtolower($request->route('product_type')));
 
         $product = PreProducts::where('product_type', $productType)->where('main_template','yes')->first();
