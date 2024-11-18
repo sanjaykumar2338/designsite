@@ -126,11 +126,9 @@
                         $words = explode(' ', strip_tags($boycott->description));
                         $wordCount = count($words);
                         $truncatedDescription = implode(' ', array_slice($words, 0, 50));
-                   
-
-                    $sanitized_html = htmlspecialchars($boycott->description, ENT_QUOTES);
-                    echo '<div class="datee">'.$sanitized_html.'</div>';
                     @endphp
+
+                    @include('frontend.pages.product-description')
 
                     <div class="prd-option">
                         <div id="product-thumbnails">
