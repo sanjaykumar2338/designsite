@@ -129,7 +129,7 @@
                     @endphp
 
                    
-                    {!! $boycott->description !!}
+                    {!! nl2br(e($boycott->description)) !!}
 
                     <div class="prd-option">
                         <div id="product-thumbnails">
