@@ -128,9 +128,11 @@
                         $truncatedDescription = implode(' ', array_slice($words, 0, 50));
                     
 
-                        echo htmlentities($boycott->description, ENT_QUOTES | ENT_IGNORE, "UTF-8");
+                        $t = htmlentities($boycott->description, ENT_QUOTES | ENT_IGNORE, "UTF-8");
                     
                     @endphp
+
+                    {!! $t !!}
 
                     <div class="prd-option">
                         <div id="product-thumbnails">
