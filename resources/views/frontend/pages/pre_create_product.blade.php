@@ -128,7 +128,11 @@
                         $truncatedDescription = implode(' ', array_slice($words, 0, 50));
                     @endphp
 
-                    @include('frontend.pages.product-description')
+                    @php
+    $sanitizedDescription = clean($boycott->description);
+@endphp
+
+<x-product-description :description="$sanitizedDescription" />
 
                     <div class="prd-option">
                         <div id="product-thumbnails">
