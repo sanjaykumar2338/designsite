@@ -128,14 +128,9 @@
                         $truncatedDescription = implode(' ', array_slice($words, 0, 50));
                     @endphp
 
-                   
-                    <textarea name="description" id="description" class="form-control">{!! $boycott->description !!}</textarea>
-                    
-                    <script src="https://cdn.ckeditor.com/4.20.2/standard/ckeditor.js"></script>
-<script>
-    CKEDITOR.replace('description');
-</script>
-
+                    <div class="desc_data">
+                        {!! nl2br(e($boycott->description)) !!}
+                    </div>
 
                     <div class="prd-option">
                         <div id="product-thumbnails">
@@ -771,5 +766,7 @@
             link.textContent = 'Read More';
         }
     }
+
+    $('.desc_data').html($('.desc_data').text())
 </script>
 @endsection
