@@ -132,7 +132,7 @@
                     
                     @endphp
 
-                    <iframe srcdoc="{!! htmlspecialchars_decode($boycott->description) !!}" width="100%" height="500"></iframe>
+                    {{ dd($boycott->description) }}
 
 
                     <div class="prd-option">
