@@ -130,8 +130,7 @@
 
                     <div class="desc_data">
                         @php 
-                            $s = htmlentities($boycott->description); 
-                            $s = str_replace("& amp ;", "&", (htmlentities(stripslashes($s), ENT_QUOTES, 'UTF-8')));
+                            $s = htmlspecialchars($boycott->description, ENT_QUOTES, "UTF-8");
                         @endphp
                         {!! $s !!}
                     </div>
