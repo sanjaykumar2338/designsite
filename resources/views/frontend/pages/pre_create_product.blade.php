@@ -121,44 +121,15 @@
                     <br>
                     
                     <h1 class="product_price" style="font-weight: 700;" data-exact="{{ number_format($totalPrice, 2) }}" data-price="{{ number_format($totalPrice, 2) }}">Price: ${{ number_format($totalPrice, 2) }}</h1>
-                    <style>
-   
-    textarea {
-      width: 50%;
-      height: 100%;
-      border: none;
-      resize: none;
-      padding: 10px;
-      font-size: 14px;
-      line-height: 1.5;
-    }
-    iframe {
-      width: 50%;
-      height: 100%;
-      border: none;
-    }
-  </style>
+
                     @php
                         $words = explode(' ', strip_tags($boycott->description));
                         $wordCount = count($words);
                         $truncatedDescription = implode(' ', array_slice($words, 0, 50));
                     @endphp
 
-                    <textarea id="editor" oninput="updateIframe()">{!! $boycott->description !!}</textarea>
-  <iframe id="preview"></iframe>
+                    {!! clean($product->description) !!}
 
-  <script>
-    function updateIframe() {
-      const editor = document.getElementById("editor");
-      const preview = document.getElementById("preview").contentWindow.document;
-      preview.open();
-      preview.write(editor.value);
-      preview.close();
-    }
-
-    // Initialize the iframe with the initial content
-    updateIframe();
-  </script>
 
                     <div class="prd-option">
                         <div id="product-thumbnails">
