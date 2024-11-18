@@ -129,7 +129,7 @@
                     @endphp
 
                    
-                    <textarea name="description" id="description" class="form-control">{!! $blog->description !!}</textarea>
+                    <textarea name="description" id="description" class="form-control">{!! $boycott->description !!}</textarea>
                     
                     <script src="https://cdn.ckeditor.com/4.20.2/standard/ckeditor.js"></script>
 <script>
