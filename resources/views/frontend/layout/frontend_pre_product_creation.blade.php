@@ -4,12 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{env('APP_NAME')}}</title>
-    <!-- stylesheet  -->
-    <!--
-        <link rel="stylesheet" href="asset/frontend/css/stylesheet.css">
-        <link rel="stylesheet" href="asset/frontend/css/responsive.css">
-    -->
+    <title>{{ isset($pageTitle) ? $pageTitle : env('APP_NAME') }}</title>
+    <meta name="title" content="{{ isset($metaTitle) ? $metaTitle : '' }}">
+    <meta name="description" content="{{ isset($metaDescription) ? $metaDescription : '' }}">
+    <meta name="keywords" content="{{ isset($keywords) ? $keywords : '' }}">
 
     <link rel="stylesheet" href="{{url('/')}}/asset/frontend/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{url('/')}}/asset/frontend/css/responsive.css">
