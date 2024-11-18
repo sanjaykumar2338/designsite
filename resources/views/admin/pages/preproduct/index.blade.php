@@ -135,7 +135,7 @@
                                             <td class="col-sm-1 col-md-1"><strong>  {{$product->main_template}}</strong></td>
 
                                             <td class="col-sm-3 col-md-3" style="text-align: right">
-                                              <a href="/admin/preproducts/remove/{{$product->id}}" class="btn btn-danger">Remove</a>
+                                              <a href="/admin/preproducts/remove/{{$product->id}}" style="display:none;" class="btn btn-danger">Remove</a>
                                               <a href="/admin/preproducts/{{$product->id}}/edit" class="btn btn-primary">EDIT</a>
                                               <a href="/admin/preproducts/create_template/{{$product->id}}" class="btn btn-primary">Design Template</a>
                                             </td>
