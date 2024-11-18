@@ -129,7 +129,7 @@
                     @endphp
 
                     <div class="desc_data">
-                        {!! $boycott->description !!}
+                        {{ html_entity_decode($boycott->description) }}
                     </div>
 
                     <div class="prd-option">
@@ -766,7 +766,5 @@
             link.textContent = 'Read More';
         }
     }
-
-    $('.desc_data').html($('.desc_data').html())
 </script>
 @endsection
