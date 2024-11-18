@@ -132,28 +132,17 @@
                         Storage::put('public/description.html', $boycott->description);
                     @endphp
 
-                    <div id="iframe-container" style="width: 100%; max-width: 800px; margin: 0 auto; border: 1px solid #ccc; border-radius: 8px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); overflow: hidden;">
-    <iframe id="dynamic-iframe" width="100%" height="500px" style="border: none; display: block;"></iframe>
-</div>
+                    <div id="iframe-container" style="width: 100%; height: 500px; border: none;">
+                        <iframe id="dynamic-iframe" width="90%" height="100%" style="border: none;"></iframe>
+                    </div>
 
-<script>
-    const iframe = document.getElementById('dynamic-iframe');
-    const htmlContent = `{!! addslashes($boycott->description) !!}`; // Escape quotes if necessary
-    
-    // Load the content into the iframe
-    iframe.onload = function () {
-        const doc = iframe.contentDocument || iframe.contentWindow.document;
-        doc.open();
-        doc.write(htmlContent);
-        doc.close();
-
-        // Adjust iframe height based on content
-        setTimeout(() => {
-            iframe.style.height = doc.body.scrollHeight + 'px';
-        }, 100); // Wait for rendering
-    };
-</script>
-
+                    <script>
+                        const iframe = document.getElementById('dynamic-iframe');
+                        const htmlContent = `{!! addslashes($boycott->description) !!}`; // Escape quotes if necessary
+                        iframe.contentWindow.document.open();
+                        iframe.contentWindow.document.write(htmlContent);
+                        iframe.contentWindow.document.close();
+                    </script>
 
 
 
