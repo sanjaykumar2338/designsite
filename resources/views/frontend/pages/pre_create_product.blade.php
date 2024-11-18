@@ -129,7 +129,7 @@
                    
 
                     $sanitized_html = htmlspecialchars($boycott->description, ENT_QUOTES);
-                    echo $sanitized_html;
+                    echo '<div class="datee">'.$sanitized_html.'</div>';
                     @endphp
 
                     <div class="prd-option">
