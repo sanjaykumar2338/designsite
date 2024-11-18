@@ -133,7 +133,7 @@
                             $s = htmlentities($boycott->description); 
                             $s = str_replace("& amp ;", "&", (htmlentities(stripslashes($s), ENT_QUOTES, 'UTF-8')));
                         @endphp
-                        {{ $s }}
+                        {!! $s !!}
                     </div>
 
                     <div class="prd-option">
