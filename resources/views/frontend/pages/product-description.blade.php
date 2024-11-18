@@ -1,3 +1,3 @@
 <div class="product-page">
-    {!! $description !!}
+    {!! $boycott->description !!}
 </div>
