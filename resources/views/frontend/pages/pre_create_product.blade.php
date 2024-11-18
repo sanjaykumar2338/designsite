@@ -132,7 +132,10 @@
                     
                     @endphp
 
-                    {{ dd($boycott->description) }}
+                    <div class="desc_data">
+    {!! htmlspecialchars_decode($boycott->description) !!}
+</div>
+
 
 
                     <div class="prd-option">
