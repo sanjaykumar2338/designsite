@@ -132,48 +132,27 @@
                         Storage::put('public/description.html', $boycott->description);
                     @endphp
 
-                    <div id="dynamic-content-container" class="styled-container">
-    {!! $boycott->description !!}
+                    <div id="iframe-container" style="width: 100%; max-width: 800px; margin: 0 auto; border: 1px solid #ccc; border-radius: 8px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); overflow: hidden;">
+    <iframe id="dynamic-iframe" width="100%" height="500px" style="border: none; display: block;"></iframe>
 </div>
 
-<style>
-    .styled-container {
-        font-family: 'Arial', sans-serif;
-        font-size: 16px;
-        line-height: 1.6;
-        color: #333; /* Text color */
-        padding: 20px;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        background-color: #f9f9f9;
-        max-width: 800px;
-        margin: 0 auto; /* Center the content */
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    }
+<script>
+    const iframe = document.getElementById('dynamic-iframe');
+    const htmlContent = `{!! addslashes($boycott->description) !!}`; // Escape quotes if necessary
     
-    .styled-container h1, .styled-container h2, .styled-container h3 {
-        color: #000; /* Heading color */
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
+    // Load the content into the iframe
+    iframe.onload = function () {
+        const doc = iframe.contentDocument || iframe.contentWindow.document;
+        doc.open();
+        doc.write(htmlContent);
+        doc.close();
 
-    .styled-container ul {
-        padding-left: 20px;
-        margin: 10px 0;
-    }
-
-    .styled-container li {
-        margin-bottom: 5px;
-    }
-
-    .styled-container p {
-        margin-bottom: 15px;
-    }
-
-    .styled-container strong {
-        color: #000; /* Emphasized text color */
-    }
-</style>
+        // Adjust iframe height based on content
+        setTimeout(() => {
+            iframe.style.height = doc.body.scrollHeight + 'px';
+        }, 100); // Wait for rendering
+    };
+</script>
 
 
 
