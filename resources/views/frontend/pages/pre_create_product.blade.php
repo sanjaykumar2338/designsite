@@ -132,9 +132,7 @@
                     
                     @endphp
 
-                    <div class="desc_data">
-    {!! htmlspecialchars_decode($boycott->description) !!}
-</div>
+                    <p>{!! html_entity_decode($baan->descriptiond) !!}</p>
 
 
 
