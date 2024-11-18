@@ -129,10 +129,21 @@
                     
 
                         $t = htmlentities($boycott->description, ENT_QUOTES | ENT_IGNORE, "UTF-8");
-                    
+                        Storage::put('public/description.html', $boycott->description);
                     @endphp
 
-                    <p>{!! html_entity_decode($boycott->description) !!}</p>
+                    <div id="iframe-container" style="width: 100%; height: 500px; border: none;">
+    <iframe id="dynamic-iframe" width="100%" height="100%" style="border: none;"></iframe>
+</div>
+
+<script>
+    const iframe = document.getElementById('dynamic-iframe');
+    const htmlContent = `{!! addslashes($boycott->description) !!}`; // Escape quotes if necessary
+    iframe.contentWindow.document.open();
+    iframe.contentWindow.document.write(htmlContent);
+    iframe.contentWindow.document.close();
+</script>
+
 
 
 
