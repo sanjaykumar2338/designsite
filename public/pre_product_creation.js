@@ -959,7 +959,7 @@ function addImageFromFile(e) {
             canvas.renderAll();
 
             // Update price
-            totalPrice += 10;
+            totalPrice += 0;
             updatePrice(totalPrice);
             showImageAddedMessage();
         };
@@ -1076,7 +1076,7 @@ function addObjectImage(imgUrl) {
     );
     setShowModal(false);
 
-    totalPrice += 10;
+    totalPrice += 0;
     updatePrice(totalPrice);
     showImageAddedMessage();
 }
