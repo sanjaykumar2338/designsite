@@ -132,7 +132,7 @@
                         @php 
                             $s = htmlspecialchars($boycott->description, ENT_QUOTES, "UTF-8");
                         @endphp
-                        @php echo $boycott->description; @endphp
+                        {{ $boycott->description }}
                     </div>
 
                     <div class="prd-option">
