@@ -130,7 +130,7 @@
 
                     <div class="desc_data">
                         @php $description = htmlentities($boycott->description); @endphp
-                        {!! $description !!}
+                        {{ $description }}
                     </div>
 
                     <div class="prd-option">
