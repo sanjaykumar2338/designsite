@@ -128,10 +128,8 @@
                         $truncatedDescription = implode(' ', array_slice($words, 0, 50));
                     @endphp
 
-                    <p class="desc">
-                        <span class="more-text" style="display:none;">{!! $boycott->description !!}</span>
-                        <a href="javascript:void(0);" style="color: #cf6f6f;" class="read-more" onclick="toggleDescription(this)">Read More...</a>
-                    </p>
+                   
+                    {!! $boycott->description !!}
 
                     <div class="prd-option">
                         <div id="product-thumbnails">
