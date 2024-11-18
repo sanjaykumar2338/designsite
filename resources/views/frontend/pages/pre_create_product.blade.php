@@ -129,7 +129,7 @@
                     @endphp
 
                     <div class="desc_data">
-                        @php echo $boycott->description; @endphp
+                        @php echo nl2br($boycott->description); @endphp
                     </div>
 
                     <div class="prd-option">
