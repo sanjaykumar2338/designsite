@@ -132,7 +132,8 @@
                     
                     @endphp
 
-                    <div class="mic">{!! $t !!}</div>
+                    <iframe srcdoc="{!! htmlspecialchars_decode($boycott->description) !!}" width="100%" height="500"></iframe>
+
 
                     <div class="prd-option">
                         <div id="product-thumbnails">
