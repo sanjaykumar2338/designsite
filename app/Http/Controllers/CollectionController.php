@@ -370,6 +370,8 @@ class CollectionController extends Controller
         //$commissionAmount = $product->product_price * ($product->commission / 100);
         $product->product_price = $product->product_price;// + $commissionAmount + 20;
 
+        echo "<pre>"; print_r($product); die;
+        
         return view('frontend.pages.pre_create_product')->with('collection',$collection)->with('front',$front)->with('back',$back)->with('design',$collection)->with('product',$product)->with('boycott',$boycott)->with('pageTitle' , $pageTitle)->with('metaDescription' , $metaDescription)->with('keywords' , $keywords)->with('metaTitle' , $metaTitle);
         //echo "<pre>"; print_r($products); print_r($request->design_type); die;
     }
