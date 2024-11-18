@@ -128,9 +128,97 @@
                         $truncatedDescription = implode(' ', array_slice($words, 0, 50));
                     @endphp
 
-                    <div class="desc_data">
-                        @php echo nl2br($boycott->description); @endphp
-                    </div>
+                    <div class="product-page"><!-- Header Section -->
+<h1 class="product-header">Boycott Greed, Let Freedom Lead A T-Shirt for Advocacy and Accountability</h1>
+<!-- Introduction -->
+<section class="product-intro">
+<p>The <strong>Oversight Collection&rsquo;s Boycott Greed, Let Freedom Lead t-shirt</strong> represents a bold statement in the fight for justice and accountability. Designed for individuals passionate about advocacy, this shirt is more than just apparel&mdash;it&rsquo;s a rallying cry for change. Crafted with precision and imbued with purpose, this t-shirt blends style, comfort, and activism into a single garment.</p>
+</section>
+<!-- Design Inspiration -->
+<section class="design-inspiration">
+<h3><strong>Design Inspiration</strong></h3>
+<p>This piece encapsulates the essence of the Oversight Collection: standing firm against unchecked greed and advocating for fairness and freedom. The graphic boldly declares, <strong>Boycott Greed, Let Freedom Lead</strong>, surrounded by striking imagery of broken chains symbolizing liberation from oppressive systems. The design evokes urgency and empowerment, urging wearers to inspire change.</p>
+</section>
+<!-- Fabric and Fit -->
+<section class="fabric-fit">
+<h3>Fabric and Fit</h3>
+<p>Comfort meets durability with this premium cotton blend t-shirt. The breathable, lightweight fabric ensures a relaxed fit, perfect for rallies, casual wear, or everyday advocacy. Available in unisex sizing, the shirt caters to a wide audience, ensuring everyone can proudly display their commitment to change.</p>
+<ul>
+<li><strong>100% Sustainably Sourced Cotton:</strong> Soft, eco-friendly, and long-lasting.</li>
+<li><strong>Pre-shrunk Material:</strong> Retains its fit and comfort after washing.</li>
+<li><strong>Double-stitched Seams:</strong> For added durability during intense advocacy activities.</li>
+<li><strong>Vivid Screen Printing:</strong> High-quality ink ensures the design remains vibrant and sharp.</li>
+</ul>
+</section>
+<!-- Activism with Purpose -->
+<section class="activism-purpose">
+<h3>Activism with Purpose</h3>
+<p>This t-shirt isn&rsquo;t just about making a statement&mdash;it&rsquo;s about making an impact. A portion of the proceeds from each sale is donated to non-profits that champion freedom and transparency. By wearing this shirt, you&rsquo;re joining a collective movement that challenges systemic greed and promotes values of equity and justice.</p>
+</section>
+<!-- How to Style -->
+<section class="how-to-style">
+<h3>How to Style</h3>
+<ul>
+<li><strong>Protests:</strong> Pair with jeans and sneakers for a functional look. Add a hoodie for cooler weather.</li>
+<li><strong>Everyday Wear:</strong> Layer under a blazer or jacket for a smart-casual vibe that reflects your values.</li>
+<li><strong>Social Media Advocacy:</strong> Style with bold accessories for impactful visuals.</li>
+</ul>
+</section>
+<!-- Who It’s For -->
+<section class="who-its-for">
+<h3>Who It&rsquo;s For</h3>
+<ul>
+<li><strong>Students and Young Advocates:</strong> Empowering voices on college campuses.</li>
+<li><strong>Community Organizers:</strong> Lead advocacy efforts in your community.</li>
+<li><strong>Everyday Consumers:</strong> Inspire critical thinking about corporate greed.</li>
+</ul>
+</section>
+<!-- Collection Details -->
+<section class="collection-details">
+<h3>The Oversight Collection: A Commitment to Accountability</h3>
+<p>The <strong>Boycott Greed, Let Freedom Lead</strong> t-shirt is part of the Oversight Collection, a line of apparel promoting transparency and holding power accountable. Each design empowers individuals to advocate for meaningful change.</p>
+</section>
+<!-- Why Boycott Greed -->
+<section class="why-boycott-greed">
+<h3>Why Boycott Greed?</h3>
+<p>Corporate greed undermines democracy and equality. This shirt serves as a reminder that change begins with awareness and collective action. Boycotts dismantle unethical practices, and this t-shirt is a wearable badge of that mission.</p>
+</section>
+<!-- Customer Reviews -->
+<section class="customer-reviews">
+<h3>Customer Reviews</h3>
+<blockquote>
+<p>&ldquo;This shirt is not just clothing; it&rsquo;s a conversation starter. I&rsquo;ve worn it to protests and casual outings, and it always gets people talking about the issues.&rdquo;</p>
+<cite>&ndash; Alex R., Advocate</cite></blockquote>
+<blockquote>
+<p>&ldquo;The quality is amazing, and the message is even better. I feel like I&rsquo;m part of something bigger every time I wear it.&rdquo;</p>
+<cite>&ndash; Jamie L., Student Activist</cite></blockquote>
+</section>
+<!-- Sustainability Matters -->
+<section class="sustainability-matters">
+<h3>Sustainability Matters</h3>
+<p>Cause Stand is committed to reducing environmental impact. This t-shirt is crafted with sustainably sourced materials and eco-friendly practices. Choosing this product supports advocacy and contributes to a greener planet.</p>
+</section>
+<!-- Call to Action -->
+<section class="call-to-action">
+<h3>Join the Movement</h3>
+<p>Purchasing this t-shirt is a declaration of values and a step toward change. Share your story on social media using <strong>#BoycottGreed</strong> and <strong>#OversightCollection</strong>, and inspire others to join the fight for transparency and freedom.</p>
+</section>
+<!-- Product Details -->
+<section class="product-details">
+<h3>Product Details Recap</h3>
+<ul>
+<li><strong>Material:</strong> 100% Sustainably Sourced Cotton</li>
+<li><strong>Sizes:</strong> Unisex S&ndash;XXL</li>
+<li><strong>Care Instructions:</strong> Machine wash cold, tumble dry low</li>
+<li><strong>Price:</strong> [Insert Price]</li>
+</ul>
+</section>
+<!-- Closing Statement -->
+<section class="closing-statement">
+<h3>Closing Statement</h3>
+<p>Wear your values proudly with the <strong>Boycott Greed, Let Freedom Lead</strong> t-shirt. Advocacy begins with awareness, and every purchase supports the push for a more equitable future. Together, we can challenge greed and let freedom lead the way.</p>
+</section>
+</div>
 
                     <div class="prd-option">
                         <div id="product-thumbnails">
