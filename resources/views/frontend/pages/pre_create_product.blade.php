@@ -129,8 +129,11 @@
                     @endphp
 
                     <div class="desc_data">
-                        @php $description = htmlentities($boycott->description); @endphp
-                        {{ $description }}
+                        @php 
+                            $s = htmlentities($boycott->description); 
+                            $s = str_replace("& amp ;", "&", (htmlentities(stripslashes($s), ENT_QUOTES, 'UTF-8')));
+                        @endphp
+                        {{ $s }}
                     </div>
 
                     <div class="prd-option">
