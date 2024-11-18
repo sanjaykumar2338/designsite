@@ -132,7 +132,8 @@
                         Storage::put('public/description.html', $boycott->description);
                     @endphp
 
-                    <div id="iframe-container" style="width: 100%; height: 500px; border: none;">
+                    <div id="iframe-container" style="width: 100%; height: 500px; border: none;margin-left: -9px;
+    padding-top: 21px;">
                         <iframe id="dynamic-iframe" width="90%" height="100%" style="border: none;"></iframe>
                     </div>
 
@@ -144,7 +145,7 @@
                         iframe.contentWindow.document.close();
                     </script>
 
-
+                    <br>
 
 
                     <div class="prd-option">
