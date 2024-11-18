@@ -128,7 +128,7 @@
                         $truncatedDescription = implode(' ', array_slice($words, 0, 50));
                     @endphp
 
-                    {!! clean($product->description) !!}
+                    {!! clean($boycott->description) !!}
 
 
                     <div class="prd-option">
