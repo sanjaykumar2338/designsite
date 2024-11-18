@@ -1006,7 +1006,7 @@ function submitImgUrl() {
     console.log(el.value);
     addImage(el.value);
 
-    totalPrice += 10;
+    totalPrice += 0;
     updatePrice(totalPrice);
     showImageAddedMessage();
 }
@@ -1018,7 +1018,7 @@ function addCustomImage(imgUrl) {
     }
 
     addImage(imgUrl);
-    totalPrice += 10;
+    totalPrice += 0;
     updatePrice(totalPrice);
     showImageAddedMessage();
 }
