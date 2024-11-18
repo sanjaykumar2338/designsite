@@ -129,7 +129,7 @@
                     @endphp
 
                     <div class="desc_data">
-                        @php $description = html_entity_decode($boycott->description); @endphp
+                        @php $description = htmlentities($boycott->description); @endphp
                         {!! $description !!}
                     </div>
 
