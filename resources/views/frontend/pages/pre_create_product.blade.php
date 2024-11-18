@@ -132,7 +132,7 @@
                     
                     @endphp
 
-                    {!! $t !!}
+                    <div class="mic">{!! $t !!}</div>
 
                     <div class="prd-option">
                         <div id="product-thumbnails">
