@@ -127,14 +127,18 @@
                         $wordCount = count($words);
                         $truncatedDescription = implode(' ', array_slice($words, 0, 50));
                     @endphp
-
-                    <div class="desc_data">
-                        @php 
-                            $s = htmlspecialchars($boycott->description, ENT_QUOTES, "UTF-8");
-                        @endphp
-                        {{ $boycott->description }}
-                    </div>
-
+                                    
+                    <script src="https://cdn.ckeditor.com/4.20.2/standard/ckeditor.js"></script>
+                    <textarea id="editor" readonly>
+                        {!! $boycott->description !!}
+                    </textarea>
+                    <script>
+                        CKEDITOR.replace('editor', {
+                            readOnly: true,
+                            toolbar: [] // Hides the toolbar
+                        });
+                    </script>
+                    
                     <div class="prd-option">
                         <div id="product-thumbnails">
 
