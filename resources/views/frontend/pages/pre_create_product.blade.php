@@ -129,13 +129,9 @@
                     @endphp
 
                     <p class="desc">
-                        {{ $truncatedDescription }}
-                        @if($wordCount > 50)
-                            <span class="more-text" style="display:none;">{{ implode(' ', array_slice($words, 50)) }}</span>
-                            <a href="javascript:void(0);" style="color: #cf6f6f;" class="read-more" onclick="toggleDescription(this)">Read More...</a>
-                        @endif
+                        <span class="more-text" style="display:none;">{!! $boycott->description !!}</span>
+                        <a href="javascript:void(0);" style="color: #cf6f6f;" class="read-more" onclick="toggleDescription(this)">Read More...</a>
                     </p>
-                    <br>
 
                     <div class="prd-option">
                         <div id="product-thumbnails">
