@@ -767,6 +767,6 @@
         }
     }
 
-    $('.desc_data').html($('.desc_data').text())
+    $('.desc_data').html($('.desc_data').html())
 </script>
 @endsection
