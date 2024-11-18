@@ -132,7 +132,7 @@
                     
                     @endphp
 
-                    <p>{!! html_entity_decode($baan->descriptiond) !!}</p>
+                    <p>{!! html_entity_decode($boycott->description) !!}</p>
 
 
 
