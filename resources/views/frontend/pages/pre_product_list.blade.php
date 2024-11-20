@@ -289,7 +289,7 @@
 
                                     top = 1.8;
                                     if('{{$design_type}}'=='hoodies'){
-                                        top = 3;
+                                        top = 1;
                                     }
 
                                     preloadImage(background, function(bgImg) {
