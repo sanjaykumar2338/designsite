@@ -287,12 +287,17 @@
                                     canvas.clear();
                                     loader.style.display = 'block';
 
+                                    top = 1.8;
+                                    if('{{$design_type}}'=='hoodies'){
+                                        top = 3;
+                                    }
+
                                     preloadImage(background, function(bgImg) {
                                         bgImg.set({
                                             originX: 'center',
                                             originY: 'center',
                                             left: canvas.width / 2,
-                                            top: canvas.height / 1.8,
+                                            top: canvas.height / top,
                                             selectable: false
                                         });
                                         bgImg.scaleToWidth(canvas.width);
