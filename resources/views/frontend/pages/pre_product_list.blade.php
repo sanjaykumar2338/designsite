@@ -207,7 +207,7 @@
 
                                 if('{{$design_type}}'=='hoodies'){
                                     back_image_size = 3.8;
-                                    width = 0.35;
+                                    width = 0.45;
                                     var frontBackground = 'https://files.cdn.printful.com/m/g18500/medium/ghost/front/05_gildan18500_ghost_front_base_whitebg.png?v=1700731048';
                                     var backBackground = 'https://files.cdn.printful.com/m/g18500/medium/ghost/back/05_gildan18500_ghost_back_base_whitebg.png?v=1700731048';
                                 }
