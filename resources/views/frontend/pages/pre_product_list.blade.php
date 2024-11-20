@@ -206,7 +206,7 @@
                                 }
 
                                 if('{{$design_type}}'=='hoodies'){
-                                    back_image_size = 2.8;
+                                    back_image_size = 3.8;
                                     width = 0.35;
                                     var frontBackground = 'https://files.cdn.printful.com/m/g18500/medium/ghost/front/05_gildan18500_ghost_front_base_whitebg.png?v=1700731048';
                                     var backBackground = 'https://files.cdn.printful.com/m/g18500/medium/ghost/back/05_gildan18500_ghost_back_base_whitebg.png?v=1700731048';
@@ -287,17 +287,12 @@
                                     canvas.clear();
                                     loader.style.display = 'block';
 
-                                    top = 1.8;
-                                    if('{{$design_type}}'=='hoodies'){
-                                        top = 1;
-                                    }
-
                                     preloadImage(background, function(bgImg) {
                                         bgImg.set({
                                             originX: 'center',
                                             originY: 'center',
                                             left: canvas.width / 2,
-                                            top: canvas.height / top,
+                                            top: canvas.height / 1.8,
                                             selectable: false
                                         });
                                         bgImg.scaleToWidth(canvas.width);
