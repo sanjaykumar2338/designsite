@@ -122,32 +122,6 @@
                     
                     <h1 class="product_price" style="font-weight: 700;" data-exact="{{ number_format($totalPrice, 2) }}" data-price="{{ number_format($totalPrice, 2) }}">Price: ${{ number_format($totalPrice, 2) }}</h1>
 
-                    @php
-                        $words = explode(' ', strip_tags($boycott->description));
-                        $wordCount = count($words);
-                        $truncatedDescription = implode(' ', array_slice($words, 0, 50));
-                    
-
-                        $t = htmlentities($boycott->description, ENT_QUOTES | ENT_IGNORE, "UTF-8");
-                        Storage::put('public/description.html', $boycott->description);
-                    @endphp
-
-                    <div id="iframe-container" style="width: 100%; height: 500px; border: none;margin-left: -9px;
-    padding-top: 21px;">
-                        <iframe id="dynamic-iframe" width="100%" height="100%" style="border: none;"></iframe>
-                    </div>
-
-                    <script>
-                        const iframe = document.getElementById('dynamic-iframe');
-                        const htmlContent = `{!! addslashes($boycott->description) !!}`; // Escape quotes if necessary
-                        iframe.contentWindow.document.open();
-                        iframe.contentWindow.document.write(htmlContent);
-                        iframe.contentWindow.document.close();
-                    </script>
-
-                    <br>
-
-
                     <div class="prd-option">
                         <div id="product-thumbnails">
 
@@ -217,6 +191,33 @@
                         </div>
 
                     </div>
+
+                    @php
+                        $words = explode(' ', strip_tags($boycott->description));
+                        $wordCount = count($words);
+                        $truncatedDescription = implode(' ', array_slice($words, 0, 50));
+                    
+
+                        $t = htmlentities($boycott->description, ENT_QUOTES | ENT_IGNORE, "UTF-8");
+                        Storage::put('public/description.html', $boycott->description);
+                    @endphp
+
+                    <div id="iframe-container" style="width: 100%; height: 500px; border: none;margin-left: -9px;
+    padding-top: 21px;">
+                        <iframe id="dynamic-iframe" width="100%" height="100%" style="border: none;"></iframe>
+                    </div>
+
+                    <script>
+                        const iframe = document.getElementById('dynamic-iframe');
+                        const htmlContent = `{!! addslashes($boycott->description) !!}`; // Escape quotes if necessary
+                        iframe.contentWindow.document.open();
+                        iframe.contentWindow.document.write(htmlContent);
+                        iframe.contentWindow.document.close();
+                    </script>
+
+                    
+
+
                 </div>
             </div>
         </div>
