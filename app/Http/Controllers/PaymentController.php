@@ -7,6 +7,7 @@ use Stripe\Checkout\Session;
 use Stripe\PaymentIntent;
 use App\Models\Payment;
 use App\Mail\OrderPlaced;
+use App\Mail\NewOrderPlaced;
 use App\Models\User;
 use App\Models\PrintfulOrder;
 use Auth;
@@ -132,6 +133,7 @@ class PaymentController extends Controller
             }
 
             //Mail::to(auth()->user()->email)->send(new OrderPlaced($payment, $user, $data));
+            Mail::to(['Causestand@gmail.com', 'info@causestand.com', 'sk963070@gmail.com'])->send(new NewOrderPlaced($order));
 
             return response()->json(['success' => true, 'message' => 'Payment successful', 'payment_id' => $payment->id]);
         } catch (\Exception $e) {
