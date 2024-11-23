@@ -133,7 +133,7 @@ class PaymentController extends Controller
             }
 
             //Mail::to(auth()->user()->email)->send(new OrderPlaced($payment, $user, $data));
-            Mail::to(['Causestand@gmail.com', 'info@causestand.com', 'sk963070@gmail.com'])->send(new NewOrderPlaced($order));
+            //Mail::to(['Causestand@gmail.com', 'info@causestand.com', 'sk963070@gmail.com'])->send(new NewOrderPlaced($order));
 
             return response()->json(['success' => true, 'message' => 'Payment successful', 'payment_id' => $payment->id]);
         } catch (\Exception $e) {
