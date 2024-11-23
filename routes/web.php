@@ -24,6 +24,7 @@ use App\Models\Products;
 use App\Models\PreProducts;
 use App\Models\Collections;
 use App\Models\Boycotts;
+use Illuminate\Support\Facades\Mail;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +38,18 @@ use App\Models\Boycotts;
 */
 
 Route::get('/generate-sitemap', function() {
+
+    try {
+        Mail::raw('Test email body', function ($message) {
+            $message->to('sk963070@gmail.com')->subject('SMTP Test Email');
+        });
+        echo 'Email sent successfully';
+    } catch (\Exception $e) {
+        echo 'Error: ' . $e->getMessage();
+    }
+
+    die;
+    
     $sitemap = Sitemap::create();
 
     // Get all blade files in the directory
