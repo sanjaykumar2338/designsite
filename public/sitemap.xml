@@ -157,12 +157,6 @@
         <priority>0.8</priority>
             </url>
     <url>
-        <loc>https://causestand.com/register.blade</loc>
-        <lastmod>2024-06-18T08:36:43+00:00</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-            </url>
-    <url>
         <loc>https://causestand.com/return_order.blade</loc>
         <lastmod>2024-06-18T08:36:43+00:00</lastmod>
         <changefreq>weekly</changefreq>
@@ -1000,31 +994,72 @@
         <loc>https://causestand.com/shop</loc>
             <changefreq>daily</changefreq>
         <priority>0.8</priority>
-            </url>
+    </url>
+
     <url>
-        <loc>https://causestand.com/shop/oversight-collection</loc>
+        <loc>https://causestand.com/shop</loc>
             <changefreq>daily</changefreq>
         <priority>0.8</priority>
-            </url>
+    </url>
+
     <url>
-        <loc>https://causestand.com/shop/traitor-collection</loc>
-            <changefreq>daily</changefreq>
+        <loc>https://causestand.com/collection/design/oversight-collection/tshirts</loc>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
-            </url>
+    </url>
     <url>
-        <loc>https://causestand.com/shop/trader-collection</loc>
-            <changefreq>daily</changefreq>
+        <loc>https://causestand.com/collection/design/oversight-collection/hoodies</loc>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
-            </url>
+    </url>
     <url>
-        <loc>https://causestand.com/shop/propaganda-collection</loc>
-            <changefreq>daily</changefreq>
+        <loc>https://causestand.com/collection/design/oversight-collection/sweatshirts</loc>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
-            </url>
+    </url>
     <url>
-        <loc>https://causestand.com/shop/oversight-collection/unisex-tri-blend-t-shirt-bella-canvas-3413</loc>
-        <lastmod>2024-06-15T08:10:49+00:00</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://causestand.com/collection/design/traitor-collection/tshirts</loc>
+        <changefreq>daily</changefreq>
         <priority>0.8</priority>
-            </url>
+    </url>
+    <url>
+        <loc>https://causestand.com/collection/design/traitor-collection/hoodies</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://causestand.com/collection/design/traitor-collection/sweatshirts</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://causestand.com/collection/design/trader-collection/tshirts</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://causestand.com/collection/design/trader-collection/hoodies</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://causestand.com/collection/design/trader-collection/sweatshirts</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://causestand.com/collection/design/propaganda-collection/tshirts</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://causestand.com/collection/design/propaganda-collection/hoodies</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://causestand.com/collection/design/propaganda-collection/sweatshirts</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>
