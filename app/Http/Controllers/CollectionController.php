@@ -111,33 +111,82 @@ class CollectionController extends Controller
         $pageTitle = 'Boycott Bucks Protest Wear - Stand against Unethical Corporations';
         $metaTitle = 'Boycott Bucks Apparel | T-Shirts, Hoodies and Sweatshirts';
 
-        if($slug=='oversight'){
-            $metaDescription = 'Shop the Boycott design from the Oversight Collection by the Cause Stand brand. Choose from t-shirts, hoodies, or sweatshirts and stand against unethical corporate practices.';
-            $keywords = 'boycott apparel, boycott corporate practices, boycott bucks';
-            $pageTitle = 'Boycott Bucks Protest Wear - Stand against Unethical Corporations';
-            $metaTitle = 'Boycott Bucks Apparel | T-Shirts, Hoodies and Sweatshirts';
+        if ($slug == 'oversight') {
+            if ($design_type == 'tshirts') {
+                $metaDescription = 'Stand up for transparency with Oversight Collection T-Shirts. Wear your advocacy, challenge the status quo, and join the movement to hold the powerful accountable.';
+                $keywords = 'Oversight Collection t-shirts, activism apparel, boycott injustice shirts, accountability clothing, transparency activism';
+                $pageTitle = 'Oversight Collection T-Shirts: Wear Your Advocacy, Challenge Injustice';
+                $metaTitle = 'Oversight Collection T-Shirts - Stand Against Corruption, Wear Accountability';
+            } elseif ($design_type == 'hoodies') {
+                $metaDescription = 'Stand for justice and accountability with the Oversight Collection Hoodies. Wear your advocacy on your sleeve, challenge corruption, and become a part of the movement for transparency.';
+                $keywords = 'Oversight Collection hoodies, activism apparel, hoodie for accountability, protest hoodies, justice clothing, transparency activism';
+                $pageTitle = 'Oversight Collection Hoodies: Wear the Movement for Justice and Transparency';
+                $metaTitle = 'Oversight Collection Hoodies – Stand for Accountability, Wear Your Cause';
+            } elseif ($design_type == 'sweatshirts') {
+                $metaDescription = 'Empower your activism with the Oversight Collection Sweatshirts. Wear your support for transparency and justice on your sleeve, challenge corruption, and join the movement for real change.';
+                $keywords = 'Oversight Collection sweatshirts, accountability sweatshirts, justice apparel, activism sweatshirt, fight corruption clothing, protest gear';
+                $pageTitle = 'Oversight Collection Sweatshirts: Speak Out for Justice and Transparency';
+                $metaTitle = 'Oversight Collection Sweatshirts – Stand for Accountability, Fight for Transparency';
+            }
         }
-
-        if($slug=='traitor'){
-            $metaDescription = 'Explore Cause Stand`s activist streetwear and advocacy apparel shop; join a movement, shop our urban collections, and wear your convictions on your clothing.';
-            $keywords = 'activist streetwear,  advocacy apparel shop, urban collections';
-            $pageTitle = 'Advocacy Streetwear Collections - Shop Now and Join the Movement';
-            $metaTitle = ' Shop Advocacy Apparel - Activist Streetwear with a Movement';
+        
+        if ($slug == 'traitor') {
+            if ($design_type == 'tshirts') {
+                $metaDescription = 'Demand justice and accountability with the Traitor Collection T-Shirts. Stand against betrayal, speak out for integrity, and make your voice heard with powerful, thought-provoking designs.';
+                $keywords = 'Traitor Collection t-shirts, justice t-shirt, betrayal protest apparel, accountability t-shirt, stand against corruption, political protest gear';
+                $pageTitle = 'Traitor Collection T-Shirts: Speak Out Against Betrayal and Stand for Justice';
+                $metaTitle = 'Traitor Collection T-Shirts – Speak Out Against Betrayal, Demand Accountability';
+            } elseif ($design_type == 'hoodies') {
+                $metaDescription = 'Speak out against betrayal and stand for justice with the Traitor Collection Hoodies. Designed for comfort and impact, these hoodies will amplify your activism and make your message clear.';
+                $keywords = 'Traitor Collection hoodie, justice hoodie, anti-betrayal hoodie, political protest hoodie, activism apparel, betrayal protest hoodie';
+                $pageTitle = 'Traitor Collection Hoodies: Demand Justice, Stand Against Betrayal';
+                $metaTitle = 'Traitor Collection Hoodies – Wear Your Stand for Justice and Accountability';
+            } elseif ($design_type == 'sweatshirts') {
+                $metaDescription = 'Show your stance against betrayal with the Traitor Collection Sweatshirts. Stylish, bold, and powerful, these sweatshirts empower your activism and call for justice.';
+                $keywords = 'Traitor Collection sweatshirt, betrayal protest sweatshirt, political justice apparel, accountability sweatshirt, activism sweatshirt';
+                $pageTitle = 'Traitor Collection Sweatshirts: Wear Your Values, Demand Accountability';
+                $metaTitle = 'Traitor Collection Sweatshirts – Demand Integrity and Justice in Style';
+            }
         }
-
-        if($slug=='trader'){
-            $metaDescription = 'Explore Cause Stand`s activist streetwear and advocacy apparel shop; join a movement, shop our urban collections, and wear your convictions on your clothing.';
-            $keywords = 'activist streetwear,  advocacy apparel shop, urban collections';
-            $pageTitle = 'Advocacy Streetwear Collections - Shop Now and Join the Movement';
-            $metaTitle = ' Shop Advocacy Apparel - Activist Streetwear with a Movement';
+        
+        if ($slug == 'trader') {
+            if ($design_type == 'tshirts') {
+                $metaDescription = 'Wear your values with the Trader Collection T-Shirt. Bold, powerful designs for those who demand integrity from lawmakers and stand for accountability.';
+                $keywords = 'Trader Collection t-shirt, political integrity shirt, protest t-shirt, activist t-shirt, accountability in politics';
+                $pageTitle = 'Trader Collection T-Shirts: Speak Up, Stand Out, and Demand Justice';
+                $metaTitle = 'Trader Collection T-Shirts – Demand Integrity in Politics with Bold Fashion';
+            } elseif ($design_type == 'hoodies') {
+                $metaDescription = 'Fight corruption in politics with the Trader Collection Hoodie. Bold designs exposing insider trading practices and demanding accountability from corrupt lawmakers.';
+                $keywords = 'Trader Collection hoodie, insider trading hoodie, corrupt politics hoodie, accountability in politics, political activist hoodie';
+                $pageTitle = 'Trader Collection Hoodies: Expose Corruption, Demand Integrity';
+                $metaTitle = 'Trader Collection Hoodies – Expose Corruption in Politics with Powerful Statements';
+            } elseif ($design_type == 'sweatshirts') {
+                $metaDescription = 'The Trader Collection Sweatshirts demand justice and transparency. Bold, stylish, and empowering, these sweatshirts support your stand against corruption.';
+                $keywords = 'Trader Collection sweatshirt, political accountability apparel, integrity sweatshirt, corruption protest sweatshirt, activist sweatshirt';
+                $pageTitle = 'Trader Collection Sweatshirts: Wear Your Voice, Demand Action';
+                $metaTitle = 'Trader Collection Sweatshirts – Hold Lawmakers Accountable in Style';
+            }
         }
-
-        if($slug=='propaganda'){
-            $metaDescription = 'Explore Cause Stand`s activist streetwear and advocacy apparel shop; join a movement, shop our urban collections, and wear your convictions on your clothing.';
-            $keywords = 'activist streetwear,  advocacy apparel shop, urban collections';
-            $pageTitle = 'Advocacy Streetwear Collections - Shop Now and Join the Movement';
-            $metaTitle = ' Shop Advocacy Apparel - Activist Streetwear with a Movement';
+        
+        if ($slug == 'propaganda') {
+            if ($design_type == 'tshirts') {
+                $metaDescription = 'Wear the Propaganda Collection T-Shirt to expose media lies and demand accountability. Bold designs fighting misinformation and advocating for transparency in media.';
+                $keywords = 'Propaganda Collection t-shirt, expose media lies, fight misinformation, media accountability, activist t-shirt';
+                $pageTitle = 'Propaganda Collection T-Shirts: Fight Misinformation, Demand the Truth';
+                $metaTitle = 'Propaganda Collection T-Shirts – Expose Media Misinformation and Demand Truth';
+            } elseif ($design_type == 'hoodies') {
+                $metaDescription = 'Wear the Propaganda Collection Hoodie to challenge media manipulation, demand accountability, and fight misinformation. Bold designs for truth-seekers and activists.';
+                $keywords = 'Propaganda Collection hoodie, media accountability, expose lies, fight misinformation, activist hoodie';
+                $pageTitle = 'Propaganda Collection Hoodies: Stand Against Misinformation, Demand Accountability';
+                $metaTitle = 'Propaganda Collection Hoodies – Demand Media Transparency and Expose Misinformation';
+            } elseif ($design_type == 'sweatshirts') {
+                $metaDescription = 'The Propaganda Collection Sweatshirt is your statement against media manipulation. Demand accountability, fight misinformation, and make your voice heard for truth.';
+                $keywords = 'Propaganda Collection sweatshirt, fight misinformation, expose media lies, media transparency, activist sweatshirt';
+                $pageTitle = 'Propaganda Collection Sweatshirts: Expose Misinformation, Stand for Truth';
+                $metaTitle = 'Propaganda Collection Sweatshirts – Take a Stand Against Media Lies, Demand Transparency';
+            }
         }
+        
 
         $collectionId = $collection->id;
         if($request->type){
