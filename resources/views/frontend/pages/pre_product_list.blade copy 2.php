@@ -249,10 +249,6 @@
                                 function loadCanvas(background, overlay) {
                                     canvas.clear();
                                     loader.style.display = 'block';
-                                    
-                                    if ('{{ $design_type }}' === 'hoodies') {
-                                        width = 0.20;
-                                    }
 
                                     preloadImage(background, function(bgImg) {
                                         bgImg.set({
@@ -266,15 +262,10 @@
                                         bgImg.scaleToHeight(canvas.height);
                                         canvas.setBackgroundImage(bgImg, canvas.renderAll.bind(canvas));
 
-                                        topp = 2.5;
-                                        if ('{{ $design_type }}' === 'hoodies') {
-                                            topp = 2.9;
-                                        }
-
                                         preloadImage(overlay, function(overlayImg) {
                                             overlayImg.set({
                                                 left: canvas.width / 2,
-                                                top: canvas.height / topp,
+                                                top: canvas.height / 2.5,
                                                 originX: 'center',
                                                 originY: 'center',
                                                 selectable: false
@@ -296,13 +287,6 @@
                                     canvas.clear();
                                     loader.style.display = 'block';
 
-                                    w = 0.20;
-                                    t = back_image_size;
-                                    if ('{{ $design_type }}' === 'hoodies') {
-                                        w = 0.35;
-                                        t  = 2.2;
-                                    }
-
                                     preloadImage(background, function(bgImg) {
                                         bgImg.set({
                                             originX: 'center',
@@ -318,13 +302,13 @@
                                         preloadImage(overlay, function(overlayImg) {
                                             overlayImg.set({
                                                 left: canvas.width / 2,
-                                                top: canvas.height / t,
+                                                top: canvas.height / back_image_size,
                                                 originX: 'center',
                                                 originY: 'center',
                                                 selectable: false
                                             });
 
-                                            var scaleFactor = Math.min(canvas.width / overlayImg.width, canvas.height / overlayImg.height) * w; // Adjusted for more padding
+                                            var scaleFactor = Math.min(canvas.width / overlayImg.width, canvas.height / overlayImg.height) * 0.20; // Adjusted for more padding
                                             overlayImg.scale(scaleFactor);
 
                                             canvas.add(overlayImg);
