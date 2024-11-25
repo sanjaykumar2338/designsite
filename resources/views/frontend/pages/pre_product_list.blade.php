@@ -156,6 +156,10 @@
         0% { transform: translate(-50%, -50%) rotate(0deg); }
         100% { transform: translate(-50%, -50%) rotate(360deg); }
     }
+
+    .canvas-container canvas {
+        pointer-events: none; /* Prevent canvas from capturing touch events */
+    }
 </style>
 
 <div class="container my-4 product_list_data">
