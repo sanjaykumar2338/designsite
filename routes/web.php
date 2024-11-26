@@ -250,7 +250,7 @@ Route::get('/products', [App\Http\Controllers\HomeController::class, 'products']
 //Route::get('/events', [App\Http\Controllers\HomeController::class, 'events'])->name('events');
 Route::get('/track_order', [App\Http\Controllers\HomeController::class, 'track_order'])->name('track_order');
 Route::get('/shipping', [App\Http\Controllers\HomeController::class, 'shipping'])->name('shipping');
-Route::get('/wishlist', [App\Http\Controllers\HomeController::class, 'wishlist'])->name('wishlist');
+//Route::get('/wishlist', [App\Http\Controllers\HomeController::class, 'wishlist'])->name('wishlist');
 Route::get('/order_history', [App\Http\Controllers\HomeController::class, 'order_history'])->name('order_history');
 Route::get('/return_order', [App\Http\Controllers\HomeController::class, 'return_order'])->name('return_order');
 Route::get('/donate_now', [App\Http\Controllers\HomeController::class, 'donate_now'])->name('donate_now');
