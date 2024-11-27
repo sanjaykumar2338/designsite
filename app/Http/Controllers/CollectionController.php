@@ -69,7 +69,10 @@ class CollectionController extends Controller
         $design_type = $request->design_type;       
         $boycott = Boycotts::where('collection', $collection->id)->get();
 
-        $design_type = $design_type ?? 'tshirts';
+        if(!in_array($design_type, ['tshirts', 'hoodies', 'sweatshirts']) || empty($design_type)){
+            $design_type = 'tshirts';
+        }
+
         if (in_array($design_type, ['hoodies', 'sweatshirts'])) {
             $boycott = $boycott->map(function ($item) use ($design_type) {
                 $allData = json_decode($item->all_data, true); // Decode JSON from all_data field
