@@ -494,11 +494,23 @@ Make a Difference </span>
 Make a Difference</h3>
 <div class="inner_text">
 <select class="form-select choose_your_cause" aria-label="Default select example">
-<option selected disabled>Choose your Cause</option>
-@foreach($collections as $collection)
-<option value="{{url('/')}}/shop/{{$collection->slug}}">{{$collection->title}}</option>
-@endforeach
+    <option selected="" disabled="">Choose your Cause</option>
+    @foreach($collections as $collection)
+        @php
+            $customUrlMap = [
+                'oversight' => url('/') . '/collection/design/oversight-collection/tshirts',
+                'traitor' => url('/') . '/collection/design/traitor-collection/tshirts',
+                'trader' => url('/') . '/collection/design/trader-collection/tshirts',
+                'propaganda' => url('/') . '/collection/design/propaganda-collection/tshirts',
+            ];
+
+            // Determine the appropriate URL
+            $url = $customUrlMap[$collection->slug] ?? url('/') . '/shop/' . $collection->slug;
+        @endphp
+        <option value="{{ $url }}">{{ $collection->title }}</option>
+    @endforeach
 </select>
+
 <script>
    document.querySelector('.choose_your_cause').addEventListener('change', function() {
        var selectedValue = this.value;
